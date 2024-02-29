@@ -1,0 +1,34 @@
+---
+title: "CSC 210 Fall 2024"
+---
+
+This course is 	an introduction to the development of large scale software. Topics include modularization, design patterns, documentation, unit testing, source code control, build systems, debuggers, and performance tuning; all of the tools necessary for developing software as opposed to writing small programs.
+
+* [Course D2L:]()
+* [Gradescope:]()
+* [Piazza:]()
+
+Where to start:
+
+* [Syllabus](syllabus.html)
+* [Schedule]()
+
+# Instructor Information
+
+-   Adriana Picoral [🔈](https://namedrop.io/adrianapicoral "how to pronounce Adriana Picoral")
+
+    -   Office: [Gould-Simpson](https://goo.gl/maps/h8Vyf7RNQiMAScDY6) 811
+
+    -   Email: adrianaps\@arizona.edu
+
+    -   Instructor Website: [adrianapicoral.com](https://adrianapicoral.com/)
+
+    -   Office hours (open door, drop in, my office [GS](https://goo.gl/maps/h8Vyf7RNQiMAScDY6) 811):
+
+        -   Monday 1:30pm to 2:30pm
+
+        -   Wednesday 10:30am to 12:30pm
+        
+# Information about the materials for this course
+
+The materials (including slides and assignments) for this course are based on materials from previous CSC 210 instances create by other instructors, including: Michelle Strout, Rick Mercer, and Tyler Conklin.

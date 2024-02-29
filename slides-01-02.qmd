@@ -1,0 +1,45 @@
+---
+title: "Intro to Java"
+format: revealjs
+---
+
+## Typing
+
+* Python does dynamic typing
+
+```{python}
+#| eval: false
+#| echo: true
+word = "car"
+number = 3
+new_list = []
+names = ["Pedro", "Melissa", "Jessica"]
+```
+
+* Static typing in Java
+
+```{java}
+String word = "car";
+int number = 3;
+List<Integer> newList = new List<>();
+List<String> names = new List<>();
+```
+
+## Variable assignment
+
+* To declare and give initial values to variables use `=`, which means becomes or take on the value of (assignment)
+
+```{python}
+int credits = 4;
+double grade = 3.67;
+String name = "Chris";
+int hours = 10;
+boolean ready = hours >= 8;
+```
+
+## Comments
+
+* Java requires a lot of code to express a simple concept.
+* You need to be much more explicit when writing Java than Python (more words to type in Java)
+* Reduced readability by humans as a result
+* Comments are extra important

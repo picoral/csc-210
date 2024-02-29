@@ -1,0 +1,223 @@
+---
+title: "Syllabus"
+---
+
+# Course Description
+
+*This course is 	an introduction to the development of large scale software. Topics include modularization, design patterns, documentation, unit testing, source code control, build systems, debuggers, and performance tuning; all of the tools necessary for developing software as opposed to writing small programs.*
+
+The main goal of this course is to learn how to decompose problems and solve them with a program and do this in an effective manner that enables your future self and others to read, understand, and maintain your programs. Other goals include learning a second programming language (Java), learning decomposition and debugging strategies, and learning GUI event-driven programming (JavaFX).
+
+# Course Objectives and Expected Learning Outcomes
+
+At the end of this course, students will be able to:
+
+* decompose the solution for a project specification into subproblems and iteratively develop the project using multiple interacting classes, class inheritance, hierarchical data structures, and/or event-driven programming 
+
+* use data structures (i.e., hash table, tree, and graph), common algorithm patterns (i.e., exhaustive search, divide and conquer, recursive backtracking, and heuristic), unit testing, and debugging to write a correct solution to each sub-problem and integrate the sub-problem solutions into a complete working project (currently using Java).
+
+* evaluate the decomposition, clarity, performance, and style of a program when provided with example solution components and a rubric
+
+* compare and contrast programming in two programming languages (currently Python and Java).
+
+* build graphical user input and output for programs (currently using JavaFX) 
+
+# Instructor, Teaching Staff, and Contact Information
+
+## Instructor: Adriana Picoral
+
+* Office: Gould-Simpson 811
+* Email: adrianaps@arizona.edu
+* Office hours (open door, drop in, my office GS 811):
+  * Monday 1:30pm to 2:30pm
+  * Wednesday 10:30am to 12:30pm
+  
+There will also be many undergraduate TAs. See the class website for their contact info!
+
+# Course Format and Teaching Methods
+
+Students are responsible for reading the announcements posted on the course website and D2L. Students are also responsible for completing all of the posted reading assignments, quizzes, drills, programming assignments, and peer reviews.
+
+This course includes three class meetings per week and one lab session per week (this is a 4-unit course).
+
+* The class meetings will be interactive and collaborative (meaning, you will need a laptop computer to work on in-class activities during class).
+* Be in your seat and ready to go at 9am. Class will start promptly at 9am.
+* You will sit with a group of 3 other students. 
+* There will be approximately 5 TAs and an instructor in the room to help with
+activities.
+* Semi-anonymous questions can be asked during class using slido (https://www.sli.do/).
+* There will be at least one think-group-share activity per class session. For the share portion, a group will be randomly selected and a volunteer from that group will share what they discussed in their group.
+
+
+Lab sessions will involve learning material that is NOT covered in class and doing short programming exercises.
+
+# Grading Scale and Policies
+
+Grades will be posted on D2L. All graded work will be done and submitted individually. Discussions amongst students in the class are encouraged, but DO NOT copy code or text from other students, tutors, or ANYONE else. Letter grades will be assigned using the typical scale: >=90 A, >=80 B, >=70 C, >=60 D, and <60 E.
+
+The course grade consists of the following:
+
+* Programming Assignments, 30%
+* Final, 20%
+* Midterm 1, 10%
+* Midterm 2, 10%
+* Sections, 10%
+* Quizzes, 10%
+* Peer Reviews and Drills, 10%
+
+## Due Dates and Submission:
+
+Programming assignments, drills,and peer reviews ar edu eat 11:30 pm on their associated DUE DATE. Programming assignments and drills will need to use revision control in github and be submitted to Gradescope. Make sure to commit and push frequently to github. If you have been committing and pushing to github, then we can grab a copy of your assignment if you happen to forget to submit to Gradescope (15 points will be deducted for doing that, but it is better than a 0). You can submit drills or programming assignments to Gradescope **as many times as you want before the deadline**. Drills will be automatically graded by Gradescope. Peer reviews will be done in Aropa. Some of the programming assignments will include instructions on how to submit material to Aropa so others can peer review your programs. See the next section for actual due dates.
+
+## Grading Promptness
+
+Grades for the programming assignments, drills, and peer reviews will be provided within 5 school days of the deadline. Any exceptions to this will be announced on Piazza and in class.
+
+## Late Policy
+
+Anything late will not be graded and you will receive a 0% for that programming assignment, drill, or peer review. Anything medical and/or disability-related should be discussed with DRC on campus (https://drc.arizona.edu/students/connect-drc). They work with instructors to put any accommodations in place.
+
+## Dispute of Grade Policy
+
+Any requests for grading corrections must be done within 10 school days of the assignment being due. 
+
+## University policy 
+
+University policy regarding grades and grading systems is available at http://catalog.arizona.edu/policy/grades-and-grading-system
+
+Requests for incomplete (I) or withdrawal (W) must be made in accordance with University policies, which are available at http://catalog.arizona.edu/policy/grades-and-grading-system#incomplete and http://catalog.arizona.edu/policy/grades-and-grading-system#Withdrawal, respectively.
+
+# Scheduled Topics/Activities
+
+**Week 1** Aug 26 - Aug 30: Course learning objectives and Java as a second programming language
+
+Labor Day - no classes	September 2, 2024
+
+**Week 2** Sep 04 - Sep 09: Java collections: arrays, lists, sets, and hashmaps
+
+* PA1 due Wednesday at 11:30pm
+
+**Week 3** Sep 11 - Sep 16: Algorithm patterns: exhaustive search and recursive backtracking
+
+* PA2 due Wednesday at 11:30pm
+
+**Week 4** Sep 18 - Sep 23: classes, interfaces, trees and tree traversals, SAT problem
+
+* PA3 due Wednesday at 11:30pm
+
+**Week 5** Sep 25 - Sep 27: Review on Wednesday, Midterm on Friday
+
+**Week 6** Sep 30 - Oct 04: heuristics, graph representation, graph interface, graph traversal
+
+* PA4 due Wednesday at 11:30pm
+
+**Week 7** Oct 07 - Oct 11: inheritance, class hierarchies, debugging, using data to encode
+
+* PA5 due Wednesday at 11:30pm
+
+**Week 8** Oct 14 - Oct 18: interfaces, Object base class, enumerated types
+
+* Class hierarchy diagram for PA6 due Wednesday by 11:30pm
+
+**Week 9** Oct 21 - Oct 25: hashmap implementation, composing data structures, generics
+
+* PA6 due Wednesday at 11:30pm
+
+**Week 10** Oct 28 - Nov 01: GUI Output
+
+* PA7 due Wednesday at 11:30pm
+
+**Week 11** Nov 04 - Nov 06: Monday Review, Wednesday Midterm 2
+
+Veterans Day - no classes	November 11, 2024
+
+**Week 12** Nov 08 - Nov 15: GUI Input, Event-driven programming, and MVC
+
+* PA8 due Wednesday at 11:30pm
+
+**Week 13** Nov 18 - Nov 22: Decomposition: top down and bottom up
+
+* PA9 due Wednesday at 11:30pm
+
+**Week 14** Nov 25 - Nov 27: Lambda functions
+
+Thanksgiving recess	November 28-December 1, 2024
+
+**Week 15** Dec 02 - Dec 06: Java vs. Python reprise and review for final exam
+
+* PA10 due Wednesday at 11:30pm
+
+**Week 16** Dec 09 - Dec 11: top-rated PA10 submission demos
+
+Last day of classes and laboratory sessions	December 11, 2024
+
+# Programming Assignments
+
+## PA1: Gradenator
+
+Prompt the user for their grades in 210 and then output their grade.
+
+Stdio, looping, static functions.
+
+FIXME: anyway to include recursion?
+
+## PA2: KMER counting
+
+Find all KMERs of size k in some real PDB datasets
+
+Using HashMaps, reading in file and cmd-line param
+
+## PA3: Bowling Score
+
+Interactively as the user for each pin count and continuously show current score with typical grid in ASCII
+
+Arrays, more looping
+
+## PA4: TBD
+
+Classes, divide and conquer decomposition, recursion, JUnit
+
+## PA5: HashTable Implementation
+
+Implement a hashtable for the KMER assignment.
+
+Nested data structures, hash map implementation
+
+## PA6: Population Simulation
+
+Game of life where each initial cell type can have its own set of rules
+
+Inheritance, parsing in the rules?
+
+## PA7: Event Seating
+Seat people at round tables so that each person is next to at least one person they share and interest with and at least one person they don’t’ know already
+
+Using multiple data structures, FIXME: would rather something with trees.
+
+## PA8: Graph Coloring three ways
+
+Exhaustive search with backtracking, branch and bound, and heuristic
+
+Graphs, various approaches to solving algorithms, approximation
+
+## PA9: Population Sim with GUI
+
+Small shapes and pics
+
+GUI output
+
+## PA10: Population Sim with GUI I/O
+
+init with mouse clicks
+
+GUI input
+
+## PA11: Kinetic Sculture
+
+Marble input and output
+
+Event-driven programming
+
+# Subject to Change Statement
+
+Information contained in the course syllabus, other than the grade and absence policy, may be subject to change with advance notice, as deemed appropriate by the instructor.

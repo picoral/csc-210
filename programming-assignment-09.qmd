@@ -1,0 +1,191 @@
+---
+title: "Programming Assignment 09"
+---
+
+
+```{r}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+data <- read_excel("assessment-deadlines.xlsx")
+```
+
+
+Deadline: `r data %>% filter(Assignment == "PA9") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+# PA9-GardenGUI 
+
+
+## Learning Objectives
+
+The goal of this assignment is to improve on basic JavaFX knowledge by adding
+event-driven GUI programming to the PA8-GardenGUIout program.
+
+## The Assignment
+
+
+For PA9, you will be adding events to the GUI representation of PA8. This means
+there will be no input file to read from. Instead of reading the input file
+from the command line arguments, you will read in the number of rows and columns
+of plots in the garden from the command line.  Then along with the garden visualization
+you will create a TextField where a user can input a garden simulation command
+(e.g., grow 1, plant (2,3) sunflower, ...) and then click on a simulate
+button to show the results of that command.
+
+Another interesting aspect of PA9 is that you will be continuing to refine
+the Garden simulation code.  Some of your code will change and some of the
+code from PA8 and PA6 should be removed in PA9.
+
+
+## What needs to be removed
+
+**File reading:** Since we are no longer reading commands in from a file,
+all code that is used to read in from a file is no longer needed.  You will
+still need to parse commands however.
+
+**Delay Code:** In the previous assignment a delay was needed to show the output
+for every command, for this assignment this is no longer needed since we are running
+one command at a time via a graphical user interface.
+
+## What needs to be added
+
+**User input:** Since we will not be reading from a file, we are going to need some way
+to read in commands from the user.  We recommend a TextArea and a button to cause
+the execution of the command in that TextArea.  Feel free to try different approaches.
+
+**Event Handlers:** To use the information that the user provides your code must have
+at least one Event Handler. This should grab the information from the user and do something with
+it whenever a specified event occurs. (clicking of a button and/or pressing enter on keyboard)
+
+## What needs to be changed
+
+**Command line arguments:** Instead of reading in a filename from the command line, you will
+be reading in both the width and height of the garden.
+
+## Steps for completing this assignment
+
+ 1. Accept the github assignment for PA9, https://classroom.github.com/a/t1WEMs86.  
+    Import your PA9 github repository into Eclipse as usual.
+ 
+ 2. Play around with the given PA9 starter code that does something with the 
+    text a user puts into a text field.
+ 
+ 3. Make sure your PA8 code works.
+ 
+ 4. If it does, then incorporate your PA8 code into your PA9.  We strongly
+    recommend you do it in small pieces.
+ 
+ 5. Implement the functionality provided in this write up for PA9.
+ 
+ 6. Test your code with various inputs to make sure that it works correctly.
+
+
+## Resources
+
+The provided code uses some new concepts.  We will be covering them in class
+and/or Section.  Additionally, here are some references.
+
+  * The example-video.mov file in the starter project demonstrates the baseline
+    functionality for PA9.  You will be demonstrating your project to your SL
+    during Section.
+  * Text Field, https://docs.oracle.com/javafx/2/ui_controls/text-field.htm
+
+## General requirements
+
+This assignment is different from other assignments you've had so far 
+in that you are given a lot more freedom to design your output the way 
+you want. You can try to mimic what was done in the video and get the 
+credit for it, but however you choose to receive graphical input for your
+garden, the following general requirements must be met:
+
+* A user should be able to type in a command and submit it via the GUI. This means that there
+  should be somewhere to insert text and some way to submit that text. Both of these must be
+  **intuitive**, that means that the user must understand where he/she should insert commands
+  and how to submit said command by only looking at the GUI. 
+
+* As in PA8, each plant must be **one-of-a-kind**, meaning they must be distinguishable 
+  from any other plant and the background. In the example video, this is 
+  done by using a different color for each plant against a brown background. 
+  You do not have to do it this way, for example, you can choose to use an 
+  image for each plant instead of a colored tile.
+
+* As in PA8, each command must be **visually noticeable**. This means that when 
+  'GROW 1' is called for example, it should be visually obvious that every 
+  plant just grew by 1. In the example video, grow commands cause more identical 
+  tiles to be drawn in some fashion (depending on the plant type) around every plant.
+
+* As in PA8, there must be a command log which displays commands as they are being executed. 
+  In the example video, this is done in a TextArea at the bottom of the garden.
+
+* As in PA8, you must still handle errors. Errors that don't cause the program to stop 
+  (such as 'Can't grow here') should be **distinguishable** in the command log. 
+  In the video example, the error is fully capitalized and spaced out from surrounding text.
+  For errors that do cause the program to stop, such as 'Invalid dimension input'
+  should still print to stdout and exit the program as usual.
+  
+
+
+## Grading Criteria
+
+Half of the PA9 grade will be a working GUI.  You will be demonstrating your
+GUI to your SL during Sections April 16th or 17th.  Your demonstration
+must be less than 5 minutes and show all of the above listed criteria.
+
+The working GUI must also be demonstrated with code.  Submit your PA9 code to
+gradescope.
+
+The other half of the PA9 grade will be your decomposition and code clarity.
+
+Decomposition
+
+* Points will be taken off for copy, pasted, and edited code that
+  should have been encapsulated in a method.
+
+* **This program should use fewer than 10 .java files.**
+  Each of these files should be (<300 lines).
+
+* Each method should be less than 30 lines.  This INCLUDES
+  comments, but not the method header.  It is easier to read a 
+  function if it can all fit on one screen.
+  
+Code Clarity
+* YOU should be able to read, understand, and explain your own code
+  to someone else a couple days after you wrote it.
+  * No magic numbers
+  * No methods written to just get the test cases to work
+
+* There needs to be a balance between no comments in the body of the
+  methods and a comment for every line in the program.  Either extreme
+  will result in points off.
+
+* **The file header should include instructions on how someone would
+  use this program.**  To use the program, one would need to know the
+  input file format.  One would also need to know the command line arguments
+  that should be passed to the program.
+
+* Use meaningful variable names.  Loop iterators can
+  be simple (i for integers, s for strings, n for numbers, etc.).
+
+* The clearest code examples will be anonymously shown in class.
+
+* The most obfuscated code examples will be anonymously shown in class
+  with suggestions for improvement.
+  
+## Submission
+
+
+For this assignment, you are **REQUIRED** to submit all of the following files
+to Gradescope before Monday April 16th at 11:30am. 
+  * All the Java source files needed to run your program.
+  * If you are trying for the up to 10 extra credit points for going
+    above and beyond, then let your SL know during your demo and summarize 
+    what you did extra in a README.md file that you submit to Gradescope.
+
+Write your own code. We will be using a tool that finds similar code.
+
+It is recommended that when talking with others about the assignment, do not write
+anything down.
+

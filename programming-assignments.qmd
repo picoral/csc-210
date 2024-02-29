@@ -1,0 +1,81 @@
+---
+title: "Programming Assignments"
+---
+
+```{r}
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+data <- read_excel("assessment-deadlines.xlsx")
+```
+
+
+# PA 1
+
+* Deadline: `r data %>% filter(Assignment == "PA1") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+* [Instructions](programming-assignment-01.html)
+
+
+# PA 2
+
+* Deadline: `r data %>% filter(Assignment == "PA2") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+* [Instructions](programming-assignment-02.html)
+
+# PA 3
+
+* Deadline: `r data %>% filter(Assignment == "PA3") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+* [Instructions](programming-assignment-03.html)
+
+# PA 4
+
+* Deadline: `r data %>% filter(Assignment == "PA4") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+* [Instructions](programming-assignment-04.html)
+
+# PA 5
+
+* Deadline: `r data %>% filter(Assignment == "PA5") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+* [Instructions](programming-assignment-05.html)
+
+# PA 6
+
+* Deadline: `r data %>% filter(Assignment == "PA6") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+* [Instructions](programming-assignment-06.html)
+
+# PA 7
+
+* Deadline: `r data %>% filter(Assignment == "PA7") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+* [Instructions](programming-assignment-07.html)
+
+# PA 8
+
+* Deadline: `r data %>% filter(Assignment == "PA8") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+* [Instructions](programming-assignment-08.html)
+
+# PA 9
+
+* Deadline: `r data %>% filter(Assignment == "PA9") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+* [Instructions](programming-assignment-09.html)
+
+# PA 10
+
+* Deadline: `r data %>% filter(Assignment == "PA10") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+* [Instructions](programming-assignment-10.html)
+
+# PA 11
+
+* Deadline: `r data %>% filter(Assignment == "PA11") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+* [Instructions](programming-assignment-11.html)
