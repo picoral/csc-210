@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>CSC 210 Fall 2024 - Programming Assignmnet 04</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">CSC 210 Fall 2024</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./programming-assignments.html" rel="" target="">
+ <span class="menu-text">Programming Assignments</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pa4-boolsat-writeup" id="toc-pa4-boolsat-writeup" class="nav-link active" data-scroll-target="#pa4-boolsat-writeup">PA4-BoolSAT-Writeup</a>
+  <ul class="collapse">
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#background-what-is-this-sat-thing" id="toc-background-what-is-this-sat-thing" class="nav-link" data-scroll-target="#background-what-is-this-sat-thing">Background (What is this SAT thing?)</a></li>
+  <li><a href="#the-assignment-what-you-will-be-doing" id="toc-the-assignment-what-you-will-be-doing" class="nav-link" data-scroll-target="#the-assignment-what-you-will-be-doing">The Assignment (What you will be doing)</a></li>
+  <li><a href="#the-boolsat-library" id="toc-the-boolsat-library" class="nav-link" data-scroll-target="#the-boolsat-library">The BoolSAT Library</a></li>
+  <li><a href="#task-1---junit-testing-you-need-to-do-this" id="toc-task-1---junit-testing-you-need-to-do-this" class="nav-link" data-scroll-target="#task-1---junit-testing-you-need-to-do-this">Task #1 - JUnit Testing (You need to do this)</a>
+  <ul class="collapse">
+  <li><a href="#junit-test-cases" id="toc-junit-test-cases" class="nav-link" data-scroll-target="#junit-test-cases">JUnit Test Cases</a></li>
+  </ul></li>
+  <li><a href="#task-2---the-satisfiability-problem-you-need-to-do-this" id="toc-task-2---the-satisfiability-problem-you-need-to-do-this" class="nav-link" data-scroll-target="#task-2---the-satisfiability-problem-you-need-to-do-this">Task #2 - The SAT[isfiability] Problem (You need to do this)</a>
+  <ul class="collapse">
+  <li><a href="#expression-input-file" id="toc-expression-input-file" class="nav-link" data-scroll-target="#expression-input-file">Expression input file:</a></li>
+  <li><a href="#output-format-debug-not-enabled" id="toc-output-format-debug-not-enabled" class="nav-link" data-scroll-target="#output-format-debug-not-enabled">Output Format (DEBUG not enabled):</a></li>
+  <li><a href="#output-format-debug-enabled" id="toc-output-format-debug-enabled" class="nav-link" data-scroll-target="#output-format-debug-enabled">Output Format (DEBUG enabled):</a></li>
+  <li><a href="#expected-output" id="toc-expected-output" class="nav-link" data-scroll-target="#expected-output">Expected Output:</a></li>
+  </ul></li>
+  <li><a href="#testing-your-program" id="toc-testing-your-program" class="nav-link" data-scroll-target="#testing-your-program">Testing your program</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a>
+  <ul class="collapse">
+  <li><a href="#junit-background-information" id="toc-junit-background-information" class="nav-link" data-scroll-target="#junit-background-information">JUnit Background Information</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
+  <li><a href="#testing-thought-process" id="toc-testing-thought-process" class="nav-link" data-scroll-target="#testing-thought-process">Testing Thought Process</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  <li><a href="#assignment-hint" id="toc-assignment-hint" class="nav-link" data-scroll-target="#assignment-hint">Assignment Hint</a></li>
+  <li><a href="#boolsat-library" id="toc-boolsat-library" class="nav-link" data-scroll-target="#boolsat-library">BoolSat Library</a></li>
+  </ul></li>
+  <li><a href="#grading-criteria" id="toc-grading-criteria" class="nav-link" data-scroll-target="#grading-criteria">Grading Criteria</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Programming Assignmnet 04</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Deadline: October 02, 2024 – Wednesday, 11:30pm</p>
+<section id="pa4-boolsat-writeup" class="level1">
+<h1>PA4-BoolSAT-Writeup</h1>
+<p>For PA4, you will be writing a program that reads in a boolean expression from a file and then determines if it is ever possible for that expression to be satisfiable (evaluate to true). This will have you writing unit tests for some provided expression parsing code, writing code that evaluates provided boolean expression trees, and exhaustively searching all possible assignments of boolean values to the variables in the given boolean expression.</p>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>The goal of this assignment is to practice the following ideas:</p>
+<ul>
+<li>Understanding how a large problems is decomposed into classes.</li>
+<li>Using JUnit to test the interface to those classes.</li>
+<li>Traversal over trees and post-order evaluation of expressions.</li>
+<li>More exhaustive search.</li>
+<li>Multiple data structures being used at the same time (tree and map of variables to bool values)</li>
+</ul>
+<p>For this assignment you have been provided a library (already written code bundled into a package) that builds syntax trees from boolean expression strings. The bool_exp package contains all of the source code for this library.</p>
+<p>NOTE: <strong>You do not need to modify any of the files in the bool_exp package.</strong></p>
+</section>
+<section id="background-what-is-this-sat-thing" class="level2">
+<h2 class="anchored" data-anchor-id="background-what-is-this-sat-thing">Background (What is this SAT thing?)</h2>
+<p>The <a href="https://en.wikipedia.org/wiki/Boolean_satisfiability_problem">SAT</a> problem is historically significant in that it was the first problem proven to be <a href="https://en.wikipedia.org/wiki/NP-completeness">NP-complete</a>. A cool property of the NP-complete class of problems is that ANY NP-complete problem can be rewritten as the SAT problem, and vice-versa. Usually this conversion is pretty easy. There are a lot of really important problems in the NP-complete class. In fact, SAT is so important that there are yearly competitions to see who can create the best SAT solver ([<a href="http://www.satcompetition.org/">1</a>], [<a href="http://www.maxsat.udl.cat/">2</a>]). SAT has no known efficient solution (i.e.&nbsp;a solution in polynomial time, in the worst case sat is on the order of <embed src="http://latex.codecogs.com/gif.latex?O%282%5E%7Bn%7D%29" class="img-fluid">​).</p>
+<p>Some uses to SAT solvers: - <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5597726/">Using SAT to synthesize programs</a>. Yes, that is “synthesis” as in write programs! - <a href="https://stackoverflow.com/questions/9377916/what-is-sat-and-what-it-is-good-for">Eclipse embeds SAT4j to manage dependencies among its plugins.</a> - <a href="https://github.com/hugomg/hexiom">Applied to a flash game called Hexoim</a>.</p>
+</section>
+<section id="the-assignment-what-you-will-be-doing" class="level2">
+<h2 class="anchored" data-anchor-id="the-assignment-what-you-will-be-doing">The Assignment (What you will be doing)</h2>
+<p>For this assignment, you will be exhaustively searching all possible assignments of boolean values to variables and determining if the expression is satisfiable. An expression is satisfiable if there exists at least one mapping from variables to boolean values such that the expression evaluates to true. Such a mapping (where every variable is given exactly one value from {true, false}) will be called a ‘configuration’ in this document.</p>
+<p>For example:</p>
+<pre><code>boolean a = ??;
+if(a &amp;&amp; !a){
+        // Can code here EVER execute?
+}</code></pre>
+<p>The answer is: No.</p>
+<p>If a is <code>false</code> then (<code>false &amp;&amp; true</code>) is false. If a is <code>true</code> then (<code>true &amp;&amp; false</code>) is still false.</p>
+<p>We have checked all possible assignments of values to variables in the expression, none of them evaluate to true. The expression <code>a &amp;&amp; !a</code> is <strong>not satisfiable</strong>.</p>
+<p>The input to your program will be a boolean expression, i.e.&nbsp;the if or while statement’s condition:</p>
+<p><code>if( boolean expression ){ ... }</code>.</p>
+</section>
+<section id="the-boolsat-library" class="level2">
+<h2 class="anchored" data-anchor-id="the-boolsat-library">The BoolSAT Library</h2>
+<p>You are provided the file boolsat.jar which can be found (along with the source code and documentation) at [https://github.com/UACS210Spring2018/PA4-BoolSat-Start]. Given boolean logic expressions we can construct trees to represent how that expression would be evaluated. See PA4Main.java to see how this is done; here is an example:</p>
+<p>Input: <code>a &amp;&amp; b || !c &amp;&amp; d || e &amp;&amp; !f</code></p>
+<p>Output:</p>
+<p><img src="https://i.gyazo.com/184c4b20fa1c766ffe5fbdc20a92d2c7.png" class="img-fluid">​</p>
+</section>
+<section id="task-1---junit-testing-you-need-to-do-this" class="level2">
+<h2 class="anchored" data-anchor-id="task-1---junit-testing-you-need-to-do-this">Task #1 - JUnit Testing (You need to do this)</h2>
+<p>Theo has done some preliminary main-method testing in the Parser class and Lexer class in the BoolSat library. You need to help him out by writing JUnit tests for the ASTNode class.</p>
+<p>In ASTNodeTest.java you should, at a minimum, test the following <strong>for each node type</strong> using JUnit:</p>
+<ul>
+<li>Creating nodes with <code>null</code> children</li>
+<li>Creating nodes with other ASTNodes as children</li>
+<li>The <code>isAnd</code>, <code>isOr</code>, <code>isNot</code>, <code>isId</code> methods on nodes that are the correct type and incorrect type</li>
+<li>Getting the name of a node type.</li>
+<li>Getting the name of the identifier in an ID node.</li>
+</ul>
+<section id="junit-test-cases" class="level3">
+<h3 class="anchored" data-anchor-id="junit-test-cases">JUnit Test Cases</h3>
+<p>Each feature being tested should be in its own test case. A JUnit test cases is a method of the form:</p>
+<pre><code>@Test
+public void testFeatureMath() {
+        Integer i = new Integer(1);
+        Assert.assertEquals(i.intValue(), 1);
+        Assert.assertTrue(5 + 1 == 6);
+        Assert.assertFalse(5 * 4 == 4);
+        ...
+}</code></pre>
+<p>The <code>Assert</code> class provides methods for testing expected behavior. If any assertion does not pass, the test case will fail and Eclipse will display information about which test cases pass and, if any fail, on which assertion they failed.</p>
+<p>Here, two of my test cases failed because my ASTNode class was not implemented correctly:</p>
+<p><img src="https://i.gyazo.com/bde97ae47bab40a88fe27e0e701a9c5b.png" class="img-fluid"></p>
+<p>Once I fixed the mistake, my test cases all passed:</p>
+<p><img src="https://i.gyazo.com/9ab46aca3b7fb32af4cd4350d75442c1.png" class="img-fluid"></p>
+<p>NOTE: You should not change the implementation of the ASTNode class. All you need to do is write a set of test cases that verify it behaves correctly (it does).</p>
+<p>How could you rewrite the main-method test cases of BoolSatParser.java and Lexer.java into JUnit test cases?</p>
+</section>
+</section>
+<section id="task-2---the-satisfiability-problem-you-need-to-do-this" class="level2">
+<h2 class="anchored" data-anchor-id="task-2---the-satisfiability-problem-you-need-to-do-this">Task #2 - The SAT[isfiability] Problem (You need to do this)</h2>
+<p>Implement a program in PA4BoolSat.java that: 1. Constructs an Abstract Syntax Tree for the expression in the input file provided by the first command line argument (<code>args[0]</code>). 2. Optionally accepts a DEBUG command line option in the second command line argument. 3. Exhaustively searches over all possible assignments of values to each boolean variable. If the DEBUG option is set: print all configurations and the result evaluating the expression with those variable values. If the DEBUG option is not set, print all configurations that satisfy the expression.</p>
+<section id="expression-input-file" class="level3">
+<h3 class="anchored" data-anchor-id="expression-input-file">Expression input file:</h3>
+<p>The expression input file should contain only a single line, that line should contain a well-formed Java boolean expression limited to: - the AND operator <code>&amp;&amp;</code> - the OR operator <code>||</code> - Parenthesis <code>(</code>, <code>)</code> - the NOT operator <code>!</code> - and valid Java identifiers: i.e strings with no spaces that start with exactly one letter, or <code>$</code>, or <code>_</code>, that is followed by any number of letters, digits, <code>$</code> and <code>_</code> characters.</p>
+<pre><code>Input File:
+----------------------------------
+| a &amp;&amp; b || !c &amp;&amp; !(!d || e)     |
+|             ...                | &lt;all other lines ignored&gt;
+----------------------------------</code></pre>
+<p>This description is taken from PA4Main.java – an example of what the class documentation for the code you write should look like.</p>
+</section>
+<section id="output-format-debug-not-enabled" class="level3">
+<h3 class="anchored" data-anchor-id="output-format-debug-not-enabled">Output Format (DEBUG not enabled):</h3>
+<p>In order to match the expected output you need to convert each satisfying configuration into a single line string. The String representation should be of the form</p>
+<p><code>identifier0: value0, identifier1: value1, ..., identifierN: valueN</code></p>
+<p>such that <code>identifier0</code> , <code>identifier1</code>, …, <code>identifierN</code> are sorted in lexicographic order.</p>
+<p>For example: the expression <code>a || b || c || d || e</code> may produce the output <code>"a: true, b: false, c: false, d: true, e: true"</code> because this is a configuration that satisfies the expression.</p>
+<p>Lastly; there may be many such configurations that satisfy an expression, each line that is output should be sorted (see example output).</p>
+</section>
+<section id="output-format-debug-enabled" class="level3">
+<h3 class="anchored" data-anchor-id="output-format-debug-enabled">Output Format (DEBUG enabled):</h3>
+<p>When the DEBUG command is provided to the program, you should print out all configurations and the value that the expression evaluates to with each configuration as input. Print the configuration in the same format as above, and append <code>", result"</code> to the end (where <code>result</code> is <code>true</code> or <code>false</code> depending on how the configuration evaluates the expression).</p>
+<p>Using the same example as above, the output would contain these lines:</p>
+<p><code>"a: true, b: false, c: false, d: true, e: true, true"</code></p>
+<p><code>"a: false, b: false, c: false, d: false, e: true, true"</code></p>
+<p><code>"a: false, b: false, c: false, d: false, e: false, false"</code></p>
+</section>
+<section id="expected-output" class="level3">
+<h3 class="anchored" data-anchor-id="expected-output">Expected Output:</h3>
+<p>Consider the input expression of <code>a || b</code>. If we exhaustively search all value assignments to <code>a</code> and <code>b</code> we will find the following to be true:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><code>a</code> value</th>
+<th style="text-align: center;"><code>b</code> value</th>
+<th style="text-align: center;"><code>a OR b</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>true</strong></td>
+<td style="text-align: center;"><strong>true</strong></td>
+<td style="text-align: center;"><strong>true</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>true</strong></td>
+<td style="text-align: center;"><em>false</em></td>
+<td style="text-align: center;"><strong>true</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><em>false</em></td>
+<td style="text-align: center;"><strong>true</strong></td>
+<td style="text-align: center;"><strong>true</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><em>false</em></td>
+<td style="text-align: center;"><em>false</em></td>
+<td style="text-align: center;"><em>false</em></td>
+</tr>
+</tbody>
+</table>
+<p>There are three unique configurations that satisfy the expression (therefore <code>a || b</code> is satisfiable). These configurations would be printed as the following strings</p>
+<pre><code>"a: true, b: true"
+"a: true, b: false"
+"a: false, b: true"</code></pre>
+<p>However, the correct output is these three strings in sorted order:</p>
+<pre><code>% java PA4BoolSat expressionInputFileName
+a: false, b: true
+a: true, b: false
+a: true, b: true</code></pre>
+<p>If we want to see all configurations and the values that the expression evaluates to with those configurations, we can run the program with the DEBUG argument.</p>
+<pre><code>% java PA4BoolSat expressionInputFileName DEBUG
+a: false, b: false, false
+a: false, b: true, true
+a: true, b: false, true
+a: true, b: true, true</code></pre>
+</section>
+</section>
+<section id="testing-your-program" class="level2">
+<h2 class="anchored" data-anchor-id="testing-your-program">Testing your program</h2>
+<p>When you commit and push, Travis CI will send you an email to let you know if the public test cases failed. We STRONGLY recommend you put some of your own test cases in PublicTestCases/. Read grade.py to see how the input and .out files should be named. Also look at the examples that are already in the PublicTestCases/ subdirectory.</p>
+<p>Upload it to Gradescope and you will be able to see which public test cases were passed/failed.</p>
+</section>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
+<section id="junit-background-information" class="level3">
+<h3 class="anchored" data-anchor-id="junit-background-information">JUnit Background Information</h3>
+<p>Writing software is hard. Plain and simple, programming is not easy. Over the past 70 years there have been many methods developed to make the process of writing code easier. Once such technique is called <strong>Test-Driven Development</strong>. The idea is simple: you know what you want your code to do, but you don’t know how to write code to do it. So start by writing the test cases, then write code that makes those test cases pass. Test-Driven Development is used in industry, and you will do it in CS335. In Java, JUnit is a framework that allows us to write test cases with ease and automate the testing process.</p>
+<p>You are not doing Test-Driven Development (you can if you want, but that is not the purpose of this course). Our goal is to introduce you to JUnit to help you test the code you write better.</p>
+</section>
+<section id="code" class="level3">
+<h3 class="anchored" data-anchor-id="code">Code</h3>
+<p>JUnit is a lot simpler than it seems. Each test case (a single method defined like the one below) should be responsible for testing one piece of functionality.</p>
+<pre><code>@Test
+public void testOneThing() {
+}</code></pre>
+</section>
+<section id="testing-thought-process" class="level3">
+<h3 class="anchored" data-anchor-id="testing-thought-process">Testing Thought Process</h3>
+<p>This is the process you need to follow when writing test cases:</p>
+<ol type="1">
+<li><strong>THINK</strong> about what needs to happen. “When I call this method what should it do?”</li>
+<li><strong>THINK</strong> about what the correct output should be for a particular input. “When I call this method with x and y as input, what should the output be?”</li>
+<li><strong>WRITE CODE</strong> in the test case that creates these inputs, and feeds them into the code being tested.<br>
+</li>
+<li><strong>WRITE CODE</strong> in the test case to ensure that the actual result was correct. The actual output from the code being tested should match the expected output that we hypothesized in (2). Use the Assert class that JUnit provides.</li>
+</ol>
+<p><a href="https://junit.org/junit4/javadoc/latest/org/junit/Assert.html">The JUnit Assert class documentation</a> lists all of the assert methods that can be used to test expected output vs actual output. Some of the most useful are <code>assertTrue()</code>, <code>assertFalse()</code>, <code>assertEquals()</code>, <code>assertNull()</code>, etc.</p>
+</section>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>For example, the Java standard library has a Math class to do various math operations. Let’s apply this testing process to test the math class.</p>
+<ol type="1">
+<li>(Thinking) The <code>Math.min(int a, int b)</code> method should return the smaller of the two input numbers.</li>
+<li>(Thinking) The <code>min</code> method accepts two numbers as input, and returns the smaller one. If I provide that method 55 and 77, the output should be 55.</li>
+<li>(Writing) Write the code to set up this scenario:</li>
+</ol>
+<pre><code>@Test
+public void testMath() {
+    int small = 55, big = 77;
+    int result = Math.min(small, big);
+}</code></pre>
+<ol start="4" type="1">
+<li>(Writing) We haven’t actually tested anything yet. Since the expected output is 55, if Math.min() is implemented correctly that is what the value of <code>result</code> should be. So we write an assert to test the expected output against the actual output.</li>
+</ol>
+<pre><code>@Test
+public void testMath() {
+    int small = 55, big = 77;
+    int result = Math.min(small, big);
+    Assert.assertEquals(result, 55); 
+}</code></pre>
+<p>If <code>Math.min()</code> is not implemented correctly, then the test case would fail. If we have lots and lots of test cases and they all pass, we can be reasonably certain that the method is implemented perfectly.</p>
+</section>
+<section id="assignment-hint" class="level3">
+<h3 class="anchored" data-anchor-id="assignment-hint">Assignment Hint</h3>
+<p>You need to test all of the functionality of the ASTNode.java class. <strong>Your first step should be reading every line of code in that class (it’s a small class) and understanding what it does.</strong> How can you test something if you don’t know what it is supposed to be doing? If you have questions about how it is implemented, ask on Piazza. Then follow the 4 steps above. Let’s do another example using the ASTNode.java class.</p>
+<ol start="0" type="1">
+<li><strong>READ THE CODE</strong> It looks like the class only has two public instance variables, child1 and child2. It looks like there are only pubic methods for creating nodes, testing if a given node is of a particular type, getting the type of a node as a string, and getting the name of an identifier node’s variable.</li>
+<li><strong>THINK</strong> AND nodes have two children.</li>
+<li><strong>THINK</strong> If I create an AND node with the two children set to null, the child1 and child2 instance variables should both probably be null.</li>
+<li><strong>WRITE CODE</strong> Let’s create an AND node with null children.</li>
+</ol>
+<pre><code>@Test
+public void testAnd(){
+    ASTNode testAnd = ASTNode.createAndNode(null, null);
+}</code></pre>
+<ol start="4" type="1">
+<li><strong>WRITE CODE</strong> Let’s test that the values are what they should be.</li>
+</ol>
+<pre><code>@Test
+public void testAnd(){
+    ASTNode testAnd = ASTNode.createAndNode(null, null);
+    Assert.assertNull(testAnd.child1);
+    Assert.assertNull(testAnd.child2);
+}</code></pre>
+<p>Once you have finished (4), go back to (1) and repeat until you have tested all of the functionality of the class. In the Task #1 criteria I list 5 different functionalities to test for. We have done the first bullet point for only the AND node. You should do this same bullet point for all kinds of nodes.</p>
+</section>
+<section id="boolsat-library" class="level3">
+<h3 class="anchored" data-anchor-id="boolsat-library">BoolSat Library</h3>
+<p>The file bool_exp/PA4Main.java is an example application for using the BoolSatParser. This file reads an input expression from a file, and creates a string in the DOT format representing the structure of the expression tree. That string can be fed as input to a <a href="http://sandbox.kidstrythisathome.com/erdos/">DOT to Image utility</a> to see a picture of the structure of the tree.</p>
+<p><strong>You will need to write code similar to how PA4Main is written</strong>, you will need to read an expression from an input file, and pass it to <code>BoolSatParser.parse(String expression)</code>. This method will return an ASTNode that is the root of the expression tree.</p>
+</section>
+</section>
+<section id="grading-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
+<p>Half of the PA4 grade will be correctness. For this assignment, there will be some private test cases on Gradescope.</p>
+<p>The other half of the PA4 grade will be your decomposition and code clarity, the JUnit tests, and a peer review.</p>
+<p>Decomposition * Should carefully select data structures that implement the required functionality. For example, if you avoid using Maps, it will probably result in more complicated code and thus points off.</p>
+<ul>
+<li><p>Should just use JUnit methods in ASTNodeTest.java and static methods in PA4BoolSat.java.</p></li>
+<li><p>Use a single file for Task#2, PA4BoolSat.java. This should be a small program (&lt;200 lines).</p></li>
+<li><p>Each static method should be less than 30 lines. This INCLUDES comments. It is easier to read a function if it can all fit on one screen.</p></li>
+<li><p>Make things as simple as possible.</p>
+<ul>
+<li>Only use one Scanner instance.</li>
+<li>Don’t use lambda functions or other features in non-standard ways.</li>
+<li>Avoid nested loops.</li>
+<li>Avoid nesting conditionals.</li>
+<li>Avoid chaining: see the Piazza post for more info</li>
+</ul></li>
+</ul>
+<p>Code Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work</p>
+<ul>
+<li><p>There needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.</p></li>
+<li><p>The file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.</p></li>
+<li><p>Use meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).</p></li>
+<li><p>The clearest code examples will be anonymously shown in class.</p></li>
+<li><p>The most obfuscated code examples will be anonymously shown in class with suggestions for improvement.</p></li>
+</ul>
+<p>The coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine.</p>
+<p>Write your own code. We will be using a tool that finds overly similar code. I recommend that when talking with others about the assignment, do not write anything down.</p>
+</section>
+<section id="submission" class="level2">
+<h2 class="anchored" data-anchor-id="submission">Submission</h2>
+<p>For PA4, you are required to submit your PA4BoolSat.java and ASTNodeTest.java file to Gradescope.</p>
+<p>(NEW) You are also required to submit PA4BoolSat.java to Aropa for peer review. Log into https://aropa2.gla.ac.uk as was done during Section 3.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

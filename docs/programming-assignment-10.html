@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>CSC 210 Fall 2024 - Programming Assignment 10</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">CSC 210 Fall 2024</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./programming-assignments.html" rel="" target="">
+ <span class="menu-text">Programming Assignments</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pa10-kineticsculpture" id="toc-pa10-kineticsculpture" class="nav-link active" data-scroll-target="#pa10-kineticsculpture">PA10-KineticSculpture</a>
+  <ul class="collapse">
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#the-assignment" id="toc-the-assignment" class="nav-link" data-scroll-target="#the-assignment">The Assignment</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
+  <li><a href="#suggestions" id="toc-suggestions" class="nav-link" data-scroll-target="#suggestions">Suggestions</a></li>
+  <li><a href="#grading-criteria" id="toc-grading-criteria" class="nav-link" data-scroll-target="#grading-criteria">Grading Criteria</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Programming Assignment 10</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Deadline: December 04, 2024 – Wednesday, 11:30pm</p>
+<section id="pa10-kineticsculpture" class="level1">
+<h1>PA10-KineticSculpture</h1>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>This assignment is a synthesis of many of the concepts that we have covered this semester in class. * graphs * GUI input and output and event-driven programming * inheritance * reading input from a file * removing redundancy and other code clarity improvements</p>
+<p>For PA10 you will be designing a kinetic sculpture simulation. Look up the term on the internet for a plethora of pictures. The PA10hardCodedDemo.java starter code hardcodes an example kinetic sculpture with four sculpture nodes (input, thing1, thing2, and sink) connected with four edges.</p>
+<p>Below indicates the minimal requirements for the assignment. In addition you can design as many other sculpture nodes as you would like. Note that the rules of physics do not need to be followed: circles can change colors, they can disappear, new circles can be generated, etc.</p>
+</section>
+<section id="the-assignment" class="level2">
+<h2 class="anchored" data-anchor-id="the-assignment">The Assignment</h2>
+<p>This is a two-week assignment. * For the first week, you will need to submit a class hierarchy diagram with ALL the classes you plan to have and their fields and interface to Aropa and to Gradescope for peer review.</p>
+<ul>
+<li>The whole assignment will need to be completed by the end of the second week with a demo video, Java source code, and an in-person demonstration of the GUI with your section leader during section the last week of class.</li>
+</ul>
+<p>For the assignment, you will need to do the following: * Using some form of graphical input (TextField, …) to have the user provide an input file name.</p>
+<ul>
+<li><p>Read in an input file where the sculpture nodes and how the nodes should be connected are specified (hint: graph data structure). You can assume the input is correctly formed. Here is the input file for the hardcoded example in the PA10 starter code. <code>delay: 1       input: RED, BLUE       0: input, (10,10)       1: passthrough, (60,20)       2: passthrough, (70,80)       3: sink, (140,100)       0 -&gt; 1       0 -&gt; 2       1 -&gt; 3       2 -&gt; 3</code> Any number of colors can be specified in a list after the “input:” label. There will only be one delay specified. Any number of sculpture nodes and edges between nodes may be specified. Sculpture nodes do not need to be connected to any other nodes.</p></li>
+<li><p>Graphically layout the sculpture nodes with their top left corner being at the specified coordinates. For the three required sculpture nodes (source, passthrough, and sink), the input ports are on the left of the sculpture nodes and the output ports are on the right of the node. When two sculpture nodes are connected, the line representing the connection should go from the middle of the right side of the first node to the middle of the left side of the second node. Run the provided PA10hardCodedDemp start code for an example.</p></li>
+<li><p>Create a class hierarchy for kinetic sculpture nodes. Required nodes include:</p>
+<ul>
+<li><p>An input node that each processing step will take a circle off the input list and put it on the input nodes’s output port.</p></li>
+<li><p>A passthrough node that for each processing step takes a circle from its input port and moves it to its output port.</p></li>
+<li><p>A sink node that each processing step takes all of the input circles, removes them from the input port, and prints their color to standard out.</p></li>
+</ul></li>
+<li><p>Note that there will need to be a processing step that iterates over all nodes and has them process their input port. After that, there will need to be a separate pass over all of the edges that connect nodes.</p></li>
+<li><p>The provided starter code has a significant amount of code redundancy, magic numbers, and is only hardcoded for one example. Do NOT submit the starter code. Your code will need to be significantly cleaner.</p></li>
+<li><p>Your demonstration will need to be using the provided sculpture.in. You can append more sculpture nodes of different types to that file to make your kinetic sculpture program unique and to garner up to 10 extra credit points.</p></li>
+</ul>
+</section>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
+<ol start="0" type="1">
+<li>Start NOW! Here is the wordcount output from the reference implementation.</li>
+</ol>
+<pre><code>$ wc *.java
+       9      26     224 InputNode.java
+      76     238    2736 JavaFXView.java
+     121     392    4263 PA10Main.java
+     173     618    6230 Sculpture.java
+      36     113     948 SculptureNode.java
+      17      46     416 SinkNode.java
+     432    1433   14817 total</code></pre>
+<pre><code>This means that the whole program is 432 lines of code.</code></pre>
+<ol type="1">
+<li><p>Accept the github assignment for PA10, (https://classroom.github.com/a/byIC_y1AE). Import your PA10 github repository into Eclipse as usual.</p></li>
+<li><p>Run the PA10hardcoded.java and see what it does.</p></li>
+<li><p>Develop a design for PA10. What classes will you have with what fields and what methods?</p></li>
+<li><p>Write your program using all of the starter code given in class and provided in the repository to help get you started.</p></li>
+<li><p>Make a video of running sculpture.in through your program.</p></li>
+<li><p>Demonstrate your program in your section on Monday April 30th or Tuesday May 1st.</p></li>
+</ol>
+</section>
+<section id="suggestions" class="level2">
+<h2 class="anchored" data-anchor-id="suggestions">Suggestions</h2>
+<ul>
+<li><p>Work on a Sculpture object that can read itself in from a file first.</p></li>
+<li><p>Then work on displaying the Sculpture object using the provided JavaFXView functionality.</p></li>
+<li><p>Do the execution of the sculpture last. The execution of the sculpture is where there are marbles flowing through the sculpture.</p></li>
+<li><p>Odds and Ends</p>
+<ul>
+<li>Setting the width of a TextField.</li>
+</ul>
+<pre><code> TextField filename_field = new TextField();
+ filename_field.setPrefWidth(200);</code></pre>
+<ul>
+<li>There will only be one input node specified in any of the provided input files.</li>
+</ul></li>
+</ul>
+</section>
+<section id="grading-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
+<p>Half of the PA10 grade will be correctness (30 points) and the class hierarchy diagram (20 points). For this assignment, correctness is the GUI input and output. You should also expect that we might run your program with additional input files besides the ones provided. The class hierarchy diagram should follow the format discussed in class and contain enough functionality for completing the assignment.</p>
+<p>The other half of the PA10 grade will be your decomposition and code clarity.</p>
+<p>Decomposition</p>
+<ul>
+<li><p>Points will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.</p></li>
+<li><p><strong>This program should use fewer than 10 .java files.</strong> Each of these files should be (&lt;200 lines). Do NOT include PA10hardCodedDemo.java.</p></li>
+<li><p>Each method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.</p></li>
+</ul>
+<p>Code Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work</p>
+<ul>
+<li><p>There needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.</p></li>
+<li><p><strong>The file header should include instructions on how someone would use this program.</strong> To use the program, one would need to know the input file format. One would also need to know the command line arguments that should be passed to the program.</p></li>
+<li><p>Use meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).</p></li>
+<li><p>The clearest code examples will be anonymously shown in class.</p></li>
+<li><p>The most obfuscated code examples will be anonymously shown in class with suggestions for improvement.</p></li>
+</ul>
+</section>
+<section id="submission" class="level2">
+<h2 class="anchored" data-anchor-id="submission">Submission</h2>
+<p>For this assignment, you are <strong>REQUIRED</strong> to submit all of the following files: * by Monday April 23rd at 11:30am to Gradescope AND Aropa * a class hierarchy diagram with all the classes, their interfaces, and any inheritance relationships</p>
+<ul>
+<li>to Gradescope before Monday April 30th at 11:30am.
+<ul>
+<li>All the Java source files needed to run your program. Do NOT include PA10hardCodedDemo.java.</li>
+<li>sculpture.in, start with the provided one, but feel free to ADD to it</li>
+<li>sculpture.mp4, or other video format that can be run on multiple platforms. The video should be between 10 and 15 seconds long.</li>
+</ul></li>
+</ul>
+<p>To create the video, you can use a program to record your screen as you run your program, or you can simply record your screen with your smartphone or tablet. Do note however that the video you submit must be of good enough quality for the SL’s to clearly see you enter the input filename and see your sculpture execute.</p>
+<p>Write your own code. We will be using a tool that finds similar code.</p>
+<p>It is recommended that when talking with others about the assignment, do not write anything down.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

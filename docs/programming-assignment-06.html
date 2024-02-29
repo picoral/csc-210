@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>CSC 210 Fall 2024 - Programming Assignmnet 06</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">CSC 210 Fall 2024</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./programming-assignments.html" rel="" target="">
+ <span class="menu-text">Programming Assignments</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pa6-garden-writeup" id="toc-pa6-garden-writeup" class="nav-link active" data-scroll-target="#pa6-garden-writeup">PA6-Garden-Writeup</a>
+  <ul class="collapse">
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#garden-simulation" id="toc-garden-simulation" class="nav-link" data-scroll-target="#garden-simulation">Garden Simulation</a></li>
+  <li><a href="#the-assignment" id="toc-the-assignment" class="nav-link" data-scroll-target="#the-assignment">The Assignment</a></li>
+  <li><a href="#design-suggestions" id="toc-design-suggestions" class="nav-link" data-scroll-target="#design-suggestions">Design Suggestions</a></li>
+  <li><a href="#grading-criteria" id="toc-grading-criteria" class="nav-link" data-scroll-target="#grading-criteria">Grading Criteria</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Programming Assignmnet 06</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Deadline: October 23, 2024 – Wednesday, 11:30pm</p>
+<section id="pa6-garden-writeup" class="level1">
+<h1>PA6-Garden-Writeup</h1>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>The goal of this assignment is to design a class hierarchy to solve a problem, implement that hierarchy, use polymorphism, and use two-dimensional arrays.</p>
+<p>What is a class hierarchy you ask? Read about it on <a href="https://en.wikipedia.org/wiki/Class_hierarchy">Wikipedia</a>. The class diagram you will be submitting will be a simplified version of the UML class diagrams. There are many resources on the internet for UML class diagrams. See all the 2/28/18 class notes for the format expected in this class for PA6.</p>
+</section>
+<section id="garden-simulation" class="level2">
+<h2 class="anchored" data-anchor-id="garden-simulation">Garden Simulation</h2>
+<p>The problem you will be solving is a garden simulation. The simulation will read commands like PLANT, PRINT, GROW, and HARVEST from a file and execute those commands. The garden that you will be implementing will consist of a number of columns and rows of plots. Within each plot there can exist a single plant, which is represented with a 5x5 grid of cells. Plants are divided up into three different categories: trees, flowers, and vegetables, all of which have unique characteristics.<br>
+For example, trees grow up, vegetables grow down, and flowers bloom as they grow.</p>
+</section>
+<section id="the-assignment" class="level2">
+<h2 class="anchored" data-anchor-id="the-assignment">The Assignment</h2>
+<p>This is a <strong>two-week assignment</strong>. The class inheritance diagram will be all that is due Tuesday March 13th at 11:30 am to both Aropa AND Gradescope. We make suggestions as to what to implement the first week and then the second week, but you will be responsible for managing your own time. The rest of the assignment is due Monday March 19th.</p>
+<ul>
+<li><p>Class inheritance diagram: Create this diagram however you would like (draw it by hand, use software, etc.). You need to create a pdf file of it and submit it to Aropa AND Gradescope.</p>
+<ul>
+<li>See (https://gradescope.com/help#help-center-item-student-scanning) for some suggestions of how to scan in a document with your phone if you plan to produce your pdf by taking a picture of it.</li>
+<li>You will be building on PA6 for PA8 and PA9. In PA8 and PA9, you will be encouraged to use the model-view-controller pattern. Feel free to look that up ahead of time. You are not required to know it until we cover it though.</li>
+<li>March 1st 7:30am, the Aropa and Gradescope for the PA6 class inheritance diagram are ready to accept submissions.</li>
+<li>During Spring Break the Gradescope submission for the PA6 program will be posted.</li>
+</ul></li>
+<li><p>Your main program, which must be named PA6Main.java, will need to accept the name of an input file on the command line.</p></li>
+<li><p>The input file will contain all of the garden initialization settings and the commands to simulate. Here is an example input file.</p></li>
+</ul>
+<pre><code>rows: 1
+cols: 1
+
+PLANT (0,0) banana
+PRINT
+GROW 1
+print</code></pre>
+<p>Note that the commands should be case-insensitive. In other words, “print”, “PRINT”, and “Print” are all equivalent in the input file. Here is the output for the example:</p>
+<pre><code>&gt; PRINT
+.....
+.....
+.....
+.....
+..b..
+
+&gt; GROW 1
+
+&gt; PRINT
+.....
+.....
+.....
+..b..
+..b..</code></pre>
+<p>The output should be printed to standard out. See PublicTestCases/ for more input and output examples.</p>
+<ul>
+<li>The following are the types of specific plants that could be planted:</li>
+</ul>
+<pre><code>FLOWERS      TREES      VEGETABLES
+-------      -----      ----------
+Iris         Oak        Garlic
+Lily         Willow     Zucchini
+Rose         Banana     Tomato
+Daisy        Coconut    Yam
+Tulip        Pine       Lettuce
+Sunflower</code></pre>
+<ul>
+<li>The following are examples of representation arrays for different types of plants. For PA6, plants will be represented with ascii characters. Use the lower case version of the first letter of the plant name. For “Garlic” use ‘g’, for “Daisy” use ‘d’, etc.
+<ul>
+<li>Flowers should start in the middle of the 5x5 grid of cells in the plot it is planted in. Each location in a plot is called a cell.</li>
+<li>Vegetables should start at the top middle.</li>
+<li>Trees should start at the bottom middle.</li>
+</ul></li>
+</ul>
+<pre><code>Rose
+.....
+..... 
+..r..
+.....
+.....</code></pre>
+<pre><code>Tomato
+..t..
+..... 
+.....
+.....
+.....</code></pre>
+<pre><code>Coconut
+.....
+..... 
+.....
+.....
+..c..</code></pre>
+<ul>
+<li><p>Commands that need to be implemented. See the PublicTestCases/ for more examples. There are examples with PLANT, PRINT, and GROW. Other command input and output examples will appear during Spring Break.</p>
+<ul>
+<li><p><strong>The PLANT Command</strong><br> EXAMPLE USE: <em>PLANT (0,0) rose</em><br> If the PLANT command is read, it should be followed by plot coordinates and the type of Plant to be planted. Use this type to plant the correct subclass of plant into the garden at given plot coordinates. The plot coordinates are given as row and column. Both rows and columns start at 0. Rows go down the screen, and columns go across the screen. Each plot will itself contain 5 cells (represented as characters). There is a restriction that the number of cells across should be less than or equal to 80, therefore the most plot columns allowed is 80/5 or 16.</p></li>
+<li><p><strong>The PRINT Command</strong><br> EXAMPLE USE: <em>PRINT</em><br> If the PRINT command is read, then the entire garden should be printed to standard out.</p></li>
+<li><p><strong>The GROW Command</strong><br> EXAMPLE USE: <em>GROW 1</em><br> If the GROW command is read, then each Plant should grow the specified number of times as seen in the input command. A plant cannot grow out of its plot. No error will happen, but growth should not occur outside the plot boundaries. Plots also cannot run into each other.</p></li>
+<li><p><strong>GROW [num] (x,y)</strong><br> EXAMPLE USE: <em>GROW 1 (2,3)</em><br> Grow whichever Plant is located in the garden at position (x,y) num times. If there is nothing at this position or the position is outside the size of the garden, print, “Can’t grow there.” and continue.</p></li>
+<li><p><strong>GROW [num] [type]</strong><br> EXAMPLE USE: <em>GROW 1 rose</em><br> Grow only Plants of the specified type num times.</p></li>
+<li><p><strong>GROW [num] [Plant]</strong><br> EXAMPLE USE: <em>GROW 1 flower</em> <br> Grow only Plants of the specified class num times.</p></li>
+<li><p><strong>HARVEST</strong><br> Remove all Vegetables from the Garden.</p></li>
+<li><p><strong>HARVEST (x,y)</strong><br> EXAMPLE USE: <em>HARVEST (2,3)</em><br> Harvest Vegetable at location (x,y). If not a Vegetable or outside of Garden, print, “Can’t harvest there.” and continue.</p></li>
+<li><p><strong>HARVEST [type]</strong><br> EXAMPLE USE: <em>HARVEST tomato</em><br> Harvests all Vegetables of the specified type. If there are no Vegetables with that type, do nothing.</p></li>
+<li><p><strong>PICK</strong><br> Remove all Flowers from the Garden.</p></li>
+<li><p><strong>PICK (x,y)</strong><br> EXAMPLE USE: <em>PICK (2,3)</em><br> Pick Flower at location (x,y). If not a Flower or outside of Garden, print, “Can’t pick there.” and continue.</p></li>
+<li><p><strong>PICK [type]</strong><br> EXAMPLE USE: <em>PICK rose</em><br> Pick all Flowers of the specified type. If there are no Flowers with that type, do nothing.</p></li>
+<li><p><strong>CUT</strong><br> Remove all Trees from the Garden.</p></li>
+<li><p><strong>CUT (x,y)</strong><br> EXAMPLE USE: <em>CUT (2,3)</em><br> Cut Tree at location (x,y). If not a Tree or outside of Garden, print, “Can’t cut there.” and continue.</p></li>
+<li><p><strong>CUT [type]</strong><br> EXAMPLE USE: <em>CUT PINE</em><br> Cut all Trees of the specified type. If there are no Trees with that type, do nothing.</p></li>
+</ul></li>
+<li><p><strong>Unique Class</strong></p></li>
+</ul>
+<p>Students will design their own plant type and show an example input and output that illustrates it in their README.md file. This new plant should be different from Vegetable, Flower, and Tree, but still be usable alongside them within the garden and work with the commands PLANT, GROW, and PRINT.</p>
+<ul>
+<li><p>Error Handling</p>
+<ul>
+<li><p>Some of the commands above specify some error handling.</p></li>
+<li><p>The garden should never be more than 80 characters across. If it is print out the message “Too many plot columns.” and then exit. Think: How many characters across is each plot?</p></li>
+<li><p>Other than the above specified errors, the input can be assumed well formed.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="design-suggestions" class="level2">
+<h2 class="anchored" data-anchor-id="design-suggestions">Design Suggestions</h2>
+<p>We recommend the following: * A Garden object with a 2D array or list of plant objects. * A Plant class hierarchy of some kind. The design for this is what will be submitted for peer review on Tuesday March 13th at 11:30 am to both Aropa AND Gradescope. * A Screen object with a 2D array of characters that each plant can print its current representation into. The Screen object can then print everything to standard out. (Hint: what did you do in those drills due before Spring Break?) * <strong>hint:</strong> when copying over a Plant’s representation array place each cell at:</p>
+<pre><code>     [(Plant's row  * 5) + cell row][(Plant's col * size of plot) + cell col]</code></pre>
+<p>into the Screen object’s Array.</p>
+</section>
+<section id="grading-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
+<p>Half of the PA6 grade will be correctness. For this assignment, there will be some private test cases on Gradescope used for grading.</p>
+<p>The other half of the PA6 grade will be your decomposition and code clarity. Twenty of these points will be on your class hierarchy diagram.</p>
+<p>Decomposition</p>
+<ul>
+<li><p>Points will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.</p></li>
+<li><p><strong>This program should use fewer than 10 .java files.</strong> Each of these files should be (&lt;275 lines).</p></li>
+<li><p>Each static method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.</p></li>
+<li><p>Make things as simple as possible.</p>
+<ul>
+<li>Only use one Scanner instance.</li>
+<li>Don’t use lambda functions or other features in non-standard ways.</li>
+<li>Avoid nested loops unless they would be cleaner when handling a 2D array.</li>
+<li>Avoid nesting conditionals.</li>
+<li>Avoid chaining: see the Piazza post for more info</li>
+</ul></li>
+</ul>
+<p>Code Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work</p>
+<ul>
+<li><p>There needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.</p></li>
+<li><p>The file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.</p></li>
+<li><p>Use meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).</p></li>
+<li><p>The clearest code examples will be anonymously shown in class.</p></li>
+<li><p>The most obfuscated code examples will be anonymously shown in class with suggestions for improvement.</p></li>
+</ul>
+<p>The coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine.</p>
+</section>
+<section id="submission" class="level2">
+<h2 class="anchored" data-anchor-id="submission">Submission</h2>
+<p>Write your own code. We will be using a tool that finds overly similar code. This Spring 2018 semester in CS 210 we unfortunately have had academic integrity cases. I recommend that when talking with others about the assignment, do not write anything down.</p>
+<p>The class hierarchy diagram in pdf format is due Tuesday March 13th at 11:30 am in Gradescope AND Aropa.</p>
+<p>For PA6, you are <strong>REQUIRED</strong> to submit all of your java source files to Gradescope before Monday March 19th at 11:30 am. You also need to submit your README.md with example input and output for your unique class.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

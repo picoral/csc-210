@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>CSC 210 Fall 2024 - Programming Assignment 01</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">CSC 210 Fall 2024</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./programming-assignments.html" rel="" target="">
+ <span class="menu-text">Programming Assignments</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pa1-gradenator" id="toc-pa1-gradenator" class="nav-link active" data-scroll-target="#pa1-gradenator">PA1-Gradenator</a>
+  <ul class="collapse">
+  <li><a href="#input-file" id="toc-input-file" class="nav-link" data-scroll-target="#input-file">Input File</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
+  <li><a href="#testing-your-program" id="toc-testing-your-program" class="nav-link" data-scroll-target="#testing-your-program">Testing your program</a></li>
+  <li><a href="#more-than-one-revision" id="toc-more-than-one-revision" class="nav-link" data-scroll-target="#more-than-one-revision">More than one revision</a></li>
+  <li><a href="#decomposition-ideas" id="toc-decomposition-ideas" class="nav-link" data-scroll-target="#decomposition-ideas">Decomposition Ideas</a></li>
+  <li><a href="#grading-criteria" id="toc-grading-criteria" class="nav-link" data-scroll-target="#grading-criteria">Grading Criteria</a></li>
+  </ul></li>
+  <li><a href="#decomposition" id="toc-decomposition" class="nav-link" data-scroll-target="#decomposition">Decomposition</a></li>
+  <li><a href="#code-clarity" id="toc-code-clarity" class="nav-link" data-scroll-target="#code-clarity">Code Clarity</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Programming Assignment 01</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Deadline: September 06, 2024 – Wednesday, 11:30pm</p>
+<section id="pa1-gradenator" class="level1">
+<h1>PA1-Gradenator</h1>
+<p>The goals for PA1 are to get started with Java and figure out how to calculate your current CS 210 grade.</p>
+<section id="input-file" class="level2">
+<h2 class="anchored" data-anchor-id="input-file">Input File</h2>
+<p>When your program starts it should prompt the user for an input file.</p>
+<p>Each line of the input file should be in the following format:</p>
+<pre><code>  &lt;number&gt; &lt;number&gt; ...; &lt;string with no semicolons&gt;; &lt;number&gt;% </code></pre>
+<p>Specifically one or more numbers in the inclusive range 0 to 100 [0,100] separated by one or more spaces, a semicolon, a string with any characters except a semicolon, a semicolon, and a number in the inclusive range 0 to 100 [0,100] followed by a percent sign. The Java <code>Scanner</code> class with its <code>nextLine()</code> method can handle whatever line ending your file system uses.</p>
+<p>Example input (see the syllabus for percentages for your grade in this course):</p>
+<pre><code>  80; final; 20%
+  90 60 80; programming assignments; 25%</code></pre>
+<p>An overall grade will be calculated by averaging the grades listed at the beginning of each line (e.g.&nbsp;avg(90 60 80) ==&gt; 76.67) and then computing a total grade based on the percentages indicated on each line (e.g.&nbsp;(0.20)80 + (0.25)76.67 ==&gt; 35.17, where (0.20)80 is another way to write 0.20 times 80).<br>
+Note that if the input percentages do not add up 100%, then the total grade will not be out of 100%. In the example above the best possible grade would be 20% + 25% ==&gt; 45%.</p>
+<p>The output will be the average grade per line and a total line. Example output:</p>
+<pre><code>  final, 20.0%, 80.0
+  programming assignments, 25.0%, 76.6
+  TOTAL = 35.1% out of 45.0%</code></pre>
+<p>Numbers representing discreet values should be stored as <code>int</code>s. Numbers representing continuous values should be stored as <code>double</code>s.</p>
+<p>Values of type <code>double</code> are printed with many digits after the decimal place by default but this does not look very good and causes grading problems due to round-off differences. Therefore, to print a smaller number of digits we will be using <code>System.out.format</code>.</p>
+<p>Example:</p>
+<pre><code>System.out.format("%.1f is pi", 3.141);</code></pre>
+<p>The above line will output the following:</p>
+<pre><code>3.1 is pi</code></pre>
+<p>You should use the exact syntax above to round all output to one digit after the decimal. If you want to print a percent sign in a <code>System.out.format</code> statement you will need to escape it. You can escape it by writing two percentage signs in a row <code>%%</code>.</p>
+<p>Error checking: Your PA1 program can assume that all grading input follows the format described. Any input that does not follow the input format can result in undefined behavior.</p>
+</section>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
+<ol type="1">
+<li><p>Use the assignment URL https://classroom.github.com/a/acyzYMao to set up a github repository. And then click on that repository in your web browser (pa1-gradenator-yourgithubid).</p></li>
+<li><p>Click on the green “Clone or download” button on the right of the web page and copy the provided URL. It should look like (https://github.com/UACS210Fall2018/pa1-gradenator-yourgithubid…).</p></li>
+<li><p>Import your PA1 repository into Eclipse.</p>
+<ol type="1">
+<li><p>Open up Eclipse on a lab machine or your machine (if you are working on your own machine, you will need to install Eclipse).</p></li>
+<li><p>File —&gt; Import —&gt; Git —&gt; Projects from Git, Next, Clone URI, Next, paste in repository URL from github</p></li>
+<li><p>Next, select the master branch, next, make the local destination /home/username/eclipse-workspace/pa1-gradenator-yourgithubid.<br>
+This is where the local git repository will be placed.</p></li>
+<li><p>Next, Import existing Eclipse projects, Next, Finish.</p></li>
+<li><p>Test that it runs. Right click on the <code>PA1Main.java</code> file, Run As, Java Application.</p></li>
+</ol></li>
+<li><p>Edit, commit, and push a small change to the program.</p>
+<ol type="1">
+<li><p>Put the code <code>System.out.println("Hello");</code> into the main method.</p></li>
+<li><p>Run the program and see that “Hello” is printed to the Eclipse Console.</p></li>
+<li><p>Right click on <code>PA1Main.java</code> –&gt; Team –&gt; Commit, move unstaged files that you want to commit into staged changes, put in a commit message, and then click “commit and push”.</p></li>
+</ol></li>
+<li><p>Submit your program for autograding to Gradescope as many times as you would like. Half of the points for each programming assignment for PA1-PA7 are autograded. Submit to Gradescope by logging into gradescope and then submitting the PA1Main.java file by dragging the file to the submit upload window.</p></li>
+</ol>
+</section>
+<section id="testing-your-program" class="level2">
+<h2 class="anchored" data-anchor-id="testing-your-program">Testing your program</h2>
+<p>If your program cannot compile and run, then you should feel very uncomfortable. Experienced programmers write a little bit of new functionality and then quickly compile and run it. When you ask CS 210 staff questions about your program, we will want to see that it compiles and runs. Comment out new stuff you have added until it compiles and runs. Show us what compiles and runs, and then add the one small piece that breaks it.</p>
+<p>There are two main advantages to frequent “commits and pushes” to github:</p>
+<ul>
+<li>The CS210 staff can look at your code remotely to help you with questions.</li>
+<li>If you FORGET to turn in your assignment, we will turn in the code from github that was the version at the time of the deadline. It will cost you 15 out of 100 points, but that is better than a zero for the whole assignment.</li>
+</ul>
+<p>We recommend you do a commit every time you add a small piece and your program compiles and run. We also recommend you submit your code to Gradescope (which automatically runs test cases whenever you submit) at least once a day to see where you stand with the grading script and the public test cases.</p>
+<p><code>System.out.println</code> is your friend. It can help you figure out what the value of variables are at various points in your program.</p>
+</section>
+<section id="more-than-one-revision" class="level2">
+<h2 class="anchored" data-anchor-id="more-than-one-revision">More than one revision</h2>
+<p>The first time we write a piece of a program, it is really a draft. We want to get the syntax right and figure out the functionality. After that, we need to fix our initial comments so they clarify what the code is doing. Help your future self and others who will be reading your code. Plan on rewriting pieces of your program multiple times to produce a professional and clear program.</p>
+</section>
+<section id="decomposition-ideas" class="level2">
+<h2 class="anchored" data-anchor-id="decomposition-ideas">Decomposition Ideas</h2>
+<p>Here are some Java classes and methods that might be helpful when working on this assignment. We recommend you lookup online examples of how to use these and what their parameters and return values are):</p>
+<ul>
+<li><code>System.out.println()</code></li>
+<li><code>new File("PublicTestCases/inputReal1.in")</code></li>
+<li><code>new Scanner(System.in)</code>
+<ul>
+<li><code>hasNextLine()</code></li>
+<li><code>nextLine()</code></li>
+<li><code>close()</code></li>
+</ul></li>
+<li><code>String</code>
+<ul>
+<li><code>substring()</code></li>
+<li><code>indexOf()</code></li>
+<li><code>trim()</code></li>
+<li><code>split()</code></li>
+</ul></li>
+<li>Iterating over an array of strings, https://www.guru99.com/foreach-loop-java.html</li>
+</ul>
+</section>
+<section id="grading-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
+<p>Half of the PA1 grade will be correctness. For this assignment, if your program works for all of the test cases in <code>PublicTestCases/</code>, then you will earn all of the correctness points. Any time you submit to gradescope, it will tell you how many of the 50 points you have earned.</p>
+<p>The other half of the PA1 grade will be your decomposition and code clarity.</p>
+</section>
+</section>
+<section id="decomposition" class="level1">
+<h1>Decomposition</h1>
+<ul>
+<li><p>Should just use <code>static</code> methods in the single <code>PA1Main</code> class.</p></li>
+<li><p>Use a single file. This should be a small program (&lt;200 lines).</p></li>
+<li><p>Each <code>static</code> method should be less than 30 lines.</p></li>
+<li><p>Make things as simple as possible.</p>
+<ul>
+<li>Avoid nested loops.</li>
+<li>Avoid nesting conditionals.</li>
+<li>Avoid too many levels of user-defined methods calling other user-defined methods.</li>
+</ul></li>
+</ul>
+</section>
+<section id="code-clarity" class="level1">
+<h1>Code Clarity</h1>
+<ul>
+<li><p>YOU should be able to read, understand, and explain your own code a couple days after you wrote it.</p></li>
+<li><p>The file header should include instructions on how someone would use this program.</p></li>
+<li><p>Use meaningful variable names. Loop iterators can be simple (<code>i</code> for integers, <code>s</code> for strings, <code>n</code> for numbers, etc.). Otherwise you should avoid single letter variable names.</p></li>
+<li><p>The clearest code examples will be anonymously shown in class.</p></li>
+<li><p>The most obfuscated code examples will be anonymously shown in class with suggestions for improvement.</p></li>
+</ul>
+<p>The coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine.</p>
+<p>Write your own code. We will be using a tool that finds overly similar code. Do not look at other students’ code. Do not let other students look at your code or talk in detail about how to solve this programming project.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

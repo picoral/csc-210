@@ -29,7 +29,7 @@ List<String> names = new List<>();
 
 * To declare and give initial values to variables use `=`, which means becomes or take on the value of (assignment)
 
-```{python}
+```{java}
 int credits = 4;
 double grade = 3.67;
 String name = "Chris";
