@@ -57,10 +57,10 @@ Grades will be posted on D2L. All graded work will be done and submitted individ
 
 The course grade consists of the following:
 
-* Programming Assignments, 30%
+* Programming Assignments, 20%
 * Final, 20%
-* Midterm 1, 10%
-* Midterm 2, 10%
+* Midterm 1, 15%
+* Midterm 2, 15%
 * Sections, 10%
 * Quizzes, 10%
 * Peer Reviews and Drills, 10%
