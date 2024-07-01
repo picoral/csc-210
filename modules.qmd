@@ -1,0 +1,14 @@
+---
+title: "Modules"
+---
+
+# Week 01
+
+## Reading
+
+[Java, Java, Java 1.5 Java Language Elements](https://runestone.academy/ns/books/published/javajavajava/java-language-elements.html)
+
+## Slides
+
+* [Course Introduction](slides-01-01.html)
+* [Intro to Java](slides-01-02.html)

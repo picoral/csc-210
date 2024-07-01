@@ -3,6 +3,20 @@ title: "Intro to Java"
 format: revealjs
 ---
 
+## Before we start
+
+We will be using [Eclipse](https://www.eclipse.org/downloads/) as our IDE for this course.
+
+It's good practice to have a working environment folder and work within projects. (DEMO)
+
+I'll create a `GettingStarted` project, and then a new `class` called `HelloWorld`
+
+Opt to create a public main method
+
+```{java}
+System.out.println("Hello World!");
+```
+
 ## Typing
 
 * Python does dynamic typing
@@ -25,6 +39,36 @@ List<Integer> newList = new List<>();
 List<String> names = new List<>();
 ```
 
+## Try it out
+
+Modify your main method in your `HelloWorld` class to assign the string literal `"Hello World!"` to a `String` variable name, and then print out that variable instead.
+
+Questions:
+
+* Can you use both double and single strings to create the variable?
+
+* Does concatenation with the `+` operator work?
+
+* Can we concatenate `String`, `char` and `int` (or a combination of these)? 
+
+## Try it out -- solution
+
+```{java}
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String message = "Hello World!";
+		char space = ' ';
+		int number = 210;
+		System.out.println(message + space + number);
+
+	}
+
+}
+```
+
+
 ## Variable assignment
 
 * To declare and give initial values to variables use `=`, which means becomes or take on the value of (assignment)
@@ -37,9 +81,113 @@ int hours = 10;
 boolean ready = hours >= 8;
 ```
 
+Question:
+
+* Can you change the type of a variable in Java?
+
+* Why are certain types all lower-cased, while others are title cased?
+
+## Types
+
+All primitive types in Java and lower-cased.
+
+A primitive cannot have a method attached to it and connat be subclasses (there is no Object) 
+
+Java types that start with a upper cacse are Objects.
+
 ## Comments
 
 * Java requires a lot of code to express a simple concept.
 * You need to be much more explicit when writing Java than Python (more words to type in Java)
-* Reduced readability by humans as a result
 * Comments are extra important
+
+```{java}
+// one line comment
+
+/*
+  multi-line
+  comment
+ */
+    
+/**
+ * JavaDoc comments for external documentation
+ * @returns description of what returns   
+ */
+```
+
+## JavaDoc Comments
+
+JavaDoc comments may be placed above any class, method, or field
+
+Two sections:
+
+* description 
+* standalone block tags (marked with `@`)
+
+## Practice
+
+Create a Java application that determines if an integer is odd or even
+
+## Solution 1
+
+```{java}
+public class OddsOrEvens {
+
+	public static void main(String[] args) {
+		int number;
+		number = 3;
+		boolean result = number % 2 == 0;
+		System.out.println(result);
+
+	}
+
+}
+```
+
+
+## Solution 2
+
+```{java}
+public class OddsOrEvens {
+	
+	public static boolean isOdd(int number) {
+		return number % 2 == 1;
+	}
+	
+	public static boolean isEven(int number) {
+		return number % 2 == 0;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(isOdd(3));
+		System.out.println(isEven(3));
+
+	}
+
+}
+```
+
+## Solution 3
+
+```{java}
+public class OddsOrEvens {
+	
+	public static boolean isOdd(int number) {
+	    // if integer is not divisible by 2, it's odd
+		  return number % 2 == 1;
+	}
+	
+	public static void main(String[] args) {
+		  int number;
+		  number = 6;
+		  if (isOdd(number)) {
+		    System.out.println(number + " is odd.");
+		  } else {
+		    System.out.println(number + " is even.");
+		  }
+
+	}
+
+}
+```
+
