@@ -18,7 +18,12 @@ schedule <- read_excel("schedule.xlsx")
 
 ## Readings
 
-Required: [Java, Java, Java 1.5 Java Language Elements](https://runestone.academy/ns/books/published/javajavajava/java-language-elements.html)
+Required:
+
+* [Java, Java, Java 1.5 Java Language Elements](https://runestone.academy/ns/books/published/javajavajava/java-language-elements.html)
+* [Java, Java, Java 2.4 Class Definition](https://runestone.academy/ns/books/published/javajavajava/sec-classdef.html)
+
+
 
 Optional: [Java, Java, Java 1.7 System and PrintStream](https://runestone.academy/ns/books/published/javajavajava/ch1-system-print.html)
 

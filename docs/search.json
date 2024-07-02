@@ -67,7 +67,7 @@
     "href": "modules.html",
     "title": "Modules",
     "section": "",
-    "text": "Aug 26 - Aug 30\n\n\nRequired: Java, Java, Java 1.5 Java Language Elements\nOptional: Java, Java, Java 1.7 System and PrintStream\n\n\n\n\nCourse Introduction\nIntro to Java"
+    "text": "Aug 26 - Aug 30\n\n\nRequired:\n\nJava, Java, Java 1.5 Java Language Elements\nJava, Java, Java 2.4 Class Definition\n\nOptional: Java, Java, Java 1.7 System and PrintStream\n\n\n\n\nCourse Introduction\nIntro to Java"
   },
   {
     "objectID": "modules.html#reading",
@@ -1019,7 +1019,7 @@
     "href": "modules.html#readings",
     "title": "Modules",
     "section": "",
-    "text": "Required: Java, Java, Java 1.5 Java Language Elements\nOptional: Java, Java, Java 1.7 System and PrintStream"
+    "text": "Required:\n\nJava, Java, Java 1.5 Java Language Elements\nJava, Java, Java 2.4 Class Definition\n\nOptional: Java, Java, Java 1.7 System and PrintStream"
   },
   {
     "objectID": "slides-01-01.html",
