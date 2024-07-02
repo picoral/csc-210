@@ -14,9 +14,8 @@ schedule <- read_excel("schedule.xlsx")
 
 # Course Description
 
-*This course is 	an introduction to the development of large scale software. Topics include modularization, design patterns, documentation, unit testing, source code control, build systems, debuggers, and performance tuning; all of the tools necessary for developing software as opposed to writing small programs.*
+This course is 	an introduction to the development of large scale software. Topics include modularization, design patterns, documentation, unit testing, source code control, build systems, debuggers, and performance tuning; all of the tools necessary for developing software as opposed to writing small programs.
 
-The main goal of this course is to learn how to decompose problems and solve them with a program and do this in an effective manner that enables your future self and others to read, understand, and maintain your programs. Other goals include learning a second programming language (Java), learning decomposition and debugging strategies, and learning GUI event-driven programming (JavaFX).
 
 # Course Objectives and Expected Learning Outcomes
 

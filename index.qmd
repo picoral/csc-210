@@ -2,7 +2,7 @@
 title: "CSC 210 Fall 2024"
 ---
 
-This course is 	an introduction to the development of large scale software. Topics include modularization, design patterns, documentation, unit testing, source code control, build systems, debuggers, and performance tuning; all of the tools necessary for developing software as opposed to writing small programs.
+The main goal of this course is to learn how to decompose problems and solve them with a program and do this in an effective manner that enables your future self and others to read, understand, and maintain your programs. Other goals include learning a second programming language (Java), learning decomposition and debugging strategies, and learning GUI event-driven programming (JavaFX).
 
 * [Course D2L:]()
 * [Gradescope:]()
@@ -11,7 +11,7 @@ This course is 	an introduction to the development of large scale software. Topi
 Where to start:
 
 * [Syllabus](syllabus.html)
-* [Schedule]()
+* [Schedule + Materials](modules.html)
 
 # Instructor Information
 
@@ -25,10 +25,10 @@ Where to start:
 
     -   Office hours (open door, drop in, my office [GS](https://goo.gl/maps/h8Vyf7RNQiMAScDY6) 811):
 
-        -   Monday 1:30pm to 2:30pm
+        -   Monday 2:30pm to 3:30pm
 
         -   Wednesday 10:30am to 12:30pm
         
 # Information about the materials for this course
 
-The materials (including slides and assignments) for this course are based on materials from previous CSC 210 instances create by other instructors, including: Michelle Strout, Rick Mercer, and Tyler Conklin.
+The materials (including slides and assignments) for this course are based on materials from previous CSC 210 instances created by other instructors, including: Michelle Strout, and Rick Mercer.
