@@ -1,6 +1,9 @@
 ---
 title: "Course Introduction"
-format: revealjs
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
 ---
 
 ## Tips on slides

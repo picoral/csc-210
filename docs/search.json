@@ -67,21 +67,84 @@
     "href": "modules.html",
     "title": "Modules",
     "section": "",
-    "text": "Aug 26 - Aug 30\n\n\nRequired:\n\nJava, Java, Java 1.5 Java Language Elements\nJava, Java, Java 2.4 Class Definition\n\nOptional: Java, Java, Java 1.7 System and PrintStream\n\n\n\n\nCourse Introduction\nIntro to Java"
+    "text": "Aug 26 - Aug 30\n\n\nRequired:\n\nJava, Java, Java 1.5 Java Language Elements\nJava, Java, Java 2.4 Class Definition\n\nOptional: Java, Java, Java 1.7 System and PrintStream\n\n\n\n\nCourse Introduction\nIntro to Java\nJava Objects"
   },
   {
-    "objectID": "modules.html#reading",
-    "href": "modules.html#reading",
+    "objectID": "modules.html#readings",
+    "href": "modules.html#readings",
     "title": "Modules",
     "section": "",
-    "text": "Java, Java, Java 1.5 Java Language Elements"
+    "text": "Required:\n\nJava, Java, Java 1.5 Java Language Elements\nJava, Java, Java 2.4 Class Definition\n\nOptional: Java, Java, Java 1.7 System and PrintStream"
   },
   {
     "objectID": "modules.html#slides",
     "href": "modules.html#slides",
     "title": "Modules",
     "section": "",
-    "text": "Course Introduction\nIntro to Java"
+    "text": "Course Introduction\nIntro to Java\nJava Objects"
+  },
+  {
+    "objectID": "modules.html#readings-1",
+    "href": "modules.html#readings-1",
+    "title": "Modules",
+    "section": "Readings",
+    "text": "Readings"
+  },
+  {
+    "objectID": "modules.html#slides-1",
+    "href": "modules.html#slides-1",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides"
+  },
+  {
+    "objectID": "modules.html#assignments-1",
+    "href": "modules.html#assignments-1",
+    "title": "Modules",
+    "section": "Assignments",
+    "text": "Assignments"
+  },
+  {
+    "objectID": "modules.html#readings-2",
+    "href": "modules.html#readings-2",
+    "title": "Modules",
+    "section": "Readings",
+    "text": "Readings"
+  },
+  {
+    "objectID": "modules.html#slides-2",
+    "href": "modules.html#slides-2",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides"
+  },
+  {
+    "objectID": "modules.html#assignments-2",
+    "href": "modules.html#assignments-2",
+    "title": "Modules",
+    "section": "Assignments",
+    "text": "Assignments"
+  },
+  {
+    "objectID": "modules.html#readings-3",
+    "href": "modules.html#readings-3",
+    "title": "Modules",
+    "section": "Readings",
+    "text": "Readings"
+  },
+  {
+    "objectID": "modules.html#slides-3",
+    "href": "modules.html#slides-3",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides"
+  },
+  {
+    "objectID": "modules.html#assignments-3",
+    "href": "modules.html#assignments-3",
+    "title": "Modules",
+    "section": "Assignments",
+    "text": "Assignments"
   },
   {
     "objectID": "programming-assignment-10.html",
@@ -259,46 +322,277 @@
     "text": "Submission\nFor PA3, you are required to submit your PA3Main.java file to Gradescope."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "CSC 210 Fall 2024",
-    "section": "",
-    "text": "The main goal of this course is to learn how to decompose problems and solve them with a program and do this in an effective manner that enables your future self and others to read, understand, and maintain your programs. Other goals include learning a second programming language (Java), learning decomposition and debugging strategies, and learning GUI event-driven programming (JavaFX).\n\nCourse D2L:\nGradescope:\nPiazza:\n\nWhere to start:\n\nSyllabus\nSchedule + Materials\n\n\nInstructor Information\n\nAdriana Picoral 🔈\n\nOffice: Gould-Simpson 811\nEmail: adrianaps@arizona.edu\nInstructor Website: adrianapicoral.com\nOffice hours (open door, drop in, my office GS 811):\n\nMonday 2:30pm to 3:30pm\nWednesday 10:30am to 12:30pm\n\n\n\n\n\nInformation about the materials for this course\nThe materials (including slides and assignments) for this course are based on materials from previous CSC 210 instances created by other instructors, including: Michelle Strout, and Rick Mercer."
+    "objectID": "slides-01-03.html#classes",
+    "href": "slides-01-03.html#classes",
+    "title": "Java Objects",
+    "section": "Classes",
+    "text": "Classes\nWhat is a class?"
   },
   {
-    "objectID": "short-assignment-03.html",
-    "href": "short-assignment-03.html",
-    "title": "Lab 03",
-    "section": "",
-    "text": "The goal of today’s lab session is to learn about peer review in regards to our class and code review in industry. In this section, you will be introduced to Aropa, the peer reviewing tool we will be using, and write your first two peer reviews.\nStart the section by reading about the benefits of Code Review in industry by following the link below.\nhttps://blog.fullstory.com/what-we-learned-from-google-code-reviews-arent-just-for-catching-bugs/\n\n\n\nYou will need to go to the Aropa website, click on the U of A logo or select the University of Arizona on the dropdown menu, and then log in using your UA netid and the class code 386198. The website is linked below and the same instructions are posted on Piazza.\nhttps://aropa2.gla.ac.uk/aropa/aropa.php\nYou will be prompted to change your password. Choose a secure password that you will remember as you will use this same account for peer reviews in the future.\n\n\n\nOverview : Complete two peer reviews for PA2.\n\n\nYou will need to upload your PA2main.java file first. If you do not have access to your PA2main from the computer you are on, remember that you can download this file through your Gradescope account.\nTODO: Add Aropa usage instructions once I am able to set up the assignment and see the student’s view.\n\n\n\nYou will be responding to the statements below in regards to two other students’ code. You will be ranking your agreement of how well the statements relate to the student’s code on a scale of Strongly Agree to Strongly Disagree.\nIn addition to the rankings, you will have a comment block below to add a rational for your ranking and commentary on how the student could improve. When writing your comments, keep the Department of Computer Science’s code of conduct (https://www2.cs.arizona.edu/codeofconduct.pdf) in mind. Your feedback should be constructive, polite, and contribute to a positive learning environment.\n\nClarity: The student’s code is easily readable. This being able to read a method in no more than 5-7 minutes and being able to read each method without scrolling.\nClarity: The students code is well commented, with complex functions having a descriptive comment, comments inside of non-trivial methods to elaborate on complex code, and a class comment with usage and file format.\nDecomposition: The student avoids nested loops or conditionals and chaining to self-defined methods.\nDecomposition: The student’s code exhibits good decomposition. They used all non- static methods and only turned in one source file.\nStyle: The code follows the style guidelines. No lines are longer than 80 columns, does not mix tabs and spaces and has curly brackets on the same line as the loop or conditional."
+    "objectID": "slides-01-03.html#classes-1",
+    "href": "slides-01-03.html#classes-1",
+    "title": "Java Objects",
+    "section": "Classes",
+    "text": "Classes\n\nCollection of methods and attributes (information/values)\nTemplate, blueprint of cookie cutter to construct many objects\n\nModularity: Classes allow us to split the problem to be solved into distinct tasks"
   },
   {
-    "objectID": "short-assignment-03.html#introduction",
-    "href": "short-assignment-03.html#introduction",
-    "title": "Lab 03",
-    "section": "",
-    "text": "The goal of today’s lab session is to learn about peer review in regards to our class and code review in industry. In this section, you will be introduced to Aropa, the peer reviewing tool we will be using, and write your first two peer reviews.\nStart the section by reading about the benefits of Code Review in industry by following the link below.\nhttps://blog.fullstory.com/what-we-learned-from-google-code-reviews-arent-just-for-catching-bugs/"
+    "objectID": "slides-01-02.html#before-we-start",
+    "href": "slides-01-02.html#before-we-start",
+    "title": "Intro to Java",
+    "section": "Before we start",
+    "text": "Before we start\nWe will be using Eclipse as our IDE for this course.\nIt’s good practice to have a working environment folder and work within projects. (DEMO)\nI’ll create a GettingStarted project, and then a new class called HelloWorld\nOpt to create a public main method\nSystem.out.println(\"Hello World!\");"
   },
   {
-    "objectID": "short-assignment-03.html#setup-for-peer-review",
-    "href": "short-assignment-03.html#setup-for-peer-review",
-    "title": "Lab 03",
-    "section": "",
-    "text": "You will need to go to the Aropa website, click on the U of A logo or select the University of Arizona on the dropdown menu, and then log in using your UA netid and the class code 386198. The website is linked below and the same instructions are posted on Piazza.\nhttps://aropa2.gla.ac.uk/aropa/aropa.php\nYou will be prompted to change your password. Choose a secure password that you will remember as you will use this same account for peer reviews in the future."
+    "objectID": "slides-01-02.html#typing",
+    "href": "slides-01-02.html#typing",
+    "title": "Intro to Java",
+    "section": "Typing",
+    "text": "Typing\n\nPython does dynamic typing\n\n\nword = \"car\"\nnumber = 3\nnew_list = []\nnames = [\"Pedro\", \"Melissa\", \"Jessica\"]\n\n\nStatic typing in Java\n\nString word = \"car\";\nint number = 3;\nList&lt;Integer&gt; newList = new List&lt;&gt;();\nList&lt;String&gt; names = new List&lt;&gt;();"
   },
   {
-    "objectID": "short-assignment-03.html#the-assignment",
-    "href": "short-assignment-03.html#the-assignment",
-    "title": "Lab 03",
-    "section": "",
-    "text": "Overview : Complete two peer reviews for PA2.\n\n\nYou will need to upload your PA2main.java file first. If you do not have access to your PA2main from the computer you are on, remember that you can download this file through your Gradescope account.\nTODO: Add Aropa usage instructions once I am able to set up the assignment and see the student’s view.\n\n\n\nYou will be responding to the statements below in regards to two other students’ code. You will be ranking your agreement of how well the statements relate to the student’s code on a scale of Strongly Agree to Strongly Disagree.\nIn addition to the rankings, you will have a comment block below to add a rational for your ranking and commentary on how the student could improve. When writing your comments, keep the Department of Computer Science’s code of conduct (https://www2.cs.arizona.edu/codeofconduct.pdf) in mind. Your feedback should be constructive, polite, and contribute to a positive learning environment.\n\nClarity: The student’s code is easily readable. This being able to read a method in no more than 5-7 minutes and being able to read each method without scrolling.\nClarity: The students code is well commented, with complex functions having a descriptive comment, comments inside of non-trivial methods to elaborate on complex code, and a class comment with usage and file format.\nDecomposition: The student avoids nested loops or conditionals and chaining to self-defined methods.\nDecomposition: The student’s code exhibits good decomposition. They used all non- static methods and only turned in one source file.\nStyle: The code follows the style guidelines. No lines are longer than 80 columns, does not mix tabs and spaces and has curly brackets on the same line as the loop or conditional."
+    "objectID": "slides-01-02.html#try-it-out",
+    "href": "slides-01-02.html#try-it-out",
+    "title": "Intro to Java",
+    "section": "Try it out",
+    "text": "Try it out\nModify your main method in your HelloWorld class to assign the string literal \"Hello World!\" to a String variable name, and then print out that variable instead.\nQuestions:\n\nCan you use both double and single strings to create the variable?\nDoes concatenation with the + operator work?\nCan we concatenate String, char and int (or a combination of these)?"
   },
   {
-    "objectID": "programming-assignments.html",
-    "href": "programming-assignments.html",
-    "title": "Programming Assignments",
+    "objectID": "slides-01-02.html#try-it-out-solution",
+    "href": "slides-01-02.html#try-it-out-solution",
+    "title": "Intro to Java",
+    "section": "Try it out – solution",
+    "text": "Try it out – solution\npublic class HelloWorld {\n\n    public static void main(String[] args) {\n        // TODO Auto-generated method stub\n        String message = \"Hello World!\";\n        char space = ' ';\n        int number = 210;\n        System.out.println(message + space + number);\n\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-01-02.html#variable-assignment",
+    "href": "slides-01-02.html#variable-assignment",
+    "title": "Intro to Java",
+    "section": "Variable assignment",
+    "text": "Variable assignment\n\nTo declare and give initial values to variables use =, which means becomes or take on the value of (assignment)\n\nint credits = 4;\ndouble grade = 3.67;\nString name = \"Chris\";\nint hours = 10;\nboolean ready = hours &gt;= 8;\nQuestion:\n\nCan you change the type of a variable in Java?\nWhy are certain types all lower-cased, while others are title cased?"
+  },
+  {
+    "objectID": "slides-01-02.html#types",
+    "href": "slides-01-02.html#types",
+    "title": "Intro to Java",
+    "section": "Types",
+    "text": "Types\nAll primitive types in Java and lower-cased.\nA primitive cannot have a method attached to it and connat be subclasses (there is no Object)\nJava types that start with a upper cacse are Objects."
+  },
+  {
+    "objectID": "slides-01-02.html#comments",
+    "href": "slides-01-02.html#comments",
+    "title": "Intro to Java",
+    "section": "Comments",
+    "text": "Comments\n\nJava requires a lot of code to express a simple concept.\nYou need to be much more explicit when writing Java than Python (more words to type in Java)\nComments are extra important\n\n// one line comment\n\n/*\n  multi-line\n  comment\n */\n    \n/**\n * JavaDoc comments for external documentation\n * @returns description of what returns   \n */"
+  },
+  {
+    "objectID": "slides-01-02.html#javadoc-comments",
+    "href": "slides-01-02.html#javadoc-comments",
+    "title": "Intro to Java",
+    "section": "JavaDoc Comments",
+    "text": "JavaDoc Comments\nJavaDoc comments may be placed above any class, method, or field\nTwo sections:\n\ndescription\nstandalone block tags (marked with @)"
+  },
+  {
+    "objectID": "slides-01-02.html#practice",
+    "href": "slides-01-02.html#practice",
+    "title": "Intro to Java",
+    "section": "Practice",
+    "text": "Practice\nCreate a Java application that determines if an integer is odd or even"
+  },
+  {
+    "objectID": "slides-01-02.html#solution-1",
+    "href": "slides-01-02.html#solution-1",
+    "title": "Intro to Java",
+    "section": "Solution 1",
+    "text": "Solution 1\npublic class OddsOrEvens {\n\n    public static void main(String[] args) {\n        int number;\n        number = 3;\n        boolean result = number % 2 == 0;\n        System.out.println(result);\n\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-01-02.html#solution-2",
+    "href": "slides-01-02.html#solution-2",
+    "title": "Intro to Java",
+    "section": "Solution 2",
+    "text": "Solution 2\npublic class OddsOrEvens {\n    \n    public static boolean isOdd(int number) {\n        return number % 2 == 1;\n    }\n    \n    public static boolean isEven(int number) {\n        return number % 2 == 0;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isOdd(3));\n        System.out.println(isEven(3));\n\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-01-02.html#solution-3",
+    "href": "slides-01-02.html#solution-3",
+    "title": "Intro to Java",
+    "section": "Solution 3",
+    "text": "Solution 3\npublic class OddsOrEvens {\n    \n    public static boolean isOdd(int number) {\n        // if integer is not divisible by 2, it's odd\n          return number % 2 == 1;\n    }\n    \n    public static void main(String[] args) {\n          int number;\n          number = 6;\n          if (isOdd(number)) {\n            System.out.println(number + \" is odd.\");\n          } else {\n            System.out.println(number + \" is even.\");\n          }\n\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-01-02.html#scanner",
+    "href": "slides-01-02.html#scanner",
+    "title": "Intro to Java",
+    "section": "Scanner",
+    "text": "Scanner\nLet’s import the Scanner package from Java utils and use it to get user input.\nimport java.util.Scanner;\nHere’s the call:\nint number = userInput.nextInt();\n\nAdd these to your solution.\nRemember to tell the user what to enter.\nWhat’s the difference between .println() and print()?"
+  },
+  {
+    "objectID": "slides-01-02.html#solution",
+    "href": "slides-01-02.html#solution",
+    "title": "Intro to Java",
+    "section": "Solution",
+    "text": "Solution\nimport java.util.Scanner;\n\n/**\n * File: OddsOrEvens.java\n * Author: Adriana Picoral\n * Description: Asks for user to input an integer, and prints out\n * whether that number is odd or even\n */\npublic class OddsOrEvens {\n    \n    /**\n     * Description: Determines if an integer is odd\n     * @param number (integer)\n     * @return boolean (true if param is odd, false otherwise)\n     */\n    public static boolean isOdd(int number) {\n        return number % 2 == 1;\n    }\n    \n\n    public static void main(String[] args) {\n          Scanner userInput = new Scanner(System.in);\n          \n          // prints out message to user\n          System.out.println(\"Enter an integer: \");\n          \n          // get integer from keyboard entry\n          int number = userInput.nextInt();\n          userInput.close();\n\n          // calls function to determine if number is odd or even\n          if (isOdd(number)) {\n            System.out.println(number + \" is odd.\");\n          } else {\n            System.out.println(number + \" is even.\");\n          }\n\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-01-02.html#practice-1",
+    "href": "slides-01-02.html#practice-1",
+    "title": "Intro to Java",
+    "section": "Practice",
+    "text": "Practice\nWrite an application that prompts the user to enter an integer representing number os seconds.\nYour application should print the equivalent hours, minutes, and seconds in this format: hours:minutes:seconds\nRun examples:\nEnter the number of seconds: 3661\n1:1:1\n\nEnter number of seconds: 8274\n2:17:54\n\nHINTS: There are 3600 seconds in one hour. Use modulus to calculate minutes and seconds left.\nadapted from Rick Mercer’s slides"
+  },
+  {
+    "objectID": "slides-01-02.html#solution-4",
+    "href": "slides-01-02.html#solution-4",
+    "title": "Intro to Java",
+    "section": "Solution",
+    "text": "Solution\nimport java.util.Scanner;\n\n/**\n * File: HoursMinutesSeconds.java\n * Author: Adriana Picoral\n * Description: Prompts the user to enter an integer representing seconds\n * and prints out time in h:m:s format\n */\npublic class HoursMinutesSeconds {\n    \n    /**\n     * Calculates number of full hours in many seconds\n     * @param seconds (integer)\n     * @return an integer representing number of hours\n     */\n    public static int getHours(int seconds) {\n        return seconds / 3600;\n    }\n    \n    /**\n     * Calculates number of full minutes left in many seconds\n     * not considering the number of full hours\n     * @param seconds (integer)\n     * @return an integer representing number of minutes\n     */\n    \n    public static int getMinutes(int seconds) {\n        return seconds  % 3600 / 60;\n    }\n    \n    /**\n     * Calculates seconds left that are not in full minutes\n     * @param seconds (integer)\n     * @return an integer representing seconds\n     */\n    public static int getSeconds(int seconds) {\n        return seconds % 60;\n    }\n\n    public static void main(String[] args) {\n        Scanner userInput = new Scanner(System.in);\n          \n        // prints out message to user\n        System.out.print(\"Enter number of seconds: \");\n      \n        // get integer from keyboard entry\n        int seconds = userInput.nextInt();\n        userInput.close();\n        \n        // build up the message to print\n        String message;\n        message = getHours(seconds) + \":\" + getMinutes(seconds);\n        message += \":\" + getSeconds(seconds);\n        System.out.println(message);\n\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-01-02.html#expand",
+    "href": "slides-01-02.html#expand",
+    "title": "Intro to Java",
+    "section": "Expand",
+    "text": "Expand\nImprove your code so that it prints out HH:MM:SS format\nEnter number of seconds: 8274\n02:17:54\n\nEnter number of seconds: 233\n00:03:53"
+  },
+  {
+    "objectID": "slides-01-02.html#solution-5",
+    "href": "slides-01-02.html#solution-5",
+    "title": "Intro to Java",
+    "section": "Solution",
+    "text": "Solution\nimport java.util.Scanner;\n\n/**\n * File: HoursMinutesSeconds.java\n * Author: Adriana Picoral\n * Description: Prompts the user to enter an integer representing seconds\n * and prints out time in h:m:s format\n */\npublic class HoursMinutesSeconds {\n    \n    /**\n     * Calculates number of full hours in many seconds\n     * @param seconds (integer)\n     * @return a string representing number of hours\n     */\n    public static String getHours(int seconds) {\n        int hours = seconds / 3600;\n        String fullHour = \"\" + hours;\n        \n        if (hours &lt; 10) {\n            fullHour = \"0\" + hours;\n        }\n        \n        return fullHour;\n    }\n    \n    /**\n     * Calculates number of full minutes left in many seconds\n     * not considering the number of full hours\n     * @param seconds (integer)\n     * @return a string representing number of minutes\n     */\n    \n    public static String getMinutes(int seconds) {\n        int minutes = seconds  % 3600 / 60;\n        String fullMinutes = \"\" + minutes;\n        \n        if (minutes &lt; 10) {\n            fullMinutes = \"0\" + minutes;\n        }\n        \n        return fullMinutes;\n    }\n    \n    /**\n     * Calculates seconds left that are not in full minutes\n     * @param seconds (integer)\n     * @return an integer representing seconds\n     */\n    public static String getSeconds(int seconds) {\n        int secondsLeft = seconds % 60;\n        String fullSeconds = \"\" + secondsLeft;\n        \n        if (secondsLeft &lt; 10) fullSeconds = \"0\" + secondsLeft; \n        \n        return fullSeconds;\n    }\n\n    public static void main(String[] args) {\n        Scanner userInput = new Scanner(System.in);\n          \n        // prints out message to user\n        System.out.print(\"Enter number of seconds: \");\n      \n        // get integer from keyboard entry\n        int seconds = userInput.nextInt();\n        userInput.close();\n        \n        // build up the message to print\n        String message;\n        message = getHours(seconds) + \":\" + getMinutes(seconds);\n        message += \":\" + getSeconds(seconds);\n        System.out.println(message);\n\n    }\n\n}"
+  },
+  {
+    "objectID": "short-assignment-01.html",
+    "href": "short-assignment-01.html",
+    "title": "Lab 01",
     "section": "",
-    "text": "PA 1\n\nDeadline: September 06, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 2\n\nDeadline: September 12, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 3\n\nDeadline: September 20, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 4\n\nDeadline: October 02, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 5\n\nDeadline: October 09, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 6\n\nDeadline: October 23, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 7\n\nDeadline: October 30, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 8\n\nDeadline: November 13, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 9\n\nDeadline: November 20, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 10\n\nDeadline: December 04, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 11\n\nDeadline: December 11, 2024 – Wednesday, 11:30pm\nInstructions"
+    "text": "Today’s lab session will be an introduction to Java HashMaps and it will prepare you for PA2 by familiarizing you with the flights data set. Hashmaps are similar to Python’s dictionaries. The similarities include both data structures being a mapping from keys to values and that they are unordered data structures. Below are some of the basic Java hashmap methods compared to their equivalent python method.\n\n\n\nJava\nPython\n\n\n\n\ndict.get(key);\ndict.get(key)\n\n\ndict.put(key, value);\ndict[key] = value\n\n\ndict.remove(key);\ndict.pop(key);\n\n\n\nHere is a link to Java’s API that describes the HashMap data type and how to use all of its built in constructors and methods: https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html\nThe Java API is a great resource for better understanding the language and I encourage you to utilize this resource as you are learning about Java this semester. Additionally, we encourage paired programming during section, so please work through the section activity with a student sitting next to you. In section you can share code. For programming assignments you cannot.\n\n\n\nGo to the course webpage, click resources, and then click on the Section 1 URL. It will be the URL for accepting the github classroom assignment for Section 1.\nThen you need to edit your .travis.yml file in your section1 repository on github, and then clone and import the Section 1 gitrepo. * Click on .travis.yml in github. Then put in your email and commit that change.\n\nClick on the green “Clone or download” button on the right of the web page and copy the provided URL.\nImport your Section 1 repository into Eclipse.\n\nopen Eclipse\nFile —&gt; Import —&gt; Git —&gt; Projects from Git, Next, Clone URI, Next, paste in repository URL from github\nNext, Select the master branch, Next, make the local destination /home/username/eclipse-workspace/Section1-yourgithubid.\nNext, Import existing Eclipse projects, Next, Finish.\n\n\nNow you are ready to get started coding.\n\n\n\nOverview : Read in the given file from the command line and calculate the number of departing flights for each airport by using a hashmap that stores the relevant data read in from the input file. The HashMap will have the three letter airport code as keys and the number of flights as the values.\n\n\nCopy the code below into main and run it to make sure it compiles and prints.\n        System.out.println(\"Welcome to Section 1!\");\nThen commit and push your changes to github. Here is a reminder of the steps: Right click on Section1Main.java –&gt; Team –&gt; Commit, move unstaged files that you want to commit into staged changes, put in a commit message, and then click commit and push.\n\n\n\nSimilarly to PA1 you will be reading in a file from the command line. Begin by initializing a Scanner object, or other file reader of your choice, as demonstrated in class. Test that you are able to open PublicTestCases/routesSec1csv.in when given the file on the command line.\nTake a moment to open up PublicTestCases/routesSec1csv.in in Eclipse. What do you see? See https://www.kaggle.com/open-flights/flight-route-database for a description of the fields in the file.\nIf you get stuck, here is example code demonstrating the use of Scanner.\npublic static void main(String[] args) {\n    Scanner input = null; \n    \n    System.out.println(\"args[0]=\"+args[0]);\n    try {\n        input = new Scanner(new File(args[0]));\n        while (input.hasNextLine()) {\n            System.out.println(input.nextLine());\n        }\n        input.close();\n    } catch (Exception ex) {\n        ex.printStackTrace();\n    }\n}\nThe scanner input is initialized to null at the beginning of main so that the count departures method can be called outside of and after the try catch block.\n\n\n\nBefore declaring your HashMap, think about the mapping structure you will need to keep track of the number of departing flights for each airport. What should be stored in your keys and values? What types should they be? Remember to discuss your ideas with your partner.\nHint: There are many types in Java, consider solutions that use Strings, Arrays and/or Ints. There are several designs that would work, so try to think of a few different designs.\nHere is an example HashMap declaration. This example demonstrates the suggested types for the HashMap and is what will be referenced through the remainder of the activity.\n    HashMap&lt;String, Integer&gt; airportToNumFlights = new HashMap&lt;String, Integer&gt;();\nThe HashMap declaration should occur in the countDepartures method. This method is also where the reading of the data will occur and the HashMap created will be returned to main for printing. Since the reading will occur in the function, the scanner must be passed into the countDepartures method as a parameter.\n\n\n\nRead in each line and process the string to place it into your HashMap (*). Since each line contains data about a new flight, your HashMap should be altered for each line in the file. Use the put(key, value) method to add a new key to your list and replace(key, value) or put(key,value) to update a key if necessary. It is interesting to note that put(key, value) will replace the value stored in the HashMap if the key exists already with the value passed in as a parameter and so will replace(key, value).\nIt is important to note, the file you will be reading in is PublicTestCases/routesSec1csv.in. CSV means comma separated values, so each value in each row is separated by a comma. Since this is the case, what should each line be split on? (Note: We are using the .in extension to make it work with our grading script.)\nBelow is a reminder of how to use the split method.\n    String[] strs = s1.split(\",\");\nDetermine which element of the array you will need to access to read the source airport. A String with the three letter source airport code will be your key and the count of flights starting at that airport will be your value. What value should you initialize each key to? When should you increment the value? How should you update the value?\nHint: The get(key) method returns the value associated with the key\n(*) See Resources below for a reminder about methods relating to Scanner and String.\n\n\n\nOnce you have totaled all departing flights, print the airports in alphabetic order followed by the number of flights leaving that airport in the following format:\nThree Digit Airport Code - Number of flights \nExample\n GYD - 1 \n MRV - 1\nRemember a HashMap is unordered, so you will have to take the following step to alphabatize the output in order to run it through TravisCI. In the code below, the set of key airport codes are retrived from the HashMap by calling keySet() on the HashMap airportToNumFlights. These key values are then stored in an ArrayList in order to complete a sort on them that will place them in alphabetical order. The Collections sort is an inplace sort, so you do not need to store a return as the keys are sorted inside of the exisiting data structure.\n    ArrayList&lt;String&gt; airportsSorted = new ArrayList&lt;String&gt;(airportToNumFlights.keySet());\n    Collections.sort(airportsSorted);\nNow it is possible to iterate over the HashMap and have output print in alphabetical order. This can be done via the following loop. The loop iterates over each element in the ordered list airportsSorted and then access the corresponding value in the HashMap.\n    for (String airport : airportsSorted) {\n        System.out.println(airport + \" - \" + airportToNumFlights.get(airport));\n    }\n\n\n\n\n\nSystem.out.println() is your friend\nnew Scanner(new File(args[0]))\n\nhasNextLine()\ngetNextLine()\nclose()\n\nString\n\nsubstr()\nindexOf()\ntrim()\nsplit()"
+  },
+  {
+    "objectID": "short-assignment-01.html#introduction",
+    "href": "short-assignment-01.html#introduction",
+    "title": "Lab 01",
+    "section": "",
+    "text": "Today’s lab session will be an introduction to Java HashMaps and it will prepare you for PA2 by familiarizing you with the flights data set. Hashmaps are similar to Python’s dictionaries. The similarities include both data structures being a mapping from keys to values and that they are unordered data structures. Below are some of the basic Java hashmap methods compared to their equivalent python method.\n\n\n\nJava\nPython\n\n\n\n\ndict.get(key);\ndict.get(key)\n\n\ndict.put(key, value);\ndict[key] = value\n\n\ndict.remove(key);\ndict.pop(key);\n\n\n\nHere is a link to Java’s API that describes the HashMap data type and how to use all of its built in constructors and methods: https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html\nThe Java API is a great resource for better understanding the language and I encourage you to utilize this resource as you are learning about Java this semester. Additionally, we encourage paired programming during section, so please work through the section activity with a student sitting next to you. In section you can share code. For programming assignments you cannot."
+  },
+  {
+    "objectID": "short-assignment-01.html#setup",
+    "href": "short-assignment-01.html#setup",
+    "title": "Lab 01",
+    "section": "",
+    "text": "Go to the course webpage, click resources, and then click on the Section 1 URL. It will be the URL for accepting the github classroom assignment for Section 1.\nThen you need to edit your .travis.yml file in your section1 repository on github, and then clone and import the Section 1 gitrepo. * Click on .travis.yml in github. Then put in your email and commit that change.\n\nClick on the green “Clone or download” button on the right of the web page and copy the provided URL.\nImport your Section 1 repository into Eclipse.\n\nopen Eclipse\nFile —&gt; Import —&gt; Git —&gt; Projects from Git, Next, Clone URI, Next, paste in repository URL from github\nNext, Select the master branch, Next, make the local destination /home/username/eclipse-workspace/Section1-yourgithubid.\nNext, Import existing Eclipse projects, Next, Finish.\n\n\nNow you are ready to get started coding."
+  },
+  {
+    "objectID": "short-assignment-01.html#the-assignment",
+    "href": "short-assignment-01.html#the-assignment",
+    "title": "Lab 01",
+    "section": "",
+    "text": "Overview : Read in the given file from the command line and calculate the number of departing flights for each airport by using a hashmap that stores the relevant data read in from the input file. The HashMap will have the three letter airport code as keys and the number of flights as the values.\n\n\nCopy the code below into main and run it to make sure it compiles and prints.\n        System.out.println(\"Welcome to Section 1!\");\nThen commit and push your changes to github. Here is a reminder of the steps: Right click on Section1Main.java –&gt; Team –&gt; Commit, move unstaged files that you want to commit into staged changes, put in a commit message, and then click commit and push.\n\n\n\nSimilarly to PA1 you will be reading in a file from the command line. Begin by initializing a Scanner object, or other file reader of your choice, as demonstrated in class. Test that you are able to open PublicTestCases/routesSec1csv.in when given the file on the command line.\nTake a moment to open up PublicTestCases/routesSec1csv.in in Eclipse. What do you see? See https://www.kaggle.com/open-flights/flight-route-database for a description of the fields in the file.\nIf you get stuck, here is example code demonstrating the use of Scanner.\npublic static void main(String[] args) {\n    Scanner input = null; \n    \n    System.out.println(\"args[0]=\"+args[0]);\n    try {\n        input = new Scanner(new File(args[0]));\n        while (input.hasNextLine()) {\n            System.out.println(input.nextLine());\n        }\n        input.close();\n    } catch (Exception ex) {\n        ex.printStackTrace();\n    }\n}\nThe scanner input is initialized to null at the beginning of main so that the count departures method can be called outside of and after the try catch block.\n\n\n\nBefore declaring your HashMap, think about the mapping structure you will need to keep track of the number of departing flights for each airport. What should be stored in your keys and values? What types should they be? Remember to discuss your ideas with your partner.\nHint: There are many types in Java, consider solutions that use Strings, Arrays and/or Ints. There are several designs that would work, so try to think of a few different designs.\nHere is an example HashMap declaration. This example demonstrates the suggested types for the HashMap and is what will be referenced through the remainder of the activity.\n    HashMap&lt;String, Integer&gt; airportToNumFlights = new HashMap&lt;String, Integer&gt;();\nThe HashMap declaration should occur in the countDepartures method. This method is also where the reading of the data will occur and the HashMap created will be returned to main for printing. Since the reading will occur in the function, the scanner must be passed into the countDepartures method as a parameter.\n\n\n\nRead in each line and process the string to place it into your HashMap (*). Since each line contains data about a new flight, your HashMap should be altered for each line in the file. Use the put(key, value) method to add a new key to your list and replace(key, value) or put(key,value) to update a key if necessary. It is interesting to note that put(key, value) will replace the value stored in the HashMap if the key exists already with the value passed in as a parameter and so will replace(key, value).\nIt is important to note, the file you will be reading in is PublicTestCases/routesSec1csv.in. CSV means comma separated values, so each value in each row is separated by a comma. Since this is the case, what should each line be split on? (Note: We are using the .in extension to make it work with our grading script.)\nBelow is a reminder of how to use the split method.\n    String[] strs = s1.split(\",\");\nDetermine which element of the array you will need to access to read the source airport. A String with the three letter source airport code will be your key and the count of flights starting at that airport will be your value. What value should you initialize each key to? When should you increment the value? How should you update the value?\nHint: The get(key) method returns the value associated with the key\n(*) See Resources below for a reminder about methods relating to Scanner and String.\n\n\n\nOnce you have totaled all departing flights, print the airports in alphabetic order followed by the number of flights leaving that airport in the following format:\nThree Digit Airport Code - Number of flights \nExample\n GYD - 1 \n MRV - 1\nRemember a HashMap is unordered, so you will have to take the following step to alphabatize the output in order to run it through TravisCI. In the code below, the set of key airport codes are retrived from the HashMap by calling keySet() on the HashMap airportToNumFlights. These key values are then stored in an ArrayList in order to complete a sort on them that will place them in alphabetical order. The Collections sort is an inplace sort, so you do not need to store a return as the keys are sorted inside of the exisiting data structure.\n    ArrayList&lt;String&gt; airportsSorted = new ArrayList&lt;String&gt;(airportToNumFlights.keySet());\n    Collections.sort(airportsSorted);\nNow it is possible to iterate over the HashMap and have output print in alphabetical order. This can be done via the following loop. The loop iterates over each element in the ordered list airportsSorted and then access the corresponding value in the HashMap.\n    for (String airport : airportsSorted) {\n        System.out.println(airport + \" - \" + airportToNumFlights.get(airport));\n    }"
+  },
+  {
+    "objectID": "short-assignment-01.html#reminders",
+    "href": "short-assignment-01.html#reminders",
+    "title": "Lab 01",
+    "section": "",
+    "text": "System.out.println() is your friend\nnew Scanner(new File(args[0]))\n\nhasNextLine()\ngetNextLine()\nclose()\n\nString\n\nsubstr()\nindexOf()\ntrim()\nsplit()"
+  },
+  {
+    "objectID": "short-assignment-02.html",
+    "href": "short-assignment-02.html",
+    "title": "Lab 02",
+    "section": "",
+    "text": "Today’s lab session will be an introduction to the algorithmic structure of exhaustive search and will help prepare you for PA3. The first part of the section will be to generate all of the binary numbers for an N-bit number, in ascending order. The second part of the section will be to generate all of the possible dice roll combinations for a six-sided dice. This section will also reinforce your skills relating to arrays and recursion.\nExhaustive search is where every possible solution is enumerated. This is also known as the brute-force approach. In many cases, exhaustive search is the simplest solution, and the one to try first.\nReminder: We encourage paired programming during section, so please work through the section activity with the student sitting next to you. Remember, in section you can share code. For programming assignments you cannot.\n\n\n\nGo to the course webpage, click resources, and then click on the Section 2 URL. It will be the URL for accepting the github classroom assignment for Section 2.\nThen do the following: * Click on .travis.yml in github. Edit it to put in your email and commit that change on github. If you do not do this, you will run into issues later with pushing and TravisCI.\n\nClick on the green “Clone or download” button on the right of the web page and copy the provided URL.\nImport your Section 2 repository into Eclipse.\n\nopen Eclipse\nFile —&gt; Import —&gt; Git —&gt; Projects from Git, Next, Clone URI, Next, paste in repository URL from github\nNext, Select the master branch, Next, make the local destination /home/username/eclipse-workspace/Section2-ExhaustiveSearch-yourgithubid.\nNext, Import existing Eclipse projects, Next, Finish.\n\n\nNow you are ready to start coding.\n\n\n\nThis is the first assignment where you will have multiple classes. Part One should be completed in the Section2Binary.java file and Part Two should be completed in the Section2Dice.java file.\nPart One: Exhaustively print out 0-2^N - 1, where N is the number of bits, in ascending order in binary.\nPart Two: Exhaustively print out the dice rolling combinations for N six-sided dice.\n\n\nCopy the code below into main and run it to make sure it compiles and prints. This initiates the first TravisCI build.\n        System.out.println(\"Welcome to Section 2!\");\nThen commit and push your changes to github. Here is a reminder of the steps: Right click on Section1Main.java –&gt; Team –&gt; Commit, move unstaged files that you want to commit into staged changes, put in a commit message, and then click commit and push.\n\n\n\nFor Part 1 of this section we are completing a class that generates and prints out in ascending order all of the binary representations of the numbers 0-2^N - 1, where N represents the number of bits.\nFor example, if N = 2, then the output would be:\n00\n01\n10\n11\nIf you would like a more in-depth understanding of binary, refer to the lecture slides or do a quick Google search. Additionally, this activity relies on the enumerate and process structure described in class, so you should refer to those slides for help while working through this section.\n\n\nStart by printing out the passed in N from the command line. Code is already provided to read the first command line argument.\nTravis will be testing your output against the binary numbers of 0-2^N - 1 in ascending order.\n\n\n\nConsider what decisions need to be made in order to enumerate over all of the binary numbers starting from 00000 and getting to 11111. Discuss the following questions with your paired programming partner.\n\nWhat parameters do you need with your enumerate method? What do these parameters represent? How large should your array be that is holding the selected bits?\nWhat value, 0 or 1, should you start setting each bit to? What part of the enumeration method relates to changing the bit’s value?\nHow should you move to the next index of the bit being changed? How will you achieve this in your recursive enumeration call?\nLook back at the lecture slides to recall the format of the enumerate and process structure and copy over any necessary code.\n\n\n\n\nThe enumerate and process structure requires a recursive call of the enumerate method. To conclude this activity, you need to implement process and select a base case condition. Think and discuss with your partner the following questions.\n\nWhat two parameters should be equal for you to stop the recursion?\nWhere should the base case be located in your enumerate function?\nWhere should you call process? What should you pass process as a parameter?\n\n\n\n\n\nThis activity is very similar to the previous binary activity, so make sure to complete that activity first and reuse the enumerate and process structure here.\n\n\nRead in the number of dice from the command line.\n\n\n\nConsider what decisions need to be made in order to enumerate over all of the possible roll combinations. Discuss the following questions with your paired programming partner and refer back to your Part 1 decisions if you get stuck.\n\nWhat parameters do you need with your enumerate method? What do these parameters represent?\nHow large should your array be that is holding the value of the dice rolls?\nWhat value should you start setting each die to? Is this a different value than the start value used during the binary activity?\nHow should you move to selecting the value of the next roll? How will you achieve this in your recursive enumeration call?\nLook back at Part 1 or the lecture slides to recall the format of the enumerate and process structure to copy over any necessary code.\n\n\n\n\nThe enumerate and process structure requires a recursive call of the enumerate method. To conclude this activity, you need to implement process and select a base case condition. Think and discuss with your partner the following questions.\n\nWhat two parameters should be equal for you to stop the recursion?\nWhere should the base case be located in your enumerate function?\nWhere should you call process?\n\n*** Remember to show your SL your output on Eclipse before leaving section. ***\n\n\n\n\n\nThe Java API and Google are your friend, look up methods to take advantage of Java’s libraries.\n\nSystem.out.println() is your friend for testing and output\nDeclaring an array:\n\nint[] array = new int[N];\n\nUpdating a value in an array:\n\narray[0] = 1;"
+  },
+  {
+    "objectID": "short-assignment-02.html#introduction",
+    "href": "short-assignment-02.html#introduction",
+    "title": "Lab 02",
+    "section": "",
+    "text": "Today’s lab session will be an introduction to the algorithmic structure of exhaustive search and will help prepare you for PA3. The first part of the section will be to generate all of the binary numbers for an N-bit number, in ascending order. The second part of the section will be to generate all of the possible dice roll combinations for a six-sided dice. This section will also reinforce your skills relating to arrays and recursion.\nExhaustive search is where every possible solution is enumerated. This is also known as the brute-force approach. In many cases, exhaustive search is the simplest solution, and the one to try first.\nReminder: We encourage paired programming during section, so please work through the section activity with the student sitting next to you. Remember, in section you can share code. For programming assignments you cannot."
+  },
+  {
+    "objectID": "short-assignment-02.html#setup",
+    "href": "short-assignment-02.html#setup",
+    "title": "Lab 02",
+    "section": "",
+    "text": "Go to the course webpage, click resources, and then click on the Section 2 URL. It will be the URL for accepting the github classroom assignment for Section 2.\nThen do the following: * Click on .travis.yml in github. Edit it to put in your email and commit that change on github. If you do not do this, you will run into issues later with pushing and TravisCI.\n\nClick on the green “Clone or download” button on the right of the web page and copy the provided URL.\nImport your Section 2 repository into Eclipse.\n\nopen Eclipse\nFile —&gt; Import —&gt; Git —&gt; Projects from Git, Next, Clone URI, Next, paste in repository URL from github\nNext, Select the master branch, Next, make the local destination /home/username/eclipse-workspace/Section2-ExhaustiveSearch-yourgithubid.\nNext, Import existing Eclipse projects, Next, Finish.\n\n\nNow you are ready to start coding."
+  },
+  {
+    "objectID": "short-assignment-02.html#the-assignment",
+    "href": "short-assignment-02.html#the-assignment",
+    "title": "Lab 02",
+    "section": "",
+    "text": "This is the first assignment where you will have multiple classes. Part One should be completed in the Section2Binary.java file and Part Two should be completed in the Section2Dice.java file.\nPart One: Exhaustively print out 0-2^N - 1, where N is the number of bits, in ascending order in binary.\nPart Two: Exhaustively print out the dice rolling combinations for N six-sided dice.\n\n\nCopy the code below into main and run it to make sure it compiles and prints. This initiates the first TravisCI build.\n        System.out.println(\"Welcome to Section 2!\");\nThen commit and push your changes to github. Here is a reminder of the steps: Right click on Section1Main.java –&gt; Team –&gt; Commit, move unstaged files that you want to commit into staged changes, put in a commit message, and then click commit and push.\n\n\n\nFor Part 1 of this section we are completing a class that generates and prints out in ascending order all of the binary representations of the numbers 0-2^N - 1, where N represents the number of bits.\nFor example, if N = 2, then the output would be:\n00\n01\n10\n11\nIf you would like a more in-depth understanding of binary, refer to the lecture slides or do a quick Google search. Additionally, this activity relies on the enumerate and process structure described in class, so you should refer to those slides for help while working through this section.\n\n\nStart by printing out the passed in N from the command line. Code is already provided to read the first command line argument.\nTravis will be testing your output against the binary numbers of 0-2^N - 1 in ascending order.\n\n\n\nConsider what decisions need to be made in order to enumerate over all of the binary numbers starting from 00000 and getting to 11111. Discuss the following questions with your paired programming partner.\n\nWhat parameters do you need with your enumerate method? What do these parameters represent? How large should your array be that is holding the selected bits?\nWhat value, 0 or 1, should you start setting each bit to? What part of the enumeration method relates to changing the bit’s value?\nHow should you move to the next index of the bit being changed? How will you achieve this in your recursive enumeration call?\nLook back at the lecture slides to recall the format of the enumerate and process structure and copy over any necessary code.\n\n\n\n\nThe enumerate and process structure requires a recursive call of the enumerate method. To conclude this activity, you need to implement process and select a base case condition. Think and discuss with your partner the following questions.\n\nWhat two parameters should be equal for you to stop the recursion?\nWhere should the base case be located in your enumerate function?\nWhere should you call process? What should you pass process as a parameter?\n\n\n\n\n\nThis activity is very similar to the previous binary activity, so make sure to complete that activity first and reuse the enumerate and process structure here.\n\n\nRead in the number of dice from the command line.\n\n\n\nConsider what decisions need to be made in order to enumerate over all of the possible roll combinations. Discuss the following questions with your paired programming partner and refer back to your Part 1 decisions if you get stuck.\n\nWhat parameters do you need with your enumerate method? What do these parameters represent?\nHow large should your array be that is holding the value of the dice rolls?\nWhat value should you start setting each die to? Is this a different value than the start value used during the binary activity?\nHow should you move to selecting the value of the next roll? How will you achieve this in your recursive enumeration call?\nLook back at Part 1 or the lecture slides to recall the format of the enumerate and process structure to copy over any necessary code.\n\n\n\n\nThe enumerate and process structure requires a recursive call of the enumerate method. To conclude this activity, you need to implement process and select a base case condition. Think and discuss with your partner the following questions.\n\nWhat two parameters should be equal for you to stop the recursion?\nWhere should the base case be located in your enumerate function?\nWhere should you call process?\n\n*** Remember to show your SL your output on Eclipse before leaving section. ***"
+  },
+  {
+    "objectID": "short-assignment-02.html#resources",
+    "href": "short-assignment-02.html#resources",
+    "title": "Lab 02",
+    "section": "",
+    "text": "The Java API and Google are your friend, look up methods to take advantage of Java’s libraries.\n\nSystem.out.println() is your friend for testing and output\nDeclaring an array:\n\nint[] array = new int[N];\n\nUpdating a value in an array:\n\narray[0] = 1;"
+  },
+  {
+    "objectID": "programming-assignment-08.html",
+    "href": "programming-assignment-08.html",
+    "title": "Programming Assignment 08",
+    "section": "",
+    "text": "Deadline: November 13, 2024 – Wednesday, 11:30pm"
+  },
+  {
+    "objectID": "programming-assignment-08.html#learning-objectives",
+    "href": "programming-assignment-08.html#learning-objectives",
+    "title": "Programming Assignment 08",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nThe goal of this assignment is to use basic JavaFX to create a GUI output representation of the PA6-Garden program."
+  },
+  {
+    "objectID": "programming-assignment-08.html#the-assignment",
+    "href": "programming-assignment-08.html#the-assignment",
+    "title": "Programming Assignment 08",
+    "section": "The Assignment",
+    "text": "The Assignment\nIn class on Friday March 30th we talked about ways to consider improving your PA6-Garden implementation. In this assignment, you will build on the improved PA6-Garden implemention to visually represent your garden simulation.\nFor PA8, you will be graphically representing each plant in the output as well as handling a ‘delay’ command from the input file that represents how long to wait between the execution of commands. In the video example (PublicTestCases/customPlant.in and PublicTestCases/CustomPlantExample.mp4), each part of a plant (i.e., each character from the PA6 output) is represented by uniquely colored tile on a canvas.\nThe ‘PRINT’ command is also completely excluded from this program. This means that you should not expect any ‘PRINT’ commands from any input file. You can leave in the print handling code if you would like however.\nPlease open and watch ‘PublicTestCases/Example.mp4’ to see an example GUI output for the input file ‘PublicTestCases/Garden.in’. Also see ‘PublicTestCases/customPlant.in’ and ‘PublicTestCases/CustomPlantExample.mp4’. You will be creating a variant of Garden.in for your own unique plant or garden object.\nYou should also be looking at the PA6-Garden writeup to refresh your memory on how it works: https://github.com/UACS210Spring2018/PA-and-Section-Writeups/tree/master/PA6-Garden."
+  },
+  {
+    "objectID": "programming-assignment-08.html#delay-parameter",
+    "href": "programming-assignment-08.html#delay-parameter",
+    "title": "Programming Assignment 08",
+    "section": "Delay parameter",
+    "text": "Delay parameter\nThe input file format for this assignment is exactly the same as that of PA6-Garden, except that you will now have to handle a delay parameter. The delay will be specified on the third line of the input file right under the ‘cols’ parameter. An example input is shown below:\nrows: 1\ncols: 1\ndelay: 3.0\n\nPLANT (0,0) sunflower\nPLANT (2,2) tulip\nPLANT (5,5) iris\nGROW 1\nThe number after ‘delay:’ is a double that represents the time to wait before each command is executed. In the video example (CustomPlantExample.mp4), this delay was set to .5, therefore, each command was executed after waiting a half second."
+  },
+  {
+    "objectID": "programming-assignment-08.html#steps-for-completing-this-assignment",
+    "href": "programming-assignment-08.html#steps-for-completing-this-assignment",
+    "title": "Programming Assignment 08",
+    "section": "Steps for completing this assignment",
+    "text": "Steps for completing this assignment\n\nSee a tutorial on how to install the JavaFX plugin in Eclipse at (https://docs.google.com/document/d/1FUROjRbvIi_WKNYJ-00uprIo2YPHDNd72SrqgwaqKis/edit?usp=sharing). The tutorial is also posted on the CS 210 resources webpage (https://piazza.com/arizona/spring2018/csc210/resources).\nAccept the github assignment for PA8, (https://classroom.github.com/a/JKfUfTBS). Import your PA8 github repository into Eclipse as usual.\nRun the given starter code and see what it does.\nCopy your PA6 code into the Eclipse project.\nImplement the TODO items in the provided PA8Main.java.\nCreate your own copy of Garden.in called myGarden.in that includes planting your unique garden item.\nMake a video of running myGarden.in through your program."
+  },
+  {
+    "objectID": "programming-assignment-08.html#resources",
+    "href": "programming-assignment-08.html#resources",
+    "title": "Programming Assignment 08",
+    "section": "Resources",
+    "text": "Resources\nThe provided code uses some new concepts. We will be covering them in class. Additionally, here are some references.\n\ndrawing to a canvas, https://docs.oracle.com/javafx/2/canvas/jfxpub-canvas.htm\nlambda functions,http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html\ncolors to pick from, https://docs.oracle.com/javase/8/javafx/api/javafx/scene/paint/Color.html"
+  },
+  {
+    "objectID": "programming-assignment-08.html#general-requirements",
+    "href": "programming-assignment-08.html#general-requirements",
+    "title": "Programming Assignment 08",
+    "section": "General requirements",
+    "text": "General requirements\nThis assignment is different from other assignments you’ve had so far in that you are given a lot more freedom to design your output the way you want. You can try to mimic what was done in the video and get the credit for it, but however you choose to output your garden, the following general requirements must be met:\n\nEach plant must be one-of-a-kind, meaning they must be distinguishable from any other plant and the background. In the example video, this is done by using a different color for each plant against a brown background. You do not have to do it this way, for example, you can choose to use an image for each plant instead of a colored tile.\nEach command must be visually noticeable. This means that when ‘GROW 1’ is called for example, it should be visually obvious that every plant just grew by 1. In the example video, grow commands cause more identical tiles to be drawn in some fashion (depending on the plant type) around every plant.\nThere must be a command log which displays commands as they are being executed. In the example video, this is done in a TextArea at the bottom of the garden.\nYou must still handle errors. Errors that don’t cause the program to stop (such as ‘Can’t grow here’) should be distinguishable in the command log. In the video example, the error is fully capitalized and spaced out from surrounding text. For errors that do cause the program to stop, such as ‘Invalid dimension input’ or ‘File not found’ should still print to stdout and exit the program as usual."
+  },
+  {
+    "objectID": "programming-assignment-08.html#grading-criteria",
+    "href": "programming-assignment-08.html#grading-criteria",
+    "title": "Programming Assignment 08",
+    "section": "Grading Criteria",
+    "text": "Grading Criteria\nHalf of the PA8 grade will correctness. For this assignment, this is the GUI output. You should also expect that we might run your program with additional input files besides the ones provided.\nThe other half of the PA8 grade will be your decomposition and code clarity.\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.\nThis program should use fewer than 10 .java files. Each of these files should be (&lt;300 lines).\nEach method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\n\nCode Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format. One would also need to know the command line arguments that should be passed to the program.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement."
+  },
+  {
+    "objectID": "programming-assignment-08.html#submission",
+    "href": "programming-assignment-08.html#submission",
+    "title": "Programming Assignment 08",
+    "section": "Submission",
+    "text": "Submission\nFor this assignment, you are REQUIRED to submit all of the following files to Gradescope before Monday April 9th at 11:30am. * All the Java source files needed to run your program. * myGarden.in * myGarden.mp4, or other video format that can be run on multiple platforms. The video should be between 10 and 15 seconds long.\nTo create the video, you can use a program to record your screen as you run your program, or you can simply record your screen with your smartphone or tablet. Do note however that the video you submit must be of good enough quality for the SL’s to clearly see your garden and command logs.\nWrite your own code. We will be using a tool that finds similar code.\nIt is recommended that when talking with others about the assignment, do not write anything down."
   },
   {
     "objectID": "programming-assignment-09.html",
@@ -378,193 +672,60 @@
     "text": "Submission\nFor this assignment, you are REQUIRED to submit all of the following files to Gradescope before Monday April 16th at 11:30am. * All the Java source files needed to run your program. * If you are trying for the up to 10 extra credit points for going above and beyond, then let your SL know during your demo and summarize what you did extra in a README.md file that you submit to Gradescope.\nWrite your own code. We will be using a tool that finds similar code.\nIt is recommended that when talking with others about the assignment, do not write anything down."
   },
   {
-    "objectID": "programming-assignment-08.html",
-    "href": "programming-assignment-08.html",
-    "title": "Programming Assignment 08",
+    "objectID": "programming-assignments.html",
+    "href": "programming-assignments.html",
+    "title": "Programming Assignments",
     "section": "",
-    "text": "Deadline: November 13, 2024 – Wednesday, 11:30pm"
+    "text": "PA 1\n\nDeadline: September 06, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 2\n\nDeadline: September 12, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 3\n\nDeadline: September 20, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 4\n\nDeadline: October 02, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 5\n\nDeadline: October 09, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 6\n\nDeadline: October 23, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 7\n\nDeadline: October 30, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 8\n\nDeadline: November 13, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 9\n\nDeadline: November 20, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 10\n\nDeadline: December 04, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 11\n\nDeadline: December 11, 2024 – Wednesday, 11:30pm\nInstructions"
   },
   {
-    "objectID": "programming-assignment-08.html#learning-objectives",
-    "href": "programming-assignment-08.html#learning-objectives",
-    "title": "Programming Assignment 08",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\nThe goal of this assignment is to use basic JavaFX to create a GUI output representation of the PA6-Garden program."
-  },
-  {
-    "objectID": "programming-assignment-08.html#the-assignment",
-    "href": "programming-assignment-08.html#the-assignment",
-    "title": "Programming Assignment 08",
-    "section": "The Assignment",
-    "text": "The Assignment\nIn class on Friday March 30th we talked about ways to consider improving your PA6-Garden implementation. In this assignment, you will build on the improved PA6-Garden implemention to visually represent your garden simulation.\nFor PA8, you will be graphically representing each plant in the output as well as handling a ‘delay’ command from the input file that represents how long to wait between the execution of commands. In the video example (PublicTestCases/customPlant.in and PublicTestCases/CustomPlantExample.mp4), each part of a plant (i.e., each character from the PA6 output) is represented by uniquely colored tile on a canvas.\nThe ‘PRINT’ command is also completely excluded from this program. This means that you should not expect any ‘PRINT’ commands from any input file. You can leave in the print handling code if you would like however.\nPlease open and watch ‘PublicTestCases/Example.mp4’ to see an example GUI output for the input file ‘PublicTestCases/Garden.in’. Also see ‘PublicTestCases/customPlant.in’ and ‘PublicTestCases/CustomPlantExample.mp4’. You will be creating a variant of Garden.in for your own unique plant or garden object.\nYou should also be looking at the PA6-Garden writeup to refresh your memory on how it works: https://github.com/UACS210Spring2018/PA-and-Section-Writeups/tree/master/PA6-Garden."
-  },
-  {
-    "objectID": "programming-assignment-08.html#delay-parameter",
-    "href": "programming-assignment-08.html#delay-parameter",
-    "title": "Programming Assignment 08",
-    "section": "Delay parameter",
-    "text": "Delay parameter\nThe input file format for this assignment is exactly the same as that of PA6-Garden, except that you will now have to handle a delay parameter. The delay will be specified on the third line of the input file right under the ‘cols’ parameter. An example input is shown below:\nrows: 1\ncols: 1\ndelay: 3.0\n\nPLANT (0,0) sunflower\nPLANT (2,2) tulip\nPLANT (5,5) iris\nGROW 1\nThe number after ‘delay:’ is a double that represents the time to wait before each command is executed. In the video example (CustomPlantExample.mp4), this delay was set to .5, therefore, each command was executed after waiting a half second."
-  },
-  {
-    "objectID": "programming-assignment-08.html#steps-for-completing-this-assignment",
-    "href": "programming-assignment-08.html#steps-for-completing-this-assignment",
-    "title": "Programming Assignment 08",
-    "section": "Steps for completing this assignment",
-    "text": "Steps for completing this assignment\n\nSee a tutorial on how to install the JavaFX plugin in Eclipse at (https://docs.google.com/document/d/1FUROjRbvIi_WKNYJ-00uprIo2YPHDNd72SrqgwaqKis/edit?usp=sharing). The tutorial is also posted on the CS 210 resources webpage (https://piazza.com/arizona/spring2018/csc210/resources).\nAccept the github assignment for PA8, (https://classroom.github.com/a/JKfUfTBS). Import your PA8 github repository into Eclipse as usual.\nRun the given starter code and see what it does.\nCopy your PA6 code into the Eclipse project.\nImplement the TODO items in the provided PA8Main.java.\nCreate your own copy of Garden.in called myGarden.in that includes planting your unique garden item.\nMake a video of running myGarden.in through your program."
-  },
-  {
-    "objectID": "programming-assignment-08.html#resources",
-    "href": "programming-assignment-08.html#resources",
-    "title": "Programming Assignment 08",
-    "section": "Resources",
-    "text": "Resources\nThe provided code uses some new concepts. We will be covering them in class. Additionally, here are some references.\n\ndrawing to a canvas, https://docs.oracle.com/javafx/2/canvas/jfxpub-canvas.htm\nlambda functions,http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html\ncolors to pick from, https://docs.oracle.com/javase/8/javafx/api/javafx/scene/paint/Color.html"
-  },
-  {
-    "objectID": "programming-assignment-08.html#general-requirements",
-    "href": "programming-assignment-08.html#general-requirements",
-    "title": "Programming Assignment 08",
-    "section": "General requirements",
-    "text": "General requirements\nThis assignment is different from other assignments you’ve had so far in that you are given a lot more freedom to design your output the way you want. You can try to mimic what was done in the video and get the credit for it, but however you choose to output your garden, the following general requirements must be met:\n\nEach plant must be one-of-a-kind, meaning they must be distinguishable from any other plant and the background. In the example video, this is done by using a different color for each plant against a brown background. You do not have to do it this way, for example, you can choose to use an image for each plant instead of a colored tile.\nEach command must be visually noticeable. This means that when ‘GROW 1’ is called for example, it should be visually obvious that every plant just grew by 1. In the example video, grow commands cause more identical tiles to be drawn in some fashion (depending on the plant type) around every plant.\nThere must be a command log which displays commands as they are being executed. In the example video, this is done in a TextArea at the bottom of the garden.\nYou must still handle errors. Errors that don’t cause the program to stop (such as ‘Can’t grow here’) should be distinguishable in the command log. In the video example, the error is fully capitalized and spaced out from surrounding text. For errors that do cause the program to stop, such as ‘Invalid dimension input’ or ‘File not found’ should still print to stdout and exit the program as usual."
-  },
-  {
-    "objectID": "programming-assignment-08.html#grading-criteria",
-    "href": "programming-assignment-08.html#grading-criteria",
-    "title": "Programming Assignment 08",
-    "section": "Grading Criteria",
-    "text": "Grading Criteria\nHalf of the PA8 grade will correctness. For this assignment, this is the GUI output. You should also expect that we might run your program with additional input files besides the ones provided.\nThe other half of the PA8 grade will be your decomposition and code clarity.\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.\nThis program should use fewer than 10 .java files. Each of these files should be (&lt;300 lines).\nEach method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\n\nCode Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format. One would also need to know the command line arguments that should be passed to the program.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement."
-  },
-  {
-    "objectID": "programming-assignment-08.html#submission",
-    "href": "programming-assignment-08.html#submission",
-    "title": "Programming Assignment 08",
-    "section": "Submission",
-    "text": "Submission\nFor this assignment, you are REQUIRED to submit all of the following files to Gradescope before Monday April 9th at 11:30am. * All the Java source files needed to run your program. * myGarden.in * myGarden.mp4, or other video format that can be run on multiple platforms. The video should be between 10 and 15 seconds long.\nTo create the video, you can use a program to record your screen as you run your program, or you can simply record your screen with your smartphone or tablet. Do note however that the video you submit must be of good enough quality for the SL’s to clearly see your garden and command logs.\nWrite your own code. We will be using a tool that finds similar code.\nIt is recommended that when talking with others about the assignment, do not write anything down."
-  },
-  {
-    "objectID": "short-assignment-02.html",
-    "href": "short-assignment-02.html",
-    "title": "Lab 02",
+    "objectID": "short-assignment-03.html",
+    "href": "short-assignment-03.html",
+    "title": "Lab 03",
     "section": "",
-    "text": "Today’s lab session will be an introduction to the algorithmic structure of exhaustive search and will help prepare you for PA3. The first part of the section will be to generate all of the binary numbers for an N-bit number, in ascending order. The second part of the section will be to generate all of the possible dice roll combinations for a six-sided dice. This section will also reinforce your skills relating to arrays and recursion.\nExhaustive search is where every possible solution is enumerated. This is also known as the brute-force approach. In many cases, exhaustive search is the simplest solution, and the one to try first.\nReminder: We encourage paired programming during section, so please work through the section activity with the student sitting next to you. Remember, in section you can share code. For programming assignments you cannot.\n\n\n\nGo to the course webpage, click resources, and then click on the Section 2 URL. It will be the URL for accepting the github classroom assignment for Section 2.\nThen do the following: * Click on .travis.yml in github. Edit it to put in your email and commit that change on github. If you do not do this, you will run into issues later with pushing and TravisCI.\n\nClick on the green “Clone or download” button on the right of the web page and copy the provided URL.\nImport your Section 2 repository into Eclipse.\n\nopen Eclipse\nFile —&gt; Import —&gt; Git —&gt; Projects from Git, Next, Clone URI, Next, paste in repository URL from github\nNext, Select the master branch, Next, make the local destination /home/username/eclipse-workspace/Section2-ExhaustiveSearch-yourgithubid.\nNext, Import existing Eclipse projects, Next, Finish.\n\n\nNow you are ready to start coding.\n\n\n\nThis is the first assignment where you will have multiple classes. Part One should be completed in the Section2Binary.java file and Part Two should be completed in the Section2Dice.java file.\nPart One: Exhaustively print out 0-2^N - 1, where N is the number of bits, in ascending order in binary.\nPart Two: Exhaustively print out the dice rolling combinations for N six-sided dice.\n\n\nCopy the code below into main and run it to make sure it compiles and prints. This initiates the first TravisCI build.\n        System.out.println(\"Welcome to Section 2!\");\nThen commit and push your changes to github. Here is a reminder of the steps: Right click on Section1Main.java –&gt; Team –&gt; Commit, move unstaged files that you want to commit into staged changes, put in a commit message, and then click commit and push.\n\n\n\nFor Part 1 of this section we are completing a class that generates and prints out in ascending order all of the binary representations of the numbers 0-2^N - 1, where N represents the number of bits.\nFor example, if N = 2, then the output would be:\n00\n01\n10\n11\nIf you would like a more in-depth understanding of binary, refer to the lecture slides or do a quick Google search. Additionally, this activity relies on the enumerate and process structure described in class, so you should refer to those slides for help while working through this section.\n\n\nStart by printing out the passed in N from the command line. Code is already provided to read the first command line argument.\nTravis will be testing your output against the binary numbers of 0-2^N - 1 in ascending order.\n\n\n\nConsider what decisions need to be made in order to enumerate over all of the binary numbers starting from 00000 and getting to 11111. Discuss the following questions with your paired programming partner.\n\nWhat parameters do you need with your enumerate method? What do these parameters represent? How large should your array be that is holding the selected bits?\nWhat value, 0 or 1, should you start setting each bit to? What part of the enumeration method relates to changing the bit’s value?\nHow should you move to the next index of the bit being changed? How will you achieve this in your recursive enumeration call?\nLook back at the lecture slides to recall the format of the enumerate and process structure and copy over any necessary code.\n\n\n\n\nThe enumerate and process structure requires a recursive call of the enumerate method. To conclude this activity, you need to implement process and select a base case condition. Think and discuss with your partner the following questions.\n\nWhat two parameters should be equal for you to stop the recursion?\nWhere should the base case be located in your enumerate function?\nWhere should you call process? What should you pass process as a parameter?\n\n\n\n\n\nThis activity is very similar to the previous binary activity, so make sure to complete that activity first and reuse the enumerate and process structure here.\n\n\nRead in the number of dice from the command line.\n\n\n\nConsider what decisions need to be made in order to enumerate over all of the possible roll combinations. Discuss the following questions with your paired programming partner and refer back to your Part 1 decisions if you get stuck.\n\nWhat parameters do you need with your enumerate method? What do these parameters represent?\nHow large should your array be that is holding the value of the dice rolls?\nWhat value should you start setting each die to? Is this a different value than the start value used during the binary activity?\nHow should you move to selecting the value of the next roll? How will you achieve this in your recursive enumeration call?\nLook back at Part 1 or the lecture slides to recall the format of the enumerate and process structure to copy over any necessary code.\n\n\n\n\nThe enumerate and process structure requires a recursive call of the enumerate method. To conclude this activity, you need to implement process and select a base case condition. Think and discuss with your partner the following questions.\n\nWhat two parameters should be equal for you to stop the recursion?\nWhere should the base case be located in your enumerate function?\nWhere should you call process?\n\n*** Remember to show your SL your output on Eclipse before leaving section. ***\n\n\n\n\n\nThe Java API and Google are your friend, look up methods to take advantage of Java’s libraries.\n\nSystem.out.println() is your friend for testing and output\nDeclaring an array:\n\nint[] array = new int[N];\n\nUpdating a value in an array:\n\narray[0] = 1;"
+    "text": "The goal of today’s lab session is to learn about peer review in regards to our class and code review in industry. In this section, you will be introduced to Aropa, the peer reviewing tool we will be using, and write your first two peer reviews.\nStart the section by reading about the benefits of Code Review in industry by following the link below.\nhttps://blog.fullstory.com/what-we-learned-from-google-code-reviews-arent-just-for-catching-bugs/\n\n\n\nYou will need to go to the Aropa website, click on the U of A logo or select the University of Arizona on the dropdown menu, and then log in using your UA netid and the class code 386198. The website is linked below and the same instructions are posted on Piazza.\nhttps://aropa2.gla.ac.uk/aropa/aropa.php\nYou will be prompted to change your password. Choose a secure password that you will remember as you will use this same account for peer reviews in the future.\n\n\n\nOverview : Complete two peer reviews for PA2.\n\n\nYou will need to upload your PA2main.java file first. If you do not have access to your PA2main from the computer you are on, remember that you can download this file through your Gradescope account.\nTODO: Add Aropa usage instructions once I am able to set up the assignment and see the student’s view.\n\n\n\nYou will be responding to the statements below in regards to two other students’ code. You will be ranking your agreement of how well the statements relate to the student’s code on a scale of Strongly Agree to Strongly Disagree.\nIn addition to the rankings, you will have a comment block below to add a rational for your ranking and commentary on how the student could improve. When writing your comments, keep the Department of Computer Science’s code of conduct (https://www2.cs.arizona.edu/codeofconduct.pdf) in mind. Your feedback should be constructive, polite, and contribute to a positive learning environment.\n\nClarity: The student’s code is easily readable. This being able to read a method in no more than 5-7 minutes and being able to read each method without scrolling.\nClarity: The students code is well commented, with complex functions having a descriptive comment, comments inside of non-trivial methods to elaborate on complex code, and a class comment with usage and file format.\nDecomposition: The student avoids nested loops or conditionals and chaining to self-defined methods.\nDecomposition: The student’s code exhibits good decomposition. They used all non- static methods and only turned in one source file.\nStyle: The code follows the style guidelines. No lines are longer than 80 columns, does not mix tabs and spaces and has curly brackets on the same line as the loop or conditional."
   },
   {
-    "objectID": "short-assignment-02.html#introduction",
-    "href": "short-assignment-02.html#introduction",
-    "title": "Lab 02",
+    "objectID": "short-assignment-03.html#introduction",
+    "href": "short-assignment-03.html#introduction",
+    "title": "Lab 03",
     "section": "",
-    "text": "Today’s lab session will be an introduction to the algorithmic structure of exhaustive search and will help prepare you for PA3. The first part of the section will be to generate all of the binary numbers for an N-bit number, in ascending order. The second part of the section will be to generate all of the possible dice roll combinations for a six-sided dice. This section will also reinforce your skills relating to arrays and recursion.\nExhaustive search is where every possible solution is enumerated. This is also known as the brute-force approach. In many cases, exhaustive search is the simplest solution, and the one to try first.\nReminder: We encourage paired programming during section, so please work through the section activity with the student sitting next to you. Remember, in section you can share code. For programming assignments you cannot."
+    "text": "The goal of today’s lab session is to learn about peer review in regards to our class and code review in industry. In this section, you will be introduced to Aropa, the peer reviewing tool we will be using, and write your first two peer reviews.\nStart the section by reading about the benefits of Code Review in industry by following the link below.\nhttps://blog.fullstory.com/what-we-learned-from-google-code-reviews-arent-just-for-catching-bugs/"
   },
   {
-    "objectID": "short-assignment-02.html#setup",
-    "href": "short-assignment-02.html#setup",
-    "title": "Lab 02",
+    "objectID": "short-assignment-03.html#setup-for-peer-review",
+    "href": "short-assignment-03.html#setup-for-peer-review",
+    "title": "Lab 03",
     "section": "",
-    "text": "Go to the course webpage, click resources, and then click on the Section 2 URL. It will be the URL for accepting the github classroom assignment for Section 2.\nThen do the following: * Click on .travis.yml in github. Edit it to put in your email and commit that change on github. If you do not do this, you will run into issues later with pushing and TravisCI.\n\nClick on the green “Clone or download” button on the right of the web page and copy the provided URL.\nImport your Section 2 repository into Eclipse.\n\nopen Eclipse\nFile —&gt; Import —&gt; Git —&gt; Projects from Git, Next, Clone URI, Next, paste in repository URL from github\nNext, Select the master branch, Next, make the local destination /home/username/eclipse-workspace/Section2-ExhaustiveSearch-yourgithubid.\nNext, Import existing Eclipse projects, Next, Finish.\n\n\nNow you are ready to start coding."
+    "text": "You will need to go to the Aropa website, click on the U of A logo or select the University of Arizona on the dropdown menu, and then log in using your UA netid and the class code 386198. The website is linked below and the same instructions are posted on Piazza.\nhttps://aropa2.gla.ac.uk/aropa/aropa.php\nYou will be prompted to change your password. Choose a secure password that you will remember as you will use this same account for peer reviews in the future."
   },
   {
-    "objectID": "short-assignment-02.html#the-assignment",
-    "href": "short-assignment-02.html#the-assignment",
-    "title": "Lab 02",
+    "objectID": "short-assignment-03.html#the-assignment",
+    "href": "short-assignment-03.html#the-assignment",
+    "title": "Lab 03",
     "section": "",
-    "text": "This is the first assignment where you will have multiple classes. Part One should be completed in the Section2Binary.java file and Part Two should be completed in the Section2Dice.java file.\nPart One: Exhaustively print out 0-2^N - 1, where N is the number of bits, in ascending order in binary.\nPart Two: Exhaustively print out the dice rolling combinations for N six-sided dice.\n\n\nCopy the code below into main and run it to make sure it compiles and prints. This initiates the first TravisCI build.\n        System.out.println(\"Welcome to Section 2!\");\nThen commit and push your changes to github. Here is a reminder of the steps: Right click on Section1Main.java –&gt; Team –&gt; Commit, move unstaged files that you want to commit into staged changes, put in a commit message, and then click commit and push.\n\n\n\nFor Part 1 of this section we are completing a class that generates and prints out in ascending order all of the binary representations of the numbers 0-2^N - 1, where N represents the number of bits.\nFor example, if N = 2, then the output would be:\n00\n01\n10\n11\nIf you would like a more in-depth understanding of binary, refer to the lecture slides or do a quick Google search. Additionally, this activity relies on the enumerate and process structure described in class, so you should refer to those slides for help while working through this section.\n\n\nStart by printing out the passed in N from the command line. Code is already provided to read the first command line argument.\nTravis will be testing your output against the binary numbers of 0-2^N - 1 in ascending order.\n\n\n\nConsider what decisions need to be made in order to enumerate over all of the binary numbers starting from 00000 and getting to 11111. Discuss the following questions with your paired programming partner.\n\nWhat parameters do you need with your enumerate method? What do these parameters represent? How large should your array be that is holding the selected bits?\nWhat value, 0 or 1, should you start setting each bit to? What part of the enumeration method relates to changing the bit’s value?\nHow should you move to the next index of the bit being changed? How will you achieve this in your recursive enumeration call?\nLook back at the lecture slides to recall the format of the enumerate and process structure and copy over any necessary code.\n\n\n\n\nThe enumerate and process structure requires a recursive call of the enumerate method. To conclude this activity, you need to implement process and select a base case condition. Think and discuss with your partner the following questions.\n\nWhat two parameters should be equal for you to stop the recursion?\nWhere should the base case be located in your enumerate function?\nWhere should you call process? What should you pass process as a parameter?\n\n\n\n\n\nThis activity is very similar to the previous binary activity, so make sure to complete that activity first and reuse the enumerate and process structure here.\n\n\nRead in the number of dice from the command line.\n\n\n\nConsider what decisions need to be made in order to enumerate over all of the possible roll combinations. Discuss the following questions with your paired programming partner and refer back to your Part 1 decisions if you get stuck.\n\nWhat parameters do you need with your enumerate method? What do these parameters represent?\nHow large should your array be that is holding the value of the dice rolls?\nWhat value should you start setting each die to? Is this a different value than the start value used during the binary activity?\nHow should you move to selecting the value of the next roll? How will you achieve this in your recursive enumeration call?\nLook back at Part 1 or the lecture slides to recall the format of the enumerate and process structure to copy over any necessary code.\n\n\n\n\nThe enumerate and process structure requires a recursive call of the enumerate method. To conclude this activity, you need to implement process and select a base case condition. Think and discuss with your partner the following questions.\n\nWhat two parameters should be equal for you to stop the recursion?\nWhere should the base case be located in your enumerate function?\nWhere should you call process?\n\n*** Remember to show your SL your output on Eclipse before leaving section. ***"
+    "text": "Overview : Complete two peer reviews for PA2.\n\n\nYou will need to upload your PA2main.java file first. If you do not have access to your PA2main from the computer you are on, remember that you can download this file through your Gradescope account.\nTODO: Add Aropa usage instructions once I am able to set up the assignment and see the student’s view.\n\n\n\nYou will be responding to the statements below in regards to two other students’ code. You will be ranking your agreement of how well the statements relate to the student’s code on a scale of Strongly Agree to Strongly Disagree.\nIn addition to the rankings, you will have a comment block below to add a rational for your ranking and commentary on how the student could improve. When writing your comments, keep the Department of Computer Science’s code of conduct (https://www2.cs.arizona.edu/codeofconduct.pdf) in mind. Your feedback should be constructive, polite, and contribute to a positive learning environment.\n\nClarity: The student’s code is easily readable. This being able to read a method in no more than 5-7 minutes and being able to read each method without scrolling.\nClarity: The students code is well commented, with complex functions having a descriptive comment, comments inside of non-trivial methods to elaborate on complex code, and a class comment with usage and file format.\nDecomposition: The student avoids nested loops or conditionals and chaining to self-defined methods.\nDecomposition: The student’s code exhibits good decomposition. They used all non- static methods and only turned in one source file.\nStyle: The code follows the style guidelines. No lines are longer than 80 columns, does not mix tabs and spaces and has curly brackets on the same line as the loop or conditional."
   },
   {
-    "objectID": "short-assignment-02.html#resources",
-    "href": "short-assignment-02.html#resources",
-    "title": "Lab 02",
+    "objectID": "slides-01-01.html#tips-on-slides",
+    "href": "slides-01-01.html#tips-on-slides",
+    "title": "Course Introduction",
+    "section": "Tips on slides",
+    "text": "Tips on slides\nPress the e key"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CSC 210 Fall 2024",
     "section": "",
-    "text": "The Java API and Google are your friend, look up methods to take advantage of Java’s libraries.\n\nSystem.out.println() is your friend for testing and output\nDeclaring an array:\n\nint[] array = new int[N];\n\nUpdating a value in an array:\n\narray[0] = 1;"
-  },
-  {
-    "objectID": "short-assignment-01.html",
-    "href": "short-assignment-01.html",
-    "title": "Lab 01",
-    "section": "",
-    "text": "Today’s lab session will be an introduction to Java HashMaps and it will prepare you for PA2 by familiarizing you with the flights data set. Hashmaps are similar to Python’s dictionaries. The similarities include both data structures being a mapping from keys to values and that they are unordered data structures. Below are some of the basic Java hashmap methods compared to their equivalent python method.\n\n\n\nJava\nPython\n\n\n\n\ndict.get(key);\ndict.get(key)\n\n\ndict.put(key, value);\ndict[key] = value\n\n\ndict.remove(key);\ndict.pop(key);\n\n\n\nHere is a link to Java’s API that describes the HashMap data type and how to use all of its built in constructors and methods: https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html\nThe Java API is a great resource for better understanding the language and I encourage you to utilize this resource as you are learning about Java this semester. Additionally, we encourage paired programming during section, so please work through the section activity with a student sitting next to you. In section you can share code. For programming assignments you cannot.\n\n\n\nGo to the course webpage, click resources, and then click on the Section 1 URL. It will be the URL for accepting the github classroom assignment for Section 1.\nThen you need to edit your .travis.yml file in your section1 repository on github, and then clone and import the Section 1 gitrepo. * Click on .travis.yml in github. Then put in your email and commit that change.\n\nClick on the green “Clone or download” button on the right of the web page and copy the provided URL.\nImport your Section 1 repository into Eclipse.\n\nopen Eclipse\nFile —&gt; Import —&gt; Git —&gt; Projects from Git, Next, Clone URI, Next, paste in repository URL from github\nNext, Select the master branch, Next, make the local destination /home/username/eclipse-workspace/Section1-yourgithubid.\nNext, Import existing Eclipse projects, Next, Finish.\n\n\nNow you are ready to get started coding.\n\n\n\nOverview : Read in the given file from the command line and calculate the number of departing flights for each airport by using a hashmap that stores the relevant data read in from the input file. The HashMap will have the three letter airport code as keys and the number of flights as the values.\n\n\nCopy the code below into main and run it to make sure it compiles and prints.\n        System.out.println(\"Welcome to Section 1!\");\nThen commit and push your changes to github. Here is a reminder of the steps: Right click on Section1Main.java –&gt; Team –&gt; Commit, move unstaged files that you want to commit into staged changes, put in a commit message, and then click commit and push.\n\n\n\nSimilarly to PA1 you will be reading in a file from the command line. Begin by initializing a Scanner object, or other file reader of your choice, as demonstrated in class. Test that you are able to open PublicTestCases/routesSec1csv.in when given the file on the command line.\nTake a moment to open up PublicTestCases/routesSec1csv.in in Eclipse. What do you see? See https://www.kaggle.com/open-flights/flight-route-database for a description of the fields in the file.\nIf you get stuck, here is example code demonstrating the use of Scanner.\npublic static void main(String[] args) {\n    Scanner input = null; \n    \n    System.out.println(\"args[0]=\"+args[0]);\n    try {\n        input = new Scanner(new File(args[0]));\n        while (input.hasNextLine()) {\n            System.out.println(input.nextLine());\n        }\n        input.close();\n    } catch (Exception ex) {\n        ex.printStackTrace();\n    }\n}\nThe scanner input is initialized to null at the beginning of main so that the count departures method can be called outside of and after the try catch block.\n\n\n\nBefore declaring your HashMap, think about the mapping structure you will need to keep track of the number of departing flights for each airport. What should be stored in your keys and values? What types should they be? Remember to discuss your ideas with your partner.\nHint: There are many types in Java, consider solutions that use Strings, Arrays and/or Ints. There are several designs that would work, so try to think of a few different designs.\nHere is an example HashMap declaration. This example demonstrates the suggested types for the HashMap and is what will be referenced through the remainder of the activity.\n    HashMap&lt;String, Integer&gt; airportToNumFlights = new HashMap&lt;String, Integer&gt;();\nThe HashMap declaration should occur in the countDepartures method. This method is also where the reading of the data will occur and the HashMap created will be returned to main for printing. Since the reading will occur in the function, the scanner must be passed into the countDepartures method as a parameter.\n\n\n\nRead in each line and process the string to place it into your HashMap (*). Since each line contains data about a new flight, your HashMap should be altered for each line in the file. Use the put(key, value) method to add a new key to your list and replace(key, value) or put(key,value) to update a key if necessary. It is interesting to note that put(key, value) will replace the value stored in the HashMap if the key exists already with the value passed in as a parameter and so will replace(key, value).\nIt is important to note, the file you will be reading in is PublicTestCases/routesSec1csv.in. CSV means comma separated values, so each value in each row is separated by a comma. Since this is the case, what should each line be split on? (Note: We are using the .in extension to make it work with our grading script.)\nBelow is a reminder of how to use the split method.\n    String[] strs = s1.split(\",\");\nDetermine which element of the array you will need to access to read the source airport. A String with the three letter source airport code will be your key and the count of flights starting at that airport will be your value. What value should you initialize each key to? When should you increment the value? How should you update the value?\nHint: The get(key) method returns the value associated with the key\n(*) See Resources below for a reminder about methods relating to Scanner and String.\n\n\n\nOnce you have totaled all departing flights, print the airports in alphabetic order followed by the number of flights leaving that airport in the following format:\nThree Digit Airport Code - Number of flights \nExample\n GYD - 1 \n MRV - 1\nRemember a HashMap is unordered, so you will have to take the following step to alphabatize the output in order to run it through TravisCI. In the code below, the set of key airport codes are retrived from the HashMap by calling keySet() on the HashMap airportToNumFlights. These key values are then stored in an ArrayList in order to complete a sort on them that will place them in alphabetical order. The Collections sort is an inplace sort, so you do not need to store a return as the keys are sorted inside of the exisiting data structure.\n    ArrayList&lt;String&gt; airportsSorted = new ArrayList&lt;String&gt;(airportToNumFlights.keySet());\n    Collections.sort(airportsSorted);\nNow it is possible to iterate over the HashMap and have output print in alphabetical order. This can be done via the following loop. The loop iterates over each element in the ordered list airportsSorted and then access the corresponding value in the HashMap.\n    for (String airport : airportsSorted) {\n        System.out.println(airport + \" - \" + airportToNumFlights.get(airport));\n    }\n\n\n\n\n\nSystem.out.println() is your friend\nnew Scanner(new File(args[0]))\n\nhasNextLine()\ngetNextLine()\nclose()\n\nString\n\nsubstr()\nindexOf()\ntrim()\nsplit()"
-  },
-  {
-    "objectID": "short-assignment-01.html#introduction",
-    "href": "short-assignment-01.html#introduction",
-    "title": "Lab 01",
-    "section": "",
-    "text": "Today’s lab session will be an introduction to Java HashMaps and it will prepare you for PA2 by familiarizing you with the flights data set. Hashmaps are similar to Python’s dictionaries. The similarities include both data structures being a mapping from keys to values and that they are unordered data structures. Below are some of the basic Java hashmap methods compared to their equivalent python method.\n\n\n\nJava\nPython\n\n\n\n\ndict.get(key);\ndict.get(key)\n\n\ndict.put(key, value);\ndict[key] = value\n\n\ndict.remove(key);\ndict.pop(key);\n\n\n\nHere is a link to Java’s API that describes the HashMap data type and how to use all of its built in constructors and methods: https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html\nThe Java API is a great resource for better understanding the language and I encourage you to utilize this resource as you are learning about Java this semester. Additionally, we encourage paired programming during section, so please work through the section activity with a student sitting next to you. In section you can share code. For programming assignments you cannot."
-  },
-  {
-    "objectID": "short-assignment-01.html#setup",
-    "href": "short-assignment-01.html#setup",
-    "title": "Lab 01",
-    "section": "",
-    "text": "Go to the course webpage, click resources, and then click on the Section 1 URL. It will be the URL for accepting the github classroom assignment for Section 1.\nThen you need to edit your .travis.yml file in your section1 repository on github, and then clone and import the Section 1 gitrepo. * Click on .travis.yml in github. Then put in your email and commit that change.\n\nClick on the green “Clone or download” button on the right of the web page and copy the provided URL.\nImport your Section 1 repository into Eclipse.\n\nopen Eclipse\nFile —&gt; Import —&gt; Git —&gt; Projects from Git, Next, Clone URI, Next, paste in repository URL from github\nNext, Select the master branch, Next, make the local destination /home/username/eclipse-workspace/Section1-yourgithubid.\nNext, Import existing Eclipse projects, Next, Finish.\n\n\nNow you are ready to get started coding."
-  },
-  {
-    "objectID": "short-assignment-01.html#the-assignment",
-    "href": "short-assignment-01.html#the-assignment",
-    "title": "Lab 01",
-    "section": "",
-    "text": "Overview : Read in the given file from the command line and calculate the number of departing flights for each airport by using a hashmap that stores the relevant data read in from the input file. The HashMap will have the three letter airport code as keys and the number of flights as the values.\n\n\nCopy the code below into main and run it to make sure it compiles and prints.\n        System.out.println(\"Welcome to Section 1!\");\nThen commit and push your changes to github. Here is a reminder of the steps: Right click on Section1Main.java –&gt; Team –&gt; Commit, move unstaged files that you want to commit into staged changes, put in a commit message, and then click commit and push.\n\n\n\nSimilarly to PA1 you will be reading in a file from the command line. Begin by initializing a Scanner object, or other file reader of your choice, as demonstrated in class. Test that you are able to open PublicTestCases/routesSec1csv.in when given the file on the command line.\nTake a moment to open up PublicTestCases/routesSec1csv.in in Eclipse. What do you see? See https://www.kaggle.com/open-flights/flight-route-database for a description of the fields in the file.\nIf you get stuck, here is example code demonstrating the use of Scanner.\npublic static void main(String[] args) {\n    Scanner input = null; \n    \n    System.out.println(\"args[0]=\"+args[0]);\n    try {\n        input = new Scanner(new File(args[0]));\n        while (input.hasNextLine()) {\n            System.out.println(input.nextLine());\n        }\n        input.close();\n    } catch (Exception ex) {\n        ex.printStackTrace();\n    }\n}\nThe scanner input is initialized to null at the beginning of main so that the count departures method can be called outside of and after the try catch block.\n\n\n\nBefore declaring your HashMap, think about the mapping structure you will need to keep track of the number of departing flights for each airport. What should be stored in your keys and values? What types should they be? Remember to discuss your ideas with your partner.\nHint: There are many types in Java, consider solutions that use Strings, Arrays and/or Ints. There are several designs that would work, so try to think of a few different designs.\nHere is an example HashMap declaration. This example demonstrates the suggested types for the HashMap and is what will be referenced through the remainder of the activity.\n    HashMap&lt;String, Integer&gt; airportToNumFlights = new HashMap&lt;String, Integer&gt;();\nThe HashMap declaration should occur in the countDepartures method. This method is also where the reading of the data will occur and the HashMap created will be returned to main for printing. Since the reading will occur in the function, the scanner must be passed into the countDepartures method as a parameter.\n\n\n\nRead in each line and process the string to place it into your HashMap (*). Since each line contains data about a new flight, your HashMap should be altered for each line in the file. Use the put(key, value) method to add a new key to your list and replace(key, value) or put(key,value) to update a key if necessary. It is interesting to note that put(key, value) will replace the value stored in the HashMap if the key exists already with the value passed in as a parameter and so will replace(key, value).\nIt is important to note, the file you will be reading in is PublicTestCases/routesSec1csv.in. CSV means comma separated values, so each value in each row is separated by a comma. Since this is the case, what should each line be split on? (Note: We are using the .in extension to make it work with our grading script.)\nBelow is a reminder of how to use the split method.\n    String[] strs = s1.split(\",\");\nDetermine which element of the array you will need to access to read the source airport. A String with the three letter source airport code will be your key and the count of flights starting at that airport will be your value. What value should you initialize each key to? When should you increment the value? How should you update the value?\nHint: The get(key) method returns the value associated with the key\n(*) See Resources below for a reminder about methods relating to Scanner and String.\n\n\n\nOnce you have totaled all departing flights, print the airports in alphabetic order followed by the number of flights leaving that airport in the following format:\nThree Digit Airport Code - Number of flights \nExample\n GYD - 1 \n MRV - 1\nRemember a HashMap is unordered, so you will have to take the following step to alphabatize the output in order to run it through TravisCI. In the code below, the set of key airport codes are retrived from the HashMap by calling keySet() on the HashMap airportToNumFlights. These key values are then stored in an ArrayList in order to complete a sort on them that will place them in alphabetical order. The Collections sort is an inplace sort, so you do not need to store a return as the keys are sorted inside of the exisiting data structure.\n    ArrayList&lt;String&gt; airportsSorted = new ArrayList&lt;String&gt;(airportToNumFlights.keySet());\n    Collections.sort(airportsSorted);\nNow it is possible to iterate over the HashMap and have output print in alphabetical order. This can be done via the following loop. The loop iterates over each element in the ordered list airportsSorted and then access the corresponding value in the HashMap.\n    for (String airport : airportsSorted) {\n        System.out.println(airport + \" - \" + airportToNumFlights.get(airport));\n    }"
-  },
-  {
-    "objectID": "short-assignment-01.html#reminders",
-    "href": "short-assignment-01.html#reminders",
-    "title": "Lab 01",
-    "section": "",
-    "text": "System.out.println() is your friend\nnew Scanner(new File(args[0]))\n\nhasNextLine()\ngetNextLine()\nclose()\n\nString\n\nsubstr()\nindexOf()\ntrim()\nsplit()"
-  },
-  {
-    "objectID": "slides-01-02.html#before-we-start",
-    "href": "slides-01-02.html#before-we-start",
-    "title": "Intro to Java",
-    "section": "Before we start",
-    "text": "Before we start\nWe will be using Eclipse as our IDE for this course.\nIt’s good practice to have a working environment folder and work within projects. (DEMO)\nI’ll create a GettingStarted project, and then a new class called HelloWorld\nOpt to create a public main method\nSystem.out.println(\"Hello World!\");"
-  },
-  {
-    "objectID": "slides-01-02.html#typing",
-    "href": "slides-01-02.html#typing",
-    "title": "Intro to Java",
-    "section": "Typing",
-    "text": "Typing\n\nPython does dynamic typing\n\n\nword = \"car\"\nnumber = 3\nnew_list = []\nnames = [\"Pedro\", \"Melissa\", \"Jessica\"]\n\n\nStatic typing in Java\n\nString word = \"car\";\nint number = 3;\nList&lt;Integer&gt; newList = new List&lt;&gt;();\nList&lt;String&gt; names = new List&lt;&gt;();"
-  },
-  {
-    "objectID": "slides-01-02.html#try-it-out",
-    "href": "slides-01-02.html#try-it-out",
-    "title": "Intro to Java",
-    "section": "Try it out",
-    "text": "Try it out\nModify your main method in your HelloWorld class to assign the string literal \"Hello World!\" to a String variable name, and then print out that variable instead.\nQuestions:\n\nCan you use both double and single strings to create the variable?\nDoes concatenation with the + operator work?\nCan we concatenate String, char and int (or a combination of these)?"
-  },
-  {
-    "objectID": "slides-01-02.html#try-it-out-solution",
-    "href": "slides-01-02.html#try-it-out-solution",
-    "title": "Intro to Java",
-    "section": "Try it out – solution",
-    "text": "Try it out – solution\npublic class HelloWorld {\n\n    public static void main(String[] args) {\n        // TODO Auto-generated method stub\n        String message = \"Hello World!\";\n        char space = ' ';\n        int number = 210;\n        System.out.println(message + space + number);\n\n    }\n\n}"
-  },
-  {
-    "objectID": "slides-01-02.html#variable-assignment",
-    "href": "slides-01-02.html#variable-assignment",
-    "title": "Intro to Java",
-    "section": "Variable assignment",
-    "text": "Variable assignment\n\nTo declare and give initial values to variables use =, which means becomes or take on the value of (assignment)\n\nint credits = 4;\ndouble grade = 3.67;\nString name = \"Chris\";\nint hours = 10;\nboolean ready = hours &gt;= 8;\nQuestion:\n\nCan you change the type of a variable in Java?\nWhy are certain types all lower-cased, while others are title cased?"
-  },
-  {
-    "objectID": "slides-01-02.html#types",
-    "href": "slides-01-02.html#types",
-    "title": "Intro to Java",
-    "section": "Types",
-    "text": "Types\nAll primitive types in Java and lower-cased.\nA primitive cannot have a method attached to it and connat be subclasses (there is no Object)\nJava types that start with a upper cacse are Objects."
-  },
-  {
-    "objectID": "slides-01-02.html#comments",
-    "href": "slides-01-02.html#comments",
-    "title": "Intro to Java",
-    "section": "Comments",
-    "text": "Comments\n\nJava requires a lot of code to express a simple concept.\nYou need to be much more explicit when writing Java than Python (more words to type in Java)\nComments are extra important\n\n// one line comment\n\n/*\n  multi-line\n  comment\n */\n    \n/**\n * JavaDoc comments for external documentation\n * @returns description of what returns   \n */"
+    "text": "The main goal of this course is to learn how to decompose problems and solve them with a program and do this in an effective manner that enables your future self and others to read, understand, and maintain your programs. Other goals include learning a second programming language (Java), learning decomposition and debugging strategies, and learning GUI event-driven programming (JavaFX).\n\nCourse D2L:\nGradescope:\nPiazza:\n\nWhere to start:\n\nSyllabus\nSchedule + Materials\n\n\nInstructor Information\n\nAdriana Picoral 🔈\n\nOffice: Gould-Simpson 811\nEmail: adrianaps@arizona.edu\nInstructor Website: adrianapicoral.com\nOffice hours (open door, drop in, my office GS 811):\n\nMonday 2:30pm to 3:30pm\nWednesday 10:30am to 12:30pm\n\n\n\n\n\nInformation about the materials for this course\nThe materials (including slides and assignments) for this course are based on materials from previous CSC 210 instances created by other instructors, including: Michelle Strout, and Rick Mercer."
   },
   {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "This course is an introduction to the development of large scale software. Topics include modularization, design patterns, documentation, unit testing, source code control, build systems, debuggers, and performance tuning; all of the tools necessary for developing software as opposed to writing small programs.\nThe main goal of this course is to learn how to decompose problems and solve them with a program and do this in an effective manner that enables your future self and others to read, understand, and maintain your programs. Other goals include learning a second programming language (Java), learning decomposition and debugging strategies, and learning GUI event-driven programming (JavaFX)."
+    "text": "This course is an introduction to the development of large scale software. Topics include modularization, design patterns, documentation, unit testing, source code control, build systems, debuggers, and performance tuning; all of the tools necessary for developing software as opposed to writing small programs."
   },
   {
     "objectID": "syllabus.html#instructor-adriana-picoral",
@@ -936,166 +1097,5 @@
     "title": "Programming Assignmnet 06",
     "section": "Submission",
     "text": "Submission\nWrite your own code. We will be using a tool that finds overly similar code. This Spring 2018 semester in CS 210 we unfortunately have had academic integrity cases. I recommend that when talking with others about the assignment, do not write anything down.\nThe class hierarchy diagram in pdf format is due Tuesday March 13th at 11:30 am in Gradescope AND Aropa.\nFor PA6, you are REQUIRED to submit all of your java source files to Gradescope before Monday March 19th at 11:30 am. You also need to submit your README.md with example input and output for your unique class."
-  },
-  {
-    "objectID": "slides-01-02.html#javadoc-comments",
-    "href": "slides-01-02.html#javadoc-comments",
-    "title": "Intro to Java",
-    "section": "JavaDoc Comments",
-    "text": "JavaDoc Comments\nJavaDoc comments may be placed above any class, method, or field\nTwo sections:\n\ndescription\nstandalone block tags (marked with @)"
-  },
-  {
-    "objectID": "slides-01-02.html#practice",
-    "href": "slides-01-02.html#practice",
-    "title": "Intro to Java",
-    "section": "Practice",
-    "text": "Practice\nCreate a Java application that determines if an integer is odd or even"
-  },
-  {
-    "objectID": "slides-01-02.html#solution-1",
-    "href": "slides-01-02.html#solution-1",
-    "title": "Intro to Java",
-    "section": "Solution 1",
-    "text": "Solution 1\npublic class OddsOrEvens {\n\n    public static void main(String[] args) {\n        int number;\n        number = 3;\n        boolean result = number % 2 == 0;\n        System.out.println(result);\n\n    }\n\n}"
-  },
-  {
-    "objectID": "slides-01-02.html#solution-2",
-    "href": "slides-01-02.html#solution-2",
-    "title": "Intro to Java",
-    "section": "Solution 2",
-    "text": "Solution 2\npublic class OddsOrEvens {\n    \n    public static boolean isOdd(int number) {\n        return number % 2 == 1;\n    }\n    \n    public static boolean isEven(int number) {\n        return number % 2 == 0;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isOdd(3));\n        System.out.println(isEven(3));\n\n    }\n\n}"
-  },
-  {
-    "objectID": "slides-01-02.html#solution-3",
-    "href": "slides-01-02.html#solution-3",
-    "title": "Intro to Java",
-    "section": "Solution 3",
-    "text": "Solution 3\npublic class OddsOrEvens {\n    \n    public static boolean isOdd(int number) {\n        // if integer is not divisible by 2, it's odd\n          return number % 2 == 1;\n    }\n    \n    public static void main(String[] args) {\n          int number;\n          number = 6;\n          if (isOdd(number)) {\n            System.out.println(number + \" is odd.\");\n          } else {\n            System.out.println(number + \" is even.\");\n          }\n\n    }\n\n}"
-  },
-  {
-    "objectID": "slides-01-02.html#scanner",
-    "href": "slides-01-02.html#scanner",
-    "title": "Intro to Java",
-    "section": "Scanner",
-    "text": "Scanner\nLet’s import the Scanner package from Java utils and use it to get user input.\nimport java.util.Scanner;\nHere’s the call:\nint number = userInput.nextInt();\n\nAdd these to your solution.\nRemember to tell the user what to enter.\nWhat’s the difference between .println() and print()?"
-  },
-  {
-    "objectID": "slides-01-02.html#solution",
-    "href": "slides-01-02.html#solution",
-    "title": "Intro to Java",
-    "section": "Solution",
-    "text": "Solution\nimport java.util.Scanner;\n\n/**\n * File: OddsOrEvens.java\n * Author: Adriana Picoral\n * Description: Asks for user to input an integer, and prints out\n * whether that number is odd or even\n */\npublic class OddsOrEvens {\n    \n    /**\n     * Description: Determines if an integer is odd\n     * @param number (integer)\n     * @return boolean (true if param is odd, false otherwise)\n     */\n    public static boolean isOdd(int number) {\n        return number % 2 == 1;\n    }\n    \n\n    public static void main(String[] args) {\n          Scanner userInput = new Scanner(System.in);\n          \n          // prints out message to user\n          System.out.println(\"Enter an integer: \");\n          \n          // get integer from keyboard entry\n          int number = userInput.nextInt();\n          userInput.close();\n\n          // calls function to determine if number is odd or even\n          if (isOdd(number)) {\n            System.out.println(number + \" is odd.\");\n          } else {\n            System.out.println(number + \" is even.\");\n          }\n\n    }\n\n}"
-  },
-  {
-    "objectID": "slides-01-02.html#practice-1",
-    "href": "slides-01-02.html#practice-1",
-    "title": "Intro to Java",
-    "section": "Practice",
-    "text": "Practice\nWrite an application that prompts the user to enter an integer representing number os seconds.\nYour application should print the equivalent hours, minutes, and seconds in this format: hours:minutes:seconds\nRun examples:\nEnter the number of seconds: 3661\n1:1:1\n\nEnter number of seconds: 8274\n2:17:54\n\nHINTS: There are 3600 seconds in one hour. Use modulus to calculate minutes and seconds left.\nadapted from Rick Mercer’s slides"
-  },
-  {
-    "objectID": "slides-01-02.html#solution-4",
-    "href": "slides-01-02.html#solution-4",
-    "title": "Intro to Java",
-    "section": "Solution",
-    "text": "Solution\nimport java.util.Scanner;\n\n/**\n * File: HoursMinutesSeconds.java\n * Author: Adriana Picoral\n * Description: Prompts the user to enter an integer representing seconds\n * and prints out time in h:m:s format\n */\npublic class HoursMinutesSeconds {\n    \n    /**\n     * Calculates number of full hours in many seconds\n     * @param seconds (integer)\n     * @return an integer representing number of hours\n     */\n    public static int getHours(int seconds) {\n        return seconds / 3600;\n    }\n    \n    /**\n     * Calculates number of full minutes left in many seconds\n     * not considering the number of full hours\n     * @param seconds (integer)\n     * @return an integer representing number of minutes\n     */\n    \n    public static int getMinutes(int seconds) {\n        return seconds  % 3600 / 60;\n    }\n    \n    /**\n     * Calculates seconds left that are not in full minutes\n     * @param seconds (integer)\n     * @return an integer representing seconds\n     */\n    public static int getSeconds(int seconds) {\n        return seconds % 60;\n    }\n\n    public static void main(String[] args) {\n        Scanner userInput = new Scanner(System.in);\n          \n        // prints out message to user\n        System.out.print(\"Enter number of seconds: \");\n      \n        // get integer from keyboard entry\n        int seconds = userInput.nextInt();\n        userInput.close();\n        \n        // build up the message to print\n        String message;\n        message = getHours(seconds) + \":\" + getMinutes(seconds);\n        message += \":\" + getSeconds(seconds);\n        System.out.println(message);\n\n    }\n\n}"
-  },
-  {
-    "objectID": "slides-01-02.html#expand",
-    "href": "slides-01-02.html#expand",
-    "title": "Intro to Java",
-    "section": "Expand",
-    "text": "Expand\nImprove your code so that it prints out HH:MM:SS format\nEnter number of seconds: 8274\n02:17:54\n\nEnter number of seconds: 233\n00:03:53"
-  },
-  {
-    "objectID": "slides-01-02.html#solution-5",
-    "href": "slides-01-02.html#solution-5",
-    "title": "Intro to Java",
-    "section": "Solution",
-    "text": "Solution\nimport java.util.Scanner;\n\n/**\n * File: HoursMinutesSeconds.java\n * Author: Adriana Picoral\n * Description: Prompts the user to enter an integer representing seconds\n * and prints out time in h:m:s format\n */\npublic class HoursMinutesSeconds {\n    \n    /**\n     * Calculates number of full hours in many seconds\n     * @param seconds (integer)\n     * @return a string representing number of hours\n     */\n    public static String getHours(int seconds) {\n        int hours = seconds / 3600;\n        String fullHour = \"\" + hours;\n        \n        if (hours &lt; 10) {\n            fullHour = \"0\" + hours;\n        }\n        \n        return fullHour;\n    }\n    \n    /**\n     * Calculates number of full minutes left in many seconds\n     * not considering the number of full hours\n     * @param seconds (integer)\n     * @return a string representing number of minutes\n     */\n    \n    public static String getMinutes(int seconds) {\n        int minutes = seconds  % 3600 / 60;\n        String fullMinutes = \"\" + minutes;\n        \n        if (minutes &lt; 10) {\n            fullMinutes = \"0\" + minutes;\n        }\n        \n        return fullMinutes;\n    }\n    \n    /**\n     * Calculates seconds left that are not in full minutes\n     * @param seconds (integer)\n     * @return an integer representing seconds\n     */\n    public static String getSeconds(int seconds) {\n        int secondsLeft = seconds % 60;\n        String fullSeconds = \"\" + secondsLeft;\n        \n        if (secondsLeft &lt; 10) fullSeconds = \"0\" + secondsLeft; \n        \n        return fullSeconds;\n    }\n\n    public static void main(String[] args) {\n        Scanner userInput = new Scanner(System.in);\n          \n        // prints out message to user\n        System.out.print(\"Enter number of seconds: \");\n      \n        // get integer from keyboard entry\n        int seconds = userInput.nextInt();\n        userInput.close();\n        \n        // build up the message to print\n        String message;\n        message = getHours(seconds) + \":\" + getMinutes(seconds);\n        message += \":\" + getSeconds(seconds);\n        System.out.println(message);\n\n    }\n\n}"
-  },
-  {
-    "objectID": "modules.html#readings",
-    "href": "modules.html#readings",
-    "title": "Modules",
-    "section": "",
-    "text": "Required:\n\nJava, Java, Java 1.5 Java Language Elements\nJava, Java, Java 2.4 Class Definition\n\nOptional: Java, Java, Java 1.7 System and PrintStream"
-  },
-  {
-    "objectID": "slides-01-01.html",
-    "href": "slides-01-01.html",
-    "title": "Course Introduction",
-    "section": "",
-    "text": "Press the e key"
-  },
-  {
-    "objectID": "slides-01-01.html#tips-on-slides",
-    "href": "slides-01-01.html#tips-on-slides",
-    "title": "Course Introduction",
-    "section": "Tips on slides",
-    "text": "Tips on slides\nPress the e key"
-  },
-  {
-    "objectID": "modules.html#readings-1",
-    "href": "modules.html#readings-1",
-    "title": "Modules",
-    "section": "Readings",
-    "text": "Readings"
-  },
-  {
-    "objectID": "modules.html#slides-1",
-    "href": "modules.html#slides-1",
-    "title": "Modules",
-    "section": "Slides",
-    "text": "Slides"
-  },
-  {
-    "objectID": "modules.html#assignments-1",
-    "href": "modules.html#assignments-1",
-    "title": "Modules",
-    "section": "Assignments",
-    "text": "Assignments"
-  },
-  {
-    "objectID": "modules.html#readings-2",
-    "href": "modules.html#readings-2",
-    "title": "Modules",
-    "section": "Readings",
-    "text": "Readings"
-  },
-  {
-    "objectID": "modules.html#slides-2",
-    "href": "modules.html#slides-2",
-    "title": "Modules",
-    "section": "Slides",
-    "text": "Slides"
-  },
-  {
-    "objectID": "modules.html#assignments-2",
-    "href": "modules.html#assignments-2",
-    "title": "Modules",
-    "section": "Assignments",
-    "text": "Assignments"
-  },
-  {
-    "objectID": "modules.html#readings-3",
-    "href": "modules.html#readings-3",
-    "title": "Modules",
-    "section": "Readings",
-    "text": "Readings"
-  },
-  {
-    "objectID": "modules.html#slides-3",
-    "href": "modules.html#slides-3",
-    "title": "Modules",
-    "section": "Slides",
-    "text": "Slides"
-  },
-  {
-    "objectID": "modules.html#assignments-3",
-    "href": "modules.html#assignments-3",
-    "title": "Modules",
-    "section": "Assignments",
-    "text": "Assignments"
   }
 ]

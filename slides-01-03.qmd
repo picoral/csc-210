@@ -1,0 +1,20 @@
+---
+title: "Java Objects"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+
+## Classes
+
+What is a class?
+
+## Classes
+
+* Collection of methods and attributes (information/values)
+* Template, blueprint of cookie cutter to construct many objects
+
+**Modularity**: Classes allow us to split the problem to be solved into distinct tasks
+
