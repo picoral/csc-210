@@ -2,7 +2,19 @@
 title: "Modules"
 ---
 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(readxl)
+schedule <- read_excel("schedule.xlsx")
+```
+
+
 # Week 01
+
+`r schedule %>% filter(week == 1) %>% pull(dates)`
 
 ## Readings
 
@@ -14,3 +26,35 @@ Optional: [Java, Java, Java 1.7 System and PrintStream](https://runestone.academ
 
 * [Course Introduction](slides-01-01.html)
 * [Intro to Java](slides-01-02.html)
+
+## Assignments
+
+# Week 02
+
+`r schedule %>% filter(week == 2) %>% pull(dates)`
+
+## Readings
+
+## Slides
+
+## Assignments
+
+# Week 03
+
+`r schedule %>% filter(week == 3) %>% pull(dates)`
+
+## Readings
+
+## Slides
+
+## Assignments
+
+# Week 04
+
+`r schedule %>% filter(week == 4) %>% pull(dates)`
+
+## Readings
+
+## Slides
+
+## Assignments
