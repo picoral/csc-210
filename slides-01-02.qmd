@@ -1,6 +1,9 @@
 ---
 title: "Intro to Java"
-format: revealjs
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
 ---
 
 ## Before we start
@@ -190,4 +193,248 @@ public class OddsOrEvens {
 
 }
 ```
+
+## Scanner
+
+Let's import the Scanner package from Java utils and use it to get user input.
+
+```{java}
+import java.util.Scanner;
+```
+
+Here's the call:
+
+```{java}
+int number = userInput.nextInt();
+```
+
+* Add these to your solution. 
+* Remember to tell the user what to enter.
+* What's the difference between `.println()` and `print()`?
+
+## Solution
+
+```{java}
+import java.util.Scanner;
+
+/**
+ * File: OddsOrEvens.java
+ * Author: Adriana Picoral
+ * Description: Asks for user to input an integer, and prints out
+ * whether that number is odd or even
+ */
+public class OddsOrEvens {
+	
+	/**
+	 * Description: Determines if an integer is odd
+	 * @param number (integer)
+	 * @return boolean (true if param is odd, false otherwise)
+	 */
+	public static boolean isOdd(int number) {
+		return number % 2 == 1;
+	}
+	
+
+	public static void main(String[] args) {
+		  Scanner userInput = new Scanner(System.in);
+		  
+		  // prints out message to user
+		  System.out.println("Enter an integer: ");
+		  
+		  // get integer from keyboard entry
+		  int number = userInput.nextInt();
+		  userInput.close();
+
+		  // calls function to determine if number is odd or even
+		  if (isOdd(number)) {
+		    System.out.println(number + " is odd.");
+		  } else {
+		    System.out.println(number + " is even.");
+		  }
+
+	}
+
+}
+```
+
+## Practice
+
+Write an application that prompts the user to enter an integer representing number os seconds.
+
+Your application should print the equivalent hours, minutes, and seconds in this format: `hours:minutes:seconds`
+
+Run examples:
+
+<pre>
+Enter the number of seconds: 3661
+1:1:1
+
+Enter number of seconds: 8274
+2:17:54
+</pre>
+
+
+HINTS: There are 3600 seconds in one hour. Use modulus to calculate minutes and seconds left.
+
+<small>*adapted from Rick Mercer's slides*</small>
+
+## Solution
+
+```{java}
+import java.util.Scanner;
+
+/**
+ * File: HoursMinutesSeconds.java
+ * Author: Adriana Picoral
+ * Description: Prompts the user to enter an integer representing seconds
+ * and prints out time in h:m:s format
+ */
+public class HoursMinutesSeconds {
+	
+	/**
+	 * Calculates number of full hours in many seconds
+	 * @param seconds (integer)
+	 * @return an integer representing number of hours
+	 */
+	public static int getHours(int seconds) {
+		return seconds / 3600;
+	}
+	
+	/**
+	 * Calculates number of full minutes left in many seconds
+	 * not considering the number of full hours
+	 * @param seconds (integer)
+	 * @return an integer representing number of minutes
+	 */
+	
+	public static int getMinutes(int seconds) {
+		return seconds  % 3600 / 60;
+	}
+	
+	/**
+	 * Calculates seconds left that are not in full minutes
+	 * @param seconds (integer)
+	 * @return an integer representing seconds
+	 */
+	public static int getSeconds(int seconds) {
+		return seconds % 60;
+	}
+
+	public static void main(String[] args) {
+		Scanner userInput = new Scanner(System.in);
+		  
+		// prints out message to user
+	    System.out.print("Enter number of seconds: ");
+	  
+		// get integer from keyboard entry
+		int seconds = userInput.nextInt();
+		userInput.close();
+		
+		// build up the message to print
+		String message;
+		message = getHours(seconds) + ":" + getMinutes(seconds);
+		message += ":" + getSeconds(seconds);
+		System.out.println(message);
+
+	}
+
+}
+```
+
+## Expand 
+
+Improve your code so that it prints out HH:MM:SS format
+
+<pre>
+Enter number of seconds: 8274
+02:17:54
+
+Enter number of seconds: 233
+00:03:53
+</pre>
+
+## Solution
+
+```{java}
+import java.util.Scanner;
+
+/**
+ * File: HoursMinutesSeconds.java
+ * Author: Adriana Picoral
+ * Description: Prompts the user to enter an integer representing seconds
+ * and prints out time in h:m:s format
+ */
+public class HoursMinutesSeconds {
+	
+	/**
+	 * Calculates number of full hours in many seconds
+	 * @param seconds (integer)
+	 * @return a string representing number of hours
+	 */
+	public static String getHours(int seconds) {
+		int hours = seconds / 3600;
+		String fullHour = "" + hours;
+		
+		if (hours < 10) {
+			fullHour = "0" + hours;
+		}
+		
+		return fullHour;
+	}
+	
+	/**
+	 * Calculates number of full minutes left in many seconds
+	 * not considering the number of full hours
+	 * @param seconds (integer)
+	 * @return a string representing number of minutes
+	 */
+	
+	public static String getMinutes(int seconds) {
+		int minutes = seconds  % 3600 / 60;
+		String fullMinutes = "" + minutes;
+		
+		if (minutes < 10) {
+			fullMinutes = "0" + minutes;
+		}
+		
+		return fullMinutes;
+	}
+	
+	/**
+	 * Calculates seconds left that are not in full minutes
+	 * @param seconds (integer)
+	 * @return an integer representing seconds
+	 */
+	public static String getSeconds(int seconds) {
+		int secondsLeft = seconds % 60;
+		String fullSeconds = "" + secondsLeft;
+		
+		if (secondsLeft < 10) fullSeconds = "0" + secondsLeft; 
+		
+		return fullSeconds;
+	}
+
+	public static void main(String[] args) {
+		Scanner userInput = new Scanner(System.in);
+		  
+		// prints out message to user
+	    System.out.print("Enter number of seconds: ");
+	  
+		// get integer from keyboard entry
+		int seconds = userInput.nextInt();
+		userInput.close();
+		
+		// build up the message to print
+		String message;
+		message = getHours(seconds) + ":" + getMinutes(seconds);
+		message += ":" + getSeconds(seconds);
+		System.out.println(message);
+
+	}
+
+}
+```
+
+
+
 

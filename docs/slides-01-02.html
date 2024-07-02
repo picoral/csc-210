@@ -409,7 +409,7 @@
 <ul>
 <li>Python does dynamic typing</li>
 </ul>
-<div id="a5c6a9ab" class="cell" data-execution_count="1">
+<div id="b7dcb18c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>word <span class="op">=</span> <span class="st">"car"</span></span>
 <span id="cb2-2"><a></a>number <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb2-3"><a></a>new_list <span class="op">=</span> []</span>
@@ -460,7 +460,8 @@
 <span id="cb5-5"><a></a>boolean ready = hours &gt;= 8;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Question:</p>
 <ul>
-<li>Why are certain types all lower-cased, while others are title cased?</li>
+<li><p>Can you change the type of a variable in Java?</p></li>
+<li><p>Why are certain types all lower-cased, while others are title cased?</p></li>
 </ul>
 </section>
 <section id="types" class="slide level2">
@@ -556,6 +557,226 @@
 <span id="cb9-17"><a></a>    }</span>
 <span id="cb9-18"><a></a></span>
 <span id="cb9-19"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="scanner" class="slide level2">
+<h2>Scanner</h2>
+<p>Let’s import the Scanner package from Java utils and use it to get user input.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a></a>import java.util.Scanner;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here’s the call:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a></a>int number = userInput.nextInt();</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Add these to your solution.</li>
+<li>Remember to tell the user what to enter.</li>
+<li>What’s the difference between <code>.println()</code> and <code>print()</code>?</li>
+</ul>
+</section>
+<section id="solution" class="slide level2">
+<h2>Solution</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>import java.util.Scanner;</span>
+<span id="cb12-2"><a></a></span>
+<span id="cb12-3"><a></a>/**</span>
+<span id="cb12-4"><a></a> * File: OddsOrEvens.java</span>
+<span id="cb12-5"><a></a> * Author: Adriana Picoral</span>
+<span id="cb12-6"><a></a> * Description: Asks for user to input an integer, and prints out</span>
+<span id="cb12-7"><a></a> * whether that number is odd or even</span>
+<span id="cb12-8"><a></a> */</span>
+<span id="cb12-9"><a></a>public class OddsOrEvens {</span>
+<span id="cb12-10"><a></a>    </span>
+<span id="cb12-11"><a></a>    /**</span>
+<span id="cb12-12"><a></a>     * Description: Determines if an integer is odd</span>
+<span id="cb12-13"><a></a>     * @param number (integer)</span>
+<span id="cb12-14"><a></a>     * @return boolean (true if param is odd, false otherwise)</span>
+<span id="cb12-15"><a></a>     */</span>
+<span id="cb12-16"><a></a>    public static boolean isOdd(int number) {</span>
+<span id="cb12-17"><a></a>        return number % 2 == 1;</span>
+<span id="cb12-18"><a></a>    }</span>
+<span id="cb12-19"><a></a>    </span>
+<span id="cb12-20"><a></a></span>
+<span id="cb12-21"><a></a>    public static void main(String[] args) {</span>
+<span id="cb12-22"><a></a>          Scanner userInput = new Scanner(System.in);</span>
+<span id="cb12-23"><a></a>          </span>
+<span id="cb12-24"><a></a>          // prints out message to user</span>
+<span id="cb12-25"><a></a>          System.out.println("Enter an integer: ");</span>
+<span id="cb12-26"><a></a>          </span>
+<span id="cb12-27"><a></a>          // get integer from keyboard entry</span>
+<span id="cb12-28"><a></a>          int number = userInput.nextInt();</span>
+<span id="cb12-29"><a></a>          userInput.close();</span>
+<span id="cb12-30"><a></a></span>
+<span id="cb12-31"><a></a>          // calls function to determine if number is odd or even</span>
+<span id="cb12-32"><a></a>          if (isOdd(number)) {</span>
+<span id="cb12-33"><a></a>            System.out.println(number + " is odd.");</span>
+<span id="cb12-34"><a></a>          } else {</span>
+<span id="cb12-35"><a></a>            System.out.println(number + " is even.");</span>
+<span id="cb12-36"><a></a>          }</span>
+<span id="cb12-37"><a></a></span>
+<span id="cb12-38"><a></a>    }</span>
+<span id="cb12-39"><a></a></span>
+<span id="cb12-40"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="practice-1" class="slide level2">
+<h2>Practice</h2>
+<p>Write an application that prompts the user to enter an integer representing number os seconds.</p>
+<p>Your application should print the equivalent hours, minutes, and seconds in this format: <code>hours:minutes:seconds</code></p>
+<p>Run examples:</p>
+<pre>Enter the number of seconds: 3661
+1:1:1
+
+Enter number of seconds: 8274
+2:17:54
+</pre>
+<p>HINTS: There are 3600 seconds in one hour. Use modulus to calculate minutes and seconds left.</p>
+<p><small><em>adapted from Rick Mercer’s slides</em></small></p>
+</section>
+<section id="solution-4" class="slide level2">
+<h2>Solution</h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a></a>import java.util.Scanner;</span>
+<span id="cb13-2"><a></a></span>
+<span id="cb13-3"><a></a>/**</span>
+<span id="cb13-4"><a></a> * File: HoursMinutesSeconds.java</span>
+<span id="cb13-5"><a></a> * Author: Adriana Picoral</span>
+<span id="cb13-6"><a></a> * Description: Prompts the user to enter an integer representing seconds</span>
+<span id="cb13-7"><a></a> * and prints out time in h:m:s format</span>
+<span id="cb13-8"><a></a> */</span>
+<span id="cb13-9"><a></a>public class HoursMinutesSeconds {</span>
+<span id="cb13-10"><a></a>    </span>
+<span id="cb13-11"><a></a>    /**</span>
+<span id="cb13-12"><a></a>     * Calculates number of full hours in many seconds</span>
+<span id="cb13-13"><a></a>     * @param seconds (integer)</span>
+<span id="cb13-14"><a></a>     * @return an integer representing number of hours</span>
+<span id="cb13-15"><a></a>     */</span>
+<span id="cb13-16"><a></a>    public static int getHours(int seconds) {</span>
+<span id="cb13-17"><a></a>        return seconds / 3600;</span>
+<span id="cb13-18"><a></a>    }</span>
+<span id="cb13-19"><a></a>    </span>
+<span id="cb13-20"><a></a>    /**</span>
+<span id="cb13-21"><a></a>     * Calculates number of full minutes left in many seconds</span>
+<span id="cb13-22"><a></a>     * not considering the number of full hours</span>
+<span id="cb13-23"><a></a>     * @param seconds (integer)</span>
+<span id="cb13-24"><a></a>     * @return an integer representing number of minutes</span>
+<span id="cb13-25"><a></a>     */</span>
+<span id="cb13-26"><a></a>    </span>
+<span id="cb13-27"><a></a>    public static int getMinutes(int seconds) {</span>
+<span id="cb13-28"><a></a>        return seconds  % 3600 / 60;</span>
+<span id="cb13-29"><a></a>    }</span>
+<span id="cb13-30"><a></a>    </span>
+<span id="cb13-31"><a></a>    /**</span>
+<span id="cb13-32"><a></a>     * Calculates seconds left that are not in full minutes</span>
+<span id="cb13-33"><a></a>     * @param seconds (integer)</span>
+<span id="cb13-34"><a></a>     * @return an integer representing seconds</span>
+<span id="cb13-35"><a></a>     */</span>
+<span id="cb13-36"><a></a>    public static int getSeconds(int seconds) {</span>
+<span id="cb13-37"><a></a>        return seconds % 60;</span>
+<span id="cb13-38"><a></a>    }</span>
+<span id="cb13-39"><a></a></span>
+<span id="cb13-40"><a></a>    public static void main(String[] args) {</span>
+<span id="cb13-41"><a></a>        Scanner userInput = new Scanner(System.in);</span>
+<span id="cb13-42"><a></a>          </span>
+<span id="cb13-43"><a></a>        // prints out message to user</span>
+<span id="cb13-44"><a></a>        System.out.print("Enter number of seconds: ");</span>
+<span id="cb13-45"><a></a>      </span>
+<span id="cb13-46"><a></a>        // get integer from keyboard entry</span>
+<span id="cb13-47"><a></a>        int seconds = userInput.nextInt();</span>
+<span id="cb13-48"><a></a>        userInput.close();</span>
+<span id="cb13-49"><a></a>        </span>
+<span id="cb13-50"><a></a>        // build up the message to print</span>
+<span id="cb13-51"><a></a>        String message;</span>
+<span id="cb13-52"><a></a>        message = getHours(seconds) + ":" + getMinutes(seconds);</span>
+<span id="cb13-53"><a></a>        message += ":" + getSeconds(seconds);</span>
+<span id="cb13-54"><a></a>        System.out.println(message);</span>
+<span id="cb13-55"><a></a></span>
+<span id="cb13-56"><a></a>    }</span>
+<span id="cb13-57"><a></a></span>
+<span id="cb13-58"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="expand" class="slide level2">
+<h2>Expand</h2>
+<p>Improve your code so that it prints out HH:MM:SS format</p>
+<pre>Enter number of seconds: 8274
+02:17:54
+
+Enter number of seconds: 233
+00:03:53
+</pre>
+</section>
+<section id="solution-5" class="slide level2">
+<h2>Solution</h2>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a></a>import java.util.Scanner;</span>
+<span id="cb14-2"><a></a></span>
+<span id="cb14-3"><a></a>/**</span>
+<span id="cb14-4"><a></a> * File: HoursMinutesSeconds.java</span>
+<span id="cb14-5"><a></a> * Author: Adriana Picoral</span>
+<span id="cb14-6"><a></a> * Description: Prompts the user to enter an integer representing seconds</span>
+<span id="cb14-7"><a></a> * and prints out time in h:m:s format</span>
+<span id="cb14-8"><a></a> */</span>
+<span id="cb14-9"><a></a>public class HoursMinutesSeconds {</span>
+<span id="cb14-10"><a></a>    </span>
+<span id="cb14-11"><a></a>    /**</span>
+<span id="cb14-12"><a></a>     * Calculates number of full hours in many seconds</span>
+<span id="cb14-13"><a></a>     * @param seconds (integer)</span>
+<span id="cb14-14"><a></a>     * @return a string representing number of hours</span>
+<span id="cb14-15"><a></a>     */</span>
+<span id="cb14-16"><a></a>    public static String getHours(int seconds) {</span>
+<span id="cb14-17"><a></a>        int hours = seconds / 3600;</span>
+<span id="cb14-18"><a></a>        String fullHour = "" + hours;</span>
+<span id="cb14-19"><a></a>        </span>
+<span id="cb14-20"><a></a>        if (hours &lt; 10) {</span>
+<span id="cb14-21"><a></a>            fullHour = "0" + hours;</span>
+<span id="cb14-22"><a></a>        }</span>
+<span id="cb14-23"><a></a>        </span>
+<span id="cb14-24"><a></a>        return fullHour;</span>
+<span id="cb14-25"><a></a>    }</span>
+<span id="cb14-26"><a></a>    </span>
+<span id="cb14-27"><a></a>    /**</span>
+<span id="cb14-28"><a></a>     * Calculates number of full minutes left in many seconds</span>
+<span id="cb14-29"><a></a>     * not considering the number of full hours</span>
+<span id="cb14-30"><a></a>     * @param seconds (integer)</span>
+<span id="cb14-31"><a></a>     * @return a string representing number of minutes</span>
+<span id="cb14-32"><a></a>     */</span>
+<span id="cb14-33"><a></a>    </span>
+<span id="cb14-34"><a></a>    public static String getMinutes(int seconds) {</span>
+<span id="cb14-35"><a></a>        int minutes = seconds  % 3600 / 60;</span>
+<span id="cb14-36"><a></a>        String fullMinutes = "" + minutes;</span>
+<span id="cb14-37"><a></a>        </span>
+<span id="cb14-38"><a></a>        if (minutes &lt; 10) {</span>
+<span id="cb14-39"><a></a>            fullMinutes = "0" + minutes;</span>
+<span id="cb14-40"><a></a>        }</span>
+<span id="cb14-41"><a></a>        </span>
+<span id="cb14-42"><a></a>        return fullMinutes;</span>
+<span id="cb14-43"><a></a>    }</span>
+<span id="cb14-44"><a></a>    </span>
+<span id="cb14-45"><a></a>    /**</span>
+<span id="cb14-46"><a></a>     * Calculates seconds left that are not in full minutes</span>
+<span id="cb14-47"><a></a>     * @param seconds (integer)</span>
+<span id="cb14-48"><a></a>     * @return an integer representing seconds</span>
+<span id="cb14-49"><a></a>     */</span>
+<span id="cb14-50"><a></a>    public static String getSeconds(int seconds) {</span>
+<span id="cb14-51"><a></a>        int secondsLeft = seconds % 60;</span>
+<span id="cb14-52"><a></a>        String fullSeconds = "" + secondsLeft;</span>
+<span id="cb14-53"><a></a>        </span>
+<span id="cb14-54"><a></a>        if (secondsLeft &lt; 10) fullSeconds = "0" + secondsLeft; </span>
+<span id="cb14-55"><a></a>        </span>
+<span id="cb14-56"><a></a>        return fullSeconds;</span>
+<span id="cb14-57"><a></a>    }</span>
+<span id="cb14-58"><a></a></span>
+<span id="cb14-59"><a></a>    public static void main(String[] args) {</span>
+<span id="cb14-60"><a></a>        Scanner userInput = new Scanner(System.in);</span>
+<span id="cb14-61"><a></a>          </span>
+<span id="cb14-62"><a></a>        // prints out message to user</span>
+<span id="cb14-63"><a></a>        System.out.print("Enter number of seconds: ");</span>
+<span id="cb14-64"><a></a>      </span>
+<span id="cb14-65"><a></a>        // get integer from keyboard entry</span>
+<span id="cb14-66"><a></a>        int seconds = userInput.nextInt();</span>
+<span id="cb14-67"><a></a>        userInput.close();</span>
+<span id="cb14-68"><a></a>        </span>
+<span id="cb14-69"><a></a>        // build up the message to print</span>
+<span id="cb14-70"><a></a>        String message;</span>
+<span id="cb14-71"><a></a>        message = getHours(seconds) + ":" + getMinutes(seconds);</span>
+<span id="cb14-72"><a></a>        message += ":" + getSeconds(seconds);</span>
+<span id="cb14-73"><a></a>        System.out.println(message);</span>
+<span id="cb14-74"><a></a></span>
+<span id="cb14-75"><a></a>    }</span>
+<span id="cb14-76"><a></a></span>
+<span id="cb14-77"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -614,7 +835,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',

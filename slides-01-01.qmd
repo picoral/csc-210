@@ -3,3 +3,6 @@ title: "Course Introduction"
 format: revealjs
 ---
 
+## Tips on slides
+
+Press the `e` key

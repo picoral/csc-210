@@ -543,7 +543,7 @@
     "href": "slides-01-02.html#variable-assignment",
     "title": "Intro to Java",
     "section": "Variable assignment",
-    "text": "Variable assignment\n\nTo declare and give initial values to variables use =, which means becomes or take on the value of (assignment)\n\nint credits = 4;\ndouble grade = 3.67;\nString name = \"Chris\";\nint hours = 10;\nboolean ready = hours &gt;= 8;\nQuestion:\n\nWhy are certain types all lower-cased, while others are title cased?"
+    "text": "Variable assignment\n\nTo declare and give initial values to variables use =, which means becomes or take on the value of (assignment)\n\nint credits = 4;\ndouble grade = 3.67;\nString name = \"Chris\";\nint hours = 10;\nboolean ready = hours &gt;= 8;\nQuestion:\n\nCan you change the type of a variable in Java?\nWhy are certain types all lower-cased, while others are title cased?"
   },
   {
     "objectID": "slides-01-02.html#types",
@@ -971,5 +971,47 @@
     "title": "Intro to Java",
     "section": "Solution 3",
     "text": "Solution 3\npublic class OddsOrEvens {\n    \n    public static boolean isOdd(int number) {\n        // if integer is not divisible by 2, it's odd\n          return number % 2 == 1;\n    }\n    \n    public static void main(String[] args) {\n          int number;\n          number = 6;\n          if (isOdd(number)) {\n            System.out.println(number + \" is odd.\");\n          } else {\n            System.out.println(number + \" is even.\");\n          }\n\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-01-02.html#scanner",
+    "href": "slides-01-02.html#scanner",
+    "title": "Intro to Java",
+    "section": "Scanner",
+    "text": "Scanner\nLet’s import the Scanner package from Java utils and use it to get user input.\nimport java.util.Scanner;\nHere’s the call:\nint number = userInput.nextInt();\n\nAdd these to your solution.\nRemember to tell the user what to enter.\nWhat’s the difference between .println() and print()?"
+  },
+  {
+    "objectID": "slides-01-02.html#solution",
+    "href": "slides-01-02.html#solution",
+    "title": "Intro to Java",
+    "section": "Solution",
+    "text": "Solution\nimport java.util.Scanner;\n\n/**\n * File: OddsOrEvens.java\n * Author: Adriana Picoral\n * Description: Asks for user to input an integer, and prints out\n * whether that number is odd or even\n */\npublic class OddsOrEvens {\n    \n    /**\n     * Description: Determines if an integer is odd\n     * @param number (integer)\n     * @return boolean (true if param is odd, false otherwise)\n     */\n    public static boolean isOdd(int number) {\n        return number % 2 == 1;\n    }\n    \n\n    public static void main(String[] args) {\n          Scanner userInput = new Scanner(System.in);\n          \n          // prints out message to user\n          System.out.println(\"Enter an integer: \");\n          \n          // get integer from keyboard entry\n          int number = userInput.nextInt();\n          userInput.close();\n\n          // calls function to determine if number is odd or even\n          if (isOdd(number)) {\n            System.out.println(number + \" is odd.\");\n          } else {\n            System.out.println(number + \" is even.\");\n          }\n\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-01-02.html#practice-1",
+    "href": "slides-01-02.html#practice-1",
+    "title": "Intro to Java",
+    "section": "Practice",
+    "text": "Practice\nWrite an application that prompts the user to enter an integer representing number os seconds.\nYour application should print the equivalent hours, minutes, and seconds in this format: hours:minutes:seconds\nRun examples:\nEnter the number of seconds: 3661\n1:1:1\n\nEnter number of seconds: 8274\n2:17:54\n\nHINTS: There are 3600 seconds in one hour. Use modulus to calculate minutes and seconds left.\nadapted from Rick Mercer’s slides"
+  },
+  {
+    "objectID": "slides-01-02.html#solution-4",
+    "href": "slides-01-02.html#solution-4",
+    "title": "Intro to Java",
+    "section": "Solution",
+    "text": "Solution\nimport java.util.Scanner;\n\n/**\n * File: HoursMinutesSeconds.java\n * Author: Adriana Picoral\n * Description: Prompts the user to enter an integer representing seconds\n * and prints out time in h:m:s format\n */\npublic class HoursMinutesSeconds {\n    \n    /**\n     * Calculates number of full hours in many seconds\n     * @param seconds (integer)\n     * @return an integer representing number of hours\n     */\n    public static int getHours(int seconds) {\n        return seconds / 3600;\n    }\n    \n    /**\n     * Calculates number of full minutes left in many seconds\n     * not considering the number of full hours\n     * @param seconds (integer)\n     * @return an integer representing number of minutes\n     */\n    \n    public static int getMinutes(int seconds) {\n        return seconds  % 3600 / 60;\n    }\n    \n    /**\n     * Calculates seconds left that are not in full minutes\n     * @param seconds (integer)\n     * @return an integer representing seconds\n     */\n    public static int getSeconds(int seconds) {\n        return seconds % 60;\n    }\n\n    public static void main(String[] args) {\n        Scanner userInput = new Scanner(System.in);\n          \n        // prints out message to user\n        System.out.print(\"Enter number of seconds: \");\n      \n        // get integer from keyboard entry\n        int seconds = userInput.nextInt();\n        userInput.close();\n        \n        // build up the message to print\n        String message;\n        message = getHours(seconds) + \":\" + getMinutes(seconds);\n        message += \":\" + getSeconds(seconds);\n        System.out.println(message);\n\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-01-02.html#expand",
+    "href": "slides-01-02.html#expand",
+    "title": "Intro to Java",
+    "section": "Expand",
+    "text": "Expand\nImprove your code so that it prints out HH:MM:SS format\nEnter number of seconds: 8274\n02:17:54\n\nEnter number of seconds: 233\n00:03:53"
+  },
+  {
+    "objectID": "slides-01-02.html#solution-5",
+    "href": "slides-01-02.html#solution-5",
+    "title": "Intro to Java",
+    "section": "Solution",
+    "text": "Solution\nimport java.util.Scanner;\n\n/**\n * File: HoursMinutesSeconds.java\n * Author: Adriana Picoral\n * Description: Prompts the user to enter an integer representing seconds\n * and prints out time in h:m:s format\n */\npublic class HoursMinutesSeconds {\n    \n    /**\n     * Calculates number of full hours in many seconds\n     * @param seconds (integer)\n     * @return a string representing number of hours\n     */\n    public static String getHours(int seconds) {\n        int hours = seconds / 3600;\n        String fullHour = \"\" + hours;\n        \n        if (hours &lt; 10) {\n            fullHour = \"0\" + hours;\n        }\n        \n        return fullHour;\n    }\n    \n    /**\n     * Calculates number of full minutes left in many seconds\n     * not considering the number of full hours\n     * @param seconds (integer)\n     * @return a string representing number of minutes\n     */\n    \n    public static String getMinutes(int seconds) {\n        int minutes = seconds  % 3600 / 60;\n        String fullMinutes = \"\" + minutes;\n        \n        if (minutes &lt; 10) {\n            fullMinutes = \"0\" + minutes;\n        }\n        \n        return fullMinutes;\n    }\n    \n    /**\n     * Calculates seconds left that are not in full minutes\n     * @param seconds (integer)\n     * @return an integer representing seconds\n     */\n    public static String getSeconds(int seconds) {\n        int secondsLeft = seconds % 60;\n        String fullSeconds = \"\" + secondsLeft;\n        \n        if (secondsLeft &lt; 10) fullSeconds = \"0\" + secondsLeft; \n        \n        return fullSeconds;\n    }\n\n    public static void main(String[] args) {\n        Scanner userInput = new Scanner(System.in);\n          \n        // prints out message to user\n        System.out.print(\"Enter number of seconds: \");\n      \n        // get integer from keyboard entry\n        int seconds = userInput.nextInt();\n        userInput.close();\n        \n        // build up the message to print\n        String message;\n        message = getHours(seconds) + \":\" + getMinutes(seconds);\n        message += \":\" + getSeconds(seconds);\n        System.out.println(message);\n\n    }\n\n}"
   }
 ]
