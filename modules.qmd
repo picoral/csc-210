@@ -4,9 +4,11 @@ title: "Modules"
 
 # Week 01
 
-## Reading
+## Readings
 
-[Java, Java, Java 1.5 Java Language Elements](https://runestone.academy/ns/books/published/javajavajava/java-language-elements.html)
+Required: [Java, Java, Java 1.5 Java Language Elements](https://runestone.academy/ns/books/published/javajavajava/java-language-elements.html)
+
+Optional: [Java, Java, Java 1.7 System and PrintStream](https://runestone.academy/ns/books/published/javajavajava/ch1-system-print.html)
 
 ## Slides
 

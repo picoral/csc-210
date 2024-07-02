@@ -67,7 +67,7 @@
     "href": "modules.html",
     "title": "Modules",
     "section": "",
-    "text": "Java, Java, Java 1.5 Java Language Elements\n\n\n\n\nCourse Introduction\nIntro to Java"
+    "text": "Required: Java, Java, Java 1.5 Java Language Elements\nOptional: Java, Java, Java 1.7 System and PrintStream\n\n\n\n\nCourse Introduction\nIntro to Java"
   },
   {
     "objectID": "modules.html#reading",
@@ -1013,5 +1013,26 @@
     "title": "Intro to Java",
     "section": "Solution",
     "text": "Solution\nimport java.util.Scanner;\n\n/**\n * File: HoursMinutesSeconds.java\n * Author: Adriana Picoral\n * Description: Prompts the user to enter an integer representing seconds\n * and prints out time in h:m:s format\n */\npublic class HoursMinutesSeconds {\n    \n    /**\n     * Calculates number of full hours in many seconds\n     * @param seconds (integer)\n     * @return a string representing number of hours\n     */\n    public static String getHours(int seconds) {\n        int hours = seconds / 3600;\n        String fullHour = \"\" + hours;\n        \n        if (hours &lt; 10) {\n            fullHour = \"0\" + hours;\n        }\n        \n        return fullHour;\n    }\n    \n    /**\n     * Calculates number of full minutes left in many seconds\n     * not considering the number of full hours\n     * @param seconds (integer)\n     * @return a string representing number of minutes\n     */\n    \n    public static String getMinutes(int seconds) {\n        int minutes = seconds  % 3600 / 60;\n        String fullMinutes = \"\" + minutes;\n        \n        if (minutes &lt; 10) {\n            fullMinutes = \"0\" + minutes;\n        }\n        \n        return fullMinutes;\n    }\n    \n    /**\n     * Calculates seconds left that are not in full minutes\n     * @param seconds (integer)\n     * @return an integer representing seconds\n     */\n    public static String getSeconds(int seconds) {\n        int secondsLeft = seconds % 60;\n        String fullSeconds = \"\" + secondsLeft;\n        \n        if (secondsLeft &lt; 10) fullSeconds = \"0\" + secondsLeft; \n        \n        return fullSeconds;\n    }\n\n    public static void main(String[] args) {\n        Scanner userInput = new Scanner(System.in);\n          \n        // prints out message to user\n        System.out.print(\"Enter number of seconds: \");\n      \n        // get integer from keyboard entry\n        int seconds = userInput.nextInt();\n        userInput.close();\n        \n        // build up the message to print\n        String message;\n        message = getHours(seconds) + \":\" + getMinutes(seconds);\n        message += \":\" + getSeconds(seconds);\n        System.out.println(message);\n\n    }\n\n}"
+  },
+  {
+    "objectID": "modules.html#readings",
+    "href": "modules.html#readings",
+    "title": "Modules",
+    "section": "",
+    "text": "Required: Java, Java, Java 1.5 Java Language Elements\nOptional: Java, Java, Java 1.7 System and PrintStream"
+  },
+  {
+    "objectID": "slides-01-01.html",
+    "href": "slides-01-01.html",
+    "title": "Course Introduction",
+    "section": "",
+    "text": "Press the e key"
+  },
+  {
+    "objectID": "slides-01-01.html#tips-on-slides",
+    "href": "slides-01-01.html#tips-on-slides",
+    "title": "Course Introduction",
+    "section": "Tips on slides",
+    "text": "Tips on slides\nPress the e key"
   }
 ]
