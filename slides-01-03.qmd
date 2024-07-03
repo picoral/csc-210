@@ -18,3 +18,146 @@ What is a class?
 
 **Modularity**: Classes allow us to split the problem to be solved into distinct tasks
 
+## Demonstration
+
+We will create a class called `UseBankAccount`
+
+Attributes: 1) ID (String), and 2) balance (double)
+
+Methods:
+
+* getID()
+* getBalance()
+* deposit(double amount)
+* withdraw(double amount)
+
+<small>*adapted from Rick Mercer's slides*</small>
+
+## Solution
+
+```{java}
+public class BankAccount {
+	
+	private String ID;
+	private double balance;
+	
+	public BankAccount(String initID, double initBalance) {
+		ID = initID;
+		balance = initBalance;
+	}
+	
+	public String getID() {
+		return ID;
+	}
+	
+	public double getBalance() {
+		return balance;
+	}
+	
+	public void deposit(double amount) {
+		balance = balance + amount;
+	}
+	
+	public void withdraw(double amount) {
+		balance = balance - amount;
+	}
+
+}
+```
+
+
+## Expand
+
+Create a console application (another class with a public main method) that does the following:
+
+1. create a new BankAccount for `"Casey"` (ID) with `100` for balance
+1. request user keyboard input for amount to deposit
+1. update account balance (deposit the amount)
+1. print out a message with new balance
+
+```{java}
+BankAccount anAcct = new BankAccount("Casey", 100); 
+```
+
+
+## Solution
+
+```{java}
+import java.util.Scanner;
+
+public class UseBankAccount {
+	
+	public static void main(String[] args) {
+		
+		BankAccount anAcct = new BankAccount("Casey", 100); 
+		
+		// Input
+		System.out.print("Enter amount to deposit: ");
+		Scanner keyboard = new Scanner(System.in);
+		double amount = keyboard.nextDouble();
+		keyboard.close();
+		
+		// Process
+		anAcct.deposit(amount);
+		
+		// Output
+		System.out.println("New balance: " + anAcct.getBalance());
+	}
+}
+```
+
+## Expand
+
+Modify your console application to ask whether the user wants to deposit or
+withdraw, and execute the desired operation
+
+## Solution
+
+```{java}
+import java.util.Scanner;
+
+public class UseBankAccount {
+	
+	public static void main(String[] args) {
+		
+		BankAccount anAcct = new BankAccount("Casey", 100); 
+		
+		// Input
+		Scanner keyboard = new Scanner(System.in);
+		
+		System.out.print("Deposit (D) or Withdraw (W)? "); 	
+		String operation = keyboard.next();
+		
+		
+		if (operation.equals("D")) {
+			System.out.print("Enter amount to deposit: ");
+			double amount = keyboard.nextDouble();
+			
+			// Process
+			anAcct.deposit(amount);
+			
+			// Output
+			System.out.println("New balance: " + anAcct.getBalance());
+		}
+		
+		if (operation.equals("W")) {
+			System.out.print("Enter amount to withdraw: ");
+			double amount = keyboard.nextDouble();
+			
+			// Process
+			anAcct.withdraw(amount);
+			
+			// Output
+			System.out.println("New balance: " + anAcct.getBalance());
+		}
+		
+
+		System.out.println("Thank you.");
+		
+		keyboard.close();
+		
+		
+	}
+}
+```
+

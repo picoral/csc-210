@@ -16,6 +16,8 @@ schedule <- read_excel("schedule.xlsx")
 
 `r schedule %>% filter(week == 1) %>% pull(dates)`
 
+Topic: `r schedule %>% filter(week == 1) %>% pull(topic)`
+
 ## Readings
 
 Required:
@@ -23,9 +25,10 @@ Required:
 * [Java, Java, Java 1.5 Java Language Elements](https://runestone.academy/ns/books/published/javajavajava/java-language-elements.html)
 * [Java, Java, Java 2.4 Class Definition](https://runestone.academy/ns/books/published/javajavajava/sec-classdef.html)
 
+Optional:
 
-
-Optional: [Java, Java, Java 1.7 System and PrintStream](https://runestone.academy/ns/books/published/javajavajava/ch1-system-print.html)
+* [Java, Java, Java 1.7 System and PrintStream](https://runestone.academy/ns/books/published/javajavajava/ch1-system-print.html)
+* [Java, Java, Java 2.2 Using `String` Objects](https://runestone.academy/ns/books/published/javajavajava/using-objects.html)
 
 ## Slides
 
@@ -39,7 +42,11 @@ Optional: [Java, Java, Java 1.7 System and PrintStream](https://runestone.academ
 
 `r schedule %>% filter(week == 2) %>% pull(dates)`
 
+Topic: `r schedule %>% filter(week == 2) %>% pull(topic)`
+
 ## Readings
+
+[Java, Java, Java 9.2 One-Dimensional Arrays](https://runestone.academy/ns/books/published/javajavajava/one-dimensional-arrays.html)
 
 ## Slides
 
@@ -48,6 +55,8 @@ Optional: [Java, Java, Java 1.7 System and PrintStream](https://runestone.academ
 # Week 03
 
 `r schedule %>% filter(week == 3) %>% pull(dates)`
+
+Topic: `r schedule %>% filter(week == 3) %>% pull(topic)`
 
 ## Readings
 
@@ -58,6 +67,32 @@ Optional: [Java, Java, Java 1.7 System and PrintStream](https://runestone.academ
 # Week 04
 
 `r schedule %>% filter(week == 4) %>% pull(dates)`
+
+Topic: `r schedule %>% filter(week == 4) %>% pull(topic)`
+
+## Readings
+
+## Slides
+
+## Assignments
+
+# Week 05
+
+`r schedule %>% filter(week == 5) %>% pull(dates)`
+
+Topic: `r schedule %>% filter(week == 5) %>% pull(topic)`
+
+## Readings
+
+## Slides
+
+## Assignments
+
+# Week 06
+
+`r schedule %>% filter(week == 6) %>% pull(dates)`
+
+Topic: `r schedule %>% filter(week == 6) %>% pull(topic)`
 
 ## Readings
 

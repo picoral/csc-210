@@ -67,14 +67,14 @@
     "href": "modules.html",
     "title": "Modules",
     "section": "",
-    "text": "Aug 26 - Aug 30\n\n\nRequired:\n\nJava, Java, Java 1.5 Java Language Elements\nJava, Java, Java 2.4 Class Definition\n\nOptional: Java, Java, Java 1.7 System and PrintStream\n\n\n\n\nCourse Introduction\nIntro to Java\nJava Objects"
+    "text": "Aug 26 - Aug 30\nTopic: Course learning objectives and Java as a second programming language\n\n\nRequired:\n\nJava, Java, Java 1.5 Java Language Elements\nJava, Java, Java 2.4 Class Definition\n\nOptional:\n\nJava, Java, Java 1.7 System and PrintStream\nJava, Java, Java 2.2 Using String Objects\n\n\n\n\n\nCourse Introduction\nIntro to Java\nJava Objects"
   },
   {
     "objectID": "modules.html#readings",
     "href": "modules.html#readings",
     "title": "Modules",
     "section": "",
-    "text": "Required:\n\nJava, Java, Java 1.5 Java Language Elements\nJava, Java, Java 2.4 Class Definition\n\nOptional: Java, Java, Java 1.7 System and PrintStream"
+    "text": "Required:\n\nJava, Java, Java 1.5 Java Language Elements\nJava, Java, Java 2.4 Class Definition\n\nOptional:\n\nJava, Java, Java 1.7 System and PrintStream\nJava, Java, Java 2.2 Using String Objects"
   },
   {
     "objectID": "modules.html#slides",
@@ -88,7 +88,7 @@
     "href": "modules.html#readings-1",
     "title": "Modules",
     "section": "Readings",
-    "text": "Readings"
+    "text": "Readings\nJava, Java, Java 9.2 One-Dimensional Arrays"
   },
   {
     "objectID": "modules.html#slides-1",
@@ -142,6 +142,48 @@
   {
     "objectID": "modules.html#assignments-3",
     "href": "modules.html#assignments-3",
+    "title": "Modules",
+    "section": "Assignments",
+    "text": "Assignments"
+  },
+  {
+    "objectID": "modules.html#readings-4",
+    "href": "modules.html#readings-4",
+    "title": "Modules",
+    "section": "Readings",
+    "text": "Readings"
+  },
+  {
+    "objectID": "modules.html#slides-4",
+    "href": "modules.html#slides-4",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides"
+  },
+  {
+    "objectID": "modules.html#assignments-4",
+    "href": "modules.html#assignments-4",
+    "title": "Modules",
+    "section": "Assignments",
+    "text": "Assignments"
+  },
+  {
+    "objectID": "modules.html#readings-5",
+    "href": "modules.html#readings-5",
+    "title": "Modules",
+    "section": "Readings",
+    "text": "Readings"
+  },
+  {
+    "objectID": "modules.html#slides-5",
+    "href": "modules.html#slides-5",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides"
+  },
+  {
+    "objectID": "modules.html#assignments-5",
+    "href": "modules.html#assignments-5",
     "title": "Modules",
     "section": "Assignments",
     "text": "Assignments"
@@ -336,6 +378,48 @@
     "text": "Classes\n\nCollection of methods and attributes (information/values)\nTemplate, blueprint of cookie cutter to construct many objects\n\nModularity: Classes allow us to split the problem to be solved into distinct tasks"
   },
   {
+    "objectID": "slides-01-03.html#demonstration",
+    "href": "slides-01-03.html#demonstration",
+    "title": "Java Objects",
+    "section": "Demonstration",
+    "text": "Demonstration\nWe will create a class called UseBankAccount\nAttributes: 1) ID (String), and 2) balance (double)\nMethods:\n\ngetID()\ngetBalance()\ndeposit(double amount)\nwithdraw(double amount)\n\nadapted from Rick Mercer’s slides"
+  },
+  {
+    "objectID": "slides-01-03.html#solution",
+    "href": "slides-01-03.html#solution",
+    "title": "Java Objects",
+    "section": "Solution",
+    "text": "Solution\npublic class BankAccount {\n    \n    private String ID;\n    private double balance;\n    \n    public BankAccount(String initID, double initBalance) {\n        ID = initID;\n        balance = initBalance;\n    }\n    \n    public String getID() {\n        return ID;\n    }\n    \n    public double getBalance() {\n        return balance;\n    }\n    \n    public void deposit(double amount) {\n        balance = balance + amount;\n    }\n    \n    public void withdraw(double amount) {\n        balance = balance - amount;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-01-03.html#expand",
+    "href": "slides-01-03.html#expand",
+    "title": "Java Objects",
+    "section": "Expand",
+    "text": "Expand\nCreate a console application (another class with a public main method) that does the following:\n\ncreate a new BankAccount for \"Casey\" (ID) with 100 for balance\nrequest user keyboard input for amount to deposit\nupdate account balance (deposit the amount)\nprint out a message with new balance\n\nBankAccount anAcct = new BankAccount(\"Casey\", 100);"
+  },
+  {
+    "objectID": "slides-01-03.html#solution-1",
+    "href": "slides-01-03.html#solution-1",
+    "title": "Java Objects",
+    "section": "Solution",
+    "text": "Solution\nimport java.util.Scanner;\n\npublic class UseBankAccount {\n    \n    public static void main(String[] args) {\n        \n        BankAccount anAcct = new BankAccount(\"Casey\", 100); \n        \n        // Input\n        System.out.print(\"Enter amount to deposit: \");\n        Scanner keyboard = new Scanner(System.in);\n        double amount = keyboard.nextDouble();\n        keyboard.close();\n        \n        // Process\n        anAcct.deposit(amount);\n        \n        // Output\n        System.out.println(\"New balance: \" + anAcct.getBalance());\n    }\n}"
+  },
+  {
+    "objectID": "slides-01-03.html#expand-1",
+    "href": "slides-01-03.html#expand-1",
+    "title": "Java Objects",
+    "section": "Expand",
+    "text": "Expand\nModify your console application to ask whether the user wants to deposit or withdraw, and execute the desired operation"
+  },
+  {
+    "objectID": "slides-01-03.html#solution-2",
+    "href": "slides-01-03.html#solution-2",
+    "title": "Java Objects",
+    "section": "Solution",
+    "text": "Solution\nimport java.util.Scanner;\n\npublic class UseBankAccount {\n    \n    public static void main(String[] args) {\n        \n        BankAccount anAcct = new BankAccount(\"Casey\", 100); \n        \n        // Input\n        Scanner keyboard = new Scanner(System.in);\n        \n        System.out.print(\"Deposit (D) or Withdraw (W)? \");  \n        String operation = keyboard.next();\n        \n        \n        if (operation.equals(\"D\")) {\n            System.out.print(\"Enter amount to deposit: \");\n            double amount = keyboard.nextDouble();\n            \n            // Process\n            anAcct.deposit(amount);\n            \n            // Output\n            System.out.println(\"New balance: \" + anAcct.getBalance());\n        }\n        \n        if (operation.equals(\"W\")) {\n            System.out.print(\"Enter amount to withdraw: \");\n            double amount = keyboard.nextDouble();\n            \n            // Process\n            anAcct.withdraw(amount);\n            \n            // Output\n            System.out.println(\"New balance: \" + anAcct.getBalance());\n        }\n        \n\n        System.out.println(\"Thank you.\");\n        \n        keyboard.close();\n        \n        \n    }\n}"
+  },
+  {
     "objectID": "slides-01-02.html#before-we-start",
     "href": "slides-01-02.html#before-we-start",
     "title": "Intro to Java",
@@ -431,7 +515,7 @@
     "href": "slides-01-02.html#solution",
     "title": "Intro to Java",
     "section": "Solution",
-    "text": "Solution\nimport java.util.Scanner;\n\n/**\n * File: OddsOrEvens.java\n * Author: Adriana Picoral\n * Description: Asks for user to input an integer, and prints out\n * whether that number is odd or even\n */\npublic class OddsOrEvens {\n    \n    /**\n     * Description: Determines if an integer is odd\n     * @param number (integer)\n     * @return boolean (true if param is odd, false otherwise)\n     */\n    public static boolean isOdd(int number) {\n        return number % 2 == 1;\n    }\n    \n\n    public static void main(String[] args) {\n          Scanner userInput = new Scanner(System.in);\n          \n          // prints out message to user\n          System.out.println(\"Enter an integer: \");\n          \n          // get integer from keyboard entry\n          int number = userInput.nextInt();\n          userInput.close();\n\n          // calls function to determine if number is odd or even\n          if (isOdd(number)) {\n            System.out.println(number + \" is odd.\");\n          } else {\n            System.out.println(number + \" is even.\");\n          }\n\n    }\n\n}"
+    "text": "Solution\nimport java.util.Scanner;\n\n/**\n * File: OddsOrEvens.java\n * Author: Adriana Picoral\n * Description: Asks for user to input an integer, and prints out\n * whether that number is odd or even\n */\npublic class OddsOrEvens {\n    \n    /**\n     * Description: Determines if an integer is odd\n     * @param number (integer)\n     * @return boolean (true if param is odd, false otherwise)\n     */\n    public static boolean isOdd(int number) {\n        return number % 2 == 1;\n    }\n    \n\n    public static void main(String[] args) {\n          Scanner userInput = new Scanner(System.in);\n          \n          // prints out message to user\n          System.out.println(\"Enter an integer: \");\n          \n          // get integer from keyboard entry\n          int number = userInput.nextInt();\n          userInput.close();\n\n          // calls isOdd to determine if number is odd or even\n          if (isOdd(number)) {\n            System.out.println(number + \" is odd.\");\n          } else {\n            System.out.println(number + \" is even.\");\n          }\n\n    }\n\n}"
   },
   {
     "objectID": "slides-01-02.html#practice-1",
@@ -459,7 +543,7 @@
     "href": "slides-01-02.html#solution-5",
     "title": "Intro to Java",
     "section": "Solution",
-    "text": "Solution\nimport java.util.Scanner;\n\n/**\n * File: HoursMinutesSeconds.java\n * Author: Adriana Picoral\n * Description: Prompts the user to enter an integer representing seconds\n * and prints out time in h:m:s format\n */\npublic class HoursMinutesSeconds {\n    \n    /**\n     * Calculates number of full hours in many seconds\n     * @param seconds (integer)\n     * @return a string representing number of hours\n     */\n    public static String getHours(int seconds) {\n        int hours = seconds / 3600;\n        String fullHour = \"\" + hours;\n        \n        if (hours &lt; 10) {\n            fullHour = \"0\" + hours;\n        }\n        \n        return fullHour;\n    }\n    \n    /**\n     * Calculates number of full minutes left in many seconds\n     * not considering the number of full hours\n     * @param seconds (integer)\n     * @return a string representing number of minutes\n     */\n    \n    public static String getMinutes(int seconds) {\n        int minutes = seconds  % 3600 / 60;\n        String fullMinutes = \"\" + minutes;\n        \n        if (minutes &lt; 10) {\n            fullMinutes = \"0\" + minutes;\n        }\n        \n        return fullMinutes;\n    }\n    \n    /**\n     * Calculates seconds left that are not in full minutes\n     * @param seconds (integer)\n     * @return an integer representing seconds\n     */\n    public static String getSeconds(int seconds) {\n        int secondsLeft = seconds % 60;\n        String fullSeconds = \"\" + secondsLeft;\n        \n        if (secondsLeft &lt; 10) fullSeconds = \"0\" + secondsLeft; \n        \n        return fullSeconds;\n    }\n\n    public static void main(String[] args) {\n        Scanner userInput = new Scanner(System.in);\n          \n        // prints out message to user\n        System.out.print(\"Enter number of seconds: \");\n      \n        // get integer from keyboard entry\n        int seconds = userInput.nextInt();\n        userInput.close();\n        \n        // build up the message to print\n        String message;\n        message = getHours(seconds) + \":\" + getMinutes(seconds);\n        message += \":\" + getSeconds(seconds);\n        System.out.println(message);\n\n    }\n\n}"
+    "text": "Solution\nimport java.util.Scanner;\n\n/**\n * File: HoursMinutesSeconds.java\n * Author: Adriana Picoral\n * Description: Prompts the user to enter an integer representing seconds\n * and prints out time in h:m:s format\n */\npublic class HoursMinutesSeconds {\n    \n    /**\n     * Calculates number of full hours in many seconds\n     * @param seconds (integer)\n     * @return a string representing number of hours\n     */\n    public static String getHours(int seconds) {\n        int hours = seconds / 3600;\n        String fullHour = \"\" + hours;\n        \n        if (hours &lt; 10) {\n            fullHour = \"0\" + hours;\n        }\n        \n        return fullHour;\n    }\n    \n    /**\n     * Calculates number of full minutes left in many seconds\n     * not considering the number of full hours\n     * @param seconds (integer)\n     * @return a string representing number of minutes\n     */\n    \n    public static String getMinutes(int seconds) {\n        int minutes = seconds  % 3600 / 60;\n        String fullMinutes = \"\" + minutes;\n        \n        if (minutes &lt; 10) {\n            fullMinutes = \"0\" + minutes;\n        }\n        \n        return fullMinutes;\n    }\n    \n    /**\n     * Calculates seconds left that are not in full minutes\n     * @param seconds (integer)\n     * @return an integer representing seconds\n     */\n    public static String getSeconds(int seconds) {\n        int secondsLeft = seconds % 60;\n        String fullSeconds = \"\" + secondsLeft;\n        \n        if (secondsLeft &lt; 10) fullSeconds = \"0\" + secondsLeft; \n        \n        return fullSeconds;\n    }\n\n    public static void main(String[] args) {\n        Scanner userInput = new Scanner(System.in);\n          \n        // prints out message to user\n        System.out.print(\"Enter number of seconds: \");\n      \n        // get integer from keyboard entry\n        int seconds = userInput.nextInt();\n        userInput.close();\n        \n        // build up the message to print\n        String message;\n        message = getHours(seconds) + \":\" + getMinutes(seconds);\n        message += \":\" + getSeconds(seconds);\n        \n        System.out.println(message);\n\n    }\n\n}"
   },
   {
     "objectID": "short-assignment-01.html",

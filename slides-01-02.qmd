@@ -245,7 +245,7 @@ public class OddsOrEvens {
 		  int number = userInput.nextInt();
 		  userInput.close();
 
-		  // calls function to determine if number is odd or even
+		  // calls isOdd to determine if number is odd or even
 		  if (isOdd(number)) {
 		    System.out.println(number + " is odd.");
 		  } else {
@@ -428,6 +428,7 @@ public class HoursMinutesSeconds {
 		String message;
 		message = getHours(seconds) + ":" + getMinutes(seconds);
 		message += ":" + getSeconds(seconds);
+		
 		System.out.println(message);
 
 	}
