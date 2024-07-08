@@ -45,6 +45,8 @@ There will also be many undergraduate TAs. See the class website for their conta
 
 # Course Format and Teaching Methods
 
+The class meets in person, in Gittings 129b on Monday, Wednesday and Friday 9am to 9:50am.
+
 Students are responsible for reading the announcements posted on the course website and D2L. Students are also responsible for completing all of the posted reading assignments, quizzes, drills, programming assignments, and peer reviews.
 
 This course includes three class meetings per week and one lab session per week (this is a 4-unit course).

@@ -159,14 +159,14 @@ ul.task-list li input[type="checkbox"] {
 <p>Deadline: September 06, 2024 – Wednesday, 11:30pm</p>
 <section id="pa1-gradenator" class="level1">
 <h1>PA1-Gradenator</h1>
-<p>The goals for PA1 are to get started with Java and figure out how to calculate your current CS 210 grade.</p>
+<p>The goals for PA1 are to get started with Java and figure out how to calculate your current CSC 210 grade.</p>
 <section id="input-file" class="level2">
 <h2 class="anchored" data-anchor-id="input-file">Input File</h2>
 <p>When your program starts it should prompt the user for an input file.</p>
 <p>Each line of the input file should be in the following format:</p>
 <pre><code>  &lt;number&gt; &lt;number&gt; ...; &lt;string with no semicolons&gt;; &lt;number&gt;% </code></pre>
 <p>Specifically one or more numbers in the inclusive range 0 to 100 [0,100] separated by one or more spaces, a semicolon, a string with any characters except a semicolon, a semicolon, and a number in the inclusive range 0 to 100 [0,100] followed by a percent sign. The Java <code>Scanner</code> class with its <code>nextLine()</code> method can handle whatever line ending your file system uses.</p>
-<p>Example input (see the syllabus for percentages for your grade in this course):</p>
+<p>Example input:</p>
 <pre><code>  80; final; 20%
   90 60 80; programming assignments; 25%</code></pre>
 <p>An overall grade will be calculated by averaging the grades listed at the beginning of each line (e.g.&nbsp;avg(90 60 80) ==&gt; 76.67) and then computing a total grade based on the percentages indicated on each line (e.g.&nbsp;(0.20)80 + (0.25)76.67 ==&gt; 35.17, where (0.20)80 is another way to write 0.20 times 80).<br>
@@ -175,7 +175,7 @@ Note that if the input percentages do not add up 100%, then the total grade will
 <pre><code>  final, 20.0%, 80.0
   programming assignments, 25.0%, 76.6
   TOTAL = 35.1% out of 45.0%</code></pre>
-<p>Numbers representing discreet values should be stored as <code>int</code>s. Numbers representing continuous values should be stored as <code>double</code>s.</p>
+<p>Numbers representing discreet values should be stored as <code>int</code>. Numbers representing continuous values should be stored as <code>double</code>.</p>
 <p>Values of type <code>double</code> are printed with many digits after the decimal place by default but this does not look very good and causes grading problems due to round-off differences. Therefore, to print a smaller number of digits we will be using <code>System.out.format</code>.</p>
 <p>Example:</p>
 <pre><code>System.out.format("%.1f is pi", 3.141);</code></pre>
@@ -209,10 +209,10 @@ This is where the local git repository will be placed.</p></li>
 </section>
 <section id="testing-your-program" class="level2">
 <h2 class="anchored" data-anchor-id="testing-your-program">Testing your program</h2>
-<p>If your program cannot compile and run, then you should feel very uncomfortable. Experienced programmers write a little bit of new functionality and then quickly compile and run it. When you ask CS 210 staff questions about your program, we will want to see that it compiles and runs. Comment out new stuff you have added until it compiles and runs. Show us what compiles and runs, and then add the one small piece that breaks it.</p>
+<p>If your program cannot compile and run, then you should feel very uncomfortable. Experienced programmers write a little bit of new functionality and then quickly compile and run it. When you ask CSC 210 staff questions about your program, we will want to see that it compiles and runs. Comment out new stuff you have added until it compiles and runs. Show us what compiles and runs, and then add the one small piece that breaks it.</p>
 <p>There are two main advantages to frequent “commits and pushes” to github:</p>
 <ul>
-<li>The CS210 staff can look at your code remotely to help you with questions.</li>
+<li>The CSC 210 staff can look at your code remotely to help you with questions.</li>
 <li>If you FORGET to turn in your assignment, we will turn in the code from github that was the version at the time of the deadline. It will cost you 15 out of 100 points, but that is better than a zero for the whole assignment.</li>
 </ul>
 <p>We recommend you do a commit every time you add a small piece and your program compiles and run. We also recommend you submit your code to Gradescope (which automatically runs test cases whenever you submit) at least once a day to see where you stand with the grading script and the public test cases.</p>
@@ -241,7 +241,7 @@ This is where the local git repository will be placed.</p></li>
 <li><code>trim()</code></li>
 <li><code>split()</code></li>
 </ul></li>
-<li>Iterating over an array of strings, https://www.guru99.com/foreach-loop-java.html</li>
+<li>Iterating over an array of strings, <a href="https://www.guru99.com/foreach-loop-java.html" class="uri">https://www.guru99.com/foreach-loop-java.html</a></li>
 </ul>
 </section>
 <section id="grading-criteria" class="level2">

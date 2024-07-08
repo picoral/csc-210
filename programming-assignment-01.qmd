@@ -18,7 +18,7 @@ Deadline: `r data %>% filter(Assignment == "PA1") %>%  select(Deadline)` -- Wedn
 # PA1-Gradenator
 
 The goals for PA1 are to get started with Java and figure out how to 
-calculate your current CS 210 grade.
+calculate your current CSC 210 grade.
 
 ## Input File
 
@@ -36,7 +36,7 @@ except a semicolon, a semicolon, and a number in the inclusive range 0 to 100
 [0,100] followed by a percent sign. The Java `Scanner` class with its `nextLine()` 
 method can handle whatever line ending your file system uses. 
 
-Example input (see the syllabus for percentages for your grade in this course):
+Example input:
 
 ```
   80; final; 20%
@@ -60,8 +60,8 @@ output:
   TOTAL = 35.1% out of 45.0%
 ```
 
-Numbers representing discreet values should be stored as `int`s. Numbers representing 
-continuous values should be stored as `double`s. 
+Numbers representing discreet values should be stored as `int`. Numbers representing 
+continuous values should be stored as `double`. 
 
 Values of type `double` are printed with many digits after the decimal place by default 
 but this does not look very good and causes grading problems due to round-off differences.
@@ -131,14 +131,14 @@ and copy the provided URL.  It should look like
 
 If your program cannot compile and run, then you should feel very
 uncomfortable.  Experienced programmers write a little bit of new functionality
-and then quickly compile and run it.  When you ask CS 210 staff questions
+and then quickly compile and run it.  When you ask CSC 210 staff questions
 about your program, we will want to see that it compiles and runs.  Comment
 out new stuff you have added until it compiles and runs.  Show us what compiles 
 and runs, and then add the one small piece that breaks it.
 
 There are two main advantages to frequent "commits and pushes" to github:
 
- * The CS210 staff can look at your code remotely to help you with questions.
+ * The CSC 210 staff can look at your code remotely to help you with questions.
  * If you FORGET to turn in your assignment, we will turn in the code from
    github that was the version at the time of the deadline.  It will cost you
    15 out of 100 points, but that is better than a zero for the whole assignment.
@@ -181,7 +181,7 @@ of how to use these and what their parameters and return values are):
   * `trim()`
   * `split()`
 * Iterating over an array of strings,
-  https://www.guru99.com/foreach-loop-java.html
+  <https://www.guru99.com/foreach-loop-java.html>
 
 
 ## Grading Criteria
