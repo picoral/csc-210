@@ -963,7 +963,7 @@
     "href": "programming-assignment-02.html#getting-started",
     "title": "Programming Assignment 02",
     "section": "Getting Started",
-    "text": "Getting Started\nThe process for getting started will be very similar to what was done in PA1. * There is a github assignment link on the class web page –&gt; resources link. Accept the assignment to have a github repository be created for you. * Edit the .travis.yml file on github to put in your email address (the one associated with your github account). Commit that change in github. * Import your PA2 repository into Eclipse (see PA1 writeup for details).\nIf you didn’t already provide us with your github ID, fill out the google form at https://goo.gl/forms/Aeukbr19M8XXk1Uq1"
+    "text": "Getting Started\nThe process for getting started will be very similar to what was done in PA1. * There is a github assignment link on the class web page –&gt; resources link. Accept the assignment to have a github repository be created for you."
   },
   {
     "objectID": "programming-assignment-02.html#decomposition-ideas",
