@@ -116,7 +116,7 @@ Labor Day - no classes	September 2, 2024
 
 * PA3 due Wednesday at 11:30pm
 
-**Week 5** `r schedule %>% filter(week == 5) %>% pull(dates)`: Review on Wednesday, Midterm on Friday
+**Week 5** `r schedule %>% filter(week == 5) %>% pull(dates)`: Midterm on Wednesday
 
 **Week 6** `r schedule %>% filter(week == 6) %>% pull(dates)`: heuristics, graph representation, graph interface, graph traversal
 
@@ -138,7 +138,7 @@ Labor Day - no classes	September 2, 2024
 
 * PA7 due Wednesday at 11:30pm
 
-**Week 11** `r schedule %>% filter(week == 11) %>% pull(dates)`: Monday Review, Wednesday Midterm 2
+**Week 11** `r schedule %>% filter(week == 11) %>% pull(dates)`: Wednesday Midterm 2
 
 Veterans Day - no classes	November 11, 2024
 
@@ -170,9 +170,7 @@ Final exam is on Thursday, December 19, 10:30am to 12:30pm ([schedule of final e
 
 Prompt the user for their grades in 210 and then output their grade.
 
-Stdio, looping, static functions.
-
-FIXME: anyway to include recursion?
+File reading, looping, static functions.
 
 ## PA2: KMER counting
 
