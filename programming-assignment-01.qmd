@@ -20,6 +20,8 @@ Deadline: `r data %>% filter(Assignment == "PA1") %>%  select(Deadline)` -- Wedn
 The goals for PA1 are to get started with Java and figure out how to 
 calculate your current CSC 210 grade.
 
+Your file name (and class) should be `Gradenator.java`.
+
 ## Input File
 
 When your program starts it should prompt the user for an input file. 
