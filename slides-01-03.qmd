@@ -161,3 +161,186 @@ public class UseBankAccount {
 }
 ```
 
+
+## Scanner
+
+The `Scanner` class (from `java.util`) is used to get different types of input
+
+We use `System.in` to read keyboard input:
+
+```{java}
+    Scanner myObj = new Scanner(System.in);  // Scanner object
+    String userInput = myObj.nextLine();  // method to read user input
+    System.out.println(userInput); 
+```
+
+For files, we need the `File` class (from `java.io`) 
+
+```{java}
+    File myFile = new File("myTextFile.txt");
+    Scanner myReader = new Scanner(myFile);
+```
+
+However, we need to deal with `FileNotFoundException`
+
+## Scanner
+
+```{java}
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class FileReadExample {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		File myFile = new File("myTextFile.txt");
+		Scanner myReader = new Scanner(myFile);
+	}
+
+}
+```
+
+
+## Scanner
+
+We use the same `Scanner` method `.nextLine()`
+
+```{java}
+String line = myReader.nextLine();
+```
+
+Task:
+
+* Read a line in the file and and print it out
+* Read all lines in a file and print each one out
+
+## Read file line  -- solution 1
+
+```{java}
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class FileReadExample {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		File myFile = new File("myTextFile.txt");
+		Scanner myReader = new Scanner(myFile);
+		
+		String line1 = myReader.nextLine();
+		System.out.println(line1);
+		
+		String line2 = myReader.nextLine();
+		System.out.println(line2);
+		
+		myReader.close();
+	}
+
+}
+```
+
+## Read file line  -- solution 2
+
+```{java}
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class FileReadExample {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		File myFile = new File("myTextFile.txt");
+		Scanner myReader = new Scanner(myFile);
+		
+		System.out.println(myReader.nextLine());
+		System.out.println(myReader.nextLine());
+		
+		myReader.close();
+	}
+
+}
+```
+
+## While loop
+
+What if we didn't know how many lines there were in the file?
+
+The method `.hasNextLine()` returns a boolean
+
+Modify the previous solution to generalize it to any number of lines
+
+
+## While loop -- solution
+
+```{java}
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class FileReadExample {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		File myFile = new File("myTextFile.txt");
+		Scanner myReader = new Scanner(myFile);
+		
+		while (myReader.hasNextLine()) {
+			System.out.println(myReader.nextLine());
+		}
+		myReader.close();
+	}
+
+}
+```
+
+
+## String
+
+`String` is a class (title capitalization)
+
+We can construct strings two ways:
+
+```{java}
+String str = new String("with new");
+String str2 = "Don't need new"
+```
+
+Some string methods:
+
+```{java}
+.equals(String otherString)
+.length() // len() function in python
+.charAt(int index) // [] indexing in python
+.substring(int beginIndex, int endIndex) // [:] indexing in python
+.indexOf(String str) // .find() method in python
+```
+
+Try these methods out
+
+## String methods -- solution
+
+```{java}
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class FileReadExample {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		File myFile = new File("myTextFile.txt");
+		Scanner myReader = new Scanner(myFile);
+		
+		while (myReader.hasNextLine()) {
+			String line = myReader.nextLine();
+			System.out.println(line.length());
+			System.out.println(line.charAt(0));
+			if (line.length() > 0) System.out.println(line.substring(0, 2));
+			System.out.println(line.indexOf("line"));
+			
+		}
+		myReader.close();
+	}
+
+}
+```
+
+

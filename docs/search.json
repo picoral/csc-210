@@ -1181,5 +1181,75 @@
     "title": "Programming Assignmnet 06",
     "section": "Submission",
     "text": "Submission\nWrite your own code. We will be using a tool that finds overly similar code. This Spring 2018 semester in CS 210 we unfortunately have had academic integrity cases. I recommend that when talking with others about the assignment, do not write anything down.\nThe class hierarchy diagram in pdf format is due Tuesday March 13th at 11:30 am in Gradescope AND Aropa.\nFor PA6, you are REQUIRED to submit all of your java source files to Gradescope before Monday March 19th at 11:30 am. You also need to submit your README.md with example input and output for your unique class."
+  },
+  {
+    "objectID": "slides-01-03.html#scanner",
+    "href": "slides-01-03.html#scanner",
+    "title": "Java Objects",
+    "section": "Scanner",
+    "text": "Scanner\nThe Scanner class (from java.util) is used to get different types of input\nWe use System.in to read keyboard input:\n    Scanner myObj = new Scanner(System.in);  // Scanner object\n    String userInput = myObj.nextLine();  // method to read user input\n    System.out.println(userInput); \nFor files, we need the File class (from java.io)\n    File myFile = new File(\"myTextFile.txt\");\n    Scanner myReader = new Scanner(myFile);\nHowever, we need to deal with FileNotFoundException"
+  },
+  {
+    "objectID": "slides-01-03.html#scanner-1",
+    "href": "slides-01-03.html#scanner-1",
+    "title": "Java Objects",
+    "section": "Scanner",
+    "text": "Scanner\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-01-03.html#scanner-2",
+    "href": "slides-01-03.html#scanner-2",
+    "title": "Java Objects",
+    "section": "Scanner",
+    "text": "Scanner\nWe use the same Scanner method .nextLine()\nString line = myReader.nextLine();\nTask:\n\nRead a line in the file and and print it out\nRead all lines in a file and print each one out"
+  },
+  {
+    "objectID": "slides-01-03.html#read-file-line-solution",
+    "href": "slides-01-03.html#read-file-line-solution",
+    "title": "Java Objects",
+    "section": "Read file line – solution",
+    "text": "Read file line – solution\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n        \n        String line = myReader.nextLine();\n        System.out.println(line);\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-01-03.html#read-file-line-solution-1",
+    "href": "slides-01-03.html#read-file-line-solution-1",
+    "title": "Java Objects",
+    "section": "Read file line – solution 1",
+    "text": "Read file line – solution 1\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n        \n        String line1 = myReader.nextLine();\n        System.out.println(line1);\n        \n        String line2 = myReader.nextLine();\n        System.out.println(line2);\n        \n        myReader.close();\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-01-03.html#read-file-line-solution-2",
+    "href": "slides-01-03.html#read-file-line-solution-2",
+    "title": "Java Objects",
+    "section": "Read file line – solution 2",
+    "text": "Read file line – solution 2\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n        \n        System.out.println(myReader.nextLine());\n        System.out.println(myReader.nextLine());\n        \n        myReader.close();\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-01-03.html#while-loop",
+    "href": "slides-01-03.html#while-loop",
+    "title": "Java Objects",
+    "section": "While loop",
+    "text": "While loop\nWhat if we didn’t know how many lines there were in the file?\nThe method .hasNextLine() returns a boolean\nModify the previous solution to generalize it to any number of lines"
+  },
+  {
+    "objectID": "slides-01-03.html#while-loop-solution",
+    "href": "slides-01-03.html#while-loop-solution",
+    "title": "Java Objects",
+    "section": "While loop – solution",
+    "text": "While loop – solution\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n        \n        while (myReader.hasNextLine()) {\n            System.out.println(myReader.nextLine());\n        }\n        myReader.close();\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-01-03.html#string",
+    "href": "slides-01-03.html#string",
+    "title": "Java Objects",
+    "section": "String",
+    "text": "String\nString is a class (title capitalization)\nWe can construct strings two ways:\nString str = new String(\"with new\");\nString str2 = \"Don't need new\"\nSome string methods:\n.equals(String otherString)\n.length() // len() function in python\n.charAt(int index) // [] indexing in python\n.substring(int beginIndex, int endIndex) // [:] indexing in python\n.indexOf(String str) // .find() method in python\nTry these methods out"
+  },
+  {
+    "objectID": "slides-01-03.html#string-methods-solution",
+    "href": "slides-01-03.html#string-methods-solution",
+    "title": "Java Objects",
+    "section": "String methods – solution",
+    "text": "String methods – solution\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n        \n        while (myReader.hasNextLine()) {\n            String line = myReader.nextLine();\n            System.out.println(line.length());\n            System.out.println(line.charAt(0));\n            if (line.length() &gt; 0) System.out.println(line.substring(0, 2));\n            System.out.println(line.indexOf(\"line\"));\n            \n        }\n        myReader.close();\n    }\n\n}"
   }
 ]
