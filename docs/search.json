@@ -1251,5 +1251,12 @@
     "title": "Java Objects",
     "section": "String methods – solution",
     "text": "String methods – solution\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n        \n        while (myReader.hasNextLine()) {\n            String line = myReader.nextLine();\n            System.out.println(line.length());\n            System.out.println(line.charAt(0));\n            if (line.length() &gt; 0) System.out.println(line.substring(0, 2));\n            System.out.println(line.indexOf(\"line\"));\n            \n        }\n        myReader.close();\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-01-03.html#java-type-casting",
+    "href": "slides-01-03.html#java-type-casting",
+    "title": "Java Objects",
+    "section": "Java type casting",
+    "text": "Java type casting\nBoth Double and Integer classes have methods to cast a string into a double or int\nDouble.valueOf(\"10\");\nInteger.valueOf(\"10\");"
   }
 ]

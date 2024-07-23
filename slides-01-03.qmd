@@ -343,4 +343,13 @@ public class FileReadExample {
 }
 ```
 
+## Java type casting
+
+Both `Double` and `Integer` classes have methods to cast a string into a double or int
+
+```{java}
+Double.valueOf("10");
+Integer.valueOf("10");
+```
+
 
