@@ -143,14 +143,11 @@ public class ArrayListExample {
 		}
 		
 		return allResults;
-		
 	}
 
 	public static void main(String[] args) {
 		ArrayList<Integer> myResult = factorial(10);
 		System.out.println(myResult);
-		
-		
 	}
 
 }

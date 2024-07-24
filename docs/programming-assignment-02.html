@@ -210,7 +210,7 @@ KZN - 3</code></pre>
 <h2 class="anchored" data-anchor-id="decomposition-ideas">Decomposition Ideas</h2>
 <p>The section activity provides an introduction to reading csv files and creating a hashmap for departures. Refer to this activity to get started.</p>
 <p>When selecting your keys and values consider what types you need them to be to complete the command.</p>
-<p>Since HashMaps are unordered, special steps must be taken for them to be outputted in an ordered format. As shown below, take the set of keys and input it into an ArrayList of type String. Then use a Collections sort to sort the keys in place. Since the keys are sorted in the existing data structure, you do not need to set the Collections.sort() call to store a returned value.</p>
+<p>Since HashMaps are unordered, special steps must be taken for them to be outputted in an ordered format. As shown below, take the set of keys and input it into an <code>ArrayList</code> of type String. Then use a Collections sort to sort the keys in place. Since the keys are sorted in the existing data structure, you do not need to set the Collections.sort() call to store a returned value.</p>
 <pre><code>    ArrayList&lt;String&gt; sortedKeys = new ArrayList&lt;String&gt;(APDepartures.keySet());
     Collections.sort(sortedKeys);</code></pre>
 </section>

@@ -1256,8 +1256,8 @@
     "objectID": "slides-02-01.html#java-array-object",
     "href": "slides-02-01.html#java-array-object",
     "title": "Arrays",
-    "section": "Java Array Object",
-    "text": "Java Array Object\n\nA primitive variables store precisely one value:\n\na double stores one floating-point number\nan int stores one integer\n\nA reference variable stores a “reference” to an object that may store many values\nA Java array object stores a collection of elements\n\nEach element may be a reference to objects or primitive values\nWe access array elements with subscript notation []"
+    "section": "",
+    "text": "A primitive variables store precisely one value:\n\na double stores one floating-point number\nan int stores one integer\n\nA reference variable stores a “reference” to an object that may store many values\nA Java array object stores a collection of elements\n\nEach element may be a reference to objects or primitive values\nWe access array elements with subscript notation []"
   },
   {
     "objectID": "slides-02-01.html#arrays",
@@ -1306,6 +1306,13 @@
     "href": "slides-02-01.html#factorial-with-arraylist-solution",
     "title": "Arrays",
     "section": "Factorial with ArrayList – Solution",
-    "text": "Factorial with ArrayList – Solution\nimport java.util.ArrayList;\n\npublic class ArrayListExample {\n    \n    public static ArrayList&lt;Integer&gt; factorial(int n) {\n        int result = 1;\n        ArrayList&lt;Integer&gt; allResults = new ArrayList&lt;Integer&gt;();\n        \n        for (int i = 1; i &lt;= n; i++) {\n            result *= i;\n            allResults.add(result);\n            \n        }\n        \n        return allResults;\n        \n    }\n\n    public static void main(String[] args) {\n        ArrayList&lt;Integer&gt; myResult = factorial(10);\n        System.out.println(myResult);\n        \n        \n    }\n\n}"
+    "text": "Factorial with ArrayList – Solution\nimport java.util.ArrayList;\n\npublic class ArrayListExample {\n    \n    public static ArrayList&lt;Integer&gt; factorial(int n) {\n        int result = 1;\n        ArrayList&lt;Integer&gt; allResults = new ArrayList&lt;Integer&gt;();\n        \n        for (int i = 1; i &lt;= n; i++) {\n            result *= i;\n            allResults.add(result);\n            \n        }\n        \n        return allResults;\n    }\n\n    public static void main(String[] args) {\n        ArrayList&lt;Integer&gt; myResult = factorial(10);\n        System.out.println(myResult);\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-02-01.html",
+    "href": "slides-02-01.html",
+    "title": "Arrays",
+    "section": "",
+    "text": "A primitive variables store precisely one value:\n\na double stores one floating-point number\nan int stores one integer\n\nA reference variable stores a “reference” to an object that may store many values\nA Java array object stores a collection of elements\n\nEach element may be a reference to objects or primitive values\nWe access array elements with subscript notation []"
   }
 ]
