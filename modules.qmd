@@ -54,7 +54,15 @@ Topic: `r schedule %>% filter(week == 2) %>% pull(topic)`
 
 ## Readings
 
-[Java, Java, Java 9.2 One-Dimensional Arrays](https://runestone.academy/ns/books/published/javajavajava/one-dimensional-arrays.html)
+Required:
+
+* [Java, Java, Java 6.3.2 Counting with For Loops](https://runestone.academy/ns/books/published/javajavajava/counting-loops.html)
+* [Java, Java, Java 9.2 One-Dimensional Arrays](https://runestone.academy/ns/books/published/javajavajava/one-dimensional-arrays.html)
+* [geeksforgeeks HashMap in Java](https://www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/)
+
+Optional:
+
+* [Java, Java, Java 9.3 Simple Array Examples](https://runestone.academy/ns/books/published/javajavajava/simple-array-examples.html)
 
 ## Slides
 
