@@ -184,17 +184,17 @@ ul.task-list li input[type="checkbox"] {
 <section id="input-and-output" class="level2">
 <h2 class="anchored" data-anchor-id="input-and-output">Input and Output</h2>
 <p>Example input (see Kaggle for entire file and more in-depth description):</p>
-<pre><code>airline airline ID   source airport  source airport id   destination airport     destination airport id  codeshare   stops   equipment
-2B  410 AER 2965    KZN 2990        0   CR2
-2B  410 ASF 2966    KZN 2990        0   CR2
-2B  410 ASF 2966    MRV 2962        0   CR2
-2B  410 CEK 2968    KZN 2990        0   CR2</code></pre>
+<pre><code>airline,airline ID, source airport, source airport id, destination apirport, destination airport id, codeshare, stops, equipment
+2B,410,AER,2965,KZN,2990,,0,CR2
+2B,410,ASF,2966,KZN,2990,,0,CR2
+2B,410,ASF,2966,MRV,2962,,0,CR2
+2B,410,CEK,2968,KZN,2990,,0,CR2</code></pre>
 <p>MAX Output</p>
 <pre><code>MAX FLIGHTS 3 : KZN</code></pre>
 <p>DEPARTURES Output</p>
-<pre><code>AER flys to KZN
-ASF flys to KZN MRV
-CEK flys to KZN</code></pre>
+<pre><code>AER flies to KZN
+ASF flies to KZN MRV
+CEK flies to KZN</code></pre>
 <p>LIMIT 1 Output</p>
 <pre><code>ASF - 2
 KZN - 3</code></pre>
@@ -218,20 +218,22 @@ KZN - 3</code></pre>
 <h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
 <p>Half of the PA2 grade will be correctness. For this assignment, there will be some private test cases. Partial points will be given if just one or two of the commands is implemented and works on those test cases.</p>
 <p>The other half of the PA2 grade will be your decomposition and code clarity.</p>
-<p>Decomposition * Should carefully select data structures that implement the required functionality. For example, if you avoid using HashMaps, it will probably result in more complicated code and thus points off.</p>
+<p>Decomposition</p>
 <ul>
-<li><p>Should just use static methods in the single PA2Main class.</p></li>
-<li><p>Use a single file. This should be a small program (&lt;300 lines).</p></li>
-<li><p>Each static method should be less than 30 lines. This INCLUDES comments. It is easier to read a function if it can all fit on one screen.</p></li>
-<li><p>Make things as simple as possible.</p>
+<li>Should carefully select data structures that implement the required functionality. For example, if you avoid using HashMaps, it will probably result in more complicated code and thus points off.</li>
+<li>Should just use static methods in the single PA2Main class.</li>
+<li>Use a single file. This should be a small program (&lt;300 lines).</li>
+<li>Each static method should be less than 30 lines. This INCLUDES comments. It is easier to read a function if it can all fit on one screen.</li>
+<li>Make things as simple as possible.
 <ul>
 <li>Avoid nested loops.</li>
 <li>Avoid nesting conditionals.</li>
 <li>Avoid chaining, i.e., too many levels of user-defined methods calling other user-defined methods. Putting most of the functionality in another static method that returns void that main calls is an example of this.</li>
 </ul></li>
 </ul>
-<p>Code Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it.</p>
+<p>Code Clarity</p>
 <ul>
+<li><p>YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it.</p></li>
 <li><p>There needs to be a balance between no comments and a comment for every line in the program. Either extreme will result in points off.</p></li>
 <li><p>The file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.</p></li>
 <li><p>Use meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).</p></li>

@@ -87,12 +87,13 @@ when looping over the keys, you must use a supplementary data structure.
     
 ## Input and Output
 Example input (see Kaggle for entire file and more in-depth description):
+
 ```
-airline	airline ID	 source airport	 source airport id	 destination airport	 destination airport id	 codeshare	 stops	 equipment
-2B	410	AER	2965	KZN	2990		0	CR2
-2B	410	ASF	2966	KZN	2990		0	CR2
-2B	410	ASF	2966	MRV	2962		0	CR2
-2B	410	CEK	2968	KZN	2990		0	CR2
+airline,airline ID, source airport, source airport id, destination apirport, destination airport id, codeshare, stops, equipment
+2B,410,AER,2965,KZN,2990,,0,CR2
+2B,410,ASF,2966,KZN,2990,,0,CR2
+2B,410,ASF,2966,MRV,2962,,0,CR2
+2B,410,CEK,2968,KZN,2990,,0,CR2
 ```
 
 MAX Output 
@@ -102,9 +103,9 @@ MAX FLIGHTS 3 : KZN
 
 DEPARTURES Output 
 ```
-AER flys to KZN
-ASF flys to KZN MRV
-CEK flys to KZN
+AER flies to KZN
+ASF flies to KZN MRV
+CEK flies to KZN
 ```
 
 LIMIT 1 Output 
@@ -150,18 +151,15 @@ one or two of the commands is implemented and works on those test cases.
 The other half of the PA2 grade will be your decomposition and code clarity.
 
 Decomposition
+
 * Should carefully select data structures that implement the 
   required functionality.  For example, if you avoid using HashMaps,
   it will probably result in more complicated code and thus points off.
-
 * Should just use static methods in the single PA2Main class.
-
 * Use a single file.  This should be a small program (<300 lines).
-
 * Each static method should be less than 30 lines.  This INCLUDES
   comments.  It is easier to read a function if it can all fit on
   one screen.
-
 * Make things as simple as possible.
   * Avoid nested loops.
   * Avoid nesting conditionals.
@@ -172,6 +170,7 @@ Decomposition
 
 
 Code Clarity
+
 * YOU should be able to read, understand, and explain your own code
 to someone else a couple days after you wrote it.
 
