@@ -18,14 +18,23 @@ format:
     
 ## Arrays
 
-Array construction:
+Array construction, with size:
 
 ```{java}
 int[] testScores = new int[100]; // all elements are initialized to 0
 double[] x = new double[9]; // all elements are initialized to 0.0
 String[] names = new String[500]; // all elements are null
-BankAccount[] customers = new BankAccount[100];
+BankAccount[] customers = new BankAccount[100]; // all elements are null
 ```
+
+Array construction, with values:
+
+```{java}
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+int[] numbers = {1, 3, 4, 1, 2, 3};
+double[] moreNumbers = { 1, 2.0, 1e-12 };
+```
+
 
 Accessing array elements:
 
@@ -36,10 +45,20 @@ Accessing array elements:
 Array objects have the `.length` property, which can be used to set up for loops:
 
 ```{java}
+int[] x = {1, 3, 4, 1, 2, 3};
 for (int i = 0; i < x.length ; i++) { 
 			System.out.println(x[i]);
 		}
 ```
+
+Or iterate over each value:
+
+```{java}
+for (int n : x) { 
+					System.out.println(n);
+				}
+```
+
 
 ## For loops -- calculate Factorial
 
@@ -73,6 +92,65 @@ public class ArrayForExample {
 	public static void main(String[] args) {
 		int[] myResult = factorial(10);
 		System.out.println(Arrays.toString(myResult));
+	}
+
+}
+```
+
+## ArrayList
+
+The size of an array cannot be modified. 
+
+`ArrayList` can grow as you need it. Elements in an `ArrayList` need to be objects. 
+
+```{java}
+import java.util.ArrayList;
+
+ArrayList<Integer> moreNumbers = new ArrayList<Integer>();
+moreNumbers.add(1);
+moreNumbers.add(1);
+moreNumbers.add(1);
+System.out.println(moreNumbers);
+```
+
+Access an item through its index:
+
+```{java}
+moreNumbers.set(0, 99); // change value at index 0
+moreNumbers.get(0); // get value at index 0
+moreNumbers.remove(0); // remove value at index 0
+```
+
+## Factorial with `ArrayList`
+
+Rewrite your previous factorial solution to use `ArrayList` instead
+
+## Factorial with `ArrayList` -- Solution
+
+```{java}
+import java.util.ArrayList;
+
+public class ArrayListExample {
+	
+	public static ArrayList<Integer> factorial(int n) {
+		int result = 1;
+		ArrayList<Integer> allResults = new ArrayList<Integer>();
+		
+		for (int i = 1; i <= n; i++) {
+			result *= i;
+			allResults.add(result);
+			
+		}
+		
+		return allResults;
+		
+	}
+
+	public static void main(String[] args) {
+		ArrayList<Integer> myResult = factorial(10);
+		System.out.println(myResult);
+		
+		
 	}
 
 }

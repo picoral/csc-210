@@ -414,11 +414,15 @@
 </section>
 <section id="arrays" class="slide level2">
 <h2>Arrays</h2>
-<p>Array construction:</p>
+<p>Array construction, with size:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>int[] testScores = new int[100]; // all elements are initialized to 0</span>
 <span id="cb1-2"><a></a>double[] x = new double[9]; // all elements are initialized to 0.0</span>
 <span id="cb1-3"><a></a>String[] names = new String[500]; // all elements are null</span>
-<span id="cb1-4"><a></a>BankAccount[] customers = new BankAccount[100];</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a></a>BankAccount[] customers = new BankAccount[100]; // all elements are null</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Array construction, with values:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};</span>
+<span id="cb2-2"><a></a>int[] numbers = {1, 3, 4, 1, 2, 3};</span>
+<span id="cb2-3"><a></a>double[] moreNumbers = { 1, 2.0, 1e-12 };</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Accessing array elements:</p>
 <ul>
 <li>Just like in Python, we use <code>[]</code> to access individual elements in the array</li>
@@ -427,9 +431,14 @@
 <section id="for-loops" class="slide level2">
 <h2>For loops</h2>
 <p>Array objects have the <code>.length</code> property, which can be used to set up for loops:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>for (int i = 0; i &lt; x.length ; i++) { </span>
-<span id="cb2-2"><a></a>            System.out.println(x[i]);</span>
-<span id="cb2-3"><a></a>        }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>int[] x = {1, 3, 4, 1, 2, 3};</span>
+<span id="cb3-2"><a></a>for (int i = 0; i &lt; x.length ; i++) { </span>
+<span id="cb3-3"><a></a>            System.out.println(x[i]);</span>
+<span id="cb3-4"><a></a>        }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Or iterate over each value:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>for (int n : x) { </span>
+<span id="cb4-2"><a></a>                    System.out.println(n);</span>
+<span id="cb4-3"><a></a>                }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="for-loops-calculate-factorial" class="slide level2">
 <h2>For loops – calculate Factorial</h2>
@@ -442,30 +451,79 @@
 </section>
 <section id="factorial-solution" class="slide level2">
 <h2>Factorial – solution</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>import java.util.Arrays;</span>
-<span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a>public class ArrayForExample {</span>
-<span id="cb3-4"><a></a>    </span>
-<span id="cb3-5"><a></a>    public static int[] factorial(int n) {</span>
-<span id="cb3-6"><a></a>        int result = 1;</span>
-<span id="cb3-7"><a></a>        int[] allResults = new int[n];</span>
-<span id="cb3-8"><a></a>        </span>
-<span id="cb3-9"><a></a>        for (int i = 1; i &lt;= n; i++) {</span>
-<span id="cb3-10"><a></a>            result *= i;</span>
-<span id="cb3-11"><a></a>            allResults[i-1] = result;</span>
-<span id="cb3-12"><a></a>            </span>
-<span id="cb3-13"><a></a>        }</span>
-<span id="cb3-14"><a></a>        </span>
-<span id="cb3-15"><a></a>        return allResults;</span>
-<span id="cb3-16"><a></a>        </span>
-<span id="cb3-17"><a></a>    }</span>
-<span id="cb3-18"><a></a></span>
-<span id="cb3-19"><a></a>    public static void main(String[] args) {</span>
-<span id="cb3-20"><a></a>        int[] myResult = factorial(10);</span>
-<span id="cb3-21"><a></a>        System.out.println(Arrays.toString(myResult));</span>
-<span id="cb3-22"><a></a>    }</span>
-<span id="cb3-23"><a></a></span>
-<span id="cb3-24"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>import java.util.Arrays;</span>
+<span id="cb5-2"><a></a></span>
+<span id="cb5-3"><a></a>public class ArrayForExample {</span>
+<span id="cb5-4"><a></a>    </span>
+<span id="cb5-5"><a></a>    public static int[] factorial(int n) {</span>
+<span id="cb5-6"><a></a>        int result = 1;</span>
+<span id="cb5-7"><a></a>        int[] allResults = new int[n];</span>
+<span id="cb5-8"><a></a>        </span>
+<span id="cb5-9"><a></a>        for (int i = 1; i &lt;= n; i++) {</span>
+<span id="cb5-10"><a></a>            result *= i;</span>
+<span id="cb5-11"><a></a>            allResults[i-1] = result;</span>
+<span id="cb5-12"><a></a>            </span>
+<span id="cb5-13"><a></a>        }</span>
+<span id="cb5-14"><a></a>        </span>
+<span id="cb5-15"><a></a>        return allResults;</span>
+<span id="cb5-16"><a></a>        </span>
+<span id="cb5-17"><a></a>    }</span>
+<span id="cb5-18"><a></a></span>
+<span id="cb5-19"><a></a>    public static void main(String[] args) {</span>
+<span id="cb5-20"><a></a>        int[] myResult = factorial(10);</span>
+<span id="cb5-21"><a></a>        System.out.println(Arrays.toString(myResult));</span>
+<span id="cb5-22"><a></a>    }</span>
+<span id="cb5-23"><a></a></span>
+<span id="cb5-24"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="arraylist" class="slide level2">
+<h2>ArrayList</h2>
+<p>The size of an array cannot be modified.</p>
+<p><code>ArrayList</code> can grow as you need it. Elements in an <code>ArrayList</code> need to be objects.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a>import java.util.ArrayList;</span>
+<span id="cb6-2"><a></a></span>
+<span id="cb6-3"><a></a>ArrayList&lt;Integer&gt; moreNumbers = new ArrayList&lt;Integer&gt;();</span>
+<span id="cb6-4"><a></a>moreNumbers.add(1);</span>
+<span id="cb6-5"><a></a>moreNumbers.add(1);</span>
+<span id="cb6-6"><a></a>moreNumbers.add(1);</span>
+<span id="cb6-7"><a></a>System.out.println(moreNumbers);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Access an item through its index:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>moreNumbers.set(0, 99); // change value at index 0</span>
+<span id="cb7-2"><a></a>moreNumbers.get(0); // get value at index 0</span>
+<span id="cb7-3"><a></a>moreNumbers.remove(0); // remove value at index 0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="factorial-with-arraylist" class="slide level2">
+<h2>Factorial with <code>ArrayList</code></h2>
+<p>Rewrite your previous factorial solution to use <code>ArrayList</code> instead</p>
+</section>
+<section id="factorial-with-arraylist-solution" class="slide level2">
+<h2>Factorial with <code>ArrayList</code> – Solution</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>import java.util.ArrayList;</span>
+<span id="cb8-2"><a></a></span>
+<span id="cb8-3"><a></a>public class ArrayListExample {</span>
+<span id="cb8-4"><a></a>    </span>
+<span id="cb8-5"><a></a>    public static ArrayList&lt;Integer&gt; factorial(int n) {</span>
+<span id="cb8-6"><a></a>        int result = 1;</span>
+<span id="cb8-7"><a></a>        ArrayList&lt;Integer&gt; allResults = new ArrayList&lt;Integer&gt;();</span>
+<span id="cb8-8"><a></a>        </span>
+<span id="cb8-9"><a></a>        for (int i = 1; i &lt;= n; i++) {</span>
+<span id="cb8-10"><a></a>            result *= i;</span>
+<span id="cb8-11"><a></a>            allResults.add(result);</span>
+<span id="cb8-12"><a></a>            </span>
+<span id="cb8-13"><a></a>        }</span>
+<span id="cb8-14"><a></a>        </span>
+<span id="cb8-15"><a></a>        return allResults;</span>
+<span id="cb8-16"><a></a>        </span>
+<span id="cb8-17"><a></a>    }</span>
+<span id="cb8-18"><a></a></span>
+<span id="cb8-19"><a></a>    public static void main(String[] args) {</span>
+<span id="cb8-20"><a></a>        ArrayList&lt;Integer&gt; myResult = factorial(10);</span>
+<span id="cb8-21"><a></a>        System.out.println(myResult);</span>
+<span id="cb8-22"><a></a>        </span>
+<span id="cb8-23"><a></a>        </span>
+<span id="cb8-24"><a></a>    }</span>
+<span id="cb8-25"><a></a></span>
+<span id="cb8-26"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

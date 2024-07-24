@@ -1264,14 +1264,14 @@
     "href": "slides-02-01.html#arrays",
     "title": "Arrays",
     "section": "Arrays",
-    "text": "Arrays\nArray construction:\nint[] testScores = new int[100]; // all elements are initialized to 0\ndouble[] x = new double[9]; // all elements are initialized to 0.0\nString[] names = new String[500]; // all elements are null\nBankAccount[] customers = new BankAccount[100];\nAccessing array elements:\n\nJust like in Python, we use [] to access individual elements in the array"
+    "text": "Arrays\nArray construction, with size:\nint[] testScores = new int[100]; // all elements are initialized to 0\ndouble[] x = new double[9]; // all elements are initialized to 0.0\nString[] names = new String[500]; // all elements are null\nBankAccount[] customers = new BankAccount[100]; // all elements are null\nArray construction, with values:\nString[] cars = {\"Volvo\", \"BMW\", \"Ford\", \"Mazda\"};\nint[] numbers = {1, 3, 4, 1, 2, 3};\ndouble[] moreNumbers = { 1, 2.0, 1e-12 };\nAccessing array elements:\n\nJust like in Python, we use [] to access individual elements in the array"
   },
   {
     "objectID": "slides-02-01.html#for-loops",
     "href": "slides-02-01.html#for-loops",
     "title": "Arrays",
     "section": "For loops",
-    "text": "For loops\nArray objects have the .length property, which can be used to set up for loops:\nfor (int i = 0; i &lt; x.length ; i++) { \n            System.out.println(x[i]);\n        }"
+    "text": "For loops\nArray objects have the .length property, which can be used to set up for loops:\nint[] x = {1, 3, 4, 1, 2, 3};\nfor (int i = 0; i &lt; x.length ; i++) { \n            System.out.println(x[i]);\n        }\nOr iterate over each value:\nfor (int n : x) { \n                    System.out.println(n);\n                }"
   },
   {
     "objectID": "slides-02-01.html#for-loops-calculate-factorial",
@@ -1286,5 +1286,26 @@
     "title": "Arrays",
     "section": "Factorial – solution",
     "text": "Factorial – solution\nimport java.util.Arrays;\n\npublic class ArrayForExample {\n    \n    public static int[] factorial(int n) {\n        int result = 1;\n        int[] allResults = new int[n];\n        \n        for (int i = 1; i &lt;= n; i++) {\n            result *= i;\n            allResults[i-1] = result;\n            \n        }\n        \n        return allResults;\n        \n    }\n\n    public static void main(String[] args) {\n        int[] myResult = factorial(10);\n        System.out.println(Arrays.toString(myResult));\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-02-01.html#arraylist",
+    "href": "slides-02-01.html#arraylist",
+    "title": "Arrays",
+    "section": "ArrayList",
+    "text": "ArrayList\nThe size of an array cannot be modified.\nArrayList can grow as you need it. Elements in an ArrayList need to be objects.\nimport java.util.ArrayList;\n\nArrayList&lt;Integer&gt; moreNumbers = new ArrayList&lt;Integer&gt;();\nmoreNumbers.add(1);\nmoreNumbers.add(1);\nmoreNumbers.add(1);\nSystem.out.println(moreNumbers);\nAccess an item through its index:\nmoreNumbers.set(0, 99); // change value at index 0\nmoreNumbers.get(0); // get value at index 0\nmoreNumbers.remove(0); // remove value at index 0"
+  },
+  {
+    "objectID": "slides-02-01.html#factorial-with-arraylist",
+    "href": "slides-02-01.html#factorial-with-arraylist",
+    "title": "Arrays",
+    "section": "Factorial with ArrayList",
+    "text": "Factorial with ArrayList\nRewrite your previous factorial solution to use ArrayList instead"
+  },
+  {
+    "objectID": "slides-02-01.html#factorial-with-arraylist-solution",
+    "href": "slides-02-01.html#factorial-with-arraylist-solution",
+    "title": "Arrays",
+    "section": "Factorial with ArrayList – Solution",
+    "text": "Factorial with ArrayList – Solution\nimport java.util.ArrayList;\n\npublic class ArrayListExample {\n    \n    public static ArrayList&lt;Integer&gt; factorial(int n) {\n        int result = 1;\n        ArrayList&lt;Integer&gt; allResults = new ArrayList&lt;Integer&gt;();\n        \n        for (int i = 1; i &lt;= n; i++) {\n            result *= i;\n            allResults.add(result);\n            \n        }\n        \n        return allResults;\n        \n    }\n\n    public static void main(String[] args) {\n        ArrayList&lt;Integer&gt; myResult = factorial(10);\n        System.out.println(myResult);\n        \n        \n    }\n\n}"
   }
 ]
