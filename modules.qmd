@@ -58,6 +58,8 @@ Topic: `r schedule %>% filter(week == 2) %>% pull(topic)`
 
 ## Slides
 
+* [Arrays](slides-02-01.html)
+
 ## Assignments
 
 # Week 03

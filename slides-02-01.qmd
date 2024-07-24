@@ -1,0 +1,80 @@
+---
+title: "Arrays"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## Java Array Object
+
+* A primitive variables store precisely one value:
+    * a double stores one floating-point number
+    * an int stores one integer
+* A reference variable stores a "reference" to an object that may store many values
+* A Java array object stores a collection of elements
+    * Each element may be a reference to objects or primitive values
+    * We access array elements with subscript notation `[]`
+    
+## Arrays
+
+Array construction:
+
+```{java}
+int[] testScores = new int[100]; // all elements are initialized to 0
+double[] x = new double[9]; // all elements are initialized to 0.0
+String[] names = new String[500]; // all elements are null
+BankAccount[] customers = new BankAccount[100];
+```
+
+Accessing array elements:
+
+* Just like in Python, we use `[]` to access individual elements in the array
+
+## For loops
+
+Array objects have the `.length` property, which can be used to set up for loops:
+
+```{java}
+for (int i = 0; i < x.length ; i++) { 
+			System.out.println(x[i]);
+		}
+```
+
+## For loops -- calculate Factorial
+
+TASK: write Java code to calculate factorial of any integer `n` -- your `factorial(n)` method should return an array of integers of size `n` where which element represents the factorial of the index
+
+* Factorial is the product of all positive integers less than or equal to a given positive integer
+* Factorial 5 is written 5!, meaning 1 × 2 × 3 × 4 × 5 
+* Factorial zero is defined as equal to 1
+
+## Factorial -- solution
+
+```{java}
+import java.util.Arrays;
+
+public class ArrayForExample {
+	
+	public static int[] factorial(int n) {
+		int result = 1;
+		int[] allResults = new int[n];
+		
+		for (int i = 1; i <= n; i++) {
+			result *= i;
+			allResults[i-1] = result;
+			
+		}
+		
+		return allResults;
+		
+	}
+
+	public static void main(String[] args) {
+		int[] myResult = factorial(10);
+		System.out.println(Arrays.toString(myResult));
+	}
+
+}
+```
+

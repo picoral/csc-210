@@ -25,6 +25,7 @@ data type in Java.
 
 In Java, a HashMap implements a dictionary.  By the end of the assignment 
 you will have practiced using the following operations on a HashMap:
+
   * insertion,
   * deletion,
   * modifying the value for a particular key,
@@ -36,13 +37,13 @@ you will have practiced using the following operations on a HashMap:
 
 For this project we will be using flight data that you can download from 
 the following website: 
-https://www.kaggle.com/open-flights/flight-route-database.
+<https://www.kaggle.com/open-flights/flight-route-database>.
 When you click the Data tab and then try to download the routes.csv
 file, you will be asked to create a kaggle account.
 The easiest way to do so is to create a kaggle account with your UA email by 
 selecting the Google option under sign up with one click. 
 
-Similarly to PA1, you will be taking an input file on the command line. 
+Similarly to PA1, you will be taking an input file, but that will be done on the command line. 
 However, the input will be slightly different as it is in csv format. 
 You can read more about the input format on the kaggle description. 
 
@@ -115,6 +116,7 @@ KZN - 3
 ## Getting Started
 
 The process for getting started will be very similar to what was done in PA1.
+
 * There is a github assignment link on the class web page --> resources link.
   Accept the assignment to have a github repository be created for you.
 
