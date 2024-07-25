@@ -1335,5 +1335,61 @@
     "title": "Arrays",
     "section": "Arguments",
     "text": "Arguments\nNote that the main function is always defines with an array of String:\npublic static void main(String[] args) ...\nCreate a class to print all the arguments in args"
+  },
+  {
+    "objectID": "slides-02-01.html#generating-random-numbers",
+    "href": "slides-02-01.html#generating-random-numbers",
+    "title": "Arrays",
+    "section": "Generating random numbers",
+    "text": "Generating random numbers\nWe will need to import Random from java.util\nimport java.util.Random;\nWe then create an instance of Random\nRandom rand = new Random();\nMethods:\nrand.nextInt(1000); // generate random integers in range 0 to 999\nrand.nextDouble(); // generate Random doubles"
+  },
+  {
+    "objectID": "slides-02-01.html#write-code-arraylist-of-integers",
+    "href": "slides-02-01.html#write-code-arraylist-of-integers",
+    "title": "Arrays",
+    "section": "Write code – ArrayList of integers",
+    "text": "Write code – ArrayList of integers\nWrite a Java application that give an integer n, it creates an ArrayList of size n with random integers from 0 to n-1"
+  },
+  {
+    "objectID": "slides-02-01.html#solution",
+    "href": "slides-02-01.html#solution",
+    "title": "Arrays",
+    "section": "Solution",
+    "text": "Solution\nimport java.util.ArrayList;\nimport java.util.Random;\n\npublic class RandomNumbers {\n    \n    public static ArrayList&lt;Integer&gt; getNumbers(int limit) {\n        Random rand = new Random();\n        ArrayList&lt;Integer&gt; randInts = new ArrayList&lt;Integer&gt;();\n        \n        for (int i = 0; i &lt; limit; i++)  randInts.add(rand.nextInt(limit));\n        \n        return randInts;\n        \n    }\n\n    public static void main(String[] args) {\n        \n        System.out.println(getNumbers(10));\n\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-02-01.html#arraylist-of-random-integers",
+    "href": "slides-02-01.html#arraylist-of-random-integers",
+    "title": "Arrays",
+    "section": "ArrayList of random integers",
+    "text": "ArrayList of random integers\nWrite a Java application that give an integer n, it creates an ArrayList of size n with random integers from 0 to n-1"
+  },
+  {
+    "objectID": "slides-02-01.html#arraylist-of-random-integers-solution-1",
+    "href": "slides-02-01.html#arraylist-of-random-integers-solution-1",
+    "title": "Arrays",
+    "section": "ArrayList of random integers – Solution 1",
+    "text": "ArrayList of random integers – Solution 1\nModify this solution so that it gets the integer n from the args array\nimport java.util.ArrayList;\nimport java.util.Random;\n\npublic class RandomNumbers {\n    \n    public static ArrayList&lt;Integer&gt; getNumbers(int limit) {\n        Random rand = new Random();\n        ArrayList&lt;Integer&gt; randInts = new ArrayList&lt;Integer&gt;();\n        \n        for (int i = 0; i &lt; limit; i++)  randInts.add(rand.nextInt(limit));\n        \n        return randInts;\n        \n    }\n\n    public static void main(String[] args) {\n        \n        System.out.println(getNumbers(10));\n\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-02-01.html#arraylist-of-random-integers-solution-2",
+    "href": "slides-02-01.html#arraylist-of-random-integers-solution-2",
+    "title": "Arrays",
+    "section": "ArrayList of random integers – Solution 2",
+    "text": "ArrayList of random integers – Solution 2\nimport java.util.ArrayList;\nimport java.util.Random;\n\npublic class RandomNumbers {\n    \n    public static ArrayList&lt;Integer&gt; getNumbers(int limit) {\n        Random rand = new Random();\n        ArrayList&lt;Integer&gt; randInts = new ArrayList&lt;Integer&gt;();\n        \n        for (int i = 0; i &lt; limit; i++)  randInts.add(rand.nextInt(limit));\n        \n        return randInts;\n        \n    }\n\n    public static void main(String[] args) {\n        \n        int n = Integer.valueOf(args[0]);\n        System.out.println(getNumbers(n));\n\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-02-01.html#sorting",
+    "href": "slides-02-01.html#sorting",
+    "title": "Arrays",
+    "section": "Sorting",
+    "text": "Sorting\nWe can sort an ArrayList using Collections\nimport java.util.Collections; \nWe then call the method .sort()\nCollections.sort(myArrayList);\nRewrite your previous solution for ArrayList of random integers to create a sorted array"
+  },
+  {
+    "objectID": "slides-02-01.html#arraylist-of-sorted-random-integers-solution",
+    "href": "slides-02-01.html#arraylist-of-sorted-random-integers-solution",
+    "title": "Arrays",
+    "section": "ArrayList of sorted random integers – Solution",
+    "text": "ArrayList of sorted random integers – Solution\nimport java.util.ArrayList;\nimport java.util.Collections; \nimport java.util.Random;\n\npublic class RandomNumbers {\n    \n    public static ArrayList&lt;Integer&gt; getNumbers(int limit) {\n        Random rand = new Random();\n        ArrayList&lt;Integer&gt; randInts = new ArrayList&lt;Integer&gt;();\n        \n        for (int i = 0; i &lt; limit; i++)  randInts.add(rand.nextInt(limit));\n        \n        Collections.sort(randInts);\n        return randInts;\n        \n    }\n\n    public static void main(String[] args) {\n        \n        if (args.length &gt; 0) {\n            int n = Integer.valueOf(args[0]);\n            ArrayList&lt;Integer&gt; myResult = getNumbers(n);\n            System.out.println(myResult);\n        }\n        \n    }\n}"
   }
 ]

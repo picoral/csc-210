@@ -527,6 +527,110 @@
 <span id="cb8-21"><a></a>    }</span>
 <span id="cb8-22"><a></a></span>
 <span id="cb8-23"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="generating-random-numbers" class="slide level2">
+<h2>Generating random numbers</h2>
+<p>We will need to import <code>Random</code> from <code>java.util</code></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a></a>import java.util.Random;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We then create an instance of <code>Random</code></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a></a>Random rand = new Random();</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Methods:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a></a>rand.nextInt(1000); // generate random integers in range 0 to 999</span>
+<span id="cb11-2"><a></a>rand.nextDouble(); // generate Random doubles</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="arraylist-of-random-integers" class="slide level2">
+<h2><code>ArrayList</code> of random integers</h2>
+<p>Write a Java application that give an integer <code>n</code>, it creates an <code>ArrayList</code> of size <code>n</code> with random integers from 0 to <code>n</code>-1</p>
+</section>
+<section id="arraylist-of-random-integers-solution-1" class="slide level2">
+<h2><code>ArrayList</code> of random integers – Solution 1</h2>
+<p>Modify this solution so that it gets the integer <code>n</code> from the <code>args</code> array</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>import java.util.ArrayList;</span>
+<span id="cb12-2"><a></a>import java.util.Random;</span>
+<span id="cb12-3"><a></a></span>
+<span id="cb12-4"><a></a>public class RandomNumbers {</span>
+<span id="cb12-5"><a></a>    </span>
+<span id="cb12-6"><a></a>    public static ArrayList&lt;Integer&gt; getNumbers(int limit) {</span>
+<span id="cb12-7"><a></a>        Random rand = new Random();</span>
+<span id="cb12-8"><a></a>        ArrayList&lt;Integer&gt; randInts = new ArrayList&lt;Integer&gt;();</span>
+<span id="cb12-9"><a></a>        </span>
+<span id="cb12-10"><a></a>        for (int i = 0; i &lt; limit; i++)  randInts.add(rand.nextInt(limit));</span>
+<span id="cb12-11"><a></a>        </span>
+<span id="cb12-12"><a></a>        return randInts;</span>
+<span id="cb12-13"><a></a>        </span>
+<span id="cb12-14"><a></a>    }</span>
+<span id="cb12-15"><a></a></span>
+<span id="cb12-16"><a></a>    public static void main(String[] args) {</span>
+<span id="cb12-17"><a></a>        </span>
+<span id="cb12-18"><a></a>        System.out.println(getNumbers(10));</span>
+<span id="cb12-19"><a></a></span>
+<span id="cb12-20"><a></a>    }</span>
+<span id="cb12-21"><a></a></span>
+<span id="cb12-22"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="arraylist-of-random-integers-solution-2" class="slide level2">
+<h2><code>ArrayList</code> of random integers – Solution 2</h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a></a>import java.util.ArrayList;</span>
+<span id="cb13-2"><a></a>import java.util.Random;</span>
+<span id="cb13-3"><a></a></span>
+<span id="cb13-4"><a></a>public class RandomNumbers {</span>
+<span id="cb13-5"><a></a>    </span>
+<span id="cb13-6"><a></a>    public static ArrayList&lt;Integer&gt; getNumbers(int limit) {</span>
+<span id="cb13-7"><a></a>        Random rand = new Random();</span>
+<span id="cb13-8"><a></a>        ArrayList&lt;Integer&gt; randInts = new ArrayList&lt;Integer&gt;();</span>
+<span id="cb13-9"><a></a>        </span>
+<span id="cb13-10"><a></a>        for (int i = 0; i &lt; limit; i++)  randInts.add(rand.nextInt(limit));</span>
+<span id="cb13-11"><a></a>        </span>
+<span id="cb13-12"><a></a>        return randInts;</span>
+<span id="cb13-13"><a></a>        </span>
+<span id="cb13-14"><a></a>    }</span>
+<span id="cb13-15"><a></a></span>
+<span id="cb13-16"><a></a>    public static void main(String[] args) {</span>
+<span id="cb13-17"><a></a>        </span>
+<span id="cb13-18"><a></a>        int n = Integer.valueOf(args[0]);</span>
+<span id="cb13-19"><a></a>        System.out.println(getNumbers(n));</span>
+<span id="cb13-20"><a></a></span>
+<span id="cb13-21"><a></a>    }</span>
+<span id="cb13-22"><a></a></span>
+<span id="cb13-23"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="sorting" class="slide level2">
+<h2>Sorting</h2>
+<p>We can sort an <code>ArrayList</code> using <code>Collections</code></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a></a>import java.util.Collections; </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We then call the method <code>.sort()</code></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a></a>Collections.sort(myArrayList);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Rewrite your previous solution for <code>ArrayList</code> of random integers to create a sorted array</p>
+</section>
+<section id="arraylist-of-sorted-random-integers-solution" class="slide level2">
+<h2><code>ArrayList</code> of sorted random integers – Solution</h2>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a></a>import java.util.ArrayList;</span>
+<span id="cb16-2"><a></a>import java.util.Collections; </span>
+<span id="cb16-3"><a></a>import java.util.Random;</span>
+<span id="cb16-4"><a></a></span>
+<span id="cb16-5"><a></a>public class RandomNumbers {</span>
+<span id="cb16-6"><a></a>    </span>
+<span id="cb16-7"><a></a>    public static ArrayList&lt;Integer&gt; getNumbers(int limit) {</span>
+<span id="cb16-8"><a></a>        Random rand = new Random();</span>
+<span id="cb16-9"><a></a>        ArrayList&lt;Integer&gt; randInts = new ArrayList&lt;Integer&gt;();</span>
+<span id="cb16-10"><a></a>        </span>
+<span id="cb16-11"><a></a>        for (int i = 0; i &lt; limit; i++)  randInts.add(rand.nextInt(limit));</span>
+<span id="cb16-12"><a></a>        </span>
+<span id="cb16-13"><a></a>        Collections.sort(randInts);</span>
+<span id="cb16-14"><a></a>        return randInts;</span>
+<span id="cb16-15"><a></a>        </span>
+<span id="cb16-16"><a></a>    }</span>
+<span id="cb16-17"><a></a></span>
+<span id="cb16-18"><a></a>    public static void main(String[] args) {</span>
+<span id="cb16-19"><a></a>        </span>
+<span id="cb16-20"><a></a>        if (args.length &gt; 0) {</span>
+<span id="cb16-21"><a></a>            int n = Integer.valueOf(args[0]);</span>
+<span id="cb16-22"><a></a>            ArrayList&lt;Integer&gt; myResult = getNumbers(n);</span>
+<span id="cb16-23"><a></a>            System.out.println(myResult);</span>
+<span id="cb16-24"><a></a>        }</span>
+<span id="cb16-25"><a></a>        </span>
+<span id="cb16-26"><a></a>    }</span>
+<span id="cb16-27"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

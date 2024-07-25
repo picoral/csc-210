@@ -160,3 +160,134 @@ public class ArrayListExample {
 }
 ```
 
+## Generating random numbers
+
+We will need to import `Random` from `java.util`
+
+```{java}
+import java.util.Random;
+```
+
+We then create an instance of `Random`
+
+```{java}
+Random rand = new Random();
+```
+
+Methods:
+
+```{java}
+rand.nextInt(1000); // generate random integers in range 0 to 999
+rand.nextDouble(); // generate Random doubles
+```
+
+## `ArrayList` of random integers
+
+Write a Java application that give an integer `n`, it creates an `ArrayList` of size `n` with random integers from 0 to `n`-1
+
+## `ArrayList` of random integers -- Solution 1
+
+Modify this solution so that it gets the integer `n` from the `args` array
+
+```{java}
+import java.util.ArrayList;
+import java.util.Random;
+
+public class RandomNumbers {
+	
+	public static ArrayList<Integer> getNumbers(int limit) {
+		Random rand = new Random();
+		ArrayList<Integer> randInts = new ArrayList<Integer>();
+		
+		for (int i = 0; i < limit; i++)  randInts.add(rand.nextInt(limit));
+		
+		return randInts;
+		
+	}
+
+	public static void main(String[] args) {
+		
+		System.out.println(getNumbers(10));
+
+	}
+
+}
+```
+
+## `ArrayList` of random integers -- Solution 2
+
+```{java}
+import java.util.ArrayList;
+import java.util.Random;
+
+public class RandomNumbers {
+	
+	public static ArrayList<Integer> getNumbers(int limit) {
+		Random rand = new Random();
+		ArrayList<Integer> randInts = new ArrayList<Integer>();
+		
+		for (int i = 0; i < limit; i++)  randInts.add(rand.nextInt(limit));
+		
+		return randInts;
+		
+	}
+
+	public static void main(String[] args) {
+		
+		int n = Integer.valueOf(args[0]);
+		System.out.println(getNumbers(n));
+
+	}
+
+}
+```
+
+## Sorting 
+
+We can sort an `ArrayList` using `Collections`
+
+```{java}
+import java.util.Collections; 
+```
+
+We then call the method `.sort()`
+
+```{java}
+Collections.sort(myArrayList);
+```
+
+Rewrite your previous solution for `ArrayList` of random integers to create a sorted array
+
+## `ArrayList` of sorted random integers -- Solution
+
+```{java}
+import java.util.ArrayList;
+import java.util.Collections; 
+import java.util.Random;
+
+public class RandomNumbers {
+	
+	public static ArrayList<Integer> getNumbers(int limit) {
+		Random rand = new Random();
+		ArrayList<Integer> randInts = new ArrayList<Integer>();
+		
+		for (int i = 0; i < limit; i++)  randInts.add(rand.nextInt(limit));
+		
+		Collections.sort(randInts);
+		return randInts;
+		
+	}
+
+	public static void main(String[] args) {
+		
+		if (args.length > 0) {
+			int n = Integer.valueOf(args[0]);
+			ArrayList<Integer> myResult = getNumbers(n);
+			System.out.println(myResult);
+		}
+		
+	}
+}
+
+```
+
