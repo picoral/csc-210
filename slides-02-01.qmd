@@ -59,6 +59,13 @@ for (int n : x) {
 				}
 ```
 
+## Arguments 
+
+Note that the main function is always defines with an array of `String`:
+
+`public static void main(String[] args) ...`
+
+Create a class to print all the arguments in `args`
 
 ## For loops -- calculate Factorial
 

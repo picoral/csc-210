@@ -1328,5 +1328,12 @@
     "title": "HashMap",
     "section": "",
     "text": "HashMap&lt;K,V&gt;"
+  },
+  {
+    "objectID": "slides-02-01.html#arguments",
+    "href": "slides-02-01.html#arguments",
+    "title": "Arrays",
+    "section": "Arguments",
+    "text": "Arguments\nNote that the main function is always defines with an array of String:\npublic static void main(String[] args) ...\nCreate a class to print all the arguments in args"
   }
 ]
