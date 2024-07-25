@@ -1,0 +1,8 @@
+---
+title: "HashMap"
+format: revealjs
+---
+
+## HashMap class
+
+`HashMap<K,V>`

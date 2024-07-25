@@ -9,6 +9,7 @@ title: "Modules"
 library(tidyverse)
 library(readxl)
 schedule <- read_excel("schedule.xlsx")
+data <- read_excel("assessment-deadlines.xlsx")
 ```
 
 # Exam Dates
@@ -46,6 +47,8 @@ Optional:
 
 ## Assignments
 
+* [Instructions for PA1](programming-assignment-01.html) -- Deadline: `r data %>% filter(Assignment == "PA1") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
 # Week 02
 
 `r schedule %>% filter(week == 2) %>% pull(dates)`
@@ -69,6 +72,8 @@ Optional:
 * [Arrays](slides-02-01.html)
 
 ## Assignments
+
+* [Instructions for PA2](programming-assignment-01.html) -- Deadline: `r data %>% filter(Assignment == "PA1") %>%  select(Deadline)` -- Wednesday, 11:30pm
 
 # Week 03
 

@@ -64,12 +64,11 @@ of total flights.  The total flights includes both arriving
 and departing flights for each airport.  In the case of ties, keep 
 track of all airports with the maximum number of flights
 and output them alphabetically, see decomposition below for 
-help and PublicTestCases/cmdMAX-test1.out for formatting. 
+help. 
 
 ***DEPARTURES*** - The goal of this function is to print an alphabetical 
 list of all destinations an airport flies to. Each airport with its 
-destinations should be outputted on a separate line, see Output below 
-or PublicTestCases/cmdDEPARTURES-test1.out for a visual. 
+destinations should be outputted on a separate line, see Output below. 
     
 
 ***LIMIT*** - The limit function requires an additional integer argument 
@@ -81,6 +80,7 @@ with a total number of flights less than or equal to the limit should be
 ignored and only the remaining airports should be output in alphabetical order. 
 See Output below for formatting help and decomposition for help alphabetically 
 ordering the airports.
+
 Hint: To avoid a Concurrent Modification Exception, you cannot use remove 
 when looping over the keys, you must use a supplementary data structure. 
 

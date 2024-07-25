@@ -88,7 +88,7 @@
     "href": "modules.html#assignments",
     "title": "Modules",
     "section": "Assignments",
-    "text": "Assignments"
+    "text": "Assignments\n\nInstructions for PA1 – Deadline: September 11, 2024 – Wednesday, 11:30pm"
   },
   {
     "objectID": "modules.html#readings-1",
@@ -109,7 +109,7 @@
     "href": "modules.html#assignments-1",
     "title": "Modules",
     "section": "Assignments",
-    "text": "Assignments"
+    "text": "Assignments\n\nInstructions for PA2 – Deadline: September 11, 2024 – Wednesday, 11:30pm"
   },
   {
     "objectID": "modules.html#readings-2",
@@ -837,7 +837,7 @@
     "href": "programming-assignments.html",
     "title": "Programming Assignments",
     "section": "",
-    "text": "PA 1\n\nDeadline: September 11, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 2\n\nDeadline: September 18, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 3\n\nDeadline: September 25, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 4\n\nDeadline: October 02, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 5\n\nDeadline: October 09, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 6\n\nDeadline: October 23, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 7\n\nDeadline: October 30, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 8\n\nDeadline: November 13, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 9\n\nDeadline: November 20, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 10\n\nDeadline: December 04, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 11\n\nDeadline: December 11, 2024 – Wednesday, 11:30pm\nInstructions"
+    "text": "PA 1\n\nDeadline: September 11, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 2\n\nDeadline: September 18, 2024 – Wednesday, 11:30pm\nInstructions"
   },
   {
     "objectID": "short-assignment-03.html",
@@ -1026,7 +1026,7 @@
     "href": "programming-assignment-02.html#the-assignment",
     "title": "Programming Assignment 02",
     "section": "The Assignment",
-    "text": "The Assignment\nFor this project we will be using flight data that you can download from the following website: https://www.kaggle.com/open-flights/flight-route-database. When you click the Data tab and then try to download the routes.csv file, you will be asked to create a kaggle account. The easiest way to do so is to create a kaggle account with your UA email by selecting the Google option under sign up with one click.\nSimilarly to PA1, you will be taking an input file, but that will be done on the command line. However, the input will be slightly different as it is in csv format. You can read more about the input format on the kaggle description.\nThe program should have the following usage:\n    java PA2Main infile COMMAND optional\nIn addition to the input file, the second command-line argument will be a command to run on the data from your input file. The commands consist of MAX, DEPARTURES and LIMIT.\nEach command will be most easily implemented with a HashMap. Therefore, your implementation will read in the csv file and be using one or more HashMaps.\nMAX - This function prints the airport with the maximum number of total flights. The total flights includes both arriving and departing flights for each airport. In the case of ties, keep track of all airports with the maximum number of flights and output them alphabetically, see decomposition below for help and PublicTestCases/cmdMAX-test1.out for formatting.\nDEPARTURES - The goal of this function is to print an alphabetical list of all destinations an airport flies to. Each airport with its destinations should be outputted on a separate line, see Output below or PublicTestCases/cmdDEPARTURES-test1.out for a visual.\nLIMIT - The limit function requires an additional integer argument on the command line. This integer is used as a cut off to eliminate airports that have a total number of flights less than or equal to the limit. So, this function is similar to MAX as it relies on a mapping of airports to the total number of flights. After the totals are calculated, the airports with a total number of flights less than or equal to the limit should be ignored and only the remaining airports should be output in alphabetical order. See Output below for formatting help and decomposition for help alphabetically ordering the airports. Hint: To avoid a Concurrent Modification Exception, you cannot use remove when looping over the keys, you must use a supplementary data structure."
+    "text": "The Assignment\nFor this project we will be using flight data that you can download from the following website: https://www.kaggle.com/open-flights/flight-route-database. When you click the Data tab and then try to download the routes.csv file, you will be asked to create a kaggle account. The easiest way to do so is to create a kaggle account with your UA email by selecting the Google option under sign up with one click.\nSimilarly to PA1, you will be taking an input file, but that will be done on the command line. However, the input will be slightly different as it is in csv format. You can read more about the input format on the kaggle description.\nThe program should have the following usage:\n    java PA2Main infile COMMAND optional\nIn addition to the input file, the second command-line argument will be a command to run on the data from your input file. The commands consist of MAX, DEPARTURES and LIMIT.\nEach command will be most easily implemented with a HashMap. Therefore, your implementation will read in the csv file and be using one or more HashMaps.\nMAX - This function prints the airport with the maximum number of total flights. The total flights includes both arriving and departing flights for each airport. In the case of ties, keep track of all airports with the maximum number of flights and output them alphabetically, see decomposition below for help.\nDEPARTURES - The goal of this function is to print an alphabetical list of all destinations an airport flies to. Each airport with its destinations should be outputted on a separate line, see Output below.\nLIMIT - The limit function requires an additional integer argument on the command line. This integer is used as a cut off to eliminate airports that have a total number of flights less than or equal to the limit. So, this function is similar to MAX as it relies on a mapping of airports to the total number of flights. After the totals are calculated, the airports with a total number of flights less than or equal to the limit should be ignored and only the remaining airports should be output in alphabetical order. See Output below for formatting help and decomposition for help alphabetically ordering the airports.\nHint: To avoid a Concurrent Modification Exception, you cannot use remove when looping over the keys, you must use a supplementary data structure."
   },
   {
     "objectID": "programming-assignment-02.html#input-and-output",
@@ -1314,5 +1314,19 @@
     "title": "Arrays",
     "section": "",
     "text": "A primitive variables store precisely one value:\n\na double stores one floating-point number\nan int stores one integer\n\nA reference variable stores a “reference” to an object that may store many values\nA Java array object stores a collection of elements\n\nEach element may be a reference to objects or primitive values\nWe access array elements with subscript notation []"
+  },
+  {
+    "objectID": "slides-02-02.html",
+    "href": "slides-02-02.html",
+    "title": "HashMap",
+    "section": "",
+    "text": "HashMap&lt;K,V&gt;"
+  },
+  {
+    "objectID": "slides-02-02.html#hashmap-class",
+    "href": "slides-02-02.html#hashmap-class",
+    "title": "HashMap",
+    "section": "",
+    "text": "HashMap&lt;K,V&gt;"
   }
 ]
