@@ -70,6 +70,7 @@ Optional:
 ## Slides
 
 * [Arrays](slides-02-01.html)
+* [HashMap](slides-02-02.html)
 
 ## Assignments
 

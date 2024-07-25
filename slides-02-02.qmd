@@ -1,8 +1,121 @@
 ---
 title: "HashMap"
-format: revealjs
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
 ---
 
-## HashMap class
+## `HashMap` class
 
-`HashMap<K,V>`
+Read the [documentation for Class `HashMap<K,V>`](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html) and answer what methods do the following:
+
+* adds a key value map in the HashMap
+* removes the entry for a key
+* returns the number of key-value mappings in the HashMap
+
+## `HashMap` class -- important methods
+
+* `.put(key, value)` adds a key value map in the HashMap
+* `.remove(key)` removes the entry for a key
+* `.size()` returns the number of key-value mappings in the HashMap
+
+```{java}
+HashMap<String, Integer> soccerPlayers = new HashMap<String, Integer>();
+
+soccerPlayers.put("Pelé", 10)
+soccerPlayers.put("Marta", 10)
+soccerPlayers.put("Alex Morgan", 13)
+
+soccerPlayers.remove("Pelé");
+
+System.out.println(soccerPlayers.size());
+System.out.println(soccerPlayers);
+```
+
+
+## Counting characters
+
+Write a Java application that given a string `word`, it creates a `HashMap` with single characters as keys, and the count of each character as value
+
+## Counting characters -- Solution 1
+
+```{java}
+import java.util.HashMap;
+
+public class CountCharacters {
+	
+	public static void main(String[] args) {
+		if (args.length > 0) {
+			String word = args[0];
+			HashMap<Character, Integer> charCount = new HashMap<Character, Integer>();
+			
+			for (int i = 0; i < word.length(); i++) {
+				Integer previousValue = charCount.get(word.charAt(i));
+				if (previousValue == null) previousValue = 0;
+				charCount.put(word.charAt(i), previousValue + 1);
+				
+			}
+			
+			System.out.println(charCount);
+			
+		}
+		
+	}
+
+}
+```
+
+## Counting characters -- Solution 2
+
+```{java}
+import java.util.HashMap;
+
+public class CountCharacters {
+	
+	public static void main(String[] args) {
+		if (args.length > 0) {
+			String word = args[0];
+			HashMap<Character, Integer> charCount = new HashMap<Character, Integer>();
+			
+			for (char c : word.toCharArray()) {
+				Integer previousValue = charCount.get(c);
+				if (previousValue == null) previousValue = 0;
+				charCount.put(c, previousValue + 1);
+				
+			}
+			
+			System.out.println(charCount);
+			
+		}
+		
+	}
+
+}
+```
+
+## Counting characters -- Solution 3
+
+```{java}
+import java.util.HashMap;
+
+public class CountCharacters {
+	
+	public static void main(String[] args) {
+		if (args.length > 0) {
+			String word = args[0];
+			HashMap<Character, Integer> charCount = new HashMap<Character, Integer>();
+			
+			for (char c : word.toCharArray()) {
+				charCount.putIfAbsent(c, 0);
+				charCount.put(c, charCount.get(c) + 1);
+				
+			}
+			
+			System.out.println(charCount);
+			
+		}
+	}
+}
+```
+

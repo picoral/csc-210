@@ -102,7 +102,7 @@
     "href": "modules.html#slides-1",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nArrays"
+    "text": "Slides\n\nArrays\nHashMap"
   },
   {
     "objectID": "modules.html#assignments-1",
@@ -1256,8 +1256,8 @@
     "objectID": "slides-02-01.html#java-array-object",
     "href": "slides-02-01.html#java-array-object",
     "title": "Arrays",
-    "section": "Java Array Object",
-    "text": "Java Array Object\n\nA primitive variables store precisely one value:\n\na double stores one floating-point number\nan int stores one integer\n\nA reference variable stores a “reference” to an object that may store many values\nA Java array object stores a collection of elements\n\nEach element may be a reference to objects or primitive values\nWe access array elements with subscript notation []"
+    "section": "",
+    "text": "A primitive variables store precisely one value:\n\na double stores one floating-point number\nan int stores one integer\n\nA reference variable stores a “reference” to an object that may store many values\nA Java array object stores a collection of elements\n\nEach element may be a reference to objects or primitive values\nWe access array elements with subscript notation []"
   },
   {
     "objectID": "slides-02-01.html#arrays",
@@ -1326,8 +1326,8 @@
     "objectID": "slides-02-02.html#hashmap-class",
     "href": "slides-02-02.html#hashmap-class",
     "title": "HashMap",
-    "section": "",
-    "text": "HashMap&lt;K,V&gt;"
+    "section": "HashMap class",
+    "text": "HashMap class\nRead the documentation for Class HashMap&lt;K,V&gt; and answer what methods do the following:\n\nadds a key value map in the HashMap\nremoves the entry for a key\nreturns the number of key-value mappings in the HashMap"
   },
   {
     "objectID": "slides-02-01.html#arguments",
@@ -1362,7 +1362,7 @@
     "href": "slides-02-01.html#arraylist-of-random-integers",
     "title": "Arrays",
     "section": "ArrayList of random integers",
-    "text": "ArrayList of random integers\nWrite a Java application that give an integer n, it creates an ArrayList of size n with random integers from 0 to n-1"
+    "text": "ArrayList of random integers\nWrite a Java application that given an integer n, it creates an ArrayList of size n with random integers from 0 to n-1"
   },
   {
     "objectID": "slides-02-01.html#arraylist-of-random-integers-solution-1",
@@ -1391,5 +1391,40 @@
     "title": "Arrays",
     "section": "ArrayList of sorted random integers – Solution",
     "text": "ArrayList of sorted random integers – Solution\nimport java.util.ArrayList;\nimport java.util.Collections; \nimport java.util.Random;\n\npublic class RandomNumbers {\n    \n    public static ArrayList&lt;Integer&gt; getNumbers(int limit) {\n        Random rand = new Random();\n        ArrayList&lt;Integer&gt; randInts = new ArrayList&lt;Integer&gt;();\n        \n        for (int i = 0; i &lt; limit; i++)  randInts.add(rand.nextInt(limit));\n        \n        Collections.sort(randInts);\n        return randInts;\n        \n    }\n\n    public static void main(String[] args) {\n        \n        if (args.length &gt; 0) {\n            int n = Integer.valueOf(args[0]);\n            ArrayList&lt;Integer&gt; myResult = getNumbers(n);\n            System.out.println(myResult);\n        }\n        \n    }\n}"
+  },
+  {
+    "objectID": "slides-02-02.html#counting-characters",
+    "href": "slides-02-02.html#counting-characters",
+    "title": "HashMap",
+    "section": "Counting characters",
+    "text": "Counting characters\nWrite a Java application that given a string word, it creates a HashMap with single characters as keys, and the count of each character as value"
+  },
+  {
+    "objectID": "slides-02-02.html#counting-characters-solution-1",
+    "href": "slides-02-02.html#counting-characters-solution-1",
+    "title": "HashMap",
+    "section": "Counting characters – Solution 1",
+    "text": "Counting characters – Solution 1\nimport java.util.HashMap;\n\npublic class CountCharacters {\n    \n    public static void main(String[] args) {\n        if (args.length &gt; 0) {\n            String word = args[0];\n            HashMap&lt;Character, Integer&gt; charCount = new HashMap&lt;Character, Integer&gt;();\n            \n            for (int i = 0; i &lt; word.length(); i++) {\n                Integer previousValue = charCount.get(word.charAt(i));\n                if (previousValue == null) previousValue = 0;\n                charCount.put(word.charAt(i), previousValue + 1);\n                \n            }\n            \n            System.out.println(charCount);\n            \n        }\n        \n    }\n\n}"
+  },
+  {
+    "objectID": "slides-02-02.html#counting-characters-solution-2",
+    "href": "slides-02-02.html#counting-characters-solution-2",
+    "title": "HashMap",
+    "section": "Counting characters – Solution 2",
+    "text": "Counting characters – Solution 2\nimport java.util.HashMap;\n\npublic class CountCharacters {\n    \n    public static void main(String[] args) {\n        if (args.length &gt; 0) {\n            String word = args[0];\n            HashMap&lt;Character, Integer&gt; charCount = new HashMap&lt;Character, Integer&gt;();\n            \n            for (char c : word.toCharArray()) {\n                Integer previousValue = charCount.get(c);\n                if (previousValue == null) previousValue = 0;\n                charCount.put(c, previousValue + 1);\n                \n            }\n            \n            System.out.println(charCount);\n            \n        }\n        \n    }\n\n}"
+  },
+  {
+    "objectID": "slides-02-02.html#hashmap-class-important-methods",
+    "href": "slides-02-02.html#hashmap-class-important-methods",
+    "title": "HashMap",
+    "section": "HashMap class – important methods",
+    "text": "HashMap class – important methods\n\n.put(key, value) adds a key value map in the HashMap\n.remove(key) removes the entry for a key\n.size() returns the number of key-value mappings in the HashMap\n\nHashMap&lt;String, Integer&gt; soccerPlayers = new HashMap&lt;String, Integer&gt;();\n\nsoccerPlayers.put(\"Pelé\", 10)\nsoccerPlayers.put(\"Marta\", 10)\nsoccerPlayers.put(\"Alex Morgan\", 13)\n\nsoccerPlayers.remove(\"Pelé\");\n\nSystem.out.println(soccerPlayers.size());\nSystem.out.println(soccerPlayers);"
+  },
+  {
+    "objectID": "slides-02-02.html#counting-characters-solution-3",
+    "href": "slides-02-02.html#counting-characters-solution-3",
+    "title": "HashMap",
+    "section": "Counting characters – Solution 3",
+    "text": "Counting characters – Solution 3\nimport java.util.HashMap;\n\npublic class CountCharacters {\n    \n    public static void main(String[] args) {\n        if (args.length &gt; 0) {\n            String word = args[0];\n            HashMap&lt;Character, Integer&gt; charCount = new HashMap&lt;Character, Integer&gt;();\n            \n            for (char c : word.toCharArray()) {\n                charCount.putIfAbsent(c, 0);\n                charCount.put(c, charCount.get(c) + 1);\n                \n            }\n            \n            System.out.println(charCount);\n            \n        }\n    }\n}"
   }
 ]

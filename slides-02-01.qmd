@@ -183,7 +183,7 @@ rand.nextDouble(); // generate Random doubles
 
 ## `ArrayList` of random integers
 
-Write a Java application that give an integer `n`, it creates an `ArrayList` of size `n` with random integers from 0 to `n`-1
+Write a Java application that given an integer `n`, it creates an `ArrayList` of size `n` with random integers from 0 to `n`-1
 
 ## `ArrayList` of random integers -- Solution 1
 
