@@ -1426,5 +1426,19 @@
     "title": "HashMap",
     "section": "Counting characters – Solution 3",
     "text": "Counting characters – Solution 3\nimport java.util.HashMap;\n\npublic class CountCharacters {\n    \n    public static void main(String[] args) {\n        if (args.length &gt; 0) {\n            String word = args[0];\n            HashMap&lt;Character, Integer&gt; charCount = new HashMap&lt;Character, Integer&gt;();\n            \n            for (char c : word.toCharArray()) {\n                charCount.putIfAbsent(c, 0);\n                charCount.put(c, charCount.get(c) + 1);\n                \n            }\n            \n            System.out.println(charCount);\n            \n        }\n    }\n}"
+  },
+  {
+    "objectID": "slides-02-02.html#counting-odds-and-evens",
+    "href": "slides-02-02.html#counting-odds-and-evens",
+    "title": "HashMap",
+    "section": "Counting odds and evens",
+    "text": "Counting odds and evens\nWrite a Java application that given an undetermined number of integers, it creates a HashMap with the count of odds and evens"
+  },
+  {
+    "objectID": "slides-02-02.html#counting-odds-and-evens-solution",
+    "href": "slides-02-02.html#counting-odds-and-evens-solution",
+    "title": "HashMap",
+    "section": "Counting odds and evens – solution",
+    "text": "Counting odds and evens – solution\nimport java.util.HashMap;\n\npublic class CountOddsEvens {\n\n    public static void main(String[] args) {\n        HashMap&lt;String, Integer&gt; oddEvenCount = new HashMap&lt;String, Integer&gt;();\n        oddEvenCount.put(\"odds\", 0);\n        oddEvenCount.put(\"evens\", 0);\n        \n        for (String arg : args) {\n            int n = Integer.valueOf(arg);\n            if (n % 2 == 0) oddEvenCount.put(\"evens\", oddEvenCount.get(\"evens\") + 1);\n            else oddEvenCount.put(\"odds\", oddEvenCount.get(\"odds\") + 1);\n        }\n        \n        System.out.println(oddEvenCount);\n\n    }\n}"
   }
 ]

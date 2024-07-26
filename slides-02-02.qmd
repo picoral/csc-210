@@ -119,3 +119,31 @@ public class CountCharacters {
 }
 ```
 
+## Counting odds and evens
+
+Write a Java application that given an undetermined number of integers, it creates a `HashMap` with the count of odds and evens
+
+## Counting odds and evens -- solution
+
+```{java}
+import java.util.HashMap;
+
+public class CountOddsEvens {
+
+	public static void main(String[] args) {
+		HashMap<String, Integer> oddEvenCount = new HashMap<String, Integer>();
+		oddEvenCount.put("odds", 0);
+		oddEvenCount.put("evens", 0);
+		
+		for (String arg : args) {
+			int n = Integer.valueOf(arg);
+			if (n % 2 == 0) oddEvenCount.put("evens", oddEvenCount.get("evens") + 1);
+			else oddEvenCount.put("odds", oddEvenCount.get("odds") + 1);
+		}
+		
+		System.out.println(oddEvenCount);
+
+	}
+}
+```
+

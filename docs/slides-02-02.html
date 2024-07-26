@@ -501,6 +501,32 @@
 <span id="cb4-18"><a></a>        }</span>
 <span id="cb4-19"><a></a>    }</span>
 <span id="cb4-20"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="counting-odds-and-evens" class="slide level2">
+<h2>Counting odds and evens</h2>
+<p>Write a Java application that given an undetermined number of integers, it creates a <code>HashMap</code> with the count of odds and evens</p>
+</section>
+<section id="counting-odds-and-evens-solution" class="slide level2">
+<h2>Counting odds and evens – solution</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>import java.util.HashMap;</span>
+<span id="cb5-2"><a></a></span>
+<span id="cb5-3"><a></a>public class CountOddsEvens {</span>
+<span id="cb5-4"><a></a></span>
+<span id="cb5-5"><a></a>    public static void main(String[] args) {</span>
+<span id="cb5-6"><a></a>        HashMap&lt;String, Integer&gt; oddEvenCount = new HashMap&lt;String, Integer&gt;();</span>
+<span id="cb5-7"><a></a>        oddEvenCount.put("odds", 0);</span>
+<span id="cb5-8"><a></a>        oddEvenCount.put("evens", 0);</span>
+<span id="cb5-9"><a></a>        </span>
+<span id="cb5-10"><a></a>        for (String arg : args) {</span>
+<span id="cb5-11"><a></a>            int n = Integer.valueOf(arg);</span>
+<span id="cb5-12"><a></a>            if (n % 2 == 0) oddEvenCount.put("evens", oddEvenCount.get("evens") + 1);</span>
+<span id="cb5-13"><a></a>            else oddEvenCount.put("odds", oddEvenCount.get("odds") + 1);</span>
+<span id="cb5-14"><a></a>        }</span>
+<span id="cb5-15"><a></a>        </span>
+<span id="cb5-16"><a></a>        System.out.println(oddEvenCount);</span>
+<span id="cb5-17"><a></a></span>
+<span id="cb5-18"><a></a>    }</span>
+<span id="cb5-19"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
