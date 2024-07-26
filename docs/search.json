@@ -102,7 +102,7 @@
     "href": "modules.html#slides-1",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nArrays\nHashMap"
+    "text": "Slides\n\nArrays\nHashMap\nHashSet"
   },
   {
     "objectID": "modules.html#assignments-1",
@@ -1440,5 +1440,47 @@
     "title": "HashMap",
     "section": "Counting odds and evens – solution",
     "text": "Counting odds and evens – solution\nimport java.util.HashMap;\n\npublic class CountOddsEvens {\n\n    public static void main(String[] args) {\n        HashMap&lt;String, Integer&gt; oddEvenCount = new HashMap&lt;String, Integer&gt;();\n        oddEvenCount.put(\"odds\", 0);\n        oddEvenCount.put(\"evens\", 0);\n        \n        for (String arg : args) {\n            int n = Integer.valueOf(arg);\n            if (n % 2 == 0) oddEvenCount.put(\"evens\", oddEvenCount.get(\"evens\") + 1);\n            else oddEvenCount.put(\"odds\", oddEvenCount.get(\"odds\") + 1);\n        }\n        \n        System.out.println(oddEvenCount);\n\n    }\n}"
+  },
+  {
+    "objectID": "slides-02-03.html#hashset-class",
+    "href": "slides-02-03.html#hashset-class",
+    "title": "HashSet",
+    "section": "HashSet class",
+    "text": "HashSet class\nRead the documentation for Class HashSet&lt;E&gt; and answer what methods do the following:\n\nadds an element a HashSet\nremoves an element\nreturns the number of elements in a HashSet\nchecks whether an element is in a HashSet"
+  },
+  {
+    "objectID": "slides-02-03.html#hashset-class-1",
+    "href": "slides-02-03.html#hashset-class-1",
+    "title": "HashSet",
+    "section": "HashSet class",
+    "text": "HashSet class\n\n.add(value) adds an element a HashSet\n.remove(value) removes an element\n.contains(value) checks whether an element is in a HashSet\n.size() returns the number of elements in a HashSet"
+  },
+  {
+    "objectID": "slides-02-02.html#getting-hashmap-keys",
+    "href": "slides-02-02.html#getting-hashmap-keys",
+    "title": "HashMap",
+    "section": "Getting HashMap keys",
+    "text": "Getting HashMap keys\nWe can use the method .keySet() to get a set of all keys in a HashMap as an ArrayList\nArrayList&lt;String&gt; myKeys = new ArrayList&lt;String&gt;(myHashMap.keySet());\nThen we can sort the ArrayList using Collections\nimport java.util.Collections; \nWe then call the method .sort()\nCollections.sort(myKeys);\nModify your counting characters solution to print each character and its count, one per line, in alphabetical order."
+  },
+  {
+    "objectID": "slides-02-02.html#printing-sorted-key-and-value-solution",
+    "href": "slides-02-02.html#printing-sorted-key-and-value-solution",
+    "title": "HashMap",
+    "section": "Printing sorted key and value – solution",
+    "text": "Printing sorted key and value – solution\nimport java.util.ArrayList;\nimport java.util.Collections; \nimport java.util.HashMap;\n\n\npublic class CountCharacters {\n    \n    public static void main(String[] args) {\n        if (args.length &gt; 0) {\n            String word = args[0];\n            HashMap&lt;Character, Integer&gt; charCount = new HashMap&lt;Character, Integer&gt;();\n            \n            for (char c : word.toCharArray()) {\n                charCount.putIfAbsent(c, 0);\n                charCount.put(c, charCount.get(c) + 1);\n                \n            }\n            \n            ArrayList&lt;Character&gt; allChars = new ArrayList&lt;Character&gt;(charCount.keySet());\n            Collections.sort(allChars);\n            \n            for (Character c : allChars) {\n                System.out.println(c + \" - \" + charCount.get(c));\n            }\n            \n        }\n    }\n}"
+  },
+  {
+    "objectID": "slides-02-03.html#write-java-code",
+    "href": "slides-02-03.html#write-java-code",
+    "title": "HashSet",
+    "section": "Write Java code",
+    "text": "Write Java code\nWrite an application that reads in a text file with names (one name per line), and prints out each name just once (there are repeated names in the file), in alphabetical order (no need to split the names)"
+  },
+  {
+    "objectID": "slides-02-03.html#solution",
+    "href": "slides-02-03.html#solution",
+    "title": "HashSet",
+    "section": "Solution",
+    "text": "Solution\nimport java.util.ArrayList;\nimport java.util.Collections; \nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.HashSet;\nimport java.util.Scanner;\n\n\npublic class UniqueNames {\n\n    public static void main(String[] args)  throws FileNotFoundException {\n        File myFile = new File(\"names.txt\");\n        Scanner myReader = new Scanner(myFile);\n        \n        HashSet&lt;String&gt; allNames = new HashSet&lt;String&gt;();\n        \n        while (myReader.hasNext()) {\n            String line = myReader.nextLine();\n            allNames.add(line.trim());\n        }\n        \n        myReader.close();\n        \n        ArrayList&lt;String&gt; sortedNames = new ArrayList&lt;String&gt;(allNames);\n        Collections.sort(sortedNames);\n        \n        for (String name : sortedNames) System.out.println(name);\n        \n\n    }\n\n}"
   }
 ]

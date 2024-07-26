@@ -119,6 +119,62 @@ public class CountCharacters {
 }
 ```
 
+## Getting HashMap keys
+
+We can use the method `.keySet()` to get a set of all keys in a `HashMap` as an `ArrayList`
+
+```{java}
+ArrayList<String> myKeys = new ArrayList<String>(myHashMap.keySet());
+```
+
+Then we can sort the `ArrayList` using `Collections`
+
+```{java}
+import java.util.Collections; 
+```
+
+We then call the method `.sort()`
+
+```{java}
+Collections.sort(myKeys);
+```
+
+Modify your counting characters solution to print each character and its count, one per line, in alphabetical order.
+
+## Printing sorted key and value -- solution
+
+```{java}
+import java.util.ArrayList;
+import java.util.Collections; 
+import java.util.HashMap;
+
+
+public class CountCharacters {
+	
+	public static void main(String[] args) {
+		if (args.length > 0) {
+			String word = args[0];
+			HashMap<Character, Integer> charCount = new HashMap<Character, Integer>();
+			
+			for (char c : word.toCharArray()) {
+				charCount.putIfAbsent(c, 0);
+				charCount.put(c, charCount.get(c) + 1);
+				
+			}
+			
+			ArrayList<Character> allChars = new ArrayList<Character>(charCount.keySet());
+			Collections.sort(allChars);
+			
+			for (Character c : allChars) {
+				System.out.println(c + " - " + charCount.get(c));
+			}
+			
+		}
+	}
+}
+```
+
+
 ## Counting odds and evens
 
 Write a Java application that given an undetermined number of integers, it creates a `HashMap` with the count of odds and evens

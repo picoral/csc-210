@@ -1,0 +1,66 @@
+---
+title: "HashSet"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## `HashSet` class
+
+Read the [documentation for Class `HashSet<E>`](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html) and answer what methods do the following:
+
+* adds an element a HashSet
+* removes an element
+* returns the number of elements in a HashSet
+* checks whether an element is in a HashSet
+
+## `HashSet` class
+
+* `.add(value)` adds an element a HashSet
+* `.remove(value)` removes an element
+* `.contains(value)` checks whether an element is in a HashSet
+* `.size()` returns the number of elements in a HashSet
+
+## Write Java code
+
+Write an application that reads in [a text file with names (one name per line)](files/names.txt), and prints out each name just once (there are repeated names in the file), in alphabetical order (no need to split the names)
+
+## Solution
+
+```{java}
+import java.util.ArrayList;
+import java.util.Collections; 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.HashSet;
+import java.util.Scanner;
+
+
+public class UniqueNames {
+
+	public static void main(String[] args)  throws FileNotFoundException {
+		File myFile = new File("names.txt");
+		Scanner myReader = new Scanner(myFile);
+		
+		HashSet<String> allNames = new HashSet<String>();
+		
+		while (myReader.hasNext()) {
+			String line = myReader.nextLine();
+			allNames.add(line.trim());
+		}
+		
+		myReader.close();
+		
+		ArrayList<String> sortedNames = new ArrayList<String>(allNames);
+		Collections.sort(sortedNames);
+		
+		for (String name : sortedNames) System.out.println(name);
+		
+
+	}
+
+}
+
+```
+

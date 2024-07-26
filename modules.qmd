@@ -71,6 +71,7 @@ Optional:
 
 * [Arrays](slides-02-01.html)
 * [HashMap](slides-02-02.html)
+* [HashSet](slides-02-03.html)
 
 ## Assignments
 
