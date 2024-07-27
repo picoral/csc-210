@@ -1529,8 +1529,8 @@
     "objectID": "slides-03-01.html#two-recursive-algorithms",
     "href": "slides-03-01.html#two-recursive-algorithms",
     "title": "Exhaustive Search",
-    "section": "",
-    "text": "Exhaustive Search\nBacktracking\n\nThese are brute-force algorithms\nUsed for problems that have a small and well-defined search space, where it is feasible to check all possible solutions"
+    "section": "Two recursive algorithms",
+    "text": "Two recursive algorithms\n\nExhaustive Search\nBacktracking\n\nThese are brute-force algorithms\nUsed for problems that have a small and well-defined search space, where it is feasible to check all possible solutions"
   },
   {
     "objectID": "slides-03-01.html#exhaustive-search",
@@ -1620,8 +1620,8 @@
     "objectID": "slides-03-02.html#two-recursive-algorithms",
     "href": "slides-03-02.html#two-recursive-algorithms",
     "title": "Backtracking",
-    "section": "",
-    "text": "Exhaustive Search\nBacktracking\n\nThese are brute-force algorithms\nUsed for problems that have a small and well-defined search space, where it is feasible to check all possible solutions"
+    "section": "Two recursive algorithms",
+    "text": "Two recursive algorithms\n\nExhaustive Search\nBacktracking\n\nThese are brute-force algorithms\nUsed for problems that have a small and well-defined search space, where it is feasible to check all possible solutions"
   },
   {
     "objectID": "slides-03-02.html#backtracking",
