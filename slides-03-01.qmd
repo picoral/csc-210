@@ -1,0 +1,174 @@
+---
+title: "Exhaustive Search"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## Two recursive algorithms
+
+* Exhaustive Search	
+* Backtracking	
+
+These are `brute-force` algorithms
+
+Used for problems that have a small and well-defined search space, where it is feasible to check all possible solutions
+
+## Exhaustive	Search
+
+Also called `recursive enumeration`
+
+Main idea: systematically identify every possible solution to a problem
+
+## Print all possible binary numbers
+
+Write a Java application that	given an integer `n`, it prints all binary numbers that have `n` digits.
+
+Make sure your application outputs one binary number per line, in ascending order.
+
+HINTS:
+
+* Build a string (starting with empty string) and print it out (when? when do you stop building the string? what's the condition?)
+* Two possibilities for each character concatenated to the string: `'0'` or `'1'`
+
+## Print all possible binary numbers
+
+The call:
+```
+getBinary(3, "");
+```
+
+Prints out:
+```
+000
+001
+010
+011
+100
+101
+110
+111
+```
+
+
+## All possible binary numbers -- solution
+
+```{java}
+public class AllBinary {
+
+	public static void getBinary(int digits, String number) {
+		if (digits == 0) { // base case, no digits left to add
+			System.out.println(number);
+		} else {
+			getBinary(digits - 1, number + "0");
+			getBinary(digits - 1, number + "1");
+		}
+	}
+	
+	public static void main(String[] args) {
+		getBinary(3, "");
+	}
+
+}
+```
+
+## Creating an `ArrayList` of solutions
+
+What if instead of printing out a solution, I wanted to create an `ArrayList` of solutions?
+
+## Creating an `ArrayList` of solutions
+
+```{java}
+import java.util.ArrayList;
+
+public class AllBinary {
+
+	public static ArrayList<String> getBinary(int digits, 
+			                                  String number, 
+			                                  ArrayList<String> result) {
+		if (digits == 0) {
+			result.add(number);
+		} else {
+			getBinary(digits - 1, number + "0", result);
+			getBinary(digits - 1, number + "1", result);
+		}
+		return result;
+		
+	}
+	
+	public static void main(String[] args) {
+		ArrayList<String> result = new ArrayList<String>();
+		getBinary(3, "", result);
+		System.out.println(result);
+	}
+
+}
+```
+
+
+## Print all possible decimal numbers
+
+Write a Java application that	given an integer `n`, it prints all decimal numbers that have `n` digits.
+
+HINT:
+
+* Same as before (for binary numbers), the difference is that instead of just two choices per character, we now have 10 character choices for each position in the number
+* Use a for loop to iterate over the digits 0 to 9
+
+## Print all possible decimal numbers
+
+The call:
+```
+getDecimal(2, "");
+```
+
+Prints out:
+```
+00
+01
+02
+03
+..
+94
+95
+96
+97
+98
+99
+```
+
+## All possible decimal numbers -- solution
+
+```{java}
+import java.util.ArrayList;
+
+public class AllDecimal {
+	
+	public static ArrayList<String> getDecimal(int digits, 
+                                                   String number, 
+                                                   ArrayList<String> result) {
+		if (digits == 0) {
+			result.add(number);
+		} else {
+			for (int n = 0; n < 10; n++) {
+				getDecimal(digits - 1, number + n, result);
+			}
+			
+		}
+		return result;
+		
+	} // getDecimal
+
+	public static void main(String[] args) {
+		ArrayList<String> result = new ArrayList<String>();
+		getDecimal(2, "", result);
+		
+		for (String number : result) {
+			System.out.println(number);
+		}
+
+	} // main
+}
+```
+

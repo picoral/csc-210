@@ -116,21 +116,21 @@
     "href": "modules.html#readings-2",
     "title": "Modules",
     "section": "Readings",
-    "text": "Readings"
+    "text": "Readings\nOptional:\n\nAlgorithms by Jeff Erickson, Chapter 2 Backtracking"
   },
   {
     "objectID": "modules.html#slides-2",
     "href": "modules.html#slides-2",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides"
+    "text": "Slides\n\nExhaustive Search\nBacktracking"
   },
   {
     "objectID": "modules.html#assignments-2",
     "href": "modules.html#assignments-2",
     "title": "Modules",
     "section": "Assignments",
-    "text": "Assignments"
+    "text": "Assignments\n\nInstructions for PA3 – Deadline: September 25, 2024 – Wednesday, 11:30pm"
   },
   {
     "objectID": "modules.html#readings-3",
@@ -305,7 +305,7 @@
     "href": "programming-assignment-03.html#learning-objectives",
     "title": "Programming Assignment 03",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nThe goal of this assignment is to practice the following decomposition, algorithm pattern, and data structure approaches.\n\nAlgorithmic pattern: exhaustive search\nDecomposition approach: separating out iteration over all possibilities from the evaluation of each possibility\nData structure: arrays and collections\n\nThe assignment will also require checking that the input data is valid."
+    "text": "Learning Objectives\nThe goal of this assignment is to practice the following decomposition, algorithm pattern, and data structure approaches.\n\nAlgorithmic pattern: recursive backtracking\nDecomposition approach: multiple methods\nData structure: arrays and collections"
   },
   {
     "objectID": "programming-assignment-03.html#the-assignment",
@@ -361,14 +361,14 @@
     "href": "programming-assignment-03.html#grading-criteria",
     "title": "Programming Assignment 03",
     "section": "Grading Criteria",
-    "text": "Grading Criteria\nHalf of the PA3 grade will be correctness. For this assignment, there will be some private test cases. Partial points will be given if just one or two of the commands is implemented and works on those test cases.\nThe other half of the PA3 grade will be your decomposition and code clarity.\nDecomposition * Should carefully select data structures that implement the required functionality. For example, if you avoid using HashMaps, it will probably result in more complicated code and thus points off.\n\nShould just use static methods in the single PA3Main class.\nUse a single file. This should be a small program (&lt;300 lines).\nEach static method should be less than 30 lines. This INCLUDES comments. It is easier to read a function if it can all fit on one screen.\nMake things as simple as possible.\n\nAvoid nested loops.\nAvoid nesting conditionals.\nAvoid chaining, i.e., too many levels of user-defined methods calling other user-defined methods. Putting most of the functionality in another static method that returns void that main calls is an example of this.\n\n\nCode Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it.\n\nThere needs to be a balance between no comments and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement.\n\nThe coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine.\nWrite your own code. We will be using a tool that finds overly similar code. I recommend that when talking with others about the assignment, do not write anything down."
+    "text": "Grading Criteria\nHalf of the PA3 grade will be correctness (50/100). For this assignment, there will be some private test cases. Any time you submit to gradescope, it will tell you how many of the 50 correctness points you have earned.\nThe other half (50/100) of the PA3 grade will be your decomposition and code clarity.\nDecomposition:\n\nShould just use static methods in the single Anagrams class.\nUse a single file. This should be a small program (&lt;200 lines). We do not count any of the comments in the file header toward this 200 lines.\nEach static method should be less than 30 lines. The method header won’t be included in the 30 lines.\nMake things as simple as possible.\n\nNested loops and conditionals are ok if they are following provided recursive backtracking code example templates. Make an effort to simplify conditionals as much as possible and explain them clearly in comments.\nAvoid too many levels of user-defined methods calling other user-defined methods.\n\nDeclare collection variables using interface types.\nYour code should be decomposed well. main should be a good summary of your program and no method should be overly long or trivial. Your methods should not be chained. Do NOT have main just call one method that does everything.\nPart of your grade will come from appropriately utilizing recursive backtracking to implement your algorithm as described previously. We will grade on the elegance of your recursive algorithm; do not create special cases in your recursive code if they are not necessary or repeat cases already handled.\nRedundancy is a grading focus; some tasks are similar in behavior or based off of other tasks. You should avoid repeated logic as much as possible.\n\nCode Clarity:\n\nYOU should be able to read, understand, and explain your own code a couple days after you wrote it.\nThe file header should include instructions on how someone would use this program and what typical inputs would look like.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.). Otherwise you should avoid single letter variable names. Name Variables in camelCase.\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement.\n\nThe coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine.\nWrite your own code. We will be using a tool that finds overly similar code. Do not look at other students’ code. Do not let other students look at your code or talk in detail about how to solve this programming project."
   },
   {
     "objectID": "programming-assignment-03.html#submission",
     "href": "programming-assignment-03.html#submission",
     "title": "Programming Assignment 03",
     "section": "Submission",
-    "text": "Submission\nFor PA3, you are required to submit your PA3Main.java file to Gradescope."
+    "text": "Submission\nAs with PA1 and PA2, for PA3 you are required to commit your Anagrams.java solution to GitHub."
   },
   {
     "objectID": "slides-01-03.html#classes",
@@ -1482,5 +1482,152 @@
     "title": "HashSet",
     "section": "Solution",
     "text": "Solution\nimport java.util.ArrayList;\nimport java.util.Collections; \nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.HashSet;\nimport java.util.Scanner;\n\n\npublic class UniqueNames {\n\n    public static void main(String[] args)  throws FileNotFoundException {\n        File myFile = new File(\"names.txt\");\n        Scanner myReader = new Scanner(myFile);\n        \n        HashSet&lt;String&gt; allNames = new HashSet&lt;String&gt;();\n        \n        while (myReader.hasNext()) {\n            String line = myReader.nextLine();\n            allNames.add(line.trim());\n        }\n        \n        myReader.close();\n        \n        ArrayList&lt;String&gt; sortedNames = new ArrayList&lt;String&gt;(allNames);\n        Collections.sort(sortedNames);\n        \n        for (String name : sortedNames) System.out.println(name);\n        \n\n    }\n\n}"
+  },
+  {
+    "objectID": "programming-assignment-03.html#anagrams",
+    "href": "programming-assignment-03.html#anagrams",
+    "title": "Programming Assignment 03",
+    "section": "Anagrams",
+    "text": "Anagrams\nAn anagram is a word or phrase made by rearranging the letters of another word or phrase. For example, the words “midterm” and “trimmed” are anagrams. If you ignore spaces and capitalization and allow multiple words, a multi-word phrase can be an anagram of some other word or phrase. For example, the phrases “Clint Eastwood” and “old west action” are anagrams.\nIn this assignment, you will create a program called PA3Main.java that uses a word list to find all anagram phrases that match a given word or phrase. To use the program, command line options will be provided to indicate a word list file, phrase with no spaces to find anagrams of, and a limit on the number of words in the found anagrams (or 0 to indicate no limit).\nFor the example command line options:\nwords1.txt barbarabush 0\nthe output of your program should be the following:\nPhrase to scramble: barbarabush\n\nAll words found in barbarabush:\n[abash, aura, bar, barb, brush, bus, hub, rub, shrub, sub]\n\nAnagrams for barbarabush:\n[abash, bar, rub]\n[abash, rub, bar]\n[bar, abash, rub]\n[bar, rub, abash]\n[rub, abash, bar]\n[rub, bar, abash]\nSee the .out files in the public test cases for more examples. The command line options are encoded in the .out files similar as they were for PA1 except the extension for the input files has changed. For example, the file pa3-words3-defleppard-0.out indicates usage of the following command line arguments:\nwords3.txt defleppard 0"
+  },
+  {
+    "objectID": "programming-assignment-03.html#getting-started",
+    "href": "programming-assignment-03.html#getting-started",
+    "title": "Programming Assignment 03",
+    "section": "Getting Started",
+    "text": "Getting Started\n\nAccept the assignment to have a github repository be created for you at"
+  },
+  {
+    "objectID": "programming-assignment-03.html#implementation-details",
+    "href": "programming-assignment-03.html#implementation-details",
+    "title": "Programming Assignment 03",
+    "section": "Implementation Details:",
+    "text": "Implementation Details:\nYour program should obtain the word list file name, phrase, and max number of words in each possible anagram from the array of strings passed to main. Your program should read all of the words from the word list file and use them to generate the required anagrams. You can assume that the word list file will contain one word per line. You can also assume the command-line input will be well formed.\nYou will want to find all possible words that can be found by using subsets of letters from the provided phrase. For example, in the phrase hairbrush the following words from words1.txt can be found:\nAll words found in hairbrush:\n[bar, briar, brush, bus, hub, huh, hush, rub, shrub, sir, sub]\nYou should use recursive backtracking to find and print all anagrams that can be formed using all of the letters of the given phrase. Each phrase should include at most max words. If max=0 then all possible words should be specified. Your output should exactly match the provided examples, including order and formatting. For example, if your anagram solver is using the word list corresponding to words1.txt and a user types the phrase hairbrush, with a max of 0 your program should produce the following output:\n[bar, huh, sir]\n[bar, sir, huh]\n[briar, hush]\n[huh, bar, sir]\n[huh, sir, bar]\n[hush, briar]\n[sir, bar, huh]\n[sir, huh, bar]\nIf your anagram solver is using the word list corresponding to words1.txt and the user types the phrase hairbrush and a max of 2, your program should produce the following output:\n[briar, hush]\n[hush, briar]"
+  },
+  {
+    "objectID": "programming-assignment-03.html#recursive-algorithm",
+    "href": "programming-assignment-03.html#recursive-algorithm",
+    "title": "Programming Assignment 03",
+    "section": "Recursive Algorithm:",
+    "text": "Recursive Algorithm:\nGenerate all anagrams of a phrase using recursive backtracking. Many backtracking algorithms involve examining all combinations of a set of choices. In this problem, the choices are the words that can be formed from the phrase. A “decision” involves choosing a word for part of the phrase and recursively choosing words for the rest of the phrase. If you find a collection of words that use up all of the letters in the phrase, it should be printed as output.\nPart of your grade will be based on efficiency. One way to implement this program would be to consider every word in the word list as a possible “choice.” However, this would lead to a massive decision tree with lots of useless paths and a slow program. Therefore for full credit, to improve efficiency when generating anagrams for a given phrase, you should first find the collection of words contained in that phrase and consider only those words as “choices” in your decision tree. You should also backtrack immediately once exceeding the max.\nThe following diagram shows a partial decision tree for generating anagrams of the phrase barbarabush.\nNotice that some paths of the recursion lead to dead ends. For example, if the recursion chooses aura and barb, the letters remaining to use are [bhs], and no choice available uses these letters, so it is not possible to generate any anagrams beginning with those two choices. In such a case, your code should backtrack and try the next path.\nOne difference between this algorithm and other backtracking algorithms is that the same word can appear more than once in an anagram. For example, from barbara bush you might extract the word bar twice.\n\n\n\nbarbarabush Decision Tree"
+  },
+  {
+    "objectID": "programming-assignment-03.html#letterinventory-class",
+    "href": "programming-assignment-03.html#letterinventory-class",
+    "title": "Programming Assignment 03",
+    "section": "LetterInventory Class:",
+    "text": "LetterInventory Class:\nAn important aspect of simplifying the solution to many backtracking problems is the separation of recursive code from code that manages low-level details of the problem. We have seen this in several of our backtracking examples, such as 8 queens (recursive code in Queens.java, low-level code in Board.java). You are required to follow a similar strategy in this assignment. The low-level details for anagrams involve keeping track of letters and figuring out when one group of letters can be formed from another. We are providing you a class called LetterInventory to help with this task.\nA LetterInventory object represents the count of each letter from A-Z found in a given string (ignoring whitespace, capitalization, or non-alphabetic characters). For example, a LetterInventory for the string Hello there would keep count of 3 Es, 2 Hs, 2 Ls, 1 O, 1 R, and 1 T. The toString of this inventory would be [eeehhllort].\nYou can add and subtract phrases from a LetterInventory and ask whether an inventory contains a phrase. For example, adding hi ho! to the above inventory would produce [eeehhhhilloort].\nSubtracting he he he from this would produce [hilloort]. If we asked whether this inventory .contains(\"tool\"), the result is true.\n\n\n\n\n\n\n\nConstructor/Method\nDescription\n\n\n\n\npublic LetterInventory(String s)\nconstructs a letter inventory for the given string\n\n\npublic void add(LetterInventory li) public void add(String s)\nadds the letters of the given string/inventory to this one\n\n\npublic boolean contains(LetterInventory li) public boolean contains(String s)\nreturns true if this inventory contains all letters at least as many times as they appear in the given string/inventory\n\n\npublic boolean isEmpty()\nreturns true if the inventory contains no letters\n\n\npublic int size()\nreturns the total number of letters in the inventory\n\n\npublic void subtract(LetterInventory li) public void subtract(String s)\nremoves letters of the given string/inventory from this one; throws IllegalArgumentException if not contained\n\n\npublic String toString()\nstring version of inventory, such as [eehhllort]"
+  },
+  {
+    "objectID": "programming-assignment-03.html#development-strategy-and-hints",
+    "href": "programming-assignment-03.html#development-strategy-and-hints",
+    "title": "Programming Assignment 03",
+    "section": "Development Strategy and Hints:",
+    "text": "Development Strategy and Hints:\nYour program should produce the anagrams in the same format as in the expected output files. The easiest way to do this is to build up your answer in a list, or other ordered collection. Then you can println the collection and it will have the right format.\nSeveral different word list files are provided. We recommend initially using a very small word list words1.txt to make testing easier. But once your code works with this word list, you should test it with larger word lists such as the provided words2.txt and words3.txt.\nYou can find other larger word lists here:\nhttp://www.puzzlers.org/dokuwiki/doku.php?id=solving:wordlists:start\nOne difficult part of this program is limiting the number of words that can appear in the anagrams. We suggest you do this part last, initially printing all anagrams regardless of the number of words."
+  },
+  {
+    "objectID": "slides-03-01.html#two-recursive-algorithms",
+    "href": "slides-03-01.html#two-recursive-algorithms",
+    "title": "Exhaustive Search",
+    "section": "",
+    "text": "Exhaustive Search\nBacktracking\n\nThese are brute-force algorithms\nUsed for problems that have a small and well-defined search space, where it is feasible to check all possible solutions"
+  },
+  {
+    "objectID": "slides-03-01.html#exhaustive-search",
+    "href": "slides-03-01.html#exhaustive-search",
+    "title": "Exhaustive Search",
+    "section": "Exhaustive Search",
+    "text": "Exhaustive Search\nAlso called recursive enumeration\nMain idea: systematically identify every possible solution to a problem"
+  },
+  {
+    "objectID": "slides-03-01.html#print-all-possible-binary-numbers",
+    "href": "slides-03-01.html#print-all-possible-binary-numbers",
+    "title": "Exhaustive Search",
+    "section": "Print all possible binary numbers",
+    "text": "Print all possible binary numbers\nWrite a Java application that given an integer n, it prints all binary numbers that have n digits.\nMake sure your application outputs one binary number per line, in ascending order.\nHINTS:\n\nBuild a string (starting with empty string) and print it out (when? when do you stop building the string? what’s the condition?)\nTwo possibilities for each character concatenated to the string: '0' or '1'"
+  },
+  {
+    "objectID": "slides-03-01.html#all-possible-binary-numbers-solution",
+    "href": "slides-03-01.html#all-possible-binary-numbers-solution",
+    "title": "Exhaustive Search",
+    "section": "All possible binary numbers – solution",
+    "text": "All possible binary numbers – solution\npublic class AllBinary {\n\n    public static void getBinary(int digits, String number) {\n        if (digits == 0) { // base case, no digits left to add\n            System.out.println(number);\n        } else {\n            getBinary(digits - 1, number + \"0\");\n            getBinary(digits - 1, number + \"1\");\n        }\n    }\n    \n    public static void main(String[] args) {\n        getBinary(3, \"\");\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-03-01.html#print-all-possible-binary-numbers-1",
+    "href": "slides-03-01.html#print-all-possible-binary-numbers-1",
+    "title": "Exhaustive Search",
+    "section": "Print all possible binary numbers",
+    "text": "Print all possible binary numbers\nThe call:\ngetBinary(3, \"\");\nPrints out:\n000\n001\n010\n011\n100\n101\n110\n111"
+  },
+  {
+    "objectID": "slides-03-01.html#creating-an-arraylist-of-solutions",
+    "href": "slides-03-01.html#creating-an-arraylist-of-solutions",
+    "title": "Exhaustive Search",
+    "section": "Creating an ArrayList of solutions",
+    "text": "Creating an ArrayList of solutions\nWhat if instead of printing out a solution, I wanted to create an ArrayList of solutions?"
+  },
+  {
+    "objectID": "slides-03-01.html#creating-an-arraylist-of-solutions-1",
+    "href": "slides-03-01.html#creating-an-arraylist-of-solutions-1",
+    "title": "Exhaustive Search",
+    "section": "Creating an ArrayList of solutions",
+    "text": "Creating an ArrayList of solutions\nimport java.util.ArrayList;\n\npublic class AllBinary {\n\n    public static ArrayList&lt;String&gt; getBinary(int digits, \n                                              String number, \n                                              ArrayList&lt;String&gt; result) {\n        if (digits == 0) {\n            result.add(number);\n        } else {\n            getBinary(digits - 1, number + \"0\", result);\n            getBinary(digits - 1, number + \"1\", result);\n        }\n        return result;\n        \n    }\n    \n    public static void main(String[] args) {\n        ArrayList&lt;String&gt; result = new ArrayList&lt;String&gt;();\n        getBinary(3, \"\", result);\n        System.out.println(result);\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-03-01.html#print-all-possible-decimal-numbers",
+    "href": "slides-03-01.html#print-all-possible-decimal-numbers",
+    "title": "Exhaustive Search",
+    "section": "Print all possible decimal numbers",
+    "text": "Print all possible decimal numbers\nWrite a Java application that given an integer n, it prints all decimal numbers that have n digits.\nHINT:\n\nSame as before (for binary numbers), the difference is that instead of just two choices per character, we now have 10 character choices for each position in the number\nUse a for loop to iterate over the digits 0 to 9"
+  },
+  {
+    "objectID": "slides-03-01.html#print-all-possible-decimal-numbers-1",
+    "href": "slides-03-01.html#print-all-possible-decimal-numbers-1",
+    "title": "Exhaustive Search",
+    "section": "Print all possible decimal numbers",
+    "text": "Print all possible decimal numbers\nThe call:\ngetDecimal(2, \"\");\nPrints out:\n00\n01\n02\n03\n..\n94\n95\n96\n97\n98\n99"
+  },
+  {
+    "objectID": "slides-03-01.html#all-possible-decimal-numbers-solution",
+    "href": "slides-03-01.html#all-possible-decimal-numbers-solution",
+    "title": "Exhaustive Search",
+    "section": "All possible decimal numbers – solution",
+    "text": "All possible decimal numbers – solution\nimport java.util.ArrayList;\n\npublic class AllDecimal {\n    \n    public static ArrayList&lt;String&gt; getDecimal(int digits, \n                                                   String number, \n                                                   ArrayList&lt;String&gt; result) {\n        if (digits == 0) {\n            result.add(number);\n        } else {\n            for (int n = 0; n &lt; 10; n++) {\n                getDecimal(digits - 1, number + n, result);\n            }\n            \n        }\n        return result;\n        \n    } // getDecimal\n\n    public static void main(String[] args) {\n        ArrayList&lt;String&gt; result = new ArrayList&lt;String&gt;();\n        getDecimal(2, \"\", result);\n        \n        for (String number : result) {\n            System.out.println(number);\n        }\n\n    } // main\n}"
+  },
+  {
+    "objectID": "programming-assignment-03.html#write-other-methods",
+    "href": "programming-assignment-03.html#write-other-methods",
+    "title": "Programming Assignment 03",
+    "section": "Write other methods",
+    "text": "Write other methods\nAn important aspect of simplifying the solution to many backtracking problems is the separation of recursive code from code that manages low-level details of the problem. We have seen this in several of our backtracking examples, such as 8 queens (recursive code in Queens.java, low-level code in Board.java). You are required to follow a similar strategy in this assignment. The low-level details for anagrams involve keeping track of letters and figuring out when one group of letters can be formed from another."
+  },
+  {
+    "objectID": "slides-03-01.html",
+    "href": "slides-03-01.html",
+    "title": "Exhaustive Search",
+    "section": "",
+    "text": "Exhaustive Search\nBacktracking\n\nThese are brute-force algorithms\nUsed for problems that have a small and well-defined search space, where it is feasible to check all possible solutions"
+  },
+  {
+    "objectID": "slides-03-02.html",
+    "href": "slides-03-02.html",
+    "title": "Backtracking",
+    "section": "",
+    "text": "Exhaustive Search\nBacktracking\n\nThese are brute-force algorithms\nUsed for problems that have a small and well-defined search space, where it is feasible to check all possible solutions"
+  },
+  {
+    "objectID": "slides-03-02.html#two-recursive-algorithms",
+    "href": "slides-03-02.html#two-recursive-algorithms",
+    "title": "Backtracking",
+    "section": "",
+    "text": "Exhaustive Search\nBacktracking\n\nThese are brute-force algorithms\nUsed for problems that have a small and well-defined search space, where it is feasible to check all possible solutions"
+  },
+  {
+    "objectID": "slides-03-02.html#backtracking",
+    "href": "slides-03-02.html#backtracking",
+    "title": "Backtracking",
+    "section": "Backtracking",
+    "text": "Backtracking\nMain idea: find every solution incrementally by trying different options, then abandoning them if they are not suitable\nIn other words: exhaustive search + conditions for suitable solution"
   }
 ]

@@ -75,7 +75,7 @@ Optional:
 
 ## Assignments
 
-* [Instructions for PA2](programming-assignment-01.html) -- Deadline: `r data %>% filter(Assignment == "PA2") %>%  select(Deadline)` -- Wednesday, 11:30pm
+* [Instructions for PA2](programming-assignment-02.html) -- Deadline: `r data %>% filter(Assignment == "PA2") %>%  select(Deadline)` -- Wednesday, 11:30pm
 
 # Week 03
 
@@ -85,9 +85,18 @@ Topic: `r schedule %>% filter(week == 3) %>% pull(topic)`
 
 ## Readings
 
+Optional:
+
+* [Algorithms by Jeff Erickson, Chapter 2 Backtracking](https://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf)
+
 ## Slides
 
+* [Exhaustive Search](slides-03-01.html)
+* [Backtracking](slides-03-02.html)
+
 ## Assignments
+
+* [Instructions for PA3](programming-assignment-03.html) -- Deadline: `r data %>% filter(Assignment == "PA3") %>%  select(Deadline)` -- Wednesday, 11:30pm
 
 # Week 04
 

@@ -1,0 +1,22 @@
+---
+title: "Backtracking"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## Two recursive algorithms
+
+* Exhaustive Search	
+* Backtracking	
+
+These are `brute-force` algorithms
+
+Used for problems that have a small and well-defined search space, where it is feasible to check all possible solutions
+
+## Backtracking
+
+Main idea: find every solution incrementally by trying different options, then abandoning them if they are not suitable
+
+In other words: exhaustive search + conditions for suitable solution

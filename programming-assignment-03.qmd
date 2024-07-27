@@ -15,289 +15,206 @@ data <- read_excel("assessment-deadlines.xlsx")
 
 Deadline: `r data %>% filter(Assignment == "PA3") %>%  select(Deadline)` -- Wednesday, 11:30pm
 
-# PA3-ExhaustingPastries-Key
+# PA3-Anagrams Assignment
 
 ## Learning Objectives
+
 The goal of this assignment is to practice the following decomposition, algorithm pattern, and data structure approaches.
 
- - Algorithmic pattern: exhaustive search
+ - Algorithmic pattern: recursive backtracking
 
- - Decomposition approach: separating out iteration over all possibilities from the evaluation of each possibility
+ - Decomposition approach: multiple methods 
 
  - Data structure: arrays and collections
 
-The assignment will also require checking that the input data is valid.
 
-## The Assignment
+## Anagrams
 
-For this assignment, you are simulating a bakery.
-You will be given an input file which lists every pastry the bakery is selling today.
-The pastries can be cut into slices which are sold for different amounts depending on their length.
-Your goal is to maximize the bakery's profits by finding which combination of slices 
-will maximize your profits.
-Once you have sliced the pastries and set their prices, you will take the role 
-of the customer. Given a certain budget, you will find the maximum number of 
-unique pastries the customer can purchase.  The customer will be buying all
-of any one pastry.
+An anagram is a word or phrase made by rearranging the letters of another word or phrase.  For example, 
+the words "midterm" and "trimmed" are anagrams.  If you ignore spaces and capitalization and allow 
+multiple words, a multi-word phrase can be an anagram of some other word or phrase.  For example, the 
+phrases "Clint Eastwood" and "old west action" are anagrams.
 
+In this assignment, you will create a program called `PA3Main.java` that uses a word list to find all 
+anagram phrases that match a given word or phrase.  To use the program, command line options will
+be provided to indicate a word list file, phrase with no spaces to find anagrams of, and
+a limit on the number of words in the found anagrams (or 0 to indicate no limit).
 
-## Input File
-
-The program should have the following usage: 
-
+For the example command line options:
 ```
-java PA3Main inputFile
+words1.txt barbarabush 0
 ```
-
-The input file should have the following format:
+the output of your program should be the following:
 ```
-<customer budget integer>
-<string>: <integer cost of 1in slice> <integer cost of 2in slice> <integer cost of 3in slice> ...
-<string>: <integer cost of 1in slice> <integer cost of 2in slice> <integer cost of 3in slice> ...
-...
-...
-...
-```
-The first integer is the budget customers have for buying pastries. 
-This is followed by a list 
-of pastries, starting with a pastry name, then followed by the price for 
-length of 1 unit, price per length of 2 units, etc.
-The file could have any number of lines and each pastry line could have any number of length costs.
-If a pastry has X costs after it, then it is X inches long.
+Phrase to scramble: barbarabush
 
-## Example
+All words found in barbarabush:
+[abash, aura, bar, barb, brush, bus, hub, rub, shrub, sub]
 
-As an example, consider the PublicTestCases/simple.in file:
-```
-5
-baguette: 2 3 3 4
-donut: 1 2 3 4
-baumkuchen: 1 2 3 4 
-```
-The customer has a $5 budget.  The pastry shop has a baguette that is
-4 inches long with one-inch pieces costing $2 each, 
-two-inch pieces costing $3 each, three-inch pieces costing $3 each, 
-and a four-inch piece is $4 each.  The baker also has a donut
-and a baumkuchen that can be broken into 1in pieces for $1 each,
-2inch pieces for $2 each, etc.
-
-For the baker, the idea is to enumerate over all possible ways to cut 
-up the pastry and determine which cutting costs the most and thus 
-makes the most for the baker.
-For the customer, the idea is to buy as many full pastries as possible.
-
-### Baker perspective
-
-Below is an enumeration of all possible ways to cut the baguette based
-on the number of pieces of each size.  The last column is how much money
-such a cutting will make.  The enumeration is not showing combinations
-that are not physically possible.  For example, a 4in baguette cannot be
-broken into 5 1in pieces.
-The baker will want to pick the highest one.
-```
- #1in #2in #3in #4in  $$
-   0   0    0    0    0
-   1   0    0    0    2
-   2   0    0    0    4
-   3   0    0    0    6
-   4   0    0    0    8
-   1   1    0    0    5
-   2   1    0    0    7
-   1   0    1    0    5
-   ...
+Anagrams for barbarabush:
+[abash, bar, rub]
+[abash, rub, bar]
+[bar, abash, rub]
+[bar, rub, abash]
+[rub, abash, bar]
+[rub, bar, abash]
 ```
 
-A similar enumeration should be done for the donut and the baumkuchen.
-
-### Customer perspective
-
-Then the customer will buy the maximum number of unique pastries they can with
-their budget.  For this example the customer would
-do the following enumeration over combinations that cost less than the budget:
-
+See the .out files in the public test cases for more examples.  The command line options
+are encoded in the .out files similar as they were for PA1 except the extension for the
+input files has changed.  For example, the file pa3-words3-defleppard-0.out indicates
+usage of the following command line arguments:
 ```
-baguette donut baumkuchen  cost   #unique
-   0       0        0        0       0
-   0       4        0        4       1
-   0       0        4        4       1
+words3.txt defleppard 0
 ```
 
-Hint: the customer should buy pastries from cheapest to
-more expensive.
+## Getting Started
 
-Here we have a tie.  For ties the customer will buy the item
-that comes first alphabetically.  Thus for this example
-the customer would choose the baumkuchen.
+ * Accept the assignment to have a github repository be created for you at 
 
-Here is what the final output would be for this example:
 
+## Implementation Details:
+
+Your program should obtain the word list file name, phrase, and max number of words in each possible
+anagram from the array of strings passed to main.  Your program should read all of the words from the 
+word list file and use them to generate the required anagrams. You can assume that the word list file will 
+contain one word per line.  You can also assume the command-line input will be well formed.
+
+You will want to find all possible words that can be found by using subsets of letters from the provided
+phrase.  For example, in the phrase `hairbrush` the following words from `words1.txt` can be found:
 ```
-baguette costs $8
-baumkuchen costs $4
-donut costs $4
-
-Can buy baumkuchen for $4
-
-The max number of unique pastries that can be bought with $5 is: 1
-```
-
-For this simple example, the budget of $5 is enough to buy
-the $4 configuration of the baumkuchen.  It could buy the donut
-instead, but since either could be bought, the on that comes
-alphabetically first is selected instead.
-
-### Other points to consider
-
-* The lines containing the pastry costs are listed in 
-alphabetical order by the name of each pastry.
-
-* The lines which show each 
-unique pastry that can be bought are listed in ascending order by price, 
-and within each price listed alphabetically.
-
-* You can assume the prices are separated by a single space.  We are not going
-to have any tricky inputs with delimiters other than a single space.
-
-* Any pastry with no prices given will considered length 0 for price 0.
-
-* When a customer buys a pastry, they buy all pieces of the pastry.
-  The bakery only has the one pastry of each kind that it cut into pieces.
-  This is a simplification to make the problem a bit easier.
-
-## Error Checking
-For this assignment, you will be responsible for developing checks on the input data.
-
-Required error checking:
-```
-If an invalid file is given then print the following and exit the program:
-'ERROR: File not found' and exit with a status code of 1
-
-If budget is not a number print the following and exit the program:
-'ERROR: Incorrect budget input' and exit with a status code of 1
-
-If any price per length is not a number print the following, 
-ignore that pastry, but continue processing:
-'ERROR: Incorrect price input' and continue reading the other pastries
-  ```
- 
-Any pastry with no prices given will considered length 0 for price 0.
-This is NOT an error.
-
-## More Examples
-
-### An Example with an Error
-Given the following input file:
-```
-300
-Cheese Cake: 62 83 44 48 
-Chocolate Cake: 97 100 11 49 z 96 28 33 45 
-Baguette: 24 24 58 79 12 83 79 44 13 5 
-Blank Pastry: 
+All words found in hairbrush:
+[bar, briar, brush, bus, hub, huh, hush, rub, shrub, sir, sub]
 ```
 
-The output should be: 
+You should use recursive backtracking to find and print all anagrams that can be formed using all of the letters 
+of the given phrase.  Each phrase should include at most `max` words.  If max=0 then all possible words should be
+specified.  Your output should exactly match the provided examples, including order and formatting.  For example, 
+if your anagram solver is using 
+the word list corresponding to `words1.txt` and a user 
+types the phrase `hairbrush`, with a `max` of `0` your program should produce the following output:
 ```
-ERROR: Incorrect price input
-Baguette costs $240
-Blank Pastry costs $0
-Cheese Cake costs $248
-
-Can buy Blank Pastry for $0
-Can buy Baguette for $240
-
-The max number of unique pastries that can be bought with $300 is: 2
+[bar, huh, sir]
+[bar, sir, huh]
+[briar, hush]
+[huh, bar, sir]
+[huh, sir, bar]
+[hush, briar]
+[sir, bar, huh]
+[sir, huh, bar]
 ```
-
-Notice the one error print out due to the 'Chocolate Cake' pastry has a 'z' in it.
-Thus it is ignored, but processing continues.
-
-Also notice that the lines containing the pastry costs are listed in 
-alphabetical order by the name of each pastry. The lines which show each 
-unique pastry that can be bought are listed in ascending order by price, 
-and within each price listed alphabetically.
-
-### Another Error Example
-Given the following input file:
-
+If your anagram solver is using the word list corresponding to `words1.txt` and the user types the 
+phrase `hairbrush` and a `max` of `2`, your program should produce the following output:
 ```
-IncorrectBudget
-Cheese Cake: 62 83 44 48 
-Chocolate Cake: 97 100 11 49 96 28 33 45 
-Baguette: 24 24 58 79 12 83 79 44 13 5 
-Blank Pastry: 
-```
-The output should be: 
-```
-ERROR: Incorrect budget input
-
+[briar, hush]
+[hush, briar]
 ```
 
+## Recursive Algorithm:
 
+Generate all anagrams of a phrase using recursive backtracking.  Many backtracking algorithms involve 
+examining all combinations of a set of choices.  In this problem, the choices are the words that can 
+be formed from the phrase.  A "decision" involves choosing a word for part of the phrase and recursively 
+choosing words for the rest of the phrase.  If you find a collection of words that use up all of the 
+letters in the phrase, it should be printed as output.
 
-## Testing your program
+Part of your grade will be based on efficiency.  One way to implement this program would be to consider 
+every word in the word list as a possible "choice."  However, this would lead to a massive decision 
+tree with lots of useless paths and a slow program.  Therefore for full credit, to improve efficiency 
+when generating anagrams for a given phrase, you should first find the collection of words contained 
+in that phrase and consider only those words as "choices" in your decision tree. You should also 
+backtrack immediately once exceeding the `max`.
 
-When you commit and push, Travis CI will send you an email to let you know
-if the public test cases failed.
-We STRONGLY recommend you put some of your own test cases in PublicTestCases/.
-Read grade.py to see how the .in and .out files should be named.
-Also look at the examples that are already in the PublicTestCases/ subdirectory.
+The following diagram shows a partial decision tree for generating anagrams of the phrase `barbarabush`.  
+Notice that some paths of the recursion lead to dead ends.  For example, if the recursion chooses 
+`aura` and `barb`, the letters remaining to use are `[bhs]`, and no choice available uses these 
+letters, so it is not possible to generate any anagrams beginning with those two choices.  In such 
+a case, your code should backtrack and try the next path.
 
-Upload it to Gradescope and you will be able to see 
-which public test cases were passed/failed.
+One difference between this algorithm and other backtracking algorithms is that the same word can 
+appear more than once in an anagram.  For example, from `barbara bush` you might extract the 
+word `bar` twice.
 
+![barbarabush Decision Tree](images/decisionTree.png)
 
-## Decomposition Ideas
+## Write other methods
 
-See the slides from class and examples from Section 2 about 
-performing exhaustive searches.  What will the stopping
-criteria be for the TWO exhaustive searches this program
-will need to do?
+An important aspect of simplifying the solution to many backtracking problems is the separation 
+of recursive code from code that manages low-level details of the problem.  We have seen this in 
+several of our backtracking examples, such as 8 queens (recursive code in Queens.java, low-level 
+code in Board.java).  You are required to follow a similar strategy in this assignment.  The 
+low-level details for anagrams involve keeping track of letters and figuring out when one group 
+of letters can be formed from another.  
 
+## Development Strategy and Hints:
+
+Your program should produce the anagrams in the same format as in the expected output files.  The easiest way 
+to do this is to build up your answer in a list, or other ordered collection.  Then you can 
+`println` the collection and it will have the right format.
+
+Several different word list files are provided.  We recommend initially using a very small 
+word list `words1.txt` to make testing easier.  But once your code works with this word list, 
+you should test it with larger word lists such as the provided `words2.txt` and `words3.txt`.  
+You can find other larger word lists  here:
+
+<http://www.puzzlers.org/dokuwiki/doku.php?id=solving:wordlists:start>
+
+One difficult part of this program is limiting the number of words that can appear in the 
+anagrams.  We suggest you do this part last, initially printing all anagrams regardless of 
+the number of words.
 
 
 ## Grading Criteria
 
-Half of the PA3 grade will be correctness.  For this assignment, there
-will be some private test cases.  Partial points will be given if just
-one or two of the commands is implemented and works on those test cases.
+Half of the PA3 grade will be correctness (50/100).  For this assignment, there will be some 
+private test cases. Any time you submit to gradescope, 
+it will tell you how many of the 50 correctness points you have earned.
 
-The other half of the PA3 grade will be your decomposition and code clarity.
+The other half (50/100) of the PA3 grade will be your decomposition and code clarity.
 
-Decomposition
-* Should carefully select data structures that implement the 
-  required functionality.  For example, if you avoid using HashMaps,
-  it will probably result in more complicated code and thus points off.
+Decomposition:
 
-* Should just use static methods in the single PA3Main class.
+* Should just use `static` methods in the single `Anagrams` class.
 
-* Use a single file.  This should be a small program (<300 lines).
+* Use a single file.  This should be a small program (<200 lines).
+  We do not count any of the comments in the file header toward this 200 lines.
 
-* Each static method should be less than 30 lines.  This INCLUDES
-  comments.  It is easier to read a function if it can all fit on
-  one screen.
+* Each `static` method should be less than 30 lines.  The method header won't be 
+  included in the 30 lines.
 
 * Make things as simple as possible.
-  * Avoid nested loops.
-  * Avoid nesting conditionals.
-  * Avoid chaining, i.e., too many levels of user-defined methods 
-    calling other user-defined methods.  Putting most of the functionality
-    in another static method that returns void that main calls is an 
-    example of this.
+  * Nested loops and conditionals are ok if they are following provided
+    recursive backtracking code example templates.  Make an effort
+    to simplify conditionals as much as possible and explain them
+    clearly in comments.
+  * Avoid too many levels of user-defined methods calling other
+  user-defined methods.
 
+* Declare collection variables using interface types.
 
-Code Clarity
+* Your code should be decomposed well. `main` should be a good summary of your program and no method 
+should be overly long or trivial. Your methods should not be chained.  Do NOT have main just
+call one method that does everything.
+
+* Part of your grade will come from appropriately utilizing recursive backtracking to implement 
+your algorithm as described previously.  We will grade on the elegance of your recursive 
+algorithm; do not create special cases in your recursive code if they are not necessary or 
+repeat cases already handled.
+
+* Redundancy is a grading focus; some tasks are 
+similar in behavior or based off of other tasks.  You should avoid repeated logic as much as possible.
+
+Code Clarity:
+
 * YOU should be able to read, understand, and explain your own code
-to someone else a couple days after you wrote it.
-
-* There needs to be a balance between no comments and a comment for
-every line in the program.  Either extreme will result in points off.
+a couple days after you wrote it.
 
 * The file header should include instructions on how someone would
-use this program.  To use the program, one would need to know the
-input file format.
+use this program and what typical inputs would look like.
 
 * Use meaningful variable names.  Loop iterators can
-be simple (i for integers, s for strings, n for numbers, etc.).
+be simple (`i` for integers, `s` for strings, `n` for numbers, etc.).
+Otherwise you should avoid single letter variable names. Name Variables in camelCase.
 
 * The clearest code examples will be anonymously shown in class.
 
@@ -310,9 +227,10 @@ every time you save in Eclipse.  As long as you stick with those defaults,
 the syntax style should be fine.
 
 Write your own code.  We will be using a tool that finds overly similar code.
-I recommend that when talking with others about the assignment, do not write
-anything down.
+Do not look at other students' code.  Do not let other students look at your code 
+or talk in detail about how to solve this programming project. 
+
 
 ## Submission
 
-For PA3, you are required to submit your PA3Main.java file to Gradescope.
+As with PA1 and PA2, for PA3 you are required to commit your `Anagrams.java` solution to GitHub.

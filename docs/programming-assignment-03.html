@@ -120,25 +120,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#pa3-exhaustingpastries-key" id="toc-pa3-exhaustingpastries-key" class="nav-link active" data-scroll-target="#pa3-exhaustingpastries-key">PA3-ExhaustingPastries-Key</a>
+  <li><a href="#pa3-anagrams-assignment" id="toc-pa3-anagrams-assignment" class="nav-link active" data-scroll-target="#pa3-anagrams-assignment">PA3-Anagrams Assignment</a>
   <ul class="collapse">
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#the-assignment" id="toc-the-assignment" class="nav-link" data-scroll-target="#the-assignment">The Assignment</a></li>
-  <li><a href="#input-file" id="toc-input-file" class="nav-link" data-scroll-target="#input-file">Input File</a></li>
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a>
-  <ul class="collapse">
-  <li><a href="#baker-perspective" id="toc-baker-perspective" class="nav-link" data-scroll-target="#baker-perspective">Baker perspective</a></li>
-  <li><a href="#customer-perspective" id="toc-customer-perspective" class="nav-link" data-scroll-target="#customer-perspective">Customer perspective</a></li>
-  <li><a href="#other-points-to-consider" id="toc-other-points-to-consider" class="nav-link" data-scroll-target="#other-points-to-consider">Other points to consider</a></li>
-  </ul></li>
-  <li><a href="#error-checking" id="toc-error-checking" class="nav-link" data-scroll-target="#error-checking">Error Checking</a></li>
-  <li><a href="#more-examples" id="toc-more-examples" class="nav-link" data-scroll-target="#more-examples">More Examples</a>
-  <ul class="collapse">
-  <li><a href="#an-example-with-an-error" id="toc-an-example-with-an-error" class="nav-link" data-scroll-target="#an-example-with-an-error">An Example with an Error</a></li>
-  <li><a href="#another-error-example" id="toc-another-error-example" class="nav-link" data-scroll-target="#another-error-example">Another Error Example</a></li>
-  </ul></li>
-  <li><a href="#testing-your-program" id="toc-testing-your-program" class="nav-link" data-scroll-target="#testing-your-program">Testing your program</a></li>
-  <li><a href="#decomposition-ideas" id="toc-decomposition-ideas" class="nav-link" data-scroll-target="#decomposition-ideas">Decomposition Ideas</a></li>
+  <li><a href="#anagrams" id="toc-anagrams" class="nav-link" data-scroll-target="#anagrams">Anagrams</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
+  <li><a href="#implementation-details" id="toc-implementation-details" class="nav-link" data-scroll-target="#implementation-details">Implementation Details:</a></li>
+  <li><a href="#recursive-algorithm" id="toc-recursive-algorithm" class="nav-link" data-scroll-target="#recursive-algorithm">Recursive Algorithm:</a></li>
+  <li><a href="#write-other-methods" id="toc-write-other-methods" class="nav-link" data-scroll-target="#write-other-methods">Write other methods</a></li>
+  <li><a href="#development-strategy-and-hints" id="toc-development-strategy-and-hints" class="nav-link" data-scroll-target="#development-strategy-and-hints">Development Strategy and Hints:</a></li>
   <li><a href="#grading-criteria" id="toc-grading-criteria" class="nav-link" data-scroll-target="#grading-criteria">Grading Criteria</a></li>
   <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   </ul></li>
@@ -168,179 +158,123 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Deadline: September 25, 2024 – Wednesday, 11:30pm</p>
-<section id="pa3-exhaustingpastries-key" class="level1">
-<h1>PA3-ExhaustingPastries-Key</h1>
+<section id="pa3-anagrams-assignment" class="level1">
+<h1>PA3-Anagrams Assignment</h1>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
 <p>The goal of this assignment is to practice the following decomposition, algorithm pattern, and data structure approaches.</p>
 <ul>
-<li><p>Algorithmic pattern: exhaustive search</p></li>
-<li><p>Decomposition approach: separating out iteration over all possibilities from the evaluation of each possibility</p></li>
+<li><p>Algorithmic pattern: recursive backtracking</p></li>
+<li><p>Decomposition approach: multiple methods</p></li>
 <li><p>Data structure: arrays and collections</p></li>
 </ul>
-<p>The assignment will also require checking that the input data is valid.</p>
 </section>
-<section id="the-assignment" class="level2">
-<h2 class="anchored" data-anchor-id="the-assignment">The Assignment</h2>
-<p>For this assignment, you are simulating a bakery. You will be given an input file which lists every pastry the bakery is selling today. The pastries can be cut into slices which are sold for different amounts depending on their length. Your goal is to maximize the bakery’s profits by finding which combination of slices will maximize your profits. Once you have sliced the pastries and set their prices, you will take the role of the customer. Given a certain budget, you will find the maximum number of unique pastries the customer can purchase. The customer will be buying all of any one pastry.</p>
-</section>
-<section id="input-file" class="level2">
-<h2 class="anchored" data-anchor-id="input-file">Input File</h2>
-<p>The program should have the following usage:</p>
-<pre><code>java PA3Main inputFile</code></pre>
-<p>The input file should have the following format:</p>
-<pre><code>&lt;customer budget integer&gt;
-&lt;string&gt;: &lt;integer cost of 1in slice&gt; &lt;integer cost of 2in slice&gt; &lt;integer cost of 3in slice&gt; ...
-&lt;string&gt;: &lt;integer cost of 1in slice&gt; &lt;integer cost of 2in slice&gt; &lt;integer cost of 3in slice&gt; ...
-...
-...
-...</code></pre>
-<p>The first integer is the budget customers have for buying pastries. This is followed by a list of pastries, starting with a pastry name, then followed by the price for length of 1 unit, price per length of 2 units, etc. The file could have any number of lines and each pastry line could have any number of length costs. If a pastry has X costs after it, then it is X inches long.</p>
-</section>
-<section id="example" class="level2">
-<h2 class="anchored" data-anchor-id="example">Example</h2>
-<p>As an example, consider the PublicTestCases/simple.in file:</p>
-<pre><code>5
-baguette: 2 3 3 4
-donut: 1 2 3 4
-baumkuchen: 1 2 3 4 </code></pre>
-<p>The customer has a $5 budget. The pastry shop has a baguette that is 4 inches long with one-inch pieces costing $2 each, two-inch pieces costing $3 each, three-inch pieces costing $3 each, and a four-inch piece is $4 each. The baker also has a donut and a baumkuchen that can be broken into 1in pieces for $1 each, 2inch pieces for $2 each, etc.</p>
-<p>For the baker, the idea is to enumerate over all possible ways to cut up the pastry and determine which cutting costs the most and thus makes the most for the baker. For the customer, the idea is to buy as many full pastries as possible.</p>
-<section id="baker-perspective" class="level3">
-<h3 class="anchored" data-anchor-id="baker-perspective">Baker perspective</h3>
-<p>Below is an enumeration of all possible ways to cut the baguette based on the number of pieces of each size. The last column is how much money such a cutting will make. The enumeration is not showing combinations that are not physically possible. For example, a 4in baguette cannot be broken into 5 1in pieces. The baker will want to pick the highest one.</p>
-<pre><code> #1in #2in #3in #4in  $$
-   0   0    0    0    0
-   1   0    0    0    2
-   2   0    0    0    4
-   3   0    0    0    6
-   4   0    0    0    8
-   1   1    0    0    5
-   2   1    0    0    7
-   1   0    1    0    5
-   ...</code></pre>
-<p>A similar enumeration should be done for the donut and the baumkuchen.</p>
-</section>
-<section id="customer-perspective" class="level3">
-<h3 class="anchored" data-anchor-id="customer-perspective">Customer perspective</h3>
-<p>Then the customer will buy the maximum number of unique pastries they can with their budget. For this example the customer would do the following enumeration over combinations that cost less than the budget:</p>
-<pre><code>baguette donut baumkuchen  cost   #unique
-   0       0        0        0       0
-   0       4        0        4       1
-   0       0        4        4       1</code></pre>
-<p>Hint: the customer should buy pastries from cheapest to more expensive.</p>
-<p>Here we have a tie. For ties the customer will buy the item that comes first alphabetically. Thus for this example the customer would choose the baumkuchen.</p>
-<p>Here is what the final output would be for this example:</p>
-<pre><code>baguette costs $8
-baumkuchen costs $4
-donut costs $4
+<section id="anagrams" class="level2">
+<h2 class="anchored" data-anchor-id="anagrams">Anagrams</h2>
+<p>An anagram is a word or phrase made by rearranging the letters of another word or phrase. For example, the words “midterm” and “trimmed” are anagrams. If you ignore spaces and capitalization and allow multiple words, a multi-word phrase can be an anagram of some other word or phrase. For example, the phrases “Clint Eastwood” and “old west action” are anagrams.</p>
+<p>In this assignment, you will create a program called <code>PA3Main.java</code> that uses a word list to find all anagram phrases that match a given word or phrase. To use the program, command line options will be provided to indicate a word list file, phrase with no spaces to find anagrams of, and a limit on the number of words in the found anagrams (or 0 to indicate no limit).</p>
+<p>For the example command line options:</p>
+<pre><code>words1.txt barbarabush 0</code></pre>
+<p>the output of your program should be the following:</p>
+<pre><code>Phrase to scramble: barbarabush
 
-Can buy baumkuchen for $4
+All words found in barbarabush:
+[abash, aura, bar, barb, brush, bus, hub, rub, shrub, sub]
 
-The max number of unique pastries that can be bought with $5 is: 1</code></pre>
-<p>For this simple example, the budget of $5 is enough to buy the $4 configuration of the baumkuchen. It could buy the donut instead, but since either could be bought, the on that comes alphabetically first is selected instead.</p>
+Anagrams for barbarabush:
+[abash, bar, rub]
+[abash, rub, bar]
+[bar, abash, rub]
+[bar, rub, abash]
+[rub, abash, bar]
+[rub, bar, abash]</code></pre>
+<p>See the .out files in the public test cases for more examples. The command line options are encoded in the .out files similar as they were for PA1 except the extension for the input files has changed. For example, the file pa3-words3-defleppard-0.out indicates usage of the following command line arguments:</p>
+<pre><code>words3.txt defleppard 0</code></pre>
 </section>
-<section id="other-points-to-consider" class="level3">
-<h3 class="anchored" data-anchor-id="other-points-to-consider">Other points to consider</h3>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
 <ul>
-<li><p>The lines containing the pastry costs are listed in alphabetical order by the name of each pastry.</p></li>
-<li><p>The lines which show each unique pastry that can be bought are listed in ascending order by price, and within each price listed alphabetically.</p></li>
-<li><p>You can assume the prices are separated by a single space. We are not going to have any tricky inputs with delimiters other than a single space.</p></li>
-<li><p>Any pastry with no prices given will considered length 0 for price 0.</p></li>
-<li><p>When a customer buys a pastry, they buy all pieces of the pastry. The bakery only has the one pastry of each kind that it cut into pieces. This is a simplification to make the problem a bit easier.</p></li>
+<li>Accept the assignment to have a github repository be created for you at</li>
 </ul>
 </section>
+<section id="implementation-details" class="level2">
+<h2 class="anchored" data-anchor-id="implementation-details">Implementation Details:</h2>
+<p>Your program should obtain the word list file name, phrase, and max number of words in each possible anagram from the array of strings passed to main. Your program should read all of the words from the word list file and use them to generate the required anagrams. You can assume that the word list file will contain one word per line. You can also assume the command-line input will be well formed.</p>
+<p>You will want to find all possible words that can be found by using subsets of letters from the provided phrase. For example, in the phrase <code>hairbrush</code> the following words from <code>words1.txt</code> can be found:</p>
+<pre><code>All words found in hairbrush:
+[bar, briar, brush, bus, hub, huh, hush, rub, shrub, sir, sub]</code></pre>
+<p>You should use recursive backtracking to find and print all anagrams that can be formed using all of the letters of the given phrase. Each phrase should include at most <code>max</code> words. If max=0 then all possible words should be specified. Your output should exactly match the provided examples, including order and formatting. For example, if your anagram solver is using the word list corresponding to <code>words1.txt</code> and a user types the phrase <code>hairbrush</code>, with a <code>max</code> of <code>0</code> your program should produce the following output:</p>
+<pre><code>[bar, huh, sir]
+[bar, sir, huh]
+[briar, hush]
+[huh, bar, sir]
+[huh, sir, bar]
+[hush, briar]
+[sir, bar, huh]
+[sir, huh, bar]</code></pre>
+<p>If your anagram solver is using the word list corresponding to <code>words1.txt</code> and the user types the phrase <code>hairbrush</code> and a <code>max</code> of <code>2</code>, your program should produce the following output:</p>
+<pre><code>[briar, hush]
+[hush, briar]</code></pre>
 </section>
-<section id="error-checking" class="level2">
-<h2 class="anchored" data-anchor-id="error-checking">Error Checking</h2>
-<p>For this assignment, you will be responsible for developing checks on the input data.</p>
-<p>Required error checking:</p>
-<pre><code>If an invalid file is given then print the following and exit the program:
-'ERROR: File not found' and exit with a status code of 1
-
-If budget is not a number print the following and exit the program:
-'ERROR: Incorrect budget input' and exit with a status code of 1
-
-If any price per length is not a number print the following, 
-ignore that pastry, but continue processing:
-'ERROR: Incorrect price input' and continue reading the other pastries</code></pre>
-<p>Any pastry with no prices given will considered length 0 for price 0. This is NOT an error.</p>
+<section id="recursive-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="recursive-algorithm">Recursive Algorithm:</h2>
+<p>Generate all anagrams of a phrase using recursive backtracking. Many backtracking algorithms involve examining all combinations of a set of choices. In this problem, the choices are the words that can be formed from the phrase. A “decision” involves choosing a word for part of the phrase and recursively choosing words for the rest of the phrase. If you find a collection of words that use up all of the letters in the phrase, it should be printed as output.</p>
+<p>Part of your grade will be based on efficiency. One way to implement this program would be to consider every word in the word list as a possible “choice.” However, this would lead to a massive decision tree with lots of useless paths and a slow program. Therefore for full credit, to improve efficiency when generating anagrams for a given phrase, you should first find the collection of words contained in that phrase and consider only those words as “choices” in your decision tree. You should also backtrack immediately once exceeding the <code>max</code>.</p>
+<p>The following diagram shows a partial decision tree for generating anagrams of the phrase <code>barbarabush</code>.<br>
+Notice that some paths of the recursion lead to dead ends. For example, if the recursion chooses <code>aura</code> and <code>barb</code>, the letters remaining to use are <code>[bhs]</code>, and no choice available uses these letters, so it is not possible to generate any anagrams beginning with those two choices. In such a case, your code should backtrack and try the next path.</p>
+<p>One difference between this algorithm and other backtracking algorithms is that the same word can appear more than once in an anagram. For example, from <code>barbara bush</code> you might extract the word <code>bar</code> twice.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/decisionTree.png" class="img-fluid figure-img"></p>
+<figcaption>barbarabush Decision Tree</figcaption>
+</figure>
+</div>
 </section>
-<section id="more-examples" class="level2">
-<h2 class="anchored" data-anchor-id="more-examples">More Examples</h2>
-<section id="an-example-with-an-error" class="level3">
-<h3 class="anchored" data-anchor-id="an-example-with-an-error">An Example with an Error</h3>
-<p>Given the following input file:</p>
-<pre><code>300
-Cheese Cake: 62 83 44 48 
-Chocolate Cake: 97 100 11 49 z 96 28 33 45 
-Baguette: 24 24 58 79 12 83 79 44 13 5 
-Blank Pastry: </code></pre>
-<p>The output should be:</p>
-<pre><code>ERROR: Incorrect price input
-Baguette costs $240
-Blank Pastry costs $0
-Cheese Cake costs $248
-
-Can buy Blank Pastry for $0
-Can buy Baguette for $240
-
-The max number of unique pastries that can be bought with $300 is: 2</code></pre>
-<p>Notice the one error print out due to the ‘Chocolate Cake’ pastry has a ‘z’ in it. Thus it is ignored, but processing continues.</p>
-<p>Also notice that the lines containing the pastry costs are listed in alphabetical order by the name of each pastry. The lines which show each unique pastry that can be bought are listed in ascending order by price, and within each price listed alphabetically.</p>
+<section id="write-other-methods" class="level2">
+<h2 class="anchored" data-anchor-id="write-other-methods">Write other methods</h2>
+<p>An important aspect of simplifying the solution to many backtracking problems is the separation of recursive code from code that manages low-level details of the problem. We have seen this in several of our backtracking examples, such as 8 queens (recursive code in Queens.java, low-level code in Board.java). You are required to follow a similar strategy in this assignment. The low-level details for anagrams involve keeping track of letters and figuring out when one group of letters can be formed from another.</p>
 </section>
-<section id="another-error-example" class="level3">
-<h3 class="anchored" data-anchor-id="another-error-example">Another Error Example</h3>
-<p>Given the following input file:</p>
-<pre><code>IncorrectBudget
-Cheese Cake: 62 83 44 48 
-Chocolate Cake: 97 100 11 49 96 28 33 45 
-Baguette: 24 24 58 79 12 83 79 44 13 5 
-Blank Pastry: </code></pre>
-<p>The output should be:</p>
-<pre><code>ERROR: Incorrect budget input
-</code></pre>
-</section>
-</section>
-<section id="testing-your-program" class="level2">
-<h2 class="anchored" data-anchor-id="testing-your-program">Testing your program</h2>
-<p>When you commit and push, Travis CI will send you an email to let you know if the public test cases failed. We STRONGLY recommend you put some of your own test cases in PublicTestCases/. Read grade.py to see how the .in and .out files should be named. Also look at the examples that are already in the PublicTestCases/ subdirectory.</p>
-<p>Upload it to Gradescope and you will be able to see which public test cases were passed/failed.</p>
-</section>
-<section id="decomposition-ideas" class="level2">
-<h2 class="anchored" data-anchor-id="decomposition-ideas">Decomposition Ideas</h2>
-<p>See the slides from class and examples from Section 2 about performing exhaustive searches. What will the stopping criteria be for the TWO exhaustive searches this program will need to do?</p>
+<section id="development-strategy-and-hints" class="level2">
+<h2 class="anchored" data-anchor-id="development-strategy-and-hints">Development Strategy and Hints:</h2>
+<p>Your program should produce the anagrams in the same format as in the expected output files. The easiest way to do this is to build up your answer in a list, or other ordered collection. Then you can <code>println</code> the collection and it will have the right format.</p>
+<p>Several different word list files are provided. We recommend initially using a very small word list <code>words1.txt</code> to make testing easier. But once your code works with this word list, you should test it with larger word lists such as the provided <code>words2.txt</code> and <code>words3.txt</code>.<br>
+You can find other larger word lists here:</p>
+<p><a href="http://www.puzzlers.org/dokuwiki/doku.php?id=solving:wordlists:start" class="uri">http://www.puzzlers.org/dokuwiki/doku.php?id=solving:wordlists:start</a></p>
+<p>One difficult part of this program is limiting the number of words that can appear in the anagrams. We suggest you do this part last, initially printing all anagrams regardless of the number of words.</p>
 </section>
 <section id="grading-criteria" class="level2">
 <h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
-<p>Half of the PA3 grade will be correctness. For this assignment, there will be some private test cases. Partial points will be given if just one or two of the commands is implemented and works on those test cases.</p>
-<p>The other half of the PA3 grade will be your decomposition and code clarity.</p>
-<p>Decomposition * Should carefully select data structures that implement the required functionality. For example, if you avoid using HashMaps, it will probably result in more complicated code and thus points off.</p>
+<p>Half of the PA3 grade will be correctness (50/100). For this assignment, there will be some private test cases. Any time you submit to gradescope, it will tell you how many of the 50 correctness points you have earned.</p>
+<p>The other half (50/100) of the PA3 grade will be your decomposition and code clarity.</p>
+<p>Decomposition:</p>
 <ul>
-<li><p>Should just use static methods in the single PA3Main class.</p></li>
-<li><p>Use a single file. This should be a small program (&lt;300 lines).</p></li>
-<li><p>Each static method should be less than 30 lines. This INCLUDES comments. It is easier to read a function if it can all fit on one screen.</p></li>
+<li><p>Should just use <code>static</code> methods in the single <code>Anagrams</code> class.</p></li>
+<li><p>Use a single file. This should be a small program (&lt;200 lines). We do not count any of the comments in the file header toward this 200 lines.</p></li>
+<li><p>Each <code>static</code> method should be less than 30 lines. The method header won’t be included in the 30 lines.</p></li>
 <li><p>Make things as simple as possible.</p>
 <ul>
-<li>Avoid nested loops.</li>
-<li>Avoid nesting conditionals.</li>
-<li>Avoid chaining, i.e., too many levels of user-defined methods calling other user-defined methods. Putting most of the functionality in another static method that returns void that main calls is an example of this.</li>
+<li>Nested loops and conditionals are ok if they are following provided recursive backtracking code example templates. Make an effort to simplify conditionals as much as possible and explain them clearly in comments.</li>
+<li>Avoid too many levels of user-defined methods calling other user-defined methods.</li>
 </ul></li>
+<li><p>Declare collection variables using interface types.</p></li>
+<li><p>Your code should be decomposed well. <code>main</code> should be a good summary of your program and no method should be overly long or trivial. Your methods should not be chained. Do NOT have main just call one method that does everything.</p></li>
+<li><p>Part of your grade will come from appropriately utilizing recursive backtracking to implement your algorithm as described previously. We will grade on the elegance of your recursive algorithm; do not create special cases in your recursive code if they are not necessary or repeat cases already handled.</p></li>
+<li><p>Redundancy is a grading focus; some tasks are similar in behavior or based off of other tasks. You should avoid repeated logic as much as possible.</p></li>
 </ul>
-<p>Code Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it.</p>
+<p>Code Clarity:</p>
 <ul>
-<li><p>There needs to be a balance between no comments and a comment for every line in the program. Either extreme will result in points off.</p></li>
-<li><p>The file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.</p></li>
-<li><p>Use meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).</p></li>
+<li><p>YOU should be able to read, understand, and explain your own code a couple days after you wrote it.</p></li>
+<li><p>The file header should include instructions on how someone would use this program and what typical inputs would look like.</p></li>
+<li><p>Use meaningful variable names. Loop iterators can be simple (<code>i</code> for integers, <code>s</code> for strings, <code>n</code> for numbers, etc.). Otherwise you should avoid single letter variable names. Name Variables in camelCase.</p></li>
 <li><p>The clearest code examples will be anonymously shown in class.</p></li>
 <li><p>The most obfuscated code examples will be anonymously shown in class with suggestions for improvement.</p></li>
 </ul>
 <p>The coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine.</p>
-<p>Write your own code. We will be using a tool that finds overly similar code. I recommend that when talking with others about the assignment, do not write anything down.</p>
+<p>Write your own code. We will be using a tool that finds overly similar code. Do not look at other students’ code. Do not let other students look at your code or talk in detail about how to solve this programming project.</p>
 </section>
 <section id="submission" class="level2">
 <h2 class="anchored" data-anchor-id="submission">Submission</h2>
-<p>For PA3, you are required to submit your PA3Main.java file to Gradescope.</p>
+<p>As with PA1 and PA2, for PA3 you are required to commit your <code>Anagrams.java</code> solution to GitHub.</p>
 
 
 </section>
