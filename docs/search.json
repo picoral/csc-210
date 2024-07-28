@@ -1629,5 +1629,26 @@
     "title": "Backtracking",
     "section": "Backtracking",
     "text": "Backtracking\nMain idea: find every solution incrementally by trying different options, then abandoning them if they are not suitable\nIn other words: exhaustive search + conditions for suitable solution"
+  },
+  {
+    "objectID": "slides-01-02.html#java-operators",
+    "href": "slides-01-02.html#java-operators",
+    "title": "Intro to Java",
+    "section": "Java operators",
+    "text": "Java operators\nThree boolean operators:\n\n! not\n|| or\n&& and\n\nThe other operators are the same as Python:\n\n* multiplication, / division, % modulus\n+ addition/concatenation, - subtraction\n&lt; less, &gt; greater,&lt;= less or equal, &gt;= greater or equal, == equal, != not equal"
+  },
+  {
+    "objectID": "slides-01-02.html#practice-2",
+    "href": "slides-01-02.html#practice-2",
+    "title": "Intro to Java",
+    "section": "Practice",
+    "text": "Practice\nWrite a Java application to check if a year is leap or regular\nLeap years are those that are either:\n\ndivisible by 4 and not 100\ndivisible by 400"
+  },
+  {
+    "objectID": "slides-01-02.html#solution-6",
+    "href": "slides-01-02.html#solution-6",
+    "title": "Intro to Java",
+    "section": "Solution",
+    "text": "Solution"
   }
 ]

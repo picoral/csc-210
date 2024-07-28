@@ -437,5 +437,90 @@ public class HoursMinutesSeconds {
 ```
 
 
+## Java operators
 
+Three boolean operators:
+
+* `!` not
+* `||` or 
+* `&&` and
+
+The other operators are the same as Python:
+
+* `*` multiplication, `/` division, `%` modulus
+* `+` addition/concatenation, `-` subtraction
+* `<` less, `>` greater,`<=` less or equal, `>=` greater or equal,  `==` equal, `!=` not equal
+
+## Practice 
+
+Write a Java application to check if a year is leap or regular
+
+Leap years are those that are either:
+
+* divisible by 4 and not 100
+* divisible by 400
+
+## Solution 1
+
+```{java}
+import java.util.Scanner;
+
+public class LeapYear {
+	
+	public static String isLeap(int year) {
+		if ((year % 100 != 0) && (year % 4 == 0)) return "Leap Year";
+		else if ((year % 400 == 0)) return "Leap Year";
+		else return "Regular Year";
+
+	}
+
+	public static void main(String[] args) {
+		Scanner userInput = new Scanner(System.in);
+        
+        // prints out message to user
+        System.out.print("Enter a year: ");
+      
+        // get integer from keyboard entry
+        int year = userInput.nextInt();
+        userInput.close();
+        
+        System.out.println(isLeap(year));
+	}
+}
+```
+
+## Solution 2
+
+```{java}
+import java.util.Scanner;
+
+public class LeapYear {
+	
+	public static String isLeap(int year) {
+		boolean isLeapYear;
+		
+		isLeapYear = ((year % 100 != 0) && (year % 4 == 0));
+		isLeapYear = isLeapYear || ((year % 400 == 0));
+		
+		if (isLeapYear) return "Leap Year";
+		else return "Regular Year";
+
+	}
+
+	public static void main(String[] args) {
+		Scanner userInput = new Scanner(System.in);
+        
+        // prints out message to user
+        System.out.print("Enter a year: ");
+      
+        // get integer from keyboard entry
+        int year = userInput.nextInt();
+        userInput.close();
+        
+        System.out.println(isLeap(year));
+
+	}
+}
+
+```
 
