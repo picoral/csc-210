@@ -500,8 +500,8 @@
     "objectID": "slides-01-02.html#before-we-start",
     "href": "slides-01-02.html#before-we-start",
     "title": "Intro to Java",
-    "section": "Before we start",
-    "text": "Before we start\nWe will be using Eclipse as our IDE for this course.\nIt’s good practice to have a working environment folder and work within projects. (DEMO)\nI’ll create a GettingStarted project, and then a new class called HelloWorld\nOpt to create a public main method\nSystem.out.println(\"Hello World!\");"
+    "section": "",
+    "text": "We will be using Eclipse as our IDE for this course.\nIt’s good practice to have a working environment folder and work within projects. (DEMO)\nI’ll create a GettingStarted project, and then a new class called HelloWorld\nOpt to create a public main method\nSystem.out.println(\"Hello World!\");"
   },
   {
     "objectID": "slides-01-02.html#typing",
@@ -1600,7 +1600,7 @@
     "href": "programming-assignment-03.html#write-other-methods",
     "title": "Programming Assignment 03",
     "section": "Write other methods",
-    "text": "Write other methods\nAn important aspect of simplifying the solution to many backtracking problems is the separation of recursive code from code that manages low-level details of the problem. We have seen this in several of our backtracking examples, such as 8 queens (recursive code in Queens.java, low-level code in Board.java). You are required to follow a similar strategy in this assignment. The low-level details for anagrams involve keeping track of letters and figuring out when one group of letters can be formed from another."
+    "text": "Write other methods\nAn important aspect of simplifying the solution to many backtracking problems is the separation of recursive code from code that manages low-level details of the problem. We have seen this in several of our backtracking examples, such as Dice roll sum and 8 queens. You should follow a similar strategy in this assignment. The low-level details for anagrams involve keeping track of letters and figuring out when one group of letters can be formed from another."
   },
   {
     "objectID": "slides-03-01.html",
@@ -1678,5 +1678,26 @@
     "title": "Backtracking",
     "section": "Solution 2",
     "text": "Solution 2\nimport java.util.ArrayList;\n\n\npublic class DiceBacktracking {\n    \n    static ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = new ArrayList&lt;ArrayList&lt;Integer&gt;&gt; ();\n    static ArrayList&lt;Integer&gt; values = new ArrayList&lt;Integer&gt;();\n    static int targetSum;\n    \n    \n    public static void getValidCombinations(int count, int currentSum) {\n        if (count == 0) {\n            if (currentSum == targetSum) {\n                ArrayList&lt;Integer&gt; valuesToAdd = new ArrayList&lt;Integer&gt;(values);\n                result.add(valuesToAdd);\n            }\n        } else if (currentSum + 1 * count &gt; targetSum ||\n                   currentSum + 6 * count &lt; targetSum) {\n                      return;\n        } else {\n            for (int v = 1; v &lt;= 6; v++) {\n                values.add(v);\n                getValidCombinations(count - 1, currentSum + v);\n                values.remove(values.size() - 1);\n            }\n        }\n    }\n\n    public static void main(String[] args) {\n        \n        targetSum = 7;\n        getValidCombinations(2, 0);\n        \n        for (ArrayList&lt;Integer&gt; v : result) System.out.println(v);\n        \n    }\n}"
+  },
+  {
+    "objectID": "slides-01-02.html",
+    "href": "slides-01-02.html",
+    "title": "Intro to Java",
+    "section": "",
+    "text": "We will be using Eclipse as our IDE for this course.\nIt’s good practice to have a working environment folder and work within projects. (DEMO)\nI’ll create a GettingStarted project, and then a new class called HelloWorld\nOpt to create a public main method\nSystem.out.println(\"Hello World!\");"
+  },
+  {
+    "objectID": "slides-01-02.html#solution-1-1",
+    "href": "slides-01-02.html#solution-1-1",
+    "title": "Intro to Java",
+    "section": "Solution 1",
+    "text": "Solution 1\nimport java.util.Scanner;\n\npublic class LeapYear {\n    \n    public static String isLeap(int year) {\n        if ((year % 100 != 0) && (year % 4 == 0)) return \"Leap Year\";\n        else if ((year % 400 == 0)) return \"Leap Year\";\n        else return \"Regular Year\";\n\n    }\n\n    public static void main(String[] args) {\n        Scanner userInput = new Scanner(System.in);\n        \n        // prints out message to user\n        System.out.print(\"Enter a year: \");\n      \n        // get integer from keyboard entry\n        int year = userInput.nextInt();\n        userInput.close();\n        \n        System.out.println(isLeap(year));\n    }\n}"
+  },
+  {
+    "objectID": "slides-01-02.html#solution-2-1",
+    "href": "slides-01-02.html#solution-2-1",
+    "title": "Intro to Java",
+    "section": "Solution 2",
+    "text": "Solution 2\nimport java.util.Scanner;\n\npublic class LeapYear {\n    \n    public static String isLeap(int year) {\n        boolean isLeapYear;\n        \n        isLeapYear = ((year % 100 != 0) && (year % 4 == 0));\n        isLeapYear = isLeapYear || ((year % 400 == 0));\n        \n        if (isLeapYear) return \"Leap Year\";\n        else return \"Regular Year\";\n\n    }\n\n    public static void main(String[] args) {\n        Scanner userInput = new Scanner(System.in);\n        \n        // prints out message to user\n        System.out.print(\"Enter a year: \");\n      \n        // get integer from keyboard entry\n        int year = userInput.nextInt();\n        userInput.close();\n        \n        System.out.println(isLeap(year));\n\n    }\n}"
   }
 ]
