@@ -1650,5 +1650,33 @@
     "title": "Intro to Java",
     "section": "Solution",
     "text": "Solution"
+  },
+  {
+    "objectID": "slides-03-02.html#application-dice-roll-sum",
+    "href": "slides-03-02.html#application-dice-roll-sum",
+    "title": "Backtracking",
+    "section": "Application: Dice roll sum",
+    "text": "Application: Dice roll sum\nWrite a Java application that given two integers representing 1) how many dice to roll, and 2) the target sum of all dice values, it outputs all combinations of dice values that add up to the target sum.\nExample call:\ntargetSum = 7;\ngetValidCombinations(2);\nOutput:\n[1, 6]\n[2, 5]\n[3, 4]\n[4, 3]\n[5, 2]\n[6, 1]"
+  },
+  {
+    "objectID": "slides-03-02.html#solution-1",
+    "href": "slides-03-02.html#solution-1",
+    "title": "Backtracking",
+    "section": "Solution 1",
+    "text": "Solution 1\nimport java.util.ArrayList;\n\n\npublic class DiceBacktracking {\n    \n    static ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = new ArrayList&lt;ArrayList&lt;Integer&gt;&gt; ();\n    static ArrayList&lt;Integer&gt; values = new ArrayList&lt;Integer&gt;();\n    static int targetSum;\n    \n    public static int sumAll(ArrayList&lt;Integer&gt; values) {\n        int sum = 0;\n        for (int v : values) sum += v;\n        return sum;\n    }\n    \n    public static void getValidCombinations(int count) {\n        if (count == 0) {\n            if (sumAll(values) == targetSum) {\n                ArrayList&lt;Integer&gt; valuesToAdd = new ArrayList&lt;Integer&gt;(values);\n                result.add(valuesToAdd);\n            }\n        }\n        else {\n            for (int v = 1; v &lt;= 6; v++) {\n                values.add(v); \n                getValidCombinations(count - 1);\n                values.remove(values.size() - 1);\n            }\n        }\n    }\n\n    public static void main(String[] args) {\n        \n        targetSum = 7;\n        getValidCombinations(2);\n        \n        for (ArrayList&lt;Integer&gt; v : result) System.out.println(v);\n        \n    }\n}"
+  },
+  {
+    "objectID": "slides-03-02.html#optimizations-pruning",
+    "href": "slides-03-02.html#optimizations-pruning",
+    "title": "Backtracking",
+    "section": "Optimizations (Pruning)",
+    "text": "Optimizations (Pruning)\nWe can preemptively stop, or prune, branches in the decision tree that cannot lead to a valid solution:\n\ncurrent sum is already too high (rolling all 1s in the remaining dice will cause it to go over target sum)\ncurrent sum is already too low (rolling all 6s in the remaining dice will cause it to be under target sum)"
+  },
+  {
+    "objectID": "slides-03-02.html#solution-2",
+    "href": "slides-03-02.html#solution-2",
+    "title": "Backtracking",
+    "section": "Solution 2",
+    "text": "Solution 2\nimport java.util.ArrayList;\n\n\npublic class DiceBacktracking {\n    \n    static ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = new ArrayList&lt;ArrayList&lt;Integer&gt;&gt; ();\n    static ArrayList&lt;Integer&gt; values = new ArrayList&lt;Integer&gt;();\n    static int targetSum;\n    \n    \n    public static void getValidCombinations(int count, int currentSum) {\n        if (count == 0) {\n            if (currentSum == targetSum) {\n                ArrayList&lt;Integer&gt; valuesToAdd = new ArrayList&lt;Integer&gt;(values);\n                result.add(valuesToAdd);\n            }\n        } else if (currentSum + 1 * count &gt; targetSum ||\n                   currentSum + 6 * count &lt; targetSum) {\n                      return;\n        } else {\n            for (int v = 1; v &lt;= 6; v++) {\n                values.add(v);\n                getValidCombinations(count - 1, currentSum + v);\n                values.remove(values.size() - 1);\n            }\n        }\n    }\n\n    public static void main(String[] args) {\n        \n        targetSum = 7;\n        getValidCombinations(2, 0);\n        \n        for (ArrayList&lt;Integer&gt; v : result) System.out.println(v);\n        \n    }\n}"
   }
 ]

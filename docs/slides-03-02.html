@@ -28,6 +28,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -344,6 +409,111 @@
 <h2>Backtracking</h2>
 <p>Main idea: find every solution incrementally by trying different options, then abandoning them if they are not suitable</p>
 <p>In other words: exhaustive search + conditions for suitable solution</p>
+</section>
+<section id="application-dice-roll-sum" class="slide level2">
+<h2>Application: Dice roll sum</h2>
+<p>Write a Java application that given two integers representing 1) how many dice to roll, and 2) the target sum of all dice values, it outputs all combinations of dice values that add up to the target sum.</p>
+<p>Example call:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>targetSum = 7;</span>
+<span id="cb1-2"><a></a>getValidCombinations(2);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Output:</p>
+<pre><code>[1, 6]
+[2, 5]
+[3, 4]
+[4, 3]
+[5, 2]
+[6, 1]</code></pre>
+</section>
+<section id="solution-1" class="slide level2">
+<h2>Solution 1</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>import java.util.ArrayList;</span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a>public class DiceBacktracking {</span>
+<span id="cb3-5"><a></a>    </span>
+<span id="cb3-6"><a></a>    static ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = new ArrayList&lt;ArrayList&lt;Integer&gt;&gt; ();</span>
+<span id="cb3-7"><a></a>    static ArrayList&lt;Integer&gt; values = new ArrayList&lt;Integer&gt;();</span>
+<span id="cb3-8"><a></a>    static int targetSum;</span>
+<span id="cb3-9"><a></a>    </span>
+<span id="cb3-10"><a></a>    public static int sumAll(ArrayList&lt;Integer&gt; values) {</span>
+<span id="cb3-11"><a></a>        int sum = 0;</span>
+<span id="cb3-12"><a></a>        for (int v : values) sum += v;</span>
+<span id="cb3-13"><a></a>        return sum;</span>
+<span id="cb3-14"><a></a>    }</span>
+<span id="cb3-15"><a></a>    </span>
+<span id="cb3-16"><a></a>    public static void getValidCombinations(int count) {</span>
+<span id="cb3-17"><a></a>        if (count == 0) {</span>
+<span id="cb3-18"><a></a>            if (sumAll(values) == targetSum) {</span>
+<span id="cb3-19"><a></a>                ArrayList&lt;Integer&gt; valuesToAdd = new ArrayList&lt;Integer&gt;(values);</span>
+<span id="cb3-20"><a></a>                result.add(valuesToAdd);</span>
+<span id="cb3-21"><a></a>            }</span>
+<span id="cb3-22"><a></a>        }</span>
+<span id="cb3-23"><a></a>        else {</span>
+<span id="cb3-24"><a></a>            for (int v = 1; v &lt;= 6; v++) {</span>
+<span id="cb3-25"><a></a>                values.add(v); </span>
+<span id="cb3-26"><a></a>                getValidCombinations(count - 1);</span>
+<span id="cb3-27"><a></a>                values.remove(values.size() - 1);</span>
+<span id="cb3-28"><a></a>            }</span>
+<span id="cb3-29"><a></a>        }</span>
+<span id="cb3-30"><a></a>    }</span>
+<span id="cb3-31"><a></a></span>
+<span id="cb3-32"><a></a>    public static void main(String[] args) {</span>
+<span id="cb3-33"><a></a>        </span>
+<span id="cb3-34"><a></a>        targetSum = 7;</span>
+<span id="cb3-35"><a></a>        getValidCombinations(2);</span>
+<span id="cb3-36"><a></a>        </span>
+<span id="cb3-37"><a></a>        for (ArrayList&lt;Integer&gt; v : result) System.out.println(v);</span>
+<span id="cb3-38"><a></a>        </span>
+<span id="cb3-39"><a></a>    }</span>
+<span id="cb3-40"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="optimizations-pruning" class="slide level2">
+<h2>Optimizations (Pruning)</h2>
+<p>We can preemptively stop, or prune, branches in the decision tree that cannot lead to a valid solution:</p>
+<ul>
+<li>current sum is already too high (rolling all <code>1</code>s in the remaining dice will cause it to go over target sum)</li>
+<li>current sum is already too low (rolling all <code>6</code>s in the remaining dice will cause it to be under target sum)</li>
+</ul>
+</section>
+<section id="solution-2" class="slide level2">
+<h2>Solution 2</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>import java.util.ArrayList;</span>
+<span id="cb4-2"><a></a></span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a>public class DiceBacktracking {</span>
+<span id="cb4-5"><a></a>    </span>
+<span id="cb4-6"><a></a>    static ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = new ArrayList&lt;ArrayList&lt;Integer&gt;&gt; ();</span>
+<span id="cb4-7"><a></a>    static ArrayList&lt;Integer&gt; values = new ArrayList&lt;Integer&gt;();</span>
+<span id="cb4-8"><a></a>    static int targetSum;</span>
+<span id="cb4-9"><a></a>    </span>
+<span id="cb4-10"><a></a>    </span>
+<span id="cb4-11"><a></a>    public static void getValidCombinations(int count, int currentSum) {</span>
+<span id="cb4-12"><a></a>        if (count == 0) {</span>
+<span id="cb4-13"><a></a>            if (currentSum == targetSum) {</span>
+<span id="cb4-14"><a></a>                ArrayList&lt;Integer&gt; valuesToAdd = new ArrayList&lt;Integer&gt;(values);</span>
+<span id="cb4-15"><a></a>                result.add(valuesToAdd);</span>
+<span id="cb4-16"><a></a>            }</span>
+<span id="cb4-17"><a></a>        } else if (currentSum + 1 * count &gt; targetSum ||</span>
+<span id="cb4-18"><a></a>                   currentSum + 6 * count &lt; targetSum) {</span>
+<span id="cb4-19"><a></a>                      return;</span>
+<span id="cb4-20"><a></a>        } else {</span>
+<span id="cb4-21"><a></a>            for (int v = 1; v &lt;= 6; v++) {</span>
+<span id="cb4-22"><a></a>                values.add(v);</span>
+<span id="cb4-23"><a></a>                getValidCombinations(count - 1, currentSum + v);</span>
+<span id="cb4-24"><a></a>                values.remove(values.size() - 1);</span>
+<span id="cb4-25"><a></a>            }</span>
+<span id="cb4-26"><a></a>        }</span>
+<span id="cb4-27"><a></a>    }</span>
+<span id="cb4-28"><a></a></span>
+<span id="cb4-29"><a></a>    public static void main(String[] args) {</span>
+<span id="cb4-30"><a></a>        </span>
+<span id="cb4-31"><a></a>        targetSum = 7;</span>
+<span id="cb4-32"><a></a>        getValidCombinations(2, 0);</span>
+<span id="cb4-33"><a></a>        </span>
+<span id="cb4-34"><a></a>        for (ArrayList&lt;Integer&gt; v : result) System.out.println(v);</span>
+<span id="cb4-35"><a></a>        </span>
+<span id="cb4-36"><a></a>    }</span>
+<span id="cb4-37"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

@@ -20,3 +20,119 @@ Used for problems that have a small and well-defined search space, where it is f
 Main idea: find every solution incrementally by trying different options, then abandoning them if they are not suitable
 
 In other words: exhaustive search + conditions for suitable solution
+
+## Application: Dice roll sum
+
+Write a Java application that given two integers representing 1) how many dice to roll, and 2) the target sum of all dice values, it outputs all combinations of dice values that add up to the target sum.
+
+Example call:
+```{java}
+targetSum = 7;
+getValidCombinations(2);
+```
+
+Output:
+```
+[1, 6]
+[2, 5]
+[3, 4]
+[4, 3]
+[5, 2]
+[6, 1]
+```
+
+## Solution 1
+
+```{java}
+import java.util.ArrayList;
+
+
+public class DiceBacktracking {
+	
+	static ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>> ();
+	static ArrayList<Integer> values = new ArrayList<Integer>();
+	static int targetSum;
+	
+	public static int sumAll(ArrayList<Integer> values) {
+		int sum = 0;
+		for (int v : values) sum += v;
+		return sum;
+	}
+	
+	public static void getValidCombinations(int count) {
+		if (count == 0) {
+			if (sumAll(values) == targetSum) {
+				ArrayList<Integer> valuesToAdd = new ArrayList<Integer>(values);
+				result.add(valuesToAdd);
+			}
+		}
+		else {
+			for (int v = 1; v <= 6; v++) {
+				values.add(v); 
+				getValidCombinations(count - 1);
+				values.remove(values.size() - 1);
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		targetSum = 7;
+		getValidCombinations(2);
+		
+		for (ArrayList<Integer> v : result) System.out.println(v);
+		
+	}
+}
+```
+
+## Optimizations (Pruning)
+
+We can preemptively stop, or prune,	branches in the decision tree that cannot lead to a valid solution:
+
+* current	sum	is already too high (rolling all `1`s in the remaining dice will cause it to go over target sum)
+* current	sum	is already too low (rolling all `6`s in the remaining dice will cause it to be under target sum)
+
+## Solution 2
+
+```{java}
+import java.util.ArrayList;
+
+
+public class DiceBacktracking {
+	
+	static ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>> ();
+	static ArrayList<Integer> values = new ArrayList<Integer>();
+	static int targetSum;
+	
+	
+	public static void getValidCombinations(int count, int currentSum) {
+		if (count == 0) {
+			if (currentSum == targetSum) {
+				ArrayList<Integer> valuesToAdd = new ArrayList<Integer>(values);
+				result.add(valuesToAdd);
+			}
+		} else if (currentSum + 1 * count > targetSum ||
+				   currentSum + 6 * count < targetSum) {
+			          return;
+		} else {
+			for (int v = 1; v <= 6; v++) {
+				values.add(v);
+				getValidCombinations(count - 1, currentSum + v);
+				values.remove(values.size() - 1);
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		targetSum = 7;
+		getValidCombinations(2, 0);
+		
+		for (ArrayList<Integer> v : result) System.out.println(v);
+		
+	}
+}
+
+```
+
