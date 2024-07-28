@@ -281,7 +281,7 @@ public class RandomNumbers {
 	public static void main(String[] args) {
 		
 		if (args.length > 0) {
-			int n = Integer.valueOf(args[0]);
+			int n = Integer.valueOf(args[0]); // or Integer.parseInt(args[0]);
 			ArrayList<Integer> myResult = getNumbers(n);
 			System.out.println(myResult);
 		}
