@@ -83,23 +83,21 @@ What if instead of printing out a solution, I wanted to create an `ArrayList` of
 import java.util.ArrayList;
 
 public class AllBinary {
+	
+	static ArrayList<String> result = new ArrayList<String>();
 
-	public static ArrayList<String> getBinary(int digits, 
-			                                  String number, 
-			                                  ArrayList<String> result) {
+	public static void getBinary(int digits, String number) {
 		if (digits == 0) {
 			result.add(number);
 		} else {
-			getBinary(digits - 1, number + "0", result);
-			getBinary(digits - 1, number + "1", result);
+			getBinary(digits - 1, number + "0");
+			getBinary(digits - 1, number + "1");
 		}
-		return result;
 		
 	}
 	
 	public static void main(String[] args) {
-		ArrayList<String> result = new ArrayList<String>();
-		getBinary(3, "", result);
+		getBinary(4, "");
 		System.out.println(result);
 	}
 
@@ -145,30 +143,30 @@ import java.util.ArrayList;
 
 public class AllDecimal {
 	
-	public static ArrayList<String> getDecimal(int digits, 
-                                                   String number, 
-                                                   ArrayList<String> result) {
+	static ArrayList<String> result = new ArrayList<String>();
+	
+	public static void getDecimal(int digits, String number) {
 		if (digits == 0) {
 			result.add(number);
 		} else {
 			for (int n = 0; n < 10; n++) {
-				getDecimal(digits - 1, number + n, result);
+				getDecimal(digits - 1, number + n);
 			}
 			
 		}
-		return result;
 		
 	} // getDecimal
 
 	public static void main(String[] args) {
-		ArrayList<String> result = new ArrayList<String>();
-		getDecimal(2, "", result);
+		
+		getDecimal(2, "");
 		
 		for (String number : result) {
 			System.out.println(number);
 		}
 
-	} // main
+	}
 }
+
 ```
 

@@ -1572,7 +1572,7 @@
     "href": "slides-03-01.html#creating-an-arraylist-of-solutions-1",
     "title": "Exhaustive Search",
     "section": "Creating an ArrayList of solutions",
-    "text": "Creating an ArrayList of solutions\nimport java.util.ArrayList;\n\npublic class AllBinary {\n\n    public static ArrayList&lt;String&gt; getBinary(int digits, \n                                              String number, \n                                              ArrayList&lt;String&gt; result) {\n        if (digits == 0) {\n            result.add(number);\n        } else {\n            getBinary(digits - 1, number + \"0\", result);\n            getBinary(digits - 1, number + \"1\", result);\n        }\n        return result;\n        \n    }\n    \n    public static void main(String[] args) {\n        ArrayList&lt;String&gt; result = new ArrayList&lt;String&gt;();\n        getBinary(3, \"\", result);\n        System.out.println(result);\n    }\n\n}"
+    "text": "Creating an ArrayList of solutions\nimport java.util.ArrayList;\n\npublic class AllBinary {\n    \n    static ArrayList&lt;String&gt; result = new ArrayList&lt;String&gt;();\n\n    public static void getBinary(int digits, String number) {\n        if (digits == 0) {\n            result.add(number);\n        } else {\n            getBinary(digits - 1, number + \"0\");\n            getBinary(digits - 1, number + \"1\");\n        }\n        \n    }\n    \n    public static void main(String[] args) {\n        getBinary(4, \"\");\n        System.out.println(result);\n    }\n\n}"
   },
   {
     "objectID": "slides-03-01.html#print-all-possible-decimal-numbers",
@@ -1593,7 +1593,7 @@
     "href": "slides-03-01.html#all-possible-decimal-numbers-solution",
     "title": "Exhaustive Search",
     "section": "All possible decimal numbers – solution",
-    "text": "All possible decimal numbers – solution\nimport java.util.ArrayList;\n\npublic class AllDecimal {\n    \n    public static ArrayList&lt;String&gt; getDecimal(int digits, \n                                                   String number, \n                                                   ArrayList&lt;String&gt; result) {\n        if (digits == 0) {\n            result.add(number);\n        } else {\n            for (int n = 0; n &lt; 10; n++) {\n                getDecimal(digits - 1, number + n, result);\n            }\n            \n        }\n        return result;\n        \n    } // getDecimal\n\n    public static void main(String[] args) {\n        ArrayList&lt;String&gt; result = new ArrayList&lt;String&gt;();\n        getDecimal(2, \"\", result);\n        \n        for (String number : result) {\n            System.out.println(number);\n        }\n\n    } // main\n}"
+    "text": "All possible decimal numbers – solution\nimport java.util.ArrayList;\n\npublic class AllDecimal {\n    \n    static ArrayList&lt;String&gt; result = new ArrayList&lt;String&gt;();\n    \n    public static void getDecimal(int digits, String number) {\n        if (digits == 0) {\n            result.add(number);\n        } else {\n            for (int n = 0; n &lt; 10; n++) {\n                getDecimal(digits - 1, number + n);\n            }\n            \n        }\n        \n    } // getDecimal\n\n    public static void main(String[] args) {\n        \n        getDecimal(2, \"\");\n        \n        for (String number : result) {\n            System.out.println(number);\n        }\n\n    }\n}"
   },
   {
     "objectID": "programming-assignment-03.html#write-other-methods",
