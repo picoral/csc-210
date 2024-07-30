@@ -28,6 +28,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -334,23 +399,19 @@
 <section id="static-methods" class="slide level2">
 <h2><code>static</code> methods</h2>
 <p>The Java construct for implementing functions is known as the <code>static</code> method.</p>
-<p>Properties of static methods:</p>
-<ul>
-<li><strong>Multiple arguments</strong> – static methods can take on more than one argument, and therefore can have more than one parameter variable</li>
-<li><strong>Multiple methods</strong> – define as many static methods as you want in a .java file. These methods are independent and can appear in any order in the file. A static method can call any other static method in the same file or any static method in a Java library</li>
-</ul>
 </section>
-<section id="static-methods-1" class="slide level2">
-<h2><code>static</code> methods</h2>
+<section id="methods" class="slide level2">
+<h2>Methods</h2>
 <ul>
-<li><strong>Overloading</strong> – Static methods whose signatures differ are different static methods. Using the same name for two static methods whose signatures differ is known as overloading.</li>
+<li><strong>Multiple arguments</strong> – methods can take on more than one argument, and therefore can have more than one parameter variable</li>
+<li><strong>Overloading</strong> – methods whose signatures differ are different methods. Using the same name for two methods whose signatures differ is known as overloading.</li>
 <li><strong>Single return value</strong> A Java method provides only one return value to the caller, of the type declared in the method signature</li>
 </ul>
 </section>
-<section id="static-methods-2" class="slide level2">
-<h2><code>static</code> methods</h2>
+<section id="methods-1" class="slide level2">
+<h2>Methods</h2>
 <ul>
-<li><strong>Scope</strong> – The scope of a variable is the part of the program that can refer to that variable by name. The scope of a variable declared in a static method is limited to that method’s body. You cannot refer to a variable in one static method that is declared in another.</li>
+<li><strong>Scope</strong> – The scope of a variable is the part of the program that can refer to that variable by name. The scope of a variable declared in a method is limited to that method’s body. You cannot refer to a variable in one method that is declared in another.</li>
 </ul>
 <p>Source: <a href="https://introcs.cs.princeton.edu/java/21function/">Programming in Java, Sedgewick &amp; Wayne (2024)</a></p>
 </section>
@@ -378,6 +439,116 @@
 <li>constructors <code>public</code> no return type (do not use <code>static</code>)</li>
 <li>most methods <code>public</code> (do not use <code>static</code>), but <code>private</code> helper methods are often useful</li>
 </ul>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>public class IdentifyMyParts {</span>
+<span id="cb1-2"><a></a>    public int x = 7; </span>
+<span id="cb1-3"><a></a>    public int y = 3; </span>
+<span id="cb1-4"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol type="1">
+<li>What are the instance variables?</li>
+<li>How do you construct a new instance of this class?</li>
+</ol>
+<p><small><em>Exercise from <a href="https://docs.oracle.com/javase%2Ftutorial%2F/java/javaOO/QandE/creating-questions.html">The Java™ Tutorials</a></em></small></p>
+</section>
+<section id="example-1" class="slide level2">
+<h2>Example</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>public class IdentifyMyParts {</span>
+<span id="cb2-2"><a></a>    public int x = 7; </span>
+<span id="cb2-3"><a></a>    public int y = 3; </span>
+<span id="cb2-4"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>What is the output from the following code:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>IdentifyMyParts a = new IdentifyMyParts();</span>
+<span id="cb3-2"><a></a>IdentifyMyParts b = new IdentifyMyParts();</span>
+<span id="cb3-3"><a></a>a.y = 5;</span>
+<span id="cb3-4"><a></a>b.y = 6;</span>
+<span id="cb3-5"><a></a>a.x = 1;</span>
+<span id="cb3-6"><a></a>b.x = 2;</span>
+<span id="cb3-7"><a></a>System.out.println("a.y = " + a.y);</span>
+<span id="cb3-8"><a></a>System.out.println("b.y = " + b.y);</span>
+<span id="cb3-9"><a></a>System.out.println("a.x = " + a.x);</span>
+<span id="cb3-10"><a></a>System.out.println("b.x = " + b.x);</span>
+<span id="cb3-11"><a></a>System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Add <code>static</code> after <code>public</code> for one of the instance variable (to make it a class variable). What is the side effect?</p>
+</section>
+<section id="better-example" class="slide level2">
+<h2>Better example</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>public class IdentifyMyParts {</span>
+<span id="cb4-2"><a></a>    private int x = 7;</span>
+<span id="cb4-3"><a></a>    private int y = 3;</span>
+<span id="cb4-4"><a></a>    </span>
+<span id="cb4-5"><a></a>    public void setX(int x) {</span>
+<span id="cb4-6"><a></a>        this.x = x;</span>
+<span id="cb4-7"><a></a>    }</span>
+<span id="cb4-8"><a></a></span>
+<span id="cb4-9"><a></a>    public void setY(int y) {</span>
+<span id="cb4-10"><a></a>        this.y = y;</span>
+<span id="cb4-11"><a></a>    }</span>
+<span id="cb4-12"><a></a>    </span>
+<span id="cb4-13"><a></a>    public int getX() {</span>
+<span id="cb4-14"><a></a>        return x;</span>
+<span id="cb4-15"><a></a>    }</span>
+<span id="cb4-16"><a></a>    </span>
+<span id="cb4-17"><a></a>    public int getY() {</span>
+<span id="cb4-18"><a></a>        return y;</span>
+<span id="cb4-19"><a></a>    }</span>
+<span id="cb4-20"><a></a></span>
+<span id="cb4-21"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Variable scope: what’s the difference between <code>this.x</code> and <code>x</code>?</p>
+</section>
+<section id="better-example-use" class="slide level2">
+<h2>Better example – use</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>public class UseMyParts {</span>
+<span id="cb5-2"><a></a></span>
+<span id="cb5-3"><a></a>    public static void main(String[] args) {</span>
+<span id="cb5-4"><a></a>        IdentifyMyParts a = new IdentifyMyParts(); </span>
+<span id="cb5-5"><a></a>        IdentifyMyParts b = new IdentifyMyParts(); </span>
+<span id="cb5-6"><a></a>        a.setX(5);</span>
+<span id="cb5-7"><a></a>        a.setY(10);</span>
+<span id="cb5-8"><a></a>        b.setX(2);</span>
+<span id="cb5-9"><a></a>        b.setY(3);</span>
+<span id="cb5-10"><a></a>    </span>
+<span id="cb5-11"><a></a>        System.out.println(a.getY()); </span>
+<span id="cb5-12"><a></a>        System.out.println(b.getY()); </span>
+<span id="cb5-13"><a></a>        System.out.println(a.getX()); </span>
+<span id="cb5-14"><a></a>        System.out.println(b.getX()); </span>
+<span id="cb5-15"><a></a></span>
+<span id="cb5-16"><a></a>    }</span>
+<span id="cb5-17"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="adding-a-constructor-method" class="slide level2">
+<h2>Adding a constructor method</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a>public class IdentifyMyParts {</span>
+<span id="cb6-2"><a></a>    private int x = 7;</span>
+<span id="cb6-3"><a></a>    private int y = 3;</span>
+<span id="cb6-4"><a></a>    </span>
+<span id="cb6-5"><a></a>    public IdentifyMyParts(int x, int y) {</span>
+<span id="cb6-6"><a></a>        this.x = x;</span>
+<span id="cb6-7"><a></a>        this.y = y;</span>
+<span id="cb6-8"><a></a>        </span>
+<span id="cb6-9"><a></a>    }</span>
+<span id="cb6-10"><a></a>    </span>
+<span id="cb6-11"><a></a>    public void setX(int x) {</span>
+<span id="cb6-12"><a></a>        this.x = x;</span>
+<span id="cb6-13"><a></a>    }</span>
+<span id="cb6-14"><a></a></span>
+<span id="cb6-15"><a></a>    public void setY(int y) {</span>
+<span id="cb6-16"><a></a>        this.y = y;</span>
+<span id="cb6-17"><a></a>    }</span>
+<span id="cb6-18"><a></a>    </span>
+<span id="cb6-19"><a></a>    public int getX() {</span>
+<span id="cb6-20"><a></a>        return x;</span>
+<span id="cb6-21"><a></a>    }</span>
+<span id="cb6-22"><a></a>    </span>
+<span id="cb6-23"><a></a>    public int getY() {</span>
+<span id="cb6-24"><a></a>        return y;</span>
+<span id="cb6-25"><a></a>    }</span>
+<span id="cb6-26"><a></a></span>
+<span id="cb6-27"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="practice" class="slide level2">
+<h2>Practice</h2>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

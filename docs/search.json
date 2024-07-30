@@ -1747,21 +1747,21 @@
     "href": "slides-04-01.html#static-methods",
     "title": "Classes and Methods",
     "section": "static methods",
-    "text": "static methods\nThe Java construct for implementing functions is known as the static method.\nProperties of static methods:\n\nMultiple arguments – static methods can take on more than one argument, and therefore can have more than one parameter variable\nMultiple methods – define as many static methods as you want in a .java file. These methods are independent and can appear in any order in the file. A static method can call any other static method in the same file or any static method in a Java library"
+    "text": "static methods\nThe Java construct for implementing functions is known as the static method."
   },
   {
     "objectID": "slides-04-01.html#static-methods-1",
     "href": "slides-04-01.html#static-methods-1",
     "title": "Classes and Methods",
     "section": "static methods",
-    "text": "static methods\n\nOverloading – Static methods whose signatures differ are different static methods. Using the same name for two static methods whose signatures differ is known as overloading.\nSingle return value A Java method provides only one return value to the caller, of the type declared in the method signature"
+    "text": "static methods\n\nOverloading – methods whose signatures differ are different methods. Using the same name for two methods whose signatures differ is known as overloading.\nSingle return value A Java method provides only one return value to the caller, of the type declared in the method signature"
   },
   {
     "objectID": "slides-04-01.html#static-methods-2",
     "href": "slides-04-01.html#static-methods-2",
     "title": "Classes and Methods",
     "section": "static methods",
-    "text": "static methods\n\nScope – The scope of a variable is the part of the program that can refer to that variable by name. The scope of a variable declared in a static method is limited to that method’s body. You cannot refer to a variable in one static method that is declared in another.\n\nSource: Programming in Java, Sedgewick & Wayne (2024)"
+    "text": "static methods\n\nScope – The scope of a variable is the part of the program that can refer to that variable by name. The scope of a variable declared in a method is limited to that method’s body. You cannot refer to a variable in one method that is declared in another.\n\nSource: Programming in Java, Sedgewick & Wayne (2024)"
   },
   {
     "objectID": "slides-04-01.html",
@@ -1804,5 +1804,75 @@
     "title": "Classes and Methods",
     "section": "Recommendations for writing classes",
     "text": "Recommendations for writing classes\nDeclare:\n\ninstance variables private after class definition and create public methods to set and access variables\nconstructors public no return type (do not use static)\nmost methods public (do not use static), but private helper methods are often useful"
+  },
+  {
+    "objectID": "slides-04-01.html#methods",
+    "href": "slides-04-01.html#methods",
+    "title": "Classes and Methods",
+    "section": "Methods",
+    "text": "Methods\n\nMultiple arguments – methods can take on more than one argument, and therefore can have more than one parameter variable\nOverloading – methods whose signatures differ are different methods. Using the same name for two methods whose signatures differ is known as overloading.\nSingle return value A Java method provides only one return value to the caller, of the type declared in the method signature"
+  },
+  {
+    "objectID": "slides-04-01.html#example",
+    "href": "slides-04-01.html#example",
+    "title": "Classes and Methods",
+    "section": "Example",
+    "text": "Example\npublic class IdentifyMyParts {\n    public int x = 7; \n    public int y = 3; \n}\n\nWhat are the instance variables?\nHow do you construct a new instance of this class?\n\nExercise from The Java™ Tutorials"
+  },
+  {
+    "objectID": "slides-04-01.html#example-1",
+    "href": "slides-04-01.html#example-1",
+    "title": "Classes and Methods",
+    "section": "Example",
+    "text": "Example\npublic class IdentifyMyParts {\n    public int x = 7; \n    public int y = 3; \n}\nWhat is the output from the following code:\nIdentifyMyParts a = new IdentifyMyParts();\nIdentifyMyParts b = new IdentifyMyParts();\na.y = 5;\nb.y = 6;\na.x = 1;\nb.x = 2;\nSystem.out.println(\"a.y = \" + a.y);\nSystem.out.println(\"b.y = \" + b.y);\nSystem.out.println(\"a.x = \" + a.x);\nSystem.out.println(\"b.x = \" + b.x);\nSystem.out.println(\"IdentifyMyParts.x = \" + IdentifyMyParts.x);\nAdd static after public for one of the instance variable (to make it a class variable). What is the side effect?"
+  },
+  {
+    "objectID": "slides-04-01.html#practice",
+    "href": "slides-04-01.html#practice",
+    "title": "Classes and Methods",
+    "section": "Practice",
+    "text": "Practice"
+  },
+  {
+    "objectID": "slides-04-01.html#methods-1",
+    "href": "slides-04-01.html#methods-1",
+    "title": "Classes and Methods",
+    "section": "Methods",
+    "text": "Methods\n\nScope – The scope of a variable is the part of the program that can refer to that variable by name. The scope of a variable declared in a method is limited to that method’s body. You cannot refer to a variable in one method that is declared in another.\n\nSource: Programming in Java, Sedgewick & Wayne (2024)"
+  },
+  {
+    "objectID": "slides-04-01.html#better-example",
+    "href": "slides-04-01.html#better-example",
+    "title": "Classes and Methods",
+    "section": "Better example",
+    "text": "Better example\npublic class IdentifyMyParts {\n    private int x = 7;\n    private int y = 3;\n    \n    public void setX(int x) {\n        this.x = x;\n    }\n\n    public void setY(int y) {\n        this.y = y;\n    }\n    \n    public int getX() {\n        return x;\n    }\n    \n    public int getY() {\n        return y;\n    }\n\n}\nVariable scope: what’s the difference between this.x and x?"
+  },
+  {
+    "objectID": "slides-04-01.html#better-example-use",
+    "href": "slides-04-01.html#better-example-use",
+    "title": "Classes and Methods",
+    "section": "Better example – use",
+    "text": "Better example – use\npublic class UseMyParts {\n\n    public static void main(String[] args) {\n        IdentifyMyParts a = new IdentifyMyParts(); \n        IdentifyMyParts b = new IdentifyMyParts(); \n        a.setX(5);\n        a.setY(10);\n        b.setX(2);\n        b.setY(3);\n    \n        System.out.println(a.getY()); \n        System.out.println(b.getY()); \n        System.out.println(a.getX()); \n        System.out.println(b.getX()); \n\n    }\n}"
+  },
+  {
+    "objectID": "slides-04-01.html#writing-a-constructors",
+    "href": "slides-04-01.html#writing-a-constructors",
+    "title": "Classes and Methods",
+    "section": "Writing a constructors",
+    "text": "Writing a constructors\npublic class IdentifyMyParts {\n    private int x = 7;\n    private int y = 3;\n    \n    public IdentifyMyParts(int x, int y) {\n        this.x = x;\n        this.y = y;\n        \n    }\n    \n    public void setX(int x) {\n        this.x = x;\n    }\n\n    public void setY(int y) {\n        this.y = y;\n    }\n    \n    public int getX() {\n        return x;\n    }\n    \n    public int getY() {\n        return y;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-01.html#writing-a-constructor",
+    "href": "slides-04-01.html#writing-a-constructor",
+    "title": "Classes and Methods",
+    "section": "Writing a constructor",
+    "text": "Writing a constructor\npublic class IdentifyMyParts {\n    private int x = 7;\n    private int y = 3;\n    \n    public IdentifyMyParts(int x, int y) {\n        this.x = x;\n        this.y = y;\n        \n    }\n    \n    public void setX(int x) {\n        this.x = x;\n    }\n\n    public void setY(int y) {\n        this.y = y;\n    }\n    \n    public int getX() {\n        return x;\n    }\n    \n    public int getY() {\n        return y;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-01.html#adding-a-constructor-method",
+    "href": "slides-04-01.html#adding-a-constructor-method",
+    "title": "Classes and Methods",
+    "section": "Adding a constructor method",
+    "text": "Adding a constructor method\npublic class IdentifyMyParts {\n    private int x = 7;\n    private int y = 3;\n    \n    public IdentifyMyParts(int x, int y) {\n        this.x = x;\n        this.y = y;\n        \n    }\n    \n    public void setX(int x) {\n        this.x = x;\n    }\n\n    public void setY(int y) {\n        this.y = y;\n    }\n    \n    public int getX() {\n        return x;\n    }\n    \n    public int getY() {\n        return y;\n    }\n\n}"
   }
 ]

@@ -10,19 +10,15 @@ format:
 
 The Java construct for implementing functions is known as the `static` method.
 
-Properties of static methods:
+## Methods
 
-* **Multiple arguments** -- static methods can take on more than one argument, and therefore can have more than one parameter variable
-* **Multiple methods** -- define as many static methods as you want in a .java file. These methods are independent and can appear in any order in the file. A static method can call any other static method in the same file or any static method in a Java library
-
-## `static` methods
-
-* **Overloading** -- Static methods whose signatures differ are different static methods. Using the same name for two static methods whose signatures differ is known as overloading.
+* **Multiple arguments** --  methods can take on more than one argument, and therefore can have more than one parameter variable
+* **Overloading** -- methods whose signatures differ are different methods. Using the same name for two methods whose signatures differ is known as overloading.
 * **Single return value** A Java method provides only one return value to the caller, of the type declared in the method signature
 
-## `static` methods
+## Methods
 
-* **Scope** -- The scope of a variable is the part of the program that can refer to that variable by name. The scope of a variable declared in a static method is limited to that method's body. You cannot refer to a variable in one static method that is declared in another.
+* **Scope** -- The scope of a variable is the part of the program that can refer to that variable by name. The scope of a variable declared in a method is limited to that method's body. You cannot refer to a variable in one method that is declared in another.
 
 Source: [Programming in Java, Sedgewick & Wayne (2024)](https://introcs.cs.princeton.edu/java/21function/)
 
@@ -48,4 +44,132 @@ Declare:
 * instance variables `private` after class definition and create public methods to set and access variables
 * constructors `public` no return type (do not use `static`)
 * most methods `public` (do not use `static`), but `private` helper methods are often useful
+
+## Example
+
+```{java}
+public class IdentifyMyParts {
+    public int x = 7; 
+    public int y = 3; 
+}
+```
+
+
+1. What are the instance variables?
+1. How do you construct a new instance of this class?
+
+<small>*Exercise from [The Java™ Tutorials](https://docs.oracle.com/javase%2Ftutorial%2F/java/javaOO/QandE/creating-questions.html)*</small>
+
+## Example
+
+```{java}
+public class IdentifyMyParts {
+    public int x = 7; 
+    public int y = 3; 
+}
+```
+
+
+What is the output from the following code:
+
+```{java}
+IdentifyMyParts a = new IdentifyMyParts();
+IdentifyMyParts b = new IdentifyMyParts();
+a.y = 5;
+b.y = 6;
+a.x = 1;
+b.x = 2;
+System.out.println("a.y = " + a.y);
+System.out.println("b.y = " + b.y);
+System.out.println("a.x = " + a.x);
+System.out.println("b.x = " + b.x);
+System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x);
+```
+
+Add `static` after `public` for one of the instance variable (to make it a class variable). What is the side effect?
+
+## Better example
+
+```{java}
+public class IdentifyMyParts {
+	private int x = 7;
+	private int y = 3;
+	
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
+	
+	public int getX() {
+		return x;
+	}
+	
+	public int getY() {
+		return y;
+	}
+
+}
+```
+
+Variable scope: what's the difference between `this.x` and `x`?
+
+## Better example -- use
+
+```{java}
+public class UseMyParts {
+
+	public static void main(String[] args) {
+		IdentifyMyParts a = new IdentifyMyParts(); 
+		IdentifyMyParts b = new IdentifyMyParts(); 
+		a.setX(5);
+		a.setY(10);
+		b.setX(2);
+		b.setY(3);
+	
+		System.out.println(a.getY()); 
+		System.out.println(b.getY()); 
+		System.out.println(a.getX()); 
+		System.out.println(b.getX()); 
+
+	}
+}
+```
+
+## Adding a constructor method
+
+```{java}
+public class IdentifyMyParts {
+	private int x = 7;
+	private int y = 3;
+	
+	public IdentifyMyParts(int x, int y) {
+		this.x = x;
+		this.y = y;
+		
+	}
+	
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
+	
+	public int getX() {
+		return x;
+	}
+	
+	public int getY() {
+		return y;
+	}
+
+}
+```
+
+
+## Practice
 
