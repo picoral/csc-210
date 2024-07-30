@@ -240,15 +240,8 @@ $t: true, _3: true, a: true, b: true, false
 ```
 
 ## Testing your program
-Upload it to Gradescope and you will be able to see
-which public and grading test cases were passed/failed.
 
-We STRONGLY recommend you put some of your own test cases in PublicTestCases/
-and test those in Eclipse.
-Also look at the examples that are already in the PublicTestCases/ subdirectory.
-As with previous assignments, the input filename and command line options
-are encoded in the .out files.
-
+Every time you commit changes to your GitHub repo, you will be able to see which grading test cases were passed/failed.
 
 
 ## Getting Started

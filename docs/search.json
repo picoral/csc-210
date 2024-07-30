@@ -1180,7 +1180,7 @@
     "href": "programming-assignment-04.html#testing-your-program",
     "title": "Programming Assignment 04",
     "section": "Testing your program",
-    "text": "Testing your program\nUpload it to Gradescope and you will be able to see which public and grading test cases were passed/failed.\nWe STRONGLY recommend you put some of your own test cases in PublicTestCases/ and test those in Eclipse. Also look at the examples that are already in the PublicTestCases/ subdirectory. As with previous assignments, the input filename and command line options are encoded in the .out files."
+    "text": "Testing your program\nEvery time you commit changes to your GitHub repo, you will be able to see which grading test cases were passed/failed."
   },
   {
     "objectID": "programming-assignment-04.html#getting-started",
@@ -1488,7 +1488,7 @@
     "href": "programming-assignment-03.html#anagrams",
     "title": "Programming Assignment 03",
     "section": "Anagrams",
-    "text": "Anagrams\nAn anagram is a word or phrase made by rearranging the letters of another word or phrase. For example, the words “midterm” and “trimmed” are anagrams. If you ignore spaces and capitalization and allow multiple words, a multi-word phrase can be an anagram of some other word or phrase. For example, the phrases “Clint Eastwood” and “old west action” are anagrams.\nIn this assignment, you will create a program called PA3Main.java that uses a word list to find all anagram phrases that match a given word or phrase. To use the program, command line options will be provided to indicate a word list file, phrase with no spaces to find anagrams of, and a limit on the number of words in the found anagrams (or 0 to indicate no limit).\nFor the example command line options:\nwords1.txt barbarabush 0\nthe output of your program should be the following:\nPhrase to scramble: barbarabush\n\nAll words found in barbarabush:\n[abash, aura, bar, barb, brush, bus, hub, rub, shrub, sub]\n\nAnagrams for barbarabush:\n[abash, bar, rub]\n[abash, rub, bar]\n[bar, abash, rub]\n[bar, rub, abash]\n[rub, abash, bar]\n[rub, bar, abash]\nSee the .out files in the public test cases for more examples. The command line options are encoded in the .out files similar as they were for PA1 except the extension for the input files has changed. For example, the file pa3-words3-defleppard-0.out indicates usage of the following command line arguments:\nwords3.txt defleppard 0"
+    "text": "Anagrams\nAn anagram is a word or phrase made by rearranging the letters of another word or phrase. For example, the words “midterm” and “trimmed” are anagrams. If you ignore spaces and capitalization and allow multiple words, a multi-word phrase can be an anagram of some other word or phrase. For example, the phrases “Clint Eastwood” and “old west action” are anagrams.\nIn this assignment, you will create a program called PA3Main.java that uses a word list to find all anagram phrases that match a given word or phrase. To use the program, command line options will be provided to indicate a word list file, phrase with no spaces to find anagrams of, and a limit on the number of words in the found anagrams (or 0 to indicate no limit).\nFor the example command line options:\nwords1.txt barbarabush 0\nthe output of your program should be the following:\nPhrase to scramble: barbarabush\n\nAll words found in barbarabush:\n[abash, aura, bar, barb, brush, bus, hub, rub, shrub, sub]\n\nAnagrams for barbarabush:\n[abash, bar, rub]\n[abash, rub, bar]\n[bar, abash, rub]\n[bar, rub, abash]\n[rub, abash, bar]\n[rub, bar, abash]\nHere’s an example of the command line options (file name, word to scramble, max number of anagrams):\nwords3.txt defleppard 0"
   },
   {
     "objectID": "programming-assignment-03.html#getting-started",
@@ -1746,8 +1746,8 @@
     "objectID": "slides-04-01.html#static-methods",
     "href": "slides-04-01.html#static-methods",
     "title": "Classes and Methods",
-    "section": "static methods",
-    "text": "static methods\nThe Java construct for implementing functions is known as the static method.\nProperties of static methods:\n\nMultiple arguments – static methods can take on more than one argument, and therefore can have more than one parameter variable\nMultiple methods – define as many static methods as you want in a .java file. These methods are independent and can appear in any order in the file. A static method can call any other static method in the same file or any static method in a Java library"
+    "section": "",
+    "text": "The Java construct for implementing functions is known as the static method.\nProperties of static methods:\n\nMultiple arguments – static methods can take on more than one argument, and therefore can have more than one parameter variable\nMultiple methods – define as many static methods as you want in a .java file. These methods are independent and can appear in any order in the file. A static method can call any other static method in the same file or any static method in a Java library"
   },
   {
     "objectID": "slides-04-01.html#static-methods-1",
@@ -1761,6 +1761,13 @@
     "href": "slides-04-01.html#static-methods-2",
     "title": "Classes and Methods",
     "section": "static methods",
-    "text": "static methods\n\nScope The scope of a variable is the part of the program that can refer to that variable by name. The scope of a variable declared in a static method is limited to that method’s body. You cannot refer to a variable in one static method that is declared in another.\n\nSource: Programming in Java, Sedgewick & Wayne (2024)"
+    "text": "static methods\n\nScope – The scope of a variable is the part of the program that can refer to that variable by name. The scope of a variable declared in a static method is limited to that method’s body. You cannot refer to a variable in one static method that is declared in another.\n\nSource: Programming in Java, Sedgewick & Wayne (2024)"
+  },
+  {
+    "objectID": "slides-04-01.html",
+    "href": "slides-04-01.html",
+    "title": "Classes and Methods",
+    "section": "",
+    "text": "The Java construct for implementing functions is known as the static method.\nProperties of static methods:\n\nMultiple arguments – static methods can take on more than one argument, and therefore can have more than one parameter variable\nMultiple methods – define as many static methods as you want in a .java file. These methods are independent and can appear in any order in the file. A static method can call any other static method in the same file or any static method in a Java library"
   }
 ]

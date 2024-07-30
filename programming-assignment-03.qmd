@@ -60,10 +60,7 @@ Anagrams for barbarabush:
 [rub, bar, abash]
 ```
 
-See the .out files in the public test cases for more examples.  The command line options
-are encoded in the .out files similar as they were for PA1 except the extension for the
-input files has changed.  For example, the file pa3-words3-defleppard-0.out indicates
-usage of the following command line arguments:
+Here's an example of the command line options (file name, word to scramble, max number of anagrams):
 ```
 words3.txt defleppard 0
 ```
