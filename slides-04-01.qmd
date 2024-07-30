@@ -25,3 +25,27 @@ Properties of static methods:
 * **Scope** -- The scope of a variable is the part of the program that can refer to that variable by name. The scope of a variable declared in a static method is limited to that method's body. You cannot refer to a variable in one static method that is declared in another.
 
 Source: [Programming in Java, Sedgewick & Wayne (2024)](https://introcs.cs.princeton.edu/java/21function/)
+
+## Constructors
+
+Same name as the class, no return type
+
+## Public vs. Private
+
+public -- accessible from all methods of the class and in the scope of where the object is declared
+
+private -- known only in the class
+
+## Recommendations for writing classes
+
+* use one file to store the class (no main method)
+* create different classes for different problems (cohesion -- methods and instance variables of a class should be strongly related) -- in other words, keep related data and behavior in one place
+
+## Recommendations for writing classes
+
+Declare:
+
+* instance variables `private` after class definition and create public methods to set and access variables
+* constructors `public` no return type (do not use `static`)
+* most methods `public` (do not use `static`), but `private` helper methods are often useful
+

@@ -20,6 +20,10 @@ All exams are on paper.
 * Midterm 2 is on Wednesday, November 6 (during class time)
 * Final exam is on Thursday, December 19, 10:30am to 12:30pm ([schedule of final exams](https://registrar.arizona.edu/faculty-staff-resources/room-course-scheduling/schedule-classes/final-exams/final-exams-fall-2024))
 
+# Resources
+
+* [Java Programming Cheatsheet](https://introcs.cs.princeton.edu/java/11cheatsheet/)
+
 
 # Week 01
 
@@ -105,6 +109,10 @@ Optional:
 Topic: `r schedule %>% filter(week == 4) %>% pull(topic)`
 
 ## Readings
+
+Required:
+
+* [Java, Java, Java 8.2 Java’s Inheritance Mechanism](https://runestone.academy/ns/books/published/javajavajava/javas-inheritance-mechanism.html)
 
 ## Slides
 

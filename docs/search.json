@@ -137,7 +137,7 @@
     "href": "modules.html#readings-3",
     "title": "Modules",
     "section": "Readings",
-    "text": "Readings"
+    "text": "Readings\nRequired:\n\nJava, Java, Java 8.2 Java’s Inheritance Mechanism"
   },
   {
     "objectID": "modules.html#slides-3",
@@ -1746,8 +1746,8 @@
     "objectID": "slides-04-01.html#static-methods",
     "href": "slides-04-01.html#static-methods",
     "title": "Classes and Methods",
-    "section": "",
-    "text": "The Java construct for implementing functions is known as the static method.\nProperties of static methods:\n\nMultiple arguments – static methods can take on more than one argument, and therefore can have more than one parameter variable\nMultiple methods – define as many static methods as you want in a .java file. These methods are independent and can appear in any order in the file. A static method can call any other static method in the same file or any static method in a Java library"
+    "section": "static methods",
+    "text": "static methods\nThe Java construct for implementing functions is known as the static method.\nProperties of static methods:\n\nMultiple arguments – static methods can take on more than one argument, and therefore can have more than one parameter variable\nMultiple methods – define as many static methods as you want in a .java file. These methods are independent and can appear in any order in the file. A static method can call any other static method in the same file or any static method in a Java library"
   },
   {
     "objectID": "slides-04-01.html#static-methods-1",
@@ -1769,5 +1769,40 @@
     "title": "Classes and Methods",
     "section": "",
     "text": "The Java construct for implementing functions is known as the static method.\nProperties of static methods:\n\nMultiple arguments – static methods can take on more than one argument, and therefore can have more than one parameter variable\nMultiple methods – define as many static methods as you want in a .java file. These methods are independent and can appear in any order in the file. A static method can call any other static method in the same file or any static method in a Java library"
+  },
+  {
+    "objectID": "slides-04-01.html#constructors",
+    "href": "slides-04-01.html#constructors",
+    "title": "Classes and Methods",
+    "section": "Constructors",
+    "text": "Constructors\nSame name as the class, no return type"
+  },
+  {
+    "objectID": "slides-04-01.html#public-vs.-private",
+    "href": "slides-04-01.html#public-vs.-private",
+    "title": "Classes and Methods",
+    "section": "Public vs. Private",
+    "text": "Public vs. Private\npublic – accessible from all methods of the class and in the scope of where the object is declared\nprivate – known only in the class"
+  },
+  {
+    "objectID": "slides-04-01.html#recommendations-for-writing-your-first-classes",
+    "href": "slides-04-01.html#recommendations-for-writing-your-first-classes",
+    "title": "Classes and Methods",
+    "section": "Recommendations for writing your first classes",
+    "text": "Recommendations for writing your first classes\n\nuse one file to store the class (no main method)\ncreate different classes for different problems (cohesion – methods and instance variables of a class should be strongly related) – in other words, keep related data and behavior in one place\n\nDeclare:\n\ninstance variables private after class definition and create public methods to set and access variables\nconstructors public no return type (do not use static)\nmost methods public (do not use static), but private helper methods are often useful"
+  },
+  {
+    "objectID": "slides-04-01.html#recommendations-for-writing-classes",
+    "href": "slides-04-01.html#recommendations-for-writing-classes",
+    "title": "Classes and Methods",
+    "section": "Recommendations for writing classes",
+    "text": "Recommendations for writing classes\n\nuse one file to store the class (no main method)\ncreate different classes for different problems (cohesion – methods and instance variables of a class should be strongly related) – in other words, keep related data and behavior in one place"
+  },
+  {
+    "objectID": "slides-04-01.html#recommendations-for-writing-classes-1",
+    "href": "slides-04-01.html#recommendations-for-writing-classes-1",
+    "title": "Classes and Methods",
+    "section": "Recommendations for writing classes",
+    "text": "Recommendations for writing classes\nDeclare:\n\ninstance variables private after class definition and create public methods to set and access variables\nconstructors public no return type (do not use static)\nmost methods public (do not use static), but private helper methods are often useful"
   }
 ]
