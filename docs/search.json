@@ -1741,5 +1741,26 @@
     "title": "Programming Assignment 04",
     "section": "Submission",
     "text": "Submission\nFor PA4, you are required to submit your PA4BoolSat.java and ASTNodeTest.java file to Gradescope."
+  },
+  {
+    "objectID": "slides-04-01.html#static-methods",
+    "href": "slides-04-01.html#static-methods",
+    "title": "Classes and Methods",
+    "section": "static methods",
+    "text": "static methods\nThe Java construct for implementing functions is known as the static method.\nProperties of static methods:\n\nMultiple arguments – static methods can take on more than one argument, and therefore can have more than one parameter variable\nMultiple methods – define as many static methods as you want in a .java file. These methods are independent and can appear in any order in the file. A static method can call any other static method in the same file or any static method in a Java library"
+  },
+  {
+    "objectID": "slides-04-01.html#static-methods-1",
+    "href": "slides-04-01.html#static-methods-1",
+    "title": "Classes and Methods",
+    "section": "static methods",
+    "text": "static methods\n\nOverloading – Static methods whose signatures differ are different static methods. Using the same name for two static methods whose signatures differ is known as overloading.\nSingle return value A Java method provides only one return value to the caller, of the type declared in the method signature"
+  },
+  {
+    "objectID": "slides-04-01.html#static-methods-2",
+    "href": "slides-04-01.html#static-methods-2",
+    "title": "Classes and Methods",
+    "section": "static methods",
+    "text": "static methods\n\nScope The scope of a variable is the part of the program that can refer to that variable by name. The scope of a variable declared in a static method is limited to that method’s body. You cannot refer to a variable in one static method that is declared in another.\n\nSource: Programming in Java, Sedgewick & Wayne (2024)"
   }
 ]

@@ -1,0 +1,27 @@
+---
+title: "Classes and Methods"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## `static` methods
+
+The Java construct for implementing functions is known as the `static` method.
+
+Properties of static methods:
+
+* **Multiple arguments** -- static methods can take on more than one argument, and therefore can have more than one parameter variable
+* **Multiple methods** -- define as many static methods as you want in a .java file. These methods are independent and can appear in any order in the file. A static method can call any other static method in the same file or any static method in a Java library
+
+## `static` methods
+
+* **Overloading** -- Static methods whose signatures differ are different static methods. Using the same name for two static methods whose signatures differ is known as overloading.
+* **Single return value** A Java method provides only one return value to the caller, of the type declared in the method signature
+
+## `static` methods
+
+* **Scope** -- The scope of a variable is the part of the program that can refer to that variable by name. The scope of a variable declared in a static method is limited to that method's body. You cannot refer to a variable in one static method that is declared in another.
+
+Source: [Programming in Java, Sedgewick & Wayne (2024)](https://introcs.cs.princeton.edu/java/21function/)

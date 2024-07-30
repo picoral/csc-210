@@ -27,6 +27,7 @@ There is a lot of information about writing JUnit test cases in this writeup, so
 longer than the previous programming assignment writeups.
 
 ## Learning Objectives
+
 The goal of this assignment is to practice the following ideas:
 
  - Understanding how a large problem is decomposed into classes.
