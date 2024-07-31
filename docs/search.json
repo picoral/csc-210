@@ -144,7 +144,7 @@
     "href": "modules.html#slides-3",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides"
+    "text": "Slides\n\nClasses and Methods"
   },
   {
     "objectID": "modules.html#assignments-3",
@@ -1915,13 +1915,34 @@
     "href": "slides-04-01.html#update-card-class-solution",
     "title": "Classes and Methods",
     "section": "Update Card class – solution",
-    "text": "Update Card class – solution\npublic class Card {\n    private String rank;\n    private String suit;\n    \n    private final static String[] RANKS = {\"ace\", \"two\", \"three\", \"four\",\n                                           \"five\", \"six\", \"seven\",\n                                           \"eight\", \"nine\", \"ten\",\n                                           \"jack\", \"queen\", \"king\"};\n\n    \n    private final static String[] SUITS = {\"diamonds\", \"clubs\", \"hearts\", \"spades\"};\n\n    private Boolean inArray(String value, String[] arr) {\n        for (String element : arr) {\n            if (element == value) {\n                return true;\n            }\n        }\n        return false;\n    }\n    \n    private Boolean validRank(String rank) {\n        return inArray(rank, RANKS);\n    }\n    \n    private Boolean validSuit(String suit) {\n        return inArray(suit, SUITS);\n    }\n    \n    public Card(String rank, String suit) {\n        if (validRank(rank)) this.rank = rank;\n        if (validSuit(suit)) this.suit = suit;\n    }\n    \n    \n    public void setRank(String rank) {\n        if (validRank(rank)) this.rank = rank;\n    }\n    \n    public void setRank(int rank) { // overloading\n        if (rank &gt;= 1 && rank &lt;= 13) this.rank = RANKS[rank-1];\n    }\n    \n    public void setSuit(String suit) {\n        if (validSuit(suit)) this.suit = suit;\n    }\n    \n    public String getSuit() {\n        return suit;\n    }\n    \n    public String getRank() {\n        return rank;\n    }\n    \n    public void print() {\n        System.out.println(rank + \" of \" + suit);\n    }\n\n}"
+    "text": "Update Card class – solution\npublic class Card {\n    private String rank;\n    private String suit;\n    \n    private final static String[] RANKS = {\"ace\", \"two\", \"three\", \"four\",\n                                           \"five\", \"six\", \"seven\",\n                                           \"eight\", \"nine\", \"ten\",\n                                           \"jack\", \"queen\", \"king\"};\n\n    \n    public final static String[] SUITS = {\"diamonds\", \"clubs\", \"hearts\", \"spades\"};\n    \n    public Card(String rank, String suit) {\n        if (validRank(rank)) this.rank = rank;\n        if (validSuit(suit)) this.suit = suit;\n    }\n    \n    public Card(int rank, String suit) {\n        if (rank &gt;= 1 && rank &lt;= 13) this.rank = RANKS[rank-1];\n        if (validSuit(suit)) this.suit = suit;\n    }\n\n    private Boolean inArray(String value, String[] arr) {\n        for (String element : arr) {\n            if (element == value) {\n                return true;\n            }\n        }\n        return false;\n    }\n    \n    private Boolean validRank(String rank) {\n        return inArray(rank, RANKS);\n    }\n    \n    private Boolean validSuit(String suit) {\n        return inArray(suit, SUITS);\n    }\n    \n    \n    public void setRank(String rank) {\n        if (validRank(rank)) this.rank = rank;\n    }\n    \n    public void setRank(int rank) { // overloading\n        if (rank &gt;= 1 && rank &lt;= 13) this.rank = RANKS[rank-1];\n    }\n    \n    public void setSuit(String suit) {\n        if (validSuit(suit)) this.suit = suit;\n    }\n    \n    public String getSuit() {\n        return suit;\n    }\n    \n    public String getRank() {\n        return rank;\n    }\n    \n    public void print() {\n        System.out.println(rank + \" of \" + suit);\n    }\n\n}"
   },
   {
     "objectID": "slides-04-01.html#update-playgame-class",
     "href": "slides-04-01.html#update-playgame-class",
     "title": "Classes and Methods",
     "section": "Update PlayGame class",
-    "text": "Update PlayGame class\npublic class PlayGame {\n\n    public static void main(String[] args) {\n        Card card1 = new Card(\"ace\", \"hearts\");\n        card1.print();\n        \n        card1.setRank(2);\n        card1.print();\n\n    }\n\n}"
+    "text": "Update PlayGame class\npublic class PlayGame {\n\n    public static void main(String[] args) {\n        Card card1 = new Card(\"ace\", \"hearts\");\n        card1.print();\n        \n        card1.setRank(2);\n        card1.print();\n        \n        Card card2 = new Card(13, \"diamonds\");\n        card2.print();\n\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-01.html#create-deck-class",
+    "href": "slides-04-01.html#create-deck-class",
+    "title": "Classes and Methods",
+    "section": "Create Deck class",
+    "text": "Create Deck class\nCreate a Deck class that has a color, and all 52 possible cards (use ArrayList)"
+  },
+  {
+    "objectID": "slides-04-01.html#deck-class-solution",
+    "href": "slides-04-01.html#deck-class-solution",
+    "title": "Classes and Methods",
+    "section": "Deck class solution",
+    "text": "Deck class solution\nimport java.util.ArrayList;\n\npublic class Deck {\n    private ArrayList&lt;Card&gt; cards = new ArrayList&lt;Card&gt;();\n    private String color;\n    \n    public Deck(String color) {\n        this.color = color;\n        for (String s : Card.SUITS) {\n            for (int i = 1; i &lt;= 13; i++) {\n                Card thisCard = new Card(i, s);\n                cards.add(thisCard);\n            }\n            \n        }\n    }\n    \n    public void printCards() {\n        for (String s : Card.SUITS) {\n            for (int i = 1; i &lt;= 13; i++) {\n                Card thisCard = new Card(i, s);\n                thisCard.print();\n            }\n            \n        }\n    }\n    \n    public Card getCard(int index) {\n        return cards.get(index);\n    }\n    \n    public String getColor() {\n        return color;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-01.html#updated-playgame",
+    "href": "slides-04-01.html#updated-playgame",
+    "title": "Classes and Methods",
+    "section": "Updated PlayGame",
+    "text": "Updated PlayGame\npublic class PlayGame {\n\n    public static void main(String[] args) {\n        Card card1 = new Card(\"ace\", \"hearts\");\n        card1.print();\n        \n        card1.setRank(2);\n        card1.print();\n        \n        Card card2 = new Card(13, \"diamonds\");\n        card2.print();\n        \n        Deck myDeck = new Deck(\"Red\");\n        myDeck.printCards();\n        \n        myDeck.getCard(20).print();\n\n    }\n\n}"
   }
 ]

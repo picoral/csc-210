@@ -611,56 +611,61 @@
 <span id="cb9-8"><a></a>                                           "jack", "queen", "king"};</span>
 <span id="cb9-9"><a></a></span>
 <span id="cb9-10"><a></a>    </span>
-<span id="cb9-11"><a></a>    private final static String[] SUITS = {"diamonds", "clubs", "hearts", "spades"};</span>
-<span id="cb9-12"><a></a></span>
-<span id="cb9-13"><a></a>    private Boolean inArray(String value, String[] arr) {</span>
-<span id="cb9-14"><a></a>        for (String element : arr) {</span>
-<span id="cb9-15"><a></a>            if (element == value) {</span>
-<span id="cb9-16"><a></a>                return true;</span>
-<span id="cb9-17"><a></a>            }</span>
-<span id="cb9-18"><a></a>        }</span>
-<span id="cb9-19"><a></a>        return false;</span>
-<span id="cb9-20"><a></a>    }</span>
-<span id="cb9-21"><a></a>    </span>
-<span id="cb9-22"><a></a>    private Boolean validRank(String rank) {</span>
-<span id="cb9-23"><a></a>        return inArray(rank, RANKS);</span>
-<span id="cb9-24"><a></a>    }</span>
-<span id="cb9-25"><a></a>    </span>
-<span id="cb9-26"><a></a>    private Boolean validSuit(String suit) {</span>
-<span id="cb9-27"><a></a>        return inArray(suit, SUITS);</span>
-<span id="cb9-28"><a></a>    }</span>
-<span id="cb9-29"><a></a>    </span>
-<span id="cb9-30"><a></a>    public Card(String rank, String suit) {</span>
-<span id="cb9-31"><a></a>        if (validRank(rank)) this.rank = rank;</span>
-<span id="cb9-32"><a></a>        if (validSuit(suit)) this.suit = suit;</span>
-<span id="cb9-33"><a></a>    }</span>
-<span id="cb9-34"><a></a>    </span>
+<span id="cb9-11"><a></a>    public final static String[] SUITS = {"diamonds", "clubs", "hearts", "spades"};</span>
+<span id="cb9-12"><a></a>    </span>
+<span id="cb9-13"><a></a>    public Card(String rank, String suit) {</span>
+<span id="cb9-14"><a></a>        if (validRank(rank)) this.rank = rank;</span>
+<span id="cb9-15"><a></a>        if (validSuit(suit)) this.suit = suit;</span>
+<span id="cb9-16"><a></a>    }</span>
+<span id="cb9-17"><a></a>    </span>
+<span id="cb9-18"><a></a>    public Card(int rank, String suit) {</span>
+<span id="cb9-19"><a></a>        if (rank &gt;= 1 &amp;&amp; rank &lt;= 13) this.rank = RANKS[rank-1];</span>
+<span id="cb9-20"><a></a>        if (validSuit(suit)) this.suit = suit;</span>
+<span id="cb9-21"><a></a>    }</span>
+<span id="cb9-22"><a></a></span>
+<span id="cb9-23"><a></a>    private Boolean inArray(String value, String[] arr) {</span>
+<span id="cb9-24"><a></a>        for (String element : arr) {</span>
+<span id="cb9-25"><a></a>            if (element == value) {</span>
+<span id="cb9-26"><a></a>                return true;</span>
+<span id="cb9-27"><a></a>            }</span>
+<span id="cb9-28"><a></a>        }</span>
+<span id="cb9-29"><a></a>        return false;</span>
+<span id="cb9-30"><a></a>    }</span>
+<span id="cb9-31"><a></a>    </span>
+<span id="cb9-32"><a></a>    private Boolean validRank(String rank) {</span>
+<span id="cb9-33"><a></a>        return inArray(rank, RANKS);</span>
+<span id="cb9-34"><a></a>    }</span>
 <span id="cb9-35"><a></a>    </span>
-<span id="cb9-36"><a></a>    public void setRank(String rank) {</span>
-<span id="cb9-37"><a></a>        if (validRank(rank)) this.rank = rank;</span>
+<span id="cb9-36"><a></a>    private Boolean validSuit(String suit) {</span>
+<span id="cb9-37"><a></a>        return inArray(suit, SUITS);</span>
 <span id="cb9-38"><a></a>    }</span>
 <span id="cb9-39"><a></a>    </span>
-<span id="cb9-40"><a></a>    public void setRank(int rank) { // overloading</span>
-<span id="cb9-41"><a></a>        if (rank &gt;= 1 &amp;&amp; rank &lt;= 13) this.rank = RANKS[rank-1];</span>
-<span id="cb9-42"><a></a>    }</span>
-<span id="cb9-43"><a></a>    </span>
-<span id="cb9-44"><a></a>    public void setSuit(String suit) {</span>
-<span id="cb9-45"><a></a>        if (validSuit(suit)) this.suit = suit;</span>
-<span id="cb9-46"><a></a>    }</span>
-<span id="cb9-47"><a></a>    </span>
-<span id="cb9-48"><a></a>    public String getSuit() {</span>
-<span id="cb9-49"><a></a>        return suit;</span>
-<span id="cb9-50"><a></a>    }</span>
-<span id="cb9-51"><a></a>    </span>
-<span id="cb9-52"><a></a>    public String getRank() {</span>
-<span id="cb9-53"><a></a>        return rank;</span>
-<span id="cb9-54"><a></a>    }</span>
-<span id="cb9-55"><a></a>    </span>
-<span id="cb9-56"><a></a>    public void print() {</span>
-<span id="cb9-57"><a></a>        System.out.println(rank + " of " + suit);</span>
-<span id="cb9-58"><a></a>    }</span>
-<span id="cb9-59"><a></a></span>
-<span id="cb9-60"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-40"><a></a>    </span>
+<span id="cb9-41"><a></a>    public void setRank(String rank) {</span>
+<span id="cb9-42"><a></a>        if (validRank(rank)) this.rank = rank;</span>
+<span id="cb9-43"><a></a>    }</span>
+<span id="cb9-44"><a></a>    </span>
+<span id="cb9-45"><a></a>    public void setRank(int rank) { // overloading</span>
+<span id="cb9-46"><a></a>        if (rank &gt;= 1 &amp;&amp; rank &lt;= 13) this.rank = RANKS[rank-1];</span>
+<span id="cb9-47"><a></a>    }</span>
+<span id="cb9-48"><a></a>    </span>
+<span id="cb9-49"><a></a>    public void setSuit(String suit) {</span>
+<span id="cb9-50"><a></a>        if (validSuit(suit)) this.suit = suit;</span>
+<span id="cb9-51"><a></a>    }</span>
+<span id="cb9-52"><a></a>    </span>
+<span id="cb9-53"><a></a>    public String getSuit() {</span>
+<span id="cb9-54"><a></a>        return suit;</span>
+<span id="cb9-55"><a></a>    }</span>
+<span id="cb9-56"><a></a>    </span>
+<span id="cb9-57"><a></a>    public String getRank() {</span>
+<span id="cb9-58"><a></a>        return rank;</span>
+<span id="cb9-59"><a></a>    }</span>
+<span id="cb9-60"><a></a>    </span>
+<span id="cb9-61"><a></a>    public void print() {</span>
+<span id="cb9-62"><a></a>        System.out.println(rank + " of " + suit);</span>
+<span id="cb9-63"><a></a>    }</span>
+<span id="cb9-64"><a></a></span>
+<span id="cb9-65"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="update-playgame-class" class="slide level2">
 <h2>Update <code>PlayGame</code> class</h2>
@@ -672,10 +677,79 @@
 <span id="cb10-6"><a></a>        </span>
 <span id="cb10-7"><a></a>        card1.setRank(2);</span>
 <span id="cb10-8"><a></a>        card1.print();</span>
-<span id="cb10-9"><a></a></span>
-<span id="cb10-10"><a></a>    }</span>
-<span id="cb10-11"><a></a></span>
-<span id="cb10-12"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-9"><a></a>        </span>
+<span id="cb10-10"><a></a>        Card card2 = new Card(13, "diamonds");</span>
+<span id="cb10-11"><a></a>        card2.print();</span>
+<span id="cb10-12"><a></a></span>
+<span id="cb10-13"><a></a>    }</span>
+<span id="cb10-14"><a></a></span>
+<span id="cb10-15"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="create-deck-class" class="slide level2">
+<h2>Create <code>Deck</code> class</h2>
+<p>Create a <code>Deck</code> class that has a color, and all 52 possible cards (use <code>ArrayList</code>)</p>
+</section>
+<section id="deck-class-solution" class="slide level2">
+<h2><code>Deck</code> class solution</h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a></a>import java.util.ArrayList;</span>
+<span id="cb11-2"><a></a></span>
+<span id="cb11-3"><a></a>public class Deck {</span>
+<span id="cb11-4"><a></a>    private ArrayList&lt;Card&gt; cards = new ArrayList&lt;Card&gt;();</span>
+<span id="cb11-5"><a></a>    private String color;</span>
+<span id="cb11-6"><a></a>    </span>
+<span id="cb11-7"><a></a>    public Deck(String color) {</span>
+<span id="cb11-8"><a></a>        this.color = color;</span>
+<span id="cb11-9"><a></a>        for (String s : Card.SUITS) {</span>
+<span id="cb11-10"><a></a>            for (int i = 1; i &lt;= 13; i++) {</span>
+<span id="cb11-11"><a></a>                Card thisCard = new Card(i, s);</span>
+<span id="cb11-12"><a></a>                cards.add(thisCard);</span>
+<span id="cb11-13"><a></a>            }</span>
+<span id="cb11-14"><a></a>            </span>
+<span id="cb11-15"><a></a>        }</span>
+<span id="cb11-16"><a></a>    }</span>
+<span id="cb11-17"><a></a>    </span>
+<span id="cb11-18"><a></a>    public void printCards() {</span>
+<span id="cb11-19"><a></a>        for (String s : Card.SUITS) {</span>
+<span id="cb11-20"><a></a>            for (int i = 1; i &lt;= 13; i++) {</span>
+<span id="cb11-21"><a></a>                Card thisCard = new Card(i, s);</span>
+<span id="cb11-22"><a></a>                thisCard.print();</span>
+<span id="cb11-23"><a></a>            }</span>
+<span id="cb11-24"><a></a>            </span>
+<span id="cb11-25"><a></a>        }</span>
+<span id="cb11-26"><a></a>    }</span>
+<span id="cb11-27"><a></a>    </span>
+<span id="cb11-28"><a></a>    public Card getCard(int index) {</span>
+<span id="cb11-29"><a></a>        return cards.get(index);</span>
+<span id="cb11-30"><a></a>    }</span>
+<span id="cb11-31"><a></a>    </span>
+<span id="cb11-32"><a></a>    public String getColor() {</span>
+<span id="cb11-33"><a></a>        return color;</span>
+<span id="cb11-34"><a></a>    }</span>
+<span id="cb11-35"><a></a></span>
+<span id="cb11-36"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="updated-playgame" class="slide level2">
+<h2>Updated <code>PlayGame</code></h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>public class PlayGame {</span>
+<span id="cb12-2"><a></a></span>
+<span id="cb12-3"><a></a>    public static void main(String[] args) {</span>
+<span id="cb12-4"><a></a>        Card card1 = new Card("ace", "hearts");</span>
+<span id="cb12-5"><a></a>        card1.print();</span>
+<span id="cb12-6"><a></a>        </span>
+<span id="cb12-7"><a></a>        card1.setRank(2);</span>
+<span id="cb12-8"><a></a>        card1.print();</span>
+<span id="cb12-9"><a></a>        </span>
+<span id="cb12-10"><a></a>        Card card2 = new Card(13, "diamonds");</span>
+<span id="cb12-11"><a></a>        card2.print();</span>
+<span id="cb12-12"><a></a>        </span>
+<span id="cb12-13"><a></a>        Deck myDeck = new Deck("Red");</span>
+<span id="cb12-14"><a></a>        myDeck.printCards();</span>
+<span id="cb12-15"><a></a>        </span>
+<span id="cb12-16"><a></a>        myDeck.getCard(20).print();</span>
+<span id="cb12-17"><a></a></span>
+<span id="cb12-18"><a></a>    }</span>
+<span id="cb12-19"><a></a></span>
+<span id="cb12-20"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

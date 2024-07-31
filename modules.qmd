@@ -116,6 +116,8 @@ Required:
 
 ## Slides
 
+* [Classes and Methods](slides-04-01.html)
+
 ## Assignments
 
 # Week 05

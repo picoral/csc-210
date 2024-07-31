@@ -243,7 +243,17 @@ public class Card {
 				                           "jack", "queen", "king"};
 
 	
-	private final static String[] SUITS = {"diamonds", "clubs", "hearts", "spades"};
+	public final static String[] SUITS = {"diamonds", "clubs", "hearts", "spades"};
+	
+	public Card(String rank, String suit) {
+		if (validRank(rank)) this.rank = rank;
+		if (validSuit(suit)) this.suit = suit;
+	}
+	
+	public Card(int rank, String suit) {
+		if (rank >= 1 && rank <= 13) this.rank = RANKS[rank-1];
+		if (validSuit(suit)) this.suit = suit;
+	}
 
 	private Boolean inArray(String value, String[] arr) {
 		for (String element : arr) {
@@ -260,11 +270,6 @@ public class Card {
 	
 	private Boolean validSuit(String suit) {
 		return inArray(suit, SUITS);
-	}
-	
-	public Card(String rank, String suit) {
-		if (validRank(rank)) this.rank = rank;
-		if (validSuit(suit)) this.suit = suit;
 	}
 	
 	
@@ -293,7 +298,6 @@ public class Card {
 	}
 
 }
-
 ```
 
 ## Update `PlayGame` class
@@ -307,12 +311,82 @@ public class PlayGame {
 		
 		card1.setRank(2);
 		card1.print();
+		
+		Card card2 = new Card(13, "diamonds");
+		card2.print();
 
 	}
 
 }
 ```
 
+## Create `Deck` class
 
+Create a `Deck` class that has a color, and all 52 possible cards (use `ArrayList`)
 
+## `Deck` class solution
+
+```{java}
+import java.util.ArrayList;
+
+public class Deck {
+	private ArrayList<Card> cards = new ArrayList<Card>();
+	private String color;
+	
+	public Deck(String color) {
+		this.color = color;
+		for (String s : Card.SUITS) {
+			for (int i = 1; i <= 13; i++) {
+				Card thisCard = new Card(i, s);
+				cards.add(thisCard);
+			}
+			
+		}
+	}
+	
+	public void printCards() {
+		for (String s : Card.SUITS) {
+			for (int i = 1; i <= 13; i++) {
+				Card thisCard = new Card(i, s);
+				thisCard.print();
+			}
+			
+		}
+	}
+	
+	public Card getCard(int index) {
+		return cards.get(index);
+	}
+	
+	public String getColor() {
+		return color;
+	}
+
+}
+```
+
+## Updated `PlayGame`
+
+```{java}
+public class PlayGame {
+
+	public static void main(String[] args) {
+		Card card1 = new Card("ace", "hearts");
+		card1.print();
+		
+		card1.setRank(2);
+		card1.print();
+		
+		Card card2 = new Card(13, "diamonds");
+		card2.print();
+		
+		Deck myDeck = new Deck("Red");
+		myDeck.printCards();
+		
+		myDeck.getCard(20).print();
+
+	}
+
+}
+```
 
