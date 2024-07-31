@@ -171,5 +171,148 @@ public class IdentifyMyParts {
 ```
 
 
-## Practice
+## Practice -- `Card` class
+
+A card has a suit and a rank
+
+**Suits**
+The four suits are clubs (♣), diamonds (♦), hearts (♥), and spades (♠). 
+
+**Ranks**
+The ranks are ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, and king. The ace is the highest card, and the 2 is the lowest, but the ace can also be used as a low card with a value of 1. 
+
+## `Card` class solution
+
+```{java}
+public class Card {
+	private String rank;
+	private String suit;
+	
+	public Card(String rank, String suit) {
+		this.rank = rank;
+		this.suit = suit;
+	}
+	
+	public String getSuit() {
+		return suit;
+	}
+	
+	public String getRank() {
+		return rank;
+	}
+
+}
+```
+
+## Write `main`
+
+Create a `PlayGame` class with a `main` method to create an instance of a card and to print it.
+
+What changes to `Card` class would you make?
+
+## Solution
+
+```{java}
+public class PlayGame {
+
+	public static void main(String[] args) {
+		Card card1 = new Card("ace", "hearts");
+		card1.print();
+	}
+
+}
+```
+
+## Update `Card` class (demonstration)
+
+* validate suit and rank -- make sure object is create with valid strings only
+* create constants for arrays of strings for both suits and ranks
+* create helper methods (private) for validation
+* two ways of setting rank: integer and string (overloading)
+
+## Update `Card` class -- solution
+
+```{java}
+public class Card {
+	private String rank;
+	private String suit;
+	
+	private final static String[] RANKS = {"ace", "two", "three", "four",
+				                           "five", "six", "seven",
+				                           "eight", "nine", "ten",
+				                           "jack", "queen", "king"};
+
+	
+	private final static String[] SUITS = {"diamonds", "clubs", "hearts", "spades"};
+
+	private Boolean inArray(String value, String[] arr) {
+		for (String element : arr) {
+		    if (element == value) {
+		        return true;
+		    }
+		}
+		return false;
+	}
+	
+	private Boolean validRank(String rank) {
+		return inArray(rank, RANKS);
+	}
+	
+	private Boolean validSuit(String suit) {
+		return inArray(suit, SUITS);
+	}
+	
+	public Card(String rank, String suit) {
+		if (validRank(rank)) this.rank = rank;
+		if (validSuit(suit)) this.suit = suit;
+	}
+	
+	
+	public void setRank(String rank) {
+		if (validRank(rank)) this.rank = rank;
+	}
+	
+	public void setRank(int rank) { // overloading
+		if (rank >= 1 && rank <= 13) this.rank = RANKS[rank-1];
+	}
+	
+	public void setSuit(String suit) {
+		if (validSuit(suit)) this.suit = suit;
+	}
+	
+	public String getSuit() {
+		return suit;
+	}
+	
+	public String getRank() {
+		return rank;
+	}
+	
+	public void print() {
+		System.out.println(rank + " of " + suit);
+	}
+
+}
+
+```
+
+## Update `PlayGame` class
+
+```{java}
+public class PlayGame {
+
+	public static void main(String[] args) {
+		Card card1 = new Card("ace", "hearts");
+		card1.print();
+		
+		card1.setRank(2);
+		card1.print();
+
+	}
+
+}
+```
+
+
+
 

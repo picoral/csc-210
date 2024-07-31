@@ -1874,5 +1874,54 @@
     "title": "Classes and Methods",
     "section": "Adding a constructor method",
     "text": "Adding a constructor method\npublic class IdentifyMyParts {\n    private int x = 7;\n    private int y = 3;\n    \n    public IdentifyMyParts(int x, int y) {\n        this.x = x;\n        this.y = y;\n        \n    }\n    \n    public void setX(int x) {\n        this.x = x;\n    }\n\n    public void setY(int y) {\n        this.y = y;\n    }\n    \n    public int getX() {\n        return x;\n    }\n    \n    public int getY() {\n        return y;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-01.html#practice-card-class",
+    "href": "slides-04-01.html#practice-card-class",
+    "title": "Classes and Methods",
+    "section": "Practice – Card class",
+    "text": "Practice – Card class\nA card has a suit and a rank\nSuits The four suits are clubs (♣), diamonds (♦), hearts (♥), and spades (♠).\nRanks The ranks are ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, and king. The ace is the highest card, and the 2 is the lowest, but the ace can also be used as a low card with a value of 1."
+  },
+  {
+    "objectID": "slides-04-01.html#card-class-solution",
+    "href": "slides-04-01.html#card-class-solution",
+    "title": "Classes and Methods",
+    "section": "Card class solution",
+    "text": "Card class solution\npublic class Card {\n    private String rank;\n    private String suit;\n    \n    public Card(String rank, String suit) {\n        this.rank = rank;\n        this.suit = suit;\n    }\n    \n    public String getSuit() {\n        return suit;\n    }\n    \n    public String getRank() {\n        return rank;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-01.html#write-main",
+    "href": "slides-04-01.html#write-main",
+    "title": "Classes and Methods",
+    "section": "Write main",
+    "text": "Write main\nCreate a PlayGame class with a main method to create an instance of a card and to print it.\nWhat changes to Card class would you make?"
+  },
+  {
+    "objectID": "slides-04-01.html#solution",
+    "href": "slides-04-01.html#solution",
+    "title": "Classes and Methods",
+    "section": "Solution",
+    "text": "Solution\npublic class PlayGame {\n\n    public static void main(String[] args) {\n        Card card1 = new Card(\"ace\", \"hearts\");\n        card1.print();\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-01.html#update-card-class-demonstration",
+    "href": "slides-04-01.html#update-card-class-demonstration",
+    "title": "Classes and Methods",
+    "section": "Update Card class (demonstration)",
+    "text": "Update Card class (demonstration)\n\nvalidate suit and rank – make sure object is create with valid strings only\ncreate constants for arrays of strings for both suits and ranks\ncreate helper methods (private) for validation\ntwo ways of setting rank: integer and string (overloading)"
+  },
+  {
+    "objectID": "slides-04-01.html#update-card-class-solution",
+    "href": "slides-04-01.html#update-card-class-solution",
+    "title": "Classes and Methods",
+    "section": "Update Card class – solution",
+    "text": "Update Card class – solution\npublic class Card {\n    private String rank;\n    private String suit;\n    \n    private final static String[] RANKS = {\"ace\", \"two\", \"three\", \"four\",\n                                           \"five\", \"six\", \"seven\",\n                                           \"eight\", \"nine\", \"ten\",\n                                           \"jack\", \"queen\", \"king\"};\n\n    \n    private final static String[] SUITS = {\"diamonds\", \"clubs\", \"hearts\", \"spades\"};\n\n    private Boolean inArray(String value, String[] arr) {\n        for (String element : arr) {\n            if (element == value) {\n                return true;\n            }\n        }\n        return false;\n    }\n    \n    private Boolean validRank(String rank) {\n        return inArray(rank, RANKS);\n    }\n    \n    private Boolean validSuit(String suit) {\n        return inArray(suit, SUITS);\n    }\n    \n    public Card(String rank, String suit) {\n        if (validRank(rank)) this.rank = rank;\n        if (validSuit(suit)) this.suit = suit;\n    }\n    \n    \n    public void setRank(String rank) {\n        if (validRank(rank)) this.rank = rank;\n    }\n    \n    public void setRank(int rank) { // overloading\n        if (rank &gt;= 1 && rank &lt;= 13) this.rank = RANKS[rank-1];\n    }\n    \n    public void setSuit(String suit) {\n        if (validSuit(suit)) this.suit = suit;\n    }\n    \n    public String getSuit() {\n        return suit;\n    }\n    \n    public String getRank() {\n        return rank;\n    }\n    \n    public void print() {\n        System.out.println(rank + \" of \" + suit);\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-01.html#update-playgame-class",
+    "href": "slides-04-01.html#update-playgame-class",
+    "title": "Classes and Methods",
+    "section": "Update PlayGame class",
+    "text": "Update PlayGame class\npublic class PlayGame {\n\n    public static void main(String[] args) {\n        Card card1 = new Card(\"ace\", \"hearts\");\n        card1.print();\n        \n        card1.setRank(2);\n        card1.print();\n\n    }\n\n}"
   }
 ]
