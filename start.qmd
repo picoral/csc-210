@@ -4,23 +4,21 @@ title: "Getting Started"
 
 For our IDE (Integrated Development Environment), we will be using [Eclipse](https://www.eclipse.org/).
 
-
-1. Download [Eclipse IDE for Java Developers](https://www.eclipse.org/downloads/)
-1. Open Eclipse and choose a working environment folder (you can just choose the default, or change it to another folder of your preference) -- click on `Launch`
+1.  Download [Eclipse IDE for Java Developers](https://www.eclipse.org/downloads/)
+2.  Open Eclipse and choose a working environment folder (you can just choose the default, or change it to another folder of your preference) -- click on `Launch`
 
 ![choose working folder](images/working-folder.png)
 
-1. Create a new Java project -- Uncheck the `Create module-info.java file` option and click on `Finish` 
+3.  Create a new Java project -- Uncheck the `Create module-info.java file` option and click on `Finish`
 
-![choose File > New > Java Project](images/java-project.png)
+![choose File \> New \> Java Project](images/java-project.png)
 
 ![unselect option for module-info.java and click finish](images/create-project.png)
 
-1. With your new Java project selected, create a new Java class -- choose a name for your class, and select the `public static void main(String[] args)` option (we will be doing different things in the future, but for now, we will have a main method in our class) and click on `Finish`
+4.  With your new Java project selected, create a new Java class -- choose a name for your class, and select the `public static void main(String[] args)` option (we will be doing different things in the future, but for now, we will have a main method in our class) and click on `Finish`
 
-
-![choose New > Class](images/java-class.png)
+![choose New \> Class](images/java-class.png)
 
 ![select option to create main and click Finish](images/create-class.png)
 
-1. Try typing `System.out.println("Hello, World!");` inside the `main()` method and click on `Run` ![click run](images/run.png)
+5.  Try typing `System.out.println("Hello, World!");` inside the `main()` method and click `Run` ![click run](images/run.png)
