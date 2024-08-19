@@ -1,0 +1,11 @@
+---
+title: "Getting Started"
+---
+
+For our IDE (Integrated Development Environment), we will be using [Eclipse](https://www.eclipse.org/).
+
+
+1. Download [Eclipse IDE for Java Developers](https://www.eclipse.org/downloads/)
+1. Open Eclipse and choose a working environment folder
+1. Create a new Java project
+1. With your new Java project selected, create a new Java class

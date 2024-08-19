@@ -33,6 +33,8 @@ Topic: `r schedule %>% filter(week == 1) %>% pull(topic)`
 
 ## Readings
 
+You can find instructions on how to set up your coding environment on the [getting started page](start.html).
+
 Required:
 
 * [Java, Java, Java 1.5 Java Language Elements](https://runestone.academy/ns/books/published/javajavajava/java-language-elements.html)

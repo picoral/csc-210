@@ -1,5 +1,7 @@
 ---
 title: "Syllabus"
+subtitle: "CSC 210 Software Engineering -- Fall 2024"
+author: "Adriana Picoral (she/her/hers)"
 ---
 
 ```{r}
@@ -13,9 +15,23 @@ data <- read_excel("assessment-deadlines.xlsx")
 ```
 
 
+# Location and Times
+
+This course is scheduled to be an in-person course, meeting in-person three times a week. There are multiple sections of the course with various meeting times. Your meeting time should be one of the following:
+
+-   [Gittings](https://maps.app.goo.gl/yw2tjSjaQwYfnvbv8) Rm 129b, 9:00-9:50am, MWF
+
+This is a four-unit course, meeting in the lecture room three times a week (MWF). The weekly zoom lab sessions are flexible, meaning students have a number of time slots to choose from. To schedule your lab session go to [the weekly lab session spreadsheet]().
+
+Attendance is expected and required.
+
+If you need an exception due to a medical or visa issue, please reach out to the DRC or instructor.
+
 # Course Description
 
 This course is 	an introduction to the development of large scale software. Topics include modularization, design patterns, documentation, unit testing, source code control, build systems, debuggers, and performance tuning; all of the tools necessary for developing software as opposed to writing small programs.
+
+[Browse the UA catalog](https://studentcenter.arizona.edu/app/ui/public/ps/course-catalog?tab=DEFAULT) for official UA course descriptions.
 
 
 # Course Objectives and Expected Learning Outcomes
@@ -76,7 +92,7 @@ The course grade consists of the following:
 * Quizzes, 20%
 * Short Assignments, 10%
 
-## Due Dates and Submission:
+## Due Dates and Submission
 
 Programming and short assignments are to be submitted to GitHub and are due at 11:30 pm on their associated DUE DATE.  commit and push frequently to github. If you have been committing and pushing to GitHub. 
 
@@ -90,13 +106,26 @@ Anything late will not be graded and you will receive a 0%. Anything medical and
 
 ## Dispute of Grade Policy
 
-Any requests for grading corrections must be done within 10 school days of the assignment being due. 
+Any requests for grading corrections must be done within 5 school days of the assignment being due. 
 
-## University policy 
+# Makeup Policy for Students Who Register Late
 
-University policy regarding grades and grading systems is available at http://catalog.arizona.edu/policy/grades-and-grading-system
+If you register after the first class meeting you may make up missed assignments within your first week of attendance. You are responsible for contacting the instructor within that first week to have extensions set-up. The instructor will not be contacting you directly, you have to initiate this process to make up missed work. If you do not, the instructor will assume you are not interested in making up missed assignments.
 
-Requests for incomplete (I) or withdrawal (W) must be made in accordance with University policies, which are available at http://catalog.arizona.edu/policy/grades-and-grading-system#incomplete and http://catalog.arizona.edu/policy/grades-and-grading-system#Withdrawal, respectively.
+# Course Communications
+
+All online communication will be conducted through my official UA e-mail address (adrianaps\@arizona.edu) D2L, and Piazza.
+
+# Required Texts or Readings
+
+All readings, videos, and assignment instructions will be available in the course website.
+
+-   Course D2L: <https://d2l.arizona.edu/d2l/home/1497427>
+-   Course website: <https://adrianapicoral.com/csc-210/>
+
+# Honors Credit
+
+Students wishing to contract this course for Honors Credit should e-mail me to set up an appointment to discuss the terms of the contact and to sign the Honors Course Contract Request Form. The form is available at <http://www.honors.arizona.edu/honors-contracts>.
 
 # Scheduled Topics/Activities
 
@@ -163,6 +192,55 @@ Thanksgiving recess	November 28-December 1, 2024
 Last day of classes and laboratory sessions	December 11, 2024
 
 Final exam is on Thursday, December 19, 10:30am to 12:30pm ([schedule of final exams](https://registrar.arizona.edu/faculty-staff-resources/room-course-scheduling/schedule-classes/final-exams/final-exams-fall-2024))
+
+# Classroom Behavior Policy
+
+To foster a positive learning environment, students and instructors have a shared responsibility. We want a safe, welcoming, and inclusive environment where all of us feel comfortable with each other and where we can challenge ourselves to succeed. To that end, our focus is on the tasks at hand and not on extraneous activities (e.g., texting, chatting, reading a newspaper, making phone calls, web surfing, etc.).
+
+Students are asked to refrain from disruptive conversations with people sitting around them during lecture. Students observed engaging in disruptive activity will be asked to cease this behavior. Those who continue to disrupt the class will be asked to leave lecture or discussion and may be reported to the Dean of Students.
+
+# Code of Academic Integrity
+
+**All work you submit for grading in this course must be your own. Submitting work that includes many (minor and/or major) components that are not your own work is considered plagiarism. Instances of plagiarism will be reported to the Dean of Students.**
+
+Keep in mind that all assignments and practice problems provided in this course are meant to help you to practice the skills that you will need for graded work (including on paper quizzes and exams), so it is generally in your best interest to avoid taking shortcuts even on these assignments.
+
+Students are expected to adhere to the UA Code of Academic Integrity as described in the UA General Catalog. See <https://deanofstudents.arizona.edu/student-rights-responsibilities/academic-integrity>.
+
+Uploading material from this course to a website other than D2L is strictly prohibited and will be considered a violation of the course policy and a violation of the code of academic integrity. Obtaining material associated with this course (or previous offerings of this course) on a site other than D2L and the course website, such as Chegg, Course Hero, etc. or accessing these sites during a quiz or exam is a violation of the code of academic integrity. Any student determined to have uploaded or accessed material in an unauthorized manner will be reported to the Dean of Students for a Code of Academic Integrity violation, with a recommended sanction of a failing grade in the course (faculty can replace this sanction with whatever sanction they plan to use for their course).
+
+Selling class notes and/or other course materials to other students or to a third party for resale is not permitted without the instructor's express written consent. Violations to this and other course rules are subject to the Code of Academic Integrity and may result in course sanctions. Additionally, students who use D2L or UA e-mail to sell or buy these copyrighted materials are subject to Code of Conduct Violations for misuse of student e-mail addresses. This conduct may also constitute copyright infringement.
+
+# Safety on Campus and in the Classroom
+
+For a list of emergency procedures for all types of incidents, please visit the website of the Critical Incident Response Team (CIRT): <https://cirt.arizona.edu/case-emergency/overview>
+
+Also watch the video available at <https://arizona.sabacloud.com/Saba/Web_spf/NA7P1PRD161/app/me/ledetail;spf-url=common%2Flearningeventdetail%2Fcrtfy000000000003841>
+
+# University-wide Policies link
+
+Links to the following UA policies are provided here, <http://catalog.arizona.edu/syllabus-policies>:
+
+-   Absence and Class Participation Policies
+-   Threatening Behavior Policy
+-   Accessibility and Accommodations Policy
+-   Code of Academic Integrity
+-   Nondiscrimination and Anti-Harassment Policy
+
+# Department-wide Syllabus Policies and Resources link
+
+Links to the following departmental syllabus policies and resources are provided here, <https://www.cs.arizona.edu/cs-course-syllabus-policies> :
+
+-   Department Code of Conduct
+-   Class Recordings
+-   Illnesses and Emergencies
+-   Obtaining Help
+-   Preferred Names and Pronouns
+-   Confidentiality of Student Records
+-   Additional Resources
+-   Land Acknowledgement Statement
+
+
 
 # Subject to Change Statement
 
