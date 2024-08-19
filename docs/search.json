@@ -1278,7 +1278,7 @@
     "href": "start.html",
     "title": "Getting Started",
     "section": "",
-    "text": "For our IDE (Integrated Development Environment), we will be using Eclipse.\n\nDownload Eclipse IDE for Java Developers\nOpen Eclipse and choose a working environment folder\nCreate a new Java project\nWith your new Java project selected, create a new Java class"
+    "text": "For our IDE (Integrated Development Environment), we will be using Eclipse.\n\nDownload Eclipse IDE for Java Developers\nOpen Eclipse and choose a working environment folder (you can just choose the default, or change it to another folder of your preference) – click on Launch\n\n\n\n\nchoose working folder\n\n\n\nCreate a new Java project – Uncheck the Create module-info.java file option and click on Finish\n\n\n\n\nchoose File &gt; New &gt; Java Project\n\n\n\n\n\nunselect option for module-info.java and click finish\n\n\n\nWith your new Java project selected, create a new Java class – choose a name for your class, and select the public static void main(String[] args) option (we will be doing different things in the future, but for now, we will have a main method in our class) and click on Finish\n\n\n\n\nchoose New &gt; Class\n\n\n\n\n\nselect option to create main and click Finish\n\n\n\nTry typing System.out.println(\"Hello, World!\"); inside the main() method and click on Run"
   },
   {
     "objectID": "programming-assignment-03.html",
