@@ -13,6 +13,8 @@ data <- read_excel("assessment-deadlines.xlsx")
 ```
 
 
+[Fill out this survey with your GitHub username so that you can get credit for your project submissions](https://uarizona.co1.qualtrics.com/jfe/form/SV_4GyaYKWTKqYvafk).
+
 # PA 1
 
 * Deadline: `r data %>% filter(Assignment == "PA1") %>%  select(Deadline)` -- Wednesday, 11:30pm
