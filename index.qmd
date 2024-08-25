@@ -4,9 +4,8 @@ title: "CSC 210 Fall 2024"
 
 The main goal of this course is to learn how to decompose problems and solve them with a program and do this in an effective manner that enables your future self and others to read, understand, and maintain your programs. Other goals include learning a second programming language (Java), learning decomposition and debugging strategies, and learning GUI event-driven programming (JavaFX).
 
-* [Course D2L:]()
-* [Gradescope:]()
-* [Piazza:]()
+* [Course D2L](https://d2l.arizona.edu/d2l/home/1497427)
+* [Gradescope](https://www.gradescope.com/courses/839822)
 
 Where to start:
 
