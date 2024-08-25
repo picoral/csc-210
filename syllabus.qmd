@@ -1,6 +1,6 @@
 ---
 title: "Syllabus"
-subtitle: "CSC 210 Software Engineering -- Fall 2024"
+subtitle: "CSC 210 Software Development -- Fall 2024"
 author: "Adriana Picoral (she/her/hers)"
 ---
 
@@ -34,7 +34,11 @@ This course is 	an introduction to the development of large scale software. Topi
 [Browse the UA catalog](https://studentcenter.arizona.edu/app/ui/public/ps/course-catalog?tab=DEFAULT) for official UA course descriptions.
 
 
-# Course Objectives and Expected Learning Outcomes
+# Course Objectives
+
+The main objective of this course is for students to learn how to decompose problems and solve them with a program and do this in an effective manner that enables your future self and others to read, understand, and maintain your programs. Other objectives include learning a second programming language (Java), learning decomposition and debugging strategies, and learning GUI event-driven programming (JavaFX).
+
+# Expected Learning Outcomes
 
 At the end of this course, students will be able to:
 
@@ -86,15 +90,15 @@ Grades will be posted on D2L. All graded work will be done and submitted individ
 The course grade consists of the following:
 
 * Programming Assignments, 20%
-* Final, 20%
+* Short Assignments, 10%
+* Quizzes, 20%
 * Midterm 1, 15%
 * Midterm 2, 15%
-* Quizzes, 20%
-* Short Assignments, 10%
+* Final, 20%
 
 ## Due Dates and Submission
 
-Programming and short assignments are to be submitted to GitHub and are due at 11:30 pm on their associated DUE DATE.  commit and push frequently to github. If you have been committing and pushing to GitHub. 
+Programming and short assignments are to be submitted to GitHub and are due at 11:30 pm on their associated DUE DATE. Commit and push frequently to github. If you have been committing and pushing to GitHub. 
 
 ## Grading Promptness
 
@@ -106,7 +110,11 @@ Anything late will not be graded and you will receive a 0%. Anything medical and
 
 ## Dispute of Grade Policy
 
-Any requests for grading corrections must be done within 5 school days of the assignment being due. 
+Any requests for grading corrections must be done within 5 school days of the assignment being due.
+
+## Incomplete (I) or Withdrawal (W):
+
+Requests for incomplete (I) or withdrawal (W)  must be made in accordance with University policies, which are available at https://catalog.arizona.edu/policy/courses-credit/grading/grading-system.
 
 # Makeup Policy for Students Who Register Late
 

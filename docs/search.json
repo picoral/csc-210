@@ -1699,5 +1699,82 @@
     "title": "Programming Assignmnet 06",
     "section": "Submission",
     "text": "Submission\nWrite your own code. We will be using a tool that finds overly similar code. This Spring 2018 semester in CS 210 we unfortunately have had academic integrity cases. I recommend that when talking with others about the assignment, do not write anything down.\nThe class hierarchy diagram in pdf format is due Tuesday March 13th at 11:30 am in Gradescope AND Aropa.\nFor PA6, you are REQUIRED to submit all of your java source files to Gradescope before Monday March 19th at 11:30 am. You also need to submit your README.md with example input and output for your unique class."
+  },
+  {
+    "objectID": "slides-01-01.html#welcome-to-csc-210",
+    "href": "slides-01-01.html#welcome-to-csc-210",
+    "title": "Course Introduction",
+    "section": "Welcome to CSC 210",
+    "text": "Welcome to CSC 210\n\nThis is CSC 210 – Software Development\nuse data structures (i.e., hash table, tree, and graph), common algorithm patterns (i.e., exhaustive search, divide and conquer, recursive backtracking, and heuristic), unit testing, and debugging to write a correct solution to each sub-problem and integrate the sub-problem solutions into a complete working project (currently using Java).\ncompare and contrast programming in two programming languages (Python and Java).\nbuild graphical user input and output for programs (JavaFX)"
+  },
+  {
+    "objectID": "slides-01-01.html#who-am-i",
+    "href": "slides-01-01.html#who-am-i",
+    "title": "Course Introduction",
+    "section": "Who am I?",
+    "text": "Who am I?\n\nAdriana Picoral (you can call me Adriana or Dr. Picoral)\nOffice: Gould-Simpson 811\nEmail: adrianaps@arizona.edu"
+  },
+  {
+    "objectID": "slides-01-01.html#who-are-the-teaching-assistants-tas",
+    "href": "slides-01-01.html#who-are-the-teaching-assistants-tas",
+    "title": "Course Introduction",
+    "section": "Who are the teaching assistants? (TAs)",
+    "text": "Who are the teaching assistants? (TAs)\nIn this course we have course coordinators, senior TAs, and TAs.\nThe TAs are responsible for:\n\nHelping you, the students, succeed\nGrading quizzes, and exams\nHelping students on office hours\nLead lab sessions\n\n. . . So get to know them!"
+  },
+  {
+    "objectID": "slides-01-01.html#get-to-know-each-other",
+    "href": "slides-01-01.html#get-to-know-each-other",
+    "title": "Course Introduction",
+    "section": "Get to know each-other",
+    "text": "Get to know each-other\n\nIntroduce yourself!\nShare your\n\nName\nProgram/Major, declared or Intended (and why you chose that major)\nSomething new that you learned this summer"
+  },
+  {
+    "objectID": "slides-01-01.html#assessment-structure",
+    "href": "slides-01-01.html#assessment-structure",
+    "title": "Course Introduction",
+    "section": "Assessment structure",
+    "text": "Assessment structure\n\nProgramming Problems\nShort Projects (to be completed in the lab sessions)\nProjects\nExams and Quizzes"
+  },
+  {
+    "objectID": "slides-01-01.html#exams-and-quizzes",
+    "href": "slides-01-01.html#exams-and-quizzes",
+    "title": "Course Introduction",
+    "section": "Exams and Quizzes",
+    "text": "Exams and Quizzes\n\nExams and quizzes are on paper.\nMidterms and quizzes are on Wednesdays.\nProgramming assignments will be submitted through GitHub (create an account)."
+  },
+  {
+    "objectID": "slides-01-01.html#grade-distribution",
+    "href": "slides-01-01.html#grade-distribution",
+    "title": "Course Introduction",
+    "section": "Grade Distribution",
+    "text": "Grade Distribution\n\nProgramming Assignments, 20%\nShort Assignments, 10%\nQuizzes, 20%\nMidterm 1, 15%\nMidterm 2, 15%\nFinal, 20%"
+  },
+  {
+    "objectID": "slides-01-01.html#syllabus-activity",
+    "href": "slides-01-01.html#syllabus-activity",
+    "title": "Course Introduction",
+    "section": "Syllabus Activity",
+    "text": "Syllabus Activity\n\nWhen are the exams?\nWhat’s the late policy for this class?\nWhen’s the first assignment due?"
+  },
+  {
+    "objectID": "slides-01-01.html#other-important-dates",
+    "href": "slides-01-01.html#other-important-dates",
+    "title": "Course Introduction",
+    "section": "Other Important Dates",
+    "text": "Other Important Dates\n\nLast day for students to drop without a grade of W (withdraw) is September 08\nLast day for students to department staff to drop in UAccess with a W is September 22"
+  },
+  {
+    "objectID": "slides-01-01.html#attendance-question",
+    "href": "slides-01-01.html#attendance-question",
+    "title": "Course Introduction",
+    "section": "Attendance question",
+    "text": "Attendance question\nGo to gradescope and answer the attendance question."
+  },
+  {
+    "objectID": "slides-01-01.html#materials",
+    "href": "slides-01-01.html#materials",
+    "title": "Course Introduction",
+    "section": "Materials",
+    "text": "Materials\n\nReadings, videos, exercises, slides, assignment instructions will be available on the website\nHOWEVER, you are still responsible for things said/announced in class"
   }
 ]

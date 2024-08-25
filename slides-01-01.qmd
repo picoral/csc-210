@@ -6,6 +6,89 @@ format:
     show-slide-number: all
 ---
 
+## **Welcome to CSC 210**
+
+-   This is CSC 210 -- Software Development
+-   use data structures (i.e., hash table, tree, and graph), common algorithm patterns (i.e., exhaustive search, divide and conquer, recursive backtracking, and heuristic), unit testing, and debugging to write a correct solution to each sub-problem and integrate the sub-problem solutions into a complete working project (currently using Java).
+-   compare and contrast programming in two programming languages (Python and Java).
+-   build graphical user input and output for programs (JavaFX)
+
+
+## Who am I?
+
+-   Adriana Picoral (you can call me Adriana or Dr. Picoral)
+-   Office: Gould-Simpson 811
+-   Email: adrianaps\@arizona.edu
+
+
+## Who are the teaching assistants? (TAs)
+
+In this course we have course coordinators, senior TAs, and TAs.
+
+The TAs are responsible for:
+
+-   Helping you, the students, succeed
+-   Grading quizzes, and exams
+-   Helping students on office hours
+-   Lead lab sessions
+
+. . . So get to know them!
+
+## Get to know each-other
+
+-   Introduce yourself!
+-   Share your
+    -   Name
+    -   Program/Major, declared or Intended (and why you chose that major)
+    -   Something new that you learned this summer
+    
+## Assessment structure
+
+-   Programming Problems
+
+-   Short Projects (to be completed in the lab sessions)
+
+-   Projects
+
+-   Exams and Quizzes
+
+## Exams and Quizzes
+
+-   Exams and quizzes are on paper.
+
+-   Midterms and quizzes are on Wednesdays.
+
+-   Programming assignments will be submitted through GitHub (create an account).
+
+## Grade Distribution
+
+* Programming Assignments, 20%
+* Short Assignments, 10%
+* Quizzes, 20%
+* Midterm 1, 15%
+* Midterm 2, 15%
+* Final, 20%
+
+## Syllabus Activity
+
+1.  When are the exams?
+1.  What's the late policy for this class?
+1.  When's the first assignment due?
+
+## Other Important Dates
+
+-   Last day for students to drop without a grade of W (withdraw) is September 08
+-   Last day for students to department staff to drop in UAccess with a W is September 22
+
+## Attendance question
+
+Go to gradescope and answer the attendance question.
+
+## Materials
+
+-   Readings, videos, exercises, slides, assignment instructions will be available on the website
+-   HOWEVER, you are still responsible for things said/announced in class
+
 ## Tips on slides
 
 Press the `e` key
