@@ -89,6 +89,10 @@ Go to gradescope and answer the attendance question.
 -   Readings, videos, exercises, slides, assignment instructions will be available on the website
 -   HOWEVER, you are still responsible for things said/announced in class
 
+## Getting started
+
+Create a GitHub account and [submit your username in this form](https://uarizona.co1.qualtrics.com/jfe/form/SV_4GyaYKWTKqYvafk).
+
 ## Tips on slides
 
 Press the `e` key
