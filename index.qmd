@@ -30,6 +30,8 @@ Where to start:
 
 # TA office hours
 
+TA office hours take place in Gould-Simpson room 821.
+
 <iframe src="https://docs.google.com/spreadsheets/d/1pVdOEZQNaZuKvvIHYkwk4oJHWMfG5-g1QdFHNEmFHy4/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="600px"></iframe>
         
 # Information about the materials for this course
