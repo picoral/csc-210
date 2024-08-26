@@ -43,8 +43,6 @@ The TAs are responsible for:
     
 ## Assessment structure
 
--   Programming Problems
-
 -   Short Projects (to be completed in the lab sessions)
 
 -   Projects
