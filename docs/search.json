@@ -1047,7 +1047,7 @@
     "href": "slides-01-02.html#javadoc-comments",
     "title": "Intro to Java",
     "section": "JavaDoc Comments",
-    "text": "JavaDoc Comments\nJavaDoc comments may be placed above any class, method, or field\nTwo sections:\n\ndescription\nstandalone block tags (marked with @)"
+    "text": "JavaDoc Comments\nJavaDoc comments may be placed above any class or method\nTwo sections:\n\ndescription\nstandalone block tags (marked with @)"
   },
   {
     "objectID": "slides-01-02.html#practice",

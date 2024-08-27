@@ -120,7 +120,7 @@ Java types that start with a upper case are Objects.
 
 ## JavaDoc Comments
 
-JavaDoc comments may be placed above any class, method, or field
+JavaDoc comments may be placed above any class or method
 
 Two sections:
 
