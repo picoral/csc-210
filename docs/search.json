@@ -1033,7 +1033,7 @@
     "href": "slides-01-02.html#types",
     "title": "Intro to Java",
     "section": "Types",
-    "text": "Types\nAll primitive types in Java and lower-cased.\nA primitive cannot have a method attached to it and connat be subclasses (there is no Object)\nJava types that start with a upper cacse are Objects."
+    "text": "Types\nAll primitive types in Java and lower-cased.\nA primitive cannot have a method attached to it and connat be subclasses (there is no Object)\nJava types that start with a upper case are Objects."
   },
   {
     "objectID": "slides-01-02.html#comments",

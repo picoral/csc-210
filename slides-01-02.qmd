@@ -96,7 +96,7 @@ All primitive types in Java and lower-cased.
 
 A primitive cannot have a method attached to it and connat be subclasses (there is no Object) 
 
-Java types that start with a upper cacse are Objects.
+Java types that start with a upper case are Objects.
 
 ## Comments
 
