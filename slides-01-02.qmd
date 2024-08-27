@@ -196,7 +196,7 @@ public class OddsOrEvens {
 
 ## Gradescope Attendance
 
-Submit java class called `OddEven` to Gradescope that contains two public methods:
+Submit a java class called `OddEven` to Gradescope that contains two public methods:
 
 * `isOdd(int number)` takes an integer as argument and returns a boolean
 * `iseven(int number)` takes an integer as argument and returns a boolean

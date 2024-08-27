@@ -1796,6 +1796,6 @@
     "href": "slides-01-02.html#gradescope-attendance",
     "title": "Intro to Java",
     "section": "Gradescope Attendance",
-    "text": "Gradescope Attendance\nSubmit java class called OddEven to Gradescope that contains two public methods:\n\nisOdd(int number) takes an integer as argument and returns a boolean\niseven(int number) takes an integer as argument and returns a boolean\n\nAdd package com.gradescope.oddeven; to the top of your .java file"
+    "text": "Gradescope Attendance\nSubmit a java class called OddEven to Gradescope that contains two public methods:\n\nisOdd(int number) takes an integer as argument and returns a boolean\niseven(int number) takes an integer as argument and returns a boolean\n\nAdd package com.gradescope.oddeven; to the top of your .java file"
   }
 ]
