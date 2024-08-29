@@ -203,6 +203,8 @@ Submit a java class called `OddEven` to Gradescope that contains two public meth
 
 Add `package com.gradescope.oddeven;` to the top of your `.java` file
 
+Make sure you are spelling things correctly: to help you with that I created [a checklist](checklist.html)
+
 ## Scanner
 
 Let's import the Scanner package from Java utils and use it to get user input.
@@ -349,6 +351,17 @@ public class HoursMinutesSeconds {
 
 }
 ```
+
+## Submit solution to gradescope
+
+Submit your solution Programming Problem 01 [Programming Problem 01 on gradescope](https://www.gradescope.com/courses/839822/assignments/4847547)
+
+`package com.gradescope.hms;`
+
+Output needs to match exactly what is expect.
+
+The message to the user (for input) should be `"Enter number of seconds: "` exactly (with the space after : and no line break)
+
 
 ## Expand 
 

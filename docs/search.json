@@ -1796,7 +1796,7 @@
     "href": "slides-01-02.html#gradescope-attendance",
     "title": "Intro to Java",
     "section": "Gradescope Attendance",
-    "text": "Gradescope Attendance\nSubmit a java class called OddEven to Gradescope that contains two public methods:\n\nisOdd(int number) takes an integer as argument and returns a boolean\nisEven(int number) takes an integer as argument and returns a boolean\n\nAdd package com.gradescope.oddeven; to the top of your .java file"
+    "text": "Gradescope Attendance\nSubmit a java class called OddEven to Gradescope that contains two public methods:\n\nisOdd(int number) takes an integer as argument and returns a boolean\nisEven(int number) takes an integer as argument and returns a boolean\n\nAdd package com.gradescope.oddeven; to the top of your .java file\nMake sure you are spelling things correctly: to help you with that I created a checklist"
   },
   {
     "objectID": "checklist.html",
@@ -1853,5 +1853,12 @@
     "title": "Writing a Class",
     "section": "Solution",
     "text": "Solution\nimport java.util.Scanner;\n\npublic class UseBankAccount {\n    \n    public static void main(String[] args) {\n        \n        BankAccount anAcct = new BankAccount(\"Casey\", 100); \n        \n        // Input\n        Scanner keyboard = new Scanner(System.in);\n        \n        System.out.print(\"Deposit (D) or Withdraw (W)? \");  \n        String operation = keyboard.next();\n        \n        \n        if (operation.equals(\"D\")) {\n            System.out.print(\"Enter amount to deposit: \");\n            double amount = keyboard.nextDouble();\n            \n            // Process\n            anAcct.deposit(amount);\n            \n            // Output\n            System.out.println(\"New balance: \" + anAcct.getBalance());\n        }\n        \n        if (operation.equals(\"W\")) {\n            System.out.print(\"Enter amount to withdraw: \");\n            double amount = keyboard.nextDouble();\n            \n            // Process\n            anAcct.withdraw(amount);\n            \n            // Output\n            System.out.println(\"New balance: \" + anAcct.getBalance());\n        }\n        \n\n        System.out.println(\"Thank you.\");\n        \n        keyboard.close();\n        \n        \n    }\n}"
+  },
+  {
+    "objectID": "slides-01-02.html#submit-solution-to-gradescope",
+    "href": "slides-01-02.html#submit-solution-to-gradescope",
+    "title": "Intro to Java",
+    "section": "Submit solution to gradescope",
+    "text": "Submit solution to gradescope\nSubmit your solution Programming Problem 01 Programming Problem 01 on gradescope\npackage com.gradescope.hms;\nOutput needs to match exactly what is expect.\nThe message to the user (for input) should be \"Enter number of seconds: \" exactly (with the space after : and no line break)"
   }
 ]
