@@ -1797,5 +1797,61 @@
     "title": "Intro to Java",
     "section": "Gradescope Attendance",
     "text": "Gradescope Attendance\nSubmit a java class called OddEven to Gradescope that contains two public methods:\n\nisOdd(int number) takes an integer as argument and returns a boolean\nisEven(int number) takes an integer as argument and returns a boolean\n\nAdd package com.gradescope.oddeven; to the top of your .java file"
+  },
+  {
+    "objectID": "checklist.html",
+    "href": "checklist.html",
+    "title": "Submission Checklist",
+    "section": "",
+    "text": "class name is in Proper Case (ClassName) – the first letter of every word, inclusing the first word, is uppercase while the remaining letters are lowercase\nclass name matched file name (ClassName.java)\nmethod and variable names are Camel Case (methodName) – the first letter of each word after the first is uppercase\npackage name is all lowercase and starts with package com.gradescope.\nset your methods as static if instructed to do so"
+  },
+  {
+    "objectID": "writing-class.html",
+    "href": "writing-class.html",
+    "title": "Writing a Class",
+    "section": "",
+    "text": "We will create a class called UseBankAccount\nAttributes: 1) ID (String), and 2) balance (double)\nMethods:\n\ngetID()\ngetBalance()\ndeposit(double amount)\nwithdraw(double amount)\n\nadapted from Rick Mercer’s slides"
+  },
+  {
+    "objectID": "writing-class.html#demonstration",
+    "href": "writing-class.html#demonstration",
+    "title": "Writing a Class",
+    "section": "",
+    "text": "We will create a class called UseBankAccount\nAttributes: 1) ID (String), and 2) balance (double)\nMethods:\n\ngetID()\ngetBalance()\ndeposit(double amount)\nwithdraw(double amount)\n\nadapted from Rick Mercer’s slides"
+  },
+  {
+    "objectID": "writing-class.html#solution",
+    "href": "writing-class.html#solution",
+    "title": "Writing a Class",
+    "section": "Solution",
+    "text": "Solution\npublic class BankAccount {\n    \n    private String ID;\n    private double balance;\n    \n    public BankAccount(String initID, double initBalance) {\n        ID = initID;\n        balance = initBalance;\n    }\n    \n    public String getID() {\n        return ID;\n    }\n    \n    public double getBalance() {\n        return balance;\n    }\n    \n    public void deposit(double amount) {\n        balance = balance + amount;\n    }\n    \n    public void withdraw(double amount) {\n        balance = balance - amount;\n    }\n\n}"
+  },
+  {
+    "objectID": "writing-class.html#expand",
+    "href": "writing-class.html#expand",
+    "title": "Writing a Class",
+    "section": "Expand",
+    "text": "Expand\nCreate a console application (another class with a public main method) that does the following:\n\ncreate a new BankAccount for \"Casey\" (ID) with 100 for balance\nrequest user keyboard input for amount to deposit\nupdate account balance (deposit the amount)\nprint out a message with new balance\n\nBankAccount anAcct = new BankAccount(\"Casey\", 100);"
+  },
+  {
+    "objectID": "writing-class.html#solution-1",
+    "href": "writing-class.html#solution-1",
+    "title": "Writing a Class",
+    "section": "Solution",
+    "text": "Solution\nimport java.util.Scanner;\n\npublic class UseBankAccount {\n    \n    public static void main(String[] args) {\n        \n        BankAccount anAcct = new BankAccount(\"Casey\", 100); \n        \n        // Input\n        System.out.print(\"Enter amount to deposit: \");\n        Scanner keyboard = new Scanner(System.in);\n        double amount = keyboard.nextDouble();\n        keyboard.close();\n        \n        // Process\n        anAcct.deposit(amount);\n        \n        // Output\n        System.out.println(\"New balance: \" + anAcct.getBalance());\n    }\n}"
+  },
+  {
+    "objectID": "writing-class.html#expand-1",
+    "href": "writing-class.html#expand-1",
+    "title": "Writing a Class",
+    "section": "Expand",
+    "text": "Expand\nModify your console application to ask whether the user wants to deposit or withdraw, and execute the desired operation"
+  },
+  {
+    "objectID": "writing-class.html#solution-2",
+    "href": "writing-class.html#solution-2",
+    "title": "Writing a Class",
+    "section": "Solution",
+    "text": "Solution\nimport java.util.Scanner;\n\npublic class UseBankAccount {\n    \n    public static void main(String[] args) {\n        \n        BankAccount anAcct = new BankAccount(\"Casey\", 100); \n        \n        // Input\n        Scanner keyboard = new Scanner(System.in);\n        \n        System.out.print(\"Deposit (D) or Withdraw (W)? \");  \n        String operation = keyboard.next();\n        \n        \n        if (operation.equals(\"D\")) {\n            System.out.print(\"Enter amount to deposit: \");\n            double amount = keyboard.nextDouble();\n            \n            // Process\n            anAcct.deposit(amount);\n            \n            // Output\n            System.out.println(\"New balance: \" + anAcct.getBalance());\n        }\n        \n        if (operation.equals(\"W\")) {\n            System.out.print(\"Enter amount to withdraw: \");\n            double amount = keyboard.nextDouble();\n            \n            // Process\n            anAcct.withdraw(amount);\n            \n            // Output\n            System.out.println(\"New balance: \" + anAcct.getBalance());\n        }\n        \n\n        System.out.println(\"Thank you.\");\n        \n        keyboard.close();\n        \n        \n    }\n}"
   }
 ]

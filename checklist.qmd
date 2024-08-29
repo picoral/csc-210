@@ -1,0 +1,9 @@
+---
+title: "Submission Checklist"
+---
+
+1. class name is in Proper Case (**C**lass**N**ame) -- the first letter of every word, inclusing the first word, is uppercase while the remaining letters are lowercase
+1. class name matched file name (`ClassName.java`)
+1. method and variable names are Camel Case (method**N**ame) --  the first letter of each word **after the first** is uppercase
+1. package name is all lowercase and starts with `package com.gradescope.`
+1. set your methods as `static` if instructed to do so
