@@ -1,0 +1,126 @@
+---
+title: "CSC 210 Lab 01"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## `Scanner` class
+
+We will be using the `Scanner` class for two things in today's lab:
+
+* Read user keyboard input to request a file name
+* Read the specified text file
+
+We will also use `while` and `for` loops for this short assignment.
+
+## Getting Started
+
+Get started by creating a new Java Project on Eclipse, and then a new class 
+(new `.java` file) called `FileSum` (remember
+that class names are proper cased):
+
+Proper Case (**F**ile**S**um) -- the first letter of every word, inclusing the first word, is uppercase while the remaining letters are lowercase
+
+Your class should have a main method (that's what gradescope will be calling), 
+your main method should be public and static
+
+Remember that your class name need to match file name (`FileSum.java`)
+
+## Short Assignment Instructions
+
+[Short Assignment 01](short-assignment-01.html)
+
+
+## Set up `Scanner`
+
+Import the appropriate class at the top of your file:
+
+```{java}
+import java.util.Scanner;
+```
+
+Then, in your main method, call the constructor:
+
+```{java}
+Scanner keyboardScanner = new Scanner(System.in);
+```
+
+Print a message to the user, for them to enter a file name (it must match the
+spelling in the instructions).
+
+Then, read the keyboard input:
+
+```{java}
+String fileName = keyboardScanner.nextLine();
+```
+
+## Set up file to read
+
+Once you have read the user input, you can go ahead and use that user string
+to read the file.
+
+```{java}
+File myFile = new File(fileName);
+Scanner myReader = new Scanner(myFile);
+```
+
+For this to work, you need a `throws FileNotFoundException` in your main method
+definition.
+
+## Read every line in the file
+
+Your file `Scanner` has the following methods:
+
+* `.hasNextLine()` -- returns true if there's a next line to read, false otherwise
+* `.nextLine()` -- returns a string for the next line in the file
+
+Write a `while` loop that if there's a next line to be read in the file, reads it
+
+## Splitting lines
+
+For each line you read, you can use the following `String` methods:
+
+
+* `.split(" ")` -- split a String by single space
+
+This method returns an Array, so when assigning the result of a String split
+to a variable name, use `String[]` type declaration.
+
+## For loop
+
+Once you've created an array of Strings, which are the individual numbers
+that you need to sum up together, you will iterate over this array with a for
+loop.
+
+The structure of a for loop in Java is:
+
+`for(type variable = start; condition to stop; increment)`
+
+For example:
+
+```{java}
+for(int i = 0; i < limit; i++)
+```
+
+Your limit will be the length of your array, which can be retrieved by
+its `.length` variable
+
+## Last thing you need to know
+
+You can use the `valueOf()` method from the `Integer` class to convert a
+string to an integer:
+
+```{java}
+Integer.valueOf("10")
+```
+
+## Submit assignment
+
+[Submit your assignment to gradescope](https://www.gradescope.com/courses/839822/assignments/4852350)
+
+Remember you need to submit the `FileSum.java` file
+
+Add `package com.gradescope.filesum;` to the top of your file so that the 
+binary file is placed in the correct autograder folder

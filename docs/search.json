@@ -1803,7 +1803,7 @@
     "href": "checklist.html",
     "title": "Submission Checklist",
     "section": "",
-    "text": "class name is in Proper Case (ClassName) – the first letter of every word, inclusing the first word, is uppercase while the remaining letters are lowercase\nclass name matched file name (ClassName.java)\nmethod and variable names are Camel Case (methodName) – the first letter of each word after the first is uppercase\npackage name is all lowercase and starts with package com.gradescope.\nset your methods as static if instructed to do so"
+    "text": "class name is in Proper Case (ClassName) – the first letter of every word, inclusing the first word, is uppercase while the remaining letters are lowercase\nclass name matches file name (ClassName.java)\nmethod and variable names are Camel Case (methodName) – the first letter of each word after the first is uppercase\npackage name is all lowercase and starts with package com.gradescope.\nset your methods as static if instructed to do so"
   },
   {
     "objectID": "writing-class.html",
@@ -1867,5 +1867,82 @@
     "title": "Lab 01",
     "section": "",
     "text": "Add the package name to the top of your file, so gradescope can find the compiled binary file:\npackage com.gradescope.filesum.tests;"
+  },
+  {
+    "objectID": "lab01-slides.html#scanner-class",
+    "href": "lab01-slides.html#scanner-class",
+    "title": "CSC 210 Lab 01",
+    "section": "Scanner class",
+    "text": "Scanner class\nWe will be using the Scanner class for two things in today’s lab:\n\nRead user keyboard input to request a file name\nRead the specified text file\n\nWe will also use while and for loops for this short assignment."
+  },
+  {
+    "objectID": "lab01-slides.html#getting-started",
+    "href": "lab01-slides.html#getting-started",
+    "title": "CSC 210 Lab 01",
+    "section": "Getting Started",
+    "text": "Getting Started\nGet started by creating a new Java Project on Eclipse, and then a new class (new .java file) called FileSum (remember that class names are proper cased):\nProper Case (FileSum) – the first letter of every word, inclusing the first word, is uppercase while the remaining letters are lowercase\nYour class should have a main method (that’s what gradescope will be calling), your main method should be public and static\nRemember that your class name need to match file name (FileSum.java)"
+  },
+  {
+    "objectID": "lab01-slides.html#set-up-scanner",
+    "href": "lab01-slides.html#set-up-scanner",
+    "title": "CSC 210 Lab 01",
+    "section": "Set up Scanner",
+    "text": "Set up Scanner\nImport the appropriate class at the top of your file:\nimport java.util.Scanner;\nThen, in your main method, call the constructor:\nScanner keyboardScanner = new Scanner(System.in);\nPrint a message to the user, for them to enter a file name (it must match the spelling in the instructions).\nThen, read the keyboard input:\nString fileName = keyboardScanner.nextLine();"
+  },
+  {
+    "objectID": "lab01-slides.html",
+    "href": "lab01-slides.html",
+    "title": "CSC 210 Lab 01",
+    "section": "",
+    "text": "We will be using the Scanner class for two things in today’s lab:\n\nRead user keyboard input to request a file name\nRead the specified text file\n\nWe will also use while and for loops for this short assignment."
+  },
+  {
+    "objectID": "lab01-slides.html#set-up-file-to-read",
+    "href": "lab01-slides.html#set-up-file-to-read",
+    "title": "CSC 210 Lab 01",
+    "section": "Set up file to read",
+    "text": "Set up file to read\nOnce you have read the user input, you can go ahead and use that user string to read the file.\nFile myFile = new File(fileName);\nScanner myReader = new Scanner(myFile);\nFor this to work, you need a throws FileNotFoundException in your main method definition."
+  },
+  {
+    "objectID": "lab01-slides.html#read-every-line-in-the-file",
+    "href": "lab01-slides.html#read-every-line-in-the-file",
+    "title": "CSC 210 Lab 01",
+    "section": "Read every line in the file",
+    "text": "Read every line in the file\nYour file Scanner has the following methods:\n\n.hasNextLine() – returns true if there’s a next line to read, false otherwise\n.nextLine() – returns a string for the next line in the file\n\nWrite a while loop that if there’s a next line to be read in the file, reads it"
+  },
+  {
+    "objectID": "lab01-slides.html#splitting-lines",
+    "href": "lab01-slides.html#splitting-lines",
+    "title": "CSC 210 Lab 01",
+    "section": "Splitting lines",
+    "text": "Splitting lines\nFor each line you read, you can use the following String methods:\n\n.split(\" \") – split a String by single space\n\nThis method returns an Array, so when assigning the result of a String split to a variable name, use String[] type declaration."
+  },
+  {
+    "objectID": "lab01-slides.html#for-loop",
+    "href": "lab01-slides.html#for-loop",
+    "title": "CSC 210 Lab 01",
+    "section": "For loop",
+    "text": "For loop\nOnce you’ve created an array of Strings, which are the individual numbers that you need to sum up together, you will iterate over this array with a for loop.\nThe structure of a for loop in Java is:\nfor(type variable = start; condition to stop; increment)\nFor example:\nfor(int i = 0; i &lt; limit; i++)\nYour limit will be the length of your array, which can be retrieved by its .length variable"
+  },
+  {
+    "objectID": "lab01-slides.html#last-thing-you-need-to-know",
+    "href": "lab01-slides.html#last-thing-you-need-to-know",
+    "title": "CSC 210 Lab 01",
+    "section": "Last thing you need to know",
+    "text": "Last thing you need to know\nYou can use the valueOf() method from the Integer class to convert a string to an integer:\nInteger.valueOf(\"10\")"
+  },
+  {
+    "objectID": "lab01-slides.html#short-assignment-instructions",
+    "href": "lab01-slides.html#short-assignment-instructions",
+    "title": "CSC 210 Lab 01",
+    "section": "Short Assignment Instructions",
+    "text": "Short Assignment Instructions\nShort Assignment 01"
+  },
+  {
+    "objectID": "lab01-slides.html#submit-assignment",
+    "href": "lab01-slides.html#submit-assignment",
+    "title": "CSC 210 Lab 01",
+    "section": "Submit assignment",
+    "text": "Submit assignment\nSubmit your assignment to gradescope\nRemember you need to submit the FileSum.java file\nAdd package com.gradescope.filesum; to the top of your file so that the binary file is placed in the correct autograder folder"
   }
 ]
