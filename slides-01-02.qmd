@@ -271,7 +271,7 @@ public class OddsOrEvens {
 
 ## Practice
 
-Write an application that prompts the user to enter an integer representing number os seconds.
+Write an application (HoursMinutesSeconds.java) that prompts the user to enter an integer representing number os seconds.
 
 Your application should print the equivalent hours, minutes, and seconds in this format: `hours:minutes:seconds`
 

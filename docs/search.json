@@ -1096,7 +1096,7 @@
     "href": "slides-01-02.html#practice-1",
     "title": "Intro to Java",
     "section": "Practice",
-    "text": "Practice\nWrite an application that prompts the user to enter an integer representing number os seconds.\nYour application should print the equivalent hours, minutes, and seconds in this format: hours:minutes:seconds\nRun examples:\nEnter the number of seconds: 3661\n1:1:1\n\nEnter number of seconds: 8274\n2:17:54\n\nHINTS: There are 3600 seconds in one hour. Use modulus to calculate minutes and seconds left.\nadapted from Rick Mercer’s slides"
+    "text": "Practice\nWrite an application (HoursMinutesSeconds.java) that prompts the user to enter an integer representing number os seconds.\nYour application should print the equivalent hours, minutes, and seconds in this format: hours:minutes:seconds\nRun examples:\nEnter the number of seconds: 3661\n1:1:1\n\nEnter number of seconds: 8274\n2:17:54\n\nHINTS: There are 3600 seconds in one hour. Use modulus to calculate minutes and seconds left.\nadapted from Rick Mercer’s slides"
   },
   {
     "objectID": "slides-01-02.html#solution-4",
