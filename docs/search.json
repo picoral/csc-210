@@ -1082,7 +1082,7 @@
     "href": "slides-01-02.html#scanner",
     "title": "Intro to Java",
     "section": "Scanner",
-    "text": "Scanner\nLet’s import the Scanner package from Java utils and use it to get user input.\nimport java.util.Scanner;\nHere’s the call:\nint number = userInput.nextInt();\n\nAdd these to your solution.\nRemember to tell the user what to enter.\nWhat’s the difference between .println() and print()?"
+    "text": "Scanner\nLet’s import the Scanner package from Java utils and use it to get user input.\nimport java.util.Scanner;\nHere’s the call:\nScanner keyboardScanner = new Scanner(System.in);\nint number = keyboardScanner.nextInt();\n\nAdd these to your solution.\nRemember to tell the user what to enter.\nWhat’s the difference between .println() and print()?"
   },
   {
     "objectID": "slides-01-02.html#solution",

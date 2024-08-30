@@ -216,7 +216,8 @@ import java.util.Scanner;
 Here's the call:
 
 ```{java}
-int number = userInput.nextInt();
+Scanner keyboardScanner = new Scanner(System.in);
+int number = keyboardScanner.nextInt();
 ```
 
 * Add these to your solution. 
