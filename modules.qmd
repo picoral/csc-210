@@ -51,7 +51,7 @@ Optional:
 * [Intro to Java](slides-01-02.html)
 * [Java Objects](slides-01-03.html)
 
-During lab sessions, TAs will go over these slides:
+During lab sessions (Sept 04 to Sept 09), TAs will go over these slides:
 
 * [Lab 01 slides](lab01-slides.html)
 
