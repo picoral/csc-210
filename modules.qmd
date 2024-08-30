@@ -51,6 +51,10 @@ Optional:
 * [Intro to Java](slides-01-02.html)
 * [Java Objects](slides-01-03.html)
 
+During lab sessions, TAs will go over these slides:
+
+* [Lab 01 slides](lab01-slides.html)
+
 ## Assignments
 
 * [Instructions for Lab 01](short-assignment-01.html) -- Deadline: `r data %>% filter(Assignment == "SA1") %>%  select(Deadline)` -- Monday, 11:30pm
