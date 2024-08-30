@@ -355,11 +355,13 @@ public class HoursMinutesSeconds {
 
 ## Submit solution to gradescope
 
-Submit your solution Programming Problem 01 [Programming Problem 01 on gradescope](https://www.gradescope.com/courses/839822/assignments/4847547)
+Submit your `HoursMinutesSeconds.java` file to the  [Programming Problem 01 on gradescope](https://www.gradescope.com/courses/839822/assignments/4847547)
+
+Remember to add the package info at the top of your file:
 
 `package com.gradescope.hms;`
 
-Output needs to match exactly what is expect.
+Output needs to match exactly what is expected.
 
 The message to the user (for input) should be `"Enter number of seconds: "` exactly (with the space after : and no line break)
 

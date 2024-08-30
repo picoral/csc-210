@@ -1859,7 +1859,7 @@
     "href": "slides-01-02.html#submit-solution-to-gradescope",
     "title": "Intro to Java",
     "section": "Submit solution to gradescope",
-    "text": "Submit solution to gradescope\nSubmit your solution Programming Problem 01 Programming Problem 01 on gradescope\npackage com.gradescope.hms;\nOutput needs to match exactly what is expect.\nThe message to the user (for input) should be \"Enter number of seconds: \" exactly (with the space after : and no line break)"
+    "text": "Submit solution to gradescope\nSubmit your HoursMinutesSeconds.java file to the Programming Problem 01 on gradescope\nRemember to add the package info at the top of your file:\npackage com.gradescope.hms;\nOutput needs to match exactly what is expected.\nThe message to the user (for input) should be \"Enter number of seconds: \" exactly (with the space after : and no line break)"
   },
   {
     "objectID": "short-assignment-01.html#file-setup",
