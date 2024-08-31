@@ -127,11 +127,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#pa1-gradenator" id="toc-pa1-gradenator" class="nav-link active" data-scroll-target="#pa1-gradenator">PA1-Gradenator</a>
   <ul class="collapse">
   <li><a href="#input-file" id="toc-input-file" class="nav-link" data-scroll-target="#input-file">Input File</a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
+  <li><a href="#submitting-your-solution" id="toc-submitting-your-solution" class="nav-link" data-scroll-target="#submitting-your-solution">Submitting your solution</a></li>
   <li><a href="#testing-your-program" id="toc-testing-your-program" class="nav-link" data-scroll-target="#testing-your-program">Testing your program</a></li>
   <li><a href="#more-than-one-revision" id="toc-more-than-one-revision" class="nav-link" data-scroll-target="#more-than-one-revision">More than one revision</a></li>
   <li><a href="#decomposition-ideas" id="toc-decomposition-ideas" class="nav-link" data-scroll-target="#decomposition-ideas">Decomposition Ideas</a></li>
-  <li><a href="#grading-criteria" id="toc-grading-criteria" class="nav-link" data-scroll-target="#grading-criteria">Grading Criteria</a></li>
   </ul></li>
   <li><a href="#decomposition" id="toc-decomposition" class="nav-link" data-scroll-target="#decomposition">Decomposition</a></li>
   <li><a href="#code-clarity" id="toc-code-clarity" class="nav-link" data-scroll-target="#code-clarity">Code Clarity</a></li>
@@ -189,22 +188,22 @@ Note that if the input percentages do not add up 100%, then the total grade will
 <p>You should use the exact syntax above to round all output to one digit after the decimal. If you want to print a percent sign in a <code>System.out.format</code> statement you will need to escape it. You can escape it by writing two percentage signs in a row <code>%%</code>.</p>
 <p>Error checking: Your PA1 program can assume that all grading input follows the format described. Any input that does not follow the input format can result in undefined behavior.</p>
 </section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
-<ol type="1">
-<li><p>Use the assignment URL <a href="https://classroom.github.com/a/ByuQTKIB" class="uri">https://classroom.github.com/a/ByuQTKIB</a> to set up a github repository. And then opent that repository.</p></li>
-<li><p>Commit to submit your program for autograding as many times as you would like. 80% of the points for each programming assignment for PA1-PA7 are autograded.</p></li>
-</ol>
+<section id="submitting-your-solution" class="level2">
+<h2 class="anchored" data-anchor-id="submitting-your-solution">Submitting your solution</h2>
+<p>Make sure your file has the correct package info at the top:</p>
+<p><code>package com.gradescope.gradenator;</code></p>
+<p>Submit your <code>Gradenator.java</code> file to <a href="https://www.gradescope.com/courses/839822/assignments/4858056">Gradescope</a></p>
 </section>
 <section id="testing-your-program" class="level2">
 <h2 class="anchored" data-anchor-id="testing-your-program">Testing your program</h2>
 <p>If your program cannot compile and run, then you should feel very uncomfortable. Experienced programmers write a little bit of new functionality and then quickly compile and run it. When you ask CSC 210 staff questions about your program, we will want to see that it compiles and runs. Comment out new stuff you have added until it compiles and runs. Show us what compiles and runs, and then add the one small piece that breaks it.</p>
-<p>There are two main advantages to frequent “commits and pushes” to github:</p>
+<p>The CSC 210 staff can look at your code remotely on gradescope to help you with questions.</p>
 <ul>
-<li>The CSC 210 staff can look at your code remotely to help you with questions.</li>
+<li><p><a href="files/inputFile1.txt">inputFile1.txt</a></p></li>
+<li><p><a href="files/expectedOutput1.txt">expectedOutput1.txt</a></p></li>
+<li><p><a href="files/inputFile2.txt">inputFile2.txt</a></p></li>
+<li><p><a href="files/expectedOutput2.txt">expectedOutput2.txt</a></p></li>
 </ul>
-<p>We recommend you do a commit every time you add a small piece and your program compiles and run. We also recommend you submit your code to Gradescope (which automatically runs test cases whenever you submit) at least once a day to see where you stand with the grading script and the public test cases.</p>
-<p><code>System.out.println</code> is your friend. It can help you figure out what the value of variables are at various points in your program.</p>
 </section>
 <section id="more-than-one-revision" class="level2">
 <h2 class="anchored" data-anchor-id="more-than-one-revision">More than one revision</h2>
@@ -215,7 +214,8 @@ Note that if the input percentages do not add up 100%, then the total grade will
 <p>Here are some Java classes and methods that might be helpful when working on this assignment. We recommend you lookup online examples of how to use these and what their parameters and return values are):</p>
 <ul>
 <li><code>System.out.println()</code></li>
-<li><code>new File("PublicTestCases/inputReal1.in")</code></li>
+<li><code>System.out.print()</code></li>
+<li><code>new File("inputFile1.txt")</code></li>
 <li><code>new Scanner(System.in)</code>
 <ul>
 <li><code>hasNextLine()</code></li>
@@ -232,16 +232,11 @@ Note that if the input percentages do not add up 100%, then the total grade will
 <li>Iterating over an array of strings, <a href="https://www.guru99.com/foreach-loop-java.html" class="uri">https://www.guru99.com/foreach-loop-java.html</a></li>
 </ul>
 </section>
-<section id="grading-criteria" class="level2">
-<h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
-<p>Half of the PA1 grade will be correctness. For this assignment, if your program works for all of the test cases in <code>PublicTestCases/</code>, then you will earn all of the correctness points. Any time you submit to gradescope, it will tell you how many of the 50 points you have earned.</p>
-<p>The other half of the PA1 grade will be your decomposition and code clarity.</p>
-</section>
 </section>
 <section id="decomposition" class="level1">
 <h1>Decomposition</h1>
 <ul>
-<li><p>Should just use <code>static</code> methods in the single <code>PA1Main</code> class.</p></li>
+<li><p>Should just use <code>static</code> methods in the single <code>Gradenator</code> class.</p></li>
 <li><p>Use a single file. This should be a small program (&lt;200 lines).</p></li>
 <li><p>Each <code>static</code> method should be less than 30 lines.</p></li>
 <li><p>Make things as simple as possible.</p>
@@ -258,10 +253,7 @@ Note that if the input percentages do not add up 100%, then the total grade will
 <li><p>YOU should be able to read, understand, and explain your own code a couple days after you wrote it.</p></li>
 <li><p>The file header should include instructions on how someone would use this program.</p></li>
 <li><p>Use meaningful variable names. Loop iterators can be simple (<code>i</code> for integers, <code>s</code> for strings, <code>n</code> for numbers, etc.). Otherwise you should avoid single letter variable names.</p></li>
-<li><p>The clearest code examples will be anonymously shown in class.</p></li>
-<li><p>The most obfuscated code examples will be anonymously shown in class with suggestions for improvement.</p></li>
 </ul>
-<p>The coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine.</p>
 <p>Write your own code. We will be using a tool that finds overly similar code. Do not look at other students’ code. Do not let other students look at your code or talk in detail about how to solve this programming project.</p>
 
 
