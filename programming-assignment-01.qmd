@@ -86,14 +86,14 @@ Error checking:
 Your PA1 program can assume that all grading input follows the format described. Any input that 
 does not follow the input format can result in undefined behavior.
 
-## Getting Started
+## Submitting your solution
 
-1. Use the assignment URL <https://classroom.github.com/a/ByuQTKIB> to set 
-up a github repository.  And then opent that repository.
+Make sure your file has the correct package info at the top:
 
-2. Commit to submit your program for autograding as many times as you would like.
-   80% of the points for each programming assignment for PA1-PA7 are autograded.
+`package com.gradescope.gradenator;`
 
+
+Submit your `Gradenator.java` file to [Gradescope](https://www.gradescope.com/courses/839822/assignments/4858056)
 
 ## Testing your program
 
@@ -104,18 +104,13 @@ about your program, we will want to see that it compiles and runs.  Comment
 out new stuff you have added until it compiles and runs.  Show us what compiles 
 and runs, and then add the one small piece that breaks it.
 
-There are two main advantages to frequent "commits and pushes" to github:
+The CSC 210 staff can look at your code remotely on gradescope to help you with questions.
 
- * The CSC 210 staff can look at your code remotely to help you with questions.
+* [inputFile1.txt](files/inputFile1.txt)
+* [expectedOutput1.txt](files/expectedOutput1.txt)
 
-We recommend you do a commit every time you add a small piece and your
-program compiles and run.  We also recommend you submit your code to Gradescope
-(which automatically runs test cases whenever you submit) at least once 
-a day to see where you stand with the grading script and the public
-test cases.
-
-`System.out.println` is your friend.  It can help you figure out what 
-the value of variables are at various points in your program.
+* [inputFile2.txt](files/inputFile2.txt)
+* [expectedOutput2.txt](files/expectedOutput2.txt)
 
 
 ## More than one revision
@@ -135,7 +130,8 @@ working on this assignment.  We recommend you lookup online examples
 of how to use these and what their parameters and return values are):
 
 * `System.out.println()`
-* `new File("PublicTestCases/inputReal1.in")`
+* `System.out.print()`
+* `new File("inputFile1.txt")`
 * `new Scanner(System.in)`
   * `hasNextLine()`
   * `nextLine()`
@@ -149,18 +145,10 @@ of how to use these and what their parameters and return values are):
   <https://www.guru99.com/foreach-loop-java.html>
 
 
-## Grading Criteria
-
-Half of the PA1 grade will be correctness.  For this assignment, if your
-program works for all of the test cases in `PublicTestCases/`, then you will
-earn all of the correctness points.  Any time you submit to gradescope, it will
-tell you how many of the 50 points you have earned.
-
-The other half of the PA1 grade will be your decomposition and code clarity.
 
 # Decomposition
 
-* Should just use `static` methods in the single `PA1Main` class.
+* Should just use `static` methods in the single `Gradenator` class.
 
 * Use a single file.  This should be a small program (<200 lines).
 
@@ -186,15 +174,6 @@ use this program.
 be simple (`i` for integers, `s` for strings, `n` for numbers, etc.).
 Otherwise you should avoid single letter variable names.
 
-* The clearest code examples will be anonymously shown in class.
-
-* The most obfuscated code examples will be anonymously shown in class
-with suggestions for improvement.
-
-
-The coding style in terms of spacing, etc. should be done automatically
-every time you save in Eclipse.  As long as you stick with those defaults,
-the syntax style should be fine.
 
 Write your own code.  We will be using a tool that finds overly similar code.
 Do not look at other students' code.  Do not let other students look at your code 
