@@ -485,6 +485,10 @@ Leap years are those that are either:
 * divisible by 4 and not 100
 * divisible by 400
 
+Submit a class called `LeapYear` to [gradescope](https://www.gradescope.com/courses/839822/assignments/4870190) with the following public static method:
+
+* `isLeap(int year)` returns either `"Leap Year"` or `"Regular Year"`
+
 ## Solution 1
 
 ```{java}

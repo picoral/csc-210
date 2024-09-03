@@ -1131,7 +1131,7 @@
     "href": "slides-01-02.html#practice-2",
     "title": "Intro to Java",
     "section": "Practice",
-    "text": "Practice\nWrite a Java application to check if a year is leap or regular\nLeap years are those that are either:\n\ndivisible by 4 and not 100\ndivisible by 400"
+    "text": "Practice\nWrite a Java application to check if a year is leap or regular\nLeap years are those that are either:\n\ndivisible by 4 and not 100\ndivisible by 400\n\nSubmit a class called LeapYear to gradescope with the following public static method:\n\nisLeap(int year) returns either \"Leap Year\" or \"Regular Year\""
   },
   {
     "objectID": "slides-01-02.html#solution-1-1",
