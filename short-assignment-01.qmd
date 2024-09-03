@@ -38,4 +38,4 @@ Enter file name: inputFile1.txt
 
 Add the package name to the top of your file, so gradescope can find the compiled binary file:
 
-`package com.gradescope.filesum.tests;`
+`package com.gradescope.filesum;`

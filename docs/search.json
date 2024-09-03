@@ -641,7 +641,7 @@
     "href": "short-assignment-01.html",
     "title": "Lab 01",
     "section": "",
-    "text": "In today’s lab session we will practice using Scanner to take in user input from the keyboard and to read text files.\nGiven a text file that contains multiple lines with integers separated by space, your java application is to sum all integers and print out the result.\nFor example, for the following text file:\ninputFile1.txt\n3 3 3\n50 40\nYour application should print out 99.\nFor the file name to read, prompt the user to type a file name and read the keyboard entry. The message you should print to the user is Enter file name: – note the space after : and make sure to not print a line break after the space.\nExample run:\nEnter file name: inputFile1.txt\n99\n\n\n\nAdd the package name to the top of your file, so gradescope can find the compiled binary file:\npackage com.gradescope.filesum.tests;"
+    "text": "In today’s lab session we will practice using Scanner to take in user input from the keyboard and to read text files.\nGiven a text file that contains multiple lines with integers separated by space, your java application is to sum all integers and print out the result.\nFor example, for the following text file:\ninputFile1.txt\n3 3 3\n50 40\nYour application should print out 99.\nFor the file name to read, prompt the user to type a file name and read the keyboard entry. The message you should print to the user is Enter file name: – note the space after : and make sure to not print a line break after the space.\nExample run:\nEnter file name: inputFile1.txt\n99\n\n\n\nAdd the package name to the top of your file, so gradescope can find the compiled binary file:\npackage com.gradescope.filesum;"
   },
   {
     "objectID": "short-assignment-01.html#introduction",
@@ -1866,7 +1866,7 @@
     "href": "short-assignment-01.html#file-setup",
     "title": "Lab 01",
     "section": "",
-    "text": "Add the package name to the top of your file, so gradescope can find the compiled binary file:\npackage com.gradescope.filesum.tests;"
+    "text": "Add the package name to the top of your file, so gradescope can find the compiled binary file:\npackage com.gradescope.filesum;"
   },
   {
     "objectID": "lab01-slides.html#scanner-class",
