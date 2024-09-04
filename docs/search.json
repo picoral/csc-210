@@ -1951,5 +1951,12 @@
     "title": "Programming Assignment 01",
     "section": "Submitting your solution",
     "text": "Submitting your solution\nMake sure your file has the correct package info at the top:\npackage com.gradescope.gradenator;\nSubmit your Gradenator.java file to Gradescope"
+  },
+  {
+    "objectID": "slides-01-02.html#package",
+    "href": "slides-01-02.html#package",
+    "title": "Intro to Java",
+    "section": "Package",
+    "text": "Package\npackage com.gradescope.leapyear;"
   }
 ]

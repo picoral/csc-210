@@ -489,6 +489,10 @@ Submit a class called `LeapYear` to [gradescope](https://www.gradescope.com/cour
 
 * `isLeap(int year)` returns either `"Leap Year"` or `"Regular Year"`
 
+## Package
+
+`package com.gradescope.leapyear;`
+
 ## Solution 1
 
 ```{java}
