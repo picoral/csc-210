@@ -32,6 +32,8 @@ Each line of the input file should be in the following format:
   <number> <number> ...; <string with no semicolons>; <number>% 
 ```
   
+Prompt the user by printing `"File name?"` with a line break.
+  
 Specifically one or more numbers in the inclusive range 0 to 100 [0,100] 
 separated by one or more spaces, a semicolon,  a string with any characters 
 except a semicolon, a semicolon, and a number in the inclusive range 0 to 100 
