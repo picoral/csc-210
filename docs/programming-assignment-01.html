@@ -176,8 +176,8 @@ ul.task-list li input[type="checkbox"] {
 <p>An overall grade will be calculated by averaging the grades listed at the beginning of each line (e.g.&nbsp;avg(90 60 80) ==&gt; 76.67) and then computing a total grade based on the percentages indicated on each line (e.g.&nbsp;(0.20)80 + (0.25)76.67 ==&gt; 35.17, where (0.20)80 is another way to write 0.20 times 80).<br>
 Note that if the input percentages do not add up 100%, then the total grade will not be out of 100%. In the example above the best possible grade would be 20% + 25% ==&gt; 45%.</p>
 <p>The output will be the average grade per line and a total line. Example output:</p>
-<pre><code>  final, 20.0%, 80.0
-  programming assignments, 25.0%, 76.6
+<pre><code>  final; 20.0%; avg=80.0
+  programming assignments; 25.0%; avg=76.6
   TOTAL = 35.1% out of 45.0%</code></pre>
 <p>Numbers representing discreet values should be stored as <code>int</code>. Numbers representing continuous values should be stored as <code>double</code>.</p>
 <p>Values of type <code>double</code> are printed with many digits after the decimal place by default but this does not look very good and causes grading problems due to round-off differences. Therefore, to print a smaller number of digits we will be using <code>System.out.format</code>.</p>
