@@ -64,7 +64,47 @@ Note that the main function is always defines with an array of `String`:
 
 `public static void main(String[] args) ...`
 
-Create a class to print all the arguments in `args`
+Create a class with a main method that prints all the arguments in `args`
+
+## Manipulating arrays -- problem
+
+Given an array of size N and also an integer K, how to calculate the maximum sum of K consecutive elements in the array? 
+
+![](images/sliding-window-1.png)
+
+How should we approach this problem?
+
+## Sliding window technique
+
+Get initial `sum` of array of size K, then for following sub-arrays subtract the previous number (first number outside the window to the left) and add next number (last number inside the window to the right)
+
+![](images/sliding-window-2.png)
+## Max sum of consecutive numbers in array
+
+Given an array of size N and an integer K, write a Java application to calculate the maximum sum of K consecutive elements in the array.
+
+Test cases:
+
+```{java}
+public static void main(String[] args) {
+		int[] myNumbers = {10,2,-3,4,3};
+		System.out.println(maxConsecSum(myNumbers, 1)); // 10
+		System.out.println(maxConsecSum(myNumbers, 2)); // 12
+		System.out.println(maxConsecSum(myNumbers, 3)); // 9
+		System.out.println(maxConsecSum(myNumbers, 4)); // 13
+		System.out.println(maxConsecSum(myNumbers, 5)); // 16
+		
+		int[] otherNumbers = {8, 1, 3, 8, 2};
+		System.out.println(maxConsecSum(otherNumbers, 2));  // 11
+		System.out.println(maxConsecSum(otherNumbers, 3));  // 13
+		
+		int[] moreNumbers = {8, 1, 3, 7, 3, 2, 4, 10, -5, 4};
+		System.out.println(maxConsecSum(moreNumbers, 2)); // 14
+		System.out.println(maxConsecSum(moreNumbers, 5)); // 26
+		
+	}
+```
+
 
 ## For loops -- calculate Factorial
 
