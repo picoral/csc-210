@@ -137,65 +137,63 @@ Students wishing to contract this course for Honors Credit should e-mail me to s
 
 # Scheduled Topics/Activities
 
-**Week 1** `r schedule %>% filter(week == 1) %>% pull(dates)`: Course learning objectives and Java as a second programming language
+**Week 1 and 2** `r schedule %>% filter(week == 1) %>% pull(dates)`: Course learning objectives and Java as a second programming language
 
 Labor Day - no classes	September 2, 2024
 
-**Week 2** `r schedule %>% filter(week == 2) %>% pull(dates)`: Java collections: arrays, lists, sets, and hashmaps
+**Week 3** `r schedule %>% filter(week == 3) %>% pull(dates)`: Java collections: arrays, lists, sets, and hashmaps
 
 * PA1 due Wednesday, `r data %>% filter(Assignment == "PA1") %>%  select(Deadline)` at 11:30pm
 
-**Week 3** `r schedule %>% filter(week == 3) %>% pull(dates)`: Algorithm patterns: exhaustive search and recursive backtracking
+**Week 4** `r schedule %>% filter(week == 4) %>% pull(dates)`: Algorithm patterns: exhaustive search and recursive backtracking
 
 * PA2 due Wednesday, `r data %>% filter(Assignment == "PA2") %>%  select(Deadline)` at 11:30pm
 
-**Week 4** `r schedule %>% filter(week == 4) %>% pull(dates)`: classes, interfaces, trees and tree traversals, SAT problem
+**Week 5** `r schedule %>% filter(week == 5) %>% pull(dates)`: classes, interfaces, trees and tree traversals, SAT problem
 
 * PA3 due Wednesday, `r data %>% filter(Assignment == "PA3") %>%  select(Deadline)` at 11:30pm
 
-**Week 5** `r schedule %>% filter(week == 5) %>% pull(dates)`: Midterm on Wednesday
+**Week 6** `r schedule %>% filter(week == 6) %>% pull(dates)`: Midterm on Wednesday
 
-**Week 6** `r schedule %>% filter(week == 6) %>% pull(dates)`: heuristics, graph representation, graph interface, graph traversal
+**Week 7** `r schedule %>% filter(week == 7) %>% pull(dates)`: heuristics, graph representation, graph interface, graph traversal
 
 * PA4 due Wednesday, `r data %>% filter(Assignment == "PA4") %>%  select(Deadline)` at 11:30pm
 
-**Week 7** `r schedule %>% filter(week == 7) %>% pull(dates)`: inheritance, class hierarchies, debugging, using data to encode
+**Week 8** `r schedule %>% filter(week == 8) %>% pull(dates)`: inheritance, class hierarchies, debugging, using data to encode
 
 * PA5 due Wednesday, `r data %>% filter(Assignment == "PA5") %>%  select(Deadline)` at 11:30pm
 
-**Week 8** `r schedule %>% filter(week == 8) %>% pull(dates)`: interfaces, Object base class, enumerated types
+**Week 9** `r schedule %>% filter(week == 9) %>% pull(dates)`: interfaces, Object base class, enumerated types
 
 * Class hierarchy diagram for PA6 due Wednesday by 11:30pm
 
-**Week 9** `r schedule %>% filter(week == 9) %>% pull(dates)`: hashmap implementation, composing data structures, generics
+**Week 10** `r schedule %>% filter(week == 10) %>% pull(dates)`: hashmap implementation, composing data structures, generics
 
 * PA6 due Wednesday, `r data %>% filter(Assignment == "PA6") %>%  select(Deadline)` at 11:30pm
 
-**Week 10** `r schedule %>% filter(week == 10) %>% pull(dates)`: GUI Output
+**Week 11** `r schedule %>% filter(week == 11) %>% pull(dates)`: GUI Output
 
 * PA7 due Wednesday, `r data %>% filter(Assignment == "PA7") %>%  select(Deadline)` at 11:30pm
 
-**Week 11** `r schedule %>% filter(week == 11) %>% pull(dates)`: Wednesday Midterm 2
+**Week 12** `r schedule %>% filter(week == 12) %>% pull(dates)`: Wednesday Midterm 2
 
 Veterans Day - no classes	November 11, 2024
 
-**Week 12** `r schedule %>% filter(week == 12) %>% pull(dates)`: GUI Input, Event-driven programming, and MVC
+**Week 13** `r schedule %>% filter(week == 13) %>% pull(dates)`: GUI Input, Event-driven programming, and MVC
 
 * PA8 due Wednesday, `r data %>% filter(Assignment == "PA8") %>%  select(Deadline)` at 11:30pm
 
-**Week 13** `r schedule %>% filter(week == 13) %>% pull(dates)`: Decomposition: top down and bottom up
+**Week 14** `r schedule %>% filter(week == 14) %>% pull(dates)`: Decomposition: top down and bottom up
 
 * PA9 due Wednesday, `r data %>% filter(Assignment == "PA9") %>%  select(Deadline)` at 11:30pm
 
-**Week 14** `r schedule %>% filter(week == 14) %>% pull(dates)`7: Lambda functions
-
 Thanksgiving recess	November 28-December 1, 2024
 
-**Week 15** `r schedule %>% filter(week == 15) %>% pull(dates)`: Java vs. Python reprise and review for final exam
+**Week 15** `r schedule %>% filter(week == 15) %>% pull(dates)`7: Lambda functions, 
 
 * PA10 due Wednesday, `r data %>% filter(Assignment == "PA10") %>%  select(Deadline)` at 11:30pm
 
-**Week 16** `r schedule %>% filter(week == 16) %>% pull(dates)`: top-rated PA10 submission demos
+**Week 16** `r schedule %>% filter(week == 16) %>% pull(dates)`: Java vs. Python reprise and review for final exam
 
 Last day of classes and laboratory sessions	December 11, 2024
 

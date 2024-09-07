@@ -25,7 +25,7 @@ All exams are on paper.
 * [Java Programming Cheatsheet](https://introcs.cs.princeton.edu/java/11cheatsheet/)
 
 
-# Week 01
+# Week 01 and 02
 
 `r schedule %>% filter(week == 1) %>% pull(dates)`
 
@@ -60,11 +60,11 @@ During lab sessions (Sept 04 to Sept 09), TAs will go over these slides:
 * [Instructions for Lab 01](short-assignment-01.html) -- Deadline: `r data %>% filter(Assignment == "SA1") %>%  select(Deadline)` -- Monday, 11:30pm
 * [Instructions for PA1](programming-assignment-01.html) -- Deadline: `r data %>% filter(Assignment == "PA1") %>%  select(Deadline)` -- Wednesday, 11:30pm
 
-# Week 02
+# Week 03
 
-`r schedule %>% filter(week == 2) %>% pull(dates)`
+`r schedule %>% filter(week == 3) %>% pull(dates)`
 
-Topic: `r schedule %>% filter(week == 2) %>% pull(topic)`
+Topic: `r schedule %>% filter(week == 3) %>% pull(topic)`
 
 ## Readings
 
@@ -88,11 +88,11 @@ Optional:
 
 * [Instructions for PA2](programming-assignment-02.html) -- Deadline: `r data %>% filter(Assignment == "PA2") %>%  select(Deadline)` -- Wednesday, 11:30pm
 
-# Week 03
+# Week 04
 
-`r schedule %>% filter(week == 3) %>% pull(dates)`
+`r schedule %>% filter(week == 4) %>% pull(dates)`
 
-Topic: `r schedule %>% filter(week == 3) %>% pull(topic)`
+Topic: `r schedule %>% filter(week == 4) %>% pull(topic)`
 
 ## Readings
 
@@ -109,11 +109,11 @@ Optional:
 
 * [Instructions for PA3](programming-assignment-03.html) -- Deadline: `r data %>% filter(Assignment == "PA3") %>%  select(Deadline)` -- Wednesday, 11:30pm
 
-# Week 04
+# Week 05
 
-`r schedule %>% filter(week == 4) %>% pull(dates)`
+`r schedule %>% filter(week == 5) %>% pull(dates)`
 
-Topic: `r schedule %>% filter(week == 4) %>% pull(topic)`
+Topic: `r schedule %>% filter(week == 5) %>% pull(topic)`
 
 ## Readings
 
@@ -127,11 +127,11 @@ Required:
 
 ## Assignments
 
-# Week 05
+# Week 06
 
-`r schedule %>% filter(week == 5) %>% pull(dates)`
+`r schedule %>% filter(week == 6) %>% pull(dates)`
 
-Topic: `r schedule %>% filter(week == 5) %>% pull(topic)`
+Topic: `r schedule %>% filter(week == 6) %>% pull(topic)`
 
 ## Readings
 
@@ -139,11 +139,11 @@ Topic: `r schedule %>% filter(week == 5) %>% pull(topic)`
 
 ## Assignments
 
-# Week 06
+# Week 07
 
-`r schedule %>% filter(week == 6) %>% pull(dates)`
+`r schedule %>% filter(week == 7) %>% pull(dates)`
 
-Topic: `r schedule %>% filter(week == 6) %>% pull(topic)`
+Topic: `r schedule %>% filter(week == 7) %>% pull(topic)`
 
 ## Readings
 
