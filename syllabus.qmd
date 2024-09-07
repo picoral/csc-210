@@ -151,9 +151,9 @@ Labor Day - no classes	September 2, 2024
 
 * PA3 due Wednesday, `r data %>% filter(Assignment == "PA3") %>%  select(Deadline)` at 11:30pm
 
-**Week 5** `r schedule %>% filter(week == 6) %>% pull(dates)`: Midterm on Wednesday
+**Week 5** `r schedule %>% filter(week == 5) %>% pull(dates)`: Midterm on Wednesday
 
-**Week 6**  `r schedule %>% filter(week == 5) %>% pull(dates)`: classes, interfaces, trees and tree traversals, SAT problem
+**Week 6**  `r schedule %>% filter(week == 6) %>% pull(dates)`: classes, interfaces, trees and tree traversals, SAT problem
 
 * PA4 due Wednesday, `r data %>% filter(Assignment == "PA4") %>%  select(Deadline)` at 11:30pm
 
@@ -173,9 +173,9 @@ Labor Day - no classes	September 2, 2024
 
 * PA7 due Wednesday, `r data %>% filter(Assignment == "PA7") %>%  select(Deadline)` at 11:30pm
 
-**Week 11** `r schedule %>% filter(week == 12) %>% pull(dates)`: Wednesday Midterm 2
+**Week 11** `r schedule %>% filter(week == 11) %>% pull(dates)`: Wednesday Midterm 2
 
-**Week 12** `r schedule %>% filter(week == 11) %>% pull(dates)`: GUI Output
+**Week 12** `r schedule %>% filter(week == 12) %>% pull(dates)`: GUI Output
 
 Veterans Day - no classes	November 11, 2024
 
