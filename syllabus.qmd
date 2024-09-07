@@ -143,7 +143,7 @@ Labor Day - no classes	September 2, 2024
 
 * PA1 due Wednesday, `r data %>% filter(Assignment == "PA1") %>%  select(Deadline)` at 11:30pm
 
-**Week 3** `r schedule %>% filter(week == 3) %>% pull(dates)`: Java collections: arrays, lists, sets, and hashmaps and Algorithm patters: Sliding Window
+**Week 3** `r schedule %>% filter(week == 3) %>% pull(dates)`: Java collections: arrays, lists, sets, and hashmaps, and algorithm patterns: Sliding Window
 
 * PA2 due Wednesday, `r data %>% filter(Assignment == "PA2") %>%  select(Deadline)` at 11:30pm
 
