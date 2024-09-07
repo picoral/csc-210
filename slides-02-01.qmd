@@ -106,7 +106,7 @@ public static void main(String[] args) {
 	}
 ```
 
-## For loops -- Solution 1
+## For loops -- Solution
 
 ```{java}
 public class SlidingWindow {
