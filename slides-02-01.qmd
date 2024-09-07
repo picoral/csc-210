@@ -8,7 +8,7 @@ format:
 
 ## Java Array Object
 
--   A primitive variables store precisely one value:
+-   Primitive variables store precisely one value:
     -   a double stores one floating-point number
     -   an int stores one integer
 -   A reference variable stores a "reference" to an object that may store many values

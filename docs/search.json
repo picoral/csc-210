@@ -417,7 +417,7 @@
     "href": "slides-02-01.html#java-array-object",
     "title": "Arrays",
     "section": "Java Array Object",
-    "text": "Java Array Object\n\nA primitive variables store precisely one value:\n\na double stores one floating-point number\nan int stores one integer\n\nA reference variable stores a “reference” to an object that may store many values\nA Java array object stores a collection of elements\n\nEach element may be a reference to objects or primitive values\nWe access array elements with subscript notation []"
+    "text": "Java Array Object\n\nPrimitive variables store precisely one value:\n\na double stores one floating-point number\nan int stores one integer\n\nA reference variable stores a “reference” to an object that may store many values\nA Java array object stores a collection of elements\n\nEach element may be a reference to objects or primitive values\nWe access array elements with subscript notation []"
   },
   {
     "objectID": "slides-02-01.html#arrays",
