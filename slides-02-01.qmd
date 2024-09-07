@@ -79,7 +79,8 @@ How should we approach this problem?
 Get initial `sum` of array of size K, then for following sub-arrays subtract the previous number (first number outside the window to the left) and add next number (last number inside the window to the right)
 
 ![](images/sliding-window-2.png)
-## Max sum of consecutive numbers in array
+
+## Write for loops
 
 Given an array of size N and an integer K, write a Java application to calculate the maximum sum of K consecutive elements in the array.
 
@@ -105,8 +106,56 @@ public static void main(String[] args) {
 	}
 ```
 
+## For loops -- Solution 1
 
-## For loops -- calculate Factorial
+```{java}
+public class SlidingWindow {
+	
+	public static int maxConsecSum(int[] numbers, int k) {
+		// calculate the sum for the first window
+		int sum = 0;
+		for (int i = 0; i < k; i ++) {
+			sum += numbers[i];
+		}
+		
+		// make first window sum max
+		int maxSum = sum;
+		
+		// sliding window, start where the first window stopped
+		// add the current new number, subtract current - k
+		for (int i = k; i < numbers.length; i++) {
+			sum += numbers[i] - numbers[i-k];
+			// check if current sum is greater than what we have
+			if (maxSum < sum) maxSum = sum;
+		}
+		
+		return maxSum;
+		
+	}
+	
+	public static void main(String[] args) {
+		int[] myNumbers = {10,2,-3,4,3};
+		System.out.println(maxConsecSum(myNumbers, 1)); // 10
+		System.out.println(maxConsecSum(myNumbers, 2)); // 12
+		System.out.println(maxConsecSum(myNumbers, 3)); // 9
+		System.out.println(maxConsecSum(myNumbers, 4)); // 13
+		System.out.println(maxConsecSum(myNumbers, 5)); // 16
+		
+		int[] otherNumbers = {8, 1, 3, 8, 2};
+		System.out.println(maxConsecSum(otherNumbers, 2));  // 11
+		System.out.println(maxConsecSum(otherNumbers, 3));  // 13
+		
+		int[] moreNumbers = {8, 1, 3, 7, 3, 2, 4, 10, -5, 4};
+		System.out.println(maxConsecSum(moreNumbers, 2)); // 14
+		System.out.println(maxConsecSum(moreNumbers, 5)); // 26
+		
+	}
+
+}
+```
+
+
+## Calculate Factorial
 
 TASK: write Java code to calculate factorial of any integer `n` -- your `factorial(n)` method should return an array of integers of size `n` where which element represents the factorial of the index
 

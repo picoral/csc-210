@@ -1971,6 +1971,34 @@
     "href": "slides-02-01.html#sliding-window-technique",
     "title": "Arrays",
     "section": "Sliding window technique",
-    "text": "Sliding window technique\nGet initial sum of array of size K, then for following sub-arrays subtract the previous number (first number outside the window to the left) and add next number (last number inside the window to the right)\n ## Max sum of consecutive numbers in array\nGiven an array of size N and an integer K, write a Java application to calculate the maximum sum of K consecutive elements in the array.\nTest cases:\npublic static void main(String[] args) {\n        int[] myNumbers = {10,2,-3,4,3};\n        System.out.println(maxConsecSum(myNumbers, 1)); // 10\n        System.out.println(maxConsecSum(myNumbers, 2)); // 12\n        System.out.println(maxConsecSum(myNumbers, 3)); // 9\n        System.out.println(maxConsecSum(myNumbers, 4)); // 13\n        System.out.println(maxConsecSum(myNumbers, 5)); // 16\n        \n        int[] otherNumbers = {8, 1, 3, 8, 2};\n        System.out.println(maxConsecSum(otherNumbers, 2));  // 11\n        System.out.println(maxConsecSum(otherNumbers, 3));  // 13\n        \n        int[] moreNumbers = {8, 1, 3, 7, 3, 2, 4, 10, -5, 4};\n        System.out.println(maxConsecSum(moreNumbers, 2)); // 14\n        System.out.println(maxConsecSum(moreNumbers, 5)); // 26\n        \n    }"
+    "text": "Sliding window technique\nGet initial sum of array of size K, then for following sub-arrays subtract the previous number (first number outside the window to the left) and add next number (last number inside the window to the right)"
+  },
+  {
+    "objectID": "slides-02-01.html#for-loops-solution",
+    "href": "slides-02-01.html#for-loops-solution",
+    "title": "Arrays",
+    "section": "For loops – Solution",
+    "text": "For loops – Solution\npublic class SlidingWindow {\n    \n    public static int maxConsecSum(int[] numbers, int k) {\n        // calculate the sum for the first window\n        int sum = 0;\n        for (int i = 0; i &lt; k; i ++) {\n            sum += numbers[i];\n        }\n        \n        // make first window sum max\n        int maxSum = sum;\n        \n        // sliding window, start where the first window stopped\n        // add the current new number, subtract current - k\n        for (int i = k; i &lt; numbers.length; i++) {\n            sum += numbers[i] - numbers[i-k];\n            // check if current sum is greater than what we have\n            if (maxSum &lt; sum) maxSum = sum;\n        }\n        \n        return maxSum;\n        \n    }\n    \n    public static void main(String[] args) {\n        int[] myNumbers = {10,2,-3,4,3};\n        System.out.println(maxConsecSum(myNumbers, 1)); // 10\n        System.out.println(maxConsecSum(myNumbers, 2)); // 12\n        System.out.println(maxConsecSum(myNumbers, 3)); // 9\n        System.out.println(maxConsecSum(myNumbers, 4)); // 13\n        System.out.println(maxConsecSum(myNumbers, 5)); // 16\n        \n        int[] otherNumbers = {8, 1, 3, 8, 2};\n        System.out.println(maxConsecSum(otherNumbers, 2));  // 11\n        System.out.println(maxConsecSum(otherNumbers, 3));  // 13\n        \n        int[] moreNumbers = {8, 1, 3, 7, 3, 2, 4, 10, -5, 4};\n        System.out.println(maxConsecSum(moreNumbers, 2)); // 14\n        System.out.println(maxConsecSum(moreNumbers, 5)); // 26\n        \n    }\n\n}"
+  },
+  {
+    "objectID": "slides-02-01.html#calculate-factorial",
+    "href": "slides-02-01.html#calculate-factorial",
+    "title": "Arrays",
+    "section": "Calculate Factorial",
+    "text": "Calculate Factorial\nTASK: write Java code to calculate factorial of any integer n – your factorial(n) method should return an array of integers of size n where which element represents the factorial of the index\n\nFactorial is the product of all positive integers less than or equal to a given positive integer\nFactorial 5 is written 5!, meaning 1 × 2 × 3 × 4 × 5\nFactorial zero is defined as equal to 1"
+  },
+  {
+    "objectID": "slides-02-01.html#max-sum-of-consecutive-numbers-in-array-for-loops",
+    "href": "slides-02-01.html#max-sum-of-consecutive-numbers-in-array-for-loops",
+    "title": "Arrays",
+    "section": "Max sum of consecutive numbers in array (For loops)",
+    "text": "Max sum of consecutive numbers in array (For loops)\nGiven an array of size N and an integer K, write a Java application to calculate the maximum sum of K consecutive elements in the array.\nTest cases:\npublic static void main(String[] args) {\n        int[] myNumbers = {10,2,-3,4,3};\n        System.out.println(maxConsecSum(myNumbers, 1)); // 10\n        System.out.println(maxConsecSum(myNumbers, 2)); // 12\n        System.out.println(maxConsecSum(myNumbers, 3)); // 9\n        System.out.println(maxConsecSum(myNumbers, 4)); // 13\n        System.out.println(maxConsecSum(myNumbers, 5)); // 16\n        \n        int[] otherNumbers = {8, 1, 3, 8, 2};\n        System.out.println(maxConsecSum(otherNumbers, 2));  // 11\n        System.out.println(maxConsecSum(otherNumbers, 3));  // 13\n        \n        int[] moreNumbers = {8, 1, 3, 7, 3, 2, 4, 10, -5, 4};\n        System.out.println(maxConsecSum(moreNumbers, 2)); // 14\n        System.out.println(maxConsecSum(moreNumbers, 5)); // 26\n        \n    }"
+  },
+  {
+    "objectID": "slides-02-01.html#write-for-loops",
+    "href": "slides-02-01.html#write-for-loops",
+    "title": "Arrays",
+    "section": "Write for loops",
+    "text": "Write for loops\nGiven an array of size N and an integer K, write a Java application to calculate the maximum sum of K consecutive elements in the array.\nTest cases:\npublic static void main(String[] args) {\n        int[] myNumbers = {10,2,-3,4,3};\n        System.out.println(maxConsecSum(myNumbers, 1)); // 10\n        System.out.println(maxConsecSum(myNumbers, 2)); // 12\n        System.out.println(maxConsecSum(myNumbers, 3)); // 9\n        System.out.println(maxConsecSum(myNumbers, 4)); // 13\n        System.out.println(maxConsecSum(myNumbers, 5)); // 16\n        \n        int[] otherNumbers = {8, 1, 3, 8, 2};\n        System.out.println(maxConsecSum(otherNumbers, 2));  // 11\n        System.out.println(maxConsecSum(otherNumbers, 3));  // 13\n        \n        int[] moreNumbers = {8, 1, 3, 7, 3, 2, 4, 10, -5, 4};\n        System.out.println(maxConsecSum(moreNumbers, 2)); // 14\n        System.out.println(maxConsecSum(moreNumbers, 5)); // 26\n        \n    }"
   }
 ]
