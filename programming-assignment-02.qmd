@@ -130,7 +130,7 @@ Submit your `AirportInfo.java` file to [gradescope](https://www.gradescope.com/c
 Your methods should work with this main method:
 
 ```{java}
-	public static void main(String[] args) throws FileNotFoundException {
+public static void main(String[] args) throws FileNotFoundException {
 		
 		HashMap<String, String> destinations = getDestinations(args[0]);
 		HashMap<String, Integer> airportCount = getAirportCount(args[0]);
@@ -141,7 +141,7 @@ Your methods should work with this main method:
 		}
 		
 		if (args[1].equals("DEPARTURES")) {
-			System.out.println(getDestinations(destinations));
+			System.out.println(getDepartures(destinations));
 		}
 		
 		if (args[1].equals("LIMIT")) {
