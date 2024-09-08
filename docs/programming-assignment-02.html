@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -130,6 +164,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-assignment" id="toc-the-assignment" class="nav-link" data-scroll-target="#the-assignment">The Assignment</a></li>
   <li><a href="#input-and-output" id="toc-input-and-output" class="nav-link" data-scroll-target="#input-and-output">Input and Output</a></li>
   <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
+  <li><a href="#testing-your-code" id="toc-testing-your-code" class="nav-link" data-scroll-target="#testing-your-code">Testing your code</a></li>
   <li><a href="#decomposition-ideas" id="toc-decomposition-ideas" class="nav-link" data-scroll-target="#decomposition-ideas">Decomposition Ideas</a></li>
   <li><a href="#grading-criteria" id="toc-grading-criteria" class="nav-link" data-scroll-target="#grading-criteria">Grading Criteria</a></li>
   </ul></li>
@@ -178,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
 <p>For this project we will be using flight data that you can download from the following website: <a href="https://www.kaggle.com/open-flights/flight-route-database" class="uri">https://www.kaggle.com/open-flights/flight-route-database</a>. When you click the Data tab and then try to download the routes.csv file, you will be asked to create a kaggle account. The easiest way to do so is to create a kaggle account with your UA email by selecting the Google option under sign up with one click.</p>
 <p>Similarly to PA1, you will be taking an input file, but that will be done on the command line. However, the input will be slightly different as it is in csv format. You can read more about the input format on the kaggle description.</p>
 <p>The program should have the following usage:</p>
-<pre><code>    java PA2Main infile COMMAND optional</code></pre>
+<pre><code>    java AirportInfo infile COMMAND optional</code></pre>
 <p>In addition to the input file, the second command-line argument will be a command to run on the data from your input file. The commands consist of MAX, DEPARTURES and LIMIT.</p>
 <p>Each command will be most easily implemented with a HashMap. Therefore, your implementation will read in the csv file and be using one or more HashMaps.</p>
 <p><strong><em>MAX</em></strong> - This function prints the airport with the maximum number of total flights. The total flights includes both arriving and departing flights for each airport. In the case of ties, keep track of all airports with the maximum number of flights and output them alphabetically, see decomposition below for help.</p>
@@ -206,10 +241,36 @@ KZN - 3</code></pre>
 </section>
 <section id="getting-started" class="level2">
 <h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
-<p>The process for getting started will be very similar to what was done in PA1.</p>
-<ul>
-<li>There is a github assignment link on the class web page –&gt; resources link. Accept the assignment to have a github repository be created for you.</li>
-</ul>
+<p>The process for getting started will be very similar to what was done for the first programming assignment.</p>
+<p>Add the package information at the top of your <code>.java</code> file:</p>
+<p><code>package com.gradescope.airportinfo;</code></p>
+<p>Submit your <code>AirportInfo.java</code> file to <a href="https://www.gradescope.com/courses/839822/assignments/4915554">gradescope</a>.</p>
+</section>
+<section id="testing-your-code" class="level2">
+<h2 class="anchored" data-anchor-id="testing-your-code">Testing your code</h2>
+<p>Your methods should work with this main method:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="kw">throws</span> <span class="bu">FileNotFoundException</span> <span class="op">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">HashMap</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">String</span><span class="op">&gt;</span> destinations <span class="op">=</span> <span class="fu">getDestinations</span><span class="op">(</span>args<span class="op">[</span><span class="dv">0</span><span class="op">]);</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">HashMap</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">Integer</span><span class="op">&gt;</span> airportCount <span class="op">=</span> <span class="fu">getAirportCount</span><span class="op">(</span>args<span class="op">[</span><span class="dv">0</span><span class="op">]);</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>args<span class="op">[</span><span class="dv">1</span><span class="op">].</span><span class="fu">equals</span><span class="op">(</span><span class="st">"MAX"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>            <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="fu">getMax</span><span class="op">(</span>airportCount<span class="op">));</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>args<span class="op">[</span><span class="dv">1</span><span class="op">].</span><span class="fu">equals</span><span class="op">(</span><span class="st">"DEPARTURES"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>            <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="fu">getDestinations</span><span class="op">(</span>destinations<span class="op">));</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>args<span class="op">[</span><span class="dv">1</span><span class="op">].</span><span class="fu">equals</span><span class="op">(</span><span class="st">"LIMIT"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>            <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="fu">getLimits</span><span class="op">(</span><span class="bu">Integer</span><span class="op">.</span><span class="fu">valueOf</span><span class="op">(</span>args<span class="op">[</span><span class="dv">2</span><span class="op">]),</span> airportCount<span class="op">));</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="decomposition-ideas" class="level2">
 <h2 class="anchored" data-anchor-id="decomposition-ideas">Decomposition Ideas</h2>
@@ -221,12 +282,12 @@ KZN - 3</code></pre>
 </section>
 <section id="grading-criteria" class="level2">
 <h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
-<p>Half of the PA2 grade will be correctness. For this assignment, there will be some private test cases. Partial points will be given if just one or two of the commands is implemented and works on those test cases.</p>
-<p>The other half of the PA2 grade will be your decomposition and code clarity.</p>
+<p>A total of 80% of this assignment grade will be correctness. For this assignment, there will be some private test cases.</p>
+<p>The other 20% of your grade will be your decomposition and code clarity.</p>
 <p>Decomposition</p>
 <ul>
 <li>Should carefully select data structures that implement the required functionality. For example, if you avoid using HashMaps, it will probably result in more complicated code and thus points off.</li>
-<li>Should just use static methods in the single PA2Main class.</li>
+<li>Should just use static methods.</li>
 <li>Use a single file. This should be a small program (&lt;300 lines).</li>
 <li>Each static method should be less than 30 lines. This INCLUDES comments. It is easier to read a function if it can all fit on one screen.</li>
 <li>Make things as simple as possible.

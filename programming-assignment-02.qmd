@@ -49,7 +49,7 @@ You can read more about the input format on the kaggle description.
 
 The program should have the following usage:
 ```
-    java PA2Main infile COMMAND optional
+    java AirportInfo infile COMMAND optional
 ```
 In addition to the input file, the second command-line argument will be a 
 command to run on the data from your input file. The commands consist of 
@@ -116,10 +116,41 @@ KZN - 3
 
 ## Getting Started
 
-The process for getting started will be very similar to what was done in PA1.
+The process for getting started will be very similar to what was done for the first programming assignment.
 
-* There is a github assignment link on the class web page --> resources link.
-  Accept the assignment to have a github repository be created for you.
+Add the package information at the top of your `.java` file:
+
+`package com.gradescope.airportinfo;`
+
+Submit your `AirportInfo.java` file to [gradescope](https://www.gradescope.com/courses/839822/assignments/4915554).
+
+
+## Testing your code
+
+Your methods should work with this main method:
+
+```{java}
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		HashMap<String, String> destinations = getDestinations(args[0]);
+		HashMap<String, Integer> airportCount = getAirportCount(args[0]);
+		
+		
+		if (args[1].equals("MAX")) {
+			System.out.println(getMax(airportCount));
+		}
+		
+		if (args[1].equals("DEPARTURES")) {
+			System.out.println(getDestinations(destinations));
+		}
+		
+		if (args[1].equals("LIMIT")) {
+			System.out.println(getLimits(Integer.valueOf(args[2]), airportCount));
+		}
+		
+	
+	}
+```
 
 
 ## Decomposition Ideas
@@ -144,18 +175,17 @@ returned value.
 
 ## Grading Criteria
 
-Half of the PA2 grade will be correctness.  For this assignment, there
-will be some private test cases.  Partial points will be given if just
-one or two of the commands is implemented and works on those test cases.
+A total of 80% of this assignment grade will be correctness.  For this assignment, there
+will be some private test cases.  
 
-The other half of the PA2 grade will be your decomposition and code clarity.
+The other 20% of your grade will be your decomposition and code clarity.
 
 Decomposition
 
 * Should carefully select data structures that implement the 
   required functionality.  For example, if you avoid using HashMaps,
   it will probably result in more complicated code and thus points off.
-* Should just use static methods in the single PA2Main class.
+* Should just use static methods.
 * Use a single file.  This should be a small program (<300 lines).
 * Each static method should be less than 30 lines.  This INCLUDES
   comments.  It is easier to read a function if it can all fit on
