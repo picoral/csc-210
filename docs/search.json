@@ -1110,7 +1110,7 @@
     "href": "short-assignment-02.html",
     "title": "Lab 02",
     "section": "",
-    "text": "In this week’s lab, we will be practicing reading .csv files, and manipulating HashMaps in Java.\nWe will be working with data on the 2024 olympics.\nThe program should have the following usage:\n    java MedalInfo COMMAND optional\nThe commands consist of MAX, MIN and COUNTRY.\nEach command will be most easily implemented with a HashMap. Therefore, your implementation will read in the csv file and be using a HashMap based on the medallists.csv file Kaggle.\nMAX - This function prints the country name with the most medals. Here’s what the message should look like:\nUnited States had the most medals with a total of 330 medals.\nMIN - This function prints the country name with the least medals. Here’s what the message should look like:\nCyprus had the fewest medals with a total of 1 medal.\nCOUNTRY - The country function requires an additional string argument on the command line. This string is the name of a country. Here’s what the message should look like when the second string argument is \"Brazil\":\nBrazil had a total of 67 medals.\n\n\n\nYour methods should work with this main method:\npublic static void main(String[] args) throws FileNotFoundException {\n        HashMap&lt;String, Integer&gt; countryCount = getMedalCount(\"medallists.csv\");\n        \n        if (args[0].equals(\"MAX\")) {\n            System.out.println(getMax(countryCount));\n        }\n        \n        if (args[0].equals(\"MIN\")) {\n            System.out.println(getMin(countryCount));\n        }\n        \n        if (args[0].equals(\"COUNTRY\")) {\n            System.out.println(getCountry(countryCount, args[1]));\n        }\n        \n\n    }"
+    "text": "In this week’s lab, we will be practicing reading .csv files, and manipulating HashMaps in Java.\nWe will be working with data on the 2024 olympics.\nThe program should have the following usage:\n    java MedalInfo COMMAND optional\nThe commands consist of MAX, MIN and COUNTRY.\nEach command will be most easily implemented with a HashMap. Therefore, your implementation will read in the csv file and be using a HashMap based on the medallists.csv file Kaggle.\nMAX - This function prints the country name with the most medals. Here’s what the message should look like:\nUnited States had the most medals with a total of 330 medals.\nMIN - This function prints the country name with the least medals. Here’s what the message should look like:\nCyprus had the fewest medals with a total of 1 medal.\nCOUNTRY - The country function requires an additional string argument on the command line. This string is the name of a country. Here’s what the message should look like when the second string argument is \"Brazil\":\nBrazil had a total of 67 medals.\n\n\n\nYour methods should work with this main method:\npublic static void main(String[] args) throws FileNotFoundException {\n        HashMap&lt;String, Integer&gt; countryCount = getMedalCount(\"medallists.csv\");\n        \n        if (args[0].equals(\"MAX\")) {\n            System.out.println(getMax(countryCount));\n        }\n        \n        if (args[0].equals(\"MIN\")) {\n            System.out.println(getMin(countryCount));\n        }\n        \n        if (args[0].equals(\"COUNTRY\")) {\n            System.out.println(getCountry(countryCount, args[1]));\n        }\n        \n\n    }\n\n\n\nAdd the package information at the top of your .java file:\npackage com.gradescope.medalinfo;\nSubmit your MedalInfo.java file to gradescope."
   },
   {
     "objectID": "short-assignment-02.html#introduction",
@@ -1965,5 +1965,12 @@
     "title": "CSC 210 Lab 02",
     "section": "Write getCountry(HashMap, String)",
     "text": "Write getCountry(HashMap, String)\nFor this method you need to return a string with the country name and the total number of methods that country had:\ncountryName + \" had had a total of \" + medalCount + \" medals.\""
+  },
+  {
+    "objectID": "short-assignment-02.html#submitting-your-code",
+    "href": "short-assignment-02.html#submitting-your-code",
+    "title": "Lab 02",
+    "section": "",
+    "text": "Add the package information at the top of your .java file:\npackage com.gradescope.medalinfo;\nSubmit your MedalInfo.java file to gradescope."
   }
 ]

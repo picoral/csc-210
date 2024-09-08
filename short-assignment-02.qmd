@@ -60,3 +60,11 @@ public static void main(String[] args) throws FileNotFoundException {
 	}
 ```
 
+## Submitting your code
+
+Add the package information at the top of your `.java` file:
+
+`package com.gradescope.medalinfo;`
+
+Submit your `MedalInfo.java` file to [gradescope](https://www.gradescope.com/courses/839822).
+
