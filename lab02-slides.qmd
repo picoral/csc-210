@@ -1,0 +1,124 @@
+---
+title: "CSC 210 Lab 02"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## `HashMap` class
+
+Here's the import statement:
+
+```{java}
+import java.util.HashMap;
+```
+
+To create a dictionary with counts of something, we will have the key as String and the count or value as Integer in our `HashMap`.
+
+```{java}
+HashMap<String, Integer> somethingCount = new HashMap<String, Integer>();
+```
+
+## Using a `HashMap` to count things
+
+In our loop to count instances of a certain string, we will use the `.get(key)` methods to retrieve the value stored for that specific key. We then use `.put(key, value)` to update the count for that key.
+
+```{java}
+Integer currentCount = somethingCount.get(dataRow[6]);
+if(currentCount == null) currentCount = 0;
+somethingCount.put(dataRow[6], currentCount + 1);
+```
+
+Note the use of a temporary variable called `currentCount` that is assigned `null` if that specific key is not in the `HashMap` yet.
+
+## Count example
+
+Let's count characters in a String.
+
+```{java}
+import java.util.HashMap;
+
+public class CountChars {
+	
+	public static HashMap<Character, Integer> countChars(String word) {
+		HashMap<Character, Integer> charCount = new HashMap<Character, Integer>();
+		
+		for (int i = 0; i < word.length(); i++) {
+		  // get value for the character at index i
+			Integer currentCount = charCount.get(word.charAt(i)); 
+			
+			// if there was no key yet in the HashMap, make the value zero
+			if(currentCount == null) currentCount = 0;
+			
+			// put in the HashMap for the character at index i (our key)
+			// the current value plus one
+			charCount.put(word.charAt(i), currentCount + 1);
+		}
+		
+		return charCount;
+		
+		
+	}
+
+	public static void main(String[] args) {
+		System.out.println(countChars("pneumonoultramicroscopicsilicovolcanoconiosis"));
+
+	}
+
+}
+```
+
+## Assignment instructions
+
+[Short Assignment 2](short-assignment-02.html)
+
+## Write `getMedalCount(filename)` first
+
+The first line in the main provided for testing we have the HashMap creating based on our `.csv` file:
+
+```{java}
+HashMap<String, Integer> countryCount = getMedalCount("medallists.csv");
+```
+
+Download the `medallists.csv` file from [Kaggle](https://www.kaggle.com/datasets/muhammadehsan02/olympic-summer-games-paris-2024?select=medallists.csv) and add it to your project.
+
+The first line is the file header, read that first line before writing a while loop with `.hasNextLine()`
+
+Then use `split(,)` to split each line and count the countries (index 6) in each split line.
+
+## Write `getMax(HashMap)`
+
+For this method you will return a string with a message like this:
+
+```{java}
+countryName + " had the most medals with a total of " + maxCount + " medals."
+```
+
+You can initialize the maxCount variable with zero, since we know all counts are positive.
+Then iterate over the keys in the HashMap using a for loop similar to this:
+
+```{java}
+ for (String key : medalCount.keySet())
+```
+
+## Write `getMin(HashMap)`
+
+Similar to `getMax`, but the string returned should be s
+
+```{java}
+countryName + " had the fewest medals with a total of " + minCount + " medal."
+```
+
+You can use `Integer.MAX_VALUE` to initialize your minCount variable.
+
+## Write `getCountry(HashMap, String)`
+
+For this method you need to return a string with the country name and the total number of methods that country had:
+
+```{java}
+countryName + " had had a total of " + medalCount + " medals."
+```
+
+
+
