@@ -102,14 +102,14 @@
     "href": "modules.html#slides-1",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nArrays\nHashMap\nHashSet"
+    "text": "Slides\n\nArrays\nHashMap\nHashSet\n\nDuring lab sessions (Sept 11 to Sept 16), TAs will go over these slides:\n\nLab 02 slides"
   },
   {
     "objectID": "modules.html#assignments-1",
     "href": "modules.html#assignments-1",
     "title": "Modules",
     "section": "Assignments",
-    "text": "Assignments\n\nInstructions for PA2 – Deadline: September 18, 2024 – Wednesday, 11:30pm"
+    "text": "Assignments\n\nInstructions for Lab 02 – Deadline: September 09, 2024 – Monday, 11:30pm\nInstructions for PA2 – Deadline: September 18, 2024 – Wednesday, 11:30pm"
   },
   {
     "objectID": "modules.html#readings-2",
@@ -1110,14 +1110,14 @@
     "href": "short-assignment-02.html",
     "title": "Lab 02",
     "section": "",
-    "text": "Today’s lab session will be an introduction to the algorithmic structure of exhaustive search and will help prepare you for PA3. The first part of the section will be to generate all of the binary numbers for an N-bit number, in ascending order. The second part of the section will be to generate all of the possible dice roll combinations for a six-sided dice. This section will also reinforce your skills relating to arrays and recursion.\nExhaustive search is where every possible solution is enumerated. This is also known as the brute-force approach. In many cases, exhaustive search is the simplest solution, and the one to try first.\nReminder: We encourage paired programming during section, so please work through the section activity with the student sitting next to you. Remember, in section you can share code. For programming assignments you cannot.\n\n\n\nGo to the course webpage, click resources, and then click on the Section 2 URL. It will be the URL for accepting the github classroom assignment for Section 2.\nThen do the following: * Click on .travis.yml in github. Edit it to put in your email and commit that change on github. If you do not do this, you will run into issues later with pushing and TravisCI.\n\nClick on the green “Clone or download” button on the right of the web page and copy the provided URL.\nImport your Section 2 repository into Eclipse.\n\nopen Eclipse\nFile —&gt; Import —&gt; Git —&gt; Projects from Git, Next, Clone URI, Next, paste in repository URL from github\nNext, Select the master branch, Next, make the local destination /home/username/eclipse-workspace/Section2-ExhaustiveSearch-yourgithubid.\nNext, Import existing Eclipse projects, Next, Finish.\n\n\nNow you are ready to start coding.\n\n\n\nThis is the first assignment where you will have multiple classes. Part One should be completed in the Section2Binary.java file and Part Two should be completed in the Section2Dice.java file.\nPart One: Exhaustively print out 0-2^N - 1, where N is the number of bits, in ascending order in binary.\nPart Two: Exhaustively print out the dice rolling combinations for N six-sided dice.\n\n\nCopy the code below into main and run it to make sure it compiles and prints. This initiates the first TravisCI build.\n        System.out.println(\"Welcome to Section 2!\");\nThen commit and push your changes to github. Here is a reminder of the steps: Right click on Section1Main.java –&gt; Team –&gt; Commit, move unstaged files that you want to commit into staged changes, put in a commit message, and then click commit and push.\n\n\n\nFor Part 1 of this section we are completing a class that generates and prints out in ascending order all of the binary representations of the numbers 0-2^N - 1, where N represents the number of bits.\nFor example, if N = 2, then the output would be:\n00\n01\n10\n11\nIf you would like a more in-depth understanding of binary, refer to the lecture slides or do a quick Google search. Additionally, this activity relies on the enumerate and process structure described in class, so you should refer to those slides for help while working through this section.\n\n\nStart by printing out the passed in N from the command line. Code is already provided to read the first command line argument.\nTravis will be testing your output against the binary numbers of 0-2^N - 1 in ascending order.\n\n\n\nConsider what decisions need to be made in order to enumerate over all of the binary numbers starting from 00000 and getting to 11111. Discuss the following questions with your paired programming partner.\n\nWhat parameters do you need with your enumerate method? What do these parameters represent? How large should your array be that is holding the selected bits?\nWhat value, 0 or 1, should you start setting each bit to? What part of the enumeration method relates to changing the bit’s value?\nHow should you move to the next index of the bit being changed? How will you achieve this in your recursive enumeration call?\nLook back at the lecture slides to recall the format of the enumerate and process structure and copy over any necessary code.\n\n\n\n\nThe enumerate and process structure requires a recursive call of the enumerate method. To conclude this activity, you need to implement process and select a base case condition. Think and discuss with your partner the following questions.\n\nWhat two parameters should be equal for you to stop the recursion?\nWhere should the base case be located in your enumerate function?\nWhere should you call process? What should you pass process as a parameter?\n\n\n\n\n\nThis activity is very similar to the previous binary activity, so make sure to complete that activity first and reuse the enumerate and process structure here.\n\n\nRead in the number of dice from the command line.\n\n\n\nConsider what decisions need to be made in order to enumerate over all of the possible roll combinations. Discuss the following questions with your paired programming partner and refer back to your Part 1 decisions if you get stuck.\n\nWhat parameters do you need with your enumerate method? What do these parameters represent?\nHow large should your array be that is holding the value of the dice rolls?\nWhat value should you start setting each die to? Is this a different value than the start value used during the binary activity?\nHow should you move to selecting the value of the next roll? How will you achieve this in your recursive enumeration call?\nLook back at Part 1 or the lecture slides to recall the format of the enumerate and process structure to copy over any necessary code.\n\n\n\n\nThe enumerate and process structure requires a recursive call of the enumerate method. To conclude this activity, you need to implement process and select a base case condition. Think and discuss with your partner the following questions.\n\nWhat two parameters should be equal for you to stop the recursion?\nWhere should the base case be located in your enumerate function?\nWhere should you call process?\n\n*** Remember to show your SL your output on Eclipse before leaving section. ***\n\n\n\n\n\nThe Java API and Google are your friend, look up methods to take advantage of Java’s libraries.\n\nSystem.out.println() is your friend for testing and output\nDeclaring an array:\n\nint[] array = new int[N];\n\nUpdating a value in an array:\n\narray[0] = 1;"
+    "text": "In this week’s lab, we will be practicing reading .csv files, and manipulating HashMaps in Java.\nWe will be working with data on the 2024 olympics.\nThe program should have the following usage:\n    java MedalInfo COMMAND optional\nThe commands consist of MAX, MIN and COUNTRY.\nEach command will be most easily implemented with a HashMap. Therefore, your implementation will read in the csv file and be using a HashMap based on the medallists.csv file Kaggle.\nMAX - This function prints the country name with the most medals. Here’s what the message should look like:\nUnited States had the most medals with a total of 330 medals.\nMIN - This function prints the country name with the least medals. Here’s what the message should look like:\nCyprus had the fewest medals with a total of 1 medal.\nCOUNTRY - The country function requires an additional string argument on the command line. This string is the name of a country. Here’s what the message should look like when the second string argument is \"Brazil\":\nBrazil had a total of 67 medals.\n\n\n\nYour methods should work with this main method:\npublic static void main(String[] args) throws FileNotFoundException {\n        HashMap&lt;String, Integer&gt; countryCount = getMedalCount(\"medallists.csv\");\n        \n        if (args[0].equals(\"MAX\")) {\n            System.out.println(getMax(countryCount));\n        }\n        \n        if (args[0].equals(\"MIN\")) {\n            System.out.println(getMin(countryCount));\n        }\n        \n        if (args[0].equals(\"COUNTRY\")) {\n            System.out.println(getCountry(countryCount, args[1]));\n        }\n        \n\n    }"
   },
   {
     "objectID": "short-assignment-02.html#introduction",
     "href": "short-assignment-02.html#introduction",
     "title": "Lab 02",
     "section": "",
-    "text": "Today’s lab session will be an introduction to the algorithmic structure of exhaustive search and will help prepare you for PA3. The first part of the section will be to generate all of the binary numbers for an N-bit number, in ascending order. The second part of the section will be to generate all of the possible dice roll combinations for a six-sided dice. This section will also reinforce your skills relating to arrays and recursion.\nExhaustive search is where every possible solution is enumerated. This is also known as the brute-force approach. In many cases, exhaustive search is the simplest solution, and the one to try first.\nReminder: We encourage paired programming during section, so please work through the section activity with the student sitting next to you. Remember, in section you can share code. For programming assignments you cannot."
+    "text": "In this week’s lab, we will be practicing reading .csv files, and manipulating HashMaps in Java.\nWe will be working with data on the 2024 olympics.\nThe program should have the following usage:\n    java MedalInfo COMMAND optional\nThe commands consist of MAX, MIN and COUNTRY.\nEach command will be most easily implemented with a HashMap. Therefore, your implementation will read in the csv file and be using a HashMap based on the medallists.csv file Kaggle.\nMAX - This function prints the country name with the most medals. Here’s what the message should look like:\nUnited States had the most medals with a total of 330 medals.\nMIN - This function prints the country name with the least medals. Here’s what the message should look like:\nCyprus had the fewest medals with a total of 1 medal.\nCOUNTRY - The country function requires an additional string argument on the command line. This string is the name of a country. Here’s what the message should look like when the second string argument is \"Brazil\":\nBrazil had a total of 67 medals."
   },
   {
     "objectID": "short-assignment-02.html#setup",
@@ -1902,5 +1902,68 @@
     "title": "Programming Assignment 02",
     "section": "Testing your code",
     "text": "Testing your code\nYour methods should work with this main method:\n\npublic static void main(String[] args) throws FileNotFoundException {\n        \n        HashMap&lt;String, String&gt; destinations = getDestinations(args[0]);\n        HashMap&lt;String, Integer&gt; airportCount = getAirportCount(args[0]);\n        \n        \n        if (args[1].equals(\"MAX\")) {\n            System.out.println(getMax(airportCount));\n        }\n        \n        if (args[1].equals(\"DEPARTURES\")) {\n            System.out.println(getDepartures(destinations));\n        }\n        \n        if (args[1].equals(\"LIMIT\")) {\n            System.out.println(getLimits(Integer.valueOf(args[2]), airportCount));\n        }\n        \n    \n    }"
+  },
+  {
+    "objectID": "lab02-slides.html#hashmap-class",
+    "href": "lab02-slides.html#hashmap-class",
+    "title": "CSC 210 Lab 02",
+    "section": "HashMap class",
+    "text": "HashMap class\nHere’s the import statement:\nimport java.util.HashMap;\nTo create a dictionary with counts of something, we will have the key as String and the count or value as Integer in our HashMap.\nHashMap&lt;String, Integer&gt; somethingCount = new HashMap&lt;String, Integer&gt;();"
+  },
+  {
+    "objectID": "lab02-slides.html#using-a-hashmap-to-count-things",
+    "href": "lab02-slides.html#using-a-hashmap-to-count-things",
+    "title": "CSC 210 Lab 02",
+    "section": "Using a HashMap to count things",
+    "text": "Using a HashMap to count things\nIn our loop to count instances of a certain string, we will use the .get(key) methods to retrieve the value stored for that specific key. We then use .put(key, value) to update the count for that key.\nInteger currentCount = somethingCount.get(dataRow[6]);\nif(currentCount == null) currentCount = 0;\nsomethingCount.put(dataRow[6], currentCount + 1);\nNote the use of a temporary variable called currentCount that is assigned null if that specific key is not in the HashMap yet."
+  },
+  {
+    "objectID": "lab02-slides.html#count-example",
+    "href": "lab02-slides.html#count-example",
+    "title": "CSC 210 Lab 02",
+    "section": "Count example",
+    "text": "Count example\nLet’s count characters in a String.\nimport java.util.HashMap;\n\npublic class CountChars {\n    \n    public static HashMap&lt;Character, Integer&gt; countChars(String word) {\n        HashMap&lt;Character, Integer&gt; charCount = new HashMap&lt;Character, Integer&gt;();\n        \n        for (int i = 0; i &lt; word.length(); i++) {\n          // get value for the character at index i\n            Integer currentCount = charCount.get(word.charAt(i)); \n            \n            // if there was no key yet in the HashMap, make the value zero\n            if(currentCount == null) currentCount = 0;\n            \n            // put in the HashMap for the character at index i (our key)\n            // the current value plus one\n            charCount.put(word.charAt(i), currentCount + 1);\n        }\n        \n        return charCount;\n        \n        \n    }\n\n    public static void main(String[] args) {\n        System.out.println(countChars(\"pneumonoultramicroscopicsilicovolcanoconiosis\"));\n\n    }\n\n}"
+  },
+  {
+    "objectID": "short-assignment-02.html#testing-your-code",
+    "href": "short-assignment-02.html#testing-your-code",
+    "title": "Lab 02",
+    "section": "",
+    "text": "Your methods should work with this main method:\npublic static void main(String[] args) throws FileNotFoundException {\n        HashMap&lt;String, Integer&gt; countryCount = getMedalCount(\"medallists.csv\");\n        \n        if (args[0].equals(\"MAX\")) {\n            System.out.println(getMax(countryCount));\n        }\n        \n        if (args[0].equals(\"MIN\")) {\n            System.out.println(getMin(countryCount));\n        }\n        \n        if (args[0].equals(\"COUNTRY\")) {\n            System.out.println(getCountry(countryCount, args[1]));\n        }\n        \n\n    }"
+  },
+  {
+    "objectID": "lab02-slides.html#assignment-instructions",
+    "href": "lab02-slides.html#assignment-instructions",
+    "title": "CSC 210 Lab 02",
+    "section": "Assignment instructions",
+    "text": "Assignment instructions\nShort Assignment 2"
+  },
+  {
+    "objectID": "lab02-slides.html#write-getmedalcountfilename-first",
+    "href": "lab02-slides.html#write-getmedalcountfilename-first",
+    "title": "CSC 210 Lab 02",
+    "section": "Write getMedalCount(filename) first",
+    "text": "Write getMedalCount(filename) first\nThe first line in the main provided for testing we have the HashMap creating based on our .csv file:\nHashMap&lt;String, Integer&gt; countryCount = getMedalCount(\"medallists.csv\");\nDownload the medallists.csv file from Kaggle and add it to your project.\nThe first line is the file header, read that first line before writing a while loop with .hasNextLine()\nThen use split(,) to split each line and count the countries (index 6) in each split line."
+  },
+  {
+    "objectID": "lab02-slides.html#write-getmaxhashmap",
+    "href": "lab02-slides.html#write-getmaxhashmap",
+    "title": "CSC 210 Lab 02",
+    "section": "Write getMax(HashMap)",
+    "text": "Write getMax(HashMap)\nFor this method you will return a string with a message like this:\ncountryName + \" had the most medals with a total of \" + maxCount + \" medals.\"\nYou can initialize the maxCount variable with zero, since we know all counts are positive. Then iterate over the keys in the HashMap using a for loop similar to this:\n for (String key : medalCount.keySet())"
+  },
+  {
+    "objectID": "lab02-slides.html#write-getminhashmap",
+    "href": "lab02-slides.html#write-getminhashmap",
+    "title": "CSC 210 Lab 02",
+    "section": "Write getMin(HashMap)",
+    "text": "Write getMin(HashMap)\nSimilar to getMax, but the string returned should be s\ncountryName + \" had the fewest medals with a total of \" + minCount + \" medal.\"\nYou can use Integer.MAX_VALUE to initialize your minCount variable."
+  },
+  {
+    "objectID": "lab02-slides.html#write-getcountryhashmap-string",
+    "href": "lab02-slides.html#write-getcountryhashmap-string",
+    "title": "CSC 210 Lab 02",
+    "section": "Write getCountry(HashMap, String)",
+    "text": "Write getCountry(HashMap, String)\nFor this method you need to return a string with the country name and the total number of methods that country had:\ncountryName + \" had had a total of \" + medalCount + \" medals.\""
   }
 ]

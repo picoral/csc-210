@@ -10,3 +10,53 @@ In this week's lab, we will be practicing reading `.csv` files, and manipulating
 `HashMaps` in Java.
 
 We will be working with [data on the 2024 olympics](https://www.kaggle.com/datasets/muhammadehsan02/olympic-summer-games-paris-2024).
+
+The program should have the following usage:
+```
+    java MedalInfo COMMAND optional
+```
+
+The commands consist of MAX, MIN and COUNTRY. 
+
+Each command will be most easily implemented with a HashMap.  Therefore,
+your implementation will read in the csv file and be using a HashMap based on
+the `medallists.csv` file [Kaggle](https://www.kaggle.com/datasets/muhammadehsan02/olympic-summer-games-paris-2024?select=medallists.csv).
+
+***MAX*** - This function prints the country name with the most medals. Here's what the message should look like:
+
+`United States had the most medals with a total of 330 medals.`
+
+***MIN*** - This function prints the country name with the least medals. Here's what the message should look like: 
+    
+`Cyprus had the fewest medals with a total of 1 medal.`
+
+***COUNTRY*** - The country function requires an additional string argument 
+on the command line.  This string is the name of a country. Here's what the message should look like when
+the second string argument is `"Brazil"`:
+
+`Brazil had a total of 67 medals.`
+
+## Testing your code
+
+Your methods should work with this main method:
+
+```{java}
+public static void main(String[] args) throws FileNotFoundException {
+		HashMap<String, Integer> countryCount = getMedalCount("medallists.csv");
+		
+		if (args[0].equals("MAX")) {
+			System.out.println(getMax(countryCount));
+		}
+		
+		if (args[0].equals("MIN")) {
+			System.out.println(getMin(countryCount));
+		}
+		
+		if (args[0].equals("COUNTRY")) {
+			System.out.println(getCountry(countryCount, args[1]));
+		}
+		
+
+	}
+```
+

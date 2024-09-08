@@ -84,8 +84,13 @@ Optional:
 * [HashMap](slides-02-02.html)
 * [HashSet](slides-02-03.html)
 
+During lab sessions (Sept 11 to Sept 16), TAs will go over these slides:
+
+* [Lab 02 slides](lab02-slides.html)
+
 ## Assignments
 
+* [Instructions for Lab 02](short-assignment-02.html) -- Deadline: `r data %>% filter(Assignment == "SA1") %>%  select(Deadline)` -- Monday, 11:30pm
 * [Instructions for PA2](programming-assignment-02.html) -- Deadline: `r data %>% filter(Assignment == "PA2") %>%  select(Deadline)` -- Wednesday, 11:30pm
 
 # Week 04
