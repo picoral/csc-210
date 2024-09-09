@@ -120,17 +120,6 @@ Optional:
 
 Topic: `r schedule %>% filter(week == 5) %>% pull(topic)`
 
-## Readings
-
-Required:
-
-* [Java, Java, Java 8.2 Java’s Inheritance Mechanism](https://runestone.academy/ns/books/published/javajavajava/javas-inheritance-mechanism.html)
-
-## Slides
-
-* [Classes and Methods](slides-04-01.html)
-
-## Assignments
 
 # Week 06
 
@@ -140,7 +129,13 @@ Topic: `r schedule %>% filter(week == 6) %>% pull(topic)`
 
 ## Readings
 
+Required:
+
+* [Java, Java, Java 8.2 Java’s Inheritance Mechanism](https://runestone.academy/ns/books/published/javajavajava/javas-inheritance-mechanism.html)
+
 ## Slides
+
+* [Classes and Methods](slides-04-01.html)
 
 ## Assignments
 
