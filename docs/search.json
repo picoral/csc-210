@@ -1979,5 +1979,12 @@
     "title": "Compiling",
     "section": "",
     "text": "Before you follow the instructions below, make sure you have this class in a working directory on Eclipse:\npublic class OddEven {\n    \n    public static boolean isEven(int n) {\n        return n % 2 == 0;\n    }\n    \n    public static void main(String[] args) {\n        // TODO Auto-generated method stub\n        int number = Integer.valueOf(args[0]);\n        if (isEven(number)) {\n            System.out.println(\"Even\");\n        } else {\n            System.out.println(\"Odd\");\n        }\n\n    }\n\n}\n\nDownload the JDK Development Kit\nOpen a local terminal (that can be done in several ways, on Eclipse go to Window &gt; Show View &gt; Terminal)\nHere’s what my terminal looks like: \nChange directory (cd) into your project folder (my working directory is in a folder called CSC210 on my Desktop): \nWe will compile our .java file first by entering javac src/OddEven.java into our local terminal\nThen we will cd into our bin folder: cd bin\nTo run our binary code with an argument we can enter java OddEven 2"
+  },
+  {
+    "objectID": "slides-02-01.html#quiz-01",
+    "href": "slides-02-01.html#quiz-01",
+    "title": "Arrays",
+    "section": "Quiz 01",
+    "text": "Quiz 01\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write comments.\nName your method what you want, but the name should be in camelCase."
   }
 ]
