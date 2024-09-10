@@ -1,0 +1,36 @@
+---
+title: "Compiling"
+---
+
+Before you follow the instructions below, make sure you have this class in a working directory on Eclipse:
+
+```{java}
+public class OddEven {
+	
+	public static boolean isEven(int n) {
+		return n % 2 == 0;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int number = Integer.valueOf(args[0]);
+		if (isEven(number)) {
+			System.out.println("Even");
+		} else {
+			System.out.println("Odd");
+		}
+
+	}
+
+}
+```
+
+
+1. Download the [JDK Development Kit](https://www.oracle.com/java/technologies/downloads/)
+1. Open a local terminal (that can be done in several ways, on Eclipse go to `Window` > `Show View` > `Terminal`)
+1. Here's what my terminal looks like: ![](images/blank-terminal.png)
+1. Change directory (cd) into your project folder (my working directory is in a folder called CSC210 on my Desktop): ![](images/cd-into-directory.png)
+1. We will compile our `.java` file first by entering `javac src/OddEven.java` into our local terminal
+1. Then we will cd into our `bin` folder: `cd bin`
+1. To run our binary code with an argument we can enter `java OddEven 2`
+

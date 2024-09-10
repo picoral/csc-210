@@ -66,6 +66,8 @@ During lab sessions (Sept 04 to Sept 09), TAs will go over these slides:
 
 Topic: `r schedule %>% filter(week == 3) %>% pull(topic)`
 
+We will be running our binary file from the command line, with arguments. Please ensure you follow the instructions on the [compiling](compiling.html) page.
+
 ## Readings
 
 Required:
