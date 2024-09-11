@@ -30,7 +30,7 @@ public class OddEven {
 1. Open a local terminal (that can be done in several ways, on Eclipse go to `Window` > `Show View` > `Terminal`)
 1. Here's what my terminal looks like: ![](images/blank-terminal.png)
 1. Change directory (cd) into your project folder (my working directory is in a folder called CSC210 on my Desktop): ![](images/cd-into-directory.png)
-1. We will compile our `.java` file first by entering `javac src/OddEven.java` into our local terminal
-1. Then we will cd into our `bin` folder: `cd bin`
+1. cd into the src folder: `cd src`
+1. We will compile our `.java` file first by entering `javac OddEven.java` into our local terminal
 1. To run our binary code with an argument we can enter `java OddEven 2`
 
