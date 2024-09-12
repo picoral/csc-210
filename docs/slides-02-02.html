@@ -401,6 +401,7 @@
 <p>Read the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html">documentation for Class <code>HashMap&lt;K,V&gt;</code></a> and answer what methods do the following:</p>
 <ul>
 <li>adds a key value map in the HashMap</li>
+<li>gets a value in the map using a key</li>
 <li>removes the entry for a key</li>
 <li>returns the number of key-value mappings in the HashMap</li>
 </ul>
@@ -409,19 +410,25 @@
 <h2><code>HashMap</code> class – important methods</h2>
 <ul>
 <li><code>.put(key, value)</code> adds a key value map in the HashMap</li>
+<li><code>.get(key)</code> gets a value in the map using a key</li>
 <li><code>.remove(key)</code> removes the entry for a key</li>
 <li><code>.size()</code> returns the number of key-value mappings in the HashMap</li>
 </ul>
+</section>
+<section id="hashmap-class-important-methods-1" class="slide level2">
+<h2><code>HashMap</code> class – important methods</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>HashMap&lt;String, Integer&gt; soccerPlayers = new HashMap&lt;String, Integer&gt;();</span>
 <span id="cb1-2"><a></a></span>
 <span id="cb1-3"><a></a>soccerPlayers.put("Pelé", 10)</span>
 <span id="cb1-4"><a></a>soccerPlayers.put("Marta", 10)</span>
 <span id="cb1-5"><a></a>soccerPlayers.put("Alex Morgan", 13)</span>
 <span id="cb1-6"><a></a></span>
-<span id="cb1-7"><a></a>soccerPlayers.remove("Pelé");</span>
+<span id="cb1-7"><a></a>soccerPlayers.get("Marta");</span>
 <span id="cb1-8"><a></a></span>
-<span id="cb1-9"><a></a>System.out.println(soccerPlayers.size());</span>
-<span id="cb1-10"><a></a>System.out.println(soccerPlayers);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-9"><a></a>soccerPlayers.remove("Pelé");</span>
+<span id="cb1-10"><a></a></span>
+<span id="cb1-11"><a></a>System.out.println(soccerPlayers.size());</span>
+<span id="cb1-12"><a></a>System.out.println(soccerPlayers);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="counting-characters" class="slide level2">
 <h2>Counting characters</h2>

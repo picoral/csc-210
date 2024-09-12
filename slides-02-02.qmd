@@ -11,14 +11,18 @@ format:
 Read the [documentation for Class `HashMap<K,V>`](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html) and answer what methods do the following:
 
 * adds a key value map in the HashMap
+* gets a value in the map using a key
 * removes the entry for a key
 * returns the number of key-value mappings in the HashMap
 
 ## `HashMap` class -- important methods
 
 * `.put(key, value)` adds a key value map in the HashMap
+* `.get(key)`  gets a value in the map using a key
 * `.remove(key)` removes the entry for a key
 * `.size()` returns the number of key-value mappings in the HashMap
+
+## `HashMap` class -- important methods
 
 ```{java}
 HashMap<String, Integer> soccerPlayers = new HashMap<String, Integer>();
@@ -26,6 +30,8 @@ HashMap<String, Integer> soccerPlayers = new HashMap<String, Integer>();
 soccerPlayers.put("Pelé", 10)
 soccerPlayers.put("Marta", 10)
 soccerPlayers.put("Alex Morgan", 13)
+
+soccerPlayers.get("Marta");
 
 soccerPlayers.remove("Pelé");
 
