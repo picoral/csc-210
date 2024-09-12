@@ -175,27 +175,6 @@
     "text": "Assignments"
   },
   {
-    "objectID": "modules.html#readings-5",
-    "href": "modules.html#readings-5",
-    "title": "Modules",
-    "section": "Readings",
-    "text": "Readings"
-  },
-  {
-    "objectID": "modules.html#slides-5",
-    "href": "modules.html#slides-5",
-    "title": "Modules",
-    "section": "Slides",
-    "text": "Slides"
-  },
-  {
-    "objectID": "modules.html#assignments-5",
-    "href": "modules.html#assignments-5",
-    "title": "Modules",
-    "section": "Assignments",
-    "text": "Assignments"
-  },
-  {
     "objectID": "programming-assignment-10.html",
     "href": "programming-assignment-10.html",
     "title": "Programming Assignment 10",
@@ -483,6 +462,13 @@
     "text": "Factorial – solution\nimport java.util.Arrays;\n\npublic class ArrayForExample {\n    \n    public static int[] factorial(int n) {\n        int result = 1;\n        int[] allResults = new int[n];\n        \n        for (int i = 1; i &lt;= n; i++) {\n            result *= i;\n            allResults[i-1] = result;\n            \n        }\n        \n        return allResults;\n        \n    }\n\n    public static void main(String[] args) {\n        int[] myResult = factorial(10);\n        System.out.println(Arrays.toString(myResult));\n    }\n\n}"
   },
   {
+    "objectID": "slides-02-01.html#quiz-01",
+    "href": "slides-02-01.html#quiz-01",
+    "title": "Arrays",
+    "section": "Quiz 01",
+    "text": "Quiz 01\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write comments.\nName your method what you want, but the name should be in camelCase."
+  },
+  {
     "objectID": "slides-02-01.html#arraylist",
     "href": "slides-02-01.html#arraylist",
     "title": "Arrays",
@@ -595,242 +581,522 @@
     "text": "Incomplete (I) or Withdrawal (W):\nRequests for incomplete (I) or withdrawal (W) must be made in accordance with University policies, which are available at https://catalog.arizona.edu/policy/courses-credit/grading/grading-system."
   },
   {
-    "objectID": "slides-04-01.html#static-methods",
-    "href": "slides-04-01.html#static-methods",
-    "title": "Classes and Methods",
-    "section": "static methods",
-    "text": "static methods\nThe Java construct for implementing functions is known as the static method."
+    "objectID": "compiling.html",
+    "href": "compiling.html",
+    "title": "Compiling",
+    "section": "",
+    "text": "Before you follow the instructions below, make sure you have this class in a working directory on Eclipse:\npublic class OddEven {\n    \n    public static boolean isEven(int n) {\n        return n % 2 == 0;\n    }\n    \n    public static void main(String[] args) {\n        // TODO Auto-generated method stub\n        int number = Integer.valueOf(args[0]);\n        if (isEven(number)) {\n            System.out.println(\"Even\");\n        } else {\n            System.out.println(\"Odd\");\n        }\n\n    }\n\n}\n\nDownload the JDK Development Kit\nOpen a local terminal (that can be done in several ways, on Eclipse go to Window &gt; Show View &gt; Terminal)\nHere’s what my terminal looks like: \nChange directory (cd) into your project folder (my working directory is in a folder called CSC210 on my Desktop): \ncd into the src folder: cd src\nWe will compile our .java file first by entering javac OddEven.java into our local terminal\nTo run our binary code with an argument we can enter java OddEven 2"
   },
   {
-    "objectID": "slides-04-01.html#methods",
-    "href": "slides-04-01.html#methods",
-    "title": "Classes and Methods",
-    "section": "Methods",
-    "text": "Methods\n\nMultiple arguments – methods can take on more than one argument, and therefore can have more than one parameter variable\nOverloading – methods whose signatures differ are different methods. Using the same name for two methods whose signatures differ is known as overloading.\nSingle return value A Java method provides only one return value to the caller, of the type declared in the method signature"
+    "objectID": "checklist.html",
+    "href": "checklist.html",
+    "title": "Submission Checklist",
+    "section": "",
+    "text": "class name is in Proper Case (ClassName) – the first letter of every word, inclusing the first word, is uppercase while the remaining letters are lowercase\nclass name matches file name (ClassName.java)\nmethod and variable names are Camel Case (methodName) – the first letter of each word after the first is uppercase\npackage name is all lowercase and starts with package com.gradescope.\nset your methods as static if instructed to do so"
   },
   {
-    "objectID": "slides-04-01.html#methods-1",
-    "href": "slides-04-01.html#methods-1",
-    "title": "Classes and Methods",
-    "section": "Methods",
-    "text": "Methods\n\nScope – The scope of a variable is the part of the program that can refer to that variable by name. The scope of a variable declared in a method is limited to that method’s body. You cannot refer to a variable in one method that is declared in another.\n\nSource: Programming in Java, Sedgewick & Wayne (2024)"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CSC 210 Fall 2024",
+    "section": "",
+    "text": "The main goal of this course is to learn how to decompose problems and solve them with a program and do this in an effective manner that enables your future self and others to read, understand, and maintain your programs. Other goals include learning a second programming language (Java), learning decomposition and debugging strategies, and learning GUI event-driven programming (JavaFX).\n\nCourse D2L\nGradescope\n\nWhere to start:\n\nSyllabus\nSchedule + Materials\n\n\nInstructor Information\n\nAdriana Picoral 🔈\n\nOffice: Gould-Simpson 811\nEmail: adrianaps@arizona.edu\nInstructor Website: adrianapicoral.com\nOffice hours (open door, drop in, my office GS 811):\n\nMonday 2:30pm to 3:30pm\nWednesday 10:30am to 12:30pm\n\n\n\n\n\nTA office hours\nTA office hours take place in Gould-Simpson room 821.\n\n\n\n\nInformation about the materials for this course\nThe materials (including slides and assignments) for this course are based on materials from previous CSC 210 instances created by other instructors, including: Michelle Strout, and Rick Mercer."
   },
   {
-    "objectID": "slides-04-01.html#constructors",
-    "href": "slides-04-01.html#constructors",
-    "title": "Classes and Methods",
-    "section": "Constructors",
-    "text": "Constructors\nSame name as the class, no return type"
+    "objectID": "slides-01-01.html#welcome-to-csc-210",
+    "href": "slides-01-01.html#welcome-to-csc-210",
+    "title": "Course Introduction",
+    "section": "Welcome to CSC 210",
+    "text": "Welcome to CSC 210\n\nThis is CSC 210 – Software Development\nuse data structures (i.e., hash table, tree, and graph), common algorithm patterns (i.e., exhaustive search, divide and conquer, recursive backtracking, and heuristic), unit testing, and debugging to write a correct solution to each sub-problem and integrate the sub-problem solutions into a complete working project (currently using Java).\ncompare and contrast programming in two programming languages (Python and Java).\nbuild graphical user input and output for programs (JavaFX)"
   },
   {
-    "objectID": "slides-04-01.html#public-vs.-private",
-    "href": "slides-04-01.html#public-vs.-private",
-    "title": "Classes and Methods",
-    "section": "Public vs. Private",
-    "text": "Public vs. Private\npublic – accessible from all methods of the class and in the scope of where the object is declared\nprivate – known only in the class"
+    "objectID": "slides-01-01.html#who-am-i",
+    "href": "slides-01-01.html#who-am-i",
+    "title": "Course Introduction",
+    "section": "Who am I?",
+    "text": "Who am I?\n\nAdriana Picoral (you can call me Adriana or Dr. Picoral)\nOffice: Gould-Simpson 811\nEmail: adrianaps@arizona.edu"
   },
   {
-    "objectID": "slides-04-01.html#recommendations-for-writing-classes",
-    "href": "slides-04-01.html#recommendations-for-writing-classes",
-    "title": "Classes and Methods",
-    "section": "Recommendations for writing classes",
-    "text": "Recommendations for writing classes\n\nuse one file to store the class (no main method)\ncreate different classes for different problems (cohesion – methods and instance variables of a class should be strongly related) – in other words, keep related data and behavior in one place"
+    "objectID": "slides-01-01.html#who-are-the-teaching-assistants-tas",
+    "href": "slides-01-01.html#who-are-the-teaching-assistants-tas",
+    "title": "Course Introduction",
+    "section": "Who are the teaching assistants? (TAs)",
+    "text": "Who are the teaching assistants? (TAs)\nIn this course we have course coordinators, senior TAs, and TAs.\nThe TAs are responsible for:\n\nHelping you, the students, succeed\nGrading quizzes, and exams\nHelping students on office hours\nLead lab sessions\n\n. . . So get to know them!"
   },
   {
-    "objectID": "slides-04-01.html#recommendations-for-writing-classes-1",
-    "href": "slides-04-01.html#recommendations-for-writing-classes-1",
-    "title": "Classes and Methods",
-    "section": "Recommendations for writing classes",
-    "text": "Recommendations for writing classes\nDeclare:\n\ninstance variables private after class definition and create public methods to set and access variables\nconstructors public no return type (do not use static)\nmost methods public (do not use static), but private helper methods are often useful"
+    "objectID": "slides-01-01.html#get-to-know-each-other",
+    "href": "slides-01-01.html#get-to-know-each-other",
+    "title": "Course Introduction",
+    "section": "Get to know each-other",
+    "text": "Get to know each-other\n\nIntroduce yourself!\nShare your\n\nName and pronouns\nSomething new that you learned this summer"
   },
   {
-    "objectID": "slides-04-01.html#example",
-    "href": "slides-04-01.html#example",
-    "title": "Classes and Methods",
-    "section": "Example",
-    "text": "Example\npublic class IdentifyMyParts {\n    public int x = 7; \n    public int y = 3; \n}\n\nWhat are the instance variables?\nHow do you construct a new instance of this class?\n\nExercise from The Java™ Tutorials"
+    "objectID": "slides-01-01.html#assessment-structure",
+    "href": "slides-01-01.html#assessment-structure",
+    "title": "Course Introduction",
+    "section": "Assessment structure",
+    "text": "Assessment structure\n\nShort Projects (to be completed in the lab sessions)\nProjects\nExams and Quizzes"
   },
   {
-    "objectID": "slides-04-01.html#example-1",
-    "href": "slides-04-01.html#example-1",
-    "title": "Classes and Methods",
-    "section": "Example",
-    "text": "Example\npublic class IdentifyMyParts {\n    public int x = 7; \n    public int y = 3; \n}\nWhat is the output from the following code:\nIdentifyMyParts a = new IdentifyMyParts();\nIdentifyMyParts b = new IdentifyMyParts();\na.y = 5;\nb.y = 6;\na.x = 1;\nb.x = 2;\nSystem.out.println(\"a.y = \" + a.y);\nSystem.out.println(\"b.y = \" + b.y);\nSystem.out.println(\"a.x = \" + a.x);\nSystem.out.println(\"b.x = \" + b.x);\nSystem.out.println(\"IdentifyMyParts.x = \" + IdentifyMyParts.x);\nAdd static after public for one of the instance variable (to make it a class variable). What is the side effect?"
+    "objectID": "slides-01-01.html#exams-and-quizzes",
+    "href": "slides-01-01.html#exams-and-quizzes",
+    "title": "Course Introduction",
+    "section": "Exams and Quizzes",
+    "text": "Exams and Quizzes\n\nExams and quizzes are on paper.\nMidterms and quizzes are on Wednesdays.\nProgramming assignments will be submitted through GitHub (create an account)."
   },
   {
-    "objectID": "slides-04-01.html#better-example",
-    "href": "slides-04-01.html#better-example",
-    "title": "Classes and Methods",
-    "section": "Better example",
-    "text": "Better example\npublic class IdentifyMyParts {\n    private int x = 7;\n    private int y = 3;\n    \n    public void setX(int x) {\n        this.x = x;\n    }\n\n    public void setY(int y) {\n        this.y = y;\n    }\n    \n    public int getX() {\n        return x;\n    }\n    \n    public int getY() {\n        return y;\n    }\n\n}\nVariable scope: what’s the difference between this.x and x?"
+    "objectID": "slides-01-01.html#grade-distribution",
+    "href": "slides-01-01.html#grade-distribution",
+    "title": "Course Introduction",
+    "section": "Grade Distribution",
+    "text": "Grade Distribution\n\nProgramming Assignments, 20%\nShort Assignments, 10%\nQuizzes, 20%\nMidterm 1, 15%\nMidterm 2, 15%\nFinal, 20%"
   },
   {
-    "objectID": "slides-04-01.html#better-example-use",
-    "href": "slides-04-01.html#better-example-use",
-    "title": "Classes and Methods",
-    "section": "Better example – use",
-    "text": "Better example – use\npublic class UseMyParts {\n\n    public static void main(String[] args) {\n        IdentifyMyParts a = new IdentifyMyParts(); \n        IdentifyMyParts b = new IdentifyMyParts(); \n        a.setX(5);\n        a.setY(10);\n        b.setX(2);\n        b.setY(3);\n    \n        System.out.println(a.getY()); \n        System.out.println(b.getY()); \n        System.out.println(a.getX()); \n        System.out.println(b.getX()); \n\n    }\n}"
+    "objectID": "slides-01-01.html#syllabus-activity",
+    "href": "slides-01-01.html#syllabus-activity",
+    "title": "Course Introduction",
+    "section": "Syllabus Activity",
+    "text": "Syllabus Activity\n\nWhen are the exams?\nWhat’s the late policy for this class?\nWhen’s the first assignment due?"
   },
   {
-    "objectID": "slides-04-01.html#adding-a-constructor-method",
-    "href": "slides-04-01.html#adding-a-constructor-method",
-    "title": "Classes and Methods",
-    "section": "Adding a constructor method",
-    "text": "Adding a constructor method\npublic class IdentifyMyParts {\n    private int x = 7;\n    private int y = 3;\n    \n    public IdentifyMyParts(int x, int y) {\n        this.x = x;\n        this.y = y;\n        \n    }\n    \n    public void setX(int x) {\n        this.x = x;\n    }\n\n    public void setY(int y) {\n        this.y = y;\n    }\n    \n    public int getX() {\n        return x;\n    }\n    \n    public int getY() {\n        return y;\n    }\n\n}"
+    "objectID": "slides-01-01.html#other-important-dates",
+    "href": "slides-01-01.html#other-important-dates",
+    "title": "Course Introduction",
+    "section": "Other Important Dates",
+    "text": "Other Important Dates\n\nLast day for students to drop without a grade of W (withdraw) is September 08\nLast day for students to department staff to drop in UAccess with a W is September 22"
   },
   {
-    "objectID": "slides-04-01.html#practice-card-class",
-    "href": "slides-04-01.html#practice-card-class",
-    "title": "Classes and Methods",
-    "section": "Practice – Card class",
-    "text": "Practice – Card class\nA card has a suit and a rank\nSuits The four suits are clubs (♣), diamonds (♦), hearts (♥), and spades (♠).\nRanks The ranks are ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, and king. The ace is the highest card, and the 2 is the lowest, but the ace can also be used as a low card with a value of 1."
+    "objectID": "slides-01-01.html#attendance-question",
+    "href": "slides-01-01.html#attendance-question",
+    "title": "Course Introduction",
+    "section": "Attendance question",
+    "text": "Attendance question\nGo to gradescope and answer the attendance question."
   },
   {
-    "objectID": "slides-04-01.html#card-class-solution",
-    "href": "slides-04-01.html#card-class-solution",
-    "title": "Classes and Methods",
-    "section": "Card class solution",
-    "text": "Card class solution\npublic class Card {\n    private String rank;\n    private String suit;\n    \n    public Card(String rank, String suit) {\n        this.rank = rank;\n        this.suit = suit;\n    }\n    \n    public String getSuit() {\n        return suit;\n    }\n    \n    public String getRank() {\n        return rank;\n    }\n\n}"
+    "objectID": "slides-01-01.html#materials",
+    "href": "slides-01-01.html#materials",
+    "title": "Course Introduction",
+    "section": "Materials",
+    "text": "Materials\n\nReadings, videos, exercises, slides, assignment instructions will be available on the website\nHOWEVER, you are still responsible for things said/announced in class"
   },
   {
-    "objectID": "slides-04-01.html#write-main",
-    "href": "slides-04-01.html#write-main",
-    "title": "Classes and Methods",
-    "section": "Write main",
-    "text": "Write main\nCreate a PlayGame class with a main method to create an instance of a card and to print it.\nWhat changes to Card class would you make?"
+    "objectID": "slides-01-01.html#getting-started",
+    "href": "slides-01-01.html#getting-started",
+    "title": "Course Introduction",
+    "section": "Getting started",
+    "text": "Getting started\nCreate a GitHub account and submit your username in this form."
   },
   {
-    "objectID": "slides-04-01.html#solution",
-    "href": "slides-04-01.html#solution",
-    "title": "Classes and Methods",
-    "section": "Solution",
-    "text": "Solution\npublic class PlayGame {\n\n    public static void main(String[] args) {\n        Card card1 = new Card(\"ace\", \"hearts\");\n        card1.print();\n    }\n\n}"
+    "objectID": "slides-01-01.html#tips-on-slides",
+    "href": "slides-01-01.html#tips-on-slides",
+    "title": "Course Introduction",
+    "section": "Tips on slides",
+    "text": "Tips on slides\nPress the e key"
   },
   {
-    "objectID": "slides-04-01.html#update-card-class-demonstration",
-    "href": "slides-04-01.html#update-card-class-demonstration",
-    "title": "Classes and Methods",
-    "section": "Update Card class (demonstration)",
-    "text": "Update Card class (demonstration)\n\nvalidate suit and rank – make sure object is create with valid strings only\ncreate constants for arrays of strings for both suits and ranks\ncreate helper methods (private) for validation\ntwo ways of setting rank: integer and string (overloading)"
+    "objectID": "short-assignment-01.html",
+    "href": "short-assignment-01.html",
+    "title": "Lab 01",
+    "section": "",
+    "text": "In today’s lab session we will practice using Scanner to take in user input from the keyboard and to read text files.\nGiven a text file that contains multiple lines with integers separated by space, your java application is to sum all integers and print out the result.\nFor example, for the following text file:\ninputFile1.txt\n3 3 3\n50 40\nYour application should print out 99.\nFor the file name to read, prompt the user to type a file name and read the keyboard entry. The message you should print to the user is Enter file name: – note the space after : and make sure to not print a line break after the space.\nExample run:\nEnter file name: inputFile1.txt\n99\n\n\n\nAdd the package name to the top of your file, so gradescope can find the compiled binary file:\npackage com.gradescope.filesum;"
   },
   {
-    "objectID": "slides-04-01.html#update-card-class-solution",
-    "href": "slides-04-01.html#update-card-class-solution",
-    "title": "Classes and Methods",
-    "section": "Update Card class – solution",
-    "text": "Update Card class – solution\npublic class Card {\n    private String rank;\n    private String suit;\n    \n    private final static String[] RANKS = {\"ace\", \"two\", \"three\", \"four\",\n                                           \"five\", \"six\", \"seven\",\n                                           \"eight\", \"nine\", \"ten\",\n                                           \"jack\", \"queen\", \"king\"};\n\n    \n    public final static String[] SUITS = {\"diamonds\", \"clubs\", \"hearts\", \"spades\"};\n    \n    public Card(String rank, String suit) {\n        if (validRank(rank)) this.rank = rank;\n        if (validSuit(suit)) this.suit = suit;\n    }\n    \n    public Card(int rank, String suit) {\n        if (rank &gt;= 1 && rank &lt;= 13) this.rank = RANKS[rank-1];\n        if (validSuit(suit)) this.suit = suit;\n    }\n\n    private Boolean inArray(String value, String[] arr) {\n        for (String element : arr) {\n            if (element == value) {\n                return true;\n            }\n        }\n        return false;\n    }\n    \n    private Boolean validRank(String rank) {\n        return inArray(rank, RANKS);\n    }\n    \n    private Boolean validSuit(String suit) {\n        return inArray(suit, SUITS);\n    }\n    \n    \n    public void setRank(String rank) {\n        if (validRank(rank)) this.rank = rank;\n    }\n    \n    public void setRank(int rank) { // overloading\n        if (rank &gt;= 1 && rank &lt;= 13) this.rank = RANKS[rank-1];\n    }\n    \n    public void setSuit(String suit) {\n        if (validSuit(suit)) this.suit = suit;\n    }\n    \n    public String getSuit() {\n        return suit;\n    }\n    \n    public String getRank() {\n        return rank;\n    }\n    \n    public void print() {\n        System.out.println(rank + \" of \" + suit);\n    }\n\n}"
+    "objectID": "short-assignment-01.html#introduction",
+    "href": "short-assignment-01.html#introduction",
+    "title": "Lab 01",
+    "section": "",
+    "text": "In today’s lab session we will practice using Scanner to take in user input from the keyboard and to read text files.\nGiven a text file that contains multiple lines with integers separated by space, your java application is to sum all integers and print out the result.\nFor example, for the following text file:\ninputFile1.txt\n3 3 3\n50 40\nYour application should print out 99.\nFor the file name to read, prompt the user to type a file name and read the keyboard entry. The message you should print to the user is Enter file name: – note the space after : and make sure to not print a line break after the space.\nExample run:\nEnter file name: inputFile1.txt\n99"
   },
   {
-    "objectID": "slides-04-01.html#update-playgame-class",
-    "href": "slides-04-01.html#update-playgame-class",
-    "title": "Classes and Methods",
-    "section": "Update PlayGame class",
-    "text": "Update PlayGame class\npublic class PlayGame {\n\n    public static void main(String[] args) {\n        Card card1 = new Card(\"ace\", \"hearts\");\n        card1.print();\n        \n        card1.setRank(2);\n        card1.print();\n        \n        Card card2 = new Card(13, \"diamonds\");\n        card2.print();\n\n    }\n\n}"
+    "objectID": "short-assignment-01.html#file-setup",
+    "href": "short-assignment-01.html#file-setup",
+    "title": "Lab 01",
+    "section": "",
+    "text": "Add the package name to the top of your file, so gradescope can find the compiled binary file:\npackage com.gradescope.filesum;"
   },
   {
-    "objectID": "slides-04-01.html#create-deck-class",
-    "href": "slides-04-01.html#create-deck-class",
-    "title": "Classes and Methods",
-    "section": "Create Deck class",
-    "text": "Create Deck class\nCreate a Deck class that has a color, and all 52 possible cards (use ArrayList)"
+    "objectID": "practice.html",
+    "href": "practice.html",
+    "title": "Practice Problems",
+    "section": "",
+    "text": "Weeks 01 and 02\nWeek 03"
   },
   {
-    "objectID": "slides-04-01.html#deck-class-solution",
-    "href": "slides-04-01.html#deck-class-solution",
-    "title": "Classes and Methods",
-    "section": "Deck class solution",
-    "text": "Deck class solution\nimport java.util.ArrayList;\n\npublic class Deck {\n    private ArrayList&lt;Card&gt; cards = new ArrayList&lt;Card&gt;();\n    private String color;\n    \n    public Deck(String color) {\n        this.color = color;\n        for (String s : Card.SUITS) {\n            for (int i = 1; i &lt;= 13; i++) {\n                Card thisCard = new Card(i, s);\n                cards.add(thisCard);\n            }\n            \n        }\n    }\n    \n    public void printCards() {\n        for (String s : Card.SUITS) {\n            for (int i = 1; i &lt;= 13; i++) {\n                Card thisCard = new Card(i, s);\n                thisCard.print();\n            }\n            \n        }\n    }\n    \n    public Card getCard(int index) {\n        return cards.get(index);\n    }\n    \n    public String getColor() {\n        return color;\n    }\n\n}"
+    "objectID": "short-assignment-02.html",
+    "href": "short-assignment-02.html",
+    "title": "Lab 02",
+    "section": "",
+    "text": "In this week’s lab, we will be practicing reading .csv files, and manipulating HashMaps in Java.\nWe will be working with data on the 2024 olympics.\nThe program should have the following usage:\n    java MedalInfo COMMAND optional\nThe commands consist of MAX, MIN and COUNTRY.\nEach command will be most easily implemented with a HashMap. Therefore, your implementation will read in the csv file and be using a HashMap based on the medallists.csv file Kaggle.\nMAX - This function prints the country name with the most medals. Here’s what the message should look like:\nUnited States had the most medals with a total of 330 medals.\nMIN - This function prints the country name with the least medals. Here’s what the message should look like:\nCyprus had the fewest medals with a total of 1 medal.\nCOUNTRY - The country function requires an additional string argument on the command line. This string is the name of a country. Here’s what the message should look like when the second string argument is \"Brazil\":\nBrazil had a total of 67 medals.\n\n\n\nYour methods should work with this main method:\npublic static void main(String[] args) throws FileNotFoundException {\n        HashMap&lt;String, Integer&gt; countryCount = getMedalCount(\"medallists.csv\");\n        \n        if (args[0].equals(\"MAX\")) {\n            System.out.println(getMax(countryCount));\n        }\n        \n        if (args[0].equals(\"MIN\")) {\n            System.out.println(getMin(countryCount));\n        }\n        \n        if (args[0].equals(\"COUNTRY\")) {\n            System.out.println(getCountry(countryCount, args[1]));\n        }\n        \n\n    }\n\n\n\nAdd the package information at the top of your .java file:\npackage com.gradescope.medalinfo;\nSubmit your MedalInfo.java file to gradescope."
   },
   {
-    "objectID": "slides-04-01.html#updated-playgame",
-    "href": "slides-04-01.html#updated-playgame",
-    "title": "Classes and Methods",
-    "section": "Updated PlayGame",
-    "text": "Updated PlayGame\npublic class PlayGame {\n\n    public static void main(String[] args) {\n        Card card1 = new Card(\"ace\", \"hearts\");\n        card1.print();\n        \n        card1.setRank(2);\n        card1.print();\n        \n        Card card2 = new Card(13, \"diamonds\");\n        card2.print();\n        \n        Deck myDeck = new Deck(\"Red\");\n        myDeck.printCards();\n        \n        myDeck.getCard(20).print();\n\n    }\n\n}"
+    "objectID": "short-assignment-02.html#introduction",
+    "href": "short-assignment-02.html#introduction",
+    "title": "Lab 02",
+    "section": "",
+    "text": "In this week’s lab, we will be practicing reading .csv files, and manipulating HashMaps in Java.\nWe will be working with data on the 2024 olympics.\nThe program should have the following usage:\n    java MedalInfo COMMAND optional\nThe commands consist of MAX, MIN and COUNTRY.\nEach command will be most easily implemented with a HashMap. Therefore, your implementation will read in the csv file and be using a HashMap based on the medallists.csv file Kaggle.\nMAX - This function prints the country name with the most medals. Here’s what the message should look like:\nUnited States had the most medals with a total of 330 medals.\nMIN - This function prints the country name with the least medals. Here’s what the message should look like:\nCyprus had the fewest medals with a total of 1 medal.\nCOUNTRY - The country function requires an additional string argument on the command line. This string is the name of a country. Here’s what the message should look like when the second string argument is \"Brazil\":\nBrazil had a total of 67 medals."
   },
   {
-    "objectID": "slides-01-03.html#classes",
-    "href": "slides-01-03.html#classes",
-    "title": "Java Objects",
-    "section": "Classes",
-    "text": "Classes\nWhat is a class?"
+    "objectID": "short-assignment-02.html#testing-your-code",
+    "href": "short-assignment-02.html#testing-your-code",
+    "title": "Lab 02",
+    "section": "",
+    "text": "Your methods should work with this main method:\npublic static void main(String[] args) throws FileNotFoundException {\n        HashMap&lt;String, Integer&gt; countryCount = getMedalCount(\"medallists.csv\");\n        \n        if (args[0].equals(\"MAX\")) {\n            System.out.println(getMax(countryCount));\n        }\n        \n        if (args[0].equals(\"MIN\")) {\n            System.out.println(getMin(countryCount));\n        }\n        \n        if (args[0].equals(\"COUNTRY\")) {\n            System.out.println(getCountry(countryCount, args[1]));\n        }\n        \n\n    }"
   },
   {
-    "objectID": "slides-01-03.html#classes-1",
-    "href": "slides-01-03.html#classes-1",
-    "title": "Java Objects",
-    "section": "Classes",
-    "text": "Classes\n\nCollection of methods and attributes (information/values)\nTemplate, blueprint of cookie cutter to construct many objects\n\nModularity: Classes allow us to split the problem to be solved into distinct tasks"
+    "objectID": "short-assignment-02.html#submitting-your-code",
+    "href": "short-assignment-02.html#submitting-your-code",
+    "title": "Lab 02",
+    "section": "",
+    "text": "Add the package information at the top of your .java file:\npackage com.gradescope.medalinfo;\nSubmit your MedalInfo.java file to gradescope."
   },
   {
-    "objectID": "slides-01-03.html#scanner",
-    "href": "slides-01-03.html#scanner",
-    "title": "Java Objects",
-    "section": "Scanner",
-    "text": "Scanner\nThe Scanner class (from java.util) is used to get different types of input\nWe use System.in to read keyboard input:\n    Scanner myObj = new Scanner(System.in);  // Scanner object\n    String userInput = myObj.nextLine();  // method to read user input\n    System.out.println(userInput); \nFor files, we need the File class (from java.io)\n    File myFile = new File(\"myTextFile.txt\");\n    Scanner myReader = new Scanner(myFile);\nHowever, we need to deal with FileNotFoundException"
+    "objectID": "lab02-slides.html#hashmap-class",
+    "href": "lab02-slides.html#hashmap-class",
+    "title": "CSC 210 Lab 02",
+    "section": "HashMap class",
+    "text": "HashMap class\nHere’s the import statement:\nimport java.util.HashMap;\nTo create a dictionary with counts of something, we will have the key as String and the count or value as Integer in our HashMap.\nHashMap&lt;String, Integer&gt; somethingCount = new HashMap&lt;String, Integer&gt;();"
   },
   {
-    "objectID": "slides-01-03.html#scanner-1",
-    "href": "slides-01-03.html#scanner-1",
-    "title": "Java Objects",
-    "section": "Scanner",
-    "text": "Scanner\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n    }\n\n}"
+    "objectID": "lab02-slides.html#using-a-hashmap-to-count-things",
+    "href": "lab02-slides.html#using-a-hashmap-to-count-things",
+    "title": "CSC 210 Lab 02",
+    "section": "Using a HashMap to count things",
+    "text": "Using a HashMap to count things\nIn our loop to count instances of a certain string, we will use the .get(key) methods to retrieve the value stored for that specific key. We then use .put(key, value) to update the count for that key.\nInteger currentCount = somethingCount.get(dataRow[6]);\nif(currentCount == null) currentCount = 0;\nsomethingCount.put(dataRow[6], currentCount + 1);\nNote the use of a temporary variable called currentCount that is assigned null if that specific key is not in the HashMap yet."
   },
   {
-    "objectID": "slides-01-03.html#scanner-2",
-    "href": "slides-01-03.html#scanner-2",
-    "title": "Java Objects",
-    "section": "Scanner",
-    "text": "Scanner\nWe use the same Scanner method .nextLine()\nString line = myReader.nextLine();\nTask:\n\nRead a line in the file and and print it out\nRead all lines in a file and print each one out"
+    "objectID": "lab02-slides.html#count-example",
+    "href": "lab02-slides.html#count-example",
+    "title": "CSC 210 Lab 02",
+    "section": "Count example",
+    "text": "Count example\nLet’s count characters in a String.\nimport java.util.HashMap;\n\npublic class CountChars {\n    \n    public static HashMap&lt;Character, Integer&gt; countChars(String word) {\n        HashMap&lt;Character, Integer&gt; charCount = new HashMap&lt;Character, Integer&gt;();\n        \n        for (int i = 0; i &lt; word.length(); i++) {\n          // get value for the character at index i\n            Integer currentCount = charCount.get(word.charAt(i)); \n            \n            // if there was no key yet in the HashMap, make the value zero\n            if(currentCount == null) currentCount = 0;\n            \n            // put in the HashMap for the character at index i (our key)\n            // the current value plus one\n            charCount.put(word.charAt(i), currentCount + 1);\n        }\n        \n        return charCount;\n        \n        \n    }\n\n    public static void main(String[] args) {\n        System.out.println(countChars(\"pneumonoultramicroscopicsilicovolcanoconiosis\"));\n\n    }\n\n}"
   },
   {
-    "objectID": "slides-01-03.html#read-file-line-solution-1",
-    "href": "slides-01-03.html#read-file-line-solution-1",
-    "title": "Java Objects",
-    "section": "Read file line – solution 1",
-    "text": "Read file line – solution 1\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n        \n        String line1 = myReader.nextLine();\n        System.out.println(line1);\n        \n        String line2 = myReader.nextLine();\n        System.out.println(line2);\n        \n        myReader.close();\n    }\n\n}"
+    "objectID": "lab02-slides.html#assignment-instructions",
+    "href": "lab02-slides.html#assignment-instructions",
+    "title": "CSC 210 Lab 02",
+    "section": "Assignment instructions",
+    "text": "Assignment instructions\nShort Assignment 2"
   },
   {
-    "objectID": "slides-01-03.html#read-file-line-solution-2",
-    "href": "slides-01-03.html#read-file-line-solution-2",
-    "title": "Java Objects",
-    "section": "Read file line – solution 2",
-    "text": "Read file line – solution 2\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n        \n        System.out.println(myReader.nextLine());\n        System.out.println(myReader.nextLine());\n        \n        myReader.close();\n    }\n\n}"
+    "objectID": "lab02-slides.html#write-getmedalcountfilename-first",
+    "href": "lab02-slides.html#write-getmedalcountfilename-first",
+    "title": "CSC 210 Lab 02",
+    "section": "Write getMedalCount(filename) first",
+    "text": "Write getMedalCount(filename) first\nThe first line in the main provided for testing we have the HashMap creating based on our .csv file:\nHashMap&lt;String, Integer&gt; countryCount = getMedalCount(\"medallists.csv\");\nDownload the medallists.csv file from Kaggle and add it to your project.\nThe first line is the file header, read that first line before writing a while loop with .hasNextLine()\nThen use split(,) to split each line and count the countries (index 6) in each split line."
   },
   {
-    "objectID": "slides-01-03.html#while-loop",
-    "href": "slides-01-03.html#while-loop",
-    "title": "Java Objects",
-    "section": "While loop",
-    "text": "While loop\nWhat if we didn’t know how many lines there were in the file?\nThe method .hasNextLine() returns a boolean\nModify the previous solution to generalize it to any number of lines"
+    "objectID": "lab02-slides.html#write-getmaxhashmap",
+    "href": "lab02-slides.html#write-getmaxhashmap",
+    "title": "CSC 210 Lab 02",
+    "section": "Write getMax(HashMap)",
+    "text": "Write getMax(HashMap)\nFor this method you will return a string with a message like this:\ncountryName + \" had the most medals with a total of \" + maxCount + \" medals.\"\nYou can initialize the maxCount variable with zero, since we know all counts are positive. Then iterate over the keys in the HashMap using a for loop similar to this:\n for (String key : medalCount.keySet())"
   },
   {
-    "objectID": "slides-01-03.html#while-loop-solution",
-    "href": "slides-01-03.html#while-loop-solution",
-    "title": "Java Objects",
-    "section": "While loop – solution",
-    "text": "While loop – solution\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n        \n        while (myReader.hasNextLine()) {\n            System.out.println(myReader.nextLine());\n        }\n        myReader.close();\n    }\n\n}"
+    "objectID": "lab02-slides.html#write-getminhashmap",
+    "href": "lab02-slides.html#write-getminhashmap",
+    "title": "CSC 210 Lab 02",
+    "section": "Write getMin(HashMap)",
+    "text": "Write getMin(HashMap)\nSimilar to getMax, but the string returned should be s\ncountryName + \" had the fewest medals with a total of \" + minCount + \" medal.\"\nYou can use Integer.MAX_VALUE to initialize your minCount variable."
   },
   {
-    "objectID": "slides-01-03.html#string",
-    "href": "slides-01-03.html#string",
-    "title": "Java Objects",
-    "section": "String",
-    "text": "String\nString is a class (title capitalization)\nWe can construct strings two ways:\nString str = new String(\"with new\");\nString str2 = \"Don't need new\"\nSome string methods:\n.equals(String otherString)\n.length() // len() function in python\n.charAt(int index) // [] indexing in python\n.substring(int beginIndex, int endIndex) // [:] indexing in python\n.indexOf(String str) // .find() method in python\nTry these methods out"
+    "objectID": "lab02-slides.html#write-getcountryhashmap-string",
+    "href": "lab02-slides.html#write-getcountryhashmap-string",
+    "title": "CSC 210 Lab 02",
+    "section": "Write getCountry(HashMap, String)",
+    "text": "Write getCountry(HashMap, String)\nFor this method you need to return a string with the country name and the total number of methods that country had:\ncountryName + \" had a total of \" + medalCount + \" medals.\""
   },
   {
-    "objectID": "slides-01-03.html#string-methods-solution",
-    "href": "slides-01-03.html#string-methods-solution",
-    "title": "Java Objects",
-    "section": "String methods – solution",
-    "text": "String methods – solution\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n        \n        while (myReader.hasNextLine()) {\n            String line = myReader.nextLine();\n            System.out.println(line.length());\n            System.out.println(line.charAt(0));\n            if (line.length() &gt; 0) System.out.println(line.substring(0, 2));\n            System.out.println(line.indexOf(\"line\"));\n            \n        }\n        myReader.close();\n    }\n\n}"
+    "objectID": "programming-assignment-08.html",
+    "href": "programming-assignment-08.html",
+    "title": "Programming Assignment 08",
+    "section": "",
+    "text": "Deadline: November 13, 2024 – Wednesday, 11:30pm"
   },
   {
-    "objectID": "slides-01-03.html#java-type-casting",
-    "href": "slides-01-03.html#java-type-casting",
-    "title": "Java Objects",
-    "section": "Java type casting",
-    "text": "Java type casting\nBoth Double and Integer classes have methods to cast a string into a double or int\nDouble.valueOf(\"10\");\nInteger.valueOf(\"10\");"
+    "objectID": "programming-assignment-08.html#learning-objectives",
+    "href": "programming-assignment-08.html#learning-objectives",
+    "title": "Programming Assignment 08",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nThe goal of this assignment is to use basic JavaFX to create a GUI output representation of the PA6-Garden program."
+  },
+  {
+    "objectID": "programming-assignment-08.html#the-assignment",
+    "href": "programming-assignment-08.html#the-assignment",
+    "title": "Programming Assignment 08",
+    "section": "The Assignment",
+    "text": "The Assignment\nIn class on Friday March 30th we talked about ways to consider improving your PA6-Garden implementation. In this assignment, you will build on the improved PA6-Garden implemention to visually represent your garden simulation.\nFor PA8, you will be graphically representing each plant in the output as well as handling a ‘delay’ command from the input file that represents how long to wait between the execution of commands. In the video example (PublicTestCases/customPlant.in and PublicTestCases/CustomPlantExample.mp4), each part of a plant (i.e., each character from the PA6 output) is represented by uniquely colored tile on a canvas.\nThe ‘PRINT’ command is also completely excluded from this program. This means that you should not expect any ‘PRINT’ commands from any input file. You can leave in the print handling code if you would like however.\nPlease open and watch ‘PublicTestCases/Example.mp4’ to see an example GUI output for the input file ‘PublicTestCases/Garden.in’. Also see ‘PublicTestCases/customPlant.in’ and ‘PublicTestCases/CustomPlantExample.mp4’. You will be creating a variant of Garden.in for your own unique plant or garden object.\nYou should also be looking at the PA6-Garden writeup to refresh your memory on how it works: https://github.com/UACS210Spring2018/PA-and-Section-Writeups/tree/master/PA6-Garden."
+  },
+  {
+    "objectID": "programming-assignment-08.html#delay-parameter",
+    "href": "programming-assignment-08.html#delay-parameter",
+    "title": "Programming Assignment 08",
+    "section": "Delay parameter",
+    "text": "Delay parameter\nThe input file format for this assignment is exactly the same as that of PA6-Garden, except that you will now have to handle a delay parameter. The delay will be specified on the third line of the input file right under the ‘cols’ parameter. An example input is shown below:\nrows: 1\ncols: 1\ndelay: 3.0\n\nPLANT (0,0) sunflower\nPLANT (2,2) tulip\nPLANT (5,5) iris\nGROW 1\nThe number after ‘delay:’ is a double that represents the time to wait before each command is executed. In the video example (CustomPlantExample.mp4), this delay was set to .5, therefore, each command was executed after waiting a half second."
+  },
+  {
+    "objectID": "programming-assignment-08.html#steps-for-completing-this-assignment",
+    "href": "programming-assignment-08.html#steps-for-completing-this-assignment",
+    "title": "Programming Assignment 08",
+    "section": "Steps for completing this assignment",
+    "text": "Steps for completing this assignment\n\nSee a tutorial on how to install the JavaFX plugin in Eclipse at (https://docs.google.com/document/d/1FUROjRbvIi_WKNYJ-00uprIo2YPHDNd72SrqgwaqKis/edit?usp=sharing). The tutorial is also posted on the CS 210 resources webpage (https://piazza.com/arizona/spring2018/csc210/resources).\nAccept the github assignment for PA8, (https://classroom.github.com/a/JKfUfTBS). Import your PA8 github repository into Eclipse as usual.\nRun the given starter code and see what it does.\nCopy your PA6 code into the Eclipse project.\nImplement the TODO items in the provided PA8Main.java.\nCreate your own copy of Garden.in called myGarden.in that includes planting your unique garden item.\nMake a video of running myGarden.in through your program."
+  },
+  {
+    "objectID": "programming-assignment-08.html#resources",
+    "href": "programming-assignment-08.html#resources",
+    "title": "Programming Assignment 08",
+    "section": "Resources",
+    "text": "Resources\nThe provided code uses some new concepts. We will be covering them in class. Additionally, here are some references.\n\ndrawing to a canvas, https://docs.oracle.com/javafx/2/canvas/jfxpub-canvas.htm\nlambda functions,http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html\ncolors to pick from, https://docs.oracle.com/javase/8/javafx/api/javafx/scene/paint/Color.html"
+  },
+  {
+    "objectID": "programming-assignment-08.html#general-requirements",
+    "href": "programming-assignment-08.html#general-requirements",
+    "title": "Programming Assignment 08",
+    "section": "General requirements",
+    "text": "General requirements\nThis assignment is different from other assignments you’ve had so far in that you are given a lot more freedom to design your output the way you want. You can try to mimic what was done in the video and get the credit for it, but however you choose to output your garden, the following general requirements must be met:\n\nEach plant must be one-of-a-kind, meaning they must be distinguishable from any other plant and the background. In the example video, this is done by using a different color for each plant against a brown background. You do not have to do it this way, for example, you can choose to use an image for each plant instead of a colored tile.\nEach command must be visually noticeable. This means that when ‘GROW 1’ is called for example, it should be visually obvious that every plant just grew by 1. In the example video, grow commands cause more identical tiles to be drawn in some fashion (depending on the plant type) around every plant.\nThere must be a command log which displays commands as they are being executed. In the example video, this is done in a TextArea at the bottom of the garden.\nYou must still handle errors. Errors that don’t cause the program to stop (such as ‘Can’t grow here’) should be distinguishable in the command log. In the video example, the error is fully capitalized and spaced out from surrounding text. For errors that do cause the program to stop, such as ‘Invalid dimension input’ or ‘File not found’ should still print to stdout and exit the program as usual."
+  },
+  {
+    "objectID": "programming-assignment-08.html#grading-criteria",
+    "href": "programming-assignment-08.html#grading-criteria",
+    "title": "Programming Assignment 08",
+    "section": "Grading Criteria",
+    "text": "Grading Criteria\nHalf of the PA8 grade will correctness. For this assignment, this is the GUI output. You should also expect that we might run your program with additional input files besides the ones provided.\nThe other half of the PA8 grade will be your decomposition and code clarity.\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.\nThis program should use fewer than 10 .java files. Each of these files should be (&lt;300 lines).\nEach method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\n\nCode Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format. One would also need to know the command line arguments that should be passed to the program.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement."
+  },
+  {
+    "objectID": "programming-assignment-08.html#submission",
+    "href": "programming-assignment-08.html#submission",
+    "title": "Programming Assignment 08",
+    "section": "Submission",
+    "text": "Submission\nFor this assignment, you are REQUIRED to submit all of the following files to Gradescope before Monday April 9th at 11:30am. * All the Java source files needed to run your program. * myGarden.in * myGarden.mp4, or other video format that can be run on multiple platforms. The video should be between 10 and 15 seconds long.\nTo create the video, you can use a program to record your screen as you run your program, or you can simply record your screen with your smartphone or tablet. Do note however that the video you submit must be of good enough quality for the SL’s to clearly see your garden and command logs.\nWrite your own code. We will be using a tool that finds similar code.\nIt is recommended that when talking with others about the assignment, do not write anything down."
+  },
+  {
+    "objectID": "programming-assignment-09.html",
+    "href": "programming-assignment-09.html",
+    "title": "Programming Assignment 09",
+    "section": "",
+    "text": "Deadline: November 20, 2024 – Wednesday, 11:30pm"
+  },
+  {
+    "objectID": "programming-assignment-09.html#learning-objectives",
+    "href": "programming-assignment-09.html#learning-objectives",
+    "title": "Programming Assignment 09",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nThe goal of this assignment is to improve on basic JavaFX knowledge by adding event-driven GUI programming to the PA8-GardenGUIout program."
+  },
+  {
+    "objectID": "programming-assignment-09.html#the-assignment",
+    "href": "programming-assignment-09.html#the-assignment",
+    "title": "Programming Assignment 09",
+    "section": "The Assignment",
+    "text": "The Assignment\nFor PA9, you will be adding events to the GUI representation of PA8. This means there will be no input file to read from. Instead of reading the input file from the command line arguments, you will read in the number of rows and columns of plots in the garden from the command line. Then along with the garden visualization you will create a TextField where a user can input a garden simulation command (e.g., grow 1, plant (2,3) sunflower, …) and then click on a simulate button to show the results of that command.\nAnother interesting aspect of PA9 is that you will be continuing to refine the Garden simulation code. Some of your code will change and some of the code from PA8 and PA6 should be removed in PA9."
+  },
+  {
+    "objectID": "programming-assignment-09.html#what-needs-to-be-removed",
+    "href": "programming-assignment-09.html#what-needs-to-be-removed",
+    "title": "Programming Assignment 09",
+    "section": "What needs to be removed",
+    "text": "What needs to be removed\nFile reading: Since we are no longer reading commands in from a file, all code that is used to read in from a file is no longer needed. You will still need to parse commands however.\nDelay Code: In the previous assignment a delay was needed to show the output for every command, for this assignment this is no longer needed since we are running one command at a time via a graphical user interface."
+  },
+  {
+    "objectID": "programming-assignment-09.html#what-needs-to-be-added",
+    "href": "programming-assignment-09.html#what-needs-to-be-added",
+    "title": "Programming Assignment 09",
+    "section": "What needs to be added",
+    "text": "What needs to be added\nUser input: Since we will not be reading from a file, we are going to need some way to read in commands from the user. We recommend a TextArea and a button to cause the execution of the command in that TextArea. Feel free to try different approaches.\nEvent Handlers: To use the information that the user provides your code must have at least one Event Handler. This should grab the information from the user and do something with it whenever a specified event occurs. (clicking of a button and/or pressing enter on keyboard)"
+  },
+  {
+    "objectID": "programming-assignment-09.html#what-needs-to-be-changed",
+    "href": "programming-assignment-09.html#what-needs-to-be-changed",
+    "title": "Programming Assignment 09",
+    "section": "What needs to be changed",
+    "text": "What needs to be changed\nCommand line arguments: Instead of reading in a filename from the command line, you will be reading in both the width and height of the garden."
+  },
+  {
+    "objectID": "programming-assignment-09.html#steps-for-completing-this-assignment",
+    "href": "programming-assignment-09.html#steps-for-completing-this-assignment",
+    "title": "Programming Assignment 09",
+    "section": "Steps for completing this assignment",
+    "text": "Steps for completing this assignment\n\nAccept the github assignment for PA9, https://classroom.github.com/a/t1WEMs86.\nImport your PA9 github repository into Eclipse as usual.\nPlay around with the given PA9 starter code that does something with the text a user puts into a text field.\nMake sure your PA8 code works.\nIf it does, then incorporate your PA8 code into your PA9. We strongly recommend you do it in small pieces.\nImplement the functionality provided in this write up for PA9.\nTest your code with various inputs to make sure that it works correctly."
+  },
+  {
+    "objectID": "programming-assignment-09.html#resources",
+    "href": "programming-assignment-09.html#resources",
+    "title": "Programming Assignment 09",
+    "section": "Resources",
+    "text": "Resources\nThe provided code uses some new concepts. We will be covering them in class and/or Section. Additionally, here are some references.\n\nThe example-video.mov file in the starter project demonstrates the baseline functionality for PA9. You will be demonstrating your project to your SL during Section.\nText Field, https://docs.oracle.com/javafx/2/ui_controls/text-field.htm"
+  },
+  {
+    "objectID": "programming-assignment-09.html#general-requirements",
+    "href": "programming-assignment-09.html#general-requirements",
+    "title": "Programming Assignment 09",
+    "section": "General requirements",
+    "text": "General requirements\nThis assignment is different from other assignments you’ve had so far in that you are given a lot more freedom to design your output the way you want. You can try to mimic what was done in the video and get the credit for it, but however you choose to receive graphical input for your garden, the following general requirements must be met:\n\nA user should be able to type in a command and submit it via the GUI. This means that there should be somewhere to insert text and some way to submit that text. Both of these must be intuitive, that means that the user must understand where he/she should insert commands and how to submit said command by only looking at the GUI.\nAs in PA8, each plant must be one-of-a-kind, meaning they must be distinguishable from any other plant and the background. In the example video, this is done by using a different color for each plant against a brown background. You do not have to do it this way, for example, you can choose to use an image for each plant instead of a colored tile.\nAs in PA8, each command must be visually noticeable. This means that when ‘GROW 1’ is called for example, it should be visually obvious that every plant just grew by 1. In the example video, grow commands cause more identical tiles to be drawn in some fashion (depending on the plant type) around every plant.\nAs in PA8, there must be a command log which displays commands as they are being executed. In the example video, this is done in a TextArea at the bottom of the garden.\nAs in PA8, you must still handle errors. Errors that don’t cause the program to stop (such as ‘Can’t grow here’) should be distinguishable in the command log. In the video example, the error is fully capitalized and spaced out from surrounding text. For errors that do cause the program to stop, such as ‘Invalid dimension input’ should still print to stdout and exit the program as usual."
+  },
+  {
+    "objectID": "programming-assignment-09.html#grading-criteria",
+    "href": "programming-assignment-09.html#grading-criteria",
+    "title": "Programming Assignment 09",
+    "section": "Grading Criteria",
+    "text": "Grading Criteria\nHalf of the PA9 grade will be a working GUI. You will be demonstrating your GUI to your SL during Sections April 16th or 17th. Your demonstration must be less than 5 minutes and show all of the above listed criteria.\nThe working GUI must also be demonstrated with code. Submit your PA9 code to gradescope.\nThe other half of the PA9 grade will be your decomposition and code clarity.\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.\nThis program should use fewer than 10 .java files. Each of these files should be (&lt;300 lines).\nEach method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\n\nCode Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format. One would also need to know the command line arguments that should be passed to the program.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement."
+  },
+  {
+    "objectID": "programming-assignment-09.html#submission",
+    "href": "programming-assignment-09.html#submission",
+    "title": "Programming Assignment 09",
+    "section": "Submission",
+    "text": "Submission\nFor this assignment, you are REQUIRED to submit all of the following files to Gradescope before Monday April 16th at 11:30am. * All the Java source files needed to run your program. * If you are trying for the up to 10 extra credit points for going above and beyond, then let your SL know during your demo and summarize what you did extra in a README.md file that you submit to Gradescope.\nWrite your own code. We will be using a tool that finds similar code.\nIt is recommended that when talking with others about the assignment, do not write anything down."
+  },
+  {
+    "objectID": "programming-assignments.html",
+    "href": "programming-assignments.html",
+    "title": "Programming Assignments",
+    "section": "",
+    "text": "Fill out this survey with your GitHub username so that you can get credit for your project submissions.\n\nPA 1\n\nDeadline: September 11, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 2\n\nDeadline: September 18, 2024 – Wednesday, 11:30pm\nInstructions"
+  },
+  {
+    "objectID": "academic-integrity.html",
+    "href": "academic-integrity.html",
+    "title": "Academic Integrity",
+    "section": "",
+    "text": "All work you submit for grading in this course must be your own. Submitting work that includes (minor and/or major) components that are not your own work is considered plagiarism. Instances of plagiarism will be reported to the Dean of Students.\nKeep in mind that all assignments and practice problems provided in this course are meant to help you practice the skills that you will need to do well in all assessments (including on paper quizzes and exams), so it is generally in your best interest to avoid taking shortcuts even on practice problems (which are ungraded).\nSharing your code with others (in addition to copying code from others) is considered a break of the academic integrity code (unauthorized assistance) as well. If code that you claim is yours is found in other students’ submission(s), you will also be reported to the Dean of Students.\nThe university keeps track of multiple offenses. For the College of Science, the second reported offense results in a failing grade for the class in which the second offense occurred.\nGradescope has a similarity tool, which compares all submissions and creates reports with submission overlaps. Similarity reports will be generated also with code generated by AI tools, and code found online.\nThe penalty for breaking the academic integrity code is zero points awarded to the assignment found to be plagiarizes and -5 points from final grade (out of 100 points)."
+  },
+  {
+    "objectID": "slides-03-02.html#two-recursive-algorithms",
+    "href": "slides-03-02.html#two-recursive-algorithms",
+    "title": "Backtracking",
+    "section": "Two recursive algorithms",
+    "text": "Two recursive algorithms\n\nExhaustive Search\nBacktracking\n\nThese are brute-force algorithms\nUsed for problems that have a small and well-defined search space, where it is feasible to check all possible solutions"
+  },
+  {
+    "objectID": "slides-03-02.html#backtracking",
+    "href": "slides-03-02.html#backtracking",
+    "title": "Backtracking",
+    "section": "Backtracking",
+    "text": "Backtracking\nMain idea: find every solution incrementally by trying different options, then abandoning them if they are not suitable\nIn other words: exhaustive search + conditions for suitable solution"
+  },
+  {
+    "objectID": "slides-03-02.html#application-dice-roll-sum",
+    "href": "slides-03-02.html#application-dice-roll-sum",
+    "title": "Backtracking",
+    "section": "Application: Dice roll sum",
+    "text": "Application: Dice roll sum\nWrite a Java application that given two integers representing 1) how many dice to roll, and 2) the target sum of all dice values, it outputs all combinations of dice values that add up to the target sum.\nExample call:\ntargetSum = 7;\ngetValidCombinations(2);\nOutput:\n[1, 6]\n[2, 5]\n[3, 4]\n[4, 3]\n[5, 2]\n[6, 1]"
+  },
+  {
+    "objectID": "slides-03-02.html#solution-1",
+    "href": "slides-03-02.html#solution-1",
+    "title": "Backtracking",
+    "section": "Solution 1",
+    "text": "Solution 1\nimport java.util.ArrayList;\n\n\npublic class DiceBacktracking {\n    \n    static ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = new ArrayList&lt;ArrayList&lt;Integer&gt;&gt; ();\n    static ArrayList&lt;Integer&gt; values = new ArrayList&lt;Integer&gt;();\n    static int targetSum;\n    \n    public static int sumAll(ArrayList&lt;Integer&gt; values) {\n        int sum = 0;\n        for (int v : values) sum += v;\n        return sum;\n    }\n    \n    public static void getValidCombinations(int count) {\n        if (count == 0) {\n            if (sumAll(values) == targetSum) {\n                ArrayList&lt;Integer&gt; valuesToAdd = new ArrayList&lt;Integer&gt;(values);\n                result.add(valuesToAdd);\n            }\n        }\n        else {\n            for (int v = 1; v &lt;= 6; v++) {\n                values.add(v); \n                getValidCombinations(count - 1);\n                values.remove(values.size() - 1);\n            }\n        }\n    }\n\n    public static void main(String[] args) {\n        \n        targetSum = 7;\n        getValidCombinations(2);\n        \n        for (ArrayList&lt;Integer&gt; v : result) System.out.println(v);\n        \n    }\n}"
+  },
+  {
+    "objectID": "slides-03-02.html#optimizations-pruning",
+    "href": "slides-03-02.html#optimizations-pruning",
+    "title": "Backtracking",
+    "section": "Optimizations (Pruning)",
+    "text": "Optimizations (Pruning)\nWe can preemptively stop, or prune, branches in the decision tree that cannot lead to a valid solution:\n\ncurrent sum is already too high (rolling all 1s in the remaining dice will cause it to go over target sum)\ncurrent sum is already too low (rolling all 6s in the remaining dice will cause it to be under target sum)"
+  },
+  {
+    "objectID": "slides-03-02.html#solution-2",
+    "href": "slides-03-02.html#solution-2",
+    "title": "Backtracking",
+    "section": "Solution 2",
+    "text": "Solution 2\nimport java.util.ArrayList;\n\n\npublic class DiceBacktracking {\n    \n    static ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = new ArrayList&lt;ArrayList&lt;Integer&gt;&gt; ();\n    static ArrayList&lt;Integer&gt; values = new ArrayList&lt;Integer&gt;();\n    static int targetSum;\n    \n    \n    public static void getValidCombinations(int count, int currentSum) {\n        if (count == 0) {\n            if (currentSum == targetSum) {\n                ArrayList&lt;Integer&gt; valuesToAdd = new ArrayList&lt;Integer&gt;(values);\n                result.add(valuesToAdd);\n            }\n        } else if (currentSum + 1 * count &gt; targetSum ||\n                   currentSum + 6 * count &lt; targetSum) {\n                      return;\n        } else {\n            for (int v = 1; v &lt;= 6; v++) {\n                values.add(v);\n                getValidCombinations(count - 1, currentSum + v);\n                values.remove(values.size() - 1);\n            }\n        }\n    }\n\n    public static void main(String[] args) {\n        \n        targetSum = 7;\n        getValidCombinations(2, 0);\n        \n        for (ArrayList&lt;Integer&gt; v : result) System.out.println(v);\n        \n    }\n}"
+  },
+  {
+    "objectID": "short-assignment-03.html",
+    "href": "short-assignment-03.html",
+    "title": "Lab 03",
+    "section": "",
+    "text": "The goal of today’s lab session is to learn about peer review in regards to our class and code review in industry. In this section, you will be introduced to Aropa, the peer reviewing tool we will be using, and write your first two peer reviews.\nStart the section by reading about the benefits of Code Review in industry by following the link below.\nhttps://blog.fullstory.com/what-we-learned-from-google-code-reviews-arent-just-for-catching-bugs/\n\n\n\nYou will need to go to the Aropa website, click on the U of A logo or select the University of Arizona on the dropdown menu, and then log in using your UA netid and the class code 386198. The website is linked below and the same instructions are posted on Piazza.\nhttps://aropa2.gla.ac.uk/aropa/aropa.php\nYou will be prompted to change your password. Choose a secure password that you will remember as you will use this same account for peer reviews in the future.\n\n\n\nOverview : Complete two peer reviews for PA2.\n\n\nYou will need to upload your PA2main.java file first. If you do not have access to your PA2main from the computer you are on, remember that you can download this file through your Gradescope account.\nTODO: Add Aropa usage instructions once I am able to set up the assignment and see the student’s view.\n\n\n\nYou will be responding to the statements below in regards to two other students’ code. You will be ranking your agreement of how well the statements relate to the student’s code on a scale of Strongly Agree to Strongly Disagree.\nIn addition to the rankings, you will have a comment block below to add a rational for your ranking and commentary on how the student could improve. When writing your comments, keep the Department of Computer Science’s code of conduct (https://www2.cs.arizona.edu/codeofconduct.pdf) in mind. Your feedback should be constructive, polite, and contribute to a positive learning environment.\n\nClarity: The student’s code is easily readable. This being able to read a method in no more than 5-7 minutes and being able to read each method without scrolling.\nClarity: The students code is well commented, with complex functions having a descriptive comment, comments inside of non-trivial methods to elaborate on complex code, and a class comment with usage and file format.\nDecomposition: The student avoids nested loops or conditionals and chaining to self-defined methods.\nDecomposition: The student’s code exhibits good decomposition. They used all non- static methods and only turned in one source file.\nStyle: The code follows the style guidelines. No lines are longer than 80 columns, does not mix tabs and spaces and has curly brackets on the same line as the loop or conditional."
+  },
+  {
+    "objectID": "short-assignment-03.html#introduction",
+    "href": "short-assignment-03.html#introduction",
+    "title": "Lab 03",
+    "section": "",
+    "text": "The goal of today’s lab session is to learn about peer review in regards to our class and code review in industry. In this section, you will be introduced to Aropa, the peer reviewing tool we will be using, and write your first two peer reviews.\nStart the section by reading about the benefits of Code Review in industry by following the link below.\nhttps://blog.fullstory.com/what-we-learned-from-google-code-reviews-arent-just-for-catching-bugs/"
+  },
+  {
+    "objectID": "short-assignment-03.html#setup-for-peer-review",
+    "href": "short-assignment-03.html#setup-for-peer-review",
+    "title": "Lab 03",
+    "section": "",
+    "text": "You will need to go to the Aropa website, click on the U of A logo or select the University of Arizona on the dropdown menu, and then log in using your UA netid and the class code 386198. The website is linked below and the same instructions are posted on Piazza.\nhttps://aropa2.gla.ac.uk/aropa/aropa.php\nYou will be prompted to change your password. Choose a secure password that you will remember as you will use this same account for peer reviews in the future."
+  },
+  {
+    "objectID": "short-assignment-03.html#the-assignment",
+    "href": "short-assignment-03.html#the-assignment",
+    "title": "Lab 03",
+    "section": "",
+    "text": "Overview : Complete two peer reviews for PA2.\n\n\nYou will need to upload your PA2main.java file first. If you do not have access to your PA2main from the computer you are on, remember that you can download this file through your Gradescope account.\nTODO: Add Aropa usage instructions once I am able to set up the assignment and see the student’s view.\n\n\n\nYou will be responding to the statements below in regards to two other students’ code. You will be ranking your agreement of how well the statements relate to the student’s code on a scale of Strongly Agree to Strongly Disagree.\nIn addition to the rankings, you will have a comment block below to add a rational for your ranking and commentary on how the student could improve. When writing your comments, keep the Department of Computer Science’s code of conduct (https://www2.cs.arizona.edu/codeofconduct.pdf) in mind. Your feedback should be constructive, polite, and contribute to a positive learning environment.\n\nClarity: The student’s code is easily readable. This being able to read a method in no more than 5-7 minutes and being able to read each method without scrolling.\nClarity: The students code is well commented, with complex functions having a descriptive comment, comments inside of non-trivial methods to elaborate on complex code, and a class comment with usage and file format.\nDecomposition: The student avoids nested loops or conditionals and chaining to self-defined methods.\nDecomposition: The student’s code exhibits good decomposition. They used all non- static methods and only turned in one source file.\nStyle: The code follows the style guidelines. No lines are longer than 80 columns, does not mix tabs and spaces and has curly brackets on the same line as the loop or conditional."
+  },
+  {
+    "objectID": "slides-03-01.html#two-recursive-algorithms",
+    "href": "slides-03-01.html#two-recursive-algorithms",
+    "title": "Exhaustive Search",
+    "section": "Two recursive algorithms",
+    "text": "Two recursive algorithms\n\nExhaustive Search\nBacktracking\n\nThese are brute-force algorithms\nUsed for problems that have a small and well-defined search space, where it is feasible to check all possible solutions"
+  },
+  {
+    "objectID": "slides-03-01.html#exhaustive-search",
+    "href": "slides-03-01.html#exhaustive-search",
+    "title": "Exhaustive Search",
+    "section": "Exhaustive Search",
+    "text": "Exhaustive Search\nAlso called recursive enumeration\nMain idea: systematically identify every possible solution to a problem"
+  },
+  {
+    "objectID": "slides-03-01.html#print-all-possible-binary-numbers",
+    "href": "slides-03-01.html#print-all-possible-binary-numbers",
+    "title": "Exhaustive Search",
+    "section": "Print all possible binary numbers",
+    "text": "Print all possible binary numbers\nWrite a Java application that given an integer n, it prints all binary numbers that have n digits.\nMake sure your application outputs one binary number per line, in ascending order.\nHINTS:\n\nBuild a string (starting with empty string) and print it out (when? when do you stop building the string? what’s the condition?)\nTwo possibilities for each character concatenated to the string: '0' or '1'"
+  },
+  {
+    "objectID": "slides-03-01.html#print-all-possible-binary-numbers-1",
+    "href": "slides-03-01.html#print-all-possible-binary-numbers-1",
+    "title": "Exhaustive Search",
+    "section": "Print all possible binary numbers",
+    "text": "Print all possible binary numbers\nThe call:\ngetBinary(3, \"\");\nPrints out:\n000\n001\n010\n011\n100\n101\n110\n111"
+  },
+  {
+    "objectID": "slides-03-01.html#all-possible-binary-numbers-solution",
+    "href": "slides-03-01.html#all-possible-binary-numbers-solution",
+    "title": "Exhaustive Search",
+    "section": "All possible binary numbers – solution",
+    "text": "All possible binary numbers – solution\npublic class AllBinary {\n\n    public static void getBinary(int digits, String number) {\n        if (digits == 0) { // base case, no digits left to add\n            System.out.println(number);\n        } else {\n            getBinary(digits - 1, number + \"0\");\n            getBinary(digits - 1, number + \"1\");\n        }\n    }\n    \n    public static void main(String[] args) {\n        getBinary(3, \"\");\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-03-01.html#creating-an-arraylist-of-solutions",
+    "href": "slides-03-01.html#creating-an-arraylist-of-solutions",
+    "title": "Exhaustive Search",
+    "section": "Creating an ArrayList of solutions",
+    "text": "Creating an ArrayList of solutions\nWhat if instead of printing out a solution, I wanted to create an ArrayList of solutions?"
+  },
+  {
+    "objectID": "slides-03-01.html#creating-an-arraylist-of-solutions-1",
+    "href": "slides-03-01.html#creating-an-arraylist-of-solutions-1",
+    "title": "Exhaustive Search",
+    "section": "Creating an ArrayList of solutions",
+    "text": "Creating an ArrayList of solutions\nimport java.util.ArrayList;\n\npublic class AllBinary {\n    \n    static ArrayList&lt;String&gt; result = new ArrayList&lt;String&gt;();\n\n    public static void getBinary(int digits, String number) {\n        if (digits == 0) {\n            result.add(number);\n        } else {\n            getBinary(digits - 1, number + \"0\");\n            getBinary(digits - 1, number + \"1\");\n        }\n        \n    }\n    \n    public static void main(String[] args) {\n        getBinary(4, \"\");\n        System.out.println(result);\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-03-01.html#print-all-possible-decimal-numbers",
+    "href": "slides-03-01.html#print-all-possible-decimal-numbers",
+    "title": "Exhaustive Search",
+    "section": "Print all possible decimal numbers",
+    "text": "Print all possible decimal numbers\nWrite a Java application that given an integer n, it prints all decimal numbers that have n digits.\nHINT:\n\nSame as before (for binary numbers), the difference is that instead of just two choices per character, we now have 10 character choices for each position in the number\nUse a for loop to iterate over the digits 0 to 9"
+  },
+  {
+    "objectID": "slides-03-01.html#print-all-possible-decimal-numbers-1",
+    "href": "slides-03-01.html#print-all-possible-decimal-numbers-1",
+    "title": "Exhaustive Search",
+    "section": "Print all possible decimal numbers",
+    "text": "Print all possible decimal numbers\nThe call:\ngetDecimal(2, \"\");\nPrints out:\n00\n01\n02\n03\n..\n94\n95\n96\n97\n98\n99"
+  },
+  {
+    "objectID": "slides-03-01.html#all-possible-decimal-numbers-solution",
+    "href": "slides-03-01.html#all-possible-decimal-numbers-solution",
+    "title": "Exhaustive Search",
+    "section": "All possible decimal numbers – solution",
+    "text": "All possible decimal numbers – solution\nimport java.util.ArrayList;\n\npublic class AllDecimal {\n    \n    static ArrayList&lt;String&gt; result = new ArrayList&lt;String&gt;();\n    \n    public static void getDecimal(int digits, String number) {\n        if (digits == 0) {\n            result.add(number);\n        } else {\n            for (int n = 0; n &lt; 10; n++) {\n                getDecimal(digits - 1, number + n);\n            }\n            \n        }\n        \n    } // getDecimal\n\n    public static void main(String[] args) {\n        \n        getDecimal(2, \"\");\n        \n        for (String number : result) {\n            System.out.println(number);\n        }\n\n    }\n}"
   },
   {
     "objectID": "slides-01-02.html#before-we-start",
@@ -1008,452 +1274,242 @@
     "text": "Solution 2\nimport java.util.Scanner;\n\npublic class LeapYear {\n    \n    public static String isLeap(int year) {\n        boolean isLeapYear;\n        \n        isLeapYear = ((year % 100 != 0) && (year % 4 == 0));\n        isLeapYear = isLeapYear || ((year % 400 == 0));\n        \n        if (isLeapYear) return \"Leap Year\";\n        else return \"Regular Year\";\n\n    }\n\n    public static void main(String[] args) {\n        Scanner userInput = new Scanner(System.in);\n        \n        // prints out message to user\n        System.out.print(\"Enter a year: \");\n      \n        // get integer from keyboard entry\n        int year = userInput.nextInt();\n        userInput.close();\n        \n        System.out.println(isLeap(year));\n\n    }\n}"
   },
   {
-    "objectID": "slides-03-01.html#two-recursive-algorithms",
-    "href": "slides-03-01.html#two-recursive-algorithms",
-    "title": "Exhaustive Search",
-    "section": "Two recursive algorithms",
-    "text": "Two recursive algorithms\n\nExhaustive Search\nBacktracking\n\nThese are brute-force algorithms\nUsed for problems that have a small and well-defined search space, where it is feasible to check all possible solutions"
+    "objectID": "slides-01-03.html#classes",
+    "href": "slides-01-03.html#classes",
+    "title": "Java Objects",
+    "section": "Classes",
+    "text": "Classes\nWhat is a class?"
   },
   {
-    "objectID": "slides-03-01.html#exhaustive-search",
-    "href": "slides-03-01.html#exhaustive-search",
-    "title": "Exhaustive Search",
-    "section": "Exhaustive Search",
-    "text": "Exhaustive Search\nAlso called recursive enumeration\nMain idea: systematically identify every possible solution to a problem"
+    "objectID": "slides-01-03.html#classes-1",
+    "href": "slides-01-03.html#classes-1",
+    "title": "Java Objects",
+    "section": "Classes",
+    "text": "Classes\n\nCollection of methods and attributes (information/values)\nTemplate, blueprint of cookie cutter to construct many objects\n\nModularity: Classes allow us to split the problem to be solved into distinct tasks"
   },
   {
-    "objectID": "slides-03-01.html#print-all-possible-binary-numbers",
-    "href": "slides-03-01.html#print-all-possible-binary-numbers",
-    "title": "Exhaustive Search",
-    "section": "Print all possible binary numbers",
-    "text": "Print all possible binary numbers\nWrite a Java application that given an integer n, it prints all binary numbers that have n digits.\nMake sure your application outputs one binary number per line, in ascending order.\nHINTS:\n\nBuild a string (starting with empty string) and print it out (when? when do you stop building the string? what’s the condition?)\nTwo possibilities for each character concatenated to the string: '0' or '1'"
+    "objectID": "slides-01-03.html#scanner",
+    "href": "slides-01-03.html#scanner",
+    "title": "Java Objects",
+    "section": "Scanner",
+    "text": "Scanner\nThe Scanner class (from java.util) is used to get different types of input\nWe use System.in to read keyboard input:\n    Scanner myObj = new Scanner(System.in);  // Scanner object\n    String userInput = myObj.nextLine();  // method to read user input\n    System.out.println(userInput); \nFor files, we need the File class (from java.io)\n    File myFile = new File(\"myTextFile.txt\");\n    Scanner myReader = new Scanner(myFile);\nHowever, we need to deal with FileNotFoundException"
   },
   {
-    "objectID": "slides-03-01.html#print-all-possible-binary-numbers-1",
-    "href": "slides-03-01.html#print-all-possible-binary-numbers-1",
-    "title": "Exhaustive Search",
-    "section": "Print all possible binary numbers",
-    "text": "Print all possible binary numbers\nThe call:\ngetBinary(3, \"\");\nPrints out:\n000\n001\n010\n011\n100\n101\n110\n111"
+    "objectID": "slides-01-03.html#scanner-1",
+    "href": "slides-01-03.html#scanner-1",
+    "title": "Java Objects",
+    "section": "Scanner",
+    "text": "Scanner\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n    }\n\n}"
   },
   {
-    "objectID": "slides-03-01.html#all-possible-binary-numbers-solution",
-    "href": "slides-03-01.html#all-possible-binary-numbers-solution",
-    "title": "Exhaustive Search",
-    "section": "All possible binary numbers – solution",
-    "text": "All possible binary numbers – solution\npublic class AllBinary {\n\n    public static void getBinary(int digits, String number) {\n        if (digits == 0) { // base case, no digits left to add\n            System.out.println(number);\n        } else {\n            getBinary(digits - 1, number + \"0\");\n            getBinary(digits - 1, number + \"1\");\n        }\n    }\n    \n    public static void main(String[] args) {\n        getBinary(3, \"\");\n    }\n\n}"
+    "objectID": "slides-01-03.html#scanner-2",
+    "href": "slides-01-03.html#scanner-2",
+    "title": "Java Objects",
+    "section": "Scanner",
+    "text": "Scanner\nWe use the same Scanner method .nextLine()\nString line = myReader.nextLine();\nTask:\n\nRead a line in the file and and print it out\nRead all lines in a file and print each one out"
   },
   {
-    "objectID": "slides-03-01.html#creating-an-arraylist-of-solutions",
-    "href": "slides-03-01.html#creating-an-arraylist-of-solutions",
-    "title": "Exhaustive Search",
-    "section": "Creating an ArrayList of solutions",
-    "text": "Creating an ArrayList of solutions\nWhat if instead of printing out a solution, I wanted to create an ArrayList of solutions?"
+    "objectID": "slides-01-03.html#read-file-line-solution-1",
+    "href": "slides-01-03.html#read-file-line-solution-1",
+    "title": "Java Objects",
+    "section": "Read file line – solution 1",
+    "text": "Read file line – solution 1\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n        \n        String line1 = myReader.nextLine();\n        System.out.println(line1);\n        \n        String line2 = myReader.nextLine();\n        System.out.println(line2);\n        \n        myReader.close();\n    }\n\n}"
   },
   {
-    "objectID": "slides-03-01.html#creating-an-arraylist-of-solutions-1",
-    "href": "slides-03-01.html#creating-an-arraylist-of-solutions-1",
-    "title": "Exhaustive Search",
-    "section": "Creating an ArrayList of solutions",
-    "text": "Creating an ArrayList of solutions\nimport java.util.ArrayList;\n\npublic class AllBinary {\n    \n    static ArrayList&lt;String&gt; result = new ArrayList&lt;String&gt;();\n\n    public static void getBinary(int digits, String number) {\n        if (digits == 0) {\n            result.add(number);\n        } else {\n            getBinary(digits - 1, number + \"0\");\n            getBinary(digits - 1, number + \"1\");\n        }\n        \n    }\n    \n    public static void main(String[] args) {\n        getBinary(4, \"\");\n        System.out.println(result);\n    }\n\n}"
+    "objectID": "slides-01-03.html#read-file-line-solution-2",
+    "href": "slides-01-03.html#read-file-line-solution-2",
+    "title": "Java Objects",
+    "section": "Read file line – solution 2",
+    "text": "Read file line – solution 2\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n        \n        System.out.println(myReader.nextLine());\n        System.out.println(myReader.nextLine());\n        \n        myReader.close();\n    }\n\n}"
   },
   {
-    "objectID": "slides-03-01.html#print-all-possible-decimal-numbers",
-    "href": "slides-03-01.html#print-all-possible-decimal-numbers",
-    "title": "Exhaustive Search",
-    "section": "Print all possible decimal numbers",
-    "text": "Print all possible decimal numbers\nWrite a Java application that given an integer n, it prints all decimal numbers that have n digits.\nHINT:\n\nSame as before (for binary numbers), the difference is that instead of just two choices per character, we now have 10 character choices for each position in the number\nUse a for loop to iterate over the digits 0 to 9"
+    "objectID": "slides-01-03.html#while-loop",
+    "href": "slides-01-03.html#while-loop",
+    "title": "Java Objects",
+    "section": "While loop",
+    "text": "While loop\nWhat if we didn’t know how many lines there were in the file?\nThe method .hasNextLine() returns a boolean\nModify the previous solution to generalize it to any number of lines"
   },
   {
-    "objectID": "slides-03-01.html#print-all-possible-decimal-numbers-1",
-    "href": "slides-03-01.html#print-all-possible-decimal-numbers-1",
-    "title": "Exhaustive Search",
-    "section": "Print all possible decimal numbers",
-    "text": "Print all possible decimal numbers\nThe call:\ngetDecimal(2, \"\");\nPrints out:\n00\n01\n02\n03\n..\n94\n95\n96\n97\n98\n99"
+    "objectID": "slides-01-03.html#while-loop-solution",
+    "href": "slides-01-03.html#while-loop-solution",
+    "title": "Java Objects",
+    "section": "While loop – solution",
+    "text": "While loop – solution\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n        \n        while (myReader.hasNextLine()) {\n            System.out.println(myReader.nextLine());\n        }\n        myReader.close();\n    }\n\n}"
   },
   {
-    "objectID": "slides-03-01.html#all-possible-decimal-numbers-solution",
-    "href": "slides-03-01.html#all-possible-decimal-numbers-solution",
-    "title": "Exhaustive Search",
-    "section": "All possible decimal numbers – solution",
-    "text": "All possible decimal numbers – solution\nimport java.util.ArrayList;\n\npublic class AllDecimal {\n    \n    static ArrayList&lt;String&gt; result = new ArrayList&lt;String&gt;();\n    \n    public static void getDecimal(int digits, String number) {\n        if (digits == 0) {\n            result.add(number);\n        } else {\n            for (int n = 0; n &lt; 10; n++) {\n                getDecimal(digits - 1, number + n);\n            }\n            \n        }\n        \n    } // getDecimal\n\n    public static void main(String[] args) {\n        \n        getDecimal(2, \"\");\n        \n        for (String number : result) {\n            System.out.println(number);\n        }\n\n    }\n}"
+    "objectID": "slides-01-03.html#string",
+    "href": "slides-01-03.html#string",
+    "title": "Java Objects",
+    "section": "String",
+    "text": "String\nString is a class (title capitalization)\nWe can construct strings two ways:\nString str = new String(\"with new\");\nString str2 = \"Don't need new\"\nSome string methods:\n.equals(String otherString)\n.length() // len() function in python\n.charAt(int index) // [] indexing in python\n.substring(int beginIndex, int endIndex) // [:] indexing in python\n.indexOf(String str) // .find() method in python\nTry these methods out"
   },
   {
-    "objectID": "short-assignment-03.html",
-    "href": "short-assignment-03.html",
-    "title": "Lab 03",
-    "section": "",
-    "text": "The goal of today’s lab session is to learn about peer review in regards to our class and code review in industry. In this section, you will be introduced to Aropa, the peer reviewing tool we will be using, and write your first two peer reviews.\nStart the section by reading about the benefits of Code Review in industry by following the link below.\nhttps://blog.fullstory.com/what-we-learned-from-google-code-reviews-arent-just-for-catching-bugs/\n\n\n\nYou will need to go to the Aropa website, click on the U of A logo or select the University of Arizona on the dropdown menu, and then log in using your UA netid and the class code 386198. The website is linked below and the same instructions are posted on Piazza.\nhttps://aropa2.gla.ac.uk/aropa/aropa.php\nYou will be prompted to change your password. Choose a secure password that you will remember as you will use this same account for peer reviews in the future.\n\n\n\nOverview : Complete two peer reviews for PA2.\n\n\nYou will need to upload your PA2main.java file first. If you do not have access to your PA2main from the computer you are on, remember that you can download this file through your Gradescope account.\nTODO: Add Aropa usage instructions once I am able to set up the assignment and see the student’s view.\n\n\n\nYou will be responding to the statements below in regards to two other students’ code. You will be ranking your agreement of how well the statements relate to the student’s code on a scale of Strongly Agree to Strongly Disagree.\nIn addition to the rankings, you will have a comment block below to add a rational for your ranking and commentary on how the student could improve. When writing your comments, keep the Department of Computer Science’s code of conduct (https://www2.cs.arizona.edu/codeofconduct.pdf) in mind. Your feedback should be constructive, polite, and contribute to a positive learning environment.\n\nClarity: The student’s code is easily readable. This being able to read a method in no more than 5-7 minutes and being able to read each method without scrolling.\nClarity: The students code is well commented, with complex functions having a descriptive comment, comments inside of non-trivial methods to elaborate on complex code, and a class comment with usage and file format.\nDecomposition: The student avoids nested loops or conditionals and chaining to self-defined methods.\nDecomposition: The student’s code exhibits good decomposition. They used all non- static methods and only turned in one source file.\nStyle: The code follows the style guidelines. No lines are longer than 80 columns, does not mix tabs and spaces and has curly brackets on the same line as the loop or conditional."
+    "objectID": "slides-01-03.html#string-methods-solution",
+    "href": "slides-01-03.html#string-methods-solution",
+    "title": "Java Objects",
+    "section": "String methods – solution",
+    "text": "String methods – solution\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class FileReadExample {\n\n    public static void main(String[] args) throws FileNotFoundException {\n        File myFile = new File(\"myTextFile.txt\");\n        Scanner myReader = new Scanner(myFile);\n        \n        while (myReader.hasNextLine()) {\n            String line = myReader.nextLine();\n            System.out.println(line.length());\n            System.out.println(line.charAt(0));\n            if (line.length() &gt; 0) System.out.println(line.substring(0, 2));\n            System.out.println(line.indexOf(\"line\"));\n            \n        }\n        myReader.close();\n    }\n\n}"
   },
   {
-    "objectID": "short-assignment-03.html#introduction",
-    "href": "short-assignment-03.html#introduction",
-    "title": "Lab 03",
-    "section": "",
-    "text": "The goal of today’s lab session is to learn about peer review in regards to our class and code review in industry. In this section, you will be introduced to Aropa, the peer reviewing tool we will be using, and write your first two peer reviews.\nStart the section by reading about the benefits of Code Review in industry by following the link below.\nhttps://blog.fullstory.com/what-we-learned-from-google-code-reviews-arent-just-for-catching-bugs/"
+    "objectID": "slides-01-03.html#java-type-casting",
+    "href": "slides-01-03.html#java-type-casting",
+    "title": "Java Objects",
+    "section": "Java type casting",
+    "text": "Java type casting\nBoth Double and Integer classes have methods to cast a string into a double or int\nDouble.valueOf(\"10\");\nInteger.valueOf(\"10\");"
   },
   {
-    "objectID": "short-assignment-03.html#setup-for-peer-review",
-    "href": "short-assignment-03.html#setup-for-peer-review",
-    "title": "Lab 03",
-    "section": "",
-    "text": "You will need to go to the Aropa website, click on the U of A logo or select the University of Arizona on the dropdown menu, and then log in using your UA netid and the class code 386198. The website is linked below and the same instructions are posted on Piazza.\nhttps://aropa2.gla.ac.uk/aropa/aropa.php\nYou will be prompted to change your password. Choose a secure password that you will remember as you will use this same account for peer reviews in the future."
+    "objectID": "slides-04-01.html#static-methods",
+    "href": "slides-04-01.html#static-methods",
+    "title": "Classes and Methods",
+    "section": "static methods",
+    "text": "static methods\nThe Java construct for implementing functions is known as the static method."
   },
   {
-    "objectID": "short-assignment-03.html#the-assignment",
-    "href": "short-assignment-03.html#the-assignment",
-    "title": "Lab 03",
-    "section": "",
-    "text": "Overview : Complete two peer reviews for PA2.\n\n\nYou will need to upload your PA2main.java file first. If you do not have access to your PA2main from the computer you are on, remember that you can download this file through your Gradescope account.\nTODO: Add Aropa usage instructions once I am able to set up the assignment and see the student’s view.\n\n\n\nYou will be responding to the statements below in regards to two other students’ code. You will be ranking your agreement of how well the statements relate to the student’s code on a scale of Strongly Agree to Strongly Disagree.\nIn addition to the rankings, you will have a comment block below to add a rational for your ranking and commentary on how the student could improve. When writing your comments, keep the Department of Computer Science’s code of conduct (https://www2.cs.arizona.edu/codeofconduct.pdf) in mind. Your feedback should be constructive, polite, and contribute to a positive learning environment.\n\nClarity: The student’s code is easily readable. This being able to read a method in no more than 5-7 minutes and being able to read each method without scrolling.\nClarity: The students code is well commented, with complex functions having a descriptive comment, comments inside of non-trivial methods to elaborate on complex code, and a class comment with usage and file format.\nDecomposition: The student avoids nested loops or conditionals and chaining to self-defined methods.\nDecomposition: The student’s code exhibits good decomposition. They used all non- static methods and only turned in one source file.\nStyle: The code follows the style guidelines. No lines are longer than 80 columns, does not mix tabs and spaces and has curly brackets on the same line as the loop or conditional."
+    "objectID": "slides-04-01.html#methods",
+    "href": "slides-04-01.html#methods",
+    "title": "Classes and Methods",
+    "section": "Methods",
+    "text": "Methods\n\nMultiple arguments – methods can take on more than one argument, and therefore can have more than one parameter variable\nOverloading – methods whose signatures differ are different methods. Using the same name for two methods whose signatures differ is known as overloading.\nSingle return value A Java method provides only one return value to the caller, of the type declared in the method signature"
   },
   {
-    "objectID": "short-assignment-02.html",
-    "href": "short-assignment-02.html",
-    "title": "Lab 02",
-    "section": "",
-    "text": "In this week’s lab, we will be practicing reading .csv files, and manipulating HashMaps in Java.\nWe will be working with data on the 2024 olympics.\nThe program should have the following usage:\n    java MedalInfo COMMAND optional\nThe commands consist of MAX, MIN and COUNTRY.\nEach command will be most easily implemented with a HashMap. Therefore, your implementation will read in the csv file and be using a HashMap based on the medallists.csv file Kaggle.\nMAX - This function prints the country name with the most medals. Here’s what the message should look like:\nUnited States had the most medals with a total of 330 medals.\nMIN - This function prints the country name with the least medals. Here’s what the message should look like:\nCyprus had the fewest medals with a total of 1 medal.\nCOUNTRY - The country function requires an additional string argument on the command line. This string is the name of a country. Here’s what the message should look like when the second string argument is \"Brazil\":\nBrazil had a total of 67 medals.\n\n\n\nYour methods should work with this main method:\npublic static void main(String[] args) throws FileNotFoundException {\n        HashMap&lt;String, Integer&gt; countryCount = getMedalCount(\"medallists.csv\");\n        \n        if (args[0].equals(\"MAX\")) {\n            System.out.println(getMax(countryCount));\n        }\n        \n        if (args[0].equals(\"MIN\")) {\n            System.out.println(getMin(countryCount));\n        }\n        \n        if (args[0].equals(\"COUNTRY\")) {\n            System.out.println(getCountry(countryCount, args[1]));\n        }\n        \n\n    }\n\n\n\nAdd the package information at the top of your .java file:\npackage com.gradescope.medalinfo;\nSubmit your MedalInfo.java file to gradescope."
+    "objectID": "slides-04-01.html#methods-1",
+    "href": "slides-04-01.html#methods-1",
+    "title": "Classes and Methods",
+    "section": "Methods",
+    "text": "Methods\n\nScope – The scope of a variable is the part of the program that can refer to that variable by name. The scope of a variable declared in a method is limited to that method’s body. You cannot refer to a variable in one method that is declared in another.\n\nSource: Programming in Java, Sedgewick & Wayne (2024)"
   },
   {
-    "objectID": "short-assignment-02.html#introduction",
-    "href": "short-assignment-02.html#introduction",
-    "title": "Lab 02",
-    "section": "",
-    "text": "In this week’s lab, we will be practicing reading .csv files, and manipulating HashMaps in Java.\nWe will be working with data on the 2024 olympics.\nThe program should have the following usage:\n    java MedalInfo COMMAND optional\nThe commands consist of MAX, MIN and COUNTRY.\nEach command will be most easily implemented with a HashMap. Therefore, your implementation will read in the csv file and be using a HashMap based on the medallists.csv file Kaggle.\nMAX - This function prints the country name with the most medals. Here’s what the message should look like:\nUnited States had the most medals with a total of 330 medals.\nMIN - This function prints the country name with the least medals. Here’s what the message should look like:\nCyprus had the fewest medals with a total of 1 medal.\nCOUNTRY - The country function requires an additional string argument on the command line. This string is the name of a country. Here’s what the message should look like when the second string argument is \"Brazil\":\nBrazil had a total of 67 medals."
+    "objectID": "slides-04-01.html#constructors",
+    "href": "slides-04-01.html#constructors",
+    "title": "Classes and Methods",
+    "section": "Constructors",
+    "text": "Constructors\nSame name as the class, no return type"
   },
   {
-    "objectID": "short-assignment-02.html#setup",
-    "href": "short-assignment-02.html#setup",
-    "title": "Lab 02",
-    "section": "",
-    "text": "Go to the course webpage, click resources, and then click on the Section 2 URL. It will be the URL for accepting the github classroom assignment for Section 2.\nThen do the following: * Click on .travis.yml in github. Edit it to put in your email and commit that change on github. If you do not do this, you will run into issues later with pushing and TravisCI.\n\nClick on the green “Clone or download” button on the right of the web page and copy the provided URL.\nImport your Section 2 repository into Eclipse.\n\nopen Eclipse\nFile —&gt; Import —&gt; Git —&gt; Projects from Git, Next, Clone URI, Next, paste in repository URL from github\nNext, Select the master branch, Next, make the local destination /home/username/eclipse-workspace/Section2-ExhaustiveSearch-yourgithubid.\nNext, Import existing Eclipse projects, Next, Finish.\n\n\nNow you are ready to start coding."
+    "objectID": "slides-04-01.html#public-vs.-private",
+    "href": "slides-04-01.html#public-vs.-private",
+    "title": "Classes and Methods",
+    "section": "Public vs. Private",
+    "text": "Public vs. Private\npublic – accessible from all methods of the class and in the scope of where the object is declared\nprivate – known only in the class"
   },
   {
-    "objectID": "short-assignment-02.html#the-assignment",
-    "href": "short-assignment-02.html#the-assignment",
-    "title": "Lab 02",
-    "section": "",
-    "text": "This is the first assignment where you will have multiple classes. Part One should be completed in the Section2Binary.java file and Part Two should be completed in the Section2Dice.java file.\nPart One: Exhaustively print out 0-2^N - 1, where N is the number of bits, in ascending order in binary.\nPart Two: Exhaustively print out the dice rolling combinations for N six-sided dice.\n\n\nCopy the code below into main and run it to make sure it compiles and prints. This initiates the first TravisCI build.\n        System.out.println(\"Welcome to Section 2!\");\nThen commit and push your changes to github. Here is a reminder of the steps: Right click on Section1Main.java –&gt; Team –&gt; Commit, move unstaged files that you want to commit into staged changes, put in a commit message, and then click commit and push.\n\n\n\nFor Part 1 of this section we are completing a class that generates and prints out in ascending order all of the binary representations of the numbers 0-2^N - 1, where N represents the number of bits.\nFor example, if N = 2, then the output would be:\n00\n01\n10\n11\nIf you would like a more in-depth understanding of binary, refer to the lecture slides or do a quick Google search. Additionally, this activity relies on the enumerate and process structure described in class, so you should refer to those slides for help while working through this section.\n\n\nStart by printing out the passed in N from the command line. Code is already provided to read the first command line argument.\nTravis will be testing your output against the binary numbers of 0-2^N - 1 in ascending order.\n\n\n\nConsider what decisions need to be made in order to enumerate over all of the binary numbers starting from 00000 and getting to 11111. Discuss the following questions with your paired programming partner.\n\nWhat parameters do you need with your enumerate method? What do these parameters represent? How large should your array be that is holding the selected bits?\nWhat value, 0 or 1, should you start setting each bit to? What part of the enumeration method relates to changing the bit’s value?\nHow should you move to the next index of the bit being changed? How will you achieve this in your recursive enumeration call?\nLook back at the lecture slides to recall the format of the enumerate and process structure and copy over any necessary code.\n\n\n\n\nThe enumerate and process structure requires a recursive call of the enumerate method. To conclude this activity, you need to implement process and select a base case condition. Think and discuss with your partner the following questions.\n\nWhat two parameters should be equal for you to stop the recursion?\nWhere should the base case be located in your enumerate function?\nWhere should you call process? What should you pass process as a parameter?\n\n\n\n\n\nThis activity is very similar to the previous binary activity, so make sure to complete that activity first and reuse the enumerate and process structure here.\n\n\nRead in the number of dice from the command line.\n\n\n\nConsider what decisions need to be made in order to enumerate over all of the possible roll combinations. Discuss the following questions with your paired programming partner and refer back to your Part 1 decisions if you get stuck.\n\nWhat parameters do you need with your enumerate method? What do these parameters represent?\nHow large should your array be that is holding the value of the dice rolls?\nWhat value should you start setting each die to? Is this a different value than the start value used during the binary activity?\nHow should you move to selecting the value of the next roll? How will you achieve this in your recursive enumeration call?\nLook back at Part 1 or the lecture slides to recall the format of the enumerate and process structure to copy over any necessary code.\n\n\n\n\nThe enumerate and process structure requires a recursive call of the enumerate method. To conclude this activity, you need to implement process and select a base case condition. Think and discuss with your partner the following questions.\n\nWhat two parameters should be equal for you to stop the recursion?\nWhere should the base case be located in your enumerate function?\nWhere should you call process?\n\n*** Remember to show your SL your output on Eclipse before leaving section. ***"
+    "objectID": "slides-04-01.html#recommendations-for-writing-classes",
+    "href": "slides-04-01.html#recommendations-for-writing-classes",
+    "title": "Classes and Methods",
+    "section": "Recommendations for writing classes",
+    "text": "Recommendations for writing classes\n\nuse one file to store the class (no main method)\ncreate different classes for different problems (cohesion – methods and instance variables of a class should be strongly related) – in other words, keep related data and behavior in one place"
   },
   {
-    "objectID": "short-assignment-02.html#resources",
-    "href": "short-assignment-02.html#resources",
-    "title": "Lab 02",
-    "section": "",
-    "text": "The Java API and Google are your friend, look up methods to take advantage of Java’s libraries.\n\nSystem.out.println() is your friend for testing and output\nDeclaring an array:\n\nint[] array = new int[N];\n\nUpdating a value in an array:\n\narray[0] = 1;"
+    "objectID": "slides-04-01.html#recommendations-for-writing-classes-1",
+    "href": "slides-04-01.html#recommendations-for-writing-classes-1",
+    "title": "Classes and Methods",
+    "section": "Recommendations for writing classes",
+    "text": "Recommendations for writing classes\nDeclare:\n\ninstance variables private after class definition and create public methods to set and access variables\nconstructors public no return type (do not use static)\nmost methods public (do not use static), but private helper methods are often useful"
   },
   {
-    "objectID": "programming-assignment-08.html",
-    "href": "programming-assignment-08.html",
-    "title": "Programming Assignment 08",
-    "section": "",
-    "text": "Deadline: November 13, 2024 – Wednesday, 11:30pm"
+    "objectID": "slides-04-01.html#example",
+    "href": "slides-04-01.html#example",
+    "title": "Classes and Methods",
+    "section": "Example",
+    "text": "Example\npublic class IdentifyMyParts {\n    public int x = 7; \n    public int y = 3; \n}\n\nWhat are the instance variables?\nHow do you construct a new instance of this class?\n\nExercise from The Java™ Tutorials"
   },
   {
-    "objectID": "programming-assignment-08.html#learning-objectives",
-    "href": "programming-assignment-08.html#learning-objectives",
-    "title": "Programming Assignment 08",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\nThe goal of this assignment is to use basic JavaFX to create a GUI output representation of the PA6-Garden program."
+    "objectID": "slides-04-01.html#example-1",
+    "href": "slides-04-01.html#example-1",
+    "title": "Classes and Methods",
+    "section": "Example",
+    "text": "Example\npublic class IdentifyMyParts {\n    public int x = 7; \n    public int y = 3; \n}\nWhat is the output from the following code:\nIdentifyMyParts a = new IdentifyMyParts();\nIdentifyMyParts b = new IdentifyMyParts();\na.y = 5;\nb.y = 6;\na.x = 1;\nb.x = 2;\nSystem.out.println(\"a.y = \" + a.y);\nSystem.out.println(\"b.y = \" + b.y);\nSystem.out.println(\"a.x = \" + a.x);\nSystem.out.println(\"b.x = \" + b.x);\nSystem.out.println(\"IdentifyMyParts.x = \" + IdentifyMyParts.x);\nAdd static after public for one of the instance variable (to make it a class variable). What is the side effect?"
   },
   {
-    "objectID": "programming-assignment-08.html#the-assignment",
-    "href": "programming-assignment-08.html#the-assignment",
-    "title": "Programming Assignment 08",
-    "section": "The Assignment",
-    "text": "The Assignment\nIn class on Friday March 30th we talked about ways to consider improving your PA6-Garden implementation. In this assignment, you will build on the improved PA6-Garden implemention to visually represent your garden simulation.\nFor PA8, you will be graphically representing each plant in the output as well as handling a ‘delay’ command from the input file that represents how long to wait between the execution of commands. In the video example (PublicTestCases/customPlant.in and PublicTestCases/CustomPlantExample.mp4), each part of a plant (i.e., each character from the PA6 output) is represented by uniquely colored tile on a canvas.\nThe ‘PRINT’ command is also completely excluded from this program. This means that you should not expect any ‘PRINT’ commands from any input file. You can leave in the print handling code if you would like however.\nPlease open and watch ‘PublicTestCases/Example.mp4’ to see an example GUI output for the input file ‘PublicTestCases/Garden.in’. Also see ‘PublicTestCases/customPlant.in’ and ‘PublicTestCases/CustomPlantExample.mp4’. You will be creating a variant of Garden.in for your own unique plant or garden object.\nYou should also be looking at the PA6-Garden writeup to refresh your memory on how it works: https://github.com/UACS210Spring2018/PA-and-Section-Writeups/tree/master/PA6-Garden."
+    "objectID": "slides-04-01.html#better-example",
+    "href": "slides-04-01.html#better-example",
+    "title": "Classes and Methods",
+    "section": "Better example",
+    "text": "Better example\npublic class IdentifyMyParts {\n    private int x = 7;\n    private int y = 3;\n    \n    public void setX(int x) {\n        this.x = x;\n    }\n\n    public void setY(int y) {\n        this.y = y;\n    }\n    \n    public int getX() {\n        return x;\n    }\n    \n    public int getY() {\n        return y;\n    }\n\n}\nVariable scope: what’s the difference between this.x and x?"
   },
   {
-    "objectID": "programming-assignment-08.html#delay-parameter",
-    "href": "programming-assignment-08.html#delay-parameter",
-    "title": "Programming Assignment 08",
-    "section": "Delay parameter",
-    "text": "Delay parameter\nThe input file format for this assignment is exactly the same as that of PA6-Garden, except that you will now have to handle a delay parameter. The delay will be specified on the third line of the input file right under the ‘cols’ parameter. An example input is shown below:\nrows: 1\ncols: 1\ndelay: 3.0\n\nPLANT (0,0) sunflower\nPLANT (2,2) tulip\nPLANT (5,5) iris\nGROW 1\nThe number after ‘delay:’ is a double that represents the time to wait before each command is executed. In the video example (CustomPlantExample.mp4), this delay was set to .5, therefore, each command was executed after waiting a half second."
+    "objectID": "slides-04-01.html#better-example-use",
+    "href": "slides-04-01.html#better-example-use",
+    "title": "Classes and Methods",
+    "section": "Better example – use",
+    "text": "Better example – use\npublic class UseMyParts {\n\n    public static void main(String[] args) {\n        IdentifyMyParts a = new IdentifyMyParts(); \n        IdentifyMyParts b = new IdentifyMyParts(); \n        a.setX(5);\n        a.setY(10);\n        b.setX(2);\n        b.setY(3);\n    \n        System.out.println(a.getY()); \n        System.out.println(b.getY()); \n        System.out.println(a.getX()); \n        System.out.println(b.getX()); \n\n    }\n}"
   },
   {
-    "objectID": "programming-assignment-08.html#steps-for-completing-this-assignment",
-    "href": "programming-assignment-08.html#steps-for-completing-this-assignment",
-    "title": "Programming Assignment 08",
-    "section": "Steps for completing this assignment",
-    "text": "Steps for completing this assignment\n\nSee a tutorial on how to install the JavaFX plugin in Eclipse at (https://docs.google.com/document/d/1FUROjRbvIi_WKNYJ-00uprIo2YPHDNd72SrqgwaqKis/edit?usp=sharing). The tutorial is also posted on the CS 210 resources webpage (https://piazza.com/arizona/spring2018/csc210/resources).\nAccept the github assignment for PA8, (https://classroom.github.com/a/JKfUfTBS). Import your PA8 github repository into Eclipse as usual.\nRun the given starter code and see what it does.\nCopy your PA6 code into the Eclipse project.\nImplement the TODO items in the provided PA8Main.java.\nCreate your own copy of Garden.in called myGarden.in that includes planting your unique garden item.\nMake a video of running myGarden.in through your program."
+    "objectID": "slides-04-01.html#adding-a-constructor-method",
+    "href": "slides-04-01.html#adding-a-constructor-method",
+    "title": "Classes and Methods",
+    "section": "Adding a constructor method",
+    "text": "Adding a constructor method\npublic class IdentifyMyParts {\n    private int x = 7;\n    private int y = 3;\n    \n    public IdentifyMyParts(int x, int y) {\n        this.x = x;\n        this.y = y;\n        \n    }\n    \n    public void setX(int x) {\n        this.x = x;\n    }\n\n    public void setY(int y) {\n        this.y = y;\n    }\n    \n    public int getX() {\n        return x;\n    }\n    \n    public int getY() {\n        return y;\n    }\n\n}"
   },
   {
-    "objectID": "programming-assignment-08.html#resources",
-    "href": "programming-assignment-08.html#resources",
-    "title": "Programming Assignment 08",
-    "section": "Resources",
-    "text": "Resources\nThe provided code uses some new concepts. We will be covering them in class. Additionally, here are some references.\n\ndrawing to a canvas, https://docs.oracle.com/javafx/2/canvas/jfxpub-canvas.htm\nlambda functions,http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html\ncolors to pick from, https://docs.oracle.com/javase/8/javafx/api/javafx/scene/paint/Color.html"
+    "objectID": "slides-04-01.html#practice-card-class",
+    "href": "slides-04-01.html#practice-card-class",
+    "title": "Classes and Methods",
+    "section": "Practice – Card class",
+    "text": "Practice – Card class\nA card has a suit and a rank\nSuits The four suits are clubs (♣), diamonds (♦), hearts (♥), and spades (♠).\nRanks The ranks are ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, and king. The ace is the highest card, and the 2 is the lowest, but the ace can also be used as a low card with a value of 1."
   },
   {
-    "objectID": "programming-assignment-08.html#general-requirements",
-    "href": "programming-assignment-08.html#general-requirements",
-    "title": "Programming Assignment 08",
-    "section": "General requirements",
-    "text": "General requirements\nThis assignment is different from other assignments you’ve had so far in that you are given a lot more freedom to design your output the way you want. You can try to mimic what was done in the video and get the credit for it, but however you choose to output your garden, the following general requirements must be met:\n\nEach plant must be one-of-a-kind, meaning they must be distinguishable from any other plant and the background. In the example video, this is done by using a different color for each plant against a brown background. You do not have to do it this way, for example, you can choose to use an image for each plant instead of a colored tile.\nEach command must be visually noticeable. This means that when ‘GROW 1’ is called for example, it should be visually obvious that every plant just grew by 1. In the example video, grow commands cause more identical tiles to be drawn in some fashion (depending on the plant type) around every plant.\nThere must be a command log which displays commands as they are being executed. In the example video, this is done in a TextArea at the bottom of the garden.\nYou must still handle errors. Errors that don’t cause the program to stop (such as ‘Can’t grow here’) should be distinguishable in the command log. In the video example, the error is fully capitalized and spaced out from surrounding text. For errors that do cause the program to stop, such as ‘Invalid dimension input’ or ‘File not found’ should still print to stdout and exit the program as usual."
+    "objectID": "slides-04-01.html#card-class-solution",
+    "href": "slides-04-01.html#card-class-solution",
+    "title": "Classes and Methods",
+    "section": "Card class solution",
+    "text": "Card class solution\npublic class Card {\n    private String rank;\n    private String suit;\n    \n    public Card(String rank, String suit) {\n        this.rank = rank;\n        this.suit = suit;\n    }\n    \n    public String getSuit() {\n        return suit;\n    }\n    \n    public String getRank() {\n        return rank;\n    }\n\n}"
   },
   {
-    "objectID": "programming-assignment-08.html#grading-criteria",
-    "href": "programming-assignment-08.html#grading-criteria",
-    "title": "Programming Assignment 08",
-    "section": "Grading Criteria",
-    "text": "Grading Criteria\nHalf of the PA8 grade will correctness. For this assignment, this is the GUI output. You should also expect that we might run your program with additional input files besides the ones provided.\nThe other half of the PA8 grade will be your decomposition and code clarity.\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.\nThis program should use fewer than 10 .java files. Each of these files should be (&lt;300 lines).\nEach method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\n\nCode Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format. One would also need to know the command line arguments that should be passed to the program.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement."
+    "objectID": "slides-04-01.html#write-main",
+    "href": "slides-04-01.html#write-main",
+    "title": "Classes and Methods",
+    "section": "Write main",
+    "text": "Write main\nCreate a PlayGame class with a main method to create an instance of a card and to print it.\nWhat changes to Card class would you make?"
   },
   {
-    "objectID": "programming-assignment-08.html#submission",
-    "href": "programming-assignment-08.html#submission",
-    "title": "Programming Assignment 08",
-    "section": "Submission",
-    "text": "Submission\nFor this assignment, you are REQUIRED to submit all of the following files to Gradescope before Monday April 9th at 11:30am. * All the Java source files needed to run your program. * myGarden.in * myGarden.mp4, or other video format that can be run on multiple platforms. The video should be between 10 and 15 seconds long.\nTo create the video, you can use a program to record your screen as you run your program, or you can simply record your screen with your smartphone or tablet. Do note however that the video you submit must be of good enough quality for the SL’s to clearly see your garden and command logs.\nWrite your own code. We will be using a tool that finds similar code.\nIt is recommended that when talking with others about the assignment, do not write anything down."
+    "objectID": "slides-04-01.html#solution",
+    "href": "slides-04-01.html#solution",
+    "title": "Classes and Methods",
+    "section": "Solution",
+    "text": "Solution\npublic class PlayGame {\n\n    public static void main(String[] args) {\n        Card card1 = new Card(\"ace\", \"hearts\");\n        card1.print();\n    }\n\n}"
   },
   {
-    "objectID": "programming-assignment-09.html",
-    "href": "programming-assignment-09.html",
-    "title": "Programming Assignment 09",
-    "section": "",
-    "text": "Deadline: November 20, 2024 – Wednesday, 11:30pm"
+    "objectID": "slides-04-01.html#update-card-class-demonstration",
+    "href": "slides-04-01.html#update-card-class-demonstration",
+    "title": "Classes and Methods",
+    "section": "Update Card class (demonstration)",
+    "text": "Update Card class (demonstration)\n\nvalidate suit and rank – make sure object is create with valid strings only\ncreate constants for arrays of strings for both suits and ranks\ncreate helper methods (private) for validation\ntwo ways of setting rank: integer and string (overloading)"
   },
   {
-    "objectID": "programming-assignment-09.html#learning-objectives",
-    "href": "programming-assignment-09.html#learning-objectives",
-    "title": "Programming Assignment 09",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\nThe goal of this assignment is to improve on basic JavaFX knowledge by adding event-driven GUI programming to the PA8-GardenGUIout program."
+    "objectID": "slides-04-01.html#update-card-class-solution",
+    "href": "slides-04-01.html#update-card-class-solution",
+    "title": "Classes and Methods",
+    "section": "Update Card class – solution",
+    "text": "Update Card class – solution\npublic class Card {\n    private String rank;\n    private String suit;\n    \n    private final static String[] RANKS = {\"ace\", \"two\", \"three\", \"four\",\n                                           \"five\", \"six\", \"seven\",\n                                           \"eight\", \"nine\", \"ten\",\n                                           \"jack\", \"queen\", \"king\"};\n\n    \n    public final static String[] SUITS = {\"diamonds\", \"clubs\", \"hearts\", \"spades\"};\n    \n    public Card(String rank, String suit) {\n        if (validRank(rank)) this.rank = rank;\n        if (validSuit(suit)) this.suit = suit;\n    }\n    \n    public Card(int rank, String suit) {\n        if (rank &gt;= 1 && rank &lt;= 13) this.rank = RANKS[rank-1];\n        if (validSuit(suit)) this.suit = suit;\n    }\n\n    private Boolean inArray(String value, String[] arr) {\n        for (String element : arr) {\n            if (element == value) {\n                return true;\n            }\n        }\n        return false;\n    }\n    \n    private Boolean validRank(String rank) {\n        return inArray(rank, RANKS);\n    }\n    \n    private Boolean validSuit(String suit) {\n        return inArray(suit, SUITS);\n    }\n    \n    \n    public void setRank(String rank) {\n        if (validRank(rank)) this.rank = rank;\n    }\n    \n    public void setRank(int rank) { // overloading\n        if (rank &gt;= 1 && rank &lt;= 13) this.rank = RANKS[rank-1];\n    }\n    \n    public void setSuit(String suit) {\n        if (validSuit(suit)) this.suit = suit;\n    }\n    \n    public String getSuit() {\n        return suit;\n    }\n    \n    public String getRank() {\n        return rank;\n    }\n    \n    public void print() {\n        System.out.println(rank + \" of \" + suit);\n    }\n\n}"
   },
   {
-    "objectID": "programming-assignment-09.html#the-assignment",
-    "href": "programming-assignment-09.html#the-assignment",
-    "title": "Programming Assignment 09",
-    "section": "The Assignment",
-    "text": "The Assignment\nFor PA9, you will be adding events to the GUI representation of PA8. This means there will be no input file to read from. Instead of reading the input file from the command line arguments, you will read in the number of rows and columns of plots in the garden from the command line. Then along with the garden visualization you will create a TextField where a user can input a garden simulation command (e.g., grow 1, plant (2,3) sunflower, …) and then click on a simulate button to show the results of that command.\nAnother interesting aspect of PA9 is that you will be continuing to refine the Garden simulation code. Some of your code will change and some of the code from PA8 and PA6 should be removed in PA9."
+    "objectID": "slides-04-01.html#update-playgame-class",
+    "href": "slides-04-01.html#update-playgame-class",
+    "title": "Classes and Methods",
+    "section": "Update PlayGame class",
+    "text": "Update PlayGame class\npublic class PlayGame {\n\n    public static void main(String[] args) {\n        Card card1 = new Card(\"ace\", \"hearts\");\n        card1.print();\n        \n        card1.setRank(2);\n        card1.print();\n        \n        Card card2 = new Card(13, \"diamonds\");\n        card2.print();\n\n    }\n\n}"
   },
   {
-    "objectID": "programming-assignment-09.html#what-needs-to-be-removed",
-    "href": "programming-assignment-09.html#what-needs-to-be-removed",
-    "title": "Programming Assignment 09",
-    "section": "What needs to be removed",
-    "text": "What needs to be removed\nFile reading: Since we are no longer reading commands in from a file, all code that is used to read in from a file is no longer needed. You will still need to parse commands however.\nDelay Code: In the previous assignment a delay was needed to show the output for every command, for this assignment this is no longer needed since we are running one command at a time via a graphical user interface."
+    "objectID": "slides-04-01.html#create-deck-class",
+    "href": "slides-04-01.html#create-deck-class",
+    "title": "Classes and Methods",
+    "section": "Create Deck class",
+    "text": "Create Deck class\nCreate a Deck class that has a color, and all 52 possible cards (use ArrayList)"
   },
   {
-    "objectID": "programming-assignment-09.html#what-needs-to-be-added",
-    "href": "programming-assignment-09.html#what-needs-to-be-added",
-    "title": "Programming Assignment 09",
-    "section": "What needs to be added",
-    "text": "What needs to be added\nUser input: Since we will not be reading from a file, we are going to need some way to read in commands from the user. We recommend a TextArea and a button to cause the execution of the command in that TextArea. Feel free to try different approaches.\nEvent Handlers: To use the information that the user provides your code must have at least one Event Handler. This should grab the information from the user and do something with it whenever a specified event occurs. (clicking of a button and/or pressing enter on keyboard)"
+    "objectID": "slides-04-01.html#deck-class-solution",
+    "href": "slides-04-01.html#deck-class-solution",
+    "title": "Classes and Methods",
+    "section": "Deck class solution",
+    "text": "Deck class solution\nimport java.util.ArrayList;\n\npublic class Deck {\n    private ArrayList&lt;Card&gt; cards = new ArrayList&lt;Card&gt;();\n    private String color;\n    \n    public Deck(String color) {\n        this.color = color;\n        for (String s : Card.SUITS) {\n            for (int i = 1; i &lt;= 13; i++) {\n                Card thisCard = new Card(i, s);\n                cards.add(thisCard);\n            }\n            \n        }\n    }\n    \n    public void printCards() {\n        for (String s : Card.SUITS) {\n            for (int i = 1; i &lt;= 13; i++) {\n                Card thisCard = new Card(i, s);\n                thisCard.print();\n            }\n            \n        }\n    }\n    \n    public Card getCard(int index) {\n        return cards.get(index);\n    }\n    \n    public String getColor() {\n        return color;\n    }\n\n}"
   },
   {
-    "objectID": "programming-assignment-09.html#what-needs-to-be-changed",
-    "href": "programming-assignment-09.html#what-needs-to-be-changed",
-    "title": "Programming Assignment 09",
-    "section": "What needs to be changed",
-    "text": "What needs to be changed\nCommand line arguments: Instead of reading in a filename from the command line, you will be reading in both the width and height of the garden."
-  },
-  {
-    "objectID": "programming-assignment-09.html#steps-for-completing-this-assignment",
-    "href": "programming-assignment-09.html#steps-for-completing-this-assignment",
-    "title": "Programming Assignment 09",
-    "section": "Steps for completing this assignment",
-    "text": "Steps for completing this assignment\n\nAccept the github assignment for PA9, https://classroom.github.com/a/t1WEMs86.\nImport your PA9 github repository into Eclipse as usual.\nPlay around with the given PA9 starter code that does something with the text a user puts into a text field.\nMake sure your PA8 code works.\nIf it does, then incorporate your PA8 code into your PA9. We strongly recommend you do it in small pieces.\nImplement the functionality provided in this write up for PA9.\nTest your code with various inputs to make sure that it works correctly."
-  },
-  {
-    "objectID": "programming-assignment-09.html#resources",
-    "href": "programming-assignment-09.html#resources",
-    "title": "Programming Assignment 09",
-    "section": "Resources",
-    "text": "Resources\nThe provided code uses some new concepts. We will be covering them in class and/or Section. Additionally, here are some references.\n\nThe example-video.mov file in the starter project demonstrates the baseline functionality for PA9. You will be demonstrating your project to your SL during Section.\nText Field, https://docs.oracle.com/javafx/2/ui_controls/text-field.htm"
-  },
-  {
-    "objectID": "programming-assignment-09.html#general-requirements",
-    "href": "programming-assignment-09.html#general-requirements",
-    "title": "Programming Assignment 09",
-    "section": "General requirements",
-    "text": "General requirements\nThis assignment is different from other assignments you’ve had so far in that you are given a lot more freedom to design your output the way you want. You can try to mimic what was done in the video and get the credit for it, but however you choose to receive graphical input for your garden, the following general requirements must be met:\n\nA user should be able to type in a command and submit it via the GUI. This means that there should be somewhere to insert text and some way to submit that text. Both of these must be intuitive, that means that the user must understand where he/she should insert commands and how to submit said command by only looking at the GUI.\nAs in PA8, each plant must be one-of-a-kind, meaning they must be distinguishable from any other plant and the background. In the example video, this is done by using a different color for each plant against a brown background. You do not have to do it this way, for example, you can choose to use an image for each plant instead of a colored tile.\nAs in PA8, each command must be visually noticeable. This means that when ‘GROW 1’ is called for example, it should be visually obvious that every plant just grew by 1. In the example video, grow commands cause more identical tiles to be drawn in some fashion (depending on the plant type) around every plant.\nAs in PA8, there must be a command log which displays commands as they are being executed. In the example video, this is done in a TextArea at the bottom of the garden.\nAs in PA8, you must still handle errors. Errors that don’t cause the program to stop (such as ‘Can’t grow here’) should be distinguishable in the command log. In the video example, the error is fully capitalized and spaced out from surrounding text. For errors that do cause the program to stop, such as ‘Invalid dimension input’ should still print to stdout and exit the program as usual."
-  },
-  {
-    "objectID": "programming-assignment-09.html#grading-criteria",
-    "href": "programming-assignment-09.html#grading-criteria",
-    "title": "Programming Assignment 09",
-    "section": "Grading Criteria",
-    "text": "Grading Criteria\nHalf of the PA9 grade will be a working GUI. You will be demonstrating your GUI to your SL during Sections April 16th or 17th. Your demonstration must be less than 5 minutes and show all of the above listed criteria.\nThe working GUI must also be demonstrated with code. Submit your PA9 code to gradescope.\nThe other half of the PA9 grade will be your decomposition and code clarity.\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.\nThis program should use fewer than 10 .java files. Each of these files should be (&lt;300 lines).\nEach method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\n\nCode Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format. One would also need to know the command line arguments that should be passed to the program.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement."
-  },
-  {
-    "objectID": "programming-assignment-09.html#submission",
-    "href": "programming-assignment-09.html#submission",
-    "title": "Programming Assignment 09",
-    "section": "Submission",
-    "text": "Submission\nFor this assignment, you are REQUIRED to submit all of the following files to Gradescope before Monday April 16th at 11:30am. * All the Java source files needed to run your program. * If you are trying for the up to 10 extra credit points for going above and beyond, then let your SL know during your demo and summarize what you did extra in a README.md file that you submit to Gradescope.\nWrite your own code. We will be using a tool that finds similar code.\nIt is recommended that when talking with others about the assignment, do not write anything down."
-  },
-  {
-    "objectID": "programming-assignments.html",
-    "href": "programming-assignments.html",
-    "title": "Programming Assignments",
-    "section": "",
-    "text": "Fill out this survey with your GitHub username so that you can get credit for your project submissions.\n\nPA 1\n\nDeadline: September 11, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 2\n\nDeadline: September 18, 2024 – Wednesday, 11:30pm\nInstructions"
-  },
-  {
-    "objectID": "slides-03-02.html#two-recursive-algorithms",
-    "href": "slides-03-02.html#two-recursive-algorithms",
-    "title": "Backtracking",
-    "section": "Two recursive algorithms",
-    "text": "Two recursive algorithms\n\nExhaustive Search\nBacktracking\n\nThese are brute-force algorithms\nUsed for problems that have a small and well-defined search space, where it is feasible to check all possible solutions"
-  },
-  {
-    "objectID": "slides-03-02.html#backtracking",
-    "href": "slides-03-02.html#backtracking",
-    "title": "Backtracking",
-    "section": "Backtracking",
-    "text": "Backtracking\nMain idea: find every solution incrementally by trying different options, then abandoning them if they are not suitable\nIn other words: exhaustive search + conditions for suitable solution"
-  },
-  {
-    "objectID": "slides-03-02.html#application-dice-roll-sum",
-    "href": "slides-03-02.html#application-dice-roll-sum",
-    "title": "Backtracking",
-    "section": "Application: Dice roll sum",
-    "text": "Application: Dice roll sum\nWrite a Java application that given two integers representing 1) how many dice to roll, and 2) the target sum of all dice values, it outputs all combinations of dice values that add up to the target sum.\nExample call:\ntargetSum = 7;\ngetValidCombinations(2);\nOutput:\n[1, 6]\n[2, 5]\n[3, 4]\n[4, 3]\n[5, 2]\n[6, 1]"
-  },
-  {
-    "objectID": "slides-03-02.html#solution-1",
-    "href": "slides-03-02.html#solution-1",
-    "title": "Backtracking",
-    "section": "Solution 1",
-    "text": "Solution 1\nimport java.util.ArrayList;\n\n\npublic class DiceBacktracking {\n    \n    static ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = new ArrayList&lt;ArrayList&lt;Integer&gt;&gt; ();\n    static ArrayList&lt;Integer&gt; values = new ArrayList&lt;Integer&gt;();\n    static int targetSum;\n    \n    public static int sumAll(ArrayList&lt;Integer&gt; values) {\n        int sum = 0;\n        for (int v : values) sum += v;\n        return sum;\n    }\n    \n    public static void getValidCombinations(int count) {\n        if (count == 0) {\n            if (sumAll(values) == targetSum) {\n                ArrayList&lt;Integer&gt; valuesToAdd = new ArrayList&lt;Integer&gt;(values);\n                result.add(valuesToAdd);\n            }\n        }\n        else {\n            for (int v = 1; v &lt;= 6; v++) {\n                values.add(v); \n                getValidCombinations(count - 1);\n                values.remove(values.size() - 1);\n            }\n        }\n    }\n\n    public static void main(String[] args) {\n        \n        targetSum = 7;\n        getValidCombinations(2);\n        \n        for (ArrayList&lt;Integer&gt; v : result) System.out.println(v);\n        \n    }\n}"
-  },
-  {
-    "objectID": "slides-03-02.html#optimizations-pruning",
-    "href": "slides-03-02.html#optimizations-pruning",
-    "title": "Backtracking",
-    "section": "Optimizations (Pruning)",
-    "text": "Optimizations (Pruning)\nWe can preemptively stop, or prune, branches in the decision tree that cannot lead to a valid solution:\n\ncurrent sum is already too high (rolling all 1s in the remaining dice will cause it to go over target sum)\ncurrent sum is already too low (rolling all 6s in the remaining dice will cause it to be under target sum)"
-  },
-  {
-    "objectID": "slides-03-02.html#solution-2",
-    "href": "slides-03-02.html#solution-2",
-    "title": "Backtracking",
-    "section": "Solution 2",
-    "text": "Solution 2\nimport java.util.ArrayList;\n\n\npublic class DiceBacktracking {\n    \n    static ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = new ArrayList&lt;ArrayList&lt;Integer&gt;&gt; ();\n    static ArrayList&lt;Integer&gt; values = new ArrayList&lt;Integer&gt;();\n    static int targetSum;\n    \n    \n    public static void getValidCombinations(int count, int currentSum) {\n        if (count == 0) {\n            if (currentSum == targetSum) {\n                ArrayList&lt;Integer&gt; valuesToAdd = new ArrayList&lt;Integer&gt;(values);\n                result.add(valuesToAdd);\n            }\n        } else if (currentSum + 1 * count &gt; targetSum ||\n                   currentSum + 6 * count &lt; targetSum) {\n                      return;\n        } else {\n            for (int v = 1; v &lt;= 6; v++) {\n                values.add(v);\n                getValidCombinations(count - 1, currentSum + v);\n                values.remove(values.size() - 1);\n            }\n        }\n    }\n\n    public static void main(String[] args) {\n        \n        targetSum = 7;\n        getValidCombinations(2, 0);\n        \n        for (ArrayList&lt;Integer&gt; v : result) System.out.println(v);\n        \n    }\n}"
-  },
-  {
-    "objectID": "short-assignment-01.html",
-    "href": "short-assignment-01.html",
-    "title": "Lab 01",
-    "section": "",
-    "text": "In today’s lab session we will practice using Scanner to take in user input from the keyboard and to read text files.\nGiven a text file that contains multiple lines with integers separated by space, your java application is to sum all integers and print out the result.\nFor example, for the following text file:\ninputFile1.txt\n3 3 3\n50 40\nYour application should print out 99.\nFor the file name to read, prompt the user to type a file name and read the keyboard entry. The message you should print to the user is Enter file name: – note the space after : and make sure to not print a line break after the space.\nExample run:\nEnter file name: inputFile1.txt\n99\n\n\n\nAdd the package name to the top of your file, so gradescope can find the compiled binary file:\npackage com.gradescope.filesum;"
-  },
-  {
-    "objectID": "short-assignment-01.html#introduction",
-    "href": "short-assignment-01.html#introduction",
-    "title": "Lab 01",
-    "section": "",
-    "text": "In today’s lab session we will practice using Scanner to take in user input from the keyboard and to read text files.\nGiven a text file that contains multiple lines with integers separated by space, your java application is to sum all integers and print out the result.\nFor example, for the following text file:\ninputFile1.txt\n3 3 3\n50 40\nYour application should print out 99.\nFor the file name to read, prompt the user to type a file name and read the keyboard entry. The message you should print to the user is Enter file name: – note the space after : and make sure to not print a line break after the space.\nExample run:\nEnter file name: inputFile1.txt\n99"
-  },
-  {
-    "objectID": "short-assignment-01.html#file-setup",
-    "href": "short-assignment-01.html#file-setup",
-    "title": "Lab 01",
-    "section": "",
-    "text": "Add the package name to the top of your file, so gradescope can find the compiled binary file:\npackage com.gradescope.filesum;"
-  },
-  {
-    "objectID": "slides-01-01.html#welcome-to-csc-210",
-    "href": "slides-01-01.html#welcome-to-csc-210",
-    "title": "Course Introduction",
-    "section": "Welcome to CSC 210",
-    "text": "Welcome to CSC 210\n\nThis is CSC 210 – Software Development\nuse data structures (i.e., hash table, tree, and graph), common algorithm patterns (i.e., exhaustive search, divide and conquer, recursive backtracking, and heuristic), unit testing, and debugging to write a correct solution to each sub-problem and integrate the sub-problem solutions into a complete working project (currently using Java).\ncompare and contrast programming in two programming languages (Python and Java).\nbuild graphical user input and output for programs (JavaFX)"
-  },
-  {
-    "objectID": "slides-01-01.html#who-am-i",
-    "href": "slides-01-01.html#who-am-i",
-    "title": "Course Introduction",
-    "section": "Who am I?",
-    "text": "Who am I?\n\nAdriana Picoral (you can call me Adriana or Dr. Picoral)\nOffice: Gould-Simpson 811\nEmail: adrianaps@arizona.edu"
-  },
-  {
-    "objectID": "slides-01-01.html#who-are-the-teaching-assistants-tas",
-    "href": "slides-01-01.html#who-are-the-teaching-assistants-tas",
-    "title": "Course Introduction",
-    "section": "Who are the teaching assistants? (TAs)",
-    "text": "Who are the teaching assistants? (TAs)\nIn this course we have course coordinators, senior TAs, and TAs.\nThe TAs are responsible for:\n\nHelping you, the students, succeed\nGrading quizzes, and exams\nHelping students on office hours\nLead lab sessions\n\n. . . So get to know them!"
-  },
-  {
-    "objectID": "slides-01-01.html#get-to-know-each-other",
-    "href": "slides-01-01.html#get-to-know-each-other",
-    "title": "Course Introduction",
-    "section": "Get to know each-other",
-    "text": "Get to know each-other\n\nIntroduce yourself!\nShare your\n\nName and pronouns\nSomething new that you learned this summer"
-  },
-  {
-    "objectID": "slides-01-01.html#assessment-structure",
-    "href": "slides-01-01.html#assessment-structure",
-    "title": "Course Introduction",
-    "section": "Assessment structure",
-    "text": "Assessment structure\n\nShort Projects (to be completed in the lab sessions)\nProjects\nExams and Quizzes"
-  },
-  {
-    "objectID": "slides-01-01.html#exams-and-quizzes",
-    "href": "slides-01-01.html#exams-and-quizzes",
-    "title": "Course Introduction",
-    "section": "Exams and Quizzes",
-    "text": "Exams and Quizzes\n\nExams and quizzes are on paper.\nMidterms and quizzes are on Wednesdays.\nProgramming assignments will be submitted through GitHub (create an account)."
-  },
-  {
-    "objectID": "slides-01-01.html#grade-distribution",
-    "href": "slides-01-01.html#grade-distribution",
-    "title": "Course Introduction",
-    "section": "Grade Distribution",
-    "text": "Grade Distribution\n\nProgramming Assignments, 20%\nShort Assignments, 10%\nQuizzes, 20%\nMidterm 1, 15%\nMidterm 2, 15%\nFinal, 20%"
-  },
-  {
-    "objectID": "slides-01-01.html#syllabus-activity",
-    "href": "slides-01-01.html#syllabus-activity",
-    "title": "Course Introduction",
-    "section": "Syllabus Activity",
-    "text": "Syllabus Activity\n\nWhen are the exams?\nWhat’s the late policy for this class?\nWhen’s the first assignment due?"
-  },
-  {
-    "objectID": "slides-01-01.html#other-important-dates",
-    "href": "slides-01-01.html#other-important-dates",
-    "title": "Course Introduction",
-    "section": "Other Important Dates",
-    "text": "Other Important Dates\n\nLast day for students to drop without a grade of W (withdraw) is September 08\nLast day for students to department staff to drop in UAccess with a W is September 22"
-  },
-  {
-    "objectID": "slides-01-01.html#attendance-question",
-    "href": "slides-01-01.html#attendance-question",
-    "title": "Course Introduction",
-    "section": "Attendance question",
-    "text": "Attendance question\nGo to gradescope and answer the attendance question."
-  },
-  {
-    "objectID": "slides-01-01.html#materials",
-    "href": "slides-01-01.html#materials",
-    "title": "Course Introduction",
-    "section": "Materials",
-    "text": "Materials\n\nReadings, videos, exercises, slides, assignment instructions will be available on the website\nHOWEVER, you are still responsible for things said/announced in class"
-  },
-  {
-    "objectID": "slides-01-01.html#getting-started",
-    "href": "slides-01-01.html#getting-started",
-    "title": "Course Introduction",
-    "section": "Getting started",
-    "text": "Getting started\nCreate a GitHub account and submit your username in this form."
-  },
-  {
-    "objectID": "slides-01-01.html#tips-on-slides",
-    "href": "slides-01-01.html#tips-on-slides",
-    "title": "Course Introduction",
-    "section": "Tips on slides",
-    "text": "Tips on slides\nPress the e key"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "CSC 210 Fall 2024",
-    "section": "",
-    "text": "The main goal of this course is to learn how to decompose problems and solve them with a program and do this in an effective manner that enables your future self and others to read, understand, and maintain your programs. Other goals include learning a second programming language (Java), learning decomposition and debugging strategies, and learning GUI event-driven programming (JavaFX).\n\nCourse D2L\nGradescope\n\nWhere to start:\n\nSyllabus\nSchedule + Materials\n\n\nInstructor Information\n\nAdriana Picoral 🔈\n\nOffice: Gould-Simpson 811\nEmail: adrianaps@arizona.edu\nInstructor Website: adrianapicoral.com\nOffice hours (open door, drop in, my office GS 811):\n\nMonday 2:30pm to 3:30pm\nWednesday 10:30am to 12:30pm\n\n\n\n\n\nTA office hours\nTA office hours take place in Gould-Simpson room 821.\n\n\n\n\nInformation about the materials for this course\nThe materials (including slides and assignments) for this course are based on materials from previous CSC 210 instances created by other instructors, including: Michelle Strout, and Rick Mercer."
-  },
-  {
-    "objectID": "checklist.html",
-    "href": "checklist.html",
-    "title": "Submission Checklist",
-    "section": "",
-    "text": "class name is in Proper Case (ClassName) – the first letter of every word, inclusing the first word, is uppercase while the remaining letters are lowercase\nclass name matches file name (ClassName.java)\nmethod and variable names are Camel Case (methodName) – the first letter of each word after the first is uppercase\npackage name is all lowercase and starts with package com.gradescope.\nset your methods as static if instructed to do so"
+    "objectID": "slides-04-01.html#updated-playgame",
+    "href": "slides-04-01.html#updated-playgame",
+    "title": "Classes and Methods",
+    "section": "Updated PlayGame",
+    "text": "Updated PlayGame\npublic class PlayGame {\n\n    public static void main(String[] args) {\n        Card card1 = new Card(\"ace\", \"hearts\");\n        card1.print();\n        \n        card1.setRank(2);\n        card1.print();\n        \n        Card card2 = new Card(13, \"diamonds\");\n        card2.print();\n        \n        Deck myDeck = new Deck(\"Red\");\n        myDeck.printCards();\n        \n        myDeck.getCard(20).print();\n\n    }\n\n}"
   },
   {
     "objectID": "start.html",
@@ -1568,6 +1624,13 @@
     "text": "Getting Started\nThe process for getting started will be very similar to what was done for the first programming assignment.\nAdd the package information at the top of your .java file:\npackage com.gradescope.airportinfo;\nSubmit your AirportInfo.java file to gradescope."
   },
   {
+    "objectID": "programming-assignment-02.html#testing-your-code",
+    "href": "programming-assignment-02.html#testing-your-code",
+    "title": "Programming Assignment 02",
+    "section": "Testing your code",
+    "text": "Testing your code\nYour methods should work with this main method:\n\npublic static void main(String[] args) throws FileNotFoundException {\n        \n        HashMap&lt;String, String&gt; destinations = getDestinations(args[0]);\n        HashMap&lt;String, Integer&gt; airportCount = getAirportCount(args[0]);\n        \n        \n        if (args[1].equals(\"MAX\")) {\n            System.out.println(getMax(airportCount));\n        }\n        \n        if (args[1].equals(\"DEPARTURES\")) {\n            System.out.println(getDepartures(destinations));\n        }\n        \n        if (args[1].equals(\"LIMIT\")) {\n            System.out.println(getLimits(Integer.valueOf(args[2]), airportCount));\n        }\n        \n    \n    }"
+  },
+  {
     "objectID": "programming-assignment-02.html#decomposition-ideas",
     "href": "programming-assignment-02.html#decomposition-ideas",
     "title": "Programming Assignment 02",
@@ -1594,6 +1657,13 @@
     "title": "HashMap",
     "section": "HashMap class – important methods",
     "text": "HashMap class – important methods\n\n.put(key, value) adds a key value map in the HashMap\n.get(key) gets a value in the map using a key\n.remove(key) removes the entry for a key\n.size() returns the number of key-value mappings in the HashMap"
+  },
+  {
+    "objectID": "slides-02-02.html#hashmap-class-important-methods-1",
+    "href": "slides-02-02.html#hashmap-class-important-methods-1",
+    "title": "HashMap",
+    "section": "HashMap class – important methods",
+    "text": "HashMap class – important methods\nHashMap&lt;String, Integer&gt; soccerPlayers = new HashMap&lt;String, Integer&gt;();\n\nsoccerPlayers.put(\"Pelé\", 10)\nsoccerPlayers.put(\"Marta\", 10)\nsoccerPlayers.put(\"Alex Morgan\", 13)\n\nsoccerPlayers.get(\"Marta\");\n\nsoccerPlayers.remove(\"Pelé\");\n\nSystem.out.println(soccerPlayers.size());\nSystem.out.println(soccerPlayers);"
   },
   {
     "objectID": "slides-02-02.html#counting-characters",
@@ -1895,110 +1965,5 @@
     "title": "Programming Assignmnet 06",
     "section": "Submission",
     "text": "Submission\nWrite your own code. We will be using a tool that finds overly similar code. This Spring 2018 semester in CS 210 we unfortunately have had academic integrity cases. I recommend that when talking with others about the assignment, do not write anything down.\nThe class hierarchy diagram in pdf format is due Tuesday March 13th at 11:30 am in Gradescope AND Aropa.\nFor PA6, you are REQUIRED to submit all of your java source files to Gradescope before Monday March 19th at 11:30 am. You also need to submit your README.md with example input and output for your unique class."
-  },
-  {
-    "objectID": "programming-assignment-02.html#testing-your-code",
-    "href": "programming-assignment-02.html#testing-your-code",
-    "title": "Programming Assignment 02",
-    "section": "Testing your code",
-    "text": "Testing your code\nYour methods should work with this main method:\n\npublic static void main(String[] args) throws FileNotFoundException {\n        \n        HashMap&lt;String, String&gt; destinations = getDestinations(args[0]);\n        HashMap&lt;String, Integer&gt; airportCount = getAirportCount(args[0]);\n        \n        \n        if (args[1].equals(\"MAX\")) {\n            System.out.println(getMax(airportCount));\n        }\n        \n        if (args[1].equals(\"DEPARTURES\")) {\n            System.out.println(getDepartures(destinations));\n        }\n        \n        if (args[1].equals(\"LIMIT\")) {\n            System.out.println(getLimits(Integer.valueOf(args[2]), airportCount));\n        }\n        \n    \n    }"
-  },
-  {
-    "objectID": "lab02-slides.html#hashmap-class",
-    "href": "lab02-slides.html#hashmap-class",
-    "title": "CSC 210 Lab 02",
-    "section": "HashMap class",
-    "text": "HashMap class\nHere’s the import statement:\nimport java.util.HashMap;\nTo create a dictionary with counts of something, we will have the key as String and the count or value as Integer in our HashMap.\nHashMap&lt;String, Integer&gt; somethingCount = new HashMap&lt;String, Integer&gt;();"
-  },
-  {
-    "objectID": "lab02-slides.html#using-a-hashmap-to-count-things",
-    "href": "lab02-slides.html#using-a-hashmap-to-count-things",
-    "title": "CSC 210 Lab 02",
-    "section": "Using a HashMap to count things",
-    "text": "Using a HashMap to count things\nIn our loop to count instances of a certain string, we will use the .get(key) methods to retrieve the value stored for that specific key. We then use .put(key, value) to update the count for that key.\nInteger currentCount = somethingCount.get(dataRow[6]);\nif(currentCount == null) currentCount = 0;\nsomethingCount.put(dataRow[6], currentCount + 1);\nNote the use of a temporary variable called currentCount that is assigned null if that specific key is not in the HashMap yet."
-  },
-  {
-    "objectID": "lab02-slides.html#count-example",
-    "href": "lab02-slides.html#count-example",
-    "title": "CSC 210 Lab 02",
-    "section": "Count example",
-    "text": "Count example\nLet’s count characters in a String.\nimport java.util.HashMap;\n\npublic class CountChars {\n    \n    public static HashMap&lt;Character, Integer&gt; countChars(String word) {\n        HashMap&lt;Character, Integer&gt; charCount = new HashMap&lt;Character, Integer&gt;();\n        \n        for (int i = 0; i &lt; word.length(); i++) {\n          // get value for the character at index i\n            Integer currentCount = charCount.get(word.charAt(i)); \n            \n            // if there was no key yet in the HashMap, make the value zero\n            if(currentCount == null) currentCount = 0;\n            \n            // put in the HashMap for the character at index i (our key)\n            // the current value plus one\n            charCount.put(word.charAt(i), currentCount + 1);\n        }\n        \n        return charCount;\n        \n        \n    }\n\n    public static void main(String[] args) {\n        System.out.println(countChars(\"pneumonoultramicroscopicsilicovolcanoconiosis\"));\n\n    }\n\n}"
-  },
-  {
-    "objectID": "short-assignment-02.html#testing-your-code",
-    "href": "short-assignment-02.html#testing-your-code",
-    "title": "Lab 02",
-    "section": "",
-    "text": "Your methods should work with this main method:\npublic static void main(String[] args) throws FileNotFoundException {\n        HashMap&lt;String, Integer&gt; countryCount = getMedalCount(\"medallists.csv\");\n        \n        if (args[0].equals(\"MAX\")) {\n            System.out.println(getMax(countryCount));\n        }\n        \n        if (args[0].equals(\"MIN\")) {\n            System.out.println(getMin(countryCount));\n        }\n        \n        if (args[0].equals(\"COUNTRY\")) {\n            System.out.println(getCountry(countryCount, args[1]));\n        }\n        \n\n    }"
-  },
-  {
-    "objectID": "lab02-slides.html#assignment-instructions",
-    "href": "lab02-slides.html#assignment-instructions",
-    "title": "CSC 210 Lab 02",
-    "section": "Assignment instructions",
-    "text": "Assignment instructions\nShort Assignment 2"
-  },
-  {
-    "objectID": "lab02-slides.html#write-getmedalcountfilename-first",
-    "href": "lab02-slides.html#write-getmedalcountfilename-first",
-    "title": "CSC 210 Lab 02",
-    "section": "Write getMedalCount(filename) first",
-    "text": "Write getMedalCount(filename) first\nThe first line in the main provided for testing we have the HashMap creating based on our .csv file:\nHashMap&lt;String, Integer&gt; countryCount = getMedalCount(\"medallists.csv\");\nDownload the medallists.csv file from Kaggle and add it to your project.\nThe first line is the file header, read that first line before writing a while loop with .hasNextLine()\nThen use split(,) to split each line and count the countries (index 6) in each split line."
-  },
-  {
-    "objectID": "lab02-slides.html#write-getmaxhashmap",
-    "href": "lab02-slides.html#write-getmaxhashmap",
-    "title": "CSC 210 Lab 02",
-    "section": "Write getMax(HashMap)",
-    "text": "Write getMax(HashMap)\nFor this method you will return a string with a message like this:\ncountryName + \" had the most medals with a total of \" + maxCount + \" medals.\"\nYou can initialize the maxCount variable with zero, since we know all counts are positive. Then iterate over the keys in the HashMap using a for loop similar to this:\n for (String key : medalCount.keySet())"
-  },
-  {
-    "objectID": "lab02-slides.html#write-getminhashmap",
-    "href": "lab02-slides.html#write-getminhashmap",
-    "title": "CSC 210 Lab 02",
-    "section": "Write getMin(HashMap)",
-    "text": "Write getMin(HashMap)\nSimilar to getMax, but the string returned should be s\ncountryName + \" had the fewest medals with a total of \" + minCount + \" medal.\"\nYou can use Integer.MAX_VALUE to initialize your minCount variable."
-  },
-  {
-    "objectID": "lab02-slides.html#write-getcountryhashmap-string",
-    "href": "lab02-slides.html#write-getcountryhashmap-string",
-    "title": "CSC 210 Lab 02",
-    "section": "Write getCountry(HashMap, String)",
-    "text": "Write getCountry(HashMap, String)\nFor this method you need to return a string with the country name and the total number of methods that country had:\ncountryName + \" had a total of \" + medalCount + \" medals.\""
-  },
-  {
-    "objectID": "short-assignment-02.html#submitting-your-code",
-    "href": "short-assignment-02.html#submitting-your-code",
-    "title": "Lab 02",
-    "section": "",
-    "text": "Add the package information at the top of your .java file:\npackage com.gradescope.medalinfo;\nSubmit your MedalInfo.java file to gradescope."
-  },
-  {
-    "objectID": "compiling.html",
-    "href": "compiling.html",
-    "title": "Compiling",
-    "section": "",
-    "text": "Before you follow the instructions below, make sure you have this class in a working directory on Eclipse:\npublic class OddEven {\n    \n    public static boolean isEven(int n) {\n        return n % 2 == 0;\n    }\n    \n    public static void main(String[] args) {\n        // TODO Auto-generated method stub\n        int number = Integer.valueOf(args[0]);\n        if (isEven(number)) {\n            System.out.println(\"Even\");\n        } else {\n            System.out.println(\"Odd\");\n        }\n\n    }\n\n}\n\nDownload the JDK Development Kit\nOpen a local terminal (that can be done in several ways, on Eclipse go to Window &gt; Show View &gt; Terminal)\nHere’s what my terminal looks like: \nChange directory (cd) into your project folder (my working directory is in a folder called CSC210 on my Desktop): \ncd into the src folder: cd src\nWe will compile our .java file first by entering javac OddEven.java into our local terminal\nTo run our binary code with an argument we can enter java OddEven 2"
-  },
-  {
-    "objectID": "slides-02-01.html#quiz-01",
-    "href": "slides-02-01.html#quiz-01",
-    "title": "Arrays",
-    "section": "Quiz 01",
-    "text": "Quiz 01\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write comments.\nName your method what you want, but the name should be in camelCase."
-  },
-  {
-    "objectID": "academic-integrity.html",
-    "href": "academic-integrity.html",
-    "title": "Academic Integrity",
-    "section": "",
-    "text": "All work you submit for grading in this course must be your own. Submitting work that includes (minor and/or major) components that are not your own work is considered plagiarism. Instances of plagiarism will be reported to the Dean of Students.\nKeep in mind that all assignments and practice problems provided in this course are meant to help you practice the skills that you will need to do well in all assessments (including on paper quizzes and exams), so it is generally in your best interest to avoid taking shortcuts even on practice problems (which are ungraded).\nSharing your code with others (in addition to copying code from others) is considered a break of the academic integrity code (unauthorized assistance) as well. If code that you claim is yours is found in other students’ submission(s), you will also be reported to the Dean of Students.\nThe university keeps track of multiple offenses. For the College of Science, the second reported offense results in a failing grade for the class in which the second offense occurred.\nGradescope has a similarity tool, which compares all submissions and creates reports with submission overlaps. Similarity reports will be generated also with code generated by AI tools, and code found online.\nThe penalty for breaking the academic integrity code is zero points awarded to the assignment found to be plagiarizes and -5 points from final grade (out of 100 points)."
-  },
-  {
-    "objectID": "slides-02-02.html#hashmap-class-important-methods-1",
-    "href": "slides-02-02.html#hashmap-class-important-methods-1",
-    "title": "HashMap",
-    "section": "HashMap class – important methods",
-    "text": "HashMap class – important methods\nHashMap&lt;String, Integer&gt; soccerPlayers = new HashMap&lt;String, Integer&gt;();\n\nsoccerPlayers.put(\"Pelé\", 10)\nsoccerPlayers.put(\"Marta\", 10)\nsoccerPlayers.put(\"Alex Morgan\", 13)\n\nsoccerPlayers.get(\"Marta\");\n\nsoccerPlayers.remove(\"Pelé\");\n\nSystem.out.println(soccerPlayers.size());\nSystem.out.println(soccerPlayers);"
   }
 ]

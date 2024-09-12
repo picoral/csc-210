@@ -11,6 +11,7 @@ website:
       - syllabus.qmd
       - programming-assignments.qmd
       - modules.qmd
+      - practice.qmd
       - start.qmd
 
 format:
