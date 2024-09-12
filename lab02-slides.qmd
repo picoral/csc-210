@@ -117,7 +117,7 @@ You can use `Integer.MAX_VALUE` to initialize your minCount variable.
 For this method you need to return a string with the country name and the total number of methods that country had:
 
 ```{java}
-countryName + " had had a total of " + medalCount + " medals."
+countryName + " had a total of " + medalCount + " medals."
 ```
 
 

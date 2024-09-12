@@ -1964,7 +1964,7 @@
     "href": "lab02-slides.html#write-getcountryhashmap-string",
     "title": "CSC 210 Lab 02",
     "section": "Write getCountry(HashMap, String)",
-    "text": "Write getCountry(HashMap, String)\nFor this method you need to return a string with the country name and the total number of methods that country had:\ncountryName + \" had had a total of \" + medalCount + \" medals.\""
+    "text": "Write getCountry(HashMap, String)\nFor this method you need to return a string with the country name and the total number of methods that country had:\ncountryName + \" had a total of \" + medalCount + \" medals.\""
   },
   {
     "objectID": "short-assignment-02.html#submitting-your-code",
