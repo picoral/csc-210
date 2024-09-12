@@ -179,4 +179,6 @@ Otherwise you should avoid single letter variable names.
 
 Write your own code.  We will be using a tool that finds overly similar code.
 Do not look at other students' code.  Do not let other students look at your code 
-or talk in detail about how to solve this programming project. 
+or talk in detail about how to solve this programming project. Read the 
+[academy integrity](academic-integrity.html) page for more details on how
+we deal with violations in this course.
