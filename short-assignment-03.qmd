@@ -7,10 +7,10 @@ title: "Lab 03"
 ## Introduction 
 
 Today's lab will be an introduction to the algorithmic structure of exhaustive
-search and will help prepare you for PA3. The first part of the section will be
+search and will help prepare you for PA3. The first part of the lab will be
 to generate all of the binary numbers for an N-bit number, in ascending order. 
-The second part of the section will be to generate all of the possible dice roll
-combinations for a six-sided dice. This section will also reinforce your skills 
+The second part of the lab will be to generate all of the possible dice roll
+combinations for a six-sided dice. This lab will also reinforce your skills 
 relating to arrays and recursion. 
 
 Exhaustive search is where every possible solution is enumerated. This is also
@@ -38,7 +38,7 @@ Part Two: Exhaustively print out the dice rolling combinations for N six-sided d
 
 ### Part 1 - Binary Introduction 
 
-For Part 1 of this section we are completing a class that 
+For Part 1 of this lab we are completing a class that 
 generates and prints out in ascending order all of the binary representations 
 of the numbers 0-2^N - 1, where N represents the number of bits. 
 
@@ -53,7 +53,7 @@ For example, if N = 2, then the output would be:
 If you would like a more in-depth understanding of binary, refer to the lecture 
 slides or do a quick Google search. Additionally, this activity relies on the 
 enumerate and process structure described in class, so you should refer to those 
-slides for help while working through this section. 
+slides for help while working through this lab. 
 
 #### Step 1 
 
