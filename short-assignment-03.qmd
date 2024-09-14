@@ -2,70 +2,149 @@
 title: "Lab 03"
 ---
 
-# Short Assignment 03
+# Short Assignment 03 -- Exhaustive Search
 
 ## Introduction 
 
-The goal of today's lab session is to learn about peer review in regards to our class
-and code review in industry. In this section, you will be introduced to Aropa, the
-peer reviewing tool we will be using, and write your first two peer reviews. 
+Today's lab will be an introduction to the algorithmic structure of exhaustive
+search and will help prepare you for PA3. The first part of the section will be
+to generate all of the binary numbers for an N-bit number, in ascending order. 
+The second part of the section will be to generate all of the possible dice roll
+combinations for a six-sided dice. This section will also reinforce your skills 
+relating to arrays and recursion. 
 
-Start the section by reading about the benefits of Code Review in industry by 
-following the link below. 
+Exhaustive search is where every possible solution is enumerated. This is also
+known as the brute-force approach. In many cases, exhaustive search is the simplest
+solution, and the one to try first.
 
-https://blog.fullstory.com/what-we-learned-from-google-code-reviews-arent-just-for-catching-bugs/
+Remember, in lab sessions you can share code. For programming assignments you cannot.
+
+## Setup 
 
 
 
-## Setup for Peer Review 
-You will need to go to the Aropa website, click on the U of A logo or select
-the University of Arizona on the dropdown menu, and then log in using your UA
-netid and the class code 386198. The website is linked below and the same 
-instructions are posted on Piazza. 
-
-https://aropa2.gla.ac.uk/aropa/aropa.php
-
-You will be prompted to change your password. Choose a secure password that 
-you will remember as you will use this same account for peer reviews in 
-the future. 
+Now you are ready to start coding. 
 
 ## The Assignment
-Overview : Complete two peer reviews for PA2. 
 
-### Upload Process - Prior to Section 
-You will need to upload your PA2main.java file first. If you do not have
-access to your PA2main from the computer you are on, remember that you 
-can download this file through your Gradescope account. 
+This is the first assignment where you will have multiple classes. Part One should
+be completed in the `Lab3Binary.java` file and Part Two should be completed in the
+`Lab3Dice.java` file. 
 
-TODO: Add Aropa usage instructions once I am able to set up the assignment and
-see the student's view. 
+Part One: Exhaustively print out 0-2^N - 1, where N is the number of bits, in ascending
+order in binary.  	
+
+Part Two: Exhaustively print out the dice rolling combinations for N six-sided dice. 
+
+### Part 1 - Binary Introduction 
+
+For Part 1 of this section we are completing a class that 
+generates and prints out in ascending order all of the binary representations 
+of the numbers 0-2^N - 1, where N represents the number of bits. 
+
+For example, if N = 2, then the output would be:
+```
+00
+01
+10
+11
+``` 
+
+If you would like a more in-depth understanding of binary, refer to the lecture 
+slides or do a quick Google search. Additionally, this activity relies on the 
+enumerate and process structure described in class, so you should refer to those 
+slides for help while working through this section. 
+
+#### Step 1 
+
+Start by printing out the passed in N from the command line.  Code is
+already provided to read the first command line argument.
+
+Travis will be testing your output against the binary numbers of 0-2^N - 1 in 
+ascending order.
+
+#### Step 2 
+
+Consider what decisions need to be made in order to enumerate over all of the 
+binary numbers starting from 00000 and getting to 11111. Discuss the following
+questions with your paired programming partner. 
+
+* What parameters do you need with your enumerate method? What do these parameters
+represent? How large should your array be that is holding the selected bits? 
+
+* What value, 0 or 1, should you start setting each bit to? What part of the 
+enumeration method relates to changing the bit's value? 
+
+* How should you move to the next index of the bit being changed? How will
+you achieve this in your recursive enumeration call? 
+
+* Look back at the lecture slides to recall the format of the enumerate and 
+process structure and copy over any necessary code. 
+
+#### Step 3
+
+The enumerate and process structure requires a recursive call of the enumerate 
+method. To conclude this activity, you need to implement process and select
+a base case condition. Think and discuss with your partner the following 
+questions. 
+
+* What two parameters should be equal for you to stop the recursion? 
+
+* Where should the base case be located in your enumerate function? 
+
+* Where should you call process? What should you pass process as a parameter? 
+
+### Part Two - Dice Introduction 
+
+This activity is very similar to the previous binary activity, so make 
+sure to complete that activity first and 
+reuse the enumerate and process structure here. 
+
+#### Step 1 
+
+Read in the number of dice from the command line. 
+
+#### Step 2 
+
+Consider what decisions need to be made in order to enumerate over all of the 
+possible roll combinations. Discuss the following questions with your paired 
+programming partner and refer back to your Part 1 decisions if you get stuck.  
+
+* What parameters do you need with your enumerate method? What do these parameters
+represent? 
+
+* How large should your array be that is holding the value of the dice rolls? 
+
+* What value should you start setting each die to? Is this a different value than 
+the start value used during the binary activity? 
+
+* How should you move to selecting the value of the next roll? How will
+you achieve this in your recursive enumeration call? 
+
+* Look back at Part 1 or the lecture slides to recall the format of the enumerate 
+and process structure to copy over any necessary code. 
+
+#### Step 3
+
+The enumerate and process structure requires a recursive call of the enumerate 
+method. To conclude this activity, you need to implement process and select
+a base case condition. Think and discuss with your partner the following 
+questions. 
+
+* What two parameters should be equal for you to stop the recursion? 
+
+* Where should the base case be located in your enumerate function? 
+
+* Where should you call process? 
 
 
-### Review Process
-You will be responding to the statements below in regards to two other
-students' code. You will be ranking your agreement of how well the statements 
-relate to the student's code on a scale of Strongly Agree to Strongly Disagree.
+## Resources
 
-In addition to the rankings, you will have a comment block below to add a
-rational for your ranking and commentary on how the student could improve. 
-When writing your comments, keep the Department of Computer Science's code of 
-conduct (https://www2.cs.arizona.edu/codeofconduct.pdf) in mind. Your feedback 
-should be constructive, polite, and contribute to a positive learning environment. 
+The Java API and Google are your friend, look up methods to take advantage of 
+Java's libraries. 
 
-1.	Clarity: The student's code is easily readable. This being able to read a method
-	in no more than 5-7 minutes and being able to read each method without scrolling.
-     
-2.	Clarity: The students code is well commented, with complex functions having a 
-	descriptive comment, comments inside of non-trivial methods to elaborate on 
-	complex code, and a class comment with usage and file format. 
-
-3.	Decomposition: The student avoids nested loops or conditionals and chaining to 
-	self-defined methods. 
-	
-4.	Decomposition: The student's code exhibits good decomposition. They used all non-
-	static methods and only turned in one source file.
-
-5.	Style: The code follows the style guidelines. No lines are longer than 80 columns, does 
-	not mix tabs and spaces and has curly brackets on the same line as the loop or conditional. 
-	
-
+* System.out.println() is your friend for testing and output 
+* Declaring an array:
+	* int[] array = new int[N]; 
+* Updating a value in an array: 
+	* array[0] = 1; 
