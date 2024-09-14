@@ -136,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#implementation-details" id="toc-implementation-details" class="nav-link" data-scroll-target="#implementation-details">Implementation Details:</a></li>
   <li><a href="#recursive-algorithm" id="toc-recursive-algorithm" class="nav-link" data-scroll-target="#recursive-algorithm">Recursive Algorithm:</a></li>
   <li><a href="#write-other-methods" id="toc-write-other-methods" class="nav-link" data-scroll-target="#write-other-methods">Write other methods</a></li>
-  <li><a href="#development-strategy-and-hints" id="toc-development-strategy-and-hints" class="nav-link" data-scroll-target="#development-strategy-and-hints">Development Strategy and Hints:</a></li>
+  <li><a href="#development-strategy-and-hints" id="toc-development-strategy-and-hints" class="nav-link" data-scroll-target="#development-strategy-and-hints">Development Strategy and Hints</a></li>
   <li><a href="#grading-criteria" id="toc-grading-criteria" class="nav-link" data-scroll-target="#grading-criteria">Grading Criteria</a></li>
   <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   </ul></li>
@@ -201,9 +201,8 @@ Anagrams for barbarabush:
 </section>
 <section id="getting-started" class="level2">
 <h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
-<ul>
-<li>Accept the assignment to have a github repository be created for you at</li>
-</ul>
+<p>Name your class <code>Anagrams</code>.</p>
+<p>Submit your <code>Anagrams.java</code> file to gradescope.</p>
 </section>
 <section id="implementation-details" class="level2">
 <h2 class="anchored" data-anchor-id="implementation-details">Implementation Details:</h2>
@@ -243,7 +242,7 @@ Notice that some paths of the recursion lead to dead ends. For example, if the r
 <p>An important aspect of simplifying the solution to many backtracking problems is the separation of recursive code from code that manages low-level details of the problem. We have seen this in several of our backtracking examples, such as Dice roll sum and 8 queens. You should follow a similar strategy in this assignment. The low-level details for anagrams involve keeping track of letters and figuring out when one group of letters can be formed from another.</p>
 </section>
 <section id="development-strategy-and-hints" class="level2">
-<h2 class="anchored" data-anchor-id="development-strategy-and-hints">Development Strategy and Hints:</h2>
+<h2 class="anchored" data-anchor-id="development-strategy-and-hints">Development Strategy and Hints</h2>
 <p>Your program should produce the anagrams in the same format as in the expected output files. The easiest way to do this is to build up your answer in a list, or other ordered collection. Then you can <code>println</code> the collection and it will have the right format.</p>
 <p>Several different word list files are provided. We recommend initially using a very small word list <code>words1.txt</code> to make testing easier. But once your code works with this word list, you should test it with larger word lists such as the provided <code>words2.txt</code> and <code>words3.txt</code>.<br>
 You can find other larger word lists here:</p>
@@ -252,7 +251,7 @@ You can find other larger word lists here:</p>
 </section>
 <section id="grading-criteria" class="level2">
 <h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
-<p>Half of the PA3 grade will be correctness (50/100). For this assignment, there will be some private test cases. Any time you submit to gradescope, it will tell you how many of the 50 correctness points you have earned.</p>
+<p>Half of this assignment grade will be correctness (50/100). For this assignment, there will be some private test cases. Any time you submit to gradescope, it will tell you how many of the 50 correctness points you have earned.</p>
 <p>The other half (50/100) of the PA3 grade will be your decomposition and code clarity.</p>
 <p>Decomposition:</p>
 <ul>
