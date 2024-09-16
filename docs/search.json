@@ -1032,8 +1032,8 @@
     "objectID": "slides-03-01.html#two-recursive-algorithms",
     "href": "slides-03-01.html#two-recursive-algorithms",
     "title": "Exhaustive Search",
-    "section": "",
-    "text": "Exhaustive Search\nBacktracking\n\nThese are brute-force algorithms\nUsed for problems that have a small and well-defined search space, where it is feasible to check all possible solutions"
+    "section": "Two recursive algorithms",
+    "text": "Two recursive algorithms\n\nExhaustive Search\nBacktracking\n\nThese are brute-force algorithms\nUsed for problems that have a small and well-defined search space, where it is feasible to check all possible solutions"
   },
   {
     "objectID": "slides-03-01.html#exhaustive-search",
@@ -1096,7 +1096,7 @@
     "href": "slides-03-01.html#all-possible-decimal-numbers-solution",
     "title": "Exhaustive Search",
     "section": "All possible decimal numbers – solution",
-    "text": "All possible decimal numbers – solution\nimport java.util.ArrayList;\n\npublic class AllDecimal {\n    \n    static ArrayList&lt;String&gt; result = new ArrayList&lt;String&gt;();\n    \n    public static void getDecimal(int digits, String number) {\n        if (digits == 0) {\n            result.add(number);\n        } else {\n            for (int n = 0; n &lt; 10; n++) {\n                getDecimal(digits - 1, number + n);\n            }\n            \n        }\n        \n    } // getDecimal\n\n    public static void main(String[] args) {\n        \n        getDecimal(2, \"\");\n        \n        for (String number : result) {\n            System.out.println(number);\n        }\n\n    }\n}"
+    "text": "All possible decimal numbers – solution\nimport java.util.ArrayList;\n\npublic class AllDecimal {\n    \n    public static void getDecimal(int digits, String number, ArrayList&lt;String&gt; result) {\n        if (digits == 0) {\n            result.add(number);\n        } else {\n            for (int n = 0; n &lt; 10; n++) {\n                getDecimal(digits - 1, number + n, result);\n            }\n            \n        }\n        \n    } // getDecimal\n\n    public static void main(String[] args) {\n      ArrayList&lt;String&gt; result = new ArrayList&lt;String&gt;();\n        \n        getDecimal(2, \"\", result);\n        \n        for (String number : result) {\n            System.out.println(number);\n        }\n\n    }\n}"
   },
   {
     "objectID": "slides-01-02.html#before-we-start",
