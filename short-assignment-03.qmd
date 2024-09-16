@@ -39,58 +39,45 @@ Part Two: Exhaustively print out the dice rolling combinations for N six-sided d
 ### Part 1 - Binary Introduction 
 
 For Part 1 of this lab we are completing a class that 
-generates and prints out in ascending order all of the binary representations 
+generates an `ArrayList` in ascending order all with the binary representations 
 of the numbers 0-2^N - 1, where N represents the number of bits. 
 
 For example, if N = 2, then the output would be:
 ```
-00
-01
-10
-11
+[00, 01, 10, 11]
 ``` 
 
-If you would like a more in-depth understanding of binary, refer to the lecture 
-slides or do a quick Google search. Additionally, this activity relies on the 
-enumerate and process structure described in class, so you should refer to those 
-slides for help while working through this lab. 
+Additionally, this activity relies on the 
+enumerate (exhaustive search) and process structure described in class, 
+so you should refer to those slides for help while working through this lab. 
 
-#### Step 1 
 
-Start by printing out the passed in N from the command line.  Code is
-already provided to read the first command line argument.
-
-Travis will be testing your output against the binary numbers of 0-2^N - 1 in 
-ascending order.
-
-#### Step 2 
+#### Step 1
 
 Consider what decisions need to be made in order to enumerate over all of the 
-binary numbers starting from 00000 and getting to 11111. Discuss the following
-questions with your paired programming partner. 
+binary numbers starting from 00000 and getting to 11111 (for N = 5).
 
 * What parameters do you need with your enumerate method? What do these parameters
-represent? How large should your array be that is holding the selected bits? 
+represent?  
 
 * What value, 0 or 1, should you start setting each bit to? What part of the 
 enumeration method relates to changing the bit's value? 
 
-* How should you move to the next index of the bit being changed? How will
+* How should you move to the next bit? How will
 you achieve this in your recursive enumeration call? 
 
 * Look back at the lecture slides to recall the format of the enumerate and 
 process structure and copy over any necessary code. 
 
-#### Step 3
+#### Step 2
 
 The enumerate and process structure requires a recursive call of the enumerate 
 method. To conclude this activity, you need to implement process and select
-a base case condition. Think and discuss with your partner the following 
-questions. 
+a base case condition. 
 
 * What two parameters should be equal for you to stop the recursion? 
 
-* Where should the base case be located in your enumerate function? 
+* Where should the base case be located in your enumerate method? 
 
 * Where should you call process? What should you pass process as a parameter? 
 
@@ -100,20 +87,13 @@ This activity is very similar to the previous binary activity, so make
 sure to complete that activity first and 
 reuse the enumerate and process structure here. 
 
-#### Step 1 
-
-Read in the number of dice from the command line. 
-
-#### Step 2 
+#### Step 1
 
 Consider what decisions need to be made in order to enumerate over all of the 
-possible roll combinations. Discuss the following questions with your paired 
-programming partner and refer back to your Part 1 decisions if you get stuck.  
+possible roll combinations. 
 
 * What parameters do you need with your enumerate method? What do these parameters
 represent? 
-
-* How large should your array be that is holding the value of the dice rolls? 
 
 * What value should you start setting each die to? Is this a different value than 
 the start value used during the binary activity? 
@@ -124,7 +104,7 @@ you achieve this in your recursive enumeration call?
 * Look back at Part 1 or the lecture slides to recall the format of the enumerate 
 and process structure to copy over any necessary code. 
 
-#### Step 3
+#### Step 2
 
 The enumerate and process structure requires a recursive call of the enumerate 
 method. To conclude this activity, you need to implement process and select
@@ -144,7 +124,7 @@ The Java API and Google are your friend, look up methods to take advantage of
 Java's libraries. 
 
 * System.out.println() is your friend for testing and output 
-* Declaring an array:
-	* int[] array = new int[N]; 
-* Updating a value in an array: 
-	* array[0] = 1; 
+* Declaring an ArrayList:
+	* ArrayList<Integer> array = new ArrayList<Integer>(); 
+* Adding a value in an ArrayList: 
+	* array.add(1); 
