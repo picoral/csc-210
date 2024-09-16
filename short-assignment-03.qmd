@@ -28,11 +28,11 @@ be completed in the `Lab3Binary.java` file and Part Two should be completed in t
 Part One: Exhaustively print out 0-2^N - 1, where N is the number of bits, in ascending
 order in binary.  	
 
-`package com.gradescope.lab3binary;`
-
 Part Two: Exhaustively print out the dice rolling combinations for N six-sided dice. 
 
-`package com.gradescope.lab3dice;`
+Here's the package info for both files:
+
+`package com.gradescope.lab03;`
 
 ### Part 1 - Binary Introduction 
 
