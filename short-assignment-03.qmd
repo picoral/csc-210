@@ -48,7 +48,7 @@ For example, if N = 2, then the output would be:
 ``` 
 
 Additionally, this activity relies on the 
-enumerate (exhaustive search) and process structure described in class, 
+enumerate (exhaustive search) algorithm described in class, 
 so you should refer to those slides for help while working through this lab. 
 
 
@@ -66,20 +66,20 @@ enumeration method relates to changing the bit's value?
 * How should you move to the next bit? How will
 you achieve this in your recursive enumeration call? 
 
-* Look back at the lecture slides to recall the format of the enumerate and 
-process structure and copy over any necessary code. 
+* Look back at the lecture slides to recall the format of the enumerate algorithm
+and copy over any necessary code. 
 
 #### Step 2
 
-The enumerate and process structure requires a recursive call of the enumerate 
-method. To conclude this activity, you need to implement process and select
+The enumerate algorithm requires a recursive call of the enumerate 
+method. To conclude this activity, you need to a recursive step and select
 a base case condition. 
 
 * What two parameters should be equal for you to stop the recursion? 
 
 * Where should the base case be located in your enumerate method? 
 
-* Where should you call process? What should you pass process as a parameter? 
+* Where should you call the method again? 
 
 ## Test case (main)
 
@@ -98,7 +98,7 @@ public static void main(String[] args) {
 
 This activity is very similar to the previous binary activity, so make 
 sure to complete that activity first and 
-reuse the enumerate and process structure here. 
+reuse the enumerate algorithm here. 
 
 #### Step 1
 
@@ -125,12 +125,12 @@ the start value used during the binary activity?
 you achieve this in your recursive enumeration call? 
 
 * Look back at Part 1 or the lecture slides to recall the format of the enumerate 
-and process structure to copy over any necessary code. 
+algorithm to copy over any necessary code. 
 
 #### Step 2
 
-The enumerate and process structure requires a recursive call of the enumerate 
-method. To conclude this activity, you need to implement process and select
+The enumerate algorithm requires a recursive call of the enumerate 
+method. To conclude this activity, you need to implement the recursive call and select
 a base case condition. Think and discuss with your partner the following 
 questions. 
 
@@ -138,7 +138,7 @@ questions.
 
 * Where should the base case be located in your enumerate function? 
 
-* Where should you call process? 
+* Where should you call the method recursively? 
 
 ## Test case (main)
 

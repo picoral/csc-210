@@ -188,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 <p>For Part 1 of this lab we are completing a class that generates an <code>ArrayList</code> in ascending order all with the binary representations of the numbers 0-2^N - 1, where N represents the number of bits.</p>
 <p>For example, if N = 2, then the output would be:</p>
 <pre><code>[00, 01, 10, 11]</code></pre>
-<p>Additionally, this activity relies on the enumerate (exhaustive search) and process structure described in class, so you should refer to those slides for help while working through this lab.</p>
+<p>Additionally, this activity relies on the enumerate (exhaustive search) algorithm described in class, so you should refer to those slides for help while working through this lab.</p>
 <section id="step-1" class="level4">
 <h4 class="anchored" data-anchor-id="step-1">Step 1</h4>
 <p>Consider what decisions need to be made in order to enumerate over all of the binary numbers starting from 00000 and getting to 11111 (for N = 5).</p>
@@ -196,16 +196,16 @@ ul.task-list li input[type="checkbox"] {
 <li><p>What parameters do you need with your enumerate method? What do these parameters represent?</p></li>
 <li><p>What value, 0 or 1, should you start setting each bit to? What part of the enumeration method relates to changing the bit’s value?</p></li>
 <li><p>How should you move to the next bit? How will you achieve this in your recursive enumeration call?</p></li>
-<li><p>Look back at the lecture slides to recall the format of the enumerate and process structure and copy over any necessary code.</p></li>
+<li><p>Look back at the lecture slides to recall the format of the enumerate algorithm and copy over any necessary code.</p></li>
 </ul>
 </section>
 <section id="step-2" class="level4">
 <h4 class="anchored" data-anchor-id="step-2">Step 2</h4>
-<p>The enumerate and process structure requires a recursive call of the enumerate method. To conclude this activity, you need to implement process and select a base case condition.</p>
+<p>The enumerate algorithm requires a recursive call of the enumerate method. To conclude this activity, you need to a recursive step and select a base case condition.</p>
 <ul>
 <li><p>What two parameters should be equal for you to stop the recursion?</p></li>
 <li><p>Where should the base case be located in your enumerate method?</p></li>
-<li><p>Where should you call process? What should you pass process as a parameter?</p></li>
+<li><p>Where should you call the method again?</p></li>
 </ul>
 </section>
 </section>
@@ -220,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
     }</code></pre>
 <section id="part-two---dice-introduction" class="level3">
 <h3 class="anchored" data-anchor-id="part-two---dice-introduction">Part Two - Dice Introduction</h3>
-<p>This activity is very similar to the previous binary activity, so make sure to complete that activity first and reuse the enumerate and process structure here.</p>
+<p>This activity is very similar to the previous binary activity, so make sure to complete that activity first and reuse the enumerate algorithm here.</p>
 <section id="step-1-1" class="level4">
 <h4 class="anchored" data-anchor-id="step-1-1">Step 1</h4>
 <p>Consider what decisions need to be made in order to enumerate over all of the possible roll combinations for N dice.</p>
@@ -232,16 +232,16 @@ ul.task-list li input[type="checkbox"] {
 <li><p>What parameters do you need with your enumerate method? What do these parameters represent?</p></li>
 <li><p>What value should you start setting each die to? Is this a different value than the start value used during the binary activity?</p></li>
 <li><p>How should you move to selecting the value of the next roll? How will you achieve this in your recursive enumeration call?</p></li>
-<li><p>Look back at Part 1 or the lecture slides to recall the format of the enumerate and process structure to copy over any necessary code.</p></li>
+<li><p>Look back at Part 1 or the lecture slides to recall the format of the enumerate algorithm to copy over any necessary code.</p></li>
 </ul>
 </section>
 <section id="step-2-1" class="level4">
 <h4 class="anchored" data-anchor-id="step-2-1">Step 2</h4>
-<p>The enumerate and process structure requires a recursive call of the enumerate method. To conclude this activity, you need to implement process and select a base case condition. Think and discuss with your partner the following questions.</p>
+<p>The enumerate algorithm requires a recursive call of the enumerate method. To conclude this activity, you need to implement the recursive call and select a base case condition. Think and discuss with your partner the following questions.</p>
 <ul>
 <li><p>What two parameters should be equal for you to stop the recursion?</p></li>
 <li><p>Where should the base case be located in your enumerate function?</p></li>
-<li><p>Where should you call process?</p></li>
+<li><p>Where should you call the method recursively?</p></li>
 </ul>
 </section>
 </section>
