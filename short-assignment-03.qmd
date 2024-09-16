@@ -75,7 +75,7 @@ The enumerate algorithm requires a recursive call of the enumerate
 method. To conclude this activity, you need to a recursive step and select
 a base case condition. 
 
-* What two parameters should be equal for you to stop the recursion? 
+* What parameters should be equal for you to stop the recursion? 
 
 * Where should the base case be located in your enumerate method? 
 
@@ -134,7 +134,7 @@ method. To conclude this activity, you need to implement the recursive call and 
 a base case condition. Think and discuss with your partner the following 
 questions. 
 
-* What two parameters should be equal for you to stop the recursion? 
+* What parameters should be equal for you to stop the recursion? 
 
 * Where should the base case be located in your enumerate function? 
 
