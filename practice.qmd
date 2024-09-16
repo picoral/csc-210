@@ -4,3 +4,7 @@ title: "Practice Problems"
 
 * [Weeks 01 and 02](pdfs/practice-01.pdf)
 * [Week 03](pdfs/practice-02.pdf)
+
+# Other Resources
+
+* [CodingBat](https://codingbat.com/java)
