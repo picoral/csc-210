@@ -79,6 +79,19 @@ a base case condition.
 
 * Where should you call process? What should you pass process as a parameter? 
 
+## Test case (main)
+
+Your code should run with the following `main` method:
+
+```{java}
+public static void main(String[] args) {
+		ArrayList<String> allSolutions = new ArrayList<String>();
+		binary(5, "", allSolutions);
+		System.out.println(allSolutions);
+	}
+```
+
+
 ### Part Two - Dice Introduction 
 
 This activity is very similar to the previous binary activity, so make 
@@ -124,6 +137,20 @@ questions.
 * Where should the base case be located in your enumerate function? 
 
 * Where should you call process? 
+
+## Test case (main)
+
+Your code should run with the following `main` method:
+
+```{java}
+public static void main(String[] args) {
+		ArrayList<String> allSolutions = new ArrayList<String>();
+		String solution = "";
+		roll(2, solution, allSolutions);
+		System.out.println(allSolutions);
+	}
+```
+
 
 
 ## Resources
