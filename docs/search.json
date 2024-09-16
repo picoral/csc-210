@@ -1986,5 +1986,19 @@
     "title": "Exhaustive Search",
     "section": "",
     "text": "Exhaustive Search\nBacktracking\n\nThese are brute-force algorithms\nUsed for problems that have a small and well-defined search space, where it is feasible to check all possible solutions"
+  },
+  {
+    "objectID": "slides-03-01.html#recursive-factorial",
+    "href": "slides-03-01.html#recursive-factorial",
+    "title": "Exhaustive Search",
+    "section": "Recursive Factorial",
+    "text": "Recursive Factorial\n\nRecursive algorithms split the main problem into smaller problems\nProblems that can be solved by applying solutions to smaller versions of the same problem\nRecursive methods call themselves\n\nLet’s write a recursive solution to the factorial problem\n\nWhat’s the base case? (when do we stop, come back from the recursion?)\nWhat’s the recursive step?"
+  },
+  {
+    "objectID": "slides-03-01.html#recursive-factorial-solution",
+    "href": "slides-03-01.html#recursive-factorial-solution",
+    "title": "Exhaustive Search",
+    "section": "Recursive Factorial – solution",
+    "text": "Recursive Factorial – solution\npublic class RecursiveFactorial {\n    \n    public static int factorial(int n, int result) {\n        if (n == 0) return 1;\n        else {\n            result *= n * factorial(n - 1, result);\n        }\n        return result;\n    }\n\n    public static void main(String[] args) {\n        // TODO Auto-generated method stub\n        int result = 1;\n        System.out.println(factorial(10, result));\n\n    }\n\n}"
   }
 ]

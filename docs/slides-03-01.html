@@ -396,6 +396,40 @@
 </div>
 
 </section>
+<section id="recursive-factorial" class="slide level2">
+<h2>Recursive Factorial</h2>
+<ul>
+<li>Recursive algorithms split the main problem into smaller problems</li>
+<li>Problems that can be solved by applying solutions to smaller versions of the same problem</li>
+<li>Recursive methods call themselves</li>
+</ul>
+<p>Let’s write a recursive solution to the factorial problem</p>
+<ul>
+<li>What’s the base case? (when do we stop, come back from the recursion?)</li>
+<li>What’s the recursive step?</li>
+</ul>
+</section>
+<section id="recursive-factorial-solution" class="slide level2">
+<h2>Recursive Factorial – solution</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>public class RecursiveFactorial {</span>
+<span id="cb1-2"><a></a>    </span>
+<span id="cb1-3"><a></a>    public static int factorial(int n, int result) {</span>
+<span id="cb1-4"><a></a>        if (n == 0) return 1;</span>
+<span id="cb1-5"><a></a>        else {</span>
+<span id="cb1-6"><a></a>            result *= n * factorial(n - 1, result);</span>
+<span id="cb1-7"><a></a>        }</span>
+<span id="cb1-8"><a></a>        return result;</span>
+<span id="cb1-9"><a></a>    }</span>
+<span id="cb1-10"><a></a></span>
+<span id="cb1-11"><a></a>    public static void main(String[] args) {</span>
+<span id="cb1-12"><a></a>        // TODO Auto-generated method stub</span>
+<span id="cb1-13"><a></a>        int result = 1;</span>
+<span id="cb1-14"><a></a>        System.out.println(factorial(10, result));</span>
+<span id="cb1-15"><a></a></span>
+<span id="cb1-16"><a></a>    }</span>
+<span id="cb1-17"><a></a></span>
+<span id="cb1-18"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="two-recursive-algorithms" class="slide level2">
 <h2>Two recursive algorithms</h2>
 <ul>
@@ -436,22 +470,22 @@
 </section>
 <section id="all-possible-binary-numbers-solution" class="slide level2">
 <h2>All possible binary numbers – solution</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>public class AllBinary {</span>
-<span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a>    public static void getBinary(int digits, String number) {</span>
-<span id="cb3-4"><a></a>        if (digits == 0) { // base case, no digits left to add</span>
-<span id="cb3-5"><a></a>            System.out.println(number);</span>
-<span id="cb3-6"><a></a>        } else {</span>
-<span id="cb3-7"><a></a>            getBinary(digits - 1, number + "0");</span>
-<span id="cb3-8"><a></a>            getBinary(digits - 1, number + "1");</span>
-<span id="cb3-9"><a></a>        }</span>
-<span id="cb3-10"><a></a>    }</span>
-<span id="cb3-11"><a></a>    </span>
-<span id="cb3-12"><a></a>    public static void main(String[] args) {</span>
-<span id="cb3-13"><a></a>        getBinary(3, "");</span>
-<span id="cb3-14"><a></a>    }</span>
-<span id="cb3-15"><a></a></span>
-<span id="cb3-16"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>public class AllBinary {</span>
+<span id="cb4-2"><a></a></span>
+<span id="cb4-3"><a></a>    public static void getBinary(int digits, String number) {</span>
+<span id="cb4-4"><a></a>        if (digits == 0) { // base case, no digits left to add</span>
+<span id="cb4-5"><a></a>            System.out.println(number);</span>
+<span id="cb4-6"><a></a>        } else {</span>
+<span id="cb4-7"><a></a>            getBinary(digits - 1, number + "0");</span>
+<span id="cb4-8"><a></a>            getBinary(digits - 1, number + "1");</span>
+<span id="cb4-9"><a></a>        }</span>
+<span id="cb4-10"><a></a>    }</span>
+<span id="cb4-11"><a></a>    </span>
+<span id="cb4-12"><a></a>    public static void main(String[] args) {</span>
+<span id="cb4-13"><a></a>        getBinary(3, "");</span>
+<span id="cb4-14"><a></a>    }</span>
+<span id="cb4-15"><a></a></span>
+<span id="cb4-16"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="creating-an-arraylist-of-solutions" class="slide level2">
 <h2>Creating an <code>ArrayList</code> of solutions</h2>
@@ -485,33 +519,33 @@
 </section>
 <section id="all-possible-decimal-numbers-solution" class="slide level2">
 <h2>All possible decimal numbers – solution</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a>import java.util.ArrayList;</span>
-<span id="cb6-2"><a></a></span>
-<span id="cb6-3"><a></a>public class AllDecimal {</span>
-<span id="cb6-4"><a></a>    </span>
-<span id="cb6-5"><a></a>    public static void getDecimal(int digits, String number, ArrayList&lt;String&gt; result) {</span>
-<span id="cb6-6"><a></a>        if (digits == 0) {</span>
-<span id="cb6-7"><a></a>            result.add(number);</span>
-<span id="cb6-8"><a></a>        } else {</span>
-<span id="cb6-9"><a></a>            for (int n = 0; n &lt; 10; n++) {</span>
-<span id="cb6-10"><a></a>                getDecimal(digits - 1, number + n, result);</span>
-<span id="cb6-11"><a></a>            }</span>
-<span id="cb6-12"><a></a>            </span>
-<span id="cb6-13"><a></a>        }</span>
-<span id="cb6-14"><a></a>        </span>
-<span id="cb6-15"><a></a>    } // getDecimal</span>
-<span id="cb6-16"><a></a></span>
-<span id="cb6-17"><a></a>    public static void main(String[] args) {</span>
-<span id="cb6-18"><a></a>      ArrayList&lt;String&gt; result = new ArrayList&lt;String&gt;();</span>
-<span id="cb6-19"><a></a>        </span>
-<span id="cb6-20"><a></a>        getDecimal(2, "", result);</span>
-<span id="cb6-21"><a></a>        </span>
-<span id="cb6-22"><a></a>        for (String number : result) {</span>
-<span id="cb6-23"><a></a>            System.out.println(number);</span>
-<span id="cb6-24"><a></a>        }</span>
-<span id="cb6-25"><a></a></span>
-<span id="cb6-26"><a></a>    }</span>
-<span id="cb6-27"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>import java.util.ArrayList;</span>
+<span id="cb7-2"><a></a></span>
+<span id="cb7-3"><a></a>public class AllDecimal {</span>
+<span id="cb7-4"><a></a>    </span>
+<span id="cb7-5"><a></a>    public static void getDecimal(int digits, String number, ArrayList&lt;String&gt; result) {</span>
+<span id="cb7-6"><a></a>        if (digits == 0) {</span>
+<span id="cb7-7"><a></a>            result.add(number);</span>
+<span id="cb7-8"><a></a>        } else {</span>
+<span id="cb7-9"><a></a>            for (int n = 0; n &lt; 10; n++) {</span>
+<span id="cb7-10"><a></a>                getDecimal(digits - 1, number + n, result);</span>
+<span id="cb7-11"><a></a>            }</span>
+<span id="cb7-12"><a></a>            </span>
+<span id="cb7-13"><a></a>        }</span>
+<span id="cb7-14"><a></a>        </span>
+<span id="cb7-15"><a></a>    } // getDecimal</span>
+<span id="cb7-16"><a></a></span>
+<span id="cb7-17"><a></a>    public static void main(String[] args) {</span>
+<span id="cb7-18"><a></a>      ArrayList&lt;String&gt; result = new ArrayList&lt;String&gt;();</span>
+<span id="cb7-19"><a></a>        </span>
+<span id="cb7-20"><a></a>        getDecimal(2, "", result);</span>
+<span id="cb7-21"><a></a>        </span>
+<span id="cb7-22"><a></a>        for (String number : result) {</span>
+<span id="cb7-23"><a></a>            System.out.println(number);</span>
+<span id="cb7-24"><a></a>        }</span>
+<span id="cb7-25"><a></a></span>
+<span id="cb7-26"><a></a>    }</span>
+<span id="cb7-27"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

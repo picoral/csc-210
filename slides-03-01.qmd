@@ -6,6 +6,41 @@ format:
     show-slide-number: all
 ---
 
+## Recursive Factorial
+
+* Recursive algorithms split the main problem into smaller problems
+* Problems that can be solved by applying solutions to smaller versions of the same problem
+* Recursive methods call themselves
+
+Let's write a recursive solution to the factorial problem
+
+* What's the base case? (when do we stop, come back from the recursion?)
+* What's the recursive step?
+
+## Recursive Factorial -- solution
+
+```{java}
+public class RecursiveFactorial {
+	
+	public static int factorial(int n, int result) {
+		if (n == 0) return 1;
+		else {
+			result *= n * factorial(n - 1, result);
+		}
+		return result;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int result = 1;
+		System.out.println(factorial(10, result));
+
+	}
+
+}
+```
+
+
 ## Two recursive algorithms
 
 * Exhaustive Search	
