@@ -1999,6 +1999,6 @@
     "href": "slides-03-01.html#recursive-factorial-solution",
     "title": "Exhaustive Search",
     "section": "Recursive Factorial – solution",
-    "text": "Recursive Factorial – solution\npublic class RecursiveFactorial {\n    \n    public static int factorial(int n) {\n        if (n == 0) return 1;\n        else return n * factorial(n - 1);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(factorial(10));\n\n    }\n\n}"
+    "text": "Recursive Factorial – solution\npublic class RecursiveFactorial {\n    \n    public static int factorial(int n) {\n        if (n == 0) return 1;\n        else return n * factorial(n - 1);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(factorial(10));\n    }\n\n}"
   }
 ]
