@@ -31,7 +31,6 @@ public class RecursiveFactorial {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int result = 1;
 		System.out.println(factorial(10, result));
 
