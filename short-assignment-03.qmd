@@ -34,6 +34,8 @@ Here's the package info for both files:
 
 `package com.gradescope.lab03;`
 
+Submit both `.java` files to gradescope at once.
+
 ### Part 1 - Binary Introduction 
 
 For Part 1 of this lab we are completing a class that 
