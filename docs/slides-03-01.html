@@ -413,20 +413,17 @@
 <h2>Recursive Factorial – solution</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>public class RecursiveFactorial {</span>
 <span id="cb1-2"><a></a>    </span>
-<span id="cb1-3"><a></a>    public static int factorial(int n, int result) {</span>
+<span id="cb1-3"><a></a>    public static int factorial(int n) {</span>
 <span id="cb1-4"><a></a>        if (n == 0) return 1;</span>
-<span id="cb1-5"><a></a>        else {</span>
-<span id="cb1-6"><a></a>            return n * factorial(n - 1, result);</span>
-<span id="cb1-7"><a></a>        }</span>
-<span id="cb1-8"><a></a>    }</span>
-<span id="cb1-9"><a></a></span>
-<span id="cb1-10"><a></a>    public static void main(String[] args) {</span>
-<span id="cb1-11"><a></a>        int result = 1;</span>
-<span id="cb1-12"><a></a>        System.out.println(factorial(10, result));</span>
-<span id="cb1-13"><a></a></span>
-<span id="cb1-14"><a></a>    }</span>
-<span id="cb1-15"><a></a></span>
-<span id="cb1-16"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a></a>        else return n * factorial(n - 1);</span>
+<span id="cb1-6"><a></a>    }</span>
+<span id="cb1-7"><a></a></span>
+<span id="cb1-8"><a></a>    public static void main(String[] args) {</span>
+<span id="cb1-9"><a></a>        System.out.println(factorial(10));</span>
+<span id="cb1-10"><a></a></span>
+<span id="cb1-11"><a></a>    }</span>
+<span id="cb1-12"><a></a></span>
+<span id="cb1-13"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="two-recursive-algorithms" class="slide level2">
 <h2>Two recursive algorithms</h2>

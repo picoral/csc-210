@@ -22,16 +22,13 @@ Let's write a recursive solution to the factorial problem
 ```{java}
 public class RecursiveFactorial {
 	
-	public static int factorial(int n, int result) {
+	public static int factorial(int n) {
 		if (n == 0) return 1;
-		else {
-			return n * factorial(n - 1, result);
-		}
+		else return n * factorial(n - 1);
 	}
 
 	public static void main(String[] args) {
-		int result = 1;
-		System.out.println(factorial(10, result));
+		System.out.println(factorial(10));
 
 	}
 
