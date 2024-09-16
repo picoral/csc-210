@@ -38,6 +38,8 @@ public class RecursiveFactorial {
 
 What if we wanted to store all intermediate results in an array?
 
+`[1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800]`
+
 ## Factorial -- `ArrayList` solution
 
 ```{java}

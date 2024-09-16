@@ -2006,7 +2006,7 @@
     "href": "slides-03-01.html#factorial-arraylist",
     "title": "Exhaustive Search",
     "section": "Factorial – ArrayList",
-    "text": "Factorial – ArrayList\nWhat if we wanted to store all intermediate results in an array?"
+    "text": "Factorial – ArrayList\nWhat if we wanted to store all intermediate results in an array?\n[1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800]"
   },
   {
     "objectID": "slides-03-01.html#factorial-arraylist-solution",
