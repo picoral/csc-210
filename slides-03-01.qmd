@@ -77,34 +77,6 @@ public class AllBinary {
 
 What if instead of printing out a solution, I wanted to create an `ArrayList` of solutions?
 
-## Creating an `ArrayList` of solutions
-
-```{java}
-import java.util.ArrayList;
-
-public class AllBinary {
-	
-	static ArrayList<String> result = new ArrayList<String>();
-
-	public static void getBinary(int digits, String number) {
-		if (digits == 0) {
-			result.add(number);
-		} else {
-			getBinary(digits - 1, number + "0");
-			getBinary(digits - 1, number + "1");
-		}
-		
-	}
-	
-	public static void main(String[] args) {
-		getBinary(4, "");
-		System.out.println(result);
-	}
-
-}
-```
-
-
 ## Print all possible decimal numbers
 
 Write a Java application that	given an integer `n`, it prints all decimal numbers that have `n` digits.
@@ -143,14 +115,12 @@ import java.util.ArrayList;
 
 public class AllDecimal {
 	
-	static ArrayList<String> result = new ArrayList<String>();
-	
-	public static void getDecimal(int digits, String number) {
+	public static void getDecimal(int digits, String number, ArrayList<String> result) {
 		if (digits == 0) {
 			result.add(number);
 		} else {
 			for (int n = 0; n < 10; n++) {
-				getDecimal(digits - 1, number + n);
+				getDecimal(digits - 1, number + n, result);
 			}
 			
 		}
@@ -158,8 +128,9 @@ public class AllDecimal {
 	} // getDecimal
 
 	public static void main(String[] args) {
+	  ArrayList<String> result = new ArrayList<String>();
 		
-		getDecimal(2, "");
+		getDecimal(2, "", result);
 		
 		for (String number : result) {
 			System.out.println(number);
