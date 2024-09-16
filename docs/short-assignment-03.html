@@ -131,7 +131,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#short-assignment-03-exhaustive-search" id="toc-short-assignment-03-exhaustive-search" class="nav-link active" data-scroll-target="#short-assignment-03-exhaustive-search">Short Assignment 03 – Exhaustive Search</a>
   <ul class="collapse">
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
   <li><a href="#the-assignment" id="toc-the-assignment" class="nav-link" data-scroll-target="#the-assignment">The Assignment</a>
   <ul class="collapse">
   <li><a href="#part-1---binary-introduction" id="toc-part-1---binary-introduction" class="nav-link" data-scroll-target="#part-1---binary-introduction">Part 1 - Binary Introduction</a></li>
@@ -172,10 +171,6 @@ ul.task-list li input[type="checkbox"] {
 <p>Exhaustive search is where every possible solution is enumerated. This is also known as the brute-force approach. In many cases, exhaustive search is the simplest solution, and the one to try first.</p>
 <p>Remember, in lab sessions you can share code. For programming assignments you cannot.</p>
 </section>
-<section id="setup" class="level2">
-<h2 class="anchored" data-anchor-id="setup">Setup</h2>
-<p>Now you are ready to start coding.</p>
-</section>
 <section id="the-assignment" class="level2">
 <h2 class="anchored" data-anchor-id="the-assignment">The Assignment</h2>
 <p>This is the first assignment where you will have multiple classes. Part One should be completed in the <code>Lab3Binary.java</code> file and Part Two should be completed in the <code>Lab3Dice.java</code> file.</p>
@@ -212,7 +207,11 @@ ul.task-list li input[type="checkbox"] {
 <p>This activity is very similar to the previous binary activity, so make sure to complete that activity first and reuse the enumerate and process structure here.</p>
 <section id="step-1-1" class="level4">
 <h4 class="anchored" data-anchor-id="step-1-1">Step 1</h4>
-<p>Consider what decisions need to be made in order to enumerate over all of the possible roll combinations.</p>
+<p>Consider what decisions need to be made in order to enumerate over all of the possible roll combinations for N dice.</p>
+<p>For example, if N = 1, then the output would be:</p>
+<pre><code>[1, 2, 3, 4, 5, 6]</code></pre>
+<p>For N = 2, the output would be:</p>
+<pre><code>[11, 12, 13, 14, 15, 16, 21, 22, 23, 24, 25, 26, 31, 32, 33, 34, 35, 36, 41, 42, 43, 44, 45, 46, 51, 52, 53, 54, 55, 56, 61, 62, 63, 64, 65, 66]</code></pre>
 <ul>
 <li><p>What parameters do you need with your enumerate method? What do these parameters represent?</p></li>
 <li><p>What value should you start setting each die to? Is this a different value than the start value used during the binary activity?</p></li>
@@ -233,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<p>The Java API and Google are your friend, look up methods to take advantage of Java’s libraries.</p>
+<p>Look up methods to take advantage of Java’s libraries.</p>
 <ul>
 <li>System.out.println() is your friend for testing and output</li>
 <li>Declaring an ArrayList:

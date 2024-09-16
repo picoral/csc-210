@@ -19,12 +19,6 @@ solution, and the one to try first.
 
 Remember, in lab sessions you can share code. For programming assignments you cannot.
 
-## Setup 
-
-
-
-Now you are ready to start coding. 
-
 ## The Assignment
 
 This is the first assignment where you will have multiple classes. Part One should
@@ -90,7 +84,17 @@ reuse the enumerate and process structure here.
 #### Step 1
 
 Consider what decisions need to be made in order to enumerate over all of the 
-possible roll combinations. 
+possible roll combinations for N dice. 
+
+For example, if N = 1, then the output would be:
+```
+[1, 2, 3, 4, 5, 6]
+``` 
+
+For N = 2, the output would be:
+```
+[11, 12, 13, 14, 15, 16, 21, 22, 23, 24, 25, 26, 31, 32, 33, 34, 35, 36, 41, 42, 43, 44, 45, 46, 51, 52, 53, 54, 55, 56, 61, 62, 63, 64, 65, 66]
+``` 
 
 * What parameters do you need with your enumerate method? What do these parameters
 represent? 
@@ -120,8 +124,7 @@ questions.
 
 ## Resources
 
-The Java API and Google are your friend, look up methods to take advantage of 
-Java's libraries. 
+Look up methods to take advantage of Java's libraries. 
 
 * System.out.println() is your friend for testing and output 
 * Declaring an ArrayList:
