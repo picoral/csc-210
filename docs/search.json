@@ -2000,5 +2000,19 @@
     "title": "Exhaustive Search",
     "section": "Recursive Factorial – solution",
     "text": "Recursive Factorial – solution\npublic class RecursiveFactorial {\n    \n    public static int factorial(int n) {\n        if (n == 0) return 1;\n        else return n * factorial(n - 1);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(factorial(10));\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-03-01.html#factorial-arraylist",
+    "href": "slides-03-01.html#factorial-arraylist",
+    "title": "Exhaustive Search",
+    "section": "Factorial – ArrayList",
+    "text": "Factorial – ArrayList\nWhat if we wanted to store all intermediate results in an array?"
+  },
+  {
+    "objectID": "slides-03-01.html#factorial-arraylist-solution",
+    "href": "slides-03-01.html#factorial-arraylist-solution",
+    "title": "Exhaustive Search",
+    "section": "Factorial – ArrayList solution",
+    "text": "Factorial – ArrayList solution\nimport java.util.ArrayList;\n\npublic class RecursiveFactorial {\n    \n    public static int factorial(int n, ArrayList&lt;Integer&gt; allResults) {\n        if (n == 0) {\n            allResults.add(1);\n            return 1;\n        }\n        else {\n            int subResult = n * factorial(n - 1, allResults);\n            allResults.add(subResult);\n            return subResult;\n        }\n    }\n\n    public static void main(String[] args) {\n        ArrayList&lt;Integer&gt; result = new ArrayList&lt;Integer&gt;();\n        factorial(10, result);\n        System.out.println(result);\n\n    }\n\n}"
   }
 ]

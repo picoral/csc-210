@@ -34,6 +34,39 @@ public class RecursiveFactorial {
 }
 ```
 
+## Factorial -- `ArrayList`
+
+What if we wanted to store all intermediate results in an array?
+
+## Factorial -- `ArrayList` solution
+
+```{java}
+import java.util.ArrayList;
+
+public class RecursiveFactorial {
+	
+	public static int factorial(int n, ArrayList<Integer> allResults) {
+		if (n == 0) {
+			allResults.add(1);
+			return 1;
+		}
+		else {
+			int subResult = n * factorial(n - 1, allResults);
+			allResults.add(subResult);
+			return subResult;
+		}
+	}
+
+	public static void main(String[] args) {
+		ArrayList<Integer> result = new ArrayList<Integer>();
+		factorial(10, result);
+		System.out.println(result);
+
+	}
+
+}
+```
+
 
 ## Two recursive algorithms
 
