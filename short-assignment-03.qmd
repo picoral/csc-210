@@ -159,8 +159,8 @@ public static void main(String[] args) {
 
 Look up methods to take advantage of Java's libraries. 
 
-* System.out.println() is your friend for testing and output 
+* `System.out.println()` is your friend for testing and output 
 * Declaring an ArrayList:
-	* ArrayList<Integer> array = new ArrayList<Integer>(); 
+	* `ArrayList<Integer> array = new ArrayList<Integer>()`; 
 * Adding a value in an ArrayList: 
-	* array.add(1); 
+	* `array.add(1)`; 
