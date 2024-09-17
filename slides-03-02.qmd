@@ -46,12 +46,7 @@ Output:
 ```{java}
 import java.util.ArrayList;
 
-
 public class DiceBacktracking {
-	
-	static ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>> ();
-	static ArrayList<Integer> values = new ArrayList<Integer>();
-	static int targetSum;
 	
 	public static int sumAll(ArrayList<Integer> values) {
 		int sum = 0;
@@ -59,7 +54,9 @@ public class DiceBacktracking {
 		return sum;
 	}
 	
-	public static void getValidCombinations(int count) {
+	public static void getValidCombinations(int count,
+	                                        ArrayList<ArrayList<Integer>> result,
+	                                        ArrayList<Integer> values) {
 		if (count == 0) {
 			if (sumAll(values) == targetSum) {
 				ArrayList<Integer> valuesToAdd = new ArrayList<Integer>(values);
@@ -69,16 +66,18 @@ public class DiceBacktracking {
 		else {
 			for (int v = 1; v <= 6; v++) {
 				values.add(v); 
-				getValidCombinations(count - 1);
+				getValidCombinations(count - 1, result, values);
 				values.remove(values.size() - 1);
 			}
 		}
 	}
 
 	public static void main(String[] args) {
-		
-		targetSum = 7;
-		getValidCombinations(2);
+	  ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+	  ArrayList<Integer> values = new ArrayList<Integer>();
+	  
+	  int targetSum = 7;
+		getValidCombinations(2, result, values);
 		
 		for (ArrayList<Integer> v : result) System.out.println(v);
 		
@@ -101,12 +100,9 @@ import java.util.ArrayList;
 
 public class DiceBacktracking {
 	
-	static ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>> ();
-	static ArrayList<Integer> values = new ArrayList<Integer>();
-	static int targetSum;
-	
-	
-	public static void getValidCombinations(int count, int currentSum) {
+	public static void getValidCombinations(int count, int currentSum,
+	                                        ArrayList<ArrayList<Integer>> result,
+	                                        ArrayList<Integer> values) {
 		if (count == 0) {
 			if (currentSum == targetSum) {
 				ArrayList<Integer> valuesToAdd = new ArrayList<Integer>(values);
@@ -118,16 +114,17 @@ public class DiceBacktracking {
 		} else {
 			for (int v = 1; v <= 6; v++) {
 				values.add(v);
-				getValidCombinations(count - 1, currentSum + v);
+				getValidCombinations(count - 1, currentSum + v, result, values);
 				values.remove(values.size() - 1);
 			}
 		}
 	}
 
 	public static void main(String[] args) {
-		
-		targetSum = 7;
-		getValidCombinations(2, 0);
+	  ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>> ();
+    ArrayList<Integer> values = new ArrayList<Integer>();
+	  int targetSum = 7;
+		getValidCombinations(2, 0, result, values);
 		
 		for (ArrayList<Integer> v : result) System.out.println(v);
 		
