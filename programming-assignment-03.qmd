@@ -80,7 +80,7 @@ word list file and use them to generate the required anagrams. You can assume th
 contain one word per line.  You can also assume the command-line input will be well formed.
 
 You will want to find all possible words that can be found by using subsets of letters from the provided
-phrase.  For example, in the phrase `hairbrush` the following words from `words1.txt` can be found:
+phrase.  For example, in the phrase `hairbrush` the following words from [`words1.txt`](files/words1.txt) can be found:
 ```
 All words found in hairbrush:
 [bar, briar, brush, bus, hub, huh, hush, rub, shrub, sir, sub]
@@ -90,7 +90,7 @@ You should use recursive backtracking to find and print all anagrams that can be
 of the given phrase.  Each phrase should include at most `max` words.  If max=0 then all possible words should be
 specified.  Your output should exactly match the provided examples, including order and formatting.  For example, 
 if your anagram solver is using 
-the word list corresponding to `words1.txt` and a user 
+the word list corresponding to [`words1.txt`](files/words1.txt) and a user 
 types the phrase `hairbrush`, with a `max` of `0` your program should produce the following output:
 ```
 [bar, huh, sir]
@@ -102,7 +102,7 @@ types the phrase `hairbrush`, with a `max` of `0` your program should produce th
 [sir, bar, huh]
 [sir, huh, bar]
 ```
-If your anagram solver is using the word list corresponding to `words1.txt` and the user types the 
+If your anagram solver is using the word list corresponding to [`words1.txt`](files/words1.txt) and the user types the 
 phrase `hairbrush` and a `max` of `2`, your program should produce the following output:
 ```
 [briar, hush]
@@ -185,8 +185,8 @@ to do this is to build up your answer in a list, or other ordered collection.  T
 `println` the collection and it will have the right format.
 
 Several different word list files are provided.  We recommend initially using a very small 
-word list `words1.txt` to make testing easier.  But once your code works with this word list, 
-you should test it with larger word lists such as the provided `words2.txt` and `words3.txt`.  
+word list [`words1.txt`](files/words1.txt) to make testing easier.  But once your code works with this word list, 
+you should test it with larger word lists such as the provided [`words2.txt`](files/words2.txt) and [`words3.txt`](files/words3.txt).  
 You can find other larger word lists  here:
 
 <http://www.puzzlers.org/dokuwiki/doku.php?id=solving:wordlists:start>

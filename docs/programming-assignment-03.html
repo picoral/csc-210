@@ -241,10 +241,10 @@ Anagrams for barbarabush:
 <section id="implementation-details" class="level2">
 <h2 class="anchored" data-anchor-id="implementation-details">Implementation Details:</h2>
 <p>Your program should obtain the word list file name, phrase, and max number of words in each possible anagram from the array of strings passed to main. Your program should read all of the words from the word list file and use them to generate the required anagrams. You can assume that the word list file will contain one word per line. You can also assume the command-line input will be well formed.</p>
-<p>You will want to find all possible words that can be found by using subsets of letters from the provided phrase. For example, in the phrase <code>hairbrush</code> the following words from <code>words1.txt</code> can be found:</p>
+<p>You will want to find all possible words that can be found by using subsets of letters from the provided phrase. For example, in the phrase <code>hairbrush</code> the following words from <a href="files/words1.txt"><code>words1.txt</code></a> can be found:</p>
 <pre><code>All words found in hairbrush:
 [bar, briar, brush, bus, hub, huh, hush, rub, shrub, sir, sub]</code></pre>
-<p>You should use recursive backtracking to find and print all anagrams that can be formed using all of the letters of the given phrase. Each phrase should include at most <code>max</code> words. If max=0 then all possible words should be specified. Your output should exactly match the provided examples, including order and formatting. For example, if your anagram solver is using the word list corresponding to <code>words1.txt</code> and a user types the phrase <code>hairbrush</code>, with a <code>max</code> of <code>0</code> your program should produce the following output:</p>
+<p>You should use recursive backtracking to find and print all anagrams that can be formed using all of the letters of the given phrase. Each phrase should include at most <code>max</code> words. If max=0 then all possible words should be specified. Your output should exactly match the provided examples, including order and formatting. For example, if your anagram solver is using the word list corresponding to <a href="files/words1.txt"><code>words1.txt</code></a> and a user types the phrase <code>hairbrush</code>, with a <code>max</code> of <code>0</code> your program should produce the following output:</p>
 <pre><code>[bar, huh, sir]
 [bar, sir, huh]
 [briar, hush]
@@ -253,7 +253,7 @@ Anagrams for barbarabush:
 [hush, briar]
 [sir, bar, huh]
 [sir, huh, bar]</code></pre>
-<p>If your anagram solver is using the word list corresponding to <code>words1.txt</code> and the user types the phrase <code>hairbrush</code> and a <code>max</code> of <code>2</code>, your program should produce the following output:</p>
+<p>If your anagram solver is using the word list corresponding to <a href="files/words1.txt"><code>words1.txt</code></a> and the user types the phrase <code>hairbrush</code> and a <code>max</code> of <code>2</code>, your program should produce the following output:</p>
 <pre><code>[briar, hush]
 [hush, briar]</code></pre>
 </section>
@@ -309,7 +309,7 @@ Notice that some paths of the recursion lead to dead ends. For example, if the r
 <section id="development-strategy-and-hints" class="level2">
 <h2 class="anchored" data-anchor-id="development-strategy-and-hints">Development Strategy and Hints</h2>
 <p>Your program should produce the anagrams in the same format as in the expected output files. The easiest way to do this is to build up your answer in a list, or other ordered collection. Then you can <code>println</code> the collection and it will have the right format.</p>
-<p>Several different word list files are provided. We recommend initially using a very small word list <code>words1.txt</code> to make testing easier. But once your code works with this word list, you should test it with larger word lists such as the provided <code>words2.txt</code> and <code>words3.txt</code>.<br>
+<p>Several different word list files are provided. We recommend initially using a very small word list <a href="files/words1.txt"><code>words1.txt</code></a> to make testing easier. But once your code works with this word list, you should test it with larger word lists such as the provided <a href="files/words2.txt"><code>words2.txt</code></a> and <a href="files/words3.txt"><code>words3.txt</code></a>.<br>
 You can find other larger word lists here:</p>
 <p><a href="http://www.puzzlers.org/dokuwiki/doku.php?id=solving:wordlists:start" class="uri">http://www.puzzlers.org/dokuwiki/doku.php?id=solving:wordlists:start</a></p>
 <p>One difficult part of this program is limiting the number of words that can appear in the anagrams. We suggest you do this part last, initially printing all anagrams regardless of the number of words.</p>
