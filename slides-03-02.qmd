@@ -100,35 +100,34 @@ import java.util.ArrayList;
 
 public class DiceBacktracking {
 	
-	public static void getValidCombinations(int count, int currentSum,
-	                                        ArrayList<ArrayList<Integer>> result,
-	                                        ArrayList<Integer> values) {
-		if (count == 0) {
-			if (currentSum == targetSum) {
-				ArrayList<Integer> valuesToAdd = new ArrayList<Integer>(values);
-				result.add(valuesToAdd);
-			}
-		} else if (currentSum + 1 * count > targetSum ||
-				   currentSum + 6 * count < targetSum) {
-			          return;
-		} else {
-			for (int v = 1; v <= 6; v++) {
-				values.add(v);
-				getValidCombinations(count - 1, currentSum + v, result, values);
-				values.remove(values.size() - 1);
-			}
-		}
-	}
-
 	public static void main(String[] args) {
-	  ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>> ();
-    ArrayList<Integer> values = new ArrayList<Integer>();
-	  int targetSum = 7;
-		getValidCombinations(2, 0, result, values);
-		
-		for (ArrayList<Integer> v : result) System.out.println(v);
-		
+	    ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>> ();
+	    ArrayList<Integer> values = new ArrayList<Integer>();
+	    int targetSum = 5;
+	    getValidCombinations(2, 0, result, values, targetSum);
+	    for (ArrayList<Integer> v : result) System.out.println(v);
 	}
+    
+  public static void getValidCombinations(int count, int currentSum,
+                                          ArrayList<ArrayList<Integer>> result,
+                                          ArrayList<Integer> values,
+                                          int targetSum) {
+        if (count == 0) {
+            if (currentSum == targetSum) {
+                ArrayList<Integer> valuesToAdd = new ArrayList<Integer>(values);
+                result.add(valuesToAdd);
+            }
+        } else if (currentSum + 1 * count > targetSum ||
+                   currentSum + 6 * count < targetSum) {
+                      return;
+        } else {
+            for (int v = 1; v <= 6; v++) {
+                values.add(v);
+                getValidCombinations(count-1, currentSum+v, result, values, targetSum);
+                values.remove(values.size()-1);
+            }
+        }
+    }
 }
 
 ```

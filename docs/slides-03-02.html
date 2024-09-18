@@ -481,36 +481,35 @@
 <span id="cb4-3"><a></a></span>
 <span id="cb4-4"><a></a>public class DiceBacktracking {</span>
 <span id="cb4-5"><a></a>    </span>
-<span id="cb4-6"><a></a>    public static void getValidCombinations(int count, int currentSum,</span>
-<span id="cb4-7"><a></a>                                            ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result,</span>
-<span id="cb4-8"><a></a>                                            ArrayList&lt;Integer&gt; values) {</span>
-<span id="cb4-9"><a></a>        if (count == 0) {</span>
-<span id="cb4-10"><a></a>            if (currentSum == targetSum) {</span>
-<span id="cb4-11"><a></a>                ArrayList&lt;Integer&gt; valuesToAdd = new ArrayList&lt;Integer&gt;(values);</span>
-<span id="cb4-12"><a></a>                result.add(valuesToAdd);</span>
-<span id="cb4-13"><a></a>            }</span>
-<span id="cb4-14"><a></a>        } else if (currentSum + 1 * count &gt; targetSum ||</span>
-<span id="cb4-15"><a></a>                   currentSum + 6 * count &lt; targetSum) {</span>
-<span id="cb4-16"><a></a>                      return;</span>
-<span id="cb4-17"><a></a>        } else {</span>
-<span id="cb4-18"><a></a>            for (int v = 1; v &lt;= 6; v++) {</span>
-<span id="cb4-19"><a></a>                values.add(v);</span>
-<span id="cb4-20"><a></a>                getValidCombinations(count - 1, currentSum + v, result, values);</span>
-<span id="cb4-21"><a></a>                values.remove(values.size() - 1);</span>
+<span id="cb4-6"><a></a>    public static void main(String[] args) {</span>
+<span id="cb4-7"><a></a>        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = new ArrayList&lt;ArrayList&lt;Integer&gt;&gt; ();</span>
+<span id="cb4-8"><a></a>        ArrayList&lt;Integer&gt; values = new ArrayList&lt;Integer&gt;();</span>
+<span id="cb4-9"><a></a>        int targetSum = 5;</span>
+<span id="cb4-10"><a></a>        getValidCombinations(2, 0, result, values, targetSum);</span>
+<span id="cb4-11"><a></a>        for (ArrayList&lt;Integer&gt; v : result) System.out.println(v);</span>
+<span id="cb4-12"><a></a>    }</span>
+<span id="cb4-13"><a></a>    </span>
+<span id="cb4-14"><a></a>  public static void getValidCombinations(int count, int currentSum,</span>
+<span id="cb4-15"><a></a>                                          ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result,</span>
+<span id="cb4-16"><a></a>                                          ArrayList&lt;Integer&gt; values,</span>
+<span id="cb4-17"><a></a>                                          int targetSum) {</span>
+<span id="cb4-18"><a></a>        if (count == 0) {</span>
+<span id="cb4-19"><a></a>            if (currentSum == targetSum) {</span>
+<span id="cb4-20"><a></a>                ArrayList&lt;Integer&gt; valuesToAdd = new ArrayList&lt;Integer&gt;(values);</span>
+<span id="cb4-21"><a></a>                result.add(valuesToAdd);</span>
 <span id="cb4-22"><a></a>            }</span>
-<span id="cb4-23"><a></a>        }</span>
-<span id="cb4-24"><a></a>    }</span>
-<span id="cb4-25"><a></a></span>
-<span id="cb4-26"><a></a>    public static void main(String[] args) {</span>
-<span id="cb4-27"><a></a>      ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = new ArrayList&lt;ArrayList&lt;Integer&gt;&gt; ();</span>
-<span id="cb4-28"><a></a>    ArrayList&lt;Integer&gt; values = new ArrayList&lt;Integer&gt;();</span>
-<span id="cb4-29"><a></a>      int targetSum = 7;</span>
-<span id="cb4-30"><a></a>        getValidCombinations(2, 0, result, values);</span>
-<span id="cb4-31"><a></a>        </span>
-<span id="cb4-32"><a></a>        for (ArrayList&lt;Integer&gt; v : result) System.out.println(v);</span>
-<span id="cb4-33"><a></a>        </span>
-<span id="cb4-34"><a></a>    }</span>
-<span id="cb4-35"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-23"><a></a>        } else if (currentSum + 1 * count &gt; targetSum ||</span>
+<span id="cb4-24"><a></a>                   currentSum + 6 * count &lt; targetSum) {</span>
+<span id="cb4-25"><a></a>                      return;</span>
+<span id="cb4-26"><a></a>        } else {</span>
+<span id="cb4-27"><a></a>            for (int v = 1; v &lt;= 6; v++) {</span>
+<span id="cb4-28"><a></a>                values.add(v);</span>
+<span id="cb4-29"><a></a>                getValidCombinations(count-1, currentSum+v, result, values, targetSum);</span>
+<span id="cb4-30"><a></a>                values.remove(values.size()-1);</span>
+<span id="cb4-31"><a></a>            }</span>
+<span id="cb4-32"><a></a>        }</span>
+<span id="cb4-33"><a></a>    }</span>
+<span id="cb4-34"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
