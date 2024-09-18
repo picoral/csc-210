@@ -35,7 +35,7 @@ the words "midterm" and "trimmed" are anagrams.  If you ignore spaces and capita
 multiple words, a multi-word phrase can be an anagram of some other word or phrase.  For example, the 
 phrases "Clint Eastwood" and "old west action" are anagrams.
 
-In this assignment, you will create a program called `PA3Main.java` that uses a word list to find all 
+In this assignment, you will create a program called `Anagrams.java` that uses a word list to find all 
 anagram phrases that match a given word or phrase.  To use the program, command line options will
 be provided to indicate a word list file, phrase with no spaces to find anagrams of, and
 a limit on the number of words in the found anagrams (or 0 to indicate no limit).
@@ -263,4 +263,16 @@ or talk in detail about how to solve this programming project.
 
 ## Submission
 
-As with PA1 and PA2, for PA3 you are required to commit your `Anagrams.java` solution to GitHub.
+As with PA1 and PA2, for PA3 you are required to submit your `Anagrams.java` solution to gradescope.
+
+Package information:
+
+`package com.gradescope.anagrams;`
+
+## Academic Integrity
+
+Write your own code.  We will be using a tool that finds overly similar code.
+Do not look at other students' code.  Do not let other students look at your code 
+or talk in detail about how to solve this programming project. Read the 
+[academy integrity](academic-integrity.html) page for more details on how
+we deal with violations in this course.

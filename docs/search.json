@@ -1537,7 +1537,7 @@
     "href": "programming-assignment-03.html#anagrams",
     "title": "Programming Assignment 03",
     "section": "Anagrams",
-    "text": "Anagrams\nAn anagram is a word or phrase made by rearranging the letters of another word or phrase. For example, the words “midterm” and “trimmed” are anagrams. If you ignore spaces and capitalization and allow multiple words, a multi-word phrase can be an anagram of some other word or phrase. For example, the phrases “Clint Eastwood” and “old west action” are anagrams.\nIn this assignment, you will create a program called PA3Main.java that uses a word list to find all anagram phrases that match a given word or phrase. To use the program, command line options will be provided to indicate a word list file, phrase with no spaces to find anagrams of, and a limit on the number of words in the found anagrams (or 0 to indicate no limit).\nFor the example command line options:\nwords1.txt barbarabush 0\nthe output of your program should be the following:\nPhrase to scramble: barbarabush\n\nAll words found in barbarabush:\n[abash, aura, bar, barb, brush, bus, hub, rub, shrub, sub]\n\nAnagrams for barbarabush:\n[abash, bar, rub]\n[abash, rub, bar]\n[bar, abash, rub]\n[bar, rub, abash]\n[rub, abash, bar]\n[rub, bar, abash]\nHere’s an example of the command line options (file name, word to scramble, max number of anagrams):\nwords3.txt defleppard 0"
+    "text": "Anagrams\nAn anagram is a word or phrase made by rearranging the letters of another word or phrase. For example, the words “midterm” and “trimmed” are anagrams. If you ignore spaces and capitalization and allow multiple words, a multi-word phrase can be an anagram of some other word or phrase. For example, the phrases “Clint Eastwood” and “old west action” are anagrams.\nIn this assignment, you will create a program called Anagrams.java that uses a word list to find all anagram phrases that match a given word or phrase. To use the program, command line options will be provided to indicate a word list file, phrase with no spaces to find anagrams of, and a limit on the number of words in the found anagrams (or 0 to indicate no limit).\nFor the example command line options:\nwords1.txt barbarabush 0\nthe output of your program should be the following:\nPhrase to scramble: barbarabush\n\nAll words found in barbarabush:\n[abash, aura, bar, barb, brush, bus, hub, rub, shrub, sub]\n\nAnagrams for barbarabush:\n[abash, bar, rub]\n[abash, rub, bar]\n[bar, abash, rub]\n[bar, rub, abash]\n[rub, abash, bar]\n[rub, bar, abash]\nHere’s an example of the command line options (file name, word to scramble, max number of anagrams):\nwords3.txt defleppard 0"
   },
   {
     "objectID": "programming-assignment-03.html#getting-started",
@@ -1586,7 +1586,7 @@
     "href": "programming-assignment-03.html#submission",
     "title": "Programming Assignment 03",
     "section": "Submission",
-    "text": "Submission\nAs with PA1 and PA2, for PA3 you are required to commit your Anagrams.java solution to GitHub."
+    "text": "Submission\nAs with PA1 and PA2, for PA3 you are required to submit your Anagrams.java solution to gradescope.\nPackage information:\npackage com.gradescope.anagrams;"
   },
   {
     "objectID": "programming-assignment-02.html",
@@ -2035,5 +2035,12 @@
     "title": "Exhaustive Search",
     "section": "Quiz 02",
     "text": "Quiz 02\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes to complete the quiz.\nNo need to write comments.\nName your method what you want, but the name should be in camelCase."
+  },
+  {
+    "objectID": "programming-assignment-03.html#academic-integrity",
+    "href": "programming-assignment-03.html#academic-integrity",
+    "title": "Programming Assignment 03",
+    "section": "Academic Integrity",
+    "text": "Academic Integrity\nWrite your own code. We will be using a tool that finds overly similar code. Do not look at other students’ code. Do not let other students look at your code or talk in detail about how to solve this programming project. Read the academy integrity page for more details on how we deal with violations in this course."
   }
 ]
