@@ -104,7 +104,7 @@ Input: ```a NAND (b NAND $t) NAND _3```
 
 Output:
 
-![](image.png)​
+![](images/pa4-image.png)
 
 ## Task #1 - JUnit Testing (You need to do this)
 We have done some preliminary main-method testing in the Parser class and Lexer class
@@ -379,6 +379,7 @@ The other half of the PA4 grade will be your decomposition and code clarity,
 the JUnit tests, and a peer review.
 
 Decomposition
+
 * Should carefully select data structures that implement the
   required functionality.  For example, if you avoid using Maps,
   it will probably result in more complicated code and thus points off.
@@ -407,6 +408,7 @@ Decomposition
   off of other tasks. You should avoid repeated logic as much as possible.
 
 Code Clarity
+
 * YOU should be able to read, understand, and explain your own code
 to someone else a couple days after you wrote it.
   * No magic numbers
@@ -433,6 +435,7 @@ The coding style in terms of spacing, etc. should be done automatically
 every time you save in Eclipse.  As long as you stick with those defaults,
 the syntax style should be fine.  At workplaces the style requirements
 can be extensive.  In this class, we have the following requirements:
+
   1. No lines should be longer than 80 characters line.
   2. Do not mix tabs and spaces.  Use spaces consistently.
   3. The left curly brace should start on the same line as the loop or conditional.
@@ -463,6 +466,7 @@ JUnit test cases?
 
 ## Task #2 - The SAT[isfiability] Problem (You need to do this)
 Implement a program in PA4BoolSat.java that:
+
  1. Constructs an Abstract Syntax Tree for the expression in the input file provided by the
  first command line argument (`args[0]`).
  2. Optionally accepts a DEBUG command line option in the second command line argument.
@@ -473,6 +477,7 @@ Implement a program in PA4BoolSat.java that:
 ### Expression input file:
 The expression input file should contain only a single line, that line should contain a well-formed
 Java boolean expression limited to:
+
  - the AND operator `&&`
  - the OR operator  `||`
  - Parenthesis `(`, `)`
@@ -717,4 +722,4 @@ anything down.
 
 ## Submission
 
-For PA4, you are required to submit your PA4BoolSat.java and ASTNodeTest.java file to Gradescope.
+For PA4, you are required to submit your `BoolSat.java` and `ASTNodeTest.java` file to Gradescope.

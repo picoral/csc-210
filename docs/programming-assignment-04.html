@@ -241,7 +241,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Given boolean logic expressions we can construct trees to represent the expressions. See PA4ReadInputWriteDot.java to see how this is done; here is an example expression tree:</p>
 <p>Input: <code>a NAND (b NAND $t) NAND _3</code></p>
 <p>Output:</p>
-<p><img src="image.png" class="img-fluid">​</p>
+<p><img src="images/pa4-image.png" class="img-fluid"></p>
 </section>
 <section id="task-1---junit-testing-you-need-to-do-this" class="level2">
 <h2 class="anchored" data-anchor-id="task-1---junit-testing-you-need-to-do-this">Task #1 - JUnit Testing (You need to do this)</h2>
@@ -426,8 +426,9 @@ public void testNnd(){
 <h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
 <p>Half of the PA4 grade will be correctness. For this assignment, there will be some private test cases on Gradescope.</p>
 <p>The other half of the PA4 grade will be your decomposition and code clarity, the JUnit tests, and a peer review.</p>
-<p>Decomposition * Should carefully select data structures that implement the required functionality. For example, if you avoid using Maps, it will probably result in more complicated code and thus points off.</p>
+<p>Decomposition</p>
 <ul>
+<li><p>Should carefully select data structures that implement the required functionality. For example, if you avoid using Maps, it will probably result in more complicated code and thus points off.</p></li>
 <li><p>Should just use JUnit methods in ASTNodeTest.java and static methods in PA4BoolSat.java.</p></li>
 <li><p>Use a single file for Task#2, PA4BoolSat.java. This should be a small program (&lt;250 lines) not counting the file header.</p></li>
 <li><p>Each static method should be less than 30 lines. This INCLUDES comments but it does not include the method header. It is easier to read a function if it can all fit on one screen.</p></li>
@@ -441,8 +442,13 @@ public void testNnd(){
 <li><p>Your code should be decomposed well. <code>main</code> should be a good summary of your program and no method should be overly long or trivial. Your methods should not be chained. Do NOT have main just call one method that does everything.</p></li>
 <li><p>Redundancy is a grading focus; some tasks are similar in behavior or based off of other tasks. You should avoid repeated logic as much as possible.</p></li>
 </ul>
-<p>Code Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work</p>
+<p>Code Clarity</p>
 <ul>
+<li><p>YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it.</p>
+<ul>
+<li>No magic numbers</li>
+<li>No methods written to just get the test cases to work</li>
+</ul></li>
 <li><p>There needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.</p></li>
 <li><p>The file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.</p></li>
 <li><p>Each method needs a method header that explains what the method does.</p></li>
@@ -450,7 +456,12 @@ public void testNnd(){
 <li><p>We will be modeling some of the issues we are seeing with code.</p></li>
 <li><p>We will ask permission to show clear code examples.</p></li>
 </ul>
-<p>The coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine. At workplaces the style requirements can be extensive. In this class, we have the following requirements: 1. No lines should be longer than 80 characters line. 2. Do not mix tabs and spaces. Use spaces consistently. 3. The left curly brace should start on the same line as the loop or conditional.</p>
+<p>The coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine. At workplaces the style requirements can be extensive. In this class, we have the following requirements:</p>
+<ol type="1">
+<li>No lines should be longer than 80 characters line.</li>
+<li>Do not mix tabs and spaces. Use spaces consistently.</li>
+<li>The left curly brace should start on the same line as the loop or conditional.</li>
+</ol>
 <p>Write your own code. We will be using a tool that finds overly similar code. we recommend that when talking with others about the assignment, do not write anything down.</p>
 </section>
 <section id="submission" class="level2">
@@ -464,10 +475,22 @@ public void testNnd(){
 </section>
 <section id="task-2---the-satisfiability-problem-you-need-to-do-this-1" class="level2">
 <h2 class="anchored" data-anchor-id="task-2---the-satisfiability-problem-you-need-to-do-this-1">Task #2 - The SAT[isfiability] Problem (You need to do this)</h2>
-<p>Implement a program in PA4BoolSat.java that: 1. Constructs an Abstract Syntax Tree for the expression in the input file provided by the first command line argument (<code>args[0]</code>). 2. Optionally accepts a DEBUG command line option in the second command line argument. 3. Exhaustively searches over all possible assignments of values to each boolean variable. If the DEBUG option is set: print all configurations and the result evaluating the expression with those variable values. If the DEBUG option is not set, print all configurations that satisfy the expression.</p>
+<p>Implement a program in PA4BoolSat.java that:</p>
+<ol type="1">
+<li>Constructs an Abstract Syntax Tree for the expression in the input file provided by the first command line argument (<code>args[0]</code>).</li>
+<li>Optionally accepts a DEBUG command line option in the second command line argument.</li>
+<li>Exhaustively searches over all possible assignments of values to each boolean variable. If the DEBUG option is set: print all configurations and the result evaluating the expression with those variable values. If the DEBUG option is not set, print all configurations that satisfy the expression.</li>
+</ol>
 <section id="expression-input-file-1" class="level3">
 <h3 class="anchored" data-anchor-id="expression-input-file-1">Expression input file:</h3>
-<p>The expression input file should contain only a single line, that line should contain a well-formed Java boolean expression limited to: - the AND operator <code>&amp;&amp;</code> - the OR operator <code>||</code> - Parenthesis <code>(</code>, <code>)</code> - the NOT operator <code>!</code> - and valid Java identifiers: i.e strings with no spaces that start with exactly one letter, or <code>$</code>, or <code>_</code>, that is followed by any number of letters, digits, <code>$</code> and <code>_</code> characters.</p>
+<p>The expression input file should contain only a single line, that line should contain a well-formed Java boolean expression limited to:</p>
+<ul>
+<li>the AND operator <code>&amp;&amp;</code></li>
+<li>the OR operator <code>||</code></li>
+<li>Parenthesis <code>(</code>, <code>)</code></li>
+<li>the NOT operator <code>!</code></li>
+<li>and valid Java identifiers: i.e strings with no spaces that start with exactly one letter, or <code>$</code>, or <code>_</code>, that is followed by any number of letters, digits, <code>$</code> and <code>_</code> characters.</li>
+</ul>
 <pre><code>Input File:
 ----------------------------------
 | a &amp;&amp; b || !c &amp;&amp; !(!d || e)     |
@@ -658,7 +681,7 @@ public void testAnd(){
 </section>
 <section id="submission-1" class="level2">
 <h2 class="anchored" data-anchor-id="submission-1">Submission</h2>
-<p>For PA4, you are required to submit your PA4BoolSat.java and ASTNodeTest.java file to Gradescope.</p>
+<p>For PA4, you are required to submit your <code>BoolSat.java</code> and <code>ASTNodeTest.java</code> file to Gradescope.</p>
 
 
 </section>
