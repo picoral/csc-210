@@ -56,7 +56,7 @@ the order of ![](http://latex.codecogs.com/gif.latex?O%282%5E%7Bn%7D%29)​).
 
 Some uses to SAT solvers:
 - [Using SAT to synthesize programs](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5597726/).  Yes,
-that is “synthesis” as in have the computer write programs!
+that is "synthesis" as in have the computer write programs!
 - [Eclipse embeds SAT4j to manage dependencies among its plugins.](https://stackoverflow.com/questions/9377916/what-is-sat-and-what-it-is-good-for)
 - [Applied to a flash game called Hexoim](https://github.com/hugomg/hexiom).
 
@@ -85,18 +85,18 @@ If on the other hand all possible boolean assignments to variables in the expres
 result in the expression being false, then the expression is unsatisfiable.
 
 The input to your program will be a boolean expression of variables and NAND operations.
-See PublicTestCases/\*.in for example input files.
+See TestCases/\*.in for example input files.
 
 
 ## The BoolSAT Package
 You are provided with a number of classes in bool_sat/\*.  See the file headers
-in these .java files to see how they can be used.  PA4ReadInputWriteDot.java
+in these .java files to see how they can be used.  `PA4ReadInputWriteDot.java`
 will be especially useful, because it shows how to use the provided 
-BoolSatParser.parse() function to turn a string from the input file into a
+`BoolSatParser.parse()` function to turn a string from the input file into a
 tree representing the expression.
 
 Given boolean logic expressions we can
-construct trees to represent the expressions. See PA4ReadInputWriteDot.java
+construct trees to represent the expressions. See `PA4ReadInputWriteDot.java`
 to see how this is done; here is an example expression tree:
 
 Input: ```a NAND (b NAND $t) NAND _3```
@@ -151,10 +151,11 @@ NOTE: You should not change the implementation of the ASTNode class. All you nee
 write a set of test cases that verify it behaves correctly.
 
 As a thought experiment, how could you rewrite the main-method test cases of 
-BoolSatParser.java and Lexer.java into JUnit test cases?
+`BoolSatParser.java` and `Lexer.java` into JUnit test cases?
 
 ## Task #2 - The SAT[isfiability] Problem (You need to do this)
-Implement a program in `PA4BoolSat.java` that:
+Implement a program in `BoolSat.java` that:
+
  1. Constructs an Abstract Syntax Tree for the expression in the input file provided by the
  first command line argument (`args[0]`).
  2. Optionally accepts a DEBUG command line option in the second command line argument.
@@ -165,6 +166,7 @@ Implement a program in `PA4BoolSat.java` that:
 ### Expression input file:
 The expression input file should contain only a single line, that line should contain a well-formed
 Java boolean expression limited to:
+
  - the NAND operator `NAND`
  - and valid Java identifiers: i.e strings with no spaces that start with exactly one letter, or `$`,
  or `_`, that is followed by any number of letters, digits, `$` and `_` characters
@@ -178,7 +180,7 @@ Input File:
 ----------------------------------
 ```
 
-This description is taken from PA4ReadInputWriteDot.java -- an example of what the file usage documentation for the code
+This description is taken from `PA4ReadInputWriteDot.java` -- an example of what the file usage documentation for the code
 you write should look like.
 
 ### Output Format (DEBUG not enabled):
@@ -384,9 +386,9 @@ Decomposition
   required functionality.  For example, if you avoid using Maps,
   it will probably result in more complicated code and thus points off.
 
-* Should just use JUnit methods in ASTNodeTest.java and static methods in PA4BoolSat.java.
+* Should just use JUnit methods in ASTNodeTest.java and static methods in `BoolSat.java`.
 
-* Use a single file for Task#2, PA4BoolSat.java.  This should be a small program (<250 lines)
+* Use a single file for Task#2, `BoolSat.java`.  This should be a small program (<250 lines)
   not counting the file header.
 
 * Each static method should be less than 30 lines.  This INCLUDES
@@ -446,10 +448,7 @@ anything down.
 
 ## Submission
 
-For PA4, you are required to submit your PA4BoolSat.java and ASTNodeTest.java file to Gradescope.
-
-*(NEW)* You are also required to submit an anonymized PA4BoolSat.java to Aropa for 
-peer review.  Log into https://aropa2.gla.ac.uk as was done during Section 3.
+For PA4, you are required to submit your `BoolSat.java` and ASTNodeTest.java file to Gradescope.
 
 
 Once I fixed the mistake, my test cases all passed:
@@ -465,7 +464,7 @@ How could you rewrite the main-method test cases of BoolSatParser.java and Lexer
 JUnit test cases?
 
 ## Task #2 - The SAT[isfiability] Problem (You need to do this)
-Implement a program in PA4BoolSat.java that:
+Implement a program in `BoolSat.java` that:
 
  1. Constructs an Abstract Syntax Tree for the expression in the input file provided by the
  first command line argument (`args[0]`).
@@ -565,9 +564,9 @@ a: true, b: true, true
 
 When you commit and push, Travis CI will send you an email to let you know
 if the public test cases failed.
-We STRONGLY recommend you put some of your own test cases in PublicTestCases/.
+We STRONGLY recommend you put some of your own test cases in `TestCases/`.
 Read grade.py to see how the input and .out files should be named.
-Also look at the examples that are already in the PublicTestCases/ subdirectory.
+Also look at the examples that are already in the `TestCases/` subdirectory.
 
 Upload it to Gradescope and you will be able to see
 which public test cases were passed/failed.
@@ -673,9 +672,9 @@ Decomposition
   required functionality.  For example, if you avoid using Maps,
   it will probably result in more complicated code and thus points off.
 
-* Should just use JUnit methods in ASTNodeTest.java and static methods in PA4BoolSat.java.
+* Should just use JUnit methods in ASTNodeTest.java and static methods in `BoolSat.java`.
 
-* Use a single file for Task#2, PA4BoolSat.java.  This should be a small program (<200 lines).
+* Use a single file for Task#2, `BoolSat.java`.  This should be a small program (<200 lines).
 
 * Each static method should be less than 30 lines.  This INCLUDES
   comments.  It is easier to read a function if it can all fit on

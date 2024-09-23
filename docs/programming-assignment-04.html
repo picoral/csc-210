@@ -233,12 +233,12 @@ ul.task-list li input[type="checkbox"] {
 <p>The answer is: Yes.</p>
 <p>If a is <code>false</code> then (<code>false NAND false</code>) is true.</p>
 <p>If on the other hand all possible boolean assignments to variables in the expression result in the expression being false, then the expression is unsatisfiable.</p>
-<p>The input to your program will be a boolean expression of variables and NAND operations. See PublicTestCases/*.in for example input files.</p>
+<p>The input to your program will be a boolean expression of variables and NAND operations. See TestCases/*.in for example input files.</p>
 </section>
 <section id="the-boolsat-package" class="level2">
 <h2 class="anchored" data-anchor-id="the-boolsat-package">The BoolSAT Package</h2>
-<p>You are provided with a number of classes in bool_sat/*. See the file headers in these .java files to see how they can be used. PA4ReadInputWriteDot.java will be especially useful, because it shows how to use the provided BoolSatParser.parse() function to turn a string from the input file into a tree representing the expression.</p>
-<p>Given boolean logic expressions we can construct trees to represent the expressions. See PA4ReadInputWriteDot.java to see how this is done; here is an example expression tree:</p>
+<p>You are provided with a number of classes in bool_sat/*. See the file headers in these .java files to see how they can be used. <code>PA4ReadInputWriteDot.java</code> will be especially useful, because it shows how to use the provided <code>BoolSatParser.parse()</code> function to turn a string from the input file into a tree representing the expression.</p>
+<p>Given boolean logic expressions we can construct trees to represent the expressions. See <code>PA4ReadInputWriteDot.java</code> to see how this is done; here is an example expression tree:</p>
 <p>Input: <code>a NAND (b NAND $t) NAND _3</code></p>
 <p>Output:</p>
 <p><img src="images/pa4-image.png" class="img-fluid"></p>
@@ -270,21 +270,31 @@ public void testFeatureMath() {
 <p>Once I fixed the mistake, my test cases all passed:</p>
 <p><img src="https://i.gyazo.com/9ab46aca3b7fb32af4cd4350d75442c1.png" class="img-fluid"></p>
 <p>NOTE: You should not change the implementation of the ASTNode class. All you need to do is write a set of test cases that verify it behaves correctly.</p>
-<p>As a thought experiment, how could you rewrite the main-method test cases of BoolSatParser.java and Lexer.java into JUnit test cases?</p>
+<p>As a thought experiment, how could you rewrite the main-method test cases of <code>BoolSatParser.java</code> and <code>Lexer.java</code> into JUnit test cases?</p>
 </section>
 </section>
 <section id="task-2---the-satisfiability-problem-you-need-to-do-this" class="level2">
 <h2 class="anchored" data-anchor-id="task-2---the-satisfiability-problem-you-need-to-do-this">Task #2 - The SAT[isfiability] Problem (You need to do this)</h2>
-<p>Implement a program in <code>PA4BoolSat.java</code> that: 1. Constructs an Abstract Syntax Tree for the expression in the input file provided by the first command line argument (<code>args[0]</code>). 2. Optionally accepts a DEBUG command line option in the second command line argument. 3. Exhaustively searches over all possible assignments of values to each boolean variable. If the DEBUG option is set: print all configurations and the result evaluating the expression with those variable values. If the DEBUG option is not set, print all configurations that satisfy the expression.</p>
+<p>Implement a program in <code>BoolSat.java</code> that:</p>
+<ol type="1">
+<li>Constructs an Abstract Syntax Tree for the expression in the input file provided by the first command line argument (<code>args[0]</code>).</li>
+<li>Optionally accepts a DEBUG command line option in the second command line argument.</li>
+<li>Exhaustively searches over all possible assignments of values to each boolean variable. If the DEBUG option is set: print all configurations and the result evaluating the expression with those variable values. If the DEBUG option is not set, print all configurations that satisfy the expression.</li>
+</ol>
 <section id="expression-input-file" class="level3">
 <h3 class="anchored" data-anchor-id="expression-input-file">Expression input file:</h3>
-<p>The expression input file should contain only a single line, that line should contain a well-formed Java boolean expression limited to: - the NAND operator <code>NAND</code> - and valid Java identifiers: i.e strings with no spaces that start with exactly one letter, or <code>$</code>, or <code>_</code>, that is followed by any number of letters, digits, <code>$</code> and <code>_</code> characters - and expressions in parentheses</p>
+<p>The expression input file should contain only a single line, that line should contain a well-formed Java boolean expression limited to:</p>
+<ul>
+<li>the NAND operator <code>NAND</code></li>
+<li>and valid Java identifiers: i.e strings with no spaces that start with exactly one letter, or <code>$</code>, or <code>_</code>, that is followed by any number of letters, digits, <code>$</code> and <code>_</code> characters</li>
+<li>and expressions in parentheses</li>
+</ul>
 <pre><code>Input File:
 ----------------------------------
 | a NAND (b NAND $t) NAND _3     |
 |             ...                | &lt;all other lines ignored&gt;
 ----------------------------------</code></pre>
-<p>This description is taken from PA4ReadInputWriteDot.java – an example of what the file usage documentation for the code you write should look like.</p>
+<p>This description is taken from <code>PA4ReadInputWriteDot.java</code> – an example of what the file usage documentation for the code you write should look like.</p>
 </section>
 <section id="output-format-debug-not-enabled" class="level3">
 <h3 class="anchored" data-anchor-id="output-format-debug-not-enabled">Output Format (DEBUG not enabled):</h3>
@@ -429,8 +439,8 @@ public void testNnd(){
 <p>Decomposition</p>
 <ul>
 <li><p>Should carefully select data structures that implement the required functionality. For example, if you avoid using Maps, it will probably result in more complicated code and thus points off.</p></li>
-<li><p>Should just use JUnit methods in ASTNodeTest.java and static methods in PA4BoolSat.java.</p></li>
-<li><p>Use a single file for Task#2, PA4BoolSat.java. This should be a small program (&lt;250 lines) not counting the file header.</p></li>
+<li><p>Should just use JUnit methods in ASTNodeTest.java and static methods in <code>BoolSat.java</code>.</p></li>
+<li><p>Use a single file for Task#2, <code>BoolSat.java</code>. This should be a small program (&lt;250 lines) not counting the file header.</p></li>
 <li><p>Each static method should be less than 30 lines. This INCLUDES comments but it does not include the method header. It is easier to read a function if it can all fit on one screen.</p></li>
 <li><p>Make things as simple as possible.</p>
 <ul>
@@ -466,8 +476,7 @@ public void testNnd(){
 </section>
 <section id="submission" class="level2">
 <h2 class="anchored" data-anchor-id="submission">Submission</h2>
-<p>For PA4, you are required to submit your PA4BoolSat.java and ASTNodeTest.java file to Gradescope.</p>
-<p><em>(NEW)</em> You are also required to submit an anonymized PA4BoolSat.java to Aropa for peer review. Log into https://aropa2.gla.ac.uk as was done during Section 3.</p>
+<p>For PA4, you are required to submit your <code>BoolSat.java</code> and ASTNodeTest.java file to Gradescope.</p>
 <p>Once I fixed the mistake, my test cases all passed:</p>
 <p><img src="https://i.gyazo.com/9ab46aca3b7fb32af4cd4350d75442c1.png" class="img-fluid"></p>
 <p>NOTE: You should not change the implementation of the ASTNode class. All you need to do is write a set of test cases that verify it behaves correctly (it does).</p>
@@ -475,7 +484,7 @@ public void testNnd(){
 </section>
 <section id="task-2---the-satisfiability-problem-you-need-to-do-this-1" class="level2">
 <h2 class="anchored" data-anchor-id="task-2---the-satisfiability-problem-you-need-to-do-this-1">Task #2 - The SAT[isfiability] Problem (You need to do this)</h2>
-<p>Implement a program in PA4BoolSat.java that:</p>
+<p>Implement a program in <code>BoolSat.java</code> that:</p>
 <ol type="1">
 <li>Constructs an Abstract Syntax Tree for the expression in the input file provided by the first command line argument (<code>args[0]</code>).</li>
 <li>Optionally accepts a DEBUG command line option in the second command line argument.</li>
@@ -567,7 +576,7 @@ a: true, b: true, true</code></pre>
 </section>
 <section id="testing-your-program-1" class="level2">
 <h2 class="anchored" data-anchor-id="testing-your-program-1">Testing your program</h2>
-<p>When you commit and push, Travis CI will send you an email to let you know if the public test cases failed. We STRONGLY recommend you put some of your own test cases in PublicTestCases/. Read grade.py to see how the input and .out files should be named. Also look at the examples that are already in the PublicTestCases/ subdirectory.</p>
+<p>When you commit and push, Travis CI will send you an email to let you know if the public test cases failed. We STRONGLY recommend you put some of your own test cases in <code>TestCases/</code>. Read grade.py to see how the input and .out files should be named. Also look at the examples that are already in the <code>TestCases/</code> subdirectory.</p>
 <p>Upload it to Gradescope and you will be able to see which public test cases were passed/failed.</p>
 </section>
 <section id="getting-started-1" class="level2">
@@ -656,8 +665,8 @@ public void testAnd(){
 <p>The other half of the PA4 grade will be your decomposition and code clarity, the JUnit tests, and a peer review.</p>
 <p>Decomposition * Should carefully select data structures that implement the required functionality. For example, if you avoid using Maps, it will probably result in more complicated code and thus points off.</p>
 <ul>
-<li><p>Should just use JUnit methods in ASTNodeTest.java and static methods in PA4BoolSat.java.</p></li>
-<li><p>Use a single file for Task#2, PA4BoolSat.java. This should be a small program (&lt;200 lines).</p></li>
+<li><p>Should just use JUnit methods in ASTNodeTest.java and static methods in <code>BoolSat.java</code>.</p></li>
+<li><p>Use a single file for Task#2, <code>BoolSat.java</code>. This should be a small program (&lt;200 lines).</p></li>
 <li><p>Each static method should be less than 30 lines. This INCLUDES comments. It is easier to read a function if it can all fit on one screen.</p></li>
 <li><p>Make things as simple as possible.</p>
 <ul>

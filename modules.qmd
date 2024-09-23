@@ -123,6 +123,8 @@ Optional:
 
 Topic: `r schedule %>% filter(week == 5) %>% pull(topic)`
 
+* [Instructions for Lab 04](short-assignment-04.html) -- Deadline: `r data %>% filter(Assignment == "SA4") %>%  select(Deadline)` -- Monday, 11:30pm
+
 
 # Week 06
 
