@@ -60,5 +60,7 @@ Write at least one test case for each of these:
 * multiplication of two numbers
 * division of two numbers
 
+Your JUnit tab should look something like this:
 
+![JUnit tab showing 4 passed test](images/lab04-junit-run.png)
 
