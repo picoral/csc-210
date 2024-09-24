@@ -237,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The answer is: Yes.</p>
 <p>If a is <code>false</code> then (<code>false NAND false</code>) is true.</p>
 <p>If on the other hand all possible boolean assignments to variables in the expression result in the expression being false, then the expression is unsatisfiable.</p>
-<p>The input to your program will be a boolean expression of variables and NAND operations. See TestCases/*.in for example input files.</p>
+<p>The input to your program will be a boolean expression of variables and NAND operations. See <a href="https://github.com/picoral/CSC210PA4">TestCases/*.in</a> for example input files.</p>
 <p>Here’s the NAND truth table for reference:</p>
 <table class="table">
 <thead>
@@ -273,7 +273,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-boolsat-package" class="level2">
 <h2 class="anchored" data-anchor-id="the-boolsat-package">The BoolSAT Package</h2>
-<p>You are provided with a number of classes in bool_sat/*. See the file headers in these .java files to see how they can be used. <code>PA4ReadInputWriteDot.java</code> will be especially useful, because it shows how to use the provided <code>BoolSatParser.parse()</code> function to turn a string from the input file into a tree representing the expression.</p>
+<p>Make sure you clone the <a href="https://github.com/picoral/CSC210PA4">GitHub repo for this project</a>.</p>
+<p>You are provided with a number of classes in <a href="https://github.com/picoral/CSC210PA4">bool_sat/*</a>. See the file headers in these .java files to see how they can be used. <code>PA4ReadInputWriteDot.java</code> will be especially useful, because it shows how to use the provided <code>BoolSatParser.parse()</code> function to turn a string from the input file into a tree representing the expression.</p>
 <p>Given boolean logic expressions we can construct trees to represent the expressions. See <code>PA4ReadInputWriteDot.java</code> to see how this is done; here is an example expression tree:</p>
 <p>Input: <code>a NAND (b NAND $t) NAND _3</code></p>
 <p>Output:</p>

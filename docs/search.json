@@ -1838,7 +1838,7 @@
     "href": "programming-assignment-04.html#the-boolsat-package",
     "title": "Programming Assignment 04",
     "section": "The BoolSAT Package",
-    "text": "The BoolSAT Package\nYou are provided with a number of classes in bool_sat/*. See the file headers in these .java files to see how they can be used. PA4ReadInputWriteDot.java will be especially useful, because it shows how to use the provided BoolSatParser.parse() function to turn a string from the input file into a tree representing the expression.\nGiven boolean logic expressions we can construct trees to represent the expressions. See PA4ReadInputWriteDot.java to see how this is done; here is an example expression tree:\nInput: a NAND (b NAND $t) NAND _3\nOutput:"
+    "text": "The BoolSAT Package\nMake sure you clone the GitHub repo for this project.\nYou are provided with a number of classes in bool_sat/*. See the file headers in these .java files to see how they can be used. PA4ReadInputWriteDot.java will be especially useful, because it shows how to use the provided BoolSatParser.parse() function to turn a string from the input file into a tree representing the expression.\nGiven boolean logic expressions we can construct trees to represent the expressions. See PA4ReadInputWriteDot.java to see how this is done; here is an example expression tree:\nInput: a NAND (b NAND $t) NAND _3\nOutput:"
   },
   {
     "objectID": "programming-assignment-04.html#task-1---junit-testing-you-need-to-do-this",

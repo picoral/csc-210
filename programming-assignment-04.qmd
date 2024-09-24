@@ -44,6 +44,7 @@ We will be testing your code with the original versions of the bool_sat/\* files
 
 
 ## Background (What is this SAT thing?)
+
 The [SAT](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem) problem is historically
 significant in that it was the first problem proven to be
 [NP-complete](https://en.wikipedia.org/wiki/NP-completeness). A cool property of the NP-complete
@@ -86,7 +87,7 @@ If on the other hand all possible boolean assignments to variables in the expres
 result in the expression being false, then the expression is unsatisfiable.
 
 The input to your program will be a boolean expression of variables and NAND operations.
-See TestCases/\*.in for example input files.
+See [TestCases/\*.in](https://github.com/picoral/CSC210PA4) for example input files.
 
 Here's the NAND truth table for reference:
 
@@ -100,7 +101,9 @@ Here's the NAND truth table for reference:
 
 ## The BoolSAT Package
 
-You are provided with a number of classes in bool_sat/\*.  See the file headers
+Make sure you clone the [GitHub repo for this project](https://github.com/picoral/CSC210PA4).
+
+You are provided with a number of classes in [bool_sat/\*](https://github.com/picoral/CSC210PA4).  See the file headers
 in these .java files to see how they can be used.  `PA4ReadInputWriteDot.java`
 will be especially useful, because it shows how to use the provided 
 `BoolSatParser.parse()` function to turn a string from the input file into a
