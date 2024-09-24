@@ -115,7 +115,7 @@ Optional:
 ## Assignments
 
 * [Instructions for Lab 03](short-assignment-03.html) -- Deadline: `r data %>% filter(Assignment == "SA3") %>%  select(Deadline)` -- Monday, 11:30pm
-* [Instructions for PA3](programming-assignment-03.html) -- Deadline: `r data %>% filter(Assignment == "PA3") %>%  select(Deadline)` -- Wednesday, 11:30pm
+* [Instructions for PA3](programming-assignment-03.html) -- Deadline: `r data %>% filter(Assignment == "PA3") %>%  select(Deadline)` -- Friday, 11:30pm
 
 # Week 05
 
