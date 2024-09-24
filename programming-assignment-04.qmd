@@ -55,6 +55,7 @@ SAT has no known efficient solution (i.e. a solution in polynomial time, in the 
 the order of ![](http://latex.codecogs.com/gif.latex?O%282%5E%7Bn%7D%29)​).
 
 Some uses to SAT solvers:
+
 - [Using SAT to synthesize programs](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5597726/).  Yes,
 that is "synthesis" as in have the computer write programs!
 - [Eclipse embeds SAT4j to manage dependencies among its plugins.](https://stackoverflow.com/questions/9377916/what-is-sat-and-what-it-is-good-for)
@@ -87,8 +88,18 @@ result in the expression being false, then the expression is unsatisfiable.
 The input to your program will be a boolean expression of variables and NAND operations.
 See TestCases/\*.in for example input files.
 
+Here's the NAND truth table for reference:
+
+| A  | B  |  A NAND B |
+|---|---|:-:|
+| F  | F  | T |
+| F  | T  | T |
+| T  | F  | T |
+| T  | T  | F |
+
 
 ## The BoolSAT Package
+
 You are provided with a number of classes in bool_sat/\*.  See the file headers
 in these .java files to see how they can be used.  `PA4ReadInputWriteDot.java`
 will be especially useful, because it shows how to use the provided 
@@ -154,6 +165,7 @@ As a thought experiment, how could you rewrite the main-method test cases of
 `BoolSatParser.java` and `Lexer.java` into JUnit test cases?
 
 ## Task #2 - The SAT[isfiability] Problem (You need to do this)
+
 Implement a program in `BoolSat.java` that:
 
  1. Constructs an Abstract Syntax Tree for the expression in the input file provided by the
@@ -164,6 +176,7 @@ Implement a program in `BoolSat.java` that:
  those variable values. If the DEBUG option is not set, print all configurations that satisfy the expression.
 
 ### Expression input file:
+
 The expression input file should contain only a single line, that line should contain a well-formed
 Java boolean expression limited to:
 
@@ -184,7 +197,9 @@ This description is taken from `PA4ReadInputWriteDot.java` -- an example of what
 you write should look like.
 
 ### Output Format (DEBUG not enabled):
+
 For the above expression, the output should be the following:
+
 ```
 input: a NAND (b NAND $t) NAND _3
 SAT
@@ -214,12 +229,14 @@ should be sorted (see example output).  The output is sorted by the the configur
 order).
 
 ### Output Format (DEBUG enabled):
+
 When the DEBUG command is provided to the program, you should print out all configurations and
 the value that the expression evaluates to with each configuration as input. Print the configuration
 in the same format as above, and append `", result"` to the end (where `result` is `true` or `false`
 depending on how the configuration evaluates the expression).
 
 Using the same example as above, the output would be:
+
 ```
 input: a NAND (b NAND $t) NAND _3
 SAT
@@ -243,15 +260,12 @@ $t: true, _3: true, a: true, b: true, false
 
 ## Testing your program
 
-Every time you commit changes to your GitHub repo, you will be able to see which grading test cases were passed/failed.
 
 
-## Getting Started
 
-The github assignment link is at https://classroom.github.com/a/P4DkpSrt.  Go to that
-link to accept the github assignment and get your own private repository for PA4.
 
 ### JUnit Background Information 
+
 Writing software is hard. Plain and simple, programming is not easy. Over the past 
 70 years there have been many methods developed to make the process of writing code 
 easier. Once such technique is called **Test-Driven Development**. The idea is 
@@ -263,6 +277,7 @@ ease and automate the testing process.  Our goal is to introduce you to JUnit to
 help you test the code you write better.
 
 ### Code
+
 To use JUnit, each test case (a single method defined 
 like the one below) should be responsible for testing one piece of functionality. 
 ```
@@ -290,11 +305,12 @@ This is the process you need to follow when writing test cases:
  The actual output from the code being tested should match the expected output that we 
  hypothesized in (2). Use the Assert class that JUnit provides. 
 
-[The JUnit Assert class documentation](https://junit.org/junit4/javadoc/latest/org/junit/Assert.html) 
+[The JUnit Assert class documentation](https://junit.org/junit5/docs/current/user-guide/#writing-tests) 
 lists all of the assert methods that can be used to test expected output vs actual output. 
 Some of the most useful are `assertTrue()`, `assertFalse()`, `assertEquals()`, `assertNull()`, etc. 
 
 ### Example
+
 For example, the Java standard library has a Math class to do various math operations. Let's apply 
 this testing process to test the math class. 
 
@@ -302,6 +318,7 @@ this testing process to test the math class.
  2. (Thinking) The `min` method accepts two numbers as input, and returns the smaller one. If I provide 
  that method 55 and 77, the output should be 55. 
  3. (Writing) Write the code to set up this scenario:
+ 
 ```
 @Test
 public void testMath() {
@@ -309,9 +326,11 @@ public void testMath() {
     int result = Math.min(small, big);
 }
 ```
+
  4. (Writing) We haven't actually tested anything yet. Since the expected output is 55, if Math.min() 
  is implemented correctly that is what the value of `result` should be. So we write an assert to test 
  the expected output against the actual output. 
+ 
 ```
 @Test
 public void testMath() {
@@ -362,7 +381,7 @@ Also see all of the provided Drill\*Test.java code to see more examples of using
 
 ### BoolSat Package
 
-The file bool_exp/PA4ReadInputWriteDot.java is an example application for using the BoolSatParser. 
+The file `bool_exp/PA4ReadInputWriteDot.java` is an example application for using the BoolSatParser. 
 This file reads an input expression from a file, and creates a string in the DOT format 
 representing the structure of the expression tree. That string can be fed as input to a 
 [DOT to Image utility](http://sandbox.kidstrythisathome.com/erdos/) to see a picture of 
@@ -378,7 +397,7 @@ Half of the PA4 grade will be correctness.  For this assignment, there
 will be some private test cases on Gradescope.
 
 The other half of the PA4 grade will be your decomposition and code clarity,
-the JUnit tests, and a peer review.
+and the JUnit tests.
 
 Decomposition
 

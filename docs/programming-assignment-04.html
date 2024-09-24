@@ -144,8 +144,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#output-format-debug-not-enabled" id="toc-output-format-debug-not-enabled" class="nav-link" data-scroll-target="#output-format-debug-not-enabled">Output Format (DEBUG not enabled):</a></li>
   <li><a href="#output-format-debug-enabled" id="toc-output-format-debug-enabled" class="nav-link" data-scroll-target="#output-format-debug-enabled">Output Format (DEBUG enabled):</a></li>
   </ul></li>
-  <li><a href="#testing-your-program" id="toc-testing-your-program" class="nav-link" data-scroll-target="#testing-your-program">Testing your program</a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a>
+  <li><a href="#testing-your-program" id="toc-testing-your-program" class="nav-link" data-scroll-target="#testing-your-program">Testing your program</a>
   <ul class="collapse">
   <li><a href="#junit-background-information" id="toc-junit-background-information" class="nav-link" data-scroll-target="#junit-background-information">JUnit Background Information</a></li>
   <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
@@ -164,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#expected-output" id="toc-expected-output" class="nav-link" data-scroll-target="#expected-output">Expected Output:</a></li>
   </ul></li>
   <li><a href="#testing-your-program-1" id="toc-testing-your-program-1" class="nav-link" data-scroll-target="#testing-your-program-1">Testing your program</a></li>
-  <li><a href="#getting-started-1" id="toc-getting-started-1" class="nav-link" data-scroll-target="#getting-started-1">Getting Started</a>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a>
   <ul class="collapse">
   <li><a href="#junit-background-information-1" id="toc-junit-background-information-1" class="nav-link" data-scroll-target="#junit-background-information-1">JUnit Background Information</a></li>
   <li><a href="#code-1" id="toc-code-1" class="nav-link" data-scroll-target="#code-1">Code</a></li>
@@ -222,7 +221,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="background-what-is-this-sat-thing" class="level2">
 <h2 class="anchored" data-anchor-id="background-what-is-this-sat-thing">Background (What is this SAT thing?)</h2>
 <p>The <a href="https://en.wikipedia.org/wiki/Boolean_satisfiability_problem">SAT</a> problem is historically significant in that it was the first problem proven to be <a href="https://en.wikipedia.org/wiki/NP-completeness">NP-complete</a>. A cool property of the NP-complete class of problems is that ANY NP-complete problem can be rewritten as the SAT problem, and vice-versa. Usually this conversion is pretty easy. There are a lot of really important problems in the NP-complete class. In fact, SAT is so important that there are yearly competitions to see who can create the best SAT solver ([<a href="http://www.satcompetition.org/">1</a>], [<a href="http://www.maxsat.udl.cat/">2</a>]). SAT has no known efficient solution (i.e.&nbsp;a solution in polynomial time, in the worst case SAT is on the order of <embed src="http://latex.codecogs.com/gif.latex?O%282%5E%7Bn%7D%29" class="img-fluid">​).</p>
-<p>Some uses to SAT solvers: - <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5597726/">Using SAT to synthesize programs</a>. Yes, that is “synthesis” as in have the computer write programs! - <a href="https://stackoverflow.com/questions/9377916/what-is-sat-and-what-it-is-good-for">Eclipse embeds SAT4j to manage dependencies among its plugins.</a> - <a href="https://github.com/hugomg/hexiom">Applied to a flash game called Hexoim</a>.</p>
+<p>Some uses to SAT solvers:</p>
+<ul>
+<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5597726/">Using SAT to synthesize programs</a>. Yes, that is “synthesis” as in have the computer write programs!</li>
+<li><a href="https://stackoverflow.com/questions/9377916/what-is-sat-and-what-it-is-good-for">Eclipse embeds SAT4j to manage dependencies among its plugins.</a></li>
+<li><a href="https://github.com/hugomg/hexiom">Applied to a flash game called Hexoim</a>.</li>
+</ul>
 </section>
 <section id="the-assignment-what-you-will-be-doing" class="level2">
 <h2 class="anchored" data-anchor-id="the-assignment-what-you-will-be-doing">The Assignment (What you will be doing)</h2>
@@ -234,6 +238,38 @@ ul.task-list li input[type="checkbox"] {
 <p>If a is <code>false</code> then (<code>false NAND false</code>) is true.</p>
 <p>If on the other hand all possible boolean assignments to variables in the expression result in the expression being false, then the expression is unsatisfiable.</p>
 <p>The input to your program will be a boolean expression of variables and NAND operations. See TestCases/*.in for example input files.</p>
+<p>Here’s the NAND truth table for reference:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th style="text-align: center;">A NAND B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>F</td>
+<td>F</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>T</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="odd">
+<td>T</td>
+<td>F</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="even">
+<td>T</td>
+<td>T</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="the-boolsat-package" class="level2">
 <h2 class="anchored" data-anchor-id="the-boolsat-package">The BoolSAT Package</h2>
@@ -343,11 +379,6 @@ $t: true, _3: true, a: true, b: true, false</code></pre>
 </section>
 <section id="testing-your-program" class="level2">
 <h2 class="anchored" data-anchor-id="testing-your-program">Testing your program</h2>
-<p>Every time you commit changes to your GitHub repo, you will be able to see which grading test cases were passed/failed.</p>
-</section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
-<p>The github assignment link is at https://classroom.github.com/a/P4DkpSrt. Go to that link to accept the github assignment and get your own private repository for PA4.</p>
 <section id="junit-background-information" class="level3">
 <h3 class="anchored" data-anchor-id="junit-background-information">JUnit Background Information</h3>
 <p>Writing software is hard. Plain and simple, programming is not easy. Over the past 70 years there have been many methods developed to make the process of writing code easier. Once such technique is called <strong>Test-Driven Development</strong>. The idea is simple: you know what you want your code to do, but you do not know how to write code to do it. So start by writing the test cases, then write code that makes those test cases pass. Test-Driven Development is used in industry, and you will most probably do it in CS335. In Java, JUnit is a framework that allows us to write test cases with ease and automate the testing process. Our goal is to introduce you to JUnit to help you test the code you write better.</p>
@@ -375,7 +406,7 @@ import org.junit.Test;
 </li>
 <li><strong>WRITE CODE</strong> in the test case to ensure that the actual result was correct. The actual output from the code being tested should match the expected output that we hypothesized in (2). Use the Assert class that JUnit provides.</li>
 </ol>
-<p><a href="https://junit.org/junit4/javadoc/latest/org/junit/Assert.html">The JUnit Assert class documentation</a> lists all of the assert methods that can be used to test expected output vs actual output. Some of the most useful are <code>assertTrue()</code>, <code>assertFalse()</code>, <code>assertEquals()</code>, <code>assertNull()</code>, etc.</p>
+<p><a href="https://junit.org/junit5/docs/current/user-guide/#writing-tests">The JUnit Assert class documentation</a> lists all of the assert methods that can be used to test expected output vs actual output. Some of the most useful are <code>assertTrue()</code>, <code>assertFalse()</code>, <code>assertEquals()</code>, <code>assertNull()</code>, etc.</p>
 </section>
 <section id="example" class="level3">
 <h3 class="anchored" data-anchor-id="example">Example</h3>
@@ -428,14 +459,14 @@ public void testNnd(){
 </section>
 <section id="boolsat-package" class="level3">
 <h3 class="anchored" data-anchor-id="boolsat-package">BoolSat Package</h3>
-<p>The file bool_exp/PA4ReadInputWriteDot.java is an example application for using the BoolSatParser. This file reads an input expression from a file, and creates a string in the DOT format representing the structure of the expression tree. That string can be fed as input to a <a href="http://sandbox.kidstrythisathome.com/erdos/">DOT to Image utility</a> to see a picture of the structure of the tree.</p>
+<p>The file <code>bool_exp/PA4ReadInputWriteDot.java</code> is an example application for using the BoolSatParser. This file reads an input expression from a file, and creates a string in the DOT format representing the structure of the expression tree. That string can be fed as input to a <a href="http://sandbox.kidstrythisathome.com/erdos/">DOT to Image utility</a> to see a picture of the structure of the tree.</p>
 <p><strong>You will need to write code similar to how PA4ReadInputWriteDot is written</strong>, you will need to read an expression from an input file, and pass it to <code>BoolSatParser.parse(String expression)</code>. This method will return an ASTNode that is the root of an expression tree.</p>
 </section>
 </section>
 <section id="grading-criteria" class="level2">
 <h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
 <p>Half of the PA4 grade will be correctness. For this assignment, there will be some private test cases on Gradescope.</p>
-<p>The other half of the PA4 grade will be your decomposition and code clarity, the JUnit tests, and a peer review.</p>
+<p>The other half of the PA4 grade will be your decomposition and code clarity, and the JUnit tests.</p>
 <p>Decomposition</p>
 <ul>
 <li><p>Should carefully select data structures that implement the required functionality. For example, if you avoid using Maps, it will probably result in more complicated code and thus points off.</p></li>
@@ -579,8 +610,8 @@ a: true, b: true, true</code></pre>
 <p>When you commit and push, Travis CI will send you an email to let you know if the public test cases failed. We STRONGLY recommend you put some of your own test cases in <code>TestCases/</code>. Read grade.py to see how the input and .out files should be named. Also look at the examples that are already in the <code>TestCases/</code> subdirectory.</p>
 <p>Upload it to Gradescope and you will be able to see which public test cases were passed/failed.</p>
 </section>
-<section id="getting-started-1" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started-1">Getting Started</h2>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
 <section id="junit-background-information-1" class="level3">
 <h3 class="anchored" data-anchor-id="junit-background-information-1">JUnit Background Information</h3>
 <p>Writing software is hard. Plain and simple, programming is not easy. Over the past 70 years there have been many methods developed to make the process of writing code easier. Once such technique is called <strong>Test-Driven Development</strong>. The idea is simple: you know what you want your code to do, but you don’t know how to write code to do it. So start by writing the test cases, then write code that makes those test cases pass. Test-Driven Development is used in industry, and you will do it in CS335. In Java, JUnit is a framework that allows us to write test cases with ease and automate the testing process.</p>
