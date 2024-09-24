@@ -53,7 +53,7 @@ Usually this conversion is pretty easy. There are a lot of really important prob
 NP-complete class. In fact, SAT is so important that there are yearly competitions to see who can
 create the best SAT solver (\[[1](http://www.satcompetition.org/)\], \[[2](http://www.maxsat.udl.cat/)\]).
 SAT has no known efficient solution (i.e. a solution in polynomial time, in the worst case SAT is on
-the order of ![](http://latex.codecogs.com/gif.latex?O%282%5E%7Bn%7D%29)​).
+the order of $O(2^n)$).
 
 Some uses to SAT solvers:
 

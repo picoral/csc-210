@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -220,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="background-what-is-this-sat-thing" class="level2">
 <h2 class="anchored" data-anchor-id="background-what-is-this-sat-thing">Background (What is this SAT thing?)</h2>
-<p>The <a href="https://en.wikipedia.org/wiki/Boolean_satisfiability_problem">SAT</a> problem is historically significant in that it was the first problem proven to be <a href="https://en.wikipedia.org/wiki/NP-completeness">NP-complete</a>. A cool property of the NP-complete class of problems is that ANY NP-complete problem can be rewritten as the SAT problem, and vice-versa. Usually this conversion is pretty easy. There are a lot of really important problems in the NP-complete class. In fact, SAT is so important that there are yearly competitions to see who can create the best SAT solver ([<a href="http://www.satcompetition.org/">1</a>], [<a href="http://www.maxsat.udl.cat/">2</a>]). SAT has no known efficient solution (i.e.&nbsp;a solution in polynomial time, in the worst case SAT is on the order of <embed src="http://latex.codecogs.com/gif.latex?O%282%5E%7Bn%7D%29" class="img-fluid">​).</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Boolean_satisfiability_problem">SAT</a> problem is historically significant in that it was the first problem proven to be <a href="https://en.wikipedia.org/wiki/NP-completeness">NP-complete</a>. A cool property of the NP-complete class of problems is that ANY NP-complete problem can be rewritten as the SAT problem, and vice-versa. Usually this conversion is pretty easy. There are a lot of really important problems in the NP-complete class. In fact, SAT is so important that there are yearly competitions to see who can create the best SAT solver ([<a href="http://www.satcompetition.org/">1</a>], [<a href="http://www.maxsat.udl.cat/">2</a>]). SAT has no known efficient solution (i.e.&nbsp;a solution in polynomial time, in the worst case SAT is on the order of <span class="math inline">\(O(2^n)\)</span>).</p>
 <p>Some uses to SAT solvers:</p>
 <ul>
 <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5597726/">Using SAT to synthesize programs</a>. Yes, that is “synthesis” as in have the computer write programs!</li>
