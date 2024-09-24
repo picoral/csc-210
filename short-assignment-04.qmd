@@ -20,10 +20,24 @@ help you test the code you write better.
 
 ## Set up
 
-Download the `BasicArithmetic.java` file from [Github](https://github.com/picoral/CSC210-lab04) and
+Download the `BasicArithmetic.java` file from [GitHub](https://github.com/picoral/CSC210-lab04) and
 set up your working environment on Eclipse with this file.
 
-Create a JUnit test file following these steps:
+There are several ways to download the [GitHub repo](https://github.com/picoral/CSC210-lab04). Click on
+the green code button:
+
+![Green Code Button Options](images/github-download.png)
+
+You can click on `Download Zip` or you can copy the `HTTPS` or `SSH` addresses and then use your shell (terminal, command line) to `git clone` it to a specific folder (maybe your working environment folder for Eclipse):
+
+`git clone https://github.com/picoral/CSC210-lab04.git`
+
+or
+
+`git clone git@github.com:picoral/CSC210-lab04.git`
+
+
+Once you have your project set up with the `BasicArithmetic.java` file you downloaded from [GitHub](https://github.com/picoral/CSC210-lab04), you can create a JUnit test file following these steps:
 
 1. Go to `New > JUnit Test Case` ![](images/junit-step1.png)
 1. Name your file `BasicArithmeticTest` ![](images/junit-step2.png)
