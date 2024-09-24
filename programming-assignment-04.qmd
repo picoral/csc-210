@@ -13,7 +13,7 @@ data <- read_excel("assessment-deadlines.xlsx")
 ```
 
 
-Deadline: `r data %>% filter(Assignment == "PA4") %>%  select(Deadline)` -- Wednesday, 11:30pm
+Deadline: `r data %>% filter(Assignment == "PA4") %>%  select(Deadline)` -- Friday, 11:30pm
 
 # PA4-BoolSAT
 
