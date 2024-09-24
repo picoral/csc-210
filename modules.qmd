@@ -144,6 +144,8 @@ Required:
 
 ## Assignments
 
+* [Instructions for PA4](programming-assignment-04.html) -- Deadline: `r data %>% filter(Assignment == "PA4") %>%  select(Deadline)` -- Friday, 11:30pm
+
 # Week 07
 
 `r schedule %>% filter(week == 7) %>% pull(dates)`
