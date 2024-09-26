@@ -223,9 +223,18 @@ public class PlayGame {
 }
 ```
 
+And add a method to `Card`:
+
+```{java}
+public void print() {
+		System.out.println(rank + " of " + suit);
+	}
+```
+
+
 ## Update `Card` class (demonstration)
 
-* validate suit and rank -- make sure object is create with valid strings only
+* validate suit and rank -- make sure the object is created with valid strings only
 * create constants for arrays of strings for both suits and ranks
 * create helper methods (private) for validation
 * two ways of setting rank: integer and string (overloading)

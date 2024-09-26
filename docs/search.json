@@ -1467,14 +1467,14 @@
     "href": "slides-04-01.html#solution",
     "title": "Classes and Methods",
     "section": "Solution",
-    "text": "Solution\npublic class PlayGame {\n\n    public static void main(String[] args) {\n        Card card1 = new Card(\"ace\", \"hearts\");\n        card1.print();\n    }\n\n}"
+    "text": "Solution\npublic class PlayGame {\n\n    public static void main(String[] args) {\n        Card card1 = new Card(\"ace\", \"hearts\");\n        card1.print();\n    }\n\n}\nAnd add a method to Card:\npublic void print() {\n        System.out.println(rank + \" of \" + suit);\n    }"
   },
   {
     "objectID": "slides-04-01.html#update-card-class-demonstration",
     "href": "slides-04-01.html#update-card-class-demonstration",
     "title": "Classes and Methods",
     "section": "Update Card class (demonstration)",
-    "text": "Update Card class (demonstration)\n\nvalidate suit and rank – make sure object is create with valid strings only\ncreate constants for arrays of strings for both suits and ranks\ncreate helper methods (private) for validation\ntwo ways of setting rank: integer and string (overloading)"
+    "text": "Update Card class (demonstration)\n\nvalidate suit and rank – make sure the object is created with valid strings only\ncreate constants for arrays of strings for both suits and ranks\ncreate helper methods (private) for validation\ntwo ways of setting rank: integer and string (overloading)"
   },
   {
     "objectID": "slides-04-01.html#update-card-class-solution",
