@@ -98,7 +98,10 @@ The course grade consists of the following:
 
 ## Due Dates and Submission
 
-Programming and short assignments are to be submitted to GitHub and are due at 11:30 pm on their associated DUE DATE. Commit and push frequently to github. If you have been committing and pushing to GitHub. 
+Programming and short assignments are to be submitted to Gradescope and are due at 11:30 pm on their associated DUE DATE. 
+## Missing an Exam
+
+Exam make-ups will be provided if you have a Dean's excuse. Otherwise, if you miss an midterm exam, your `NA` grade will be replaced with your final exam grade.
 
 ## Grading Promptness
 
