@@ -1369,7 +1369,7 @@
     "href": "slides-04-01.html#methods",
     "title": "Classes and Methods",
     "section": "Methods",
-    "text": "Methods\n\nMultiple arguments – methods can take on more than one argument, and therefore can have more than one parameter variable\nOverloading – methods whose signatures differ are different methods. Using the same name for two methods whose signatures differ is known as overloading.\nSingle return value A Java method provides only one return value to the caller, of the type declared in the method signature"
+    "text": "Methods\n\nMultiple arguments – methods can take on more than one argument, and therefore can have more than one parameter variable\nOverloading – methods whose signatures differ are different methods. Using the same name for two methods whose signatures differ is known as overloading.\nSingle return value – A Java method provides only one return value to the caller, of the type declared in the method signature"
   },
   {
     "objectID": "slides-04-01.html#methods-1",
