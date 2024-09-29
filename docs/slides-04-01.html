@@ -762,6 +762,24 @@
 <span id="cb15-3"><a></a>   </span>
 <span id="cb15-4"><a></a>// Generate random integers in range 0 to 51</span>
 <span id="cb15-5"><a></a>int cardIndex = rand.nextInt(52);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="enum" class="slide level2">
+<h2>enum</h2>
+<p>An enum type is a special data type that enables for a variable to be a set of predefined constants</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a></a>  public enum suitOptions {</span>
+<span id="cb16-2"><a></a>        DIAMONDS, HEARTS, SPADES, CLUBS;</span>
+<span id="cb16-3"><a></a>        </span>
+<span id="cb16-4"><a></a>    }</span>
+<span id="cb16-5"><a></a>    </span>
+<span id="cb16-6"><a></a>    private suitOptions suit;</span>
+<span id="cb16-7"><a></a>    </span>
+<span id="cb16-8"><a></a>    // constructor</span>
+<span id="cb16-9"><a></a>    public Card(suitOptions suit, String rank) {</span>
+<span id="cb16-10"><a></a>        this.suit = suit;</span>
+<span id="cb16-11"><a></a>        this.rank = rank;</span>
+<span id="cb16-12"><a></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Example of usage:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb17-1"><a></a>Card cardOne = new Card(Card.suitOptions.DIAMONDS, "ace");</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

@@ -2105,5 +2105,12 @@
     "title": "Classes and Methods",
     "section": "Using Random",
     "text": "Using Random\nimport java.util.Random;\nUse the Random class to draw a random card from myDeck\n// create instance of Random class\nRandom rand = new Random();\n   \n// Generate random integers in range 0 to 51\nint cardIndex = rand.nextInt(52);"
+  },
+  {
+    "objectID": "slides-04-01.html#enum",
+    "href": "slides-04-01.html#enum",
+    "title": "Classes and Methods",
+    "section": "enum",
+    "text": "enum\nAn enum type is a special data type that enables for a variable to be a set of predefined constants\n  public enum suitOptions {\n        DIAMONDS, HEARTS, SPADES, CLUBS;\n        \n    }\n    \n    private suitOptions suit;\n    \n    // constructor\n    public Card(suitOptions suit, String rank) {\n        this.suit = suit;\n        this.rank = rank;\n    }\nExample of usage:\nCard cardOne = new Card(Card.suitOptions.DIAMONDS, \"ace\");"
   }
 ]

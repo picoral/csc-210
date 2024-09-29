@@ -413,3 +413,28 @@ Random rand = new Random();
 int cardIndex = rand.nextInt(52);
 ```
 
+## enum
+
+An enum type is a special data type that enables for a variable to be a set of predefined constants
+
+```{java}
+  public enum suitOptions {
+		DIAMONDS, HEARTS, SPADES, CLUBS;
+		
+	}
+	
+	private suitOptions suit;
+	
+	// constructor
+	public Card(suitOptions suit, String rank) {
+		this.suit = suit;
+		this.rank = rank;
+	}
+```
+
+Example of usage:
+
+```{java}
+Card cardOne = new Card(Card.suitOptions.DIAMONDS, "ace");
+```
+
