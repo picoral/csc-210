@@ -271,7 +271,7 @@ is the only one that is called by the autograder.
 public static void main(String[] args) throws FileNotFoundException{
 		if(args.length < 1 || args.length > 2){
             System.err.println(
-                    "USAGE: java PA4ReadInputWriteDot <inputFile.txt>");
+                    "USAGE: java BoolSat <inputFile.txt> <DEBUG*>");
             System.exit(1);
         }
 
