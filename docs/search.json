@@ -2112,5 +2112,12 @@
     "title": "Classes and Methods",
     "section": "enum",
     "text": "enum\nAn enum type is a special data type that enables for a variable to be a set of predefined constants\n  public enum suitOptions {\n        DIAMONDS, HEARTS, SPADES, CLUBS;\n        \n    }\n    \n    private suitOptions suit;\n    \n    // constructor\n    public Card(suitOptions suit, String rank) {\n        this.suit = suit;\n        this.rank = rank;\n    }\nExample of usage:\nCard cardOne = new Card(Card.suitOptions.DIAMONDS, \"ace\");"
+  },
+  {
+    "objectID": "slides-04-01.html#enum-1",
+    "href": "slides-04-01.html#enum-1",
+    "title": "Classes and Methods",
+    "section": "enum",
+    "text": "enum\nRead documentation"
   }
 ]

@@ -438,3 +438,6 @@ Example of usage:
 Card cardOne = new Card(Card.suitOptions.DIAMONDS, "ace");
 ```
 
+## enum
+
+Read [documentation](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)
