@@ -263,6 +263,43 @@ $t: true, _3: true, a: true, b: true, false
 
 ## Testing your program
 
+The autograder will be calling the public method `getOuput(rootNode, debugOption)`. 
+You will need to implement more methods to make this work, the the `getOutput` method
+is the only one that is called by the autograder.
+
+```{java}
+public static void main(String[] args) throws FileNotFoundException{
+		if(args.length < 1 || args.length > 2){
+            System.err.println(
+                    "USAGE: java PA4ReadInputWriteDot <inputFile.txt>");
+            System.exit(1);
+        }
+
+        // Get the expression from the file
+        String expression = null;
+        Scanner s = new Scanner(new File(args[0]));
+        expression = s.nextLine();
+
+        System.out.println("input: " + expression);
+        
+        s.close();
+
+        // call the parser to generate the AST for the expression
+        ASTNode root = BoolSatParser.parse(expression);
+        
+        // get string output to print out
+        String output;
+        if (args.length == 2 && args[1].equals("DEBUG")) {
+        	output = getOuput(root, true);
+        } else {
+        	output = getOuput(root, false);
+        }
+        
+        // print output string
+        System.out.println(output);
+        
+	}
+```
 
 
 
