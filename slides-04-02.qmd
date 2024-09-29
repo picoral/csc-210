@@ -1,0 +1,11 @@
+---
+title: "Interfaces"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## Interface
+
+Objects define their interaction through their public methods

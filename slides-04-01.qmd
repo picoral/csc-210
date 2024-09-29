@@ -397,3 +397,19 @@ public class PlayGame {
 }
 ```
 
+## Using `Random`
+
+```{java}
+import java.util.Random;
+```
+
+Use the `Random` class to draw a random card from `myDeck`
+
+```{java}
+// create instance of Random class
+Random rand = new Random();
+   
+// Generate random integers in range 0 to 51
+int cardIndex = rand.nextInt(52);
+```
+

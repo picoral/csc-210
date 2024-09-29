@@ -2098,5 +2098,12 @@
     "title": "Syllabus",
     "section": "Missing an Exam",
     "text": "Missing an Exam\nExam make-ups will be provided if you have a Dean’s excuse. Otherwise, if you miss an midterm exam, your NA grade will be replaced with your final exam grade."
+  },
+  {
+    "objectID": "slides-04-01.html#using-random",
+    "href": "slides-04-01.html#using-random",
+    "title": "Classes and Methods",
+    "section": "Using Random",
+    "text": "Using Random\nimport java.util.Random;\nUse the Random class to draw a random card from myDeck\n// create instance of Random class\nRandom rand = new Random();\n   \n// Generate random integers in range 0 to 51\nint cardIndex = rand.nextInt(52);"
   }
 ]
