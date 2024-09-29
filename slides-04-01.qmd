@@ -266,9 +266,7 @@ public class Card {
 
 	private Boolean inArray(String value, String[] arr) {
 		for (String element : arr) {
-		    if (element == value) {
-		        return true;
-		    }
+		    if (element.equals(value)) return true;
 		}
 		return false;
 	}
