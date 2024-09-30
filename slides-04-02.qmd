@@ -8,4 +8,57 @@ format:
 
 ## Interface
 
-Objects define their interaction through their public methods
+* Objects define their interaction through their public methods
+* Interfaces:
+    * allow us to implement abstraction
+    * primarily define methods that other classes must implement
+    
+## Example
+
+On Eclipse choose `New > Interface`
+
+```{java}
+public interface CardGame {
+	
+	void setHand(int cardCount);
+	
+	int getHand();
+	
+	void setPlayers(int playerCount);
+	
+	int getPlayers();
+	
+}
+
+```
+
+Base on these methods, create a `PokerGame` class that `implements CardGame`
+
+## Solution
+
+```{java}
+public class PokerGame implements CardGame {
+	
+	private int cardCount = 5;
+	private int playerCount;
+	
+	public void setHand(int cardCount) {
+		this.cardCount = cardCount;
+	}
+	
+	public int getHand() {
+		return cardCount;
+	}
+	
+	public void setPlayers(int playerCount) {
+		this.playerCount = playerCount;
+	}
+	
+	public int getPlayers() {
+		return playerCount;
+	}
+	
+
+}
+```
+

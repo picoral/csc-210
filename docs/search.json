@@ -2119,5 +2119,26 @@
     "title": "Classes and Methods",
     "section": "enum",
     "text": "enum\nRead documentation"
+  },
+  {
+    "objectID": "slides-04-02.html#interface",
+    "href": "slides-04-02.html#interface",
+    "title": "Interfaces",
+    "section": "Interface",
+    "text": "Interface\n\nObjects define their interaction through their public methods\nInterfaces:\n\nallow us to implement abstraction\nprimarily define methods that other classes must implement"
+  },
+  {
+    "objectID": "slides-04-02.html#example",
+    "href": "slides-04-02.html#example",
+    "title": "Interfaces",
+    "section": "Example",
+    "text": "Example\nOn Eclipse choose New &gt; Interface\npublic interface CardGame {\n    \n    void setHand(int cardCount);\n    \n    int getHand();\n    \n    void setPlayers(int playerCount);\n    \n    int getPlayers();\n    \n}\nBase on these methods, create a PokerGame class that implements CardGame"
+  },
+  {
+    "objectID": "slides-04-02.html#solution",
+    "href": "slides-04-02.html#solution",
+    "title": "Interfaces",
+    "section": "Solution",
+    "text": "Solution\npublic class PokerGame implements CardGame {\n    \n    private int cardCount = 5;\n    private int playerCount;\n    \n    public void setHand(int cardCount) {\n        this.cardCount = cardCount;\n    }\n    \n    public int getHand() {\n        return cardCount;\n    }\n    \n    public void setPlayers(int playerCount) {\n        this.playerCount = playerCount;\n    }\n    \n    public int getPlayers() {\n        return playerCount;\n    }\n    \n\n}"
   }
 ]
