@@ -141,6 +141,7 @@ Required:
 ## Slides
 
 * [Classes and Methods](slides-04-01.html)
+* [Interfaces](slides-04-02.html)
 
 ## Assignments
 
