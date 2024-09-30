@@ -12,6 +12,8 @@ format:
 * Interfaces:
     * allow us to implement abstraction
     * primarily define methods that other classes must implement
+    * allows us to be more formal about the behavior classes promise to provide.
+    * form a contract between the class and the outside interactions (this contract is enforced by the compiler)
     
 ## Example
 
