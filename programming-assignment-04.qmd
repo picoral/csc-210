@@ -781,3 +781,7 @@ anything down.
 ## Submission
 
 For PA4, you are required to submit your `BoolSat.java` and `ASTNodeTest.java` file to Gradescope.
+
+Use the following package information:
+
+`package com.gradescope.bool_exp`
