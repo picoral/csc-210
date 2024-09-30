@@ -6,6 +6,7 @@ title: "Practice Problems"
 * [Week 03](pdfs/practice-02.pdf)
 * [Week 04](pdfs/practice-03.pdf)
 * [Midterm 01 Study Guide](pdfs/study-guide-01.pdf)
+* [Week 06](pdfs/practice-04.pdf)
 
 # Other Resources
 
