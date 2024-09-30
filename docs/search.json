@@ -2140,5 +2140,12 @@
     "title": "Interfaces",
     "section": "Solution",
     "text": "Solution\npublic class PokerGame implements CardGame {\n    \n    private int cardCount = 5;\n    private int playerCount;\n    \n    public void setHand(int cardCount) {\n        this.cardCount = cardCount;\n    }\n    \n    public int getHand() {\n        return cardCount;\n    }\n    \n    public void setPlayers(int playerCount) {\n        this.playerCount = playerCount;\n    }\n    \n    public int getPlayers() {\n        return playerCount;\n    }\n    \n\n}"
+  },
+  {
+    "objectID": "slides-04-02.html#build-a-better-interface",
+    "href": "slides-04-02.html#build-a-better-interface",
+    "title": "Interfaces",
+    "section": "Build a better interface",
+    "text": "Build a better interface\nIn your groups, discuss how to write a better interface for a card game.\nThink about different card games you know. What do they all have in common?\nWhat is specific to a Poker Game?"
   }
 ]

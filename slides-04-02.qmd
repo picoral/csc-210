@@ -64,3 +64,11 @@ public class PokerGame implements CardGame {
 }
 ```
 
+## Build a better interface
+
+In your groups, discuss how to write a better interface for a card game.
+
+Think about different card games you know. What do they all have in common?
+
+What is specific to a [Poker Game](https://www.sci.brooklyn.cuny.edu/~sklar/teaching/boston-college/f00/mc140/poker.html#:~:text=There%20are%2052%20cards%20in,hand%20consists%20of%20five%20cards.)?
+
