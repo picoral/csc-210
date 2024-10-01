@@ -1,0 +1,152 @@
+---
+title: "Lab 05"
+---
+
+# Short Assignment 05
+
+## Introduction 
+
+In this lab you are finish writing a class that implements a given interface, and
+test your solution with a JUnit tests.
+
+You will work with code that implements a Binary Search Tree (BST). A BST
+stores data in a sorted manner. Each node in a BST has exactly two children,
+a left child and a right child, with the left child being a subtree with values
+that are less than the parent node and the right child being a subtree with values
+greater than the parent node.
+
+## Interface
+
+Here's the interface you are using for this assignment:
+
+```{java}
+import java.util.ArrayList;
+
+public interface BTNode {
+	
+	public boolean search(BTNode node, int value);
+	
+	public void setRight(BTNode node);
+	
+	public void setLeft(BTNode node);
+	
+	public void addNode(BTNode node, int value);
+	
+	public int getValue();
+	
+	public BTNode getLeft();
+	
+	public BTNode getRight();
+	
+  // given a root node, add values from lowest to highest to result ArrayList
+	public void toList(BTNode node, ArrayList<Integer> result);
+	
+}
+```
+
+And here's the class that implements this interface, you will notice that not
+all methods have been implemented. Your task is to implement the missing method,
+which is a tree traversal method.
+
+```{java}
+import java.util.ArrayList;
+
+public class BSTree implements BTNode {
+	// binary tree nodes have two children
+	private BTNode left, right;
+	// set the value to integer
+	private int value;
+	
+	// constructor of a BST, root with null children
+	public BSTree(int value) {
+		left = null;
+		right = null;
+		this.value = value;
+	}
+	
+	// getters
+	public int getValue() {
+		return value;
+	}
+	
+	public BTNode getLeft() {
+		return left;
+	}
+	
+	public BTNode getRight() {
+		return right;
+	}
+	
+	// setters
+	public void setRight(BTNode node) {
+		right = node;
+	}
+	
+	public void setLeft(BTNode node) {
+		left = node;
+	}
+	
+	// add node, check where node goes
+	public void addNode(BTNode node, int value) {
+		if (value < node.getValue()) {
+			if (node.getLeft() == null) node.setLeft(new BSTree(value));
+			else addNode(node.getLeft(), value);
+		} else {
+			if (node.getRight() == null) node.setRight(new BSTree(value));
+			else addNode(node.getRight(), value);
+		}
+	}
+	
+	// search
+	public boolean search(BTNode node, int value) {
+		// end of tree, base case, value not in BST
+		if (node == null) return false; 
+		
+		// found value
+		if (node.getValue() == value) return true;
+		
+		// keep looking
+		if (value < node.getValue()) return search(node.getLeft(), value);
+		else return search(node.getRight(), value);
+		
+	}
+	
+
+}
+
+```
+
+## JUnit testing
+
+Here's the JUnit test you can run to check if your implementation is correct.
+
+```{java}
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+
+import org.junit.jupiter.api.Test;
+
+class TestBSTree {
+
+	@Test
+	void test() {
+		BSTree myBST = new BSTree(10);
+		myBST.addNode(myBST, 3);
+		myBST.addNode(myBST, 11);
+		myBST.addNode(myBST, 4);
+		myBST.addNode(myBST, 20);
+		myBST.addNode(myBST, 24);
+		myBST.addNode(myBST, 14);
+		
+		ArrayList<Integer> result = new ArrayList<>();
+		myBST.toList(myBST, result);
+		Integer[] expected = {3, 4, 10, 11, 14, 20, 24};
+		for (int i = 0; i < expected.length; i++) {
+			assertEquals(expected[i], result.toArray()[i]);
+		}
+	}
+
+}
+```
+
