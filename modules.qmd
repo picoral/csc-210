@@ -146,6 +146,7 @@ Required:
 ## Assignments
 
 * [Instructions for PA4](programming-assignment-04.html) -- Deadline: `r data %>% filter(Assignment == "PA4") %>%  select(Deadline)` -- Friday, 11:30pm
+* [Instructions for Lab 05](short-assignment-05.html) -- Deadline: `r data %>% filter(Assignment == "SA5") %>%  select(Deadline)` -- Monday, 11:30pm
 
 # Week 07
 
