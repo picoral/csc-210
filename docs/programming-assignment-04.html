@@ -217,15 +217,11 @@ window.Quarto = {
   <li><a href="#boolsat-package" id="toc-boolsat-package" class="nav-link" data-scroll-target="#boolsat-package">BoolSat Package</a></li>
   </ul></li>
   <li><a href="#grading-criteria" id="toc-grading-criteria" class="nav-link" data-scroll-target="#grading-criteria">Grading Criteria</a></li>
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
-  <li><a href="#task-2---the-satisfiability-problem-you-need-to-do-this-1" id="toc-task-2---the-satisfiability-problem-you-need-to-do-this-1" class="nav-link" data-scroll-target="#task-2---the-satisfiability-problem-you-need-to-do-this-1">Task #2 - The SAT[isfiability] Problem (You need to do this)</a>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a>
   <ul class="collapse">
-  <li><a href="#expression-input-file-1" id="toc-expression-input-file-1" class="nav-link" data-scroll-target="#expression-input-file-1">Expression input file:</a></li>
   <li><a href="#output-format-debug-not-enabled-1" id="toc-output-format-debug-not-enabled-1" class="nav-link" data-scroll-target="#output-format-debug-not-enabled-1">Output Format (DEBUG not enabled):</a></li>
   <li><a href="#output-format-debug-enabled-1" id="toc-output-format-debug-enabled-1" class="nav-link" data-scroll-target="#output-format-debug-enabled-1">Output Format (DEBUG enabled):</a></li>
-  <li><a href="#expected-output" id="toc-expected-output" class="nav-link" data-scroll-target="#expected-output">Expected Output:</a></li>
   </ul></li>
-  <li><a href="#testing-your-program-1" id="toc-testing-your-program-1" class="nav-link" data-scroll-target="#testing-your-program-1">Testing your program</a></li>
   <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a>
   <ul class="collapse">
   <li><a href="#junit-background-information-1" id="toc-junit-background-information-1" class="nav-link" data-scroll-target="#junit-background-information-1">JUnit Background Information</a></li>
@@ -563,7 +559,7 @@ public void testNnd(){
 </section>
 <section id="grading-criteria" class="level2">
 <h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
-<p>Half of the PA4 grade will be correctness. For this assignment, there will be some private test cases on Gradescope.</p>
+<p>80% of the PA4 grade will be correctness. For this assignment, there will be some private test cases on Gradescope.</p>
 <p>The other half of the PA4 grade will be your decomposition and code clarity, and the JUnit tests.</p>
 <p>Decomposition</p>
 <ul>
@@ -610,32 +606,6 @@ public void testNnd(){
 <p><img src="https://i.gyazo.com/9ab46aca3b7fb32af4cd4350d75442c1.png" class="img-fluid"></p>
 <p>NOTE: You should not change the implementation of the ASTNode class. All you need to do is write a set of test cases that verify it behaves correctly (it does).</p>
 <p>How could you rewrite the main-method test cases of BoolSatParser.java and Lexer.java into JUnit test cases?</p>
-</section>
-<section id="task-2---the-satisfiability-problem-you-need-to-do-this-1" class="level2">
-<h2 class="anchored" data-anchor-id="task-2---the-satisfiability-problem-you-need-to-do-this-1">Task #2 - The SAT[isfiability] Problem (You need to do this)</h2>
-<p>Implement a program in <code>BoolSat.java</code> that:</p>
-<ol type="1">
-<li>Constructs an Abstract Syntax Tree for the expression in the input file provided by the first command line argument (<code>args[0]</code>).</li>
-<li>Optionally accepts a DEBUG command line option in the second command line argument.</li>
-<li>Exhaustively searches over all possible assignments of values to each boolean variable. If the DEBUG option is set: print all configurations and the result evaluating the expression with those variable values. If the DEBUG option is not set, print all configurations that satisfy the expression.</li>
-</ol>
-<section id="expression-input-file-1" class="level3">
-<h3 class="anchored" data-anchor-id="expression-input-file-1">Expression input file:</h3>
-<p>The expression input file should contain only a single line, that line should contain a well-formed Java boolean expression limited to:</p>
-<ul>
-<li>the AND operator <code>&amp;&amp;</code></li>
-<li>the OR operator <code>||</code></li>
-<li>Parenthesis <code>(</code>, <code>)</code></li>
-<li>the NOT operator <code>!</code></li>
-<li>and valid Java identifiers: i.e strings with no spaces that start with exactly one letter, or <code>$</code>, or <code>_</code>, that is followed by any number of letters, digits, <code>$</code> and <code>_</code> characters.</li>
-</ul>
-<pre><code>Input File:
-----------------------------------
-| a &amp;&amp; b || !c &amp;&amp; !(!d || e)     |
-|             ...                | &lt;all other lines ignored&gt;
-----------------------------------</code></pre>
-<p>This description is taken from PA4Main.java – an example of what the class documentation for the code you write should look like.</p>
-</section>
 <section id="output-format-debug-not-enabled-1" class="level3">
 <h3 class="anchored" data-anchor-id="output-format-debug-not-enabled-1">Output Format (DEBUG not enabled):</h3>
 <p>In order to match the expected output you need to convert each satisfying configuration into a single line string. The String representation should be of the form</p>
@@ -646,67 +616,12 @@ public void testNnd(){
 </section>
 <section id="output-format-debug-enabled-1" class="level3">
 <h3 class="anchored" data-anchor-id="output-format-debug-enabled-1">Output Format (DEBUG enabled):</h3>
-<p>When the DEBUG command is provided to the program, you should print out all configurations and the value that the expression evaluates to with each configuration as input. Print the configuration in the same format as above, and append <code>", result"</code> to the end (where <code>result</code> is <code>true</code> or <code>false</code> depending on how the configuration evaluates the expression).</p>
+<p>When the DEBUG command is provided to the program, you should output all configurations and the value that the expression evaluates to with each configuration as input. The configuration of your string should be in the same format as above, and append <code>", result"</code> to the end (where <code>result</code> is <code>true</code> or <code>false</code> depending on how the configuration evaluates the expression).</p>
 <p>Using the same example as above, the output would contain these lines:</p>
 <p><code>"a: true, b: false, c: false, d: true, e: true, true"</code></p>
 <p><code>"a: false, b: false, c: false, d: false, e: true, true"</code></p>
 <p><code>"a: false, b: false, c: false, d: false, e: false, false"</code></p>
 </section>
-<section id="expected-output" class="level3">
-<h3 class="anchored" data-anchor-id="expected-output">Expected Output:</h3>
-<p>Consider the input expression of <code>a || b</code>. If we exhaustively search all value assignments to <code>a</code> and <code>b</code> we will find the following to be true:</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: center;"><code>a</code> value</th>
-<th style="text-align: center;"><code>b</code> value</th>
-<th style="text-align: center;"><code>a OR b</code></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><strong>true</strong></td>
-<td style="text-align: center;"><strong>true</strong></td>
-<td style="text-align: center;"><strong>true</strong></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>true</strong></td>
-<td style="text-align: center;"><em>false</em></td>
-<td style="text-align: center;"><strong>true</strong></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><em>false</em></td>
-<td style="text-align: center;"><strong>true</strong></td>
-<td style="text-align: center;"><strong>true</strong></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><em>false</em></td>
-<td style="text-align: center;"><em>false</em></td>
-<td style="text-align: center;"><em>false</em></td>
-</tr>
-</tbody>
-</table>
-<p>There are three unique configurations that satisfy the expression (therefore <code>a || b</code> is satisfiable). These configurations would be printed as the following strings</p>
-<pre><code>"a: true, b: true"
-"a: true, b: false"
-"a: false, b: true"</code></pre>
-<p>However, the correct output is these three strings in sorted order:</p>
-<pre><code>% java PA4BoolSat expressionInputFileName
-a: false, b: true
-a: true, b: false
-a: true, b: true</code></pre>
-<p>If we want to see all configurations and the values that the expression evaluates to with those configurations, we can run the program with the DEBUG argument.</p>
-<pre><code>% java PA4BoolSat expressionInputFileName DEBUG
-a: false, b: false, false
-a: false, b: true, true
-a: true, b: false, true
-a: true, b: true, true</code></pre>
-</section>
-</section>
-<section id="testing-your-program-1" class="level2">
-<h2 class="anchored" data-anchor-id="testing-your-program-1">Testing your program</h2>
-<p>When you commit and push, Travis CI will send you an email to let you know if the public test cases failed. We STRONGLY recommend you put some of your own test cases in <code>TestCases/</code>. Read grade.py to see how the input and .out files should be named. Also look at the examples that are already in the <code>TestCases/</code> subdirectory.</p>
-<p>Upload it to Gradescope and you will be able to see which public test cases were passed/failed.</p>
 </section>
 <section id="getting-started" class="level2">
 <h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>

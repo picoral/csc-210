@@ -433,7 +433,7 @@ This method will return an ASTNode that is the root of an expression tree.
 
 ## Grading Criteria
 
-Half of the PA4 grade will be correctness.  For this assignment, there
+80% of the PA4 grade will be correctness.  For this assignment, there
 will be some private test cases on Gradescope.
 
 The other half of the PA4 grade will be your decomposition and code clarity,
@@ -522,37 +522,7 @@ write a set of test cases that verify it behaves correctly (it does).
 How could you rewrite the main-method test cases of BoolSatParser.java and Lexer.java into
 JUnit test cases?
 
-## Task #2 - The SAT[isfiability] Problem (You need to do this)
-Implement a program in `BoolSat.java` that:
 
- 1. Constructs an Abstract Syntax Tree for the expression in the input file provided by the
- first command line argument (`args[0]`).
- 2. Optionally accepts a DEBUG command line option in the second command line argument.
- 3. Exhaustively searches over all possible assignments of values to each boolean variable. If
- the DEBUG option is set: print all configurations and the result evaluating the expression with
- those variable values. If the DEBUG option is not set, print all configurations that satisfy the expression.
-
-### Expression input file:
-The expression input file should contain only a single line, that line should contain a well-formed
-Java boolean expression limited to:
-
- - the AND operator `&&`
- - the OR operator  `||`
- - Parenthesis `(`, `)`
- - the NOT operator `!`
- - and valid Java identifiers: i.e strings with no spaces that start with exactly one letter, or `$`,
- or `_`, that is followed by any number of letters, digits, `$` and `_` characters.
-
-  ```
-Input File:
-----------------------------------
-| a && b || !c && !(!d || e)     |
-|             ...                | <all other lines ignored>
-----------------------------------
-```
-
-This description is taken from PA4Main.java -- an example of what the class documentation for the code
-you write should look like.
 
 ### Output Format (DEBUG not enabled):
 In order to match the expected output you need to convert each satisfying configuration into a single
@@ -569,8 +539,9 @@ Lastly; there may be many such configurations that satisfy an expression, each l
 should be sorted (see example output).
 
 ### Output Format (DEBUG enabled):
-When the DEBUG command is provided to the program, you should print out all configurations and
-the value that the expression evaluates to with each configuration as input. Print the configuration
+When the DEBUG command is provided to the program, you should output all configurations and
+the value that the expression evaluates to with each configuration as input. The configuration of your
+string should be 
 in the same format as above, and append `", result"` to the end (where `result` is `true` or `false`
 depending on how the configuration evaluates the expression).
 
@@ -581,54 +552,6 @@ Using the same example as above, the output would contain these lines:
 `"a: false, b: false, c: false, d: false, e: true, true"`
 
 `"a: false, b: false, c: false, d: false, e: false, false"`
-
-
-### Expected Output:
-Consider the input expression of `a || b`. If we exhaustively search all value assignments to `a`
-and `b` we will find the following to be true:
-
-`a` value | `b` value | `a OR b`
-:---: | :---: | :---:
- **true** | **true**  | **true**
- **true** | *false* | **true**
-*false* | **true**  | **true**
-*false* | *false* | *false*
-
-There are three unique configurations that satisfy the expression (therefore `a || b` is satisfiable).
-These configurations would be printed as the following strings
-```
-"a: true, b: true"
-"a: true, b: false"
-"a: false, b: true"
-```
-
-However, the correct output is these three strings in sorted order:
-```
-% java PA4BoolSat expressionInputFileName
-a: false, b: true
-a: true, b: false
-a: true, b: true
-```
-If we want to see all configurations and the values that the expression evaluates to with those
-configurations, we can run the program with the DEBUG argument.
-```
-% java PA4BoolSat expressionInputFileName DEBUG
-a: false, b: false, false
-a: false, b: true, true
-a: true, b: false, true
-a: true, b: true, true
-```
-
-## Testing your program
-
-When you commit and push, Travis CI will send you an email to let you know
-if the public test cases failed.
-We STRONGLY recommend you put some of your own test cases in `TestCases/`.
-Read grade.py to see how the input and .out files should be named.
-Also look at the examples that are already in the `TestCases/` subdirectory.
-
-Upload it to Gradescope and you will be able to see
-which public test cases were passed/failed.
 
 
 ## Getting Started
