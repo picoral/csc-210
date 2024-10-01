@@ -2210,5 +2210,12 @@
     "title": "Inheritance",
     "section": "Subclass – solution",
     "text": "Subclass – solution\nimport java.time.LocalDate;\n\npublic class Student extends Person {\n    private int admissionYear;\n    \n    public Student(String first, String family,\n                   int admissionYear) {\n        // invoke base-class constructor\n        super(first, family);\n        LocalDate today = LocalDate.now(); \n        if (admissionYear &gt; 1900 && admissionYear &lt;= today.getYear()) \n            this.admissionYear = admissionYear;\n    }\n    \n    public int getAdmission() {\n        return admissionYear;\n    }\n    \n    // override annotation\n    @Override public void print() {\n        super.print();\n        System.out.println(\"Admitted in \" + admissionYear);\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-03.html#polymorphism",
+    "href": "slides-04-03.html#polymorphism",
+    "title": "Inheritance",
+    "section": "Polymorphism",
+    "text": "Polymorphism\npoly means many, morphs means forms\none interface with multiple implementations\nPolymorphism in java:\n\nCompile-time Polymorphism: Method overloading\nRuntime Polymorphism: Method overriding"
   }
 ]

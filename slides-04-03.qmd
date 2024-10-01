@@ -117,3 +117,17 @@ public class Student extends Person {
 }
 ```
 
+## Polymorphism
+
+`poly` means many, `morphs` means forms
+
+one interface with multiple implementations
+
+Polymorphism in java:
+
+* Compile-time Polymorphism: Method overloading
+* Runtime Polymorphism:  Method overriding
+
+
+
+
