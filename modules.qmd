@@ -137,6 +137,7 @@ Topic: `r schedule %>% filter(week == 6) %>% pull(topic)`
 Required:
 
 * [Java, Java, Java 8.2 Java’s Inheritance Mechanism](https://runestone.academy/ns/books/published/javajavajava/javas-inheritance-mechanism.html)
+* [Java, Java, Java 8.3 Abstract Classes, Interfaces, and Polymorphism](https://runestone.academy/ns/books/published/javajavajava/abstract-classes-interfacesand-polymorphism.html)
 
 ## Slides
 
