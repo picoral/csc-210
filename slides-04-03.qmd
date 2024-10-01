@@ -1,0 +1,119 @@
+---
+title: "Inheritance"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+##  Inheritance
+
+Attributes and methods can be inherited from one class to another
+
+* superclass (parent) - the class being inherited from
+* subclass (child) - the class that inherits from another class
+
+Use the `extends` keyword
+
+## Superclass
+
+Create a class called `Person` with the following instance variable:
+
+* First Name
+* Family Name
+* Birthdate
+
+What public and private methods?
+
+## Superclass -- solution
+
+```{java}
+import java.time.LocalDate;
+
+public class Person {
+	
+	private String firstName;
+	private String familyName;
+	private int birthYear;
+	private int birthMonth;
+	private int birthDay;
+
+	public Person(String first, String family) {
+		firstName = first;
+		familyName = family;
+	}
+	
+	public void setBirthDate(int year, int month, int day) {
+		LocalDate today = LocalDate.now(); 
+		if (year > 1900 && year <= today.getYear()) birthYear = year;
+		if (month > 0 && month <= 12) birthMonth = month;
+		if (day > 0 && day <= 31) birthDay = day;
+	}
+	
+	public String getBirthDate() {
+		String month;
+		if (birthMonth < 10) month = "0" + birthMonth;
+		else month = "" + birthMonth;
+		return birthYear + "/" + month + "/" + birthDay;
+	}
+	
+	public String getFirstName() {
+		return firstName;
+	}
+	
+	public String getFamilyName() {
+		return familyName;
+	}
+	
+	public void print() {
+		System.out.print(firstName + " " + familyName);
+		System.out.println(" born on " + getBirthDate());
+	}
+	
+}
+```
+
+## Subclass
+
+Create a class called `Student` that `extends` the `Person` class.
+Add the following instance variables:
+
+* Admissions Year
+* Graduation Year
+* Major
+* Email address (or only netID)
+
+What public and private methods?
+
+Write a constructor method, invoke base-cass constructor using `super` keyword
+
+## Subclass -- solution
+
+```{java}
+import java.time.LocalDate;
+
+public class Student extends Person {
+	private int admissionYear;
+	
+	public Student(String first, String family,
+			       int admissionYear) {
+		// invoke base-class constructor
+		super(first, family);
+		LocalDate today = LocalDate.now(); 
+		if (admissionYear > 1900 && admissionYear <= today.getYear()) 
+			this.admissionYear = admissionYear;
+	}
+	
+	public int getAdmission() {
+		return admissionYear;
+	}
+	
+	// override annotation
+	@Override public void print() {
+		super.print();
+		System.out.println("Admitted in " + admissionYear);
+	}
+
+}
+```
+

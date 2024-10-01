@@ -144,7 +144,7 @@
     "href": "modules.html#slides-3",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nClasses and Methods\nInterfaces"
+    "text": "Slides\n\nClasses and Methods\nInterfaces\nInheritance"
   },
   {
     "objectID": "modules.html#assignments-3",
@@ -2175,5 +2175,40 @@
     "title": "Lab 05",
     "section": "",
     "text": "Here’s the JUnit test you can run to check if your implementation is correct.\nimport static org.junit.jupiter.api.Assertions.*;\n\nimport java.util.ArrayList;\n\nimport org.junit.jupiter.api.Test;\n\nclass TestBSTree {\n\n    @Test\n    void test() {\n        BSTree myBST = new BSTree(10);\n        myBST.addNode(myBST, 3);\n        myBST.addNode(myBST, 11);\n        myBST.addNode(myBST, 4);\n        myBST.addNode(myBST, 20);\n        myBST.addNode(myBST, 24);\n        myBST.addNode(myBST, 14);\n        \n        ArrayList&lt;Integer&gt; result = new ArrayList&lt;&gt;();\n        myBST.toList(myBST, result);\n        Integer[] expected = {3, 4, 10, 11, 14, 20, 24};\n        for (int i = 0; i &lt; expected.length; i++) {\n            assertEquals(expected[i], result.toArray()[i]);\n        }\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-03.html#inheritance",
+    "href": "slides-04-03.html#inheritance",
+    "title": "Inheritance",
+    "section": "Inheritance",
+    "text": "Inheritance\nAttributes and methods can be inherited from one class to another\n\nsuperclass (parent) - the class being inherited from\nsubclass (child) - the class that inherits from another class\n\nUse the extends keyword"
+  },
+  {
+    "objectID": "slides-04-03.html#superclass",
+    "href": "slides-04-03.html#superclass",
+    "title": "Inheritance",
+    "section": "Superclass",
+    "text": "Superclass\nCreate a class called Person with the following instance variable:\n\nFirst Name\nFamily Name\nBirthdate\n\nWhat public and private methods?"
+  },
+  {
+    "objectID": "slides-04-03.html#superclass-solution",
+    "href": "slides-04-03.html#superclass-solution",
+    "title": "Inheritance",
+    "section": "Superclass – solution",
+    "text": "Superclass – solution\nimport java.time.LocalDate;\n\npublic class Person {\n    \n    private String firstName;\n    private String familyName;\n    private int birthYear;\n    private int birthMonth;\n    private int birthDay;\n\n    public Person(String first, String family) {\n        firstName = first;\n        familyName = family;\n    }\n    \n    public void setBirthDate(int year, int month, int day) {\n        LocalDate today = LocalDate.now(); \n        if (year &gt; 1900 && year &lt;= today.getYear()) birthYear = year;\n        if (month &gt; 0 && month &lt;= 12) birthMonth = month;\n        if (day &gt; 0 && day &lt;= 31) birthDay = day;\n    }\n    \n    public String getBirthDate() {\n        String month;\n        if (birthMonth &lt; 10) month = \"0\" + birthMonth;\n        else month = \"\" + birthMonth;\n        return birthYear + \"/\" + month + \"/\" + birthDay;\n    }\n    \n    public String getFirstName() {\n        return firstName;\n    }\n    \n    public String getFamilyName() {\n        return familyName;\n    }\n    \n    public void print() {\n        System.out.print(firstName + \" \" + familyName);\n        System.out.println(\" born on \" + getBirthDate());\n    }\n    \n}"
+  },
+  {
+    "objectID": "slides-04-03.html#subclass",
+    "href": "slides-04-03.html#subclass",
+    "title": "Inheritance",
+    "section": "Subclass",
+    "text": "Subclass\nCreate a class called Student that extends the Person class. Add the following instance variables:\n\nAdmissions Year\nGraduation Year\nMajor\nEmail address (or only netID)\n\nWhat public and private methods?\nWrite a constructor method, invoke base-cass constructor using super keyword"
+  },
+  {
+    "objectID": "slides-04-03.html#subclass-solution",
+    "href": "slides-04-03.html#subclass-solution",
+    "title": "Inheritance",
+    "section": "Subclass – solution",
+    "text": "Subclass – solution\nimport java.time.LocalDate;\n\npublic class Student extends Person {\n    private int admissionYear;\n    \n    public Student(String first, String family,\n                   int admissionYear) {\n        // invoke base-class constructor\n        super(first, family);\n        LocalDate today = LocalDate.now(); \n        if (admissionYear &gt; 1900 && admissionYear &lt;= today.getYear()) \n            this.admissionYear = admissionYear;\n    }\n    \n    public int getAdmission() {\n        return admissionYear;\n    }\n    \n    // override annotation\n    @Override public void print() {\n        super.print();\n        System.out.println(\"Admitted in \" + admissionYear);\n    }\n\n}"
   }
 ]
