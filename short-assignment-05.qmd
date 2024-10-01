@@ -150,3 +150,10 @@ class TestBSTree {
 }
 ```
 
+# Submission
+
+Submit your complete `BSTree.java` to [Gradescope](https://www.gradescope.com/courses/839822/assignments/5082943).
+
+Package information:
+
+`package com.gradescope.bst;`
