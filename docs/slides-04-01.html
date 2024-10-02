@@ -710,25 +710,23 @@
 <span id="cb12-15"><a></a>        }</span>
 <span id="cb12-16"><a></a>    }</span>
 <span id="cb12-17"><a></a>    </span>
-<span id="cb12-18"><a></a>    public void printCards() {</span>
-<span id="cb12-19"><a></a>        for (String s : Card.SUITS) {</span>
-<span id="cb12-20"><a></a>            for (int i = 1; i &lt;= 13; i++) {</span>
-<span id="cb12-21"><a></a>                Card thisCard = new Card(i, s);</span>
-<span id="cb12-22"><a></a>                thisCard.print();</span>
-<span id="cb12-23"><a></a>            }</span>
-<span id="cb12-24"><a></a>            </span>
-<span id="cb12-25"><a></a>        }</span>
-<span id="cb12-26"><a></a>    }</span>
-<span id="cb12-27"><a></a>    </span>
-<span id="cb12-28"><a></a>    public Card getCard(int index) {</span>
-<span id="cb12-29"><a></a>        return cards.get(index);</span>
-<span id="cb12-30"><a></a>    }</span>
-<span id="cb12-31"><a></a>    </span>
-<span id="cb12-32"><a></a>    public String getColor() {</span>
-<span id="cb12-33"><a></a>        return color;</span>
-<span id="cb12-34"><a></a>    }</span>
-<span id="cb12-35"><a></a></span>
-<span id="cb12-36"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-18"><a></a>    public void print() {</span>
+<span id="cb12-19"><a></a>        for (int i = 0; i &lt; cards.size(); i++) {</span>
+<span id="cb12-20"><a></a>            String thisSuit = cards.get(i).getSuit();</span>
+<span id="cb12-21"><a></a>            String thisRank = cards.get(i).getRank();</span>
+<span id="cb12-22"><a></a>            System.out.println(thisRank + " of " + thisSuit);</span>
+<span id="cb12-23"><a></a>        }</span>
+<span id="cb12-24"><a></a>    }</span>
+<span id="cb12-25"><a></a>    </span>
+<span id="cb12-26"><a></a>    public Card getCard(int index) {</span>
+<span id="cb12-27"><a></a>        return cards.get(index);</span>
+<span id="cb12-28"><a></a>    }</span>
+<span id="cb12-29"><a></a>    </span>
+<span id="cb12-30"><a></a>    public String getColor() {</span>
+<span id="cb12-31"><a></a>        return color;</span>
+<span id="cb12-32"><a></a>    }</span>
+<span id="cb12-33"><a></a></span>
+<span id="cb12-34"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="updated-playgame" class="slide level2">
 <h2>Updated <code>PlayGame</code></h2>
