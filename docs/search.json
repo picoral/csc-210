@@ -2385,5 +2385,12 @@
     "title": "Inheritance",
     "section": "protected implementation",
     "text": "protected implementation\npublic class Cat extends Animal {\n    public Cat() {\n        species = \"Cat\";\n        genus = \"Felis\";\n        family = \"Felidae\";\n    }\n    \n    public String makesSound() {\n        return \"meow\";\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-03.html#updated-uml-diagram",
+    "href": "slides-04-03.html#updated-uml-diagram",
+    "title": "Inheritance",
+    "section": "Updated UML diagram",
+    "text": "Updated UML diagram"
   }
 ]
