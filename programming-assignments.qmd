@@ -40,3 +40,10 @@ data <- read_excel("assessment-deadlines.xlsx")
 
 * [Instructions](programming-assignment-04.html)
 
+# PA 5
+
+* UML class diagram: `r data %>% filter(Assignment == "PA5a") %>%  select(Deadline)` -- Friday, 11:30pm
+* Full implementation: `r data %>% filter(Assignment == "PA5b") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+* [Instructions](programming-assignment-05.html)
+

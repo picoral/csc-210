@@ -1,6 +1,7 @@
 ---
-title: "Programming Assigmment 05"
+title: "Programming Assignmnet 05"
 ---
+
 
 ```{r}
 #| eval: true
@@ -13,236 +14,257 @@ data <- read_excel("assessment-deadlines.xlsx")
 ```
 
 
-Deadline: `r data %>% filter(Assignment == "PA5") %>%  select(Deadline)` -- Wednesday, 11:30pm
+Deadlines: 
 
-# PA5-HashMapImpl-Key 
+* UML class diagram: `r data %>% filter(Assignment == "PA5a") %>%  select(Deadline)` -- Friday, 11:30pm
+* Full implementation: `r data %>% filter(Assignment == "PA5b") %>%  select(Deadline)` -- Wednesday, 11:30pm
 
+# Garden
 
 ## Learning Objectives
 
-The goal of this assignment is to use two or more data structures
-in a coordinated way to solve a problem.
+The goal of this assignment is to design a class hierarchy to solve
+a problem, implement that hierarchy, use polymorphism, and use
+two-dimensional arrays.
 
-The problem to be solved in this assignment is to implement a 
-HashMap. Therefore, an additional learning objective is to 
-increase your skill level with HashMaps from just being able 
-to use them to understanding how to implement them.
 
-The dictionary abstract data type can be used to solve many
-programming problems and therefore questions about hash tables 
-frequently occur in job interviews.
+What is a class hierarchy you ask? Read about it on [Wikipedia](https://en.wikipedia.org/wiki/Class_hierarchy).
+The class diagram you will be submitting will be a simplified version of the UML
+class diagrams.  There are many resources on the internet for UML class diagrams.
+
+
+## Garden Simulation
+
+The problem you will be solving is a garden simulation.  The simulation will read
+commands like PLANT, PRINT, GROW, and HARVEST from a file and execute those commands.
+The garden that you will be implementing will consist of a number of columns and
+rows of plots.  Within each plot there can exist a single plant, which is represented
+with a 5x5 grid of cells. Plants are divided up into three different categories:
+trees, flowers, and vegetables, all of which have unique characteristics.  
+For example, trees grow up, vegetables grow down, and flowers bloom as they grow.
 
 ## The Assignment
 
-You will be redoing PA2-HashMap with your own HashMap implementation
-called MyHashMap.  Here are the key components of this assignment:
+This is a **two-week assignment**.  The class inheritance diagram will be all that
+is due Friday `r data %>% filter(Assignment == "PA5a") %>%  select(Deadline)` at 11:30 pm.
+We make suggestions as to what to implement the first week and then the second week,
+but you will be responsible for managing your own time.
+The rest of the assignment is due Wednesday `r data %>% filter(Assignment == "PA5b") %>%  select(Deadline)` at 11:30 pm. 
 
-  * PA5Test.java with JUnit tests of all the functionality MyHashMap needs to 
-    provide to implement PA2.  The tests can be written for HashMap and then 
-    edited slightly to be used to test MyHashMap instead.  Implementing them
-    first will help the development of MyHashMap be more test driven.
+* Class inheritance diagram: Create this diagram however you would like
+  (draw it by hand, use software, etc.).  You need to create a pdf file
+  of it and submit it to Aropa AND Gradescope.
+    * See (https://gradescope.com/help#help-center-item-student-scanning)
+      for some suggestions of how to scan in a document with your phone
+      if you plan to produce your pdf by taking a picture of it.
+    * You will be building on PA5 for future programming assignments. 
+ 
+* Your main program, which must be named `RunGarden.java`, will need to accept the name
+  of an input file on the command line.
 
-  * MyHashMap.java with an implementation of a generic, MyHashMap class.
-    Your hashmap should only have 10 buckets.
-
-  * PA5Main.java with an edited version of PA2Main.java that...
-    * uses MyHashMap instead of the HashMap provided in java.util
-
-    * provides a DEBUG command that outputs the printTable() information
-      about conflicts in a table that maps flight codes to integers
-
-    * has been improved based on PA2 code clarity and decomposition feedback
-      and follows the more stringent grading criteria specified below
-      
-    * does some error checking on the input file and skips bad lines
-
-
-## JUnit implementation
-
-The PA5Test.java file should contain unit tests for all of the HashMap
-functionality your PA2 program uses.  We strongly recommend you write
-the tests for HashMap first.  They should all pass.  Then replace HashMap
-with MyHashMap and you can test MyHashMap as you implement it.
-
-For grading, we will look for unit test cases for at least the following:
-  * put
-  * get
-  * containsKey
-  * keySet
-
-## Hash Map Implementation
-
-A hash table is a data structure that offers quick O(1) operations such 
-as inserting data and searching for data. You have used a form of a 
-hash table when using the HashMap class in Java. However, in this 
-assignment you will implement your own version of a hash map.
-
-### Hash Map Background
-First, you should read up on what a hash table is. [Wikipedia](https://en.wikipedia.org/wiki/Hash_table) is a good place to start.
-
-At its heart a hash table (hash map) is an array that works together 
-with a function, known as a hash function, that takes a key and returns 
-an index into that array. We usually call the elements in the array 
-buckets.  This is because when more than one element maps to the same
-array location (or bucket), there needs to be some organization for keeping
-all those elements there and being able to find them.
-
-A critical part of writing a good
-hash map implementation is writing a good (and appropriate) hash function. 
-It should spread out values evenly based on different input values 
-and needs to always produce the same value if the same element is given to it.
-
-In general, there are multiple ways to implement a hash map. Here are three:
-  * An array that contains a linked list for each bucket
-  * A linked list that contains a linked list for each bucket (2d linked list)
-  * An array that contains an array for each bucket (a 2d array)
-
-However, since you are implementing a generic hash table in Java
-and generics are problematic in arrays 
-(https://docs.oracle.com/javase/tutorial/java/generics/restrictions.html),
-we strongly recommend you use an ArrayList of linked lists.  Those linked
-lists can be LinkedLists, ArrayLists, or your own linked list implementation
-where the key,value pairs link to each other.
-
-
-Your hash table implementation should be called MyHashMap.
-
-### A Generic MyHashMap class
-
-You will create a class called MyHashMap that maps keys to values.
-To enable the construction and use of MyHashMap for any provided
-key and value types, you will implement it as a generic class.
-
-This is done by declaring MyHashMap with type parameters.
+* The input file will contain all of the garden initialization settings
+  and the commands to simulate.  Here is an example input file.
 ```
-    class MyHashMap<K,V> {
-        ...
-    } 
+rows: 1
+cols: 1
+
+PLANT (0,0) banana
+PRINT
+GROW 1
+print
 ```
-Throughout the rest of the class definition, the capital letter 'K' will
-be used to declare variables of the key type, and the capital letter 'V'
-will be used to declare variables of the value type.
-
-See https://docs.oracle.com/javase/tutorial/java/generics/types.html
-for more information.
-
-### The Hash Function
-
-For this assignment, you will be implementing your own HashMap class using the following hash function.
-		
-  1. Find the hash code of that object (look into the hashCode method)
-  2. Mod it by the number of buckets  
-  3. Then take its absolute value.
-
-Here is the code for the hash function.  You can use this code directly
-in your implementation:
+Note that the commands should be case-insensitive.  In other words,
+"print", "PRINT", and "Print" are all equivalent in the input file.
+Here is the output for the example:  
 ```
-	private int hash(K key) {
-		int hashCode = key.hashCode();
-		int index = hashCode % numBuckets;
-		return Math.abs(index);
-	}
+> PRINT
+.....
+.....
+.....
+.....
+..b..
+
+> GROW 1
+
+> PRINT
+.....
+.....
+.....
+..b..
+..b..
+```
+The output should be printed to standard out.  See `TestCases/`
+for more input and output examples.
+
+* The following are the types of specific plants that could be planted:
+
+```
+FLOWERS      TREES      VEGETABLES
+-------      -----      ----------
+Iris         Oak        Garlic
+Lily         Willow     Zucchini
+Rose         Banana     Tomato
+Daisy        Coconut    Yam
+Tulip        Pine       Lettuce
+Sunflower
 ```
 
-### Handling collisions
+* The following are examples of representation arrays for different types of plants.
+  For this assignmenet, plants will be represented with ascii characters.  Use the lower
+  case version of the first letter of the plant name.  For "Garlic" use 'g',
+  for "Daisy" use 'd', etc.
+  * Flowers should start in the middle of the 5x5 grid of cells in the
+    plot it is planted in.  Each location in a plot is called a cell.
+  * Vegetables should start at the top middle.
+  * Trees should start at the bottom middle.
 
-This hash map will use chaining to handle the collisions of elements.
-Your hash map should only have 10 buckets!  Collisions will happen.
-We will be covering this in class.
-
-
-
-## Error checking
-
-You **WILL** need to error check. This involves checking to see if a line 
-in the input file is valid. If it is not a valid
-line, skip it. You know a line is invalid if there is 
-no comma in it. (hint hint) 
-
-## The DEBUG command
-
-The program should be able to accept the DEBUG command on the command line after
-the input file name.  That output should show how all of the airport codes
-in the input file map into indices in the hash table.
-
-The DEBUG command should cause the creation of a MyHashMap with the
-keys being all of the airport codes in the input file.
-The goal is to see how many hash conflicts occur.  After filing the
-MyHashMap, the program should call the printTable() method on MyHashMap.
-The printTable() method should output how many conflicts occur at
-each bucket and list the keys in that bucket.
-
-Here is an example input file:
 ```
-airline,airline ID, source airport, source airport id, destination apirport, destination airport id, codeshare, stops, equipment
-3S,11741,PTP,2881,FDF,2878,,0,AT5 320
-3S,11741,PTP,2881,SBH,6460,,0,DHT
-3S,11741,PTP,2881,SDQ,1762,,0,AT5
-3S,11741,PTP,2881,SFG,2879,,0,AT5
-3S,11741,PTP,2881,SXM,2899,,0,AT5
-3S,11741,SBH,6460,PTP,2881,,0,DHT
-3S,11741,SDQ,1762,PTP,2881,,0,AT5
-3S,11741,SDQ,1762,SXM,2899,,0,AT5
-3S,11741,SFG,2879,PTP,2881,,0,AT5
-3S,11741,SLU,2893,FDF,2878,,0,AT5
-3S,11741,SXM,2899,DOM,2877,,0,AT5
-3S,11741,SXM,2899,PTP,2881,,0,AT5
-3S,11741,SXM,2899,SDQ,1762,,0,AT5
-3U,4608,BHY,6351,XIY,3379,,0,321
-3U,4608,CAN,3370,CKG,3393,,0,321 320
-3U,4608,CAN,3370,CTU,3395,,0,321 320 330
-3U,4608,CAN,3370,SPN,2244,,0,330
-3U,4608,CGO,3375,CGQ,4380,,0,321
-3U,4608,CGO,3375,CKG,3393,,0,321
+Rose
+.....
+..... 
+..r..
+.....
+.....
 ```
-
-Here is the output of the program when given this input file and
-the DEBUG command.
 ```
-Index 0: (1 conflicts), [CAN XIY ]
-Index 1: (1 conflicts), [SPN SBH ]
-Index 2: (0 conflicts), [SDQ ]
-Index 3: (0 conflicts), [CKG ]
-Index 4: (3 conflicts), [DOM SLU SFG PTP ]
-Index 5: (0 conflicts), []
-Index 6: (0 conflicts), [CTU ]
-Index 7: (1 conflicts), [CGO BHY ]
-Index 8: (1 conflicts), [SXM FDF ]
-Index 9: (0 conflicts), [CGQ ]
-Total # of conflicts: 7
+Tomato
+..t..
+..... 
+.....
+.....
+.....
+```
+```
+Coconut
+.....
+..... 
+.....
+.....
+..c..
 ```
 
 
+* Commands that need to be implemented.  See the PublicTestCases/ for more examples.
+  There are examples with PLANT, PRINT, and GROW.  Other command input and output
+  examples will appear during Spring Break.
 
-## **EXTRA CREDIT**
-If you provide a better hash function than the one listed above, 
-meaning that you have fewer collisions (and/or a better distribution)
-on the full flight database than 
-the provided hash function, you will be able to receive 5 points of 
-extra credit on PA5.  Provide your README.md file with example 
-DEBUG output to show that your hash function is better.  Also explain 
-why your hash function is better.
+  * **The PLANT Command**<br/>
+EXAMPLE USE: *PLANT (0,0) rose*<br/>
+If the PLANT command is read, it should be followed by plot coordinates and the type of Plant to be planted.
+Use this type to plant the correct subclass of plant into the garden at given plot coordinates.
+The plot coordinates are given as row and column.  Both rows and columns start at 0.
+Rows go down the screen, and columns go across the screen.  Each plot will itself contain 5 cells
+(represented as characters).  There is a restriction that the number of cells across should
+be less than or equal to 80, therefore the most plot columns allowed is 80/5 or 16.
+
+  * **The PRINT Command**<br/>
+EXAMPLE USE: *PRINT*<br/>
+If the PRINT command is read, then the entire garden should be printed to standard out.
+
+  * **The GROW Command**<br/>
+EXAMPLE USE: *GROW 1*<br/>
+If the GROW command is read, then each Plant should grow the specified number of times as seen in the input command.
+A plant cannot grow out of its plot.  No error will happen,
+but growth should not occur outside the plot boundaries.
+Plots also cannot run into each other.
+
+  * **GROW [num] (x,y)**<br/>
+EXAMPLE USE: *GROW 1 (2,3)*<br/>
+Grow whichever Plant is located in the garden at position (x,y) num times. If there is nothing at this position
+or the position is outside the size of the garden, print, "Can't grow there." and continue.
+
+  * **GROW [num] [type]**<br/>
+EXAMPLE USE: *GROW 1 rose*<br/>
+Grow only Plants of the specified type num times.
+
+  * **GROW [num] [Plant]**<br/>
+EXAMPLE USE: *GROW 1 flower* <br/>
+Grow only Plants of the specified class num times.
+
+  * **HARVEST**<br/>
+Remove all Vegetables from the Garden.
+
+  * **HARVEST (x,y)**<br/>
+EXAMPLE USE: *HARVEST (2,3)*<br/>
+Harvest Vegetable at location (x,y). If not a Vegetable or outside of Garden, 
+print, "Can't harvest there." and continue.
+
+  * **HARVEST [type]**<br/>
+EXAMPLE USE: *HARVEST tomato*<br/>
+Harvests all Vegetables of the specified type. If there are no Vegetables with that type, do nothing. 
+
+  * **PICK**<br/>
+Remove all Flowers from the Garden.
+
+  * **PICK (x,y)**<br/>
+EXAMPLE USE: *PICK (2,3)*<br/>
+Pick Flower at location (x,y). If not a Flower or outside of Garden, print, "Can't pick there." and continue.
+
+  * **PICK [type]**<br/>
+EXAMPLE USE: *PICK rose*<br/>
+Pick all Flowers of the specified type. If there are no Flowers with that type, do nothing. 
+
+  * **CUT**<br/>
+Remove all Trees from the Garden.
+
+  * **CUT (x,y)**<br/>
+EXAMPLE USE: *CUT (2,3)*<br/>
+Cut Tree at location (x,y). If not a Tree or outside of Garden, print, "Can't cut there." and continue.
+
+  * **CUT [type]**<br/>
+EXAMPLE USE: *CUT PINE*<br/>
+Cut all Trees of the specified type. If there are no Trees with that type, do nothing. 
+  
+* **Unique Class** 
+
+Students will design their own plant type and show an example input and output that illustrates it 
+in a README.md file.  This new plant should be different from Vegetable, Flower, and Tree, 
+but still be usable alongside them within the garden and work with the commands
+PLANT, GROW, and PRINT.
+
+* Error Handling
+
+  * Some of the commands above specify some error handling.
+  
+  * The garden should never be more than 80 characters across.  If it is print out
+  the message "Too many plot columns." and then exit.  Think: How many characters across is
+  each plot?
+  
+  * Other than the above specified errors, the input can be assumed well formed.
+
+## Design Suggestions
+
+We recommend the following:
+
+  * A Garden object with a 2D array or list of plant objects.
+  * A Plant class hierarchy of some kind.  The design for this is what will be submitted for
+    peer review on Tuesday March 13th at 11:30 am to both Aropa AND Gradescope.
+  * A Screen object with a 2D array of characters that each plant can
+    print its current representation into.  The Screen object can then print everything
+    to standard out.
+    * **hint:** when copying over a Plant's representation array place each cell at:
+```
+     [(Plant's row  * 5) + cell row][(Plant's col * size of plot) + cell col]
+```
+   into the Screen object's Array.
+
+
 
 ## Grading Criteria
 
-Half of the PA5 grade will be correctness.  For this assignment, there
+70% of this assignment grade will be correctness.  For this assignment, there
 will be some private test cases on Gradescope used for grading.
 
-The other half of the PA5 grade will be your decomposition and code clarity
-and the JUnit tests.
+The other half of your grade will be your decomposition and code clarity.
+Twenty of these points will be on your class hierarchy diagram.
 
 Decomposition
-* Should carefully select data structures that implement the
-  required MyHashMap functionality.  You cannot use the provided
-  Java HashMap implementation or HashSet implementation 
-  or any other Map or hash table implementation
-  written by someone else.
 
 * Points will be taken off for copy, pasted, and edited code that
   should have been encapsulated in a method.
 
-* This program will use two or more source files in addition to the 
-  source file for the JUnit tests.  Each of these files should be (<200 lines).
+* **This program should use fewer than 10 .java files.**
+  Each of these files should be (<275 lines).
 
 * Each static method should be less than 30 lines.  This INCLUDES
   comments, but not the method header.  It is easier to read a 
@@ -251,12 +273,13 @@ Decomposition
 * Make things as simple as possible.
   * Only use one Scanner instance.
   * Don't use lambda functions or other features in non-standard ways.
-  * Avoid nested loops.
+  * Avoid nested loops unless they would be cleaner when handling a 2D array.
   * Avoid nesting conditionals.
   * Avoid chaining: see the Piazza post for more info
 
 
 Code Clarity
+
 * YOU should be able to read, understand, and explain your own code
   to someone else a couple days after you wrote it.
   * No magic numbers
@@ -287,13 +310,13 @@ the syntax style should be fine.
 ## Submission
 
 Write your own code.  We will be using a tool that finds overly similar code.
-This Spring 2018 semester in CS 210 we unfortunately have had academic
-integrity cases.
 I recommend that when talking with others about the assignment, do not write
 anything down.
 
+The class hierarchy diagram in pdf format is due `r data %>% filter(Assignment == "PA5a") %>%  select(Deadline)` -- Friday, 11:30pm in Gradescope.
 
-For PA5, you are **REQUIRED** to submit all of your java source files
-to Gradescope.
+* Full implementation: 
 
-There is NO Aropa submission for PA5.
+For this assignment, you are **REQUIRED** to submit all of your java source files
+to Gradescope before `r data %>% filter(Assignment == "PA5b") %>%  select(Deadline)` -- Wednesday, 11:30pm.  
+You also need to submit your README.md with example input and output for your unique class.

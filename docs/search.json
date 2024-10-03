@@ -172,7 +172,7 @@
     "href": "modules.html#assignments-4",
     "title": "Modules",
     "section": "Assignments",
-    "text": "Assignments"
+    "text": "Assignments\n\nUML class diagram for PA5 : October 11, 2024 – Friday, 11:30pm\nFull implementation for PA5: October 16, 2024 – Wednesday, 11:30pm"
   },
   {
     "objectID": "programming-assignment-10.html",
@@ -226,23 +226,23 @@
   {
     "objectID": "programming-assignment-05.html",
     "href": "programming-assignment-05.html",
-    "title": "Programming Assigmment 05",
+    "title": "Programming Assignmnet 05",
     "section": "",
-    "text": "Deadline: October 09, 2024 – Wednesday, 11:30pm"
+    "text": "Deadlines:"
   },
   {
     "objectID": "programming-assignment-05.html#learning-objectives",
     "href": "programming-assignment-05.html#learning-objectives",
-    "title": "Programming Assigmment 05",
+    "title": "Programming Assignmnet 05",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nThe goal of this assignment is to use two or more data structures in a coordinated way to solve a problem.\nThe problem to be solved in this assignment is to implement a HashMap. Therefore, an additional learning objective is to increase your skill level with HashMaps from just being able to use them to understanding how to implement them.\nThe dictionary abstract data type can be used to solve many programming problems and therefore questions about hash tables frequently occur in job interviews."
+    "text": "Learning Objectives\nThe goal of this assignment is to design a class hierarchy to solve a problem, implement that hierarchy, use polymorphism, and use two-dimensional arrays.\nWhat is a class hierarchy you ask? Read about it on Wikipedia. The class diagram you will be submitting will be a simplified version of the UML class diagrams. There are many resources on the internet for UML class diagrams."
   },
   {
     "objectID": "programming-assignment-05.html#the-assignment",
     "href": "programming-assignment-05.html#the-assignment",
-    "title": "Programming Assigmment 05",
+    "title": "Programming Assignmnet 05",
     "section": "The Assignment",
-    "text": "The Assignment\nYou will be redoing PA2-HashMap with your own HashMap implementation called MyHashMap. Here are the key components of this assignment:\n\nPA5Test.java with JUnit tests of all the functionality MyHashMap needs to provide to implement PA2. The tests can be written for HashMap and then edited slightly to be used to test MyHashMap instead. Implementing them first will help the development of MyHashMap be more test driven.\nMyHashMap.java with an implementation of a generic, MyHashMap class. Your hashmap should only have 10 buckets.\nPA5Main.java with an edited version of PA2Main.java that…\n\nuses MyHashMap instead of the HashMap provided in java.util\nprovides a DEBUG command that outputs the printTable() information about conflicts in a table that maps flight codes to integers\nhas been improved based on PA2 code clarity and decomposition feedback and follows the more stringent grading criteria specified below\ndoes some error checking on the input file and skips bad lines"
+    "text": "The Assignment\nThis is a two-week assignment. The class inheritance diagram will be all that is due Friday October 11, 2024 at 11:30 pm. We make suggestions as to what to implement the first week and then the second week, but you will be responsible for managing your own time. The rest of the assignment is due Wednesday October 16, 2024 at 11:30 pm.\n\nClass inheritance diagram: Create this diagram however you would like (draw it by hand, use software, etc.). You need to create a pdf file of it and submit it to Aropa AND Gradescope.\n\nSee (https://gradescope.com/help#help-center-item-student-scanning) for some suggestions of how to scan in a document with your phone if you plan to produce your pdf by taking a picture of it.\nYou will be building on PA5 for future programming assignments.\n\nYour main program, which must be named RunGarden.java, will need to accept the name of an input file on the command line.\nThe input file will contain all of the garden initialization settings and the commands to simulate. Here is an example input file.\n\nrows: 1\ncols: 1\n\nPLANT (0,0) banana\nPRINT\nGROW 1\nprint\nNote that the commands should be case-insensitive. In other words, “print”, “PRINT”, and “Print” are all equivalent in the input file. Here is the output for the example:\n&gt; PRINT\n.....\n.....\n.....\n.....\n..b..\n\n&gt; GROW 1\n\n&gt; PRINT\n.....\n.....\n.....\n..b..\n..b..\nThe output should be printed to standard out. See TestCases/ for more input and output examples.\n\nThe following are the types of specific plants that could be planted:\n\nFLOWERS      TREES      VEGETABLES\n-------      -----      ----------\nIris         Oak        Garlic\nLily         Willow     Zucchini\nRose         Banana     Tomato\nDaisy        Coconut    Yam\nTulip        Pine       Lettuce\nSunflower\n\nThe following are examples of representation arrays for different types of plants. For this assignmenet, plants will be represented with ascii characters. Use the lower case version of the first letter of the plant name. For “Garlic” use ‘g’, for “Daisy” use ‘d’, etc.\n\nFlowers should start in the middle of the 5x5 grid of cells in the plot it is planted in. Each location in a plot is called a cell.\nVegetables should start at the top middle.\nTrees should start at the bottom middle.\n\n\nRose\n.....\n..... \n..r..\n.....\n.....\nTomato\n..t..\n..... \n.....\n.....\n.....\nCoconut\n.....\n..... \n.....\n.....\n..c..\n\nCommands that need to be implemented. See the PublicTestCases/ for more examples. There are examples with PLANT, PRINT, and GROW. Other command input and output examples will appear during Spring Break.\n\nThe PLANT Command EXAMPLE USE: PLANT (0,0) rose If the PLANT command is read, it should be followed by plot coordinates and the type of Plant to be planted. Use this type to plant the correct subclass of plant into the garden at given plot coordinates. The plot coordinates are given as row and column. Both rows and columns start at 0. Rows go down the screen, and columns go across the screen. Each plot will itself contain 5 cells (represented as characters). There is a restriction that the number of cells across should be less than or equal to 80, therefore the most plot columns allowed is 80/5 or 16.\nThe PRINT Command EXAMPLE USE: PRINT If the PRINT command is read, then the entire garden should be printed to standard out.\nThe GROW Command EXAMPLE USE: GROW 1 If the GROW command is read, then each Plant should grow the specified number of times as seen in the input command. A plant cannot grow out of its plot. No error will happen, but growth should not occur outside the plot boundaries. Plots also cannot run into each other.\nGROW [num] (x,y) EXAMPLE USE: GROW 1 (2,3) Grow whichever Plant is located in the garden at position (x,y) num times. If there is nothing at this position or the position is outside the size of the garden, print, “Can’t grow there.” and continue.\nGROW [num] [type] EXAMPLE USE: GROW 1 rose Grow only Plants of the specified type num times.\nGROW [num] [Plant] EXAMPLE USE: GROW 1 flower  Grow only Plants of the specified class num times.\nHARVEST Remove all Vegetables from the Garden.\nHARVEST (x,y) EXAMPLE USE: HARVEST (2,3) Harvest Vegetable at location (x,y). If not a Vegetable or outside of Garden, print, “Can’t harvest there.” and continue.\nHARVEST [type] EXAMPLE USE: HARVEST tomato Harvests all Vegetables of the specified type. If there are no Vegetables with that type, do nothing.\nPICK Remove all Flowers from the Garden.\nPICK (x,y) EXAMPLE USE: PICK (2,3) Pick Flower at location (x,y). If not a Flower or outside of Garden, print, “Can’t pick there.” and continue.\nPICK [type] EXAMPLE USE: PICK rose Pick all Flowers of the specified type. If there are no Flowers with that type, do nothing.\nCUT Remove all Trees from the Garden.\nCUT (x,y) EXAMPLE USE: CUT (2,3) Cut Tree at location (x,y). If not a Tree or outside of Garden, print, “Can’t cut there.” and continue.\nCUT [type] EXAMPLE USE: CUT PINE Cut all Trees of the specified type. If there are no Trees with that type, do nothing.\n\nUnique Class\n\nStudents will design their own plant type and show an example input and output that illustrates it in a README.md file. This new plant should be different from Vegetable, Flower, and Tree, but still be usable alongside them within the garden and work with the commands PLANT, GROW, and PRINT.\n\nError Handling\n\nSome of the commands above specify some error handling.\nThe garden should never be more than 80 characters across. If it is print out the message “Too many plot columns.” and then exit. Think: How many characters across is each plot?\nOther than the above specified errors, the input can be assumed well formed."
   },
   {
     "objectID": "programming-assignment-05.html#junit-implementation",
@@ -282,16 +282,16 @@
   {
     "objectID": "programming-assignment-05.html#grading-criteria",
     "href": "programming-assignment-05.html#grading-criteria",
-    "title": "Programming Assigmment 05",
+    "title": "Programming Assignmnet 05",
     "section": "Grading Criteria",
-    "text": "Grading Criteria\nHalf of the PA5 grade will be correctness. For this assignment, there will be some private test cases on Gradescope used for grading.\nThe other half of the PA5 grade will be your decomposition and code clarity and the JUnit tests.\nDecomposition * Should carefully select data structures that implement the required MyHashMap functionality. You cannot use the provided Java HashMap implementation or HashSet implementation or any other Map or hash table implementation written by someone else.\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.\nThis program will use two or more source files in addition to the source file for the JUnit tests. Each of these files should be (&lt;200 lines).\nEach static method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\nMake things as simple as possible.\n\nOnly use one Scanner instance.\nDon’t use lambda functions or other features in non-standard ways.\nAvoid nested loops.\nAvoid nesting conditionals.\nAvoid chaining: see the Piazza post for more info\n\n\nCode Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement.\n\nThe coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine."
+    "text": "Grading Criteria\n70% of this assignment grade will be correctness. For this assignment, there will be some private test cases on Gradescope used for grading.\nThe other half of your grade will be your decomposition and code clarity. Twenty of these points will be on your class hierarchy diagram.\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.\nThis program should use fewer than 10 .java files. Each of these files should be (&lt;275 lines).\nEach static method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\nMake things as simple as possible.\n\nOnly use one Scanner instance.\nDon’t use lambda functions or other features in non-standard ways.\nAvoid nested loops unless they would be cleaner when handling a 2D array.\nAvoid nesting conditionals.\nAvoid chaining: see the Piazza post for more info\n\n\nCode Clarity\n\nYOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it.\n\nNo magic numbers\nNo methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement.\n\nThe coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine."
   },
   {
     "objectID": "programming-assignment-05.html#submission",
     "href": "programming-assignment-05.html#submission",
-    "title": "Programming Assigmment 05",
+    "title": "Programming Assignmnet 05",
     "section": "Submission",
-    "text": "Submission\nWrite your own code. We will be using a tool that finds overly similar code. This Spring 2018 semester in CS 210 we unfortunately have had academic integrity cases. I recommend that when talking with others about the assignment, do not write anything down.\nFor PA5, you are REQUIRED to submit all of your java source files to Gradescope.\nThere is NO Aropa submission for PA5."
+    "text": "Submission\nWrite your own code. We will be using a tool that finds overly similar code. I recommend that when talking with others about the assignment, do not write anything down.\nThe class hierarchy diagram in pdf format is due October 11, 2024 – Friday, 11:30pm in Gradescope.\n\nFull implementation:\n\nFor this assignment, you are REQUIRED to submit all of your java source files to Gradescope before October 16, 2024 – Wednesday, 11:30pm.\nYou also need to submit your README.md with example input and output for your unique class."
   },
   {
     "objectID": "lab01-slides.html#scanner-class",
@@ -949,7 +949,7 @@
     "href": "programming-assignments.html",
     "title": "Programming Assignments",
     "section": "",
-    "text": "Fill out this survey with your GitHub username so that you can get credit for your project submissions.\n\nPA 1\n\nDeadline: September 11, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 2\n\nDeadline: September 18, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 3\n\nDeadline: September 27, 2024 – Friday, 11:30pm\nInstructions\n\n\n\nPA 4\n\nDeadline: October 04, 2024 – Friday, 11:30pm\nInstructions"
+    "text": "Fill out this survey with your GitHub username so that you can get credit for your project submissions.\n\nPA 1\n\nDeadline: September 11, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 2\n\nDeadline: September 18, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 3\n\nDeadline: September 27, 2024 – Friday, 11:30pm\nInstructions\n\n\n\nPA 4\n\nDeadline: October 04, 2024 – Friday, 11:30pm\nInstructions\n\n\n\nPA 5\n\nUML class diagram: October 11, 2024 – Friday, 11:30pm\nFull implementation: October 16, 2024 – Wednesday, 11:30pm\nInstructions"
   },
   {
     "objectID": "academic-integrity.html",
@@ -2217,5 +2217,89 @@
     "title": "Inheritance",
     "section": "Polymorphism",
     "text": "Polymorphism\npoly means many, morphs means forms\none interface with multiple implementations\nPolymorphism in java:\n\nCompile-time Polymorphism: Method overloading\nRuntime Polymorphism: Method overriding"
+  },
+  {
+    "objectID": "programming-assignment-05.html#garden-simulation",
+    "href": "programming-assignment-05.html#garden-simulation",
+    "title": "Programming Assignmnet 05",
+    "section": "Garden Simulation",
+    "text": "Garden Simulation\nThe problem you will be solving is a garden simulation. The simulation will read commands like PLANT, PRINT, GROW, and HARVEST from a file and execute those commands. The garden that you will be implementing will consist of a number of columns and rows of plots. Within each plot there can exist a single plant, which is represented with a 5x5 grid of cells. Plants are divided up into three different categories: trees, flowers, and vegetables, all of which have unique characteristics.\nFor example, trees grow up, vegetables grow down, and flowers bloom as they grow."
+  },
+  {
+    "objectID": "programming-assignment-05.html#design-suggestions",
+    "href": "programming-assignment-05.html#design-suggestions",
+    "title": "Programming Assignmnet 05",
+    "section": "Design Suggestions",
+    "text": "Design Suggestions\nWe recommend the following:\n\nA Garden object with a 2D array or list of plant objects.\nA Plant class hierarchy of some kind. The design for this is what will be submitted for peer review on Tuesday March 13th at 11:30 am to both Aropa AND Gradescope.\nA Screen object with a 2D array of characters that each plant can print its current representation into. The Screen object can then print everything to standard out.\n\nhint: when copying over a Plant’s representation array place each cell at:\n\n [(Plant's row  * 5) + cell row][(Plant's col * size of plot) + cell col]\ninto the Screen object’s Array."
+  },
+  {
+    "objectID": "programming-assignment-hash-map.html",
+    "href": "programming-assignment-hash-map.html",
+    "title": "Programming Assigmment 05",
+    "section": "",
+    "text": "Deadline:"
+  },
+  {
+    "objectID": "programming-assignment-hash-map.html#learning-objectives",
+    "href": "programming-assignment-hash-map.html#learning-objectives",
+    "title": "Programming Assigmment 05",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nThe goal of this assignment is to use two or more data structures in a coordinated way to solve a problem.\nThe problem to be solved in this assignment is to implement a HashMap. Therefore, an additional learning objective is to increase your skill level with HashMaps from just being able to use them to understanding how to implement them.\nThe dictionary abstract data type can be used to solve many programming problems and therefore questions about hash tables frequently occur in job interviews."
+  },
+  {
+    "objectID": "programming-assignment-hash-map.html#the-assignment",
+    "href": "programming-assignment-hash-map.html#the-assignment",
+    "title": "Programming Assigmment 05",
+    "section": "The Assignment",
+    "text": "The Assignment\nYou will be redoing PA2-HashMap with your own HashMap implementation called MyHashMap. Here are the key components of this assignment:\n\nPA5Test.java with JUnit tests of all the functionality MyHashMap needs to provide to implement PA2. The tests can be written for HashMap and then edited slightly to be used to test MyHashMap instead. Implementing them first will help the development of MyHashMap be more test driven.\nMyHashMap.java with an implementation of a generic, MyHashMap class. Your hashmap should only have 10 buckets.\nPA5Main.java with an edited version of PA2Main.java that…\n\nuses MyHashMap instead of the HashMap provided in java.util\nprovides a DEBUG command that outputs the printTable() information about conflicts in a table that maps flight codes to integers\nhas been improved based on PA2 code clarity and decomposition feedback and follows the more stringent grading criteria specified below\ndoes some error checking on the input file and skips bad lines"
+  },
+  {
+    "objectID": "programming-assignment-hash-map.html#junit-implementation",
+    "href": "programming-assignment-hash-map.html#junit-implementation",
+    "title": "Programming Assigmment 05",
+    "section": "JUnit implementation",
+    "text": "JUnit implementation\nThe PA5Test.java file should contain unit tests for all of the HashMap functionality your PA2 program uses. We strongly recommend you write the tests for HashMap first. They should all pass. Then replace HashMap with MyHashMap and you can test MyHashMap as you implement it.\nFor grading, we will look for unit test cases for at least the following: * put * get * containsKey * keySet"
+  },
+  {
+    "objectID": "programming-assignment-hash-map.html#hash-map-implementation",
+    "href": "programming-assignment-hash-map.html#hash-map-implementation",
+    "title": "Programming Assigmment 05",
+    "section": "Hash Map Implementation",
+    "text": "Hash Map Implementation\nA hash table is a data structure that offers quick O(1) operations such as inserting data and searching for data. You have used a form of a hash table when using the HashMap class in Java. However, in this assignment you will implement your own version of a hash map.\n\nHash Map Background\nFirst, you should read up on what a hash table is. Wikipedia is a good place to start.\nAt its heart a hash table (hash map) is an array that works together with a function, known as a hash function, that takes a key and returns an index into that array. We usually call the elements in the array buckets. This is because when more than one element maps to the same array location (or bucket), there needs to be some organization for keeping all those elements there and being able to find them.\nA critical part of writing a good hash map implementation is writing a good (and appropriate) hash function. It should spread out values evenly based on different input values and needs to always produce the same value if the same element is given to it.\nIn general, there are multiple ways to implement a hash map. Here are three: * An array that contains a linked list for each bucket * A linked list that contains a linked list for each bucket (2d linked list) * An array that contains an array for each bucket (a 2d array)\nHowever, since you are implementing a generic hash table in Java and generics are problematic in arrays (https://docs.oracle.com/javase/tutorial/java/generics/restrictions.html), we strongly recommend you use an ArrayList of linked lists. Those linked lists can be LinkedLists, ArrayLists, or your own linked list implementation where the key,value pairs link to each other.\nYour hash table implementation should be called MyHashMap.\n\n\nA Generic MyHashMap class\nYou will create a class called MyHashMap that maps keys to values. To enable the construction and use of MyHashMap for any provided key and value types, you will implement it as a generic class.\nThis is done by declaring MyHashMap with type parameters.\n    class MyHashMap&lt;K,V&gt; {\n        ...\n    } \nThroughout the rest of the class definition, the capital letter ‘K’ will be used to declare variables of the key type, and the capital letter ‘V’ will be used to declare variables of the value type.\nSee https://docs.oracle.com/javase/tutorial/java/generics/types.html for more information.\n\n\nThe Hash Function\nFor this assignment, you will be implementing your own HashMap class using the following hash function.\n\nFind the hash code of that object (look into the hashCode method)\nMod it by the number of buckets\n\nThen take its absolute value.\n\nHere is the code for the hash function. You can use this code directly in your implementation:\n    private int hash(K key) {\n        int hashCode = key.hashCode();\n        int index = hashCode % numBuckets;\n        return Math.abs(index);\n    }\n\n\nHandling collisions\nThis hash map will use chaining to handle the collisions of elements. Your hash map should only have 10 buckets! Collisions will happen. We will be covering this in class."
+  },
+  {
+    "objectID": "programming-assignment-hash-map.html#error-checking",
+    "href": "programming-assignment-hash-map.html#error-checking",
+    "title": "Programming Assigmment 05",
+    "section": "Error checking",
+    "text": "Error checking\nYou WILL need to error check. This involves checking to see if a line in the input file is valid. If it is not a valid line, skip it. You know a line is invalid if there is no comma in it. (hint hint)"
+  },
+  {
+    "objectID": "programming-assignment-hash-map.html#the-debug-command",
+    "href": "programming-assignment-hash-map.html#the-debug-command",
+    "title": "Programming Assigmment 05",
+    "section": "The DEBUG command",
+    "text": "The DEBUG command\nThe program should be able to accept the DEBUG command on the command line after the input file name. That output should show how all of the airport codes in the input file map into indices in the hash table.\nThe DEBUG command should cause the creation of a MyHashMap with the keys being all of the airport codes in the input file. The goal is to see how many hash conflicts occur. After filing the MyHashMap, the program should call the printTable() method on MyHashMap. The printTable() method should output how many conflicts occur at each bucket and list the keys in that bucket.\nHere is an example input file:\nairline,airline ID, source airport, source airport id, destination apirport, destination airport id, codeshare, stops, equipment\n3S,11741,PTP,2881,FDF,2878,,0,AT5 320\n3S,11741,PTP,2881,SBH,6460,,0,DHT\n3S,11741,PTP,2881,SDQ,1762,,0,AT5\n3S,11741,PTP,2881,SFG,2879,,0,AT5\n3S,11741,PTP,2881,SXM,2899,,0,AT5\n3S,11741,SBH,6460,PTP,2881,,0,DHT\n3S,11741,SDQ,1762,PTP,2881,,0,AT5\n3S,11741,SDQ,1762,SXM,2899,,0,AT5\n3S,11741,SFG,2879,PTP,2881,,0,AT5\n3S,11741,SLU,2893,FDF,2878,,0,AT5\n3S,11741,SXM,2899,DOM,2877,,0,AT5\n3S,11741,SXM,2899,PTP,2881,,0,AT5\n3S,11741,SXM,2899,SDQ,1762,,0,AT5\n3U,4608,BHY,6351,XIY,3379,,0,321\n3U,4608,CAN,3370,CKG,3393,,0,321 320\n3U,4608,CAN,3370,CTU,3395,,0,321 320 330\n3U,4608,CAN,3370,SPN,2244,,0,330\n3U,4608,CGO,3375,CGQ,4380,,0,321\n3U,4608,CGO,3375,CKG,3393,,0,321\nHere is the output of the program when given this input file and the DEBUG command.\nIndex 0: (1 conflicts), [CAN XIY ]\nIndex 1: (1 conflicts), [SPN SBH ]\nIndex 2: (0 conflicts), [SDQ ]\nIndex 3: (0 conflicts), [CKG ]\nIndex 4: (3 conflicts), [DOM SLU SFG PTP ]\nIndex 5: (0 conflicts), []\nIndex 6: (0 conflicts), [CTU ]\nIndex 7: (1 conflicts), [CGO BHY ]\nIndex 8: (1 conflicts), [SXM FDF ]\nIndex 9: (0 conflicts), [CGQ ]\nTotal # of conflicts: 7"
+  },
+  {
+    "objectID": "programming-assignment-hash-map.html#extra-credit",
+    "href": "programming-assignment-hash-map.html#extra-credit",
+    "title": "Programming Assigmment 05",
+    "section": "EXTRA CREDIT",
+    "text": "EXTRA CREDIT\nIf you provide a better hash function than the one listed above, meaning that you have fewer collisions (and/or a better distribution) on the full flight database than the provided hash function, you will be able to receive 5 points of extra credit on PA5. Provide your README.md file with example DEBUG output to show that your hash function is better. Also explain why your hash function is better."
+  },
+  {
+    "objectID": "programming-assignment-hash-map.html#grading-criteria",
+    "href": "programming-assignment-hash-map.html#grading-criteria",
+    "title": "Programming Assigmment 05",
+    "section": "Grading Criteria",
+    "text": "Grading Criteria\nHalf of the PA5 grade will be correctness. For this assignment, there will be some private test cases on Gradescope used for grading.\nThe other half of the PA5 grade will be your decomposition and code clarity and the JUnit tests.\nDecomposition * Should carefully select data structures that implement the required MyHashMap functionality. You cannot use the provided Java HashMap implementation or HashSet implementation or any other Map or hash table implementation written by someone else.\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.\nThis program will use two or more source files in addition to the source file for the JUnit tests. Each of these files should be (&lt;200 lines).\nEach static method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\nMake things as simple as possible.\n\nOnly use one Scanner instance.\nDon’t use lambda functions or other features in non-standard ways.\nAvoid nested loops.\nAvoid nesting conditionals.\nAvoid chaining: see the Piazza post for more info\n\n\nCode Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement.\n\nThe coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine."
+  },
+  {
+    "objectID": "programming-assignment-hash-map.html#submission",
+    "href": "programming-assignment-hash-map.html#submission",
+    "title": "Programming Assigmment 05",
+    "section": "Submission",
+    "text": "Submission\nWrite your own code. We will be using a tool that finds overly similar code. This Spring 2018 semester in CS 210 we unfortunately have had academic integrity cases. I recommend that when talking with others about the assignment, do not write anything down.\nFor PA5, you are REQUIRED to submit all of your java source files to Gradescope.\nThere is NO Aropa submission for PA5."
   }
 ]
