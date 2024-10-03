@@ -2322,5 +2322,47 @@
     "title": "Inheritance",
     "section": "abstract superclass",
     "text": "abstract superclass\nAn abstract class cannot be instantiated (an error is thrown)\nAnimal animal = new Animal(); // Error: Animal is abstract\nAn abstract class must be subclassed\nMethods in an abstract class can also be abstract – similar to an interface"
+  },
+  {
+    "objectID": "slides-04-03.html#implementation-example",
+    "href": "slides-04-03.html#implementation-example",
+    "title": "Inheritance",
+    "section": "Implementation example",
+    "text": "Implementation example\nAnimal.java\npublic class Animal {\n    private String species;\n    private String genus;\n    private String family;\n    \n    public Animal (String s, String g, String f) {\n        species = s;\n        genus = g;\n        family = f;\n    }\n    \n    public String toString() {\n        String message;\n        message = \"The \" + species;\n        message += \" of genus \" +  genus;\n        message += \" and family \" + family;\n        return message;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-03.html#implementation-example---animal.java",
+    "href": "slides-04-03.html#implementation-example---animal.java",
+    "title": "Inheritance",
+    "section": "Implementation example - Animal.java",
+    "text": "Implementation example - Animal.java\nAnimal.java\npublic class Animal {\n    private String species;\n    private String genus;\n    private String family;\n    \n    public Animal (String s, String g, String f) {\n        species = s;\n        genus = g;\n        family = f;\n    }\n    \n    public String toString() {\n        String message;\n        message = \"The \" + species;\n        message += \" of genus \" +  genus;\n        message += \" and family \" + family;\n        return message;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-03.html#implementation-example---cat.java",
+    "href": "slides-04-03.html#implementation-example---cat.java",
+    "title": "Inheritance",
+    "section": "Implementation example - Cat.java",
+    "text": "Implementation example - Cat.java\nCat.java\npublic class Cat extends Animal {\n    public Cat() {\n        super(\"Cat\", \"Felis\", \"Felidae\");\n    }\n    \n    public String makesSound() {\n        return \"meow\";\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-03.html#implementation-example-1",
+    "href": "slides-04-03.html#implementation-example-1",
+    "title": "Inheritance",
+    "section": "Implementation example",
+    "text": "Implementation example\nCat.java\npublic class Cat extends Animal {\n    public Cat() {\n        super(\"Cat\", \"Felis\", \"Felidae\");\n    }\n    \n    public String makesSound() {\n        return \"meow\";\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-03.html#abstract-example-implementation",
+    "href": "slides-04-03.html#abstract-example-implementation",
+    "title": "Inheritance",
+    "section": "abstract example implementation",
+    "text": "abstract example implementation\npublic abstract class Animal {\n    private String species;\n    private String genus;\n    private String family;\n    \n    public Animal (String s, String g, String f) {\n        species = s;\n        genus = g;\n        family = f;\n    }\n    \n    public abstract String makesSound();\n    \n    public String toString() {\n        String message;\n        message = \"The \" + species;\n        message += \" of genus \" +  genus;\n        message += \" and family \" + family;\n        message += \" makes this sound: \";\n        message += makesSound();\n        return message;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-03.html#implementation-example-2",
+    "href": "slides-04-03.html#implementation-example-2",
+    "title": "Inheritance",
+    "section": "Implementation example",
+    "text": "Implementation example\npublic class GetAnimals {\n\n    public static void main(String[] args) {\n        Cat garfield = new Cat();\n        System.out.println(garfield.toString());\n    }\n\n}"
   }
 ]

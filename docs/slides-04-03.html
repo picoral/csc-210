@@ -526,12 +526,88 @@
 <h2>UML diagram example</h2>
 
 <img data-src="images/UML-class-Animal.png" class="r-stretch"></section>
+<section id="implementation-example" class="slide level2">
+<h2>Implementation example</h2>
+<p><code>Animal.java</code></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>public class Animal {</span>
+<span id="cb3-2"><a></a>    private String species;</span>
+<span id="cb3-3"><a></a>    private String genus;</span>
+<span id="cb3-4"><a></a>    private String family;</span>
+<span id="cb3-5"><a></a>    </span>
+<span id="cb3-6"><a></a>    public Animal (String s, String g, String f) {</span>
+<span id="cb3-7"><a></a>        species = s;</span>
+<span id="cb3-8"><a></a>        genus = g;</span>
+<span id="cb3-9"><a></a>        family = f;</span>
+<span id="cb3-10"><a></a>    }</span>
+<span id="cb3-11"><a></a>    </span>
+<span id="cb3-12"><a></a>    public String toString() {</span>
+<span id="cb3-13"><a></a>        String message;</span>
+<span id="cb3-14"><a></a>        message = "The " + species;</span>
+<span id="cb3-15"><a></a>        message += " of genus " +  genus;</span>
+<span id="cb3-16"><a></a>        message += " and family " + family;</span>
+<span id="cb3-17"><a></a>        return message;</span>
+<span id="cb3-18"><a></a>    }</span>
+<span id="cb3-19"><a></a></span>
+<span id="cb3-20"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="implementation-example-1" class="slide level2">
+<h2>Implementation example</h2>
+<p><code>Cat.java</code></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>public class Cat extends Animal {</span>
+<span id="cb4-2"><a></a>    public Cat() {</span>
+<span id="cb4-3"><a></a>        super("Cat", "Felis", "Felidae");</span>
+<span id="cb4-4"><a></a>    }</span>
+<span id="cb4-5"><a></a>    </span>
+<span id="cb4-6"><a></a>    public String makesSound() {</span>
+<span id="cb4-7"><a></a>        return "meow";</span>
+<span id="cb4-8"><a></a>    }</span>
+<span id="cb4-9"><a></a></span>
+<span id="cb4-10"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="implementation-example-2" class="slide level2">
+<h2>Implementation example</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>public class GetAnimals {</span>
+<span id="cb5-2"><a></a></span>
+<span id="cb5-3"><a></a>    public static void main(String[] args) {</span>
+<span id="cb5-4"><a></a>        Cat garfield = new Cat();</span>
+<span id="cb5-5"><a></a>        System.out.println(garfield.toString());</span>
+<span id="cb5-6"><a></a>    }</span>
+<span id="cb5-7"><a></a></span>
+<span id="cb5-8"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="abstract-superclass" class="slide level2">
 <h2><code>abstract</code> superclass</h2>
 <p>An abstract class cannot be instantiated (an error is thrown)</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>Animal animal = new Animal(); // Error: Animal is abstract</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a>Animal animal = new Animal(); // Error: Animal is abstract</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>An abstract class must be subclassed</p>
 <p>Methods in an abstract class can also be <code>abstract</code> – similar to an interface</p>
+</section>
+<section id="abstract-example-implementation" class="slide level2">
+<h2><code>abstract</code> example implementation</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>public abstract class Animal {</span>
+<span id="cb7-2"><a></a>    private String species;</span>
+<span id="cb7-3"><a></a>    private String genus;</span>
+<span id="cb7-4"><a></a>    private String family;</span>
+<span id="cb7-5"><a></a>    </span>
+<span id="cb7-6"><a></a>    public Animal (String s, String g, String f) {</span>
+<span id="cb7-7"><a></a>        species = s;</span>
+<span id="cb7-8"><a></a>        genus = g;</span>
+<span id="cb7-9"><a></a>        family = f;</span>
+<span id="cb7-10"><a></a>    }</span>
+<span id="cb7-11"><a></a>    </span>
+<span id="cb7-12"><a></a>    public abstract String makesSound();</span>
+<span id="cb7-13"><a></a>    </span>
+<span id="cb7-14"><a></a>    public String toString() {</span>
+<span id="cb7-15"><a></a>        String message;</span>
+<span id="cb7-16"><a></a>        message = "The " + species;</span>
+<span id="cb7-17"><a></a>        message += " of genus " +  genus;</span>
+<span id="cb7-18"><a></a>        message += " and family " + family;</span>
+<span id="cb7-19"><a></a>        message += " makes this sound: ";</span>
+<span id="cb7-20"><a></a>        message += makesSound();</span>
+<span id="cb7-21"><a></a>        return message;</span>
+<span id="cb7-22"><a></a>    }</span>
+<span id="cb7-23"><a></a></span>
+<span id="cb7-24"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
