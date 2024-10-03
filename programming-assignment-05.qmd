@@ -268,10 +268,10 @@ We recommend the following:
 
 ## Grading Criteria
 
-70% of this assignment grade will be correctness.  For this assignment, there
+60% of this assignment grade will be correctness.  For this assignment, there
 will be some private test cases on Gradescope used for grading.
 
-The other half of your grade will be your decomposition and code clarity.
+The other 40% of your grade will be your decomposition and code clarity.
 Twenty of these points will be on your class hierarchy diagram.
 
 Decomposition
