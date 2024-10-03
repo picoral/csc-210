@@ -240,7 +240,7 @@ We recommend the following:
 
   * A Garden object with a 2D array or list of plant objects.
   * A Plant class hierarchy of some kind.  The design for this is what will be submitted for
-    peer review on Tuesday March 13th at 11:30 am to both Aropa AND Gradescope.
+    peer review on Tuesday March 13th at 11:30 am to Gradescope.
   * A Screen object with a 2D array of characters that each plant can
     print its current representation into.  The Screen object can then print everything
     to standard out.
