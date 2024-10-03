@@ -34,6 +34,21 @@ class diagrams.  There are many resources on the internet for UML class diagrams
 
 Also check the lecture [slides](slides-04-03.html#/uml-diagram) on UML class diagrams.
 
+Use the following notation:
+
+* `-` for `private`
+* `+` for `public`
+* `#` for `protected`
+
+Remember to include in your diagram:
+
+* inheritance relationships with lines and arrows
+* class name at the top of each box
+* constructors
+* methods with parameter and return types
+* access modifiers (-, +, #)
+
+
 
 ## Garden Simulation
 

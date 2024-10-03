@@ -235,7 +235,7 @@
     "href": "programming-assignment-05.html#learning-objectives",
     "title": "Programming Assignmnet 05",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nThe goal of this assignment is to design a class hierarchy to solve a problem, implement that hierarchy, use polymorphism, and use two-dimensional arrays.\nWhat is a class hierarchy you ask? Read about it on Wikipedia. The class diagram you will be submitting will be a simplified version of the UML class diagrams. There are many resources on the internet for UML class diagrams.\nAlso check the lecture slides on UML class diagrams."
+    "text": "Learning Objectives\nThe goal of this assignment is to design a class hierarchy to solve a problem, implement that hierarchy, use polymorphism, and use two-dimensional arrays.\nWhat is a class hierarchy you ask? Read about it on Wikipedia. The class diagram you will be submitting will be a simplified version of the UML class diagrams. There are many resources on the internet for UML class diagrams.\nAlso check the lecture slides on UML class diagrams.\nUse the following notation:\n\n- for private\n+ for public\n# for protected\n\nRemember to include in your diagram:\n\ninheritance relationships with lines and arrows\nclass name at the top of each box\nconstructors\nmethods with parameter and return types\naccess modifiers (-, +, #)"
   },
   {
     "objectID": "programming-assignment-05.html#the-assignment",
