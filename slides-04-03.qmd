@@ -17,13 +17,15 @@ Use the `extends` keyword
 
 ## Superclass
 
-Create a class called `Person` with the following instance variable:
+Create a class called `Person` with the following instance variables:
 
 * First Name
 * Family Name
 * Birthdate
 
 What public and private methods?
+
+Make sure you do validation for setter methods.
 
 ## Superclass -- solution
 
@@ -85,7 +87,7 @@ Add the following instance variables:
 
 What public and private methods?
 
-Write a constructor method, invoke base-cass constructor using `super` keyword
+Write a constructor method, invoke base-class constructor using `super` keyword
 
 ## Subclass -- solution
 
@@ -129,5 +131,29 @@ Polymorphism in java:
 * Runtime Polymorphism:  Method overriding
 
 
+## UML diagram
 
+We will be using Unified Modeling Language (UML) diagrams to understand and
+plan classes and their inheritance.
 
+* add name of the class at the top of each box in the diagram
+* use `+`/`-` for public/private
+* include instance variables, methods (including constructors) with parameters
+
+I use the UML class template from Lucidcharts (available through google drive)
+
+## UML diagram example
+
+![](images/UML-class-Animal.png)
+
+## `abstract` superclass
+
+An abstract class cannot be instantiated (an error is thrown)
+
+```{java}
+Animal animal = new Animal(); // Error: Animal is abstract
+```
+
+An abstract class must be subclassed
+
+Methods in an abstract class can also be `abstract` -- similar to an interface

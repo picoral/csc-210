@@ -2188,7 +2188,7 @@
     "href": "slides-04-03.html#superclass",
     "title": "Inheritance",
     "section": "Superclass",
-    "text": "Superclass\nCreate a class called Person with the following instance variable:\n\nFirst Name\nFamily Name\nBirthdate\n\nWhat public and private methods?"
+    "text": "Superclass\nCreate a class called Person with the following instance variables:\n\nFirst Name\nFamily Name\nBirthdate\n\nWhat public and private methods?\nMake sure you do validation for setter methods."
   },
   {
     "objectID": "slides-04-03.html#superclass-solution",
@@ -2202,7 +2202,7 @@
     "href": "slides-04-03.html#subclass",
     "title": "Inheritance",
     "section": "Subclass",
-    "text": "Subclass\nCreate a class called Student that extends the Person class. Add the following instance variables:\n\nAdmissions Year\nGraduation Year\nMajor\nEmail address (or only netID)\n\nWhat public and private methods?\nWrite a constructor method, invoke base-cass constructor using super keyword"
+    "text": "Subclass\nCreate a class called Student that extends the Person class. Add the following instance variables:\n\nAdmissions Year\nGraduation Year\nMajor\nEmail address (or only netID)\n\nWhat public and private methods?\nWrite a constructor method, invoke base-class constructor using super keyword"
   },
   {
     "objectID": "slides-04-03.html#subclass-solution",
@@ -2301,5 +2301,26 @@
     "title": "Programming Assigmment 05",
     "section": "Submission",
     "text": "Submission\nWrite your own code. We will be using a tool that finds overly similar code. This Spring 2018 semester in CS 210 we unfortunately have had academic integrity cases. I recommend that when talking with others about the assignment, do not write anything down.\nFor PA5, you are REQUIRED to submit all of your java source files to Gradescope.\nThere is NO Aropa submission for PA5."
+  },
+  {
+    "objectID": "slides-04-03.html#uml-diagram",
+    "href": "slides-04-03.html#uml-diagram",
+    "title": "Inheritance",
+    "section": "UML diagram",
+    "text": "UML diagram\nWe will be using Unified Modeling Language (UML) diagrams to understand and plan classes and their inheritance.\n\nadd name of the class at the top of each box in the diagram\nuse +/- for public/private\ninclude instance variables, methods (including constructors) with parameters\n\nI use the UML class template from Lucidcharts (available through google drive)"
+  },
+  {
+    "objectID": "slides-04-03.html#uml-diagram-example",
+    "href": "slides-04-03.html#uml-diagram-example",
+    "title": "Inheritance",
+    "section": "UML diagram example",
+    "text": "UML diagram example"
+  },
+  {
+    "objectID": "slides-04-03.html#abstract-superclass",
+    "href": "slides-04-03.html#abstract-superclass",
+    "title": "Inheritance",
+    "section": "abstract superclass",
+    "text": "abstract superclass\nAn abstract class cannot be instantiated (an error is thrown)\nAnimal animal = new Animal(); // Error: Animal is abstract\nAn abstract class must be subclassed\nMethods in an abstract class can also be abstract – similar to an interface"
   }
 ]

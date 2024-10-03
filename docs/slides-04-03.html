@@ -407,13 +407,14 @@
 </section>
 <section id="superclass" class="slide level2">
 <h2>Superclass</h2>
-<p>Create a class called <code>Person</code> with the following instance variable:</p>
+<p>Create a class called <code>Person</code> with the following instance variables:</p>
 <ul>
 <li>First Name</li>
 <li>Family Name</li>
 <li>Birthdate</li>
 </ul>
 <p>What public and private methods?</p>
+<p>Make sure you do validation for setter methods.</p>
 </section>
 <section id="superclass-solution" class="slide level2">
 <h2>Superclass – solution</h2>
@@ -471,7 +472,7 @@
 <li>Email address (or only netID)</li>
 </ul>
 <p>What public and private methods?</p>
-<p>Write a constructor method, invoke base-cass constructor using <code>super</code> keyword</p>
+<p>Write a constructor method, invoke base-class constructor using <code>super</code> keyword</p>
 </section>
 <section id="subclass-solution" class="slide level2">
 <h2>Subclass – solution</h2>
@@ -510,6 +511,27 @@
 <li>Compile-time Polymorphism: Method overloading</li>
 <li>Runtime Polymorphism: Method overriding</li>
 </ul>
+</section>
+<section id="uml-diagram" class="slide level2">
+<h2>UML diagram</h2>
+<p>We will be using Unified Modeling Language (UML) diagrams to understand and plan classes and their inheritance.</p>
+<ul>
+<li>add name of the class at the top of each box in the diagram</li>
+<li>use <code>+</code>/<code>-</code> for public/private</li>
+<li>include instance variables, methods (including constructors) with parameters</li>
+</ul>
+<p>I use the UML class template from Lucidcharts (available through google drive)</p>
+</section>
+<section id="uml-diagram-example" class="slide level2">
+<h2>UML diagram example</h2>
+
+<img data-src="images/UML-class-Animal.png" class="r-stretch"></section>
+<section id="abstract-superclass" class="slide level2">
+<h2><code>abstract</code> superclass</h2>
+<p>An abstract class cannot be instantiated (an error is thrown)</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>Animal animal = new Animal(); // Error: Animal is abstract</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>An abstract class must be subclassed</p>
+<p>Methods in an abstract class can also be <code>abstract</code> – similar to an interface</p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
