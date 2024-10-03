@@ -49,7 +49,6 @@ Remember to include in your diagram:
 * access modifiers (-, +, #)
 
 
-
 ## Garden Simulation
 
 The problem you will be solving is a garden simulation.  The simulation will read
