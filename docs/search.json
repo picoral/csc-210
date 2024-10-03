@@ -2364,5 +2364,26 @@
     "title": "Inheritance",
     "section": "Implementation example",
     "text": "Implementation example\npublic class GetAnimals {\n\n    public static void main(String[] args) {\n        Cat garfield = new Cat();\n        System.out.println(garfield.toString());\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-03.html#protected-keyword",
+    "href": "slides-04-03.html#protected-keyword",
+    "title": "Inheritance",
+    "section": "protected keyword",
+    "text": "protected keyword\nThe private access modifier specifies the variable can only be accessed in its own class\nThe protected access modifier specifies that the variable can only be accessed by a subclass of its class"
+  },
+  {
+    "objectID": "slides-04-03.html#protected-implementation",
+    "href": "slides-04-03.html#protected-implementation",
+    "title": "Inheritance",
+    "section": "protected implementation",
+    "text": "protected implementation\npublic abstract class Animal {\n    protected String species;\n    protected String genus;\n    protected String family;\n    \n    public Animal () {}\n    \n    public abstract String makesSound();\n    \n    public String toString() {\n        String message;\n        message = \"The \" + species;\n        message += \" of genus \" +  genus;\n        message += \" and family \" + family;\n        message += \" makes this sound: \";\n        message += makesSound();\n        return message;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-04-03.html#protected-implementation-1",
+    "href": "slides-04-03.html#protected-implementation-1",
+    "title": "Inheritance",
+    "section": "protected implementation",
+    "text": "protected implementation\npublic class Cat extends Animal {\n    public Cat() {\n        species = \"Cat\";\n        genus = \"Felis\";\n        family = \"Felidae\";\n    }\n    \n    public String makesSound() {\n        return \"meow\";\n    }\n\n}"
   }
 ]

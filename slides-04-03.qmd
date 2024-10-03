@@ -245,5 +245,51 @@ public abstract class Animal {
 }
 ```
 
+## `protected` keyword
 
+The `private` access modifier specifies the variable can only be accessed in its own class
+
+The `protected` access modifier specifies that the variable can only be accessed by a subclass of its class
+
+## `protected` implementation
+
+```{java}
+public abstract class Animal {
+	protected String species;
+	protected String genus;
+	protected String family;
+	
+	public Animal () {}
+	
+	public abstract String makesSound();
+	
+	public String toString() {
+		String message;
+		message = "The " + species;
+		message += " of genus " +  genus;
+		message += " and family " + family;
+		message += " makes this sound: ";
+		message += makesSound();
+		return message;
+	}
+
+}
+```
+
+## `protected` implementation
+
+```{java}
+public class Cat extends Animal {
+	public Cat() {
+		species = "Cat";
+		genus = "Felis";
+		family = "Felidae";
+	}
+	
+	public String makesSound() {
+		return "meow";
+	}
+
+}
+```
 

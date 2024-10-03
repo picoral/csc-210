@@ -608,6 +608,49 @@
 <span id="cb7-22"><a></a>    }</span>
 <span id="cb7-23"><a></a></span>
 <span id="cb7-24"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="protected-keyword" class="slide level2">
+<h2><code>protected</code> keyword</h2>
+<p>The <code>private</code> access modifier specifies the variable can only be accessed in its own class</p>
+<p>The <code>protected</code> access modifier specifies that the variable can only be accessed by a subclass of its class</p>
+</section>
+<section id="protected-implementation" class="slide level2">
+<h2><code>protected</code> implementation</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>public abstract class Animal {</span>
+<span id="cb8-2"><a></a>    protected String species;</span>
+<span id="cb8-3"><a></a>    protected String genus;</span>
+<span id="cb8-4"><a></a>    protected String family;</span>
+<span id="cb8-5"><a></a>    </span>
+<span id="cb8-6"><a></a>    public Animal () {}</span>
+<span id="cb8-7"><a></a>    </span>
+<span id="cb8-8"><a></a>    public abstract String makesSound();</span>
+<span id="cb8-9"><a></a>    </span>
+<span id="cb8-10"><a></a>    public String toString() {</span>
+<span id="cb8-11"><a></a>        String message;</span>
+<span id="cb8-12"><a></a>        message = "The " + species;</span>
+<span id="cb8-13"><a></a>        message += " of genus " +  genus;</span>
+<span id="cb8-14"><a></a>        message += " and family " + family;</span>
+<span id="cb8-15"><a></a>        message += " makes this sound: ";</span>
+<span id="cb8-16"><a></a>        message += makesSound();</span>
+<span id="cb8-17"><a></a>        return message;</span>
+<span id="cb8-18"><a></a>    }</span>
+<span id="cb8-19"><a></a></span>
+<span id="cb8-20"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="protected-implementation-1" class="slide level2">
+<h2><code>protected</code> implementation</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a></a>public class Cat extends Animal {</span>
+<span id="cb9-2"><a></a>    public Cat() {</span>
+<span id="cb9-3"><a></a>        species = "Cat";</span>
+<span id="cb9-4"><a></a>        genus = "Felis";</span>
+<span id="cb9-5"><a></a>        family = "Felidae";</span>
+<span id="cb9-6"><a></a>    }</span>
+<span id="cb9-7"><a></a>    </span>
+<span id="cb9-8"><a></a>    public String makesSound() {</span>
+<span id="cb9-9"><a></a>        return "meow";</span>
+<span id="cb9-10"><a></a>    }</span>
+<span id="cb9-11"><a></a></span>
+<span id="cb9-12"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
