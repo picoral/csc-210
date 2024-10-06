@@ -1,0 +1,28 @@
+---
+title: "Graphs"
+format: revealjs
+---
+
+## Graphs
+
+A graph:
+
+* is a non-linear data structure
+* stores connected data (a network of people)
+* consists of vertices/nodes and edges/lines
+
+A Graph `G` is composed of a set of vertices(`V`) and a set of edges(`E`)
+
+The graph is denoted by $G(V, E)$
+
+## vertices and edges
+
+* A vertex represents the entity (e.g., people)
+* An edge represents the relationship between entities (e.g., a person’s friendships).
+
+Graphs can be weighted and unweighted
+
+## Representations of Graph
+
+* Adjacency Matrix
+* Adjacency List

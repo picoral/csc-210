@@ -1920,16 +1920,16 @@
   {
     "objectID": "programming-assignment-06.html",
     "href": "programming-assignment-06.html",
-    "title": "Programming Assignmnet 06",
+    "title": "Programming Assignment 06",
     "section": "",
     "text": "Deadline: October 23, 2024 – Wednesday, 11:30pm"
   },
   {
     "objectID": "programming-assignment-06.html#learning-objectives",
     "href": "programming-assignment-06.html#learning-objectives",
-    "title": "Programming Assignmnet 06",
+    "title": "Programming Assignment 06",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nThe goal of this assignment is to design a class hierarchy to solve a problem, implement that hierarchy, use polymorphism, and use two-dimensional arrays.\nWhat is a class hierarchy you ask? Read about it on Wikipedia. The class diagram you will be submitting will be a simplified version of the UML class diagrams. There are many resources on the internet for UML class diagrams. See all the 2/28/18 class notes for the format expected in this class for PA6."
+    "text": "Learning Objectives\nThe goal of this assignment is to use basic JavaFX to create a GUI output representation of the Garden program."
   },
   {
     "objectID": "programming-assignment-06.html#garden-simulation",
@@ -1941,9 +1941,9 @@
   {
     "objectID": "programming-assignment-06.html#the-assignment",
     "href": "programming-assignment-06.html#the-assignment",
-    "title": "Programming Assignmnet 06",
+    "title": "Programming Assignment 06",
     "section": "The Assignment",
-    "text": "The Assignment\nThis is a two-week assignment. The class inheritance diagram will be all that is due Tuesday March 13th at 11:30 am to both Aropa AND Gradescope. We make suggestions as to what to implement the first week and then the second week, but you will be responsible for managing your own time. The rest of the assignment is due Monday March 19th.\n\nClass inheritance diagram: Create this diagram however you would like (draw it by hand, use software, etc.). You need to create a pdf file of it and submit it to Aropa AND Gradescope.\n\nSee (https://gradescope.com/help#help-center-item-student-scanning) for some suggestions of how to scan in a document with your phone if you plan to produce your pdf by taking a picture of it.\nYou will be building on PA6 for PA8 and PA9. In PA8 and PA9, you will be encouraged to use the model-view-controller pattern. Feel free to look that up ahead of time. You are not required to know it until we cover it though.\nMarch 1st 7:30am, the Aropa and Gradescope for the PA6 class inheritance diagram are ready to accept submissions.\nDuring Spring Break the Gradescope submission for the PA6 program will be posted.\n\nYour main program, which must be named PA6Main.java, will need to accept the name of an input file on the command line.\nThe input file will contain all of the garden initialization settings and the commands to simulate. Here is an example input file.\n\nrows: 1\ncols: 1\n\nPLANT (0,0) banana\nPRINT\nGROW 1\nprint\nNote that the commands should be case-insensitive. In other words, “print”, “PRINT”, and “Print” are all equivalent in the input file. Here is the output for the example:\n&gt; PRINT\n.....\n.....\n.....\n.....\n..b..\n\n&gt; GROW 1\n\n&gt; PRINT\n.....\n.....\n.....\n..b..\n..b..\nThe output should be printed to standard out. See PublicTestCases/ for more input and output examples.\n\nThe following are the types of specific plants that could be planted:\n\nFLOWERS      TREES      VEGETABLES\n-------      -----      ----------\nIris         Oak        Garlic\nLily         Willow     Zucchini\nRose         Banana     Tomato\nDaisy        Coconut    Yam\nTulip        Pine       Lettuce\nSunflower\n\nThe following are examples of representation arrays for different types of plants. For PA6, plants will be represented with ascii characters. Use the lower case version of the first letter of the plant name. For “Garlic” use ‘g’, for “Daisy” use ‘d’, etc.\n\nFlowers should start in the middle of the 5x5 grid of cells in the plot it is planted in. Each location in a plot is called a cell.\nVegetables should start at the top middle.\nTrees should start at the bottom middle.\n\n\nRose\n.....\n..... \n..r..\n.....\n.....\nTomato\n..t..\n..... \n.....\n.....\n.....\nCoconut\n.....\n..... \n.....\n.....\n..c..\n\nCommands that need to be implemented. See the PublicTestCases/ for more examples. There are examples with PLANT, PRINT, and GROW. Other command input and output examples will appear during Spring Break.\n\nThe PLANT Command EXAMPLE USE: PLANT (0,0) rose If the PLANT command is read, it should be followed by plot coordinates and the type of Plant to be planted. Use this type to plant the correct subclass of plant into the garden at given plot coordinates. The plot coordinates are given as row and column. Both rows and columns start at 0. Rows go down the screen, and columns go across the screen. Each plot will itself contain 5 cells (represented as characters). There is a restriction that the number of cells across should be less than or equal to 80, therefore the most plot columns allowed is 80/5 or 16.\nThe PRINT Command EXAMPLE USE: PRINT If the PRINT command is read, then the entire garden should be printed to standard out.\nThe GROW Command EXAMPLE USE: GROW 1 If the GROW command is read, then each Plant should grow the specified number of times as seen in the input command. A plant cannot grow out of its plot. No error will happen, but growth should not occur outside the plot boundaries. Plots also cannot run into each other.\nGROW [num] (x,y) EXAMPLE USE: GROW 1 (2,3) Grow whichever Plant is located in the garden at position (x,y) num times. If there is nothing at this position or the position is outside the size of the garden, print, “Can’t grow there.” and continue.\nGROW [num] [type] EXAMPLE USE: GROW 1 rose Grow only Plants of the specified type num times.\nGROW [num] [Plant] EXAMPLE USE: GROW 1 flower  Grow only Plants of the specified class num times.\nHARVEST Remove all Vegetables from the Garden.\nHARVEST (x,y) EXAMPLE USE: HARVEST (2,3) Harvest Vegetable at location (x,y). If not a Vegetable or outside of Garden, print, “Can’t harvest there.” and continue.\nHARVEST [type] EXAMPLE USE: HARVEST tomato Harvests all Vegetables of the specified type. If there are no Vegetables with that type, do nothing.\nPICK Remove all Flowers from the Garden.\nPICK (x,y) EXAMPLE USE: PICK (2,3) Pick Flower at location (x,y). If not a Flower or outside of Garden, print, “Can’t pick there.” and continue.\nPICK [type] EXAMPLE USE: PICK rose Pick all Flowers of the specified type. If there are no Flowers with that type, do nothing.\nCUT Remove all Trees from the Garden.\nCUT (x,y) EXAMPLE USE: CUT (2,3) Cut Tree at location (x,y). If not a Tree or outside of Garden, print, “Can’t cut there.” and continue.\nCUT [type] EXAMPLE USE: CUT PINE Cut all Trees of the specified type. If there are no Trees with that type, do nothing.\n\nUnique Class\n\nStudents will design their own plant type and show an example input and output that illustrates it in their README.md file. This new plant should be different from Vegetable, Flower, and Tree, but still be usable alongside them within the garden and work with the commands PLANT, GROW, and PRINT.\n\nError Handling\n\nSome of the commands above specify some error handling.\nThe garden should never be more than 80 characters across. If it is print out the message “Too many plot columns.” and then exit. Think: How many characters across is each plot?\nOther than the above specified errors, the input can be assumed well formed."
+    "text": "The Assignment\nIn this assignment, you will build on your Garden implementation to visually represent your garden simulation. You will be graphically representing each plant in the output as well as handling a ‘delay’ command from the input file that represents how long to wait between the execution of commands. I n the video example (PublicTestCases/customPlant.in and PublicTestCases/CustomPlantExample.mp4), each part of a plant (i.e., each character from the garden run output) is represented by uniquely colored tile on a canvas.\nThe ‘PRINT’ command is also completely excluded from this program. This means that you should not expect any ‘PRINT’ commands from any input file. You can leave in the print handling code if you would like however.\nPlease open and watch ‘PublicTestCases/Example.mp4’ to see an example GUI output for the input file ‘PublicTestCases/Garden.in’. Also see ‘PublicTestCases/customPlant.in’ and ‘PublicTestCases/CustomPlantExample.mp4’. You will be creating a variant of Garden.in for your own unique plant or garden object.\nYou should also be looking at the PA6-Garden writeup to refresh your memory on how it works: https://github.com/UACS210Spring2018/PA-and-Section-Writeups/tree/master/PA6-Garden."
   },
   {
     "objectID": "programming-assignment-06.html#design-suggestions",
@@ -1955,16 +1955,16 @@
   {
     "objectID": "programming-assignment-06.html#grading-criteria",
     "href": "programming-assignment-06.html#grading-criteria",
-    "title": "Programming Assignmnet 06",
+    "title": "Programming Assignment 06",
     "section": "Grading Criteria",
-    "text": "Grading Criteria\nHalf of the PA6 grade will be correctness. For this assignment, there will be some private test cases on Gradescope used for grading.\nThe other half of the PA6 grade will be your decomposition and code clarity. Twenty of these points will be on your class hierarchy diagram.\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.\nThis program should use fewer than 10 .java files. Each of these files should be (&lt;275 lines).\nEach static method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\nMake things as simple as possible.\n\nOnly use one Scanner instance.\nDon’t use lambda functions or other features in non-standard ways.\nAvoid nested loops unless they would be cleaner when handling a 2D array.\nAvoid nesting conditionals.\nAvoid chaining: see the Piazza post for more info\n\n\nCode Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement.\n\nThe coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine."
+    "text": "Grading Criteria\nHalf of this assignment grade will correctness. For this assignment, this is the GUI output. You should also expect that we might run your program with additional input files besides the ones provided.\nThe other half of your grade will be your decomposition and code clarity.\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.\nThis program should use fewer than 10 .java files. Each of these files should be (&lt;300 lines).\nEach method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\n\nCode Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format. One would also need to know the command line arguments that should be passed to the program.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement."
   },
   {
     "objectID": "programming-assignment-06.html#submission",
     "href": "programming-assignment-06.html#submission",
-    "title": "Programming Assignmnet 06",
+    "title": "Programming Assignment 06",
     "section": "Submission",
-    "text": "Submission\nWrite your own code. We will be using a tool that finds overly similar code. This Spring 2018 semester in CS 210 we unfortunately have had academic integrity cases. I recommend that when talking with others about the assignment, do not write anything down.\nThe class hierarchy diagram in pdf format is due Tuesday March 13th at 11:30 am in Gradescope AND Aropa.\nFor PA6, you are REQUIRED to submit all of your java source files to Gradescope before Monday March 19th at 11:30 am. You also need to submit your README.md with example input and output for your unique class."
+    "text": "Submission\nFor this assignment, you are REQUIRED to submit all of the following files to Gradescope:\n\nAll the Java source files needed to run your program.\nmyGarden.in\nmyGarden.mp4, or other video format that can be run on multiple platforms. The video should be between 10 and 15 seconds long.\n\nTo create the video, you can use a program to record your screen as you run your program, or you can simply record your screen with your smartphone or tablet. Do note however that the video you submit must be of good enough quality for the SL’s to clearly see your garden and command logs.\nWrite your own code. We will be using a tool that finds similar code.\nIt is recommended that when talking with others about the assignment, do not write anything down."
   },
   {
     "objectID": "short-assignment-03.html#setup",
@@ -2518,5 +2518,292 @@
     "title": "Graphs",
     "section": "Representations of Graph",
     "text": "Representations of Graph\n\nAdjacency Matrix\nAdjacency List"
+  },
+  {
+    "objectID": "programming-assignment-06.html#delay-parameter",
+    "href": "programming-assignment-06.html#delay-parameter",
+    "title": "Programming Assignment 06",
+    "section": "Delay parameter",
+    "text": "Delay parameter\nThe input file format for this assignment is exactly the same as that of PA6-Garden, except that you will now have to handle a delay parameter. The delay will be specified on the third line of the input file right under the ‘cols’ parameter. An example input is shown below:\nrows: 1\ncols: 1\ndelay: 3.0\n\nPLANT (0,0) sunflower\nPLANT (2,2) tulip\nPLANT (5,5) iris\nGROW 1\nThe number after ‘delay:’ is a double that represents the time to wait before each command is executed. In the video example (CustomPlantExample.mp4), this delay was set to .5, therefore, each command was executed after waiting a half second."
+  },
+  {
+    "objectID": "programming-assignment-06.html#steps-for-completing-this-assignment",
+    "href": "programming-assignment-06.html#steps-for-completing-this-assignment",
+    "title": "Programming Assignment 06",
+    "section": "Steps for completing this assignment",
+    "text": "Steps for completing this assignment\n\nSee a tutorial on how to install the JavaFX plugin in Eclipse at (https://docs.google.com/document/d/1FUROjRbvIi_WKNYJ-00uprIo2YPHDNd72SrqgwaqKis/edit?usp=sharing). The tutorial is also posted on the CS 210 resources webpage (https://piazza.com/arizona/spring2018/csc210/resources).\nAccept the github assignment for PA8, (https://classroom.github.com/a/JKfUfTBS). Import your PA8 github repository into Eclipse as usual.\nRun the given starter code and see what it does.\nCopy your PA6 code into the Eclipse project.\nImplement the TODO items in the provided PA8Main.java.\nCreate your own copy of Garden.in called myGarden.in that includes planting your unique garden item.\nMake a video of running myGarden.in through your program."
+  },
+  {
+    "objectID": "programming-assignment-06.html#resources",
+    "href": "programming-assignment-06.html#resources",
+    "title": "Programming Assignment 06",
+    "section": "Resources",
+    "text": "Resources\nThe provided code uses some new concepts. We will be covering them in class. Additionally, here are some references.\n\ndrawing to a canvas, https://docs.oracle.com/javafx/2/canvas/jfxpub-canvas.htm\nlambda functions,http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html\ncolors to pick from, https://docs.oracle.com/javase/8/javafx/api/javafx/scene/paint/Color.html"
+  },
+  {
+    "objectID": "programming-assignment-06.html#general-requirements",
+    "href": "programming-assignment-06.html#general-requirements",
+    "title": "Programming Assignment 06",
+    "section": "General requirements",
+    "text": "General requirements\nThis assignment is different from other assignments you’ve had so far in that you are given a lot more freedom to design your output the way you want. You can try to mimic what was done in the video and get the credit for it, but however you choose to output your garden, the following general requirements must be met:\n\nEach plant must be one-of-a-kind, meaning they must be distinguishable from any other plant and the background. In the example video, this is done by using a different color for each plant against a brown background. You do not have to do it this way, for example, you can choose to use an image for each plant instead of a colored tile.\nEach command must be visually noticeable. This means that when ‘GROW 1’ is called for example, it should be visually obvious that every plant just grew by 1. In the example video, grow commands cause more identical tiles to be drawn in some fashion (depending on the plant type) around every plant.\nThere must be a command log which displays commands as they are being executed. In the example video, this is done in a TextArea at the bottom of the garden.\nYou must still handle errors. Errors that don’t cause the program to stop (such as ‘Can’t grow here’) should be distinguishable in the command log. In the video example, the error is fully capitalized and spaced out from surrounding text. For errors that do cause the program to stop, such as ‘Invalid dimension input’ or ‘File not found’ should still print to stdout and exit the program as usual."
+  },
+  {
+    "objectID": "programming-assignment-TSP.html",
+    "href": "programming-assignment-TSP.html",
+    "title": "Programming Assignment 06",
+    "section": "",
+    "text": "PA6 is about applying three different approaches to solving a well-known and generally useful graph problem, the Traveling Salesperson Problem (TSP).\n\n\nThe goal of this assignment is to practice the following algorithm patterns, data structures, and decomposition approaches.\n\nAlgorithmic patterns: recursive backtracking and heuristic\nData structure: graphs\nDecomposition: using provided classes other than the Java libraries\nPerformance analysis of different graph algorithm variants.\n\n\n\n\nThe Traveling Salesperson Problem asks what is the shortest trip through a sequence of locations and back to the beginning while only visiting each location once. The distances between locations are the input to the problem and can be represented as weights on edges in a graph.\n\n\n\nIn this assignment you will be implementing the traveling salesperson problem using three different ways: recursive backtracking, heuristic, and your own approach.\nTo use the program, someone will need to put the following arguments into the Eclipse arguments tab: PathTo/infile.mtx [HEURISTIC,BACKTRACK,MINE,TIME]\nThe input files are in the same format as the matrix market format used by the SuiteSparse Matrix Collection (https://sparse.tamu.edu/about). See https://math.nist.gov/MatrixMarket/formats.html for a description of the .mtx format. You CAN write similar code to the following code to read in the .mtx format. http://docs.roguewave.com/imsl/java/5.0.1/api/com/imsl/math/SparseMatrixEx2.html. Reading .mtx files will be covered in Section 4. Here is an example input file:\n%%MatrixMarket matrix coordinate real general\n3 3 6\n1 2 1.0\n2 1 2.0\n1 3 3.0\n3 1 4.0\n2 3 5.0\n3 2 6.0\nExample output to standard out is provided in the PublicTestCases/ for HEURISTIC and BACKTRACK. Here is the output for the above input file and the HEURISTIC command:\ncost = 10.0, visitOrder = [1, 2, 3]\nYou will be running your own algorithm with the MINE command.\nThe output for TIME is shown below.\nYou CAN use the code provided and/or written in Section 4 to read in files, store a graph, and output a graph to a dot file in your PA5. The output to a dot file might help debugging.\n\n\nWill make the decisions starting with node 1 and continuing through the nodes in order. Everytime a node is chosen, that choice will be checked before recursing to do some pruning. We cannot stop at the first node we find, because it is possible that other nodes will cost less.\n  create a trip\n  choose city 1 first\n  call enumerate on the trip\n    \n  enumerate( graph data structure, current trip so far,  \n             min trip previously found)\n        \n      if all nodes are in trip then\n          process the current trip:\n              does it have less cost than min trip?\n              if so then modify min trip previously found (hint: copyOtherIntoSelf())\n          return\n      \n      if trip so far has less cost than the min trip previously found\n          for each city x of the cities left\n              choose x next\n              enumerate( graph data structure, updated trip,\n                         min trip previously found )\n              unchoose x\n\n\n\n    create a trip\n    choose city 1 first, call it the current city\n    \n    for k=2 to num_nodes inclusive\n    \n        for each neighbor of node the current city (use getNeighbors method)\n            \n            find the neighbor that is available AND the closest to the current city\n                        \n        choose the closest city that is available for the trip\n        AND call that closest city the current city\n        \n        \n\n\n\nYou will also implement the command MINE that executes your own faster algorithm for performing the traveling salesperson problem. The code you submit should be able to execute the MINE command.\nFor your own approach you can choose to do one of the following: * improve upon the recursive backtracking approach by putting in more pruning and then show this is faster than the suggested recursive backtracking approach * improve upon the heuristic approach while not resorting to a trivial solution like just listing all of the nodes in order\n\n\n\n\nUsing code similar to the following, you will have a TIME command that times all of the algorithms.\n        long startTime = System.nanoTime();\n        trip = heuristic(graph);\n        long endTime = System.nanoTime();\n        long duration = (endTime - startTime) / 1000000;\n        System.out.println(\"heuristic: cost = \" + trip.tripCost(graph) + \", \"\n                + duration + \" milliseconds\");\nThe output for the TIME command will look as follows:\nheuristic: cost = 935.3299999999999, 0 milliseconds\nmine: cost = 935.3299999999999, 0 milliseconds\nbacktrack: cost = 835.8799999999999, 5 milliseconds\nNone of the grading test cases call TIME, because each time you run the program even on the same input and on the same machine there will be some time variance. Because of that you will probably want to run the timings about 5 times before drawing any conclusions.\nINSTEAD, you will be running the TIME command on your machine for the big11.mtx input. It takes around a minute for the recursive backtracking algorithm on a 3 year old Mac.\n\n\n\nAll of the inputs will be correctly formed for this assignment.\n\n\n\n\nThe node ids should go from 1 to the number of nodes inclusive, because the sparse matrix market file format (.mtx) stores node ids starting at 1 instead of 0.\nWe are providing a Trip class that keeps track of a Trip. Read its usage instructions.\nWe provide a graph data structure called DGraph. Read its usage instructions for how to use handy methods such as the one that returns the neighbors for a node.\n\n\n\n\n80% of this assignment grade will be correctness for the HEURISTIC and BACKTRACK commands. For this assignment, there will be some private test cases on Gradescope used for grading.\nThe other 20% of your grade will be broken up as follows: * 5 your decomposition and code clarity * 5 timing results in the README.md file along with some discussion of why the algorithms have the relative performance they do. Why is HEURISTIC faster than BACKTRACK? How does your MINE algorithm perform? (One or two paragraphs at the most.) * 5 TIME implementation * 5 MINE algorithm that does something different than given algorithms\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method EXCEPT for in the timing code.\nShould carefully select data structures that implement the required functionality.\nAll of the Java files should be &lt;250 lines of code.\nEach method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\nMake things as simple as possible.\n\nOnly use one Scanner instance.\nDon’t use lambda functions or other features in non-standard ways.\nReduce the amount of conditional nesting as much as possible.\n\nDeclare collection variables using interface types.\nYour code should be decomposed well. main should be a good summary of your program and no method should be overly long or trivial. Your methods should not be chained. Do NOT have main just call one method that does everything.\nRedundancy is a grading focus; some tasks are similar in behavior or based off of other tasks. You should avoid repeated logic as much as possible.\n\nCode Clarity\n\nYOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it.\n\nNo magic numbers\nNo methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nWe will be modeling some of the issues we are seeing with code.\nWe will ask permission to show clear code examples.\n\nThe coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine. At workplaces the style requirements can be extensive. In this class, we have the following requirements:\n\nNo lines should be longer than 80 characters line.\nDo not mix tabs and spaces. Use spaces consistently.\nThe left curly brace should start on the same line as the loop or conditional.\n\n\n\n\nFiles that need to be submitted to Gradescope: * The TSProblem.java file * README.mdwith the results of timing experiments that compare your improved algorithm to the required algorithms for the input file big11.mtx and describes why the algorithms have relative performance differences"
+  },
+  {
+    "objectID": "programming-assignment-TSP.html#learning-objectives",
+    "href": "programming-assignment-TSP.html#learning-objectives",
+    "title": "Programming Assignment 06",
+    "section": "",
+    "text": "The goal of this assignment is to practice the following algorithm patterns, data structures, and decomposition approaches.\n\nAlgorithmic patterns: recursive backtracking and heuristic\nData structure: graphs\nDecomposition: using provided classes other than the Java libraries\nPerformance analysis of different graph algorithm variants."
+  },
+  {
+    "objectID": "programming-assignment-TSP.html#traveling-salesperson-problem-tsp",
+    "href": "programming-assignment-TSP.html#traveling-salesperson-problem-tsp",
+    "title": "Programming Assignment 06",
+    "section": "",
+    "text": "The Traveling Salesperson Problem asks what is the shortest trip through a sequence of locations and back to the beginning while only visiting each location once. The distances between locations are the input to the problem and can be represented as weights on edges in a graph."
+  },
+  {
+    "objectID": "programming-assignment-TSP.html#the-assignment",
+    "href": "programming-assignment-TSP.html#the-assignment",
+    "title": "Programming Assignment 06",
+    "section": "",
+    "text": "In this assignment you will be implementing the traveling salesperson problem using three different ways: recursive backtracking, heuristic, and your own approach.\nTo use the program, someone will need to put the following arguments into the Eclipse arguments tab: PathTo/infile.mtx [HEURISTIC,BACKTRACK,MINE,TIME]\nThe input files are in the same format as the matrix market format used by the SuiteSparse Matrix Collection (https://sparse.tamu.edu/about). See https://math.nist.gov/MatrixMarket/formats.html for a description of the .mtx format. You CAN write similar code to the following code to read in the .mtx format. http://docs.roguewave.com/imsl/java/5.0.1/api/com/imsl/math/SparseMatrixEx2.html. Reading .mtx files will be covered in Section 4. Here is an example input file:\n%%MatrixMarket matrix coordinate real general\n3 3 6\n1 2 1.0\n2 1 2.0\n1 3 3.0\n3 1 4.0\n2 3 5.0\n3 2 6.0\nExample output to standard out is provided in the PublicTestCases/ for HEURISTIC and BACKTRACK. Here is the output for the above input file and the HEURISTIC command:\ncost = 10.0, visitOrder = [1, 2, 3]\nYou will be running your own algorithm with the MINE command.\nThe output for TIME is shown below.\nYou CAN use the code provided and/or written in Section 4 to read in files, store a graph, and output a graph to a dot file in your PA5. The output to a dot file might help debugging.\n\n\nWill make the decisions starting with node 1 and continuing through the nodes in order. Everytime a node is chosen, that choice will be checked before recursing to do some pruning. We cannot stop at the first node we find, because it is possible that other nodes will cost less.\n  create a trip\n  choose city 1 first\n  call enumerate on the trip\n    \n  enumerate( graph data structure, current trip so far,  \n             min trip previously found)\n        \n      if all nodes are in trip then\n          process the current trip:\n              does it have less cost than min trip?\n              if so then modify min trip previously found (hint: copyOtherIntoSelf())\n          return\n      \n      if trip so far has less cost than the min trip previously found\n          for each city x of the cities left\n              choose x next\n              enumerate( graph data structure, updated trip,\n                         min trip previously found )\n              unchoose x\n\n\n\n    create a trip\n    choose city 1 first, call it the current city\n    \n    for k=2 to num_nodes inclusive\n    \n        for each neighbor of node the current city (use getNeighbors method)\n            \n            find the neighbor that is available AND the closest to the current city\n                        \n        choose the closest city that is available for the trip\n        AND call that closest city the current city\n        \n        \n\n\n\nYou will also implement the command MINE that executes your own faster algorithm for performing the traveling salesperson problem. The code you submit should be able to execute the MINE command.\nFor your own approach you can choose to do one of the following: * improve upon the recursive backtracking approach by putting in more pruning and then show this is faster than the suggested recursive backtracking approach * improve upon the heuristic approach while not resorting to a trivial solution like just listing all of the nodes in order"
+  },
+  {
+    "objectID": "programming-assignment-TSP.html#timing-all-of-the-approaches",
+    "href": "programming-assignment-TSP.html#timing-all-of-the-approaches",
+    "title": "Programming Assignment 06",
+    "section": "",
+    "text": "Using code similar to the following, you will have a TIME command that times all of the algorithms.\n        long startTime = System.nanoTime();\n        trip = heuristic(graph);\n        long endTime = System.nanoTime();\n        long duration = (endTime - startTime) / 1000000;\n        System.out.println(\"heuristic: cost = \" + trip.tripCost(graph) + \", \"\n                + duration + \" milliseconds\");\nThe output for the TIME command will look as follows:\nheuristic: cost = 935.3299999999999, 0 milliseconds\nmine: cost = 935.3299999999999, 0 milliseconds\nbacktrack: cost = 835.8799999999999, 5 milliseconds\nNone of the grading test cases call TIME, because each time you run the program even on the same input and on the same machine there will be some time variance. Because of that you will probably want to run the timings about 5 times before drawing any conclusions.\nINSTEAD, you will be running the TIME command on your machine for the big11.mtx input. It takes around a minute for the recursive backtracking algorithm on a 3 year old Mac."
+  },
+  {
+    "objectID": "programming-assignment-TSP.html#error-handling",
+    "href": "programming-assignment-TSP.html#error-handling",
+    "title": "Programming Assignment 06",
+    "section": "",
+    "text": "All of the inputs will be correctly formed for this assignment."
+  },
+  {
+    "objectID": "programming-assignment-TSP.html#notes-and-suggestions",
+    "href": "programming-assignment-TSP.html#notes-and-suggestions",
+    "title": "Programming Assignment 06",
+    "section": "",
+    "text": "The node ids should go from 1 to the number of nodes inclusive, because the sparse matrix market file format (.mtx) stores node ids starting at 1 instead of 0.\nWe are providing a Trip class that keeps track of a Trip. Read its usage instructions.\nWe provide a graph data structure called DGraph. Read its usage instructions for how to use handy methods such as the one that returns the neighbors for a node."
+  },
+  {
+    "objectID": "programming-assignment-TSP.html#grading-criteria",
+    "href": "programming-assignment-TSP.html#grading-criteria",
+    "title": "Programming Assignment 06",
+    "section": "",
+    "text": "80% of this assignment grade will be correctness for the HEURISTIC and BACKTRACK commands. For this assignment, there will be some private test cases on Gradescope used for grading.\nThe other 20% of your grade will be broken up as follows: * 5 your decomposition and code clarity * 5 timing results in the README.md file along with some discussion of why the algorithms have the relative performance they do. Why is HEURISTIC faster than BACKTRACK? How does your MINE algorithm perform? (One or two paragraphs at the most.) * 5 TIME implementation * 5 MINE algorithm that does something different than given algorithms\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method EXCEPT for in the timing code.\nShould carefully select data structures that implement the required functionality.\nAll of the Java files should be &lt;250 lines of code.\nEach method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\nMake things as simple as possible.\n\nOnly use one Scanner instance.\nDon’t use lambda functions or other features in non-standard ways.\nReduce the amount of conditional nesting as much as possible.\n\nDeclare collection variables using interface types.\nYour code should be decomposed well. main should be a good summary of your program and no method should be overly long or trivial. Your methods should not be chained. Do NOT have main just call one method that does everything.\nRedundancy is a grading focus; some tasks are similar in behavior or based off of other tasks. You should avoid repeated logic as much as possible.\n\nCode Clarity\n\nYOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it.\n\nNo magic numbers\nNo methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nWe will be modeling some of the issues we are seeing with code.\nWe will ask permission to show clear code examples.\n\nThe coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine. At workplaces the style requirements can be extensive. In this class, we have the following requirements:\n\nNo lines should be longer than 80 characters line.\nDo not mix tabs and spaces. Use spaces consistently.\nThe left curly brace should start on the same line as the loop or conditional."
+  },
+  {
+    "objectID": "programming-assignment-TSP.html#submission",
+    "href": "programming-assignment-TSP.html#submission",
+    "title": "Programming Assignment 06",
+    "section": "",
+    "text": "Files that need to be submitted to Gradescope: * The TSProblem.java file * README.mdwith the results of timing experiments that compare your improved algorithm to the required algorithms for the input file big11.mtx and describes why the algorithms have relative performance differences"
+  },
+  {
+    "objectID": "slides-heuristics.html",
+    "href": "slides-heuristics.html",
+    "title": "Heuristics",
+    "section": "",
+    "text": "We have worked with two recursive algorithmic patterns:\n\nExhaustive search (enumeration)\nBacktracking"
+  },
+  {
+    "objectID": "slides-heuristics.html#relevant-algorithms",
+    "href": "slides-heuristics.html#relevant-algorithms",
+    "title": "Heuristics",
+    "section": "",
+    "text": "We have worked with two recursive algorithmic patterns:\n\nExhaustive search (enumeration)\nBacktracking"
+  },
+  {
+    "objectID": "slides-heuristics.html#the-travelling-salesperson-problem-tsp",
+    "href": "slides-heuristics.html#the-travelling-salesperson-problem-tsp",
+    "title": "Heuristics",
+    "section": "The travelling salesperson problem (TSP)",
+    "text": "The travelling salesperson problem (TSP)\n“Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?”\nHow would you solve this using exhaustive search?"
+  },
+  {
+    "objectID": "slides-heuristics.html#the-travelling-salesperson-problem-tsp-1",
+    "href": "slides-heuristics.html#the-travelling-salesperson-problem-tsp-1",
+    "title": "Heuristics",
+    "section": "The travelling salesperson problem (TSP)",
+    "text": "The travelling salesperson problem (TSP)\nHow would you solve this using exhaustive search?\n\nCalculate all the possible routes\nCalculate the distance of each route\nChoose the shortest route"
+  },
+  {
+    "objectID": "slides-heuristics.html#the-travelling-salesperson-problem-tsp-2",
+    "href": "slides-heuristics.html#the-travelling-salesperson-problem-tsp-2",
+    "title": "Heuristics",
+    "section": "The travelling salesperson problem (TSP)",
+    "text": "The travelling salesperson problem (TSP)\nHow would you solve this with backtracking?\nWhat would be a way to prune branches?"
+  },
+  {
+    "objectID": "slides-heuristics.html#the-travelling-salesperson-problem-tsp-3",
+    "href": "slides-heuristics.html#the-travelling-salesperson-problem-tsp-3",
+    "title": "Heuristics",
+    "section": "The travelling salesperson problem (TSP)",
+    "text": "The travelling salesperson problem (TSP)\nWhat would be a way to prune branches?\nKeep track of minimal distance found, if trip in the current branch at any point has greater distance than the minimal trip previously found, backtrack"
+  },
+  {
+    "objectID": "slides-heuristics.html#heuristics",
+    "href": "slides-heuristics.html#heuristics",
+    "title": "Heuristics",
+    "section": "Heuristics",
+    "text": "Heuristics\n\nExhaustively searching every possible solution does not work for all problems, it can get very costly.\nWe can make use of use a heuristic to approximate answers to a problem\nA heuristic guides an algorithm to find good choices\nA heuristic is a shortcut that sacrifices accuracy and completenes\nThe goal is to find approximate solutions more quickly"
+  },
+  {
+    "objectID": "slides-heuristics.html#the-travelling-salesperson-problem-tsp-4",
+    "href": "slides-heuristics.html#the-travelling-salesperson-problem-tsp-4",
+    "title": "Heuristics",
+    "section": "The travelling salesperson problem (TSP)",
+    "text": "The travelling salesperson problem (TSP)\nHeuristics: greedy algorithm\n\nPick whatever is currently the best next step\nChoose the closest city that is available for the trip at each step"
+  },
+  {
+    "objectID": "slides-heuristics.html#greedy-algorithm",
+    "href": "slides-heuristics.html#greedy-algorithm",
+    "title": "Heuristics",
+    "section": "Greedy Algorithm",
+    "text": "Greedy Algorithm\n\nChoose best option at each step\nSolve remaining subproblems after making greedy step\n\nNo need to calculate all steps/branches like in enumeration and backtracking"
+  },
+  {
+    "objectID": "slides-heuristics.html#knapsack-problem",
+    "href": "slides-heuristics.html#knapsack-problem",
+    "title": "Heuristics",
+    "section": "Knapsack Problem",
+    "text": "Knapsack Problem\nGiven a set of items, each with a weight and a value, determine which items to include in the collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.\nDiscuss with your table mates ways to approach this problem\nExample: limit weight of knapsack is 5kg\n\nItem 1: $400, 3kg\nItem 2: $200, 1kg\nItem 3: $300, 3kg"
+  },
+  {
+    "objectID": "slides-heuristics.html#knapsack-problem-1",
+    "href": "slides-heuristics.html#knapsack-problem-1",
+    "title": "Heuristics",
+    "section": "Knapsack Problem",
+    "text": "Knapsack Problem\n\nBest items have big value, small size\nOrder items in a way to represent that big value and small size is better, and then pack them until they don’t fit into the knapsack anymore\nCompare solution total value with the highest valuable item (greedy choice)\n\nExample: limit weight of knapsack is 200kg\n\nItem 1: $6, 3kg\nItem 2: $200, 200kg"
+  },
+  {
+    "objectID": "slides-heuristics.html#knapsack-problem-java-implementation",
+    "href": "slides-heuristics.html#knapsack-problem-java-implementation",
+    "title": "Heuristics",
+    "section": "Knapsack Problem – Java Implementation",
+    "text": "Knapsack Problem – Java Implementation\n\nWhat classes do you need?"
+  },
+  {
+    "objectID": "slides-heuristics.html#item-implementation",
+    "href": "slides-heuristics.html#item-implementation",
+    "title": "Heuristics",
+    "section": "Item Implementation",
+    "text": "Item Implementation\npublic class Item {\n    private String name;\n    private double value;\n    private double weight;\n    \n    public Item(String n, double v, double w) {\n        name = n;\n        value = v;\n        weight = w;\n    }\n    \n    public String getName() {\n        return name;\n    }\n    \n    public double getValue() {\n        return value;\n    }\n    \n    public double getWeight() {\n        return weight;\n    }\n    \n    public double getRatio() {\n        return value/weight;\n    }\n    \n}"
+  },
+  {
+    "objectID": "slides-heuristics.html#knapsack-implementation",
+    "href": "slides-heuristics.html#knapsack-implementation",
+    "title": "Heuristics",
+    "section": "Knapsack Implementation",
+    "text": "Knapsack Implementation\nimport java.util.ArrayList;\n\npublic class Knapsack {\n    private double limit;\n    private ArrayList&lt;Item&gt; contents = new ArrayList&lt;&gt;();\n    \n    public Knapsack(double limit) {\n        this.limit = limit;\n    }\n    \n    public double getTotalWeight() {\n        double total = 0;\n        for (Item item : contents) {\n            total += item.getWeight();\n        }\n        return total;\n    }\n    \n    public double getValue() {\n        double total = 0;\n        for (Item item : contents) {\n            total += item.getValue();\n        }\n        return total;\n    }\n    \n    public double getLimit() {\n        return limit;\n    }\n    \n    public void empty() {\n        ArrayList&lt;Item&gt; allItems = new ArrayList&lt;&gt;(contents);\n        for(Item item : allItems) contents.remove(item);\n    }\n    \n    public boolean addItem(Item item) {\n        if (item.getWeight() + getTotalWeight() &lt;= limit) {\n            contents.add(item);\n            return true;\n        } else return false;\n    }\n    \n    public String toString() {\n        String message = \"\";\n        for (Item item : contents) message += item.getName() + \" \";\n        message += \"for a total value of \" + getValue();\n        return message;\n    }\n}"
+  },
+  {
+    "objectID": "slides-heuristics.html#knapsack-problem-implementation",
+    "href": "slides-heuristics.html#knapsack-problem-implementation",
+    "title": "Heuristics",
+    "section": "Knapsack Problem Implementation",
+    "text": "Knapsack Problem Implementation\nimport java.util.ArrayList;\nimport java.util.Collections;\n\npublic class KnapsackProblem {\n\n    public static void main(String[] args) {\n        Knapsack myBag = new Knapsack(100);\n        ArrayList&lt;Item&gt; items = new ArrayList&lt;&gt;();\n        items.add(new Item(\"A\", 10, 10));\n        items.add(new Item(\"B\", 10, 100));\n        items.add(new Item(\"C\", 1, 100));\n        items.add(new Item(\"D\", 100, 10));\n        items.add(new Item(\"E\", 100, 10));\n        items.add(new Item(\"F\", 50, 10));\n        //items.add(new Item(\"G\", 300, 100));\n        \n        // make copy for step 3\n        ArrayList&lt;Item&gt; originalItems = new ArrayList&lt;&gt;(items);\n        \n        // step 1: sort by value/weight rations\n        ArrayList&lt;Double&gt; ratios = new ArrayList&lt;&gt;();\n        for (Item item : items) {\n            ratios.add(item.getRatio());\n        }\n        ArrayList&lt;Double&gt; sortedRatios = new ArrayList&lt;&gt;(ratios);\n        Collections.sort(sortedRatios, Collections.reverseOrder());\n    \n        // step 2: add each item to knapsack in ratio order\n        for (Double ratio : sortedRatios) {\n            // get item with that ratio\n            int index = ratios.indexOf(ratio);\n            Item item = items.get(index);\n            // remote item and ratio\n            ratios.remove(ratio);\n            items.remove(item);\n            // message to user\n            System.out.println(\"Trying to add \" + item.getName());\n            // try to add item to knapsack\n            if (myBag.addItem(item)) continue;\n            else break;\n        }\n        \n        // step 3: is there any item that is worth individually more?\n        for (Item item : originalItems) {\n            if (item.getValue() &gt; myBag.getValue()) {\n                myBag.empty();\n                myBag.addItem(item);\n            }\n        }\n        \n        System.out.println(myBag.toString());\n        \n    }\n\n}"
+  },
+  {
+    "objectID": "slides-graphs.html",
+    "href": "slides-graphs.html",
+    "title": "Graphs",
+    "section": "",
+    "text": "A graph:\n\nis a non-linear data structure\nstores connected data (a network of people)\nconsists of vertices/nodes and edges/lines\n\nA Graph G is composed of a set of vertices(V) and a set of edges(E)\nThe graph is denoted by \\(G(V, E)\\)"
+  },
+  {
+    "objectID": "slides-graphs.html#graphs",
+    "href": "slides-graphs.html#graphs",
+    "title": "Graphs",
+    "section": "",
+    "text": "A graph:\n\nis a non-linear data structure\nstores connected data (a network of people)\nconsists of vertices/nodes and edges/lines\n\nA Graph G is composed of a set of vertices(V) and a set of edges(E)\nThe graph is denoted by \\(G(V, E)\\)"
+  },
+  {
+    "objectID": "slides-graphs.html#vertices-and-edges",
+    "href": "slides-graphs.html#vertices-and-edges",
+    "title": "Graphs",
+    "section": "vertices and edges",
+    "text": "vertices and edges\n\nA vertex represents the entity (e.g., people)\nAn edge represents the relationship between entities (e.g., a person’s friendships).\n\nGraphs can be weighted and unweighted"
+  },
+  {
+    "objectID": "slides-graphs.html#representations-of-graph",
+    "href": "slides-graphs.html#representations-of-graph",
+    "title": "Graphs",
+    "section": "Representations of Graph",
+    "text": "Representations of Graph\n\nAdjacency Matrix\nAdjacency List"
+  },
+  {
+    "objectID": "programming-assignment-graph-coloring.html",
+    "href": "programming-assignment-graph-coloring.html",
+    "title": "Programming Assignment 06",
+    "section": "",
+    "text": "Deadline: October 30, 2024 – Wednesday, 11:30pm"
+  },
+  {
+    "objectID": "programming-assignment-graph-coloring.html#learning-objectives",
+    "href": "programming-assignment-graph-coloring.html#learning-objectives",
+    "title": "Programming Assignment 06",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nThe goal of this assignment is to practice the following algorithm patterns, data structures, and decomposition approaches.\n\nAlgorithmic patterns: recursive backtracking and heuristic\nData structure: graphs\nDecomposition: using provided classes other than the Java libraries"
+  },
+  {
+    "objectID": "programming-assignment-graph-coloring.html#graph-coloring",
+    "href": "programming-assignment-graph-coloring.html#graph-coloring",
+    "title": "Programming Assignment 06",
+    "section": "Graph Coloring",
+    "text": "Graph Coloring\nMany important problems such as coloring a map and register allocation can be expressed as graph coloring problems. See [https://en.wikipedia.org/wiki/Graph_coloring] for examples and mention of Sudoku as a kind of graph coloring problem."
+  },
+  {
+    "objectID": "programming-assignment-graph-coloring.html#the-assignment",
+    "href": "programming-assignment-graph-coloring.html#the-assignment",
+    "title": "Programming Assignment 06",
+    "section": "The Assignment",
+    "text": "The Assignment\nIn this assignment you will be implementing graph coloring three different ways: recursive backtracking, heuristic, and your own approach.\nThe program should have the following usage: java PA7Main infile.mtx [HEURISTIC,BACKTRACK,MINE,TIME]\nThe input files will be from the SuiteSparse Matrix Collection (https://sparse.tamu.edu/about). See https://math.nist.gov/MatrixMarket/formats.html for a description of the .mtx format. You CAN write similar code to the following code to read in the .mtx format. http://docs.roguewave.com/imsl/java/5.0.1/api/com/imsl/math/SparseMatrixEx2.html. Reading .mtx files will be covered in Section 8.\nExample output to standard out is provided in the PublicTestCases/ for HEURISTIC and BACKTRACK. You will be running your own algorithm with the MINE command. The output for TIME is shown below.\nYour program should also generate before and after .dot files with the nodes colored. See the before and after .dot files in the PublicTestCases/ subdirectory for examples and carefully read the code at the top of the provided Coloring.java file. You can use whatever node filling colors you would like\n(see https://www.graphviz.org/doc/info/colors.html). Writing dot files will be covered in Section 8.\nYou CAN use the code provided and/or written in Section 8 to read in files, store a graph, and output a graph to a dot file in your PA7.\n\nRecursive Backtracking\nWill make the decisions starting with node 1 and continuing through the nodes in order. Everytime a node coloring choice is tried, that choice will be checked before recursing to do some pruning. We cannot stop at the first coloring we find, because it is possible that other colorings will use fewer colors.\n  Set the color for node 1 to the first color (Coloring.Color.A)\n  Call enumerate on node 2\n    \n  enumerate( graph data structure, current coloring so far, ready to color kth node, \n             min coloring previously found)\n        \n      if all nodes have been colored then\n          process the current coloring:\n              does it use fewer colors than min coloring?\n              if so then modify min coloring previously found (hint: copyOtherIntoSelf())\n          return\n      \n      if coloring so far has fewer colors than the min coloring previously found\n          for all possible colors in order except for NOCOLOR\n              if that color does NOT conflict with node k's neighboring colors\n                  color kth node with color\n                  enumerate( graph data structure, updated coloring, k+1,\n                             min coloring previously found )\n                  uncolor the kth node\n\n\nHeuristic\n    for k=1 to num_nodes inclusive\n    \n        for all possible colors in order except for NOCOLOR\n                        \n            if that coloring does NOT conflict with node k's neighboring colors                \n                color kth node with color\n                break out of loop over possible colors for node k       \n\n\nYour own approach\nYou will also implement the command MINE that executes your own faster algorithm for performing graph coloring. The code you submit should be able to execute the MINE command.\nFor your own approach you can choose to do one of the following: * improve upon the recursive backtracking approach by putting in more pruning and then show this is faster than the suggested recursive backtracking approach * improve upon the heuristic approach while not resorting to a trivial solution like giving each node its own color"
+  },
+  {
+    "objectID": "programming-assignment-graph-coloring.html#timing-all-of-the-approaches",
+    "href": "programming-assignment-graph-coloring.html#timing-all-of-the-approaches",
+    "title": "Programming Assignment 06",
+    "section": "Timing all of the approaches",
+    "text": "Timing all of the approaches\nUsing code similar to the following, you will have a TIME command that times all of the algorithms.\n        long startTime = System.nanoTime();\n        coloring = heuristic(graph);\n        long endTime = System.nanoTime();\n        long duration = (endTime - startTime) / 1000000;\n        System.out.println(\"heuristic: \" + coloring.getNumColors() + \" colors, \"\n                + duration + \" milliseconds\");\nThe output for the TIME command will look as follows:\nheuristic: 6 colors, 4 milliseconds\nmine:      6 colors, 3 milliseconds\nbacktrack: 4 colors, 50102 milliseconds\nNone of the grading test cases call TIME, because each time you run the program even on the same input and on the same machine there will be some time variance. Because of that you will probably want to run the timings about 5 times before drawing any conclusions.\nINSTEAD, you will be running the TIME command on your machine for the mesh1em6.mtx input. It takes around a minute for the recursive backtracking algorithm on a 2 year old Mac."
+  },
+  {
+    "objectID": "programming-assignment-graph-coloring.html#error-handling",
+    "href": "programming-assignment-graph-coloring.html#error-handling",
+    "title": "Programming Assignment 06",
+    "section": "Error handling",
+    "text": "Error handling\nAll of the inputs will be correctly formed for this assignment."
+  },
+  {
+    "objectID": "programming-assignment-graph-coloring.html#notes-and-suggestions",
+    "href": "programming-assignment-graph-coloring.html#notes-and-suggestions",
+    "title": "Programming Assignment 06",
+    "section": "Notes and Suggestions",
+    "text": "Notes and Suggestions\n\nTo get started, go to the resources page on piazza and click on the PA7-GraphColoring link under programming assignments and then accept the github assignment and repository. Import the github repository into Eclipse as normal. We aren’t using Travis CI anymore. Test things locally in Eclipse and submit all the files to Gradescope to see how you do on the grading test cases.\nThe node ids should go from 1 to the number of nodes inclusive, because the sparse matrix market file format (.mtx) stores node ids starting at 1 instead of 0.\nWe are providing a Coloring class that keeps track of a mapping of node ids to colors.\nIn Section 8 this week, we provided a graph data structure, to which you might need to add a method that returns the neighbors for a node.\nIn Section 8 this week, we helped you write the code to read in .mtx files and output a dot file. You will need to modify the dot output code to generate colored nodes. The setting of the colors is up to you and happens in Coloring.java."
+  },
+  {
+    "objectID": "programming-assignment-graph-coloring.html#grading-criteria",
+    "href": "programming-assignment-graph-coloring.html#grading-criteria",
+    "title": "Programming Assignment 06",
+    "section": "Grading Criteria",
+    "text": "Grading Criteria\nHalf of the PA7 grade will be correctness. For this assignment, there will be some private test cases on Gradescope used for grading. However, note the names of the test cases and realize you can download the .mtx files from the SuiteSparse Matrix Collection (https://sparse.tamu.edu/about).\nThe other half of the PA7 grade will be broken up as follows: * 25 your decomposition and code clarity * 10 MINE algorithm that does something different than given algorithms * 10 timing results in the README.md file along with a TIME implementation * 5 points for a cool dot file with a coloring in it\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method EXCEPT for in the timing code.\nAll of the Java files should be &lt;250 lines of code.\nEach method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\nMake things as simple as possible.\n\nOnly use one Scanner instance.\nDon’t use lambda functions or other features in non-standard ways.\nIn general avoid nested loops. However, can use nested loops to implement the recursive backtracking and heuristic in PA7.\nIn general, avoid nesting conditionals. However, you can use nested conditionals to implement the recursive backtracking and heuristic in PA7.\nAvoid chaining: see the Piazza post for more info\n\n\nCode Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement.\n\nThe coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine."
+  },
+  {
+    "objectID": "programming-assignment-graph-coloring.html#submission",
+    "href": "programming-assignment-graph-coloring.html#submission",
+    "title": "Programming Assignment 06",
+    "section": "Submission",
+    "text": "Submission\nFiles that need to be submitted to Gradescope: * all .java files * README.md with the results of timing experiments that compare your improved algorithm to the required algorithms for the input file mesh1em6.mtx * a dot file that shows off your graph coloring skills"
   }
 ]
