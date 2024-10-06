@@ -2469,5 +2469,26 @@
     "title": "Heuristics",
     "section": "Knapsack Problem – Java Implementation",
     "text": "Knapsack Problem – Java Implementation\n\nWhat classes do you need?"
+  },
+  {
+    "objectID": "slides-05-01.html#item-implementation",
+    "href": "slides-05-01.html#item-implementation",
+    "title": "Heuristics",
+    "section": "Item Implementation",
+    "text": "Item Implementation\npublic class Item {\n    private String name;\n    private double value;\n    private double weight;\n    \n    public Item(String n, double v, double w) {\n        name = n;\n        value = v;\n        weight = w;\n    }\n    \n    public String getName() {\n        return name;\n    }\n    \n    public double getValue() {\n        return value;\n    }\n    \n    public double getWeight() {\n        return weight;\n    }\n    \n    public double getRatio() {\n        return value/weight;\n    }\n    \n}"
+  },
+  {
+    "objectID": "slides-05-01.html#knapsack-implementation",
+    "href": "slides-05-01.html#knapsack-implementation",
+    "title": "Heuristics",
+    "section": "Knapsack Implementation",
+    "text": "Knapsack Implementation\nimport java.util.ArrayList;\n\npublic class Knapsack {\n    private double limit;\n    private ArrayList&lt;Item&gt; contents = new ArrayList&lt;&gt;();\n    \n    public Knapsack(double limit) {\n        this.limit = limit;\n    }\n    \n    public double getTotalWeight() {\n        double total = 0;\n        for (Item item : contents) {\n            total += item.getWeight();\n        }\n        return total;\n    }\n    \n    public double getValue() {\n        double total = 0;\n        for (Item item : contents) {\n            total += item.getValue();\n        }\n        return total;\n    }\n    \n    public double getLimit() {\n        return limit;\n    }\n    \n    public void empty() {\n        ArrayList&lt;Item&gt; allItems = new ArrayList&lt;&gt;(contents);\n        for(Item item : allItems) contents.remove(item);\n    }\n    \n    public boolean addItem(Item item) {\n        if (item.getWeight() + getTotalWeight() &lt;= limit) {\n            contents.add(item);\n            return true;\n        } else return false;\n    }\n    \n    public String toString() {\n        String message = \"\";\n        for (Item item : contents) message += item.getName() + \" \";\n        message += \"for a total value of \" + getValue();\n        return message;\n    }\n}"
+  },
+  {
+    "objectID": "slides-05-01.html#knapsack-problem-implementation",
+    "href": "slides-05-01.html#knapsack-problem-implementation",
+    "title": "Heuristics",
+    "section": "Knapsack Problem Implementation",
+    "text": "Knapsack Problem Implementation\nimport java.util.ArrayList;\nimport java.util.Collections;\n\npublic class KnapsackProblem {\n\n    public static void main(String[] args) {\n        Knapsack myBag = new Knapsack(100);\n        ArrayList&lt;Item&gt; items = new ArrayList&lt;&gt;();\n        items.add(new Item(\"A\", 10, 10));\n        items.add(new Item(\"B\", 10, 100));\n        items.add(new Item(\"C\", 1, 100));\n        items.add(new Item(\"D\", 100, 10));\n        items.add(new Item(\"E\", 100, 10));\n        items.add(new Item(\"F\", 50, 10));\n        //items.add(new Item(\"G\", 300, 100));\n        \n        // make copy for step 3\n        ArrayList&lt;Item&gt; originalItems = new ArrayList&lt;&gt;(items);\n        \n        // step 1: sort by value/weight rations\n        ArrayList&lt;Double&gt; ratios = new ArrayList&lt;&gt;();\n        for (Item item : items) {\n            ratios.add(item.getRatio());\n        }\n        ArrayList&lt;Double&gt; sortedRatios = new ArrayList&lt;&gt;(ratios);\n        Collections.sort(sortedRatios, Collections.reverseOrder());\n    \n        // step 2: add each item to knapsack in ratio order\n        for (Double ratio : sortedRatios) {\n            // get item with that ratio\n            int index = ratios.indexOf(ratio);\n            Item item = items.get(index);\n            // remote item and ratio\n            ratios.remove(ratio);\n            items.remove(item);\n            // message to user\n            System.out.println(\"Trying to add \" + item.getName());\n            // try to add item to knapsack\n            if (myBag.addItem(item)) continue;\n            else break;\n        }\n        \n        // step 3: is there any item that is worth individually more?\n        for (Item item : originalItems) {\n            if (item.getValue() &gt; myBag.getValue()) {\n                myBag.empty();\n                myBag.addItem(item);\n            }\n        }\n        \n        System.out.println(myBag.toString());\n        \n    }\n\n}"
   }
 ]

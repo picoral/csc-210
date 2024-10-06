@@ -28,6 +28,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -418,6 +483,147 @@
 <ul>
 <li>What classes do you need?</li>
 </ul>
+</section>
+<section id="item-implementation" class="slide level2">
+<h2><code>Item</code> Implementation</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>public class Item {</span>
+<span id="cb1-2"><a></a>    private String name;</span>
+<span id="cb1-3"><a></a>    private double value;</span>
+<span id="cb1-4"><a></a>    private double weight;</span>
+<span id="cb1-5"><a></a>    </span>
+<span id="cb1-6"><a></a>    public Item(String n, double v, double w) {</span>
+<span id="cb1-7"><a></a>        name = n;</span>
+<span id="cb1-8"><a></a>        value = v;</span>
+<span id="cb1-9"><a></a>        weight = w;</span>
+<span id="cb1-10"><a></a>    }</span>
+<span id="cb1-11"><a></a>    </span>
+<span id="cb1-12"><a></a>    public String getName() {</span>
+<span id="cb1-13"><a></a>        return name;</span>
+<span id="cb1-14"><a></a>    }</span>
+<span id="cb1-15"><a></a>    </span>
+<span id="cb1-16"><a></a>    public double getValue() {</span>
+<span id="cb1-17"><a></a>        return value;</span>
+<span id="cb1-18"><a></a>    }</span>
+<span id="cb1-19"><a></a>    </span>
+<span id="cb1-20"><a></a>    public double getWeight() {</span>
+<span id="cb1-21"><a></a>        return weight;</span>
+<span id="cb1-22"><a></a>    }</span>
+<span id="cb1-23"><a></a>    </span>
+<span id="cb1-24"><a></a>    public double getRatio() {</span>
+<span id="cb1-25"><a></a>        return value/weight;</span>
+<span id="cb1-26"><a></a>    }</span>
+<span id="cb1-27"><a></a>    </span>
+<span id="cb1-28"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="knapsack-implementation" class="slide level2">
+<h2><code>Knapsack</code> Implementation</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>import java.util.ArrayList;</span>
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a>public class Knapsack {</span>
+<span id="cb2-4"><a></a>    private double limit;</span>
+<span id="cb2-5"><a></a>    private ArrayList&lt;Item&gt; contents = new ArrayList&lt;&gt;();</span>
+<span id="cb2-6"><a></a>    </span>
+<span id="cb2-7"><a></a>    public Knapsack(double limit) {</span>
+<span id="cb2-8"><a></a>        this.limit = limit;</span>
+<span id="cb2-9"><a></a>    }</span>
+<span id="cb2-10"><a></a>    </span>
+<span id="cb2-11"><a></a>    public double getTotalWeight() {</span>
+<span id="cb2-12"><a></a>        double total = 0;</span>
+<span id="cb2-13"><a></a>        for (Item item : contents) {</span>
+<span id="cb2-14"><a></a>            total += item.getWeight();</span>
+<span id="cb2-15"><a></a>        }</span>
+<span id="cb2-16"><a></a>        return total;</span>
+<span id="cb2-17"><a></a>    }</span>
+<span id="cb2-18"><a></a>    </span>
+<span id="cb2-19"><a></a>    public double getValue() {</span>
+<span id="cb2-20"><a></a>        double total = 0;</span>
+<span id="cb2-21"><a></a>        for (Item item : contents) {</span>
+<span id="cb2-22"><a></a>            total += item.getValue();</span>
+<span id="cb2-23"><a></a>        }</span>
+<span id="cb2-24"><a></a>        return total;</span>
+<span id="cb2-25"><a></a>    }</span>
+<span id="cb2-26"><a></a>    </span>
+<span id="cb2-27"><a></a>    public double getLimit() {</span>
+<span id="cb2-28"><a></a>        return limit;</span>
+<span id="cb2-29"><a></a>    }</span>
+<span id="cb2-30"><a></a>    </span>
+<span id="cb2-31"><a></a>    public void empty() {</span>
+<span id="cb2-32"><a></a>        ArrayList&lt;Item&gt; allItems = new ArrayList&lt;&gt;(contents);</span>
+<span id="cb2-33"><a></a>        for(Item item : allItems) contents.remove(item);</span>
+<span id="cb2-34"><a></a>    }</span>
+<span id="cb2-35"><a></a>    </span>
+<span id="cb2-36"><a></a>    public boolean addItem(Item item) {</span>
+<span id="cb2-37"><a></a>        if (item.getWeight() + getTotalWeight() &lt;= limit) {</span>
+<span id="cb2-38"><a></a>            contents.add(item);</span>
+<span id="cb2-39"><a></a>            return true;</span>
+<span id="cb2-40"><a></a>        } else return false;</span>
+<span id="cb2-41"><a></a>    }</span>
+<span id="cb2-42"><a></a>    </span>
+<span id="cb2-43"><a></a>    public String toString() {</span>
+<span id="cb2-44"><a></a>        String message = "";</span>
+<span id="cb2-45"><a></a>        for (Item item : contents) message += item.getName() + " ";</span>
+<span id="cb2-46"><a></a>        message += "for a total value of " + getValue();</span>
+<span id="cb2-47"><a></a>        return message;</span>
+<span id="cb2-48"><a></a>    }</span>
+<span id="cb2-49"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="knapsack-problem-implementation" class="slide level2">
+<h2>Knapsack Problem Implementation</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>import java.util.ArrayList;</span>
+<span id="cb3-2"><a></a>import java.util.Collections;</span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a>public class KnapsackProblem {</span>
+<span id="cb3-5"><a></a></span>
+<span id="cb3-6"><a></a>    public static void main(String[] args) {</span>
+<span id="cb3-7"><a></a>        Knapsack myBag = new Knapsack(100);</span>
+<span id="cb3-8"><a></a>        ArrayList&lt;Item&gt; items = new ArrayList&lt;&gt;();</span>
+<span id="cb3-9"><a></a>        items.add(new Item("A", 10, 10));</span>
+<span id="cb3-10"><a></a>        items.add(new Item("B", 10, 100));</span>
+<span id="cb3-11"><a></a>        items.add(new Item("C", 1, 100));</span>
+<span id="cb3-12"><a></a>        items.add(new Item("D", 100, 10));</span>
+<span id="cb3-13"><a></a>        items.add(new Item("E", 100, 10));</span>
+<span id="cb3-14"><a></a>        items.add(new Item("F", 50, 10));</span>
+<span id="cb3-15"><a></a>        //items.add(new Item("G", 300, 100));</span>
+<span id="cb3-16"><a></a>        </span>
+<span id="cb3-17"><a></a>        // make copy for step 3</span>
+<span id="cb3-18"><a></a>        ArrayList&lt;Item&gt; originalItems = new ArrayList&lt;&gt;(items);</span>
+<span id="cb3-19"><a></a>        </span>
+<span id="cb3-20"><a></a>        // step 1: sort by value/weight rations</span>
+<span id="cb3-21"><a></a>        ArrayList&lt;Double&gt; ratios = new ArrayList&lt;&gt;();</span>
+<span id="cb3-22"><a></a>        for (Item item : items) {</span>
+<span id="cb3-23"><a></a>            ratios.add(item.getRatio());</span>
+<span id="cb3-24"><a></a>        }</span>
+<span id="cb3-25"><a></a>        ArrayList&lt;Double&gt; sortedRatios = new ArrayList&lt;&gt;(ratios);</span>
+<span id="cb3-26"><a></a>        Collections.sort(sortedRatios, Collections.reverseOrder());</span>
+<span id="cb3-27"><a></a>    </span>
+<span id="cb3-28"><a></a>        // step 2: add each item to knapsack in ratio order</span>
+<span id="cb3-29"><a></a>        for (Double ratio : sortedRatios) {</span>
+<span id="cb3-30"><a></a>            // get item with that ratio</span>
+<span id="cb3-31"><a></a>            int index = ratios.indexOf(ratio);</span>
+<span id="cb3-32"><a></a>            Item item = items.get(index);</span>
+<span id="cb3-33"><a></a>            // remote item and ratio</span>
+<span id="cb3-34"><a></a>            ratios.remove(ratio);</span>
+<span id="cb3-35"><a></a>            items.remove(item);</span>
+<span id="cb3-36"><a></a>            // message to user</span>
+<span id="cb3-37"><a></a>            System.out.println("Trying to add " + item.getName());</span>
+<span id="cb3-38"><a></a>            // try to add item to knapsack</span>
+<span id="cb3-39"><a></a>            if (myBag.addItem(item)) continue;</span>
+<span id="cb3-40"><a></a>            else break;</span>
+<span id="cb3-41"><a></a>        }</span>
+<span id="cb3-42"><a></a>        </span>
+<span id="cb3-43"><a></a>        // step 3: is there any item that is worth individually more?</span>
+<span id="cb3-44"><a></a>        for (Item item : originalItems) {</span>
+<span id="cb3-45"><a></a>            if (item.getValue() &gt; myBag.getValue()) {</span>
+<span id="cb3-46"><a></a>                myBag.empty();</span>
+<span id="cb3-47"><a></a>                myBag.addItem(item);</span>
+<span id="cb3-48"><a></a>            }</span>
+<span id="cb3-49"><a></a>        }</span>
+<span id="cb3-50"><a></a>        </span>
+<span id="cb3-51"><a></a>        System.out.println(myBag.toString());</span>
+<span id="cb3-52"><a></a>        </span>
+<span id="cb3-53"><a></a>    }</span>
+<span id="cb3-54"><a></a></span>
+<span id="cb3-55"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

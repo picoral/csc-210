@@ -94,5 +94,152 @@ Example: limit weight of knapsack is 200kg
 
 * What classes do you need?
 
+## `Item` Implementation
 
+```{java}
+public class Item {
+	private String name;
+	private double value;
+	private double weight;
+	
+	public Item(String n, double v, double w) {
+		name = n;
+		value = v;
+		weight = w;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public double getValue() {
+		return value;
+	}
+	
+	public double getWeight() {
+		return weight;
+	}
+	
+	public double getRatio() {
+		return value/weight;
+	}
+	
+}
+```
+
+## `Knapsack` Implementation
+
+```{java}
+import java.util.ArrayList;
+
+public class Knapsack {
+	private double limit;
+	private ArrayList<Item> contents = new ArrayList<>();
+	
+	public Knapsack(double limit) {
+		this.limit = limit;
+	}
+	
+	public double getTotalWeight() {
+		double total = 0;
+		for (Item item : contents) {
+			total += item.getWeight();
+		}
+		return total;
+	}
+	
+	public double getValue() {
+		double total = 0;
+		for (Item item : contents) {
+			total += item.getValue();
+		}
+		return total;
+	}
+	
+	public double getLimit() {
+		return limit;
+	}
+	
+	public void empty() {
+		ArrayList<Item> allItems = new ArrayList<>(contents);
+		for(Item item : allItems) contents.remove(item);
+	}
+	
+	public boolean addItem(Item item) {
+		if (item.getWeight() + getTotalWeight() <= limit) {
+			contents.add(item);
+			return true;
+		} else return false;
+	}
+	
+	public String toString() {
+		String message = "";
+		for (Item item : contents) message += item.getName() + " ";
+		message += "for a total value of " + getValue();
+		return message;
+	}
+}
+
+```
+
+## Knapsack Problem Implementation
+
+```{java}
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class KnapsackProblem {
+
+	public static void main(String[] args) {
+		Knapsack myBag = new Knapsack(100);
+		ArrayList<Item> items = new ArrayList<>();
+		items.add(new Item("A", 10, 10));
+		items.add(new Item("B", 10, 100));
+		items.add(new Item("C", 1, 100));
+		items.add(new Item("D", 100, 10));
+		items.add(new Item("E", 100, 10));
+		items.add(new Item("F", 50, 10));
+		//items.add(new Item("G", 300, 100));
+		
+		// make copy for step 3
+		ArrayList<Item> originalItems = new ArrayList<>(items);
+		
+		// step 1: sort by value/weight rations
+		ArrayList<Double> ratios = new ArrayList<>();
+		for (Item item : items) {
+			ratios.add(item.getRatio());
+		}
+		ArrayList<Double> sortedRatios = new ArrayList<>(ratios);
+		Collections.sort(sortedRatios, Collections.reverseOrder());
+	
+		// step 2: add each item to knapsack in ratio order
+		for (Double ratio : sortedRatios) {
+			// get item with that ratio
+			int index = ratios.indexOf(ratio);
+			Item item = items.get(index);
+			// remote item and ratio
+			ratios.remove(ratio);
+			items.remove(item);
+			// message to user
+			System.out.println("Trying to add " + item.getName());
+			// try to add item to knapsack
+			if (myBag.addItem(item)) continue;
+			else break;
+		}
+		
+		// step 3: is there any item that is worth individually more?
+		for (Item item : originalItems) {
+			if (item.getValue() > myBag.getValue()) {
+				myBag.empty();
+				myBag.addItem(item);
+			}
+		}
+		
+		System.out.println(myBag.toString());
+		
+	}
+
+}
+
+```
 
