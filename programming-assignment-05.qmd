@@ -32,7 +32,7 @@ What is a class hierarchy you ask? Read about it on [Wikipedia](https://en.wikip
 The class diagram you will be submitting will be a simplified version of the UML
 class diagrams.  There are many resources on the internet for UML class diagrams.
 
-Also check the lecture [slides](slides-04-03.html#/uml-diagram) on UML class diagrams.
+Also check the lecture [slides](slides-05-01.html#/uml-diagram) on UML class diagrams.
 
 Use the following notation:
 

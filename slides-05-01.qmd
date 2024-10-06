@@ -1,245 +1,298 @@
 ---
-title: "Heuristics"
+title: "Inheritance"
 format:
   revealjs:
     slide-number: c/t
     show-slide-number: all
 ---
 
-## Relevant algorithms
+##  Inheritance
 
-We have worked with two recursive algorithmic patterns:
+Attributes and methods can be inherited from one class to another
 
-* Exhaustive search (enumeration)
-* Backtracking
+* superclass (parent) - the class being inherited from
+* subclass (child) - the class that inherits from another class
 
-## The travelling salesperson problem (TSP)
+Use the `extends` keyword
 
-"Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?"
+## Superclass
 
-How would you solve this using exhaustive search?
+Create a class called `Person` with the following instance variables:
 
-## The travelling salesperson problem (TSP)
+* First Name
+* Family Name
+* Birthdate
 
-How would you solve this using exhaustive search?
+What public and private methods?
 
-1. Calculate all the possible routes
-1. Calculate the distance of each route 
-1. Choose the shortest route
+Make sure you do validation for setter methods.
 
-## The travelling salesperson problem (TSP)
-
-How would you solve this with backtracking?
-
-What would be a way to prune branches?
-
-## The travelling salesperson problem (TSP)
-
-What would be a way to prune branches?
-
-Keep track of minimal distance found, if trip in the current branch at any point 
-has greater distance than the minimal trip previously found, backtrack
-
-## Heuristics
-
-* Exhaustively searching every possible solution does not work for all problems,
-it can get very costly.
-
-* We can make use of use a **heuristic** to approximate answers to a problem 
-
-* A **heuristic**  guides an algorithm to find good choices
-
-* A **heuristic** is a shortcut that sacrifices accuracy and completenes
-
-* The goal is to find approximate solutions more quickly
-
-## The travelling salesperson problem (TSP)
-
-Heuristics: greedy algorithm
-
-* Pick whatever is currently the best next step
-* Choose the closest city that is available for the trip at each step
-
-## Greedy Algorithm
-
-* Choose best option at each step
-* Solve remaining subproblems after making greedy step
-
-No need to calculate all steps/branches like in enumeration and backtracking
-
-## Knapsack Problem 
-
-**Given a set of items, each with a weight and a value, determine which items to include in the collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.**
-
-Discuss with your table mates ways to approach this problem
-
-Example: limit weight of knapsack is 5kg
-
-* Item 1: $400, 3kg
-* Item 2: $200, 1kg
-* Item 3: $300, 3kg
-
-## Knapsack Problem 
-
-* Best items have big value, small size
-* Order items in a way to represent that big value and small size is better, and then pack them until they don't fit into the knapsack anymore
-* Compare solution total value with the highest valuable item (greedy choice)
-
-Example: limit weight of knapsack is 200kg
-
-* Item 1: $6, 3kg
-* Item 2: $200, 200kg
-
-## Knapsack Problem -- Java Implementation
-
-* What classes do you need?
-
-## `Item` Implementation
+## Superclass -- solution
 
 ```{java}
-public class Item {
-	private String name;
-	private double value;
-	private double weight;
+import java.time.LocalDate;
+
+public class Person {
 	
-	public Item(String n, double v, double w) {
-		name = n;
-		value = v;
-		weight = w;
+	private String firstName;
+	private String familyName;
+	private int birthYear;
+	private int birthMonth;
+	private int birthDay;
+
+	public Person(String first, String family) {
+		firstName = first;
+		familyName = family;
 	}
 	
-	public String getName() {
-		return name;
+	public void setBirthDate(int year, int month, int day) {
+		LocalDate today = LocalDate.now(); 
+		if (year > 1900 && year <= today.getYear()) birthYear = year;
+		if (month > 0 && month <= 12) birthMonth = month;
+		if (day > 0 && day <= 31) birthDay = day;
 	}
 	
-	public double getValue() {
-		return value;
+	public String getBirthDate() {
+		String month;
+		if (birthMonth < 10) month = "0" + birthMonth;
+		else month = "" + birthMonth;
+		return birthYear + "/" + month + "/" + birthDay;
 	}
 	
-	public double getWeight() {
-		return weight;
+	public String getFirstName() {
+		return firstName;
 	}
 	
-	public double getRatio() {
-		return value/weight;
+	public String getFamilyName() {
+		return familyName;
+	}
+	
+	public void print() {
+		System.out.print(firstName + " " + familyName);
+		System.out.println(" born on " + getBirthDate());
 	}
 	
 }
 ```
 
-## `Knapsack` Implementation
+## Subclass
+
+Create a class called `Student` that `extends` the `Person` class.
+Add the following instance variables:
+
+* Admissions Year
+* Graduation Year
+* Major
+* Email address (or only netID)
+
+What public and private methods?
+
+Write a constructor method, invoke base-class constructor using `super` keyword
+
+## Subclass -- solution
 
 ```{java}
-import java.util.ArrayList;
+import java.time.LocalDate;
 
-public class Knapsack {
-	private double limit;
-	private ArrayList<Item> contents = new ArrayList<>();
+public class Student extends Person {
+	private int admissionYear;
 	
-	public Knapsack(double limit) {
-		this.limit = limit;
+	public Student(String first, String family,
+			       int admissionYear) {
+		// invoke base-class constructor
+		super(first, family);
+		LocalDate today = LocalDate.now(); 
+		if (admissionYear > 1900 && admissionYear <= today.getYear()) 
+			this.admissionYear = admissionYear;
 	}
 	
-	public double getTotalWeight() {
-		double total = 0;
-		for (Item item : contents) {
-			total += item.getWeight();
-		}
-		return total;
+	public int getAdmission() {
+		return admissionYear;
 	}
 	
-	public double getValue() {
-		double total = 0;
-		for (Item item : contents) {
-			total += item.getValue();
-		}
-		return total;
+	// override annotation
+	@Override public void print() {
+		super.print();
+		System.out.println("Admitted in " + admissionYear);
 	}
+
+}
+```
+
+## Polymorphism
+
+`poly` means many, `morphs` means forms
+
+one interface with multiple implementations
+
+Polymorphism in java:
+
+* Compile-time Polymorphism: Method overloading
+* Runtime Polymorphism:  Method overriding
+
+
+## UML diagram
+
+We will be using Unified Modeling Language (UML) diagrams to understand and
+plan classes and their inheritance.
+
+* add name of the class at the top of each box in the diagram
+* use `+`/`-` for public/private
+* include instance variables, methods (including constructors) with parameters
+
+I use the UML class template from Lucidcharts (available through google drive)
+
+## UML diagram example
+
+![](images/UML-class-Animal.png)
+
+## Implementation example
+
+`Animal.java`
+```{java}
+public class Animal {
+	private String species;
+	private String genus;
+	private String family;
 	
-	public double getLimit() {
-		return limit;
-	}
-	
-	public void empty() {
-		ArrayList<Item> allItems = new ArrayList<>(contents);
-		for(Item item : allItems) contents.remove(item);
-	}
-	
-	public boolean addItem(Item item) {
-		if (item.getWeight() + getTotalWeight() <= limit) {
-			contents.add(item);
-			return true;
-		} else return false;
+	public Animal (String s, String g, String f) {
+		species = s;
+		genus = g;
+		family = f;
 	}
 	
 	public String toString() {
-		String message = "";
-		for (Item item : contents) message += item.getName() + " ";
-		message += "for a total value of " + getValue();
+		String message;
+		message = "The " + species;
+		message += " of genus " +  genus;
+		message += " and family " + family;
 		return message;
 	}
-}
 
+}
 ```
 
-## Knapsack Problem Implementation
 
+## Implementation example
+
+`Cat.java`
 ```{java}
-import java.util.ArrayList;
-import java.util.Collections;
-
-public class KnapsackProblem {
-
-	public static void main(String[] args) {
-		Knapsack myBag = new Knapsack(100);
-		ArrayList<Item> items = new ArrayList<>();
-		items.add(new Item("A", 10, 10));
-		items.add(new Item("B", 10, 100));
-		items.add(new Item("C", 1, 100));
-		items.add(new Item("D", 100, 10));
-		items.add(new Item("E", 100, 10));
-		items.add(new Item("F", 50, 10));
-		//items.add(new Item("G", 300, 100));
-		
-		// make copy for step 3
-		ArrayList<Item> originalItems = new ArrayList<>(items);
-		
-		// step 1: sort by value/weight rations
-		ArrayList<Double> ratios = new ArrayList<>();
-		for (Item item : items) {
-			ratios.add(item.getRatio());
-		}
-		ArrayList<Double> sortedRatios = new ArrayList<>(ratios);
-		Collections.sort(sortedRatios, Collections.reverseOrder());
+public class Cat extends Animal {
+	public Cat() {
+		super("Cat", "Felis", "Felidae");
+	}
 	
-		// step 2: add each item to knapsack in ratio order
-		for (Double ratio : sortedRatios) {
-			// get item with that ratio
-			int index = ratios.indexOf(ratio);
-			Item item = items.get(index);
-			// remote item and ratio
-			ratios.remove(ratio);
-			items.remove(item);
-			// message to user
-			System.out.println("Trying to add " + item.getName());
-			// try to add item to knapsack
-			if (myBag.addItem(item)) continue;
-			else break;
-		}
-		
-		// step 3: is there any item that is worth individually more?
-		for (Item item : originalItems) {
-			if (item.getValue() > myBag.getValue()) {
-				myBag.empty();
-				myBag.addItem(item);
-			}
-		}
-		
-		System.out.println(myBag.toString());
-		
+	public String makesSound() {
+		return "meow";
 	}
 
 }
-
 ```
 
+## Implementation example
+
+```{java}
+public class GetAnimals {
+
+	public static void main(String[] args) {
+		Cat garfield = new Cat();
+		System.out.println(garfield.toString());
+	}
+
+}
+```
+
+
+
+## `abstract` superclass
+
+An abstract class cannot be instantiated (an error is thrown)
+
+```{java}
+Animal animal = new Animal(); // Error: Animal is abstract
+```
+
+An abstract class must be subclassed
+
+Methods in an abstract class can also be `abstract` -- similar to an interface
+
+## `abstract` example implementation
+
+```{java}
+public abstract class Animal {
+	private String species;
+	private String genus;
+	private String family;
+	
+	public Animal (String s, String g, String f) {
+		species = s;
+		genus = g;
+		family = f;
+	}
+	
+	public abstract String makesSound();
+	
+	public String toString() {
+		String message;
+		message = "The " + species;
+		message += " of genus " +  genus;
+		message += " and family " + family;
+		message += " makes this sound: ";
+		message += makesSound();
+		return message;
+	}
+
+}
+```
+
+## `protected` keyword
+
+The `private` access modifier specifies the variable can only be accessed in its own class
+
+The `protected` access modifier specifies that the variable can only be accessed by a subclass of its class
+
+## `protected` implementation
+
+```{java}
+public abstract class Animal {
+	protected String species;
+	protected String genus;
+	protected String family;
+	
+	public Animal () {}
+	
+	public abstract String makesSound();
+	
+	public String toString() {
+		String message;
+		message = "The " + species;
+		message += " of genus " +  genus;
+		message += " and family " + family;
+		message += " makes this sound: ";
+		message += makesSound();
+		return message;
+	}
+
+}
+```
+
+## `protected` implementation
+
+```{java}
+public class Cat extends Animal {
+	public Cat() {
+		species = "Cat";
+		genus = "Felis";
+		family = "Felidae";
+	}
+	
+	public String makesSound() {
+		return "meow";
+	}
+
+}
+```
+
+## Updated UML diagram
+
+![](images/UML-class-Animal-protected.png)

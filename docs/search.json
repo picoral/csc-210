@@ -137,14 +137,14 @@
     "href": "modules.html#readings-3",
     "title": "Modules",
     "section": "Readings",
-    "text": "Readings\nRequired:\n\nJava, Java, Java 8.2 Java’s Inheritance Mechanism\nJava, Java, Java 8.3 Abstract Classes, Interfaces, and Polymorphism"
+    "text": "Readings\nRequired:\n\nJava, Java, Java 8.3 Abstract Classes, Interfaces, and Polymorphism"
   },
   {
     "objectID": "modules.html#slides-3",
     "href": "modules.html#slides-3",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nClasses and Methods\nInterfaces\nInheritance"
+    "text": "Slides\n\nClasses and Methods\nInterfaces"
   },
   {
     "objectID": "modules.html#assignments-3",
@@ -158,14 +158,14 @@
     "href": "modules.html#readings-4",
     "title": "Modules",
     "section": "Readings",
-    "text": "Readings\n\nGreedy Algorithms"
+    "text": "Readings\n\nJava, Java, Java 8.2 Java’s Inheritance Mechanism"
   },
   {
     "objectID": "modules.html#slides-4",
     "href": "modules.html#slides-4",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nHeuristics"
+    "text": "Slides\n\nInheritance"
   },
   {
     "objectID": "modules.html#assignments-4",
@@ -2490,5 +2490,33 @@
     "title": "Heuristics",
     "section": "Knapsack Problem Implementation",
     "text": "Knapsack Problem Implementation\nimport java.util.ArrayList;\nimport java.util.Collections;\n\npublic class KnapsackProblem {\n\n    public static void main(String[] args) {\n        Knapsack myBag = new Knapsack(100);\n        ArrayList&lt;Item&gt; items = new ArrayList&lt;&gt;();\n        items.add(new Item(\"A\", 10, 10));\n        items.add(new Item(\"B\", 10, 100));\n        items.add(new Item(\"C\", 1, 100));\n        items.add(new Item(\"D\", 100, 10));\n        items.add(new Item(\"E\", 100, 10));\n        items.add(new Item(\"F\", 50, 10));\n        //items.add(new Item(\"G\", 300, 100));\n        \n        // make copy for step 3\n        ArrayList&lt;Item&gt; originalItems = new ArrayList&lt;&gt;(items);\n        \n        // step 1: sort by value/weight rations\n        ArrayList&lt;Double&gt; ratios = new ArrayList&lt;&gt;();\n        for (Item item : items) {\n            ratios.add(item.getRatio());\n        }\n        ArrayList&lt;Double&gt; sortedRatios = new ArrayList&lt;&gt;(ratios);\n        Collections.sort(sortedRatios, Collections.reverseOrder());\n    \n        // step 2: add each item to knapsack in ratio order\n        for (Double ratio : sortedRatios) {\n            // get item with that ratio\n            int index = ratios.indexOf(ratio);\n            Item item = items.get(index);\n            // remote item and ratio\n            ratios.remove(ratio);\n            items.remove(item);\n            // message to user\n            System.out.println(\"Trying to add \" + item.getName());\n            // try to add item to knapsack\n            if (myBag.addItem(item)) continue;\n            else break;\n        }\n        \n        // step 3: is there any item that is worth individually more?\n        for (Item item : originalItems) {\n            if (item.getValue() &gt; myBag.getValue()) {\n                myBag.empty();\n                myBag.addItem(item);\n            }\n        }\n        \n        System.out.println(myBag.toString());\n        \n    }\n\n}"
+  },
+  {
+    "objectID": "slides-05-02.html#graphs",
+    "href": "slides-05-02.html#graphs",
+    "title": "Graphs",
+    "section": "",
+    "text": "A graph:\n\nis a non-linear data structure\nstores connected data (a network of people)\nconsists of vertices/nodes and edges/lines\n\nA Graph G is composed of a set of vertices(V) and a set of edges(E)\nThe graph is denoted by \\(G(V, E)\\)"
+  },
+  {
+    "objectID": "slides-05-02.html#vertices-and-edges",
+    "href": "slides-05-02.html#vertices-and-edges",
+    "title": "Graphs",
+    "section": "vertices and edges",
+    "text": "vertices and edges\n\nA vertex represents the entity (e.g., people)\nAn edge represents the relationship between entities (e.g., a person’s friendships).\n\nGraphs can be weighted and unweighted"
+  },
+  {
+    "objectID": "slides-05-02.html",
+    "href": "slides-05-02.html",
+    "title": "Graphs",
+    "section": "",
+    "text": "A graph:\n\nis a non-linear data structure\nstores connected data (a network of people)\nconsists of vertices/nodes and edges/lines\n\nA Graph G is composed of a set of vertices(V) and a set of edges(E)\nThe graph is denoted by \\(G(V, E)\\)"
+  },
+  {
+    "objectID": "slides-05-02.html#representations-of-graph",
+    "href": "slides-05-02.html#representations-of-graph",
+    "title": "Graphs",
+    "section": "Representations of Graph",
+    "text": "Representations of Graph\n\nAdjacency Matrix\nAdjacency List"
   }
 ]

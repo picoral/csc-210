@@ -136,14 +136,13 @@ Topic: `r schedule %>% filter(week == 6) %>% pull(topic)`
 
 Required:
 
-* [Java, Java, Java 8.2 Java’s Inheritance Mechanism](https://runestone.academy/ns/books/published/javajavajava/javas-inheritance-mechanism.html)
 * [Java, Java, Java 8.3 Abstract Classes, Interfaces, and Polymorphism](https://runestone.academy/ns/books/published/javajavajava/abstract-classes-interfacesand-polymorphism.html)
 
 ## Slides
 
 * [Classes and Methods](slides-04-01.html)
 * [Interfaces](slides-04-02.html)
-* [Inheritance](slides-04-03.html)
+
 
 ## Assignments
 
@@ -156,13 +155,14 @@ Required:
 
 Topic: `r schedule %>% filter(week == 7) %>% pull(topic)`
 
+
 ## Readings
 
-* [Greedy Algorithms](http://ezproxy.library.arizona.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=2932690&site=ehost-live&ebv=EK&ppid=Page-__-294)
+* [Java, Java, Java 8.2 Java’s Inheritance Mechanism](https://runestone.academy/ns/books/published/javajavajava/javas-inheritance-mechanism.html)
 
 ## Slides
 
-* [Heuristics](slides-05-01.html)
+* [Inheritance](slides-05-01.html)
 
 
 ## Assignments
