@@ -2462,5 +2462,12 @@
     "title": "Heuristics",
     "section": "Knapsack Problem",
     "text": "Knapsack Problem\n\nBest items have big value, small size\nOrder items in a way to represent that big value and small size is better, and then pack them until they don’t fit into the knapsack anymore\nCompare solution total value with the highest valuable item (greedy choice)\n\nExample: limit weight of knapsack is 200kg\n\nItem 1: $6, 3kg\nItem 2: $200, 200kg"
+  },
+  {
+    "objectID": "slides-05-01.html#knapsack-problem-java-implementation",
+    "href": "slides-05-01.html#knapsack-problem-java-implementation",
+    "title": "Heuristics",
+    "section": "Knapsack Problem – Java Implementation",
+    "text": "Knapsack Problem – Java Implementation\n\nWhat classes do you need here?\nDraw a UML class diagram"
   }
 ]

@@ -90,4 +90,9 @@ Example: limit weight of knapsack is 200kg
 * Item 1: $6, 3kg
 * Item 2: $200, 200kg
 
+## Knapsack Problem -- Java Implementation
+
+* What classes do you need here?
+* Draw a UML class diagram
+
 
