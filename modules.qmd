@@ -158,7 +158,12 @@ Topic: `r schedule %>% filter(week == 7) %>% pull(topic)`
 
 ## Readings
 
+* [Greedy Algorithms](http://ezproxy.library.arizona.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=2932690&site=ehost-live&ebv=EK&ppid=Page-__-294)
+
 ## Slides
+
+* [Heuristics](slides-05-01.html)
+
 
 ## Assignments
 

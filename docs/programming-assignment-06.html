@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CSC 210 Fall 2024 - Programming Assignmnet 06</title>
+<title>CSC 210 Fall 2024 - Programming Assignment 06</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -128,12 +128,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#pa6-garden-writeup" id="toc-pa6-garden-writeup" class="nav-link active" data-scroll-target="#pa6-garden-writeup">PA6-Garden-Writeup</a>
+  <li><a href="#traveling-salesperson-problem" id="toc-traveling-salesperson-problem" class="nav-link active" data-scroll-target="#traveling-salesperson-problem">Traveling Salesperson Problem</a>
   <ul class="collapse">
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#garden-simulation" id="toc-garden-simulation" class="nav-link" data-scroll-target="#garden-simulation">Garden Simulation</a></li>
-  <li><a href="#the-assignment" id="toc-the-assignment" class="nav-link" data-scroll-target="#the-assignment">The Assignment</a></li>
-  <li><a href="#design-suggestions" id="toc-design-suggestions" class="nav-link" data-scroll-target="#design-suggestions">Design Suggestions</a></li>
+  <li><a href="#traveling-salesperson-problem-tsp" id="toc-traveling-salesperson-problem-tsp" class="nav-link" data-scroll-target="#traveling-salesperson-problem-tsp">Traveling Salesperson Problem (TSP)</a></li>
+  <li><a href="#the-assignment" id="toc-the-assignment" class="nav-link" data-scroll-target="#the-assignment">The Assignment</a>
+  <ul class="collapse">
+  <li><a href="#recursive-backtracking" id="toc-recursive-backtracking" class="nav-link" data-scroll-target="#recursive-backtracking">Recursive Backtracking</a></li>
+  <li><a href="#heuristic" id="toc-heuristic" class="nav-link" data-scroll-target="#heuristic">Heuristic</a></li>
+  <li><a href="#your-own-approach" id="toc-your-own-approach" class="nav-link" data-scroll-target="#your-own-approach">Your own approach</a></li>
+  </ul></li>
+  <li><a href="#timing-all-of-the-approaches" id="toc-timing-all-of-the-approaches" class="nav-link" data-scroll-target="#timing-all-of-the-approaches">Timing all of the approaches</a></li>
+  <li><a href="#error-handling" id="toc-error-handling" class="nav-link" data-scroll-target="#error-handling">Error handling</a></li>
+  <li><a href="#notes-and-suggestions" id="toc-notes-and-suggestions" class="nav-link" data-scroll-target="#notes-and-suggestions">Notes and Suggestions</a></li>
   <li><a href="#grading-criteria" id="toc-grading-criteria" class="nav-link" data-scroll-target="#grading-criteria">Grading Criteria</a></li>
   <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   </ul></li>
@@ -145,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Programming Assignmnet 06</h1>
+<h1 class="title">Programming Assignment 06</h1>
 </div>
 
 
@@ -162,164 +169,157 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Deadline: October 23, 2024 – Wednesday, 11:30pm</p>
-<section id="pa6-garden-writeup" class="level1">
-<h1>PA6-Garden-Writeup</h1>
+<section id="traveling-salesperson-problem" class="level1">
+<h1>Traveling Salesperson Problem</h1>
+<p>PA6 is about applying three different approaches to solving a well-known and generally useful graph problem, the Traveling Salesperson Problem (TSP).</p>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>The goal of this assignment is to design a class hierarchy to solve a problem, implement that hierarchy, use polymorphism, and use two-dimensional arrays.</p>
-<p>What is a class hierarchy you ask? Read about it on <a href="https://en.wikipedia.org/wiki/Class_hierarchy">Wikipedia</a>. The class diagram you will be submitting will be a simplified version of the UML class diagrams. There are many resources on the internet for UML class diagrams. See all the 2/28/18 class notes for the format expected in this class for PA6.</p>
+<p>The goal of this assignment is to practice the following algorithm patterns, data structures, and decomposition approaches.</p>
+<ul>
+<li><p>Algorithmic patterns: recursive backtracking and heuristic</p></li>
+<li><p>Data structure: graphs</p></li>
+<li><p>Decomposition: using provided classes other than the Java libraries</p></li>
+<li><p>Performance analysis of different graph algorithm variants.</p></li>
+</ul>
 </section>
-<section id="garden-simulation" class="level2">
-<h2 class="anchored" data-anchor-id="garden-simulation">Garden Simulation</h2>
-<p>The problem you will be solving is a garden simulation. The simulation will read commands like PLANT, PRINT, GROW, and HARVEST from a file and execute those commands. The garden that you will be implementing will consist of a number of columns and rows of plots. Within each plot there can exist a single plant, which is represented with a 5x5 grid of cells. Plants are divided up into three different categories: trees, flowers, and vegetables, all of which have unique characteristics.<br>
-For example, trees grow up, vegetables grow down, and flowers bloom as they grow.</p>
+<section id="traveling-salesperson-problem-tsp" class="level2">
+<h2 class="anchored" data-anchor-id="traveling-salesperson-problem-tsp">Traveling Salesperson Problem (TSP)</h2>
+<p>The Traveling Salesperson Problem asks what is the shortest trip through a sequence of locations and back to the beginning while only visiting each location once. The distances between locations are the input to the problem and can be represented as weights on edges in a graph.</p>
 </section>
 <section id="the-assignment" class="level2">
 <h2 class="anchored" data-anchor-id="the-assignment">The Assignment</h2>
-<p>This is a <strong>two-week assignment</strong>. The class inheritance diagram will be all that is due Tuesday March 13th at 11:30 am to both Aropa AND Gradescope. We make suggestions as to what to implement the first week and then the second week, but you will be responsible for managing your own time. The rest of the assignment is due Monday March 19th.</p>
-<ul>
-<li><p>Class inheritance diagram: Create this diagram however you would like (draw it by hand, use software, etc.). You need to create a pdf file of it and submit it to Aropa AND Gradescope.</p>
-<ul>
-<li>See (https://gradescope.com/help#help-center-item-student-scanning) for some suggestions of how to scan in a document with your phone if you plan to produce your pdf by taking a picture of it.</li>
-<li>You will be building on PA6 for PA8 and PA9. In PA8 and PA9, you will be encouraged to use the model-view-controller pattern. Feel free to look that up ahead of time. You are not required to know it until we cover it though.</li>
-<li>March 1st 7:30am, the Aropa and Gradescope for the PA6 class inheritance diagram are ready to accept submissions.</li>
-<li>During Spring Break the Gradescope submission for the PA6 program will be posted.</li>
-</ul></li>
-<li><p>Your main program, which must be named PA6Main.java, will need to accept the name of an input file on the command line.</p></li>
-<li><p>The input file will contain all of the garden initialization settings and the commands to simulate. Here is an example input file.</p></li>
-</ul>
-<pre><code>rows: 1
-cols: 1
-
-PLANT (0,0) banana
-PRINT
-GROW 1
-print</code></pre>
-<p>Note that the commands should be case-insensitive. In other words, “print”, “PRINT”, and “Print” are all equivalent in the input file. Here is the output for the example:</p>
-<pre><code>&gt; PRINT
-.....
-.....
-.....
-.....
-..b..
-
-&gt; GROW 1
-
-&gt; PRINT
-.....
-.....
-.....
-..b..
-..b..</code></pre>
-<p>The output should be printed to standard out. See PublicTestCases/ for more input and output examples.</p>
-<ul>
-<li>The following are the types of specific plants that could be planted:</li>
-</ul>
-<pre><code>FLOWERS      TREES      VEGETABLES
--------      -----      ----------
-Iris         Oak        Garlic
-Lily         Willow     Zucchini
-Rose         Banana     Tomato
-Daisy        Coconut    Yam
-Tulip        Pine       Lettuce
-Sunflower</code></pre>
-<ul>
-<li>The following are examples of representation arrays for different types of plants. For PA6, plants will be represented with ascii characters. Use the lower case version of the first letter of the plant name. For “Garlic” use ‘g’, for “Daisy” use ‘d’, etc.
-<ul>
-<li>Flowers should start in the middle of the 5x5 grid of cells in the plot it is planted in. Each location in a plot is called a cell.</li>
-<li>Vegetables should start at the top middle.</li>
-<li>Trees should start at the bottom middle.</li>
-</ul></li>
-</ul>
-<pre><code>Rose
-.....
-..... 
-..r..
-.....
-.....</code></pre>
-<pre><code>Tomato
-..t..
-..... 
-.....
-.....
-.....</code></pre>
-<pre><code>Coconut
-.....
-..... 
-.....
-.....
-..c..</code></pre>
-<ul>
-<li><p>Commands that need to be implemented. See the PublicTestCases/ for more examples. There are examples with PLANT, PRINT, and GROW. Other command input and output examples will appear during Spring Break.</p>
-<ul>
-<li><p><strong>The PLANT Command</strong><br> EXAMPLE USE: <em>PLANT (0,0) rose</em><br> If the PLANT command is read, it should be followed by plot coordinates and the type of Plant to be planted. Use this type to plant the correct subclass of plant into the garden at given plot coordinates. The plot coordinates are given as row and column. Both rows and columns start at 0. Rows go down the screen, and columns go across the screen. Each plot will itself contain 5 cells (represented as characters). There is a restriction that the number of cells across should be less than or equal to 80, therefore the most plot columns allowed is 80/5 or 16.</p></li>
-<li><p><strong>The PRINT Command</strong><br> EXAMPLE USE: <em>PRINT</em><br> If the PRINT command is read, then the entire garden should be printed to standard out.</p></li>
-<li><p><strong>The GROW Command</strong><br> EXAMPLE USE: <em>GROW 1</em><br> If the GROW command is read, then each Plant should grow the specified number of times as seen in the input command. A plant cannot grow out of its plot. No error will happen, but growth should not occur outside the plot boundaries. Plots also cannot run into each other.</p></li>
-<li><p><strong>GROW [num] (x,y)</strong><br> EXAMPLE USE: <em>GROW 1 (2,3)</em><br> Grow whichever Plant is located in the garden at position (x,y) num times. If there is nothing at this position or the position is outside the size of the garden, print, “Can’t grow there.” and continue.</p></li>
-<li><p><strong>GROW [num] [type]</strong><br> EXAMPLE USE: <em>GROW 1 rose</em><br> Grow only Plants of the specified type num times.</p></li>
-<li><p><strong>GROW [num] [Plant]</strong><br> EXAMPLE USE: <em>GROW 1 flower</em> <br> Grow only Plants of the specified class num times.</p></li>
-<li><p><strong>HARVEST</strong><br> Remove all Vegetables from the Garden.</p></li>
-<li><p><strong>HARVEST (x,y)</strong><br> EXAMPLE USE: <em>HARVEST (2,3)</em><br> Harvest Vegetable at location (x,y). If not a Vegetable or outside of Garden, print, “Can’t harvest there.” and continue.</p></li>
-<li><p><strong>HARVEST [type]</strong><br> EXAMPLE USE: <em>HARVEST tomato</em><br> Harvests all Vegetables of the specified type. If there are no Vegetables with that type, do nothing.</p></li>
-<li><p><strong>PICK</strong><br> Remove all Flowers from the Garden.</p></li>
-<li><p><strong>PICK (x,y)</strong><br> EXAMPLE USE: <em>PICK (2,3)</em><br> Pick Flower at location (x,y). If not a Flower or outside of Garden, print, “Can’t pick there.” and continue.</p></li>
-<li><p><strong>PICK [type]</strong><br> EXAMPLE USE: <em>PICK rose</em><br> Pick all Flowers of the specified type. If there are no Flowers with that type, do nothing.</p></li>
-<li><p><strong>CUT</strong><br> Remove all Trees from the Garden.</p></li>
-<li><p><strong>CUT (x,y)</strong><br> EXAMPLE USE: <em>CUT (2,3)</em><br> Cut Tree at location (x,y). If not a Tree or outside of Garden, print, “Can’t cut there.” and continue.</p></li>
-<li><p><strong>CUT [type]</strong><br> EXAMPLE USE: <em>CUT PINE</em><br> Cut all Trees of the specified type. If there are no Trees with that type, do nothing.</p></li>
-</ul></li>
-<li><p><strong>Unique Class</strong></p></li>
-</ul>
-<p>Students will design their own plant type and show an example input and output that illustrates it in their README.md file. This new plant should be different from Vegetable, Flower, and Tree, but still be usable alongside them within the garden and work with the commands PLANT, GROW, and PRINT.</p>
-<ul>
-<li><p>Error Handling</p>
-<ul>
-<li><p>Some of the commands above specify some error handling.</p></li>
-<li><p>The garden should never be more than 80 characters across. If it is print out the message “Too many plot columns.” and then exit. Think: How many characters across is each plot?</p></li>
-<li><p>Other than the above specified errors, the input can be assumed well formed.</p></li>
-</ul></li>
-</ul>
+<p>In this assignment you will be implementing the traveling salesperson problem using three different ways: recursive backtracking, heuristic, and your own approach.</p>
+<p>To use the program, someone will need to put the following arguments into the Eclipse arguments tab: PathTo/infile.mtx [HEURISTIC,BACKTRACK,MINE,TIME]</p>
+<p>The input files are in the same format as the matrix market format used by the SuiteSparse Matrix Collection (https://sparse.tamu.edu/about). See https://math.nist.gov/MatrixMarket/formats.html for a description of the .mtx format. You CAN write similar code to the following code to read in the .mtx format. http://docs.roguewave.com/imsl/java/5.0.1/api/com/imsl/math/SparseMatrixEx2.html. Reading .mtx files will be covered in Section 4. Here is an example input file:</p>
+<pre><code>%%MatrixMarket matrix coordinate real general
+3 3 6
+1 2 1.0
+2 1 2.0
+1 3 3.0
+3 1 4.0
+2 3 5.0
+3 2 6.0</code></pre>
+<p>Example output to standard out is provided in the PublicTestCases/ for HEURISTIC and BACKTRACK. Here is the output for the above input file and the HEURISTIC command:</p>
+<pre><code>cost = 10.0, visitOrder = [1, 2, 3]</code></pre>
+<p>You will be running your own algorithm with the MINE command.<br>
+The output for TIME is shown below.</p>
+<p>You CAN use the code provided and/or written in Section 4 to read in files, store a graph, and output a graph to a dot file in your PA5. The output to a dot file might help debugging.</p>
+<section id="recursive-backtracking" class="level3">
+<h3 class="anchored" data-anchor-id="recursive-backtracking">Recursive Backtracking</h3>
+<p>Will make the decisions starting with node 1 and continuing through the nodes in order. Everytime a node is chosen, that choice will be checked before recursing to do some pruning. We cannot stop at the first node we find, because it is possible that other nodes will cost less.</p>
+<pre><code>  create a trip
+  choose city 1 first
+  call enumerate on the trip
+    
+  enumerate( graph data structure, current trip so far,  
+             min trip previously found)
+        
+      if all nodes are in trip then
+          process the current trip:
+              does it have less cost than min trip?
+              if so then modify min trip previously found (hint: copyOtherIntoSelf())
+          return
+      
+      if trip so far has less cost than the min trip previously found
+          for each city x of the cities left
+              choose x next
+              enumerate( graph data structure, updated trip,
+                         min trip previously found )
+              unchoose x</code></pre>
 </section>
-<section id="design-suggestions" class="level2">
-<h2 class="anchored" data-anchor-id="design-suggestions">Design Suggestions</h2>
-<p>We recommend the following: * A Garden object with a 2D array or list of plant objects. * A Plant class hierarchy of some kind. The design for this is what will be submitted for peer review on Tuesday March 13th at 11:30 am to both Aropa AND Gradescope. * A Screen object with a 2D array of characters that each plant can print its current representation into. The Screen object can then print everything to standard out. (Hint: what did you do in those drills due before Spring Break?) * <strong>hint:</strong> when copying over a Plant’s representation array place each cell at:</p>
-<pre><code>     [(Plant's row  * 5) + cell row][(Plant's col * size of plot) + cell col]</code></pre>
-<p>into the Screen object’s Array.</p>
+<section id="heuristic" class="level3">
+<h3 class="anchored" data-anchor-id="heuristic">Heuristic</h3>
+<pre><code>    create a trip
+    choose city 1 first, call it the current city
+    
+    for k=2 to num_nodes inclusive
+    
+        for each neighbor of node the current city (use getNeighbors method)
+            
+            find the neighbor that is available AND the closest to the current city
+                        
+        choose the closest city that is available for the trip
+        AND call that closest city the current city
+        
+        </code></pre>
+</section>
+<section id="your-own-approach" class="level3">
+<h3 class="anchored" data-anchor-id="your-own-approach">Your own approach</h3>
+<p>You will also implement the command MINE that executes your own faster algorithm for performing the traveling salesperson problem. The code you submit should be able to execute the MINE command.</p>
+<p>For your own approach you can choose to do one of the following: * improve upon the recursive backtracking approach by putting in more pruning and then show this is faster than the suggested recursive backtracking approach * improve upon the heuristic approach while not resorting to a trivial solution like just listing all of the nodes in order</p>
+</section>
+</section>
+<section id="timing-all-of-the-approaches" class="level2">
+<h2 class="anchored" data-anchor-id="timing-all-of-the-approaches">Timing all of the approaches</h2>
+<p>Using code similar to the following, you will have a TIME command that times all of the algorithms.</p>
+<pre><code>        long startTime = System.nanoTime();
+        trip = heuristic(graph);
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime) / 1000000;
+        System.out.println("heuristic: cost = " + trip.tripCost(graph) + ", "
+                + duration + " milliseconds");</code></pre>
+<p>The output for the TIME command will look as follows:</p>
+<pre><code>heuristic: cost = 935.3299999999999, 0 milliseconds
+mine: cost = 935.3299999999999, 0 milliseconds
+backtrack: cost = 835.8799999999999, 5 milliseconds</code></pre>
+<p>None of the grading test cases call TIME, because each time you run the program even on the same input and on the same machine there will be some time variance. Because of that you will probably want to run the timings about 5 times before drawing any conclusions.</p>
+<p>INSTEAD, you will be running the TIME command on your machine for the big11.mtx input. It takes around a minute for the recursive backtracking algorithm on a 3 year old Mac.</p>
+</section>
+<section id="error-handling" class="level2">
+<h2 class="anchored" data-anchor-id="error-handling">Error handling</h2>
+<p>All of the inputs will be correctly formed for this assignment.</p>
+</section>
+<section id="notes-and-suggestions" class="level2">
+<h2 class="anchored" data-anchor-id="notes-and-suggestions">Notes and Suggestions</h2>
+<ul>
+<li><p>The node ids should go from 1 to the number of nodes inclusive, because the sparse matrix market file format (.mtx) stores node ids starting at 1 instead of 0.</p></li>
+<li><p>We are providing a Trip class that keeps track of a Trip. Read its usage instructions.</p></li>
+<li><p>We provide a graph data structure called DGraph. Read its usage instructions for how to use handy methods such as the one that returns the neighbors for a node.</p></li>
+</ul>
 </section>
 <section id="grading-criteria" class="level2">
 <h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
-<p>Half of the PA6 grade will be correctness. For this assignment, there will be some private test cases on Gradescope used for grading.</p>
-<p>The other half of the PA6 grade will be your decomposition and code clarity. Twenty of these points will be on your class hierarchy diagram.</p>
+<p>80% of this assignment grade will be correctness for the HEURISTIC and BACKTRACK commands. For this assignment, there will be some private test cases on Gradescope used for grading.</p>
+<p>The other 20% of your grade will be broken up as follows: * 5 your decomposition and code clarity * 5 timing results in the README.md file along with some discussion of why the algorithms have the relative performance they do. Why is HEURISTIC faster than BACKTRACK? How does your MINE algorithm perform? (One or two paragraphs at the most.) * 5 TIME implementation * 5 MINE algorithm that does something different than given algorithms</p>
 <p>Decomposition</p>
 <ul>
-<li><p>Points will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.</p></li>
-<li><p><strong>This program should use fewer than 10 .java files.</strong> Each of these files should be (&lt;275 lines).</p></li>
-<li><p>Each static method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.</p></li>
+<li><p>Points will be taken off for copy, pasted, and edited code that should have been encapsulated in a method EXCEPT for in the timing code.</p></li>
+<li><p>Should carefully select data structures that implement the required functionality.</p></li>
+<li><p>All of the Java files should be &lt;250 lines of code.</p></li>
+<li><p>Each method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.</p></li>
 <li><p>Make things as simple as possible.</p>
 <ul>
 <li>Only use one Scanner instance.</li>
 <li>Don’t use lambda functions or other features in non-standard ways.</li>
-<li>Avoid nested loops unless they would be cleaner when handling a 2D array.</li>
-<li>Avoid nesting conditionals.</li>
-<li>Avoid chaining: see the Piazza post for more info</li>
+<li>Reduce the amount of conditional nesting as much as possible.</li>
 </ul></li>
+<li><p>Declare collection variables using interface types.</p></li>
+<li><p>Your code should be decomposed well. main should be a good summary of your program and no method should be overly long or trivial. Your methods should not be chained. Do NOT have main just call one method that does everything.</p></li>
+<li><p>Redundancy is a grading focus; some tasks are similar in behavior or based off of other tasks. You should avoid repeated logic as much as possible.</p></li>
 </ul>
-<p>Code Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work</p>
+<p>Code Clarity</p>
 <ul>
+<li><p>YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it.</p>
+<ul>
+<li>No magic numbers</li>
+<li>No methods written to just get the test cases to work</li>
+</ul></li>
 <li><p>There needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.</p></li>
 <li><p>The file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.</p></li>
 <li><p>Use meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).</p></li>
-<li><p>The clearest code examples will be anonymously shown in class.</p></li>
-<li><p>The most obfuscated code examples will be anonymously shown in class with suggestions for improvement.</p></li>
+<li><p>We will be modeling some of the issues we are seeing with code.</p></li>
+<li><p>We will ask permission to show clear code examples.</p></li>
 </ul>
-<p>The coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine.</p>
+<p>The coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine. At workplaces the style requirements can be extensive. In this class, we have the following requirements:</p>
+<ol type="1">
+<li>No lines should be longer than 80 characters line.</li>
+<li>Do not mix tabs and spaces. Use spaces consistently.</li>
+<li>The left curly brace should start on the same line as the loop or conditional.</li>
+</ol>
 </section>
 <section id="submission" class="level2">
 <h2 class="anchored" data-anchor-id="submission">Submission</h2>
-<p>Write your own code. We will be using a tool that finds overly similar code. This Spring 2018 semester in CS 210 we unfortunately have had academic integrity cases. I recommend that when talking with others about the assignment, do not write anything down.</p>
-<p>The class hierarchy diagram in pdf format is due Tuesday March 13th at 11:30 am in Gradescope AND Aropa.</p>
-<p>For PA6, you are <strong>REQUIRED</strong> to submit all of your java source files to Gradescope before Monday March 19th at 11:30 am. You also need to submit your README.md with example input and output for your unique class.</p>
+<p>Files that need to be submitted to Gradescope: * The <code>TSProblem.java</code> file * <code>README.md</code>with the results of timing experiments that compare your improved algorithm to the required algorithms for the input file big11.mtx and describes why the algorithms have relative performance differences</p>
 
 
 </section>

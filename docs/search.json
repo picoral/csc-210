@@ -2,63 +2,63 @@
   {
     "objectID": "programming-assignment-07.html",
     "href": "programming-assignment-07.html",
-    "title": "Programming Assignment 07",
+    "title": "Programming Assignment 06",
     "section": "",
     "text": "Deadline: October 30, 2024 – Wednesday, 11:30pm"
   },
   {
     "objectID": "programming-assignment-07.html#learning-objectives",
     "href": "programming-assignment-07.html#learning-objectives",
-    "title": "Programming Assignment 07",
+    "title": "Programming Assignment 06",
     "section": "Learning Objectives",
     "text": "Learning Objectives\nThe goal of this assignment is to practice the following algorithm patterns, data structures, and decomposition approaches.\n\nAlgorithmic patterns: recursive backtracking and heuristic\nData structure: graphs\nDecomposition: using provided classes other than the Java libraries"
   },
   {
     "objectID": "programming-assignment-07.html#graph-coloring",
     "href": "programming-assignment-07.html#graph-coloring",
-    "title": "Programming Assignment 07",
+    "title": "Programming Assignment 06",
     "section": "Graph Coloring",
     "text": "Graph Coloring\nMany important problems such as coloring a map and register allocation can be expressed as graph coloring problems. See [https://en.wikipedia.org/wiki/Graph_coloring] for examples and mention of Sudoku as a kind of graph coloring problem."
   },
   {
     "objectID": "programming-assignment-07.html#the-assignment",
     "href": "programming-assignment-07.html#the-assignment",
-    "title": "Programming Assignment 07",
+    "title": "Programming Assignment 06",
     "section": "The Assignment",
     "text": "The Assignment\nIn this assignment you will be implementing graph coloring three different ways: recursive backtracking, heuristic, and your own approach.\nThe program should have the following usage: java PA7Main infile.mtx [HEURISTIC,BACKTRACK,MINE,TIME]\nThe input files will be from the SuiteSparse Matrix Collection (https://sparse.tamu.edu/about). See https://math.nist.gov/MatrixMarket/formats.html for a description of the .mtx format. You CAN write similar code to the following code to read in the .mtx format. http://docs.roguewave.com/imsl/java/5.0.1/api/com/imsl/math/SparseMatrixEx2.html. Reading .mtx files will be covered in Section 8.\nExample output to standard out is provided in the PublicTestCases/ for HEURISTIC and BACKTRACK. You will be running your own algorithm with the MINE command. The output for TIME is shown below.\nYour program should also generate before and after .dot files with the nodes colored. See the before and after .dot files in the PublicTestCases/ subdirectory for examples and carefully read the code at the top of the provided Coloring.java file. You can use whatever node filling colors you would like\n(see https://www.graphviz.org/doc/info/colors.html). Writing dot files will be covered in Section 8.\nYou CAN use the code provided and/or written in Section 8 to read in files, store a graph, and output a graph to a dot file in your PA7.\n\nRecursive Backtracking\nWill make the decisions starting with node 1 and continuing through the nodes in order. Everytime a node coloring choice is tried, that choice will be checked before recursing to do some pruning. We cannot stop at the first coloring we find, because it is possible that other colorings will use fewer colors.\n  Set the color for node 1 to the first color (Coloring.Color.A)\n  Call enumerate on node 2\n    \n  enumerate( graph data structure, current coloring so far, ready to color kth node, \n             min coloring previously found)\n        \n      if all nodes have been colored then\n          process the current coloring:\n              does it use fewer colors than min coloring?\n              if so then modify min coloring previously found (hint: copyOtherIntoSelf())\n          return\n      \n      if coloring so far has fewer colors than the min coloring previously found\n          for all possible colors in order except for NOCOLOR\n              if that color does NOT conflict with node k's neighboring colors\n                  color kth node with color\n                  enumerate( graph data structure, updated coloring, k+1,\n                             min coloring previously found )\n                  uncolor the kth node\n\n\nHeuristic\n    for k=1 to num_nodes inclusive\n    \n        for all possible colors in order except for NOCOLOR\n                        \n            if that coloring does NOT conflict with node k's neighboring colors                \n                color kth node with color\n                break out of loop over possible colors for node k       \n\n\nYour own approach\nYou will also implement the command MINE that executes your own faster algorithm for performing graph coloring. The code you submit should be able to execute the MINE command.\nFor your own approach you can choose to do one of the following: * improve upon the recursive backtracking approach by putting in more pruning and then show this is faster than the suggested recursive backtracking approach * improve upon the heuristic approach while not resorting to a trivial solution like giving each node its own color"
   },
   {
     "objectID": "programming-assignment-07.html#timing-all-of-the-approaches",
     "href": "programming-assignment-07.html#timing-all-of-the-approaches",
-    "title": "Programming Assignment 07",
+    "title": "Programming Assignment 06",
     "section": "Timing all of the approaches",
     "text": "Timing all of the approaches\nUsing code similar to the following, you will have a TIME command that times all of the algorithms.\n        long startTime = System.nanoTime();\n        coloring = heuristic(graph);\n        long endTime = System.nanoTime();\n        long duration = (endTime - startTime) / 1000000;\n        System.out.println(\"heuristic: \" + coloring.getNumColors() + \" colors, \"\n                + duration + \" milliseconds\");\nThe output for the TIME command will look as follows:\nheuristic: 6 colors, 4 milliseconds\nmine:      6 colors, 3 milliseconds\nbacktrack: 4 colors, 50102 milliseconds\nNone of the grading test cases call TIME, because each time you run the program even on the same input and on the same machine there will be some time variance. Because of that you will probably want to run the timings about 5 times before drawing any conclusions.\nINSTEAD, you will be running the TIME command on your machine for the mesh1em6.mtx input. It takes around a minute for the recursive backtracking algorithm on a 2 year old Mac."
   },
   {
     "objectID": "programming-assignment-07.html#error-handling",
     "href": "programming-assignment-07.html#error-handling",
-    "title": "Programming Assignment 07",
+    "title": "Programming Assignment 06",
     "section": "Error handling",
     "text": "Error handling\nAll of the inputs will be correctly formed for this assignment."
   },
   {
     "objectID": "programming-assignment-07.html#notes-and-suggestions",
     "href": "programming-assignment-07.html#notes-and-suggestions",
-    "title": "Programming Assignment 07",
+    "title": "Programming Assignment 06",
     "section": "Notes and Suggestions",
     "text": "Notes and Suggestions\n\nTo get started, go to the resources page on piazza and click on the PA7-GraphColoring link under programming assignments and then accept the github assignment and repository. Import the github repository into Eclipse as normal. We aren’t using Travis CI anymore. Test things locally in Eclipse and submit all the files to Gradescope to see how you do on the grading test cases.\nThe node ids should go from 1 to the number of nodes inclusive, because the sparse matrix market file format (.mtx) stores node ids starting at 1 instead of 0.\nWe are providing a Coloring class that keeps track of a mapping of node ids to colors.\nIn Section 8 this week, we provided a graph data structure, to which you might need to add a method that returns the neighbors for a node.\nIn Section 8 this week, we helped you write the code to read in .mtx files and output a dot file. You will need to modify the dot output code to generate colored nodes. The setting of the colors is up to you and happens in Coloring.java."
   },
   {
     "objectID": "programming-assignment-07.html#grading-criteria",
     "href": "programming-assignment-07.html#grading-criteria",
-    "title": "Programming Assignment 07",
+    "title": "Programming Assignment 06",
     "section": "Grading Criteria",
     "text": "Grading Criteria\nHalf of the PA7 grade will be correctness. For this assignment, there will be some private test cases on Gradescope used for grading. However, note the names of the test cases and realize you can download the .mtx files from the SuiteSparse Matrix Collection (https://sparse.tamu.edu/about).\nThe other half of the PA7 grade will be broken up as follows: * 25 your decomposition and code clarity * 10 MINE algorithm that does something different than given algorithms * 10 timing results in the README.md file along with a TIME implementation * 5 points for a cool dot file with a coloring in it\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method EXCEPT for in the timing code.\nAll of the Java files should be &lt;250 lines of code.\nEach method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\nMake things as simple as possible.\n\nOnly use one Scanner instance.\nDon’t use lambda functions or other features in non-standard ways.\nIn general avoid nested loops. However, can use nested loops to implement the recursive backtracking and heuristic in PA7.\nIn general, avoid nesting conditionals. However, you can use nested conditionals to implement the recursive backtracking and heuristic in PA7.\nAvoid chaining: see the Piazza post for more info\n\n\nCode Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement.\n\nThe coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine."
   },
   {
     "objectID": "programming-assignment-07.html#submission",
     "href": "programming-assignment-07.html#submission",
-    "title": "Programming Assignment 07",
+    "title": "Programming Assignment 06",
     "section": "Submission",
     "text": "Submission\nFiles that need to be submitted to Gradescope: * all .java files * README.md with the results of timing experiments that compare your improved algorithm to the required algorithms for the input file mesh1em6.mtx * a dot file that shows off your graph coloring skills"
   },
@@ -158,14 +158,14 @@
     "href": "modules.html#readings-4",
     "title": "Modules",
     "section": "Readings",
-    "text": "Readings"
+    "text": "Readings\n\nGreedy Algorithms"
   },
   {
     "objectID": "modules.html#slides-4",
     "href": "modules.html#slides-4",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides"
+    "text": "Slides\n\nHeuristics"
   },
   {
     "objectID": "modules.html#assignments-4",
@@ -2392,5 +2392,75 @@
     "title": "Inheritance",
     "section": "Updated UML diagram",
     "text": "Updated UML diagram"
+  },
+  {
+    "objectID": "slides-05-01.html#heuristics",
+    "href": "slides-05-01.html#heuristics",
+    "title": "Heuristics",
+    "section": "Heuristics",
+    "text": "Heuristics\n\nExhaustively searching every possible solution does not work for all problems, it can get very costly.\nWe can make use of use a heuristic to approximate answers to a problem\nA heuristic guides an algorithm to find good choices\nA heuristic is a shortcut that sacrifices accuracy and completenes\nThe goal is to find approximate solutions more quickly"
+  },
+  {
+    "objectID": "slides-05-01.html#relevant-algorithms",
+    "href": "slides-05-01.html#relevant-algorithms",
+    "title": "Heuristics",
+    "section": "Relevant algorithms",
+    "text": "Relevant algorithms\nWe have worked with two recursive algorithmic patterns:\n\nExhaustive search (enumeration)\nBacktracking"
+  },
+  {
+    "objectID": "slides-05-01.html#the-travelling-salesperson-problem-tsp",
+    "href": "slides-05-01.html#the-travelling-salesperson-problem-tsp",
+    "title": "Heuristics",
+    "section": "The travelling salesperson problem (TSP)",
+    "text": "The travelling salesperson problem (TSP)\n“Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?”\nHow would you solve this using exhaustive search?"
+  },
+  {
+    "objectID": "slides-05-01.html#the-travelling-salesperson-problem-tsp-1",
+    "href": "slides-05-01.html#the-travelling-salesperson-problem-tsp-1",
+    "title": "Heuristics",
+    "section": "The travelling salesperson problem (TSP)",
+    "text": "The travelling salesperson problem (TSP)\nHow would you solve this using exhaustive search?\n\nCalculate all the possible routes\nCalculate the distance of each route\nChoose the shortest route"
+  },
+  {
+    "objectID": "slides-05-01.html#the-travelling-salesperson-problem-tsp-2",
+    "href": "slides-05-01.html#the-travelling-salesperson-problem-tsp-2",
+    "title": "Heuristics",
+    "section": "The travelling salesperson problem (TSP)",
+    "text": "The travelling salesperson problem (TSP)\nHow would you solve this with backtracking?\nWhat would be a way to prune branches?"
+  },
+  {
+    "objectID": "slides-05-01.html#the-travelling-salesperson-problem-tsp-3",
+    "href": "slides-05-01.html#the-travelling-salesperson-problem-tsp-3",
+    "title": "Heuristics",
+    "section": "The travelling salesperson problem (TSP)",
+    "text": "The travelling salesperson problem (TSP)\nWhat would be a way to prune branches?\nKeep track of minimal distance found, if trip in the current branch at any point has greater distance than the minimal trip previously found, backtrack"
+  },
+  {
+    "objectID": "slides-05-01.html#the-travelling-salesperson-problem-tsp-4",
+    "href": "slides-05-01.html#the-travelling-salesperson-problem-tsp-4",
+    "title": "Heuristics",
+    "section": "The travelling salesperson problem (TSP)",
+    "text": "The travelling salesperson problem (TSP)\nHeuristics: greedy algorithm\n\nPick whatever is currently the best next step\nChoose the closest city that is available for the trip at each step"
+  },
+  {
+    "objectID": "slides-05-01.html#greedy-algorithm",
+    "href": "slides-05-01.html#greedy-algorithm",
+    "title": "Heuristics",
+    "section": "Greedy Algorithm",
+    "text": "Greedy Algorithm\n\nChoose best option at each step\nSolve remaining subproblems after making greedy step\n\nNo need to calculate all steps/branches like in enumeration and backtracking"
+  },
+  {
+    "objectID": "slides-05-01.html#knapsack-problem",
+    "href": "slides-05-01.html#knapsack-problem",
+    "title": "Heuristics",
+    "section": "Knapsack Problem",
+    "text": "Knapsack Problem\nGiven a set of items, each with a weight and a value, determine which items to include in the collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.\nDiscuss with your table mates ways to approach this problem\nExample: limit weight of knapsack is 5kg\n\nItem 1: $400, 3kg\nItem 2: $200, 1kg\nItem 3: $300, 3kg"
+  },
+  {
+    "objectID": "slides-05-01.html#knapsack-problem-1",
+    "href": "slides-05-01.html#knapsack-problem-1",
+    "title": "Heuristics",
+    "section": "Knapsack Problem",
+    "text": "Knapsack Problem\n\nBest items have big value, small size\nOrder items in a way to represent that big value and small size is better, and then pack them until they don’t fit into the knapsack anymore\nCompare solution total value with the highest valuable item (greedy choice)\n\nExample: limit weight of knapsack is 200kg\n\nItem 1: $6, 3kg\nItem 2: $200, 200kg"
   }
 ]

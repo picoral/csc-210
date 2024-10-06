@@ -1,0 +1,93 @@
+---
+title: "Heuristics"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## Relevant algorithms
+
+We have worked with two recursive algorithmic patterns:
+
+* Exhaustive search (enumeration)
+* Backtracking
+
+## The travelling salesperson problem (TSP)
+
+"Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?"
+
+How would you solve this using exhaustive search?
+
+## The travelling salesperson problem (TSP)
+
+How would you solve this using exhaustive search?
+
+1. Calculate all the possible routes
+1. Calculate the distance of each route 
+1. Choose the shortest route
+
+## The travelling salesperson problem (TSP)
+
+How would you solve this with backtracking?
+
+What would be a way to prune branches?
+
+## The travelling salesperson problem (TSP)
+
+What would be a way to prune branches?
+
+Keep track of minimal distance found, if trip in the current branch at any point 
+has greater distance than the minimal trip previously found, backtrack
+
+## Heuristics
+
+* Exhaustively searching every possible solution does not work for all problems,
+it can get very costly.
+
+* We can make use of use a **heuristic** to approximate answers to a problem 
+
+* A **heuristic**  guides an algorithm to find good choices
+
+* A **heuristic** is a shortcut that sacrifices accuracy and completenes
+
+* The goal is to find approximate solutions more quickly
+
+## The travelling salesperson problem (TSP)
+
+Heuristics: greedy algorithm
+
+* Pick whatever is currently the best next step
+* Choose the closest city that is available for the trip at each step
+
+## Greedy Algorithm
+
+* Choose best option at each step
+* Solve remaining subproblems after making greedy step
+
+No need to calculate all steps/branches like in enumeration and backtracking
+
+## Knapsack Problem 
+
+**Given a set of items, each with a weight and a value, determine which items to include in the collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.**
+
+Discuss with your table mates ways to approach this problem
+
+Example: limit weight of knapsack is 5kg
+
+* Item 1: $400, 3kg
+* Item 2: $200, 1kg
+* Item 3: $300, 3kg
+
+## Knapsack Problem 
+
+* Best items have big value, small size
+* Order items in a way to represent that big value and small size is better, and then pack them until they don't fit into the knapsack anymore
+* Compare solution total value with the highest valuable item (greedy choice)
+
+Example: limit weight of knapsack is 200kg
+
+* Item 1: $6, 3kg
+* Item 2: $200, 200kg
+
+
