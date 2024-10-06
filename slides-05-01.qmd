@@ -305,4 +305,6 @@ With the table mates, improve on the `Animal` superclass and its subclasses.
 
 What other instance variables should you include?
 
+What about methods?
+
 # UML diagram presentations
