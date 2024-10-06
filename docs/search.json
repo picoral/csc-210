@@ -2805,5 +2805,131 @@
     "title": "Programming Assignment 06",
     "section": "Submission",
     "text": "Submission\nFiles that need to be submitted to Gradescope: * all .java files * README.md with the results of timing experiments that compare your improved algorithm to the required algorithms for the input file mesh1em6.mtx * a dot file that shows off your graph coloring skills"
+  },
+  {
+    "objectID": "slides-05-01.html#inheritance",
+    "href": "slides-05-01.html#inheritance",
+    "title": "Inheritance",
+    "section": "Inheritance",
+    "text": "Inheritance\nAttributes and methods can be inherited from one class to another\n\nsuperclass (parent) - the class being inherited from\nsubclass (child) - the class that inherits from another class\n\nUse the extends keyword"
+  },
+  {
+    "objectID": "slides-05-01.html#superclass",
+    "href": "slides-05-01.html#superclass",
+    "title": "Inheritance",
+    "section": "Superclass",
+    "text": "Superclass\nCreate a class called Person with the following instance variables:\n\nFirst Name\nFamily Name\nBirthdate\n\nWhat public and private methods?\nMake sure you do validation for setter methods."
+  },
+  {
+    "objectID": "slides-05-01.html#superclass-solution",
+    "href": "slides-05-01.html#superclass-solution",
+    "title": "Inheritance",
+    "section": "Superclass – solution",
+    "text": "Superclass – solution\nimport java.time.LocalDate;\n\npublic class Person {\n    \n    private String firstName;\n    private String familyName;\n    private int birthYear;\n    private int birthMonth;\n    private int birthDay;\n\n    public Person(String first, String family) {\n        firstName = first;\n        familyName = family;\n    }\n    \n    public void setBirthDate(int year, int month, int day) {\n        LocalDate today = LocalDate.now(); \n        if (year &gt; 1900 && year &lt;= today.getYear()) birthYear = year;\n        if (month &gt; 0 && month &lt;= 12) birthMonth = month;\n        if (day &gt; 0 && day &lt;= 31) birthDay = day;\n    }\n    \n    public String getBirthDate() {\n        String month;\n        if (birthMonth &lt; 10) month = \"0\" + birthMonth;\n        else month = \"\" + birthMonth;\n        return birthYear + \"/\" + month + \"/\" + birthDay;\n    }\n    \n    public String getFirstName() {\n        return firstName;\n    }\n    \n    public String getFamilyName() {\n        return familyName;\n    }\n    \n    public void print() {\n        System.out.print(firstName + \" \" + familyName);\n        System.out.println(\" born on \" + getBirthDate());\n    }\n    \n}"
+  },
+  {
+    "objectID": "slides-05-01.html#subclass",
+    "href": "slides-05-01.html#subclass",
+    "title": "Inheritance",
+    "section": "Subclass",
+    "text": "Subclass\nCreate a class called Student that extends the Person class. Add the following instance variables:\n\nAdmissions Year\nGraduation Year\nMajor\nEmail address (or only netID)\n\nWhat public and private methods?\nWrite a constructor method, invoke base-class constructor using super keyword"
+  },
+  {
+    "objectID": "slides-05-01.html#subclass-solution",
+    "href": "slides-05-01.html#subclass-solution",
+    "title": "Inheritance",
+    "section": "Subclass – solution",
+    "text": "Subclass – solution\nimport java.time.LocalDate;\n\npublic class Student extends Person {\n    private int admissionYear;\n    \n    public Student(String first, String family,\n                   int admissionYear) {\n        // invoke base-class constructor\n        super(first, family);\n        LocalDate today = LocalDate.now(); \n        if (admissionYear &gt; 1900 && admissionYear &lt;= today.getYear()) \n            this.admissionYear = admissionYear;\n    }\n    \n    public int getAdmission() {\n        return admissionYear;\n    }\n    \n    // override annotation\n    @Override public void print() {\n        super.print();\n        System.out.println(\"Admitted in \" + admissionYear);\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-05-01.html#polymorphism",
+    "href": "slides-05-01.html#polymorphism",
+    "title": "Inheritance",
+    "section": "Polymorphism",
+    "text": "Polymorphism\npoly means many, morphs means forms\none interface with multiple implementations\nPolymorphism in java:\n\nCompile-time Polymorphism: Method overloading\nRuntime Polymorphism: Method overriding"
+  },
+  {
+    "objectID": "slides-05-01.html#uml-diagram",
+    "href": "slides-05-01.html#uml-diagram",
+    "title": "Inheritance",
+    "section": "UML diagram",
+    "text": "UML diagram\nWe will be using Unified Modeling Language (UML) diagrams to understand and plan classes and their inheritance.\n\nadd name of the class at the top of each box in the diagram\nuse +/- for public/private\ninclude instance variables, methods (including constructors) with parameters\n\nI use the UML class template from Lucidcharts (available through google drive)"
+  },
+  {
+    "objectID": "slides-05-01.html#uml-diagram-example",
+    "href": "slides-05-01.html#uml-diagram-example",
+    "title": "Inheritance",
+    "section": "UML diagram example",
+    "text": "UML diagram example"
+  },
+  {
+    "objectID": "slides-05-01.html#implementation-example",
+    "href": "slides-05-01.html#implementation-example",
+    "title": "Inheritance",
+    "section": "Implementation example",
+    "text": "Implementation example\nAnimal.java\npublic class Animal {\n    private String species;\n    private String genus;\n    private String family;\n    \n    public Animal (String s, String g, String f) {\n        species = s;\n        genus = g;\n        family = f;\n    }\n    \n    public String toString() {\n        String message;\n        message = \"The \" + species;\n        message += \" of genus \" +  genus;\n        message += \" and family \" + family;\n        return message;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-05-01.html#implementation-example-1",
+    "href": "slides-05-01.html#implementation-example-1",
+    "title": "Inheritance",
+    "section": "Implementation example",
+    "text": "Implementation example\nCat.java\npublic class Cat extends Animal {\n    public Cat() {\n        super(\"Cat\", \"Felis\", \"Felidae\");\n    }\n    \n    public String makesSound() {\n        return \"meow\";\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-05-01.html#implementation-example-2",
+    "href": "slides-05-01.html#implementation-example-2",
+    "title": "Inheritance",
+    "section": "Implementation example",
+    "text": "Implementation example\npublic class GetAnimals {\n\n    public static void main(String[] args) {\n        Cat garfield = new Cat();\n        System.out.println(garfield.toString());\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-05-01.html#abstract-superclass",
+    "href": "slides-05-01.html#abstract-superclass",
+    "title": "Inheritance",
+    "section": "abstract superclass",
+    "text": "abstract superclass\nAn abstract class cannot be instantiated (an error is thrown)\nAnimal animal = new Animal(); // Error: Animal is abstract\nAn abstract class must be subclassed\nMethods in an abstract class can also be abstract – similar to an interface"
+  },
+  {
+    "objectID": "slides-05-01.html#abstract-example-implementation",
+    "href": "slides-05-01.html#abstract-example-implementation",
+    "title": "Inheritance",
+    "section": "abstract example implementation",
+    "text": "abstract example implementation\npublic abstract class Animal {\n    private String species;\n    private String genus;\n    private String family;\n    \n    public Animal (String s, String g, String f) {\n        species = s;\n        genus = g;\n        family = f;\n    }\n    \n    public abstract String makesSound();\n    \n    public String toString() {\n        String message;\n        message = \"The \" + species;\n        message += \" of genus \" +  genus;\n        message += \" and family \" + family;\n        message += \" makes this sound: \";\n        message += makesSound();\n        return message;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-05-01.html#protected-keyword",
+    "href": "slides-05-01.html#protected-keyword",
+    "title": "Inheritance",
+    "section": "protected keyword",
+    "text": "protected keyword\nThe private access modifier specifies the variable can only be accessed in its own class\nThe protected access modifier specifies that the variable can only be accessed by a subclass of its class"
+  },
+  {
+    "objectID": "slides-05-01.html#protected-implementation",
+    "href": "slides-05-01.html#protected-implementation",
+    "title": "Inheritance",
+    "section": "protected implementation",
+    "text": "protected implementation\npublic abstract class Animal {\n    protected String species;\n    protected String genus;\n    protected String family;\n    \n    public Animal () {}\n    \n    public abstract String makesSound();\n    \n    public String toString() {\n        String message;\n        message = \"The \" + species;\n        message += \" of genus \" +  genus;\n        message += \" and family \" + family;\n        message += \" makes this sound: \";\n        message += makesSound();\n        return message;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-05-01.html#protected-implementation-1",
+    "href": "slides-05-01.html#protected-implementation-1",
+    "title": "Inheritance",
+    "section": "protected implementation",
+    "text": "protected implementation\npublic class Cat extends Animal {\n    public Cat() {\n        species = \"Cat\";\n        genus = \"Felis\";\n        family = \"Felidae\";\n    }\n    \n    public String makesSound() {\n        return \"meow\";\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-05-01.html#updated-uml-diagram",
+    "href": "slides-05-01.html#updated-uml-diagram",
+    "title": "Inheritance",
+    "section": "Updated UML diagram",
+    "text": "Updated UML diagram"
+  },
+  {
+    "objectID": "slides-05-01.html#update-the-uml-diagram",
+    "href": "slides-05-01.html#update-the-uml-diagram",
+    "title": "Inheritance",
+    "section": "Update the UML diagram",
+    "text": "Update the UML diagram\nThe classes and inheritance relationships that we worked with so far has been simplified.\nWith the table mates, improve on the Animal superclass and its subclasses.\nWhat other instance variables should you include?"
   }
 ]

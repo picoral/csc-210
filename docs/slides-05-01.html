@@ -10,7 +10,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.551">
 
-  <title>CSC 210 Fall 2024 - Heuristics</title>
+  <title>CSC 210 Fall 2024 - Inheritance</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -390,240 +390,280 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Heuristics</h1>
+  <h1 class="title">Inheritance</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="relevant-algorithms" class="slide level2">
-<h2>Relevant algorithms</h2>
-<p>We have worked with two recursive algorithmic patterns:</p>
+<section id="inheritance" class="slide level2">
+<h2>Inheritance</h2>
+<p>Attributes and methods can be inherited from one class to another</p>
 <ul>
-<li>Exhaustive search (enumeration)</li>
-<li>Backtracking</li>
+<li>superclass (parent) - the class being inherited from</li>
+<li>subclass (child) - the class that inherits from another class</li>
 </ul>
+<p>Use the <code>extends</code> keyword</p>
 </section>
-<section id="the-travelling-salesperson-problem-tsp" class="slide level2">
-<h2>The travelling salesperson problem (TSP)</h2>
-<p>“Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?”</p>
-<p>How would you solve this using exhaustive search?</p>
-</section>
-<section id="the-travelling-salesperson-problem-tsp-1" class="slide level2">
-<h2>The travelling salesperson problem (TSP)</h2>
-<p>How would you solve this using exhaustive search?</p>
-<ol type="1">
-<li>Calculate all the possible routes</li>
-<li>Calculate the distance of each route</li>
-<li>Choose the shortest route</li>
-</ol>
-</section>
-<section id="the-travelling-salesperson-problem-tsp-2" class="slide level2">
-<h2>The travelling salesperson problem (TSP)</h2>
-<p>How would you solve this with backtracking?</p>
-<p>What would be a way to prune branches?</p>
-</section>
-<section id="the-travelling-salesperson-problem-tsp-3" class="slide level2">
-<h2>The travelling salesperson problem (TSP)</h2>
-<p>What would be a way to prune branches?</p>
-<p>Keep track of minimal distance found, if trip in the current branch at any point has greater distance than the minimal trip previously found, backtrack</p>
-</section>
-<section id="heuristics" class="slide level2">
-<h2>Heuristics</h2>
+<section id="superclass" class="slide level2">
+<h2>Superclass</h2>
+<p>Create a class called <code>Person</code> with the following instance variables:</p>
 <ul>
-<li><p>Exhaustively searching every possible solution does not work for all problems, it can get very costly.</p></li>
-<li><p>We can make use of use a <strong>heuristic</strong> to approximate answers to a problem</p></li>
-<li><p>A <strong>heuristic</strong> guides an algorithm to find good choices</p></li>
-<li><p>A <strong>heuristic</strong> is a shortcut that sacrifices accuracy and completenes</p></li>
-<li><p>The goal is to find approximate solutions more quickly</p></li>
+<li>First Name</li>
+<li>Family Name</li>
+<li>Birthdate</li>
 </ul>
+<p>What public and private methods?</p>
+<p>Make sure you do validation for setter methods.</p>
 </section>
-<section id="the-travelling-salesperson-problem-tsp-4" class="slide level2">
-<h2>The travelling salesperson problem (TSP)</h2>
-<p>Heuristics: greedy algorithm</p>
-<ul>
-<li>Pick whatever is currently the best next step</li>
-<li>Choose the closest city that is available for the trip at each step</li>
-</ul>
-</section>
-<section id="greedy-algorithm" class="slide level2">
-<h2>Greedy Algorithm</h2>
-<ul>
-<li>Choose best option at each step</li>
-<li>Solve remaining subproblems after making greedy step</li>
-</ul>
-<p>No need to calculate all steps/branches like in enumeration and backtracking</p>
-</section>
-<section id="knapsack-problem" class="slide level2">
-<h2>Knapsack Problem</h2>
-<p><strong>Given a set of items, each with a weight and a value, determine which items to include in the collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.</strong></p>
-<p>Discuss with your table mates ways to approach this problem</p>
-<p>Example: limit weight of knapsack is 5kg</p>
-<ul>
-<li>Item 1: $400, 3kg</li>
-<li>Item 2: $200, 1kg</li>
-<li>Item 3: $300, 3kg</li>
-</ul>
-</section>
-<section id="knapsack-problem-1" class="slide level2">
-<h2>Knapsack Problem</h2>
-<ul>
-<li>Best items have big value, small size</li>
-<li>Order items in a way to represent that big value and small size is better, and then pack them until they don’t fit into the knapsack anymore</li>
-<li>Compare solution total value with the highest valuable item (greedy choice)</li>
-</ul>
-<p>Example: limit weight of knapsack is 200kg</p>
-<ul>
-<li>Item 1: $6, 3kg</li>
-<li>Item 2: $200, 200kg</li>
-</ul>
-</section>
-<section id="knapsack-problem-java-implementation" class="slide level2">
-<h2>Knapsack Problem – Java Implementation</h2>
-<ul>
-<li>What classes do you need?</li>
-</ul>
-</section>
-<section id="item-implementation" class="slide level2">
-<h2><code>Item</code> Implementation</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>public class Item {</span>
-<span id="cb1-2"><a></a>    private String name;</span>
-<span id="cb1-3"><a></a>    private double value;</span>
-<span id="cb1-4"><a></a>    private double weight;</span>
-<span id="cb1-5"><a></a>    </span>
-<span id="cb1-6"><a></a>    public Item(String n, double v, double w) {</span>
-<span id="cb1-7"><a></a>        name = n;</span>
-<span id="cb1-8"><a></a>        value = v;</span>
-<span id="cb1-9"><a></a>        weight = w;</span>
-<span id="cb1-10"><a></a>    }</span>
-<span id="cb1-11"><a></a>    </span>
-<span id="cb1-12"><a></a>    public String getName() {</span>
-<span id="cb1-13"><a></a>        return name;</span>
+<section id="superclass-solution" class="slide level2">
+<h2>Superclass – solution</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>import java.time.LocalDate;</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a>public class Person {</span>
+<span id="cb1-4"><a></a>    </span>
+<span id="cb1-5"><a></a>    private String firstName;</span>
+<span id="cb1-6"><a></a>    private String familyName;</span>
+<span id="cb1-7"><a></a>    private int birthYear;</span>
+<span id="cb1-8"><a></a>    private int birthMonth;</span>
+<span id="cb1-9"><a></a>    private int birthDay;</span>
+<span id="cb1-10"><a></a></span>
+<span id="cb1-11"><a></a>    public Person(String first, String family) {</span>
+<span id="cb1-12"><a></a>        firstName = first;</span>
+<span id="cb1-13"><a></a>        familyName = family;</span>
 <span id="cb1-14"><a></a>    }</span>
 <span id="cb1-15"><a></a>    </span>
-<span id="cb1-16"><a></a>    public double getValue() {</span>
-<span id="cb1-17"><a></a>        return value;</span>
-<span id="cb1-18"><a></a>    }</span>
-<span id="cb1-19"><a></a>    </span>
-<span id="cb1-20"><a></a>    public double getWeight() {</span>
-<span id="cb1-21"><a></a>        return weight;</span>
-<span id="cb1-22"><a></a>    }</span>
-<span id="cb1-23"><a></a>    </span>
-<span id="cb1-24"><a></a>    public double getRatio() {</span>
-<span id="cb1-25"><a></a>        return value/weight;</span>
-<span id="cb1-26"><a></a>    }</span>
-<span id="cb1-27"><a></a>    </span>
-<span id="cb1-28"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-16"><a></a>    public void setBirthDate(int year, int month, int day) {</span>
+<span id="cb1-17"><a></a>        LocalDate today = LocalDate.now(); </span>
+<span id="cb1-18"><a></a>        if (year &gt; 1900 &amp;&amp; year &lt;= today.getYear()) birthYear = year;</span>
+<span id="cb1-19"><a></a>        if (month &gt; 0 &amp;&amp; month &lt;= 12) birthMonth = month;</span>
+<span id="cb1-20"><a></a>        if (day &gt; 0 &amp;&amp; day &lt;= 31) birthDay = day;</span>
+<span id="cb1-21"><a></a>    }</span>
+<span id="cb1-22"><a></a>    </span>
+<span id="cb1-23"><a></a>    public String getBirthDate() {</span>
+<span id="cb1-24"><a></a>        String month;</span>
+<span id="cb1-25"><a></a>        if (birthMonth &lt; 10) month = "0" + birthMonth;</span>
+<span id="cb1-26"><a></a>        else month = "" + birthMonth;</span>
+<span id="cb1-27"><a></a>        return birthYear + "/" + month + "/" + birthDay;</span>
+<span id="cb1-28"><a></a>    }</span>
+<span id="cb1-29"><a></a>    </span>
+<span id="cb1-30"><a></a>    public String getFirstName() {</span>
+<span id="cb1-31"><a></a>        return firstName;</span>
+<span id="cb1-32"><a></a>    }</span>
+<span id="cb1-33"><a></a>    </span>
+<span id="cb1-34"><a></a>    public String getFamilyName() {</span>
+<span id="cb1-35"><a></a>        return familyName;</span>
+<span id="cb1-36"><a></a>    }</span>
+<span id="cb1-37"><a></a>    </span>
+<span id="cb1-38"><a></a>    public void print() {</span>
+<span id="cb1-39"><a></a>        System.out.print(firstName + " " + familyName);</span>
+<span id="cb1-40"><a></a>        System.out.println(" born on " + getBirthDate());</span>
+<span id="cb1-41"><a></a>    }</span>
+<span id="cb1-42"><a></a>    </span>
+<span id="cb1-43"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="knapsack-implementation" class="slide level2">
-<h2><code>Knapsack</code> Implementation</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>import java.util.ArrayList;</span>
+<section id="subclass" class="slide level2">
+<h2>Subclass</h2>
+<p>Create a class called <code>Student</code> that <code>extends</code> the <code>Person</code> class. Add the following instance variables:</p>
+<ul>
+<li>Admissions Year</li>
+<li>Graduation Year</li>
+<li>Major</li>
+<li>Email address (or only netID)</li>
+</ul>
+<p>What public and private methods?</p>
+<p>Write a constructor method, invoke base-class constructor using <code>super</code> keyword</p>
+</section>
+<section id="subclass-solution" class="slide level2">
+<h2>Subclass – solution</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>import java.time.LocalDate;</span>
 <span id="cb2-2"><a></a></span>
-<span id="cb2-3"><a></a>public class Knapsack {</span>
-<span id="cb2-4"><a></a>    private double limit;</span>
-<span id="cb2-5"><a></a>    private ArrayList&lt;Item&gt; contents = new ArrayList&lt;&gt;();</span>
-<span id="cb2-6"><a></a>    </span>
-<span id="cb2-7"><a></a>    public Knapsack(double limit) {</span>
-<span id="cb2-8"><a></a>        this.limit = limit;</span>
-<span id="cb2-9"><a></a>    }</span>
-<span id="cb2-10"><a></a>    </span>
-<span id="cb2-11"><a></a>    public double getTotalWeight() {</span>
-<span id="cb2-12"><a></a>        double total = 0;</span>
-<span id="cb2-13"><a></a>        for (Item item : contents) {</span>
-<span id="cb2-14"><a></a>            total += item.getWeight();</span>
-<span id="cb2-15"><a></a>        }</span>
-<span id="cb2-16"><a></a>        return total;</span>
+<span id="cb2-3"><a></a>public class Student extends Person {</span>
+<span id="cb2-4"><a></a>    private int admissionYear;</span>
+<span id="cb2-5"><a></a>    </span>
+<span id="cb2-6"><a></a>    public Student(String first, String family,</span>
+<span id="cb2-7"><a></a>                   int admissionYear) {</span>
+<span id="cb2-8"><a></a>        // invoke base-class constructor</span>
+<span id="cb2-9"><a></a>        super(first, family);</span>
+<span id="cb2-10"><a></a>        LocalDate today = LocalDate.now(); </span>
+<span id="cb2-11"><a></a>        if (admissionYear &gt; 1900 &amp;&amp; admissionYear &lt;= today.getYear()) </span>
+<span id="cb2-12"><a></a>            this.admissionYear = admissionYear;</span>
+<span id="cb2-13"><a></a>    }</span>
+<span id="cb2-14"><a></a>    </span>
+<span id="cb2-15"><a></a>    public int getAdmission() {</span>
+<span id="cb2-16"><a></a>        return admissionYear;</span>
 <span id="cb2-17"><a></a>    }</span>
 <span id="cb2-18"><a></a>    </span>
-<span id="cb2-19"><a></a>    public double getValue() {</span>
-<span id="cb2-20"><a></a>        double total = 0;</span>
-<span id="cb2-21"><a></a>        for (Item item : contents) {</span>
-<span id="cb2-22"><a></a>            total += item.getValue();</span>
-<span id="cb2-23"><a></a>        }</span>
-<span id="cb2-24"><a></a>        return total;</span>
-<span id="cb2-25"><a></a>    }</span>
-<span id="cb2-26"><a></a>    </span>
-<span id="cb2-27"><a></a>    public double getLimit() {</span>
-<span id="cb2-28"><a></a>        return limit;</span>
-<span id="cb2-29"><a></a>    }</span>
-<span id="cb2-30"><a></a>    </span>
-<span id="cb2-31"><a></a>    public void empty() {</span>
-<span id="cb2-32"><a></a>        ArrayList&lt;Item&gt; allItems = new ArrayList&lt;&gt;(contents);</span>
-<span id="cb2-33"><a></a>        for(Item item : allItems) contents.remove(item);</span>
-<span id="cb2-34"><a></a>    }</span>
-<span id="cb2-35"><a></a>    </span>
-<span id="cb2-36"><a></a>    public boolean addItem(Item item) {</span>
-<span id="cb2-37"><a></a>        if (item.getWeight() + getTotalWeight() &lt;= limit) {</span>
-<span id="cb2-38"><a></a>            contents.add(item);</span>
-<span id="cb2-39"><a></a>            return true;</span>
-<span id="cb2-40"><a></a>        } else return false;</span>
-<span id="cb2-41"><a></a>    }</span>
-<span id="cb2-42"><a></a>    </span>
-<span id="cb2-43"><a></a>    public String toString() {</span>
-<span id="cb2-44"><a></a>        String message = "";</span>
-<span id="cb2-45"><a></a>        for (Item item : contents) message += item.getName() + " ";</span>
-<span id="cb2-46"><a></a>        message += "for a total value of " + getValue();</span>
-<span id="cb2-47"><a></a>        return message;</span>
-<span id="cb2-48"><a></a>    }</span>
-<span id="cb2-49"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-19"><a></a>    // override annotation</span>
+<span id="cb2-20"><a></a>    @Override public void print() {</span>
+<span id="cb2-21"><a></a>        super.print();</span>
+<span id="cb2-22"><a></a>        System.out.println("Admitted in " + admissionYear);</span>
+<span id="cb2-23"><a></a>    }</span>
+<span id="cb2-24"><a></a></span>
+<span id="cb2-25"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="knapsack-problem-implementation" class="slide level2">
-<h2>Knapsack Problem Implementation</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>import java.util.ArrayList;</span>
-<span id="cb3-2"><a></a>import java.util.Collections;</span>
-<span id="cb3-3"><a></a></span>
-<span id="cb3-4"><a></a>public class KnapsackProblem {</span>
-<span id="cb3-5"><a></a></span>
-<span id="cb3-6"><a></a>    public static void main(String[] args) {</span>
-<span id="cb3-7"><a></a>        Knapsack myBag = new Knapsack(100);</span>
-<span id="cb3-8"><a></a>        ArrayList&lt;Item&gt; items = new ArrayList&lt;&gt;();</span>
-<span id="cb3-9"><a></a>        items.add(new Item("A", 10, 10));</span>
-<span id="cb3-10"><a></a>        items.add(new Item("B", 10, 100));</span>
-<span id="cb3-11"><a></a>        items.add(new Item("C", 1, 100));</span>
-<span id="cb3-12"><a></a>        items.add(new Item("D", 100, 10));</span>
-<span id="cb3-13"><a></a>        items.add(new Item("E", 100, 10));</span>
-<span id="cb3-14"><a></a>        items.add(new Item("F", 50, 10));</span>
-<span id="cb3-15"><a></a>        //items.add(new Item("G", 300, 100));</span>
-<span id="cb3-16"><a></a>        </span>
-<span id="cb3-17"><a></a>        // make copy for step 3</span>
-<span id="cb3-18"><a></a>        ArrayList&lt;Item&gt; originalItems = new ArrayList&lt;&gt;(items);</span>
-<span id="cb3-19"><a></a>        </span>
-<span id="cb3-20"><a></a>        // step 1: sort by value/weight rations</span>
-<span id="cb3-21"><a></a>        ArrayList&lt;Double&gt; ratios = new ArrayList&lt;&gt;();</span>
-<span id="cb3-22"><a></a>        for (Item item : items) {</span>
-<span id="cb3-23"><a></a>            ratios.add(item.getRatio());</span>
-<span id="cb3-24"><a></a>        }</span>
-<span id="cb3-25"><a></a>        ArrayList&lt;Double&gt; sortedRatios = new ArrayList&lt;&gt;(ratios);</span>
-<span id="cb3-26"><a></a>        Collections.sort(sortedRatios, Collections.reverseOrder());</span>
-<span id="cb3-27"><a></a>    </span>
-<span id="cb3-28"><a></a>        // step 2: add each item to knapsack in ratio order</span>
-<span id="cb3-29"><a></a>        for (Double ratio : sortedRatios) {</span>
-<span id="cb3-30"><a></a>            // get item with that ratio</span>
-<span id="cb3-31"><a></a>            int index = ratios.indexOf(ratio);</span>
-<span id="cb3-32"><a></a>            Item item = items.get(index);</span>
-<span id="cb3-33"><a></a>            // remote item and ratio</span>
-<span id="cb3-34"><a></a>            ratios.remove(ratio);</span>
-<span id="cb3-35"><a></a>            items.remove(item);</span>
-<span id="cb3-36"><a></a>            // message to user</span>
-<span id="cb3-37"><a></a>            System.out.println("Trying to add " + item.getName());</span>
-<span id="cb3-38"><a></a>            // try to add item to knapsack</span>
-<span id="cb3-39"><a></a>            if (myBag.addItem(item)) continue;</span>
-<span id="cb3-40"><a></a>            else break;</span>
-<span id="cb3-41"><a></a>        }</span>
-<span id="cb3-42"><a></a>        </span>
-<span id="cb3-43"><a></a>        // step 3: is there any item that is worth individually more?</span>
-<span id="cb3-44"><a></a>        for (Item item : originalItems) {</span>
-<span id="cb3-45"><a></a>            if (item.getValue() &gt; myBag.getValue()) {</span>
-<span id="cb3-46"><a></a>                myBag.empty();</span>
-<span id="cb3-47"><a></a>                myBag.addItem(item);</span>
-<span id="cb3-48"><a></a>            }</span>
-<span id="cb3-49"><a></a>        }</span>
-<span id="cb3-50"><a></a>        </span>
-<span id="cb3-51"><a></a>        System.out.println(myBag.toString());</span>
-<span id="cb3-52"><a></a>        </span>
-<span id="cb3-53"><a></a>    }</span>
-<span id="cb3-54"><a></a></span>
-<span id="cb3-55"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="polymorphism" class="slide level2">
+<h2>Polymorphism</h2>
+<p><code>poly</code> means many, <code>morphs</code> means forms</p>
+<p>one interface with multiple implementations</p>
+<p>Polymorphism in java:</p>
+<ul>
+<li>Compile-time Polymorphism: Method overloading</li>
+<li>Runtime Polymorphism: Method overriding</li>
+</ul>
+</section>
+<section id="uml-diagram" class="slide level2">
+<h2>UML diagram</h2>
+<p>We will be using Unified Modeling Language (UML) diagrams to understand and plan classes and their inheritance.</p>
+<ul>
+<li>add name of the class at the top of each box in the diagram</li>
+<li>use <code>+</code>/<code>-</code> for public/private</li>
+<li>include instance variables, methods (including constructors) with parameters</li>
+</ul>
+<p>I use the UML class template from Lucidcharts (available through google drive)</p>
+</section>
+<section id="uml-diagram-example" class="slide level2">
+<h2>UML diagram example</h2>
+
+<img data-src="images/UML-class-Animal.png" class="r-stretch"></section>
+<section id="implementation-example" class="slide level2">
+<h2>Implementation example</h2>
+<p><code>Animal.java</code></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>public class Animal {</span>
+<span id="cb3-2"><a></a>    private String species;</span>
+<span id="cb3-3"><a></a>    private String genus;</span>
+<span id="cb3-4"><a></a>    private String family;</span>
+<span id="cb3-5"><a></a>    </span>
+<span id="cb3-6"><a></a>    public Animal (String s, String g, String f) {</span>
+<span id="cb3-7"><a></a>        species = s;</span>
+<span id="cb3-8"><a></a>        genus = g;</span>
+<span id="cb3-9"><a></a>        family = f;</span>
+<span id="cb3-10"><a></a>    }</span>
+<span id="cb3-11"><a></a>    </span>
+<span id="cb3-12"><a></a>    public String toString() {</span>
+<span id="cb3-13"><a></a>        String message;</span>
+<span id="cb3-14"><a></a>        message = "The " + species;</span>
+<span id="cb3-15"><a></a>        message += " of genus " +  genus;</span>
+<span id="cb3-16"><a></a>        message += " and family " + family;</span>
+<span id="cb3-17"><a></a>        return message;</span>
+<span id="cb3-18"><a></a>    }</span>
+<span id="cb3-19"><a></a></span>
+<span id="cb3-20"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="implementation-example-1" class="slide level2">
+<h2>Implementation example</h2>
+<p><code>Cat.java</code></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>public class Cat extends Animal {</span>
+<span id="cb4-2"><a></a>    public Cat() {</span>
+<span id="cb4-3"><a></a>        super("Cat", "Felis", "Felidae");</span>
+<span id="cb4-4"><a></a>    }</span>
+<span id="cb4-5"><a></a>    </span>
+<span id="cb4-6"><a></a>    public String makesSound() {</span>
+<span id="cb4-7"><a></a>        return "meow";</span>
+<span id="cb4-8"><a></a>    }</span>
+<span id="cb4-9"><a></a></span>
+<span id="cb4-10"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="implementation-example-2" class="slide level2">
+<h2>Implementation example</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>public class GetAnimals {</span>
+<span id="cb5-2"><a></a></span>
+<span id="cb5-3"><a></a>    public static void main(String[] args) {</span>
+<span id="cb5-4"><a></a>        Cat garfield = new Cat();</span>
+<span id="cb5-5"><a></a>        System.out.println(garfield.toString());</span>
+<span id="cb5-6"><a></a>    }</span>
+<span id="cb5-7"><a></a></span>
+<span id="cb5-8"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="abstract-superclass" class="slide level2">
+<h2><code>abstract</code> superclass</h2>
+<p>An abstract class cannot be instantiated (an error is thrown)</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a>Animal animal = new Animal(); // Error: Animal is abstract</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>An abstract class must be subclassed</p>
+<p>Methods in an abstract class can also be <code>abstract</code> – similar to an interface</p>
+</section>
+<section id="abstract-example-implementation" class="slide level2">
+<h2><code>abstract</code> example implementation</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>public abstract class Animal {</span>
+<span id="cb7-2"><a></a>    private String species;</span>
+<span id="cb7-3"><a></a>    private String genus;</span>
+<span id="cb7-4"><a></a>    private String family;</span>
+<span id="cb7-5"><a></a>    </span>
+<span id="cb7-6"><a></a>    public Animal (String s, String g, String f) {</span>
+<span id="cb7-7"><a></a>        species = s;</span>
+<span id="cb7-8"><a></a>        genus = g;</span>
+<span id="cb7-9"><a></a>        family = f;</span>
+<span id="cb7-10"><a></a>    }</span>
+<span id="cb7-11"><a></a>    </span>
+<span id="cb7-12"><a></a>    public abstract String makesSound();</span>
+<span id="cb7-13"><a></a>    </span>
+<span id="cb7-14"><a></a>    public String toString() {</span>
+<span id="cb7-15"><a></a>        String message;</span>
+<span id="cb7-16"><a></a>        message = "The " + species;</span>
+<span id="cb7-17"><a></a>        message += " of genus " +  genus;</span>
+<span id="cb7-18"><a></a>        message += " and family " + family;</span>
+<span id="cb7-19"><a></a>        message += " makes this sound: ";</span>
+<span id="cb7-20"><a></a>        message += makesSound();</span>
+<span id="cb7-21"><a></a>        return message;</span>
+<span id="cb7-22"><a></a>    }</span>
+<span id="cb7-23"><a></a></span>
+<span id="cb7-24"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="protected-keyword" class="slide level2">
+<h2><code>protected</code> keyword</h2>
+<p>The <code>private</code> access modifier specifies the variable can only be accessed in its own class</p>
+<p>The <code>protected</code> access modifier specifies that the variable can only be accessed by a subclass of its class</p>
+</section>
+<section id="protected-implementation" class="slide level2">
+<h2><code>protected</code> implementation</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>public abstract class Animal {</span>
+<span id="cb8-2"><a></a>    protected String species;</span>
+<span id="cb8-3"><a></a>    protected String genus;</span>
+<span id="cb8-4"><a></a>    protected String family;</span>
+<span id="cb8-5"><a></a>    </span>
+<span id="cb8-6"><a></a>    public Animal () {}</span>
+<span id="cb8-7"><a></a>    </span>
+<span id="cb8-8"><a></a>    public abstract String makesSound();</span>
+<span id="cb8-9"><a></a>    </span>
+<span id="cb8-10"><a></a>    public String toString() {</span>
+<span id="cb8-11"><a></a>        String message;</span>
+<span id="cb8-12"><a></a>        message = "The " + species;</span>
+<span id="cb8-13"><a></a>        message += " of genus " +  genus;</span>
+<span id="cb8-14"><a></a>        message += " and family " + family;</span>
+<span id="cb8-15"><a></a>        message += " makes this sound: ";</span>
+<span id="cb8-16"><a></a>        message += makesSound();</span>
+<span id="cb8-17"><a></a>        return message;</span>
+<span id="cb8-18"><a></a>    }</span>
+<span id="cb8-19"><a></a></span>
+<span id="cb8-20"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="protected-implementation-1" class="slide level2">
+<h2><code>protected</code> implementation</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a></a>public class Cat extends Animal {</span>
+<span id="cb9-2"><a></a>    public Cat() {</span>
+<span id="cb9-3"><a></a>        species = "Cat";</span>
+<span id="cb9-4"><a></a>        genus = "Felis";</span>
+<span id="cb9-5"><a></a>        family = "Felidae";</span>
+<span id="cb9-6"><a></a>    }</span>
+<span id="cb9-7"><a></a>    </span>
+<span id="cb9-8"><a></a>    public String makesSound() {</span>
+<span id="cb9-9"><a></a>        return "meow";</span>
+<span id="cb9-10"><a></a>    }</span>
+<span id="cb9-11"><a></a></span>
+<span id="cb9-12"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="updated-uml-diagram" class="slide level2">
+<h2>Updated UML diagram</h2>
+
+<img data-src="images/UML-class-Animal-protected.png" class="r-stretch"></section>
+<section id="update-the-uml-diagram" class="slide level2">
+<h2>Update the UML diagram</h2>
+<p>The classes and inheritance relationships that we worked with so far has been simplified.</p>
+<p>With the table mates, improve on the <code>Animal</code> superclass and its subclasses.</p>
+<p>What other instance variables should you include?</p>
+</section>
+<section id="uml-diagram-presentations" class="title-slide slide level1 center">
+<h1>UML diagram presentations</h1>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

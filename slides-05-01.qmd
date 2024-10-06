@@ -296,3 +296,13 @@ public class Cat extends Animal {
 ## Updated UML diagram
 
 ![](images/UML-class-Animal-protected.png)
+
+## Update the UML diagram
+
+The classes and inheritance relationships that we worked with so far has been simplified.
+
+With the table mates, improve on the `Animal` superclass and its subclasses.
+
+What other instance variables should you include?
+
+# UML diagram presentations
