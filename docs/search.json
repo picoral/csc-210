@@ -2230,7 +2230,7 @@
     "href": "programming-assignment-05.html#design-suggestions",
     "title": "Programming Assignmnet 05",
     "section": "Design Suggestions",
-    "text": "Design Suggestions\nWe recommend the following:\n\nA Garden object with a 2D array or list of plant objects.\nA Plant class hierarchy of some kind. The design for this is what will be submitted for peer review on Tuesday March 13th at 11:30 am to Gradescope.\nA Screen object with a 2D array of characters that each plant can print its current representation into. The Screen object can then print everything to standard out.\n\nhint: when copying over a Plant’s representation array place each cell at:\n\n [(Plant's row  * 5) + cell row][(Plant's col * size of plot) + cell col]\ninto the Screen object’s Array."
+    "text": "Design Suggestions\nWe recommend the following:\n\nA Garden object with a 2D array or list of plant objects.\nA Plant class hierarchy of some kind.\n\nA Screen object with a 2D array of characters that each plant can print its current representation into. The Screen object can then print everything to standard out.\n\nhint: when copying over a Plant’s representation array place each cell at:\n\n [(Plant's row  * 5) + cell row][(Plant's col * size of plot) + cell col]\ninto the Screen object’s Array."
   },
   {
     "objectID": "programming-assignment-hash-map.html",
