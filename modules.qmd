@@ -167,6 +167,7 @@ Topic: `r schedule %>% filter(week == 7) %>% pull(topic)`
 
 ## Assignments
 
+* [Short Assignment 6](https://adrianapicoral.com/csc-210/slides-05-01.html#/update-the-uml-diagram) : No lab session this week, this short assignment is to be completed during class time -- `r data %>% filter(Assignment == "SA6") %>%  select(Deadline)` -- Wednesday, 10:50am
 * [UML class diagram for PA5](programming-assignment-05.html) : `r data %>% filter(Assignment == "PA5a") %>%  select(Deadline)` -- Friday, 11:30pm
 * [Full implementation for PA5](programming-assignment-05.html): `r data %>% filter(Assignment == "PA5b") %>%  select(Deadline)` -- Wednesday, 11:30pm
 

@@ -172,7 +172,7 @@
     "href": "modules.html#assignments-4",
     "title": "Modules",
     "section": "Assignments",
-    "text": "Assignments\n\nUML class diagram for PA5 : October 11, 2024 – Friday, 11:30pm\nFull implementation for PA5: October 16, 2024 – Wednesday, 11:30pm"
+    "text": "Assignments\n\nShort Assignment 6 : No lab session this week, this short assignment is to be completed during class time – October 09, 2024 – Wednesday, 10:50am\nUML class diagram for PA5 : October 11, 2024 – Friday, 11:30pm\nFull implementation for PA5: October 16, 2024 – Wednesday, 11:30pm"
   },
   {
     "objectID": "programming-assignment-10.html",
@@ -2930,6 +2930,6 @@
     "href": "slides-05-01.html#update-the-uml-diagram",
     "title": "Inheritance",
     "section": "Update the UML diagram",
-    "text": "Update the UML diagram\nThe classes and inheritance relationships that we worked with so far has been simplified.\nWith the table mates, improve on the Animal superclass and its subclasses.\nWhat other instance variables should you include?\nWhat about methods?"
+    "text": "Update the UML diagram\nThe classes and inheritance relationships that we worked with so far has been simplified.\nWith the table mates, improve on the Animal superclass and its subclasses.\n\nWhat other instance variables should you include?\nWhat about methods?\n\nYou are to submit your group UML diagram to gradescope for the short assignment 6."
   }
 ]

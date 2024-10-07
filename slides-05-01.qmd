@@ -303,8 +303,9 @@ The classes and inheritance relationships that we worked with so far has been si
 
 With the table mates, improve on the `Animal` superclass and its subclasses.
 
-What other instance variables should you include?
+* What other instance variables should you include?
+* What about methods?
 
-What about methods?
+You are to submit your group UML diagram to [gradescope](https://www.gradescope.com/courses/839822/assignments/5114370) for the short assignment 6.
 
 # UML diagram presentations
