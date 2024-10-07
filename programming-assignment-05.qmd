@@ -109,7 +109,7 @@ Here is the output for the example:
 ..b..
 ..b..
 ```
-The output should be printed to standard out.  See `TestCases/`
+The output should be printed to standard out.  See [`TestCases/`](https://github.com/picoral/CSC210PA5)
 for more input and output examples.
 
 * The following are the types of specific plants that could be planted:
@@ -160,7 +160,7 @@ Coconut
 ```
 
 
-* Commands that need to be implemented.  See the PublicTestCases/ for more examples.
+* Commands that need to be implemented.  See the [TestCases/](https://github.com/picoral/CSC210PA5) for more examples.
   There are examples with PLANT, PRINT, and GROW.  Other command input and output
   examples will appear during Spring Break.
 
