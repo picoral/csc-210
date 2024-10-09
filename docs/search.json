@@ -2930,6 +2930,6 @@
     "href": "slides-05-01.html#update-the-uml-diagram",
     "title": "Inheritance",
     "section": "Update the UML diagram",
-    "text": "Update the UML diagram\nThe classes and inheritance relationships that we worked with so far has been simplified.\nWith the table mates, improve on the Animal superclass and its subclasses.\n\nWhat other instance variables should you include?\nWhat about methods?\n\nYou are to submit your group UML diagram to gradescope for the short assignment 6."
+    "text": "Update the UML diagram\nThe classes and inheritance relationships that we worked with so far has been simplified.\nWith the table mates, improve on the Animal superclass and its subclasses.\n\nWhat other instance variables should you include?\nWhat about methods?\n\nYou are to submit your group UML diagram to gradescope for the short assignment 6. Do not submit my UML diagram with annotations, create your own."
   }
 ]
