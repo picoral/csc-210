@@ -2952,5 +2952,19 @@
     "title": "Debugging",
     "section": "First bug",
     "text": "First bug\n“The team at Harvard University in Cambridge, Massachusetts, found that their computer, the Mark II, was delivering consistent errors. When they opened the computer’s hardware, they found … a moth. The trapped insect had disrupted the electronics of the computer.”\nSep 9, 1947 CE: World’s First Computer Bug"
+  },
+  {
+    "objectID": "slides-05-02.html#how-to-catch-bugs-1",
+    "href": "slides-05-02.html#how-to-catch-bugs-1",
+    "title": "Debugging",
+    "section": "How to catch bugs",
+    "text": "How to catch bugs\n\nWrite a test that is minimal (small, repeatable) that trigers the bug\nFind where the bug is being generated\nChange the code to test your hypothesis of where the bug is being generated (change one thing, test it, repeat)\nFix the bug\nCan this bug happen somewhere else in the code?\nAdd test cases to catch the general bug type (Regression Test)"
+  },
+  {
+    "objectID": "slides-05-02.html#practice",
+    "href": "slides-05-02.html#practice",
+    "title": "Debugging",
+    "section": "Practice",
+    "text": "Practice"
   }
 ]

@@ -26,3 +26,14 @@ For all other bugs, we need to know what the correct/expected behavior is in ord
 * Bug reports from users
 
 Once we have a way to check that our code is not doing what it should be doing, we need to isolate (or find) where the bug is.
+
+##   How to catch bugs
+
+1. Write a test that is minimal (small, repeatable) that trigers the bug
+1. Find where the bug is being generated
+1. Change the code to test your hypothesis of where the bug is being generated (change one thing, test it, repeat)
+1. Fix the bug
+1. Can this bug happen somewhere else in the code?
+1. Add test cases to catch the general bug type (Regression Test)
+
+## Practice
