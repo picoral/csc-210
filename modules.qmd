@@ -159,10 +159,12 @@ Topic: `r schedule %>% filter(week == 7) %>% pull(topic)`
 ## Readings
 
 * [Java, Java, Java 8.2 Java’s Inheritance Mechanism](https://runestone.academy/ns/books/published/javajavajava/javas-inheritance-mechanism.html)
+* [How to Debug](https://blog.regehr.org/archives/199)
 
 ## Slides
 
 * [Inheritance](slides-05-01.html)
+* [Debugging](slides-05-02.html)
 
 
 ## Assignments

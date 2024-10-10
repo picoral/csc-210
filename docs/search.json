@@ -158,14 +158,14 @@
     "href": "modules.html#readings-4",
     "title": "Modules",
     "section": "Readings",
-    "text": "Readings\n\nJava, Java, Java 8.2 Java’s Inheritance Mechanism"
+    "text": "Readings\n\nJava, Java, Java 8.2 Java’s Inheritance Mechanism\nHow to Debug"
   },
   {
     "objectID": "modules.html#slides-4",
     "href": "modules.html#slides-4",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nInheritance"
+    "text": "Slides\n\nInheritance\nDebugging"
   },
   {
     "objectID": "modules.html#assignments-4",
@@ -2931,5 +2931,26 @@
     "title": "Inheritance",
     "section": "Update the UML diagram",
     "text": "Update the UML diagram\nThe classes and inheritance relationships that we worked with so far has been simplified.\nWith the table mates, improve on the Animal superclass and its subclasses.\n\nWhat other instance variables should you include?\nWhat about methods?\n\nYou are to submit your group UML diagram to gradescope for the short assignment 6. Do not submit my UML diagram with annotations, create your own."
+  },
+  {
+    "objectID": "slides-05-02.html#september-9-1947",
+    "href": "slides-05-02.html#september-9-1947",
+    "title": "Debugging",
+    "section": "September 9, 1947",
+    "text": "September 9, 1947"
+  },
+  {
+    "objectID": "slides-05-02.html#how-to-catch-bugs",
+    "href": "slides-05-02.html#how-to-catch-bugs",
+    "title": "Debugging",
+    "section": "How to catch bugs",
+    "text": "How to catch bugs\n\nError message (easiest type to solve, the message tells you what to fix)\n\nFor all other bugs, we need to know what the correct/expected behavior is in order to be able to identify when the application is not behaving in the way we expect/want it to behave.\n\nUnit testing\nBug reports from users\n\nOnce we have a way to check that our code is not doing what it should be doing, we need to isolate (or find) where the bug is."
+  },
+  {
+    "objectID": "slides-05-02.html#first-bug",
+    "href": "slides-05-02.html#first-bug",
+    "title": "Debugging",
+    "section": "First bug",
+    "text": "First bug\n“The team at Harvard University in Cambridge, Massachusetts, found that their computer, the Mark II, was delivering consistent errors. When they opened the computer’s hardware, they found … a moth. The trapped insect had disrupted the electronics of the computer.”\nSep 9, 1947 CE: World’s First Computer Bug"
   }
 ]

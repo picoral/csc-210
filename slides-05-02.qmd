@@ -1,0 +1,28 @@
+---
+title: "Debugging"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## September 9, 1947
+
+![](images/computer-bug.jpg)
+
+## First bug 
+
+"The team at Harvard University in Cambridge, Massachusetts, found that their computer, the Mark II, was delivering consistent errors. When they opened the computer’s hardware, they found ... a moth. The trapped insect had disrupted the electronics of the computer."
+
+[Sep 9, 1947 CE: World’s First Computer Bug](https://education.nationalgeographic.org/resource/worlds-first-computer-bug/)
+
+##  How to catch bugs
+
+* Error message (easiest type to solve, the message tells you what to fix)
+
+For all other bugs, we need to know what the correct/expected behavior is in order to be able to identify when the application is not behaving in the way we expect/want it to behave.
+
+* Unit testing
+* Bug reports from users
+
+Once we have a way to check that our code is not doing what it should be doing, we need to isolate (or find) where the bug is.
