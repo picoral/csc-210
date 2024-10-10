@@ -37,3 +37,5 @@ Once we have a way to check that our code is not doing what it should be doing, 
 1. Add test cases to catch the general bug type (Regression Test)
 
 ## Practice
+
+Download [the provided buggy code](https://github.com/picoral/CSC210BuggyCode) and with your table mates, fix all bugs
