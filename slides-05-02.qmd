@@ -39,3 +39,5 @@ Once we have a way to check that our code is not doing what it should be doing, 
 ## Practice
 
 Download [the provided buggy code](https://github.com/picoral/CSC210BuggyCode) and with your table mates, fix all bugs
+
+The first team to show me all tests passing, and showing me where the bugs were (make sure you write down changes to the code) will win 1 extra credit point.

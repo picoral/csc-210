@@ -2965,6 +2965,6 @@
     "href": "slides-05-02.html#practice",
     "title": "Debugging",
     "section": "Practice",
-    "text": "Practice\nDownload the provided buggy code and with your table mates, fix all bugs"
+    "text": "Practice\nDownload the provided buggy code and with your table mates, fix all bugs\nThe first team to show me all tests passing, and showing me where the bugs were (make sure you write down changes to the code) will win 1 extra credit point."
   }
 ]
