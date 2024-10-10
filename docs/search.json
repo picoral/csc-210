@@ -2973,5 +2973,54 @@
     "title": "Debugging",
     "section": "Practice",
     "text": "Practice\nThe first team to show me all tests passing, and showing me where the bugs were (make sure you write down changes to the code) will win 1 extra credit point.\nUser bug report:\nI get an error when I try to create a game with 6 players, 10 cards per hand"
+  },
+  {
+    "objectID": "programming-assignment-05.html#testing-your-code",
+    "href": "programming-assignment-05.html#testing-your-code",
+    "title": "Programming Assignmnet 05",
+    "section": "Testing your code",
+    "text": "Testing your code\nYou should test your code using JUnit tests.\nYou can modify this RunGardenTest.java file to test your code. Running this file (and adding tests to it) will give you the feedback you need to pass the autograder tests. The autograder will not give you feedback on what is wrong with your output, but running the JUnit tests will."
+  },
+  {
+    "objectID": "modules.html#readings-5",
+    "href": "modules.html#readings-5",
+    "title": "Modules",
+    "section": "Readings",
+    "text": "Readings"
+  },
+  {
+    "objectID": "modules.html#slides-5",
+    "href": "modules.html#slides-5",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nObject"
+  },
+  {
+    "objectID": "modules.html#assignments-5",
+    "href": "modules.html#assignments-5",
+    "title": "Modules",
+    "section": "Assignments",
+    "text": "Assignments"
+  },
+  {
+    "objectID": "slides-06-01.html",
+    "href": "slides-06-01.html",
+    "title": "Object",
+    "section": "",
+    "text": "All types are subclasses of Object"
+  },
+  {
+    "objectID": "slides-06-01.html#object-class",
+    "href": "slides-06-01.html#object-class",
+    "title": "Object",
+    "section": "",
+    "text": "All types are subclasses of Object"
+  },
+  {
+    "objectID": "slides-06-02.html#subtype-polymorphism",
+    "href": "slides-06-02.html#subtype-polymorphism",
+    "title": "Generics",
+    "section": "Subtype polymorphism",
+    "text": "Subtype polymorphism"
   }
 ]

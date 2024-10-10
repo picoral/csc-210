@@ -321,6 +321,14 @@ The coding style in terms of spacing, etc. should be done automatically
 every time you save in Eclipse.  As long as you stick with those defaults,
 the syntax style should be fine.
 
+## Testing your code
+
+You should test your code using JUnit tests.
+
+You can modify [this RunGardenTest.java file](files/RunGardenTest.java) to test your code. 
+Running this file (and adding tests to it) will give you the feedback you need to pass the 
+autograder tests. The autograder will not give you feedback on what is wrong with your output,
+but running the JUnit tests will.
 
 ## Submission
 
