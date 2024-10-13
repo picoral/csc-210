@@ -290,8 +290,6 @@ Decomposition
   * Don't use lambda functions or other features in non-standard ways.
   * Avoid nested loops unless they would be cleaner when handling a 2D array.
   * Avoid nesting conditionals.
-  * Avoid chaining: see the Piazza post for more info
-
 
 Code Clarity
 
@@ -343,3 +341,7 @@ The class hierarchy diagram in pdf format is due `r data %>% filter(Assignment =
 For this assignment, you are **REQUIRED** to submit all of your java source files
 to Gradescope before `r data %>% filter(Assignment == "PA5b") %>%  select(Deadline)` -- Wednesday, 11:30pm.  
 You also need to submit your README.md with example input and output for your unique class.
+
+Package information:
+
+`package com.gradescope.garden;`
