@@ -3098,7 +3098,7 @@
     "href": "slides-06-02.html#parametric-polymorphism-1",
     "title": "Generics",
     "section": "Parametric polymorphism",
-    "text": "Parametric polymorphism\nIn other words, a function or type can written so they handle values identically without depending on knowing the specific types.\nLike we saw with Object, commonly used with collections like ArrayList"
+    "text": "Parametric polymorphism\nIn other words, a function or type can be written without depending on knowing the specific types.\nLike we saw with Object, commonly used with collections like ArrayList"
   },
   {
     "objectID": "slides-06-02.html#writing-class-with-generic-type",

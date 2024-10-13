@@ -24,7 +24,7 @@ format:
 
 ## Parametric polymorphism
 
-In other words, a function or type can written so they handle values identically without depending on knowing the specific types.
+In other words, a function or type can be written without depending on knowing the specific types.
 
 Like we saw with `Object`, commonly used with collections like `ArrayList`
 
