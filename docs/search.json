@@ -291,7 +291,7 @@
     "href": "programming-assignment-05.html#submission",
     "title": "Programming Assignmnet 05",
     "section": "Submission",
-    "text": "Submission\nWrite your own code. We will be using a tool that finds overly similar code. I recommend that when talking with others about the assignment, do not write anything down.\nThe class hierarchy diagram in pdf format is due October 11, 2024 – Friday, 11:30pm in Gradescope.\n\nFull implementation:\n\nFor this assignment, you are REQUIRED to submit all of your java source files to Gradescope before October 16, 2024 – Wednesday, 11:30pm.\nYou also need to submit your README.md with example input and output for your unique class.\nPackage information:\npackage com.gradescope.garden;"
+    "text": "Submission\nWrite your own code. We will be using a tool that finds overly similar code. I recommend that when talking with others about the assignment, do not write anything down.\nThe class hierarchy diagram in pdf format is due October 11, 2024 – Friday, 11:30pm in Gradescope.\n\nFull implementation:\n\nFor this assignment, you are REQUIRED to submit all of your java source files to Gradescope before October 16, 2024 – Wednesday, 11:30pm.\nYou also need to submit your README.md with example input and output for your unique class.\nDO NOT SUBMIT ANY JUNIT FILES\nPackage information:\npackage com.gradescope.garden;"
   },
   {
     "objectID": "lab01-slides.html#scanner-class",
