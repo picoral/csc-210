@@ -1,0 +1,111 @@
+---
+title: "Object"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+
+## Class `Object`
+
+* The root of the class hierarchy
+* All types are subclasses of `Object`
+* Used when the specific class is not known
+
+## `Object` use examples
+
+We can create an `ArrayList` of `Object`
+
+```{java}
+ArrayList<Object> myArray = new ArrayList<>();
+```
+
+Then we can add any class type to it
+
+```{java}
+myArray.add("diamonds");
+myArray.add("spades");
+myArray.add(10);
+myArray.add(10.5);
+```
+
+## Java `instanceof`
+
+`instanceof` operator is used to test whether the object is an instance of the specified type
+
+```{java}
+for (Object o : myArray) {
+	 System.out.println(o instanceof String);
+}
+```
+
+## Java Type Casting
+
+* Widening Casting or Upcasting
+     * done automatically when a smaller type is assigned to a larger type size
+     * byte -> short -> char -> int -> long -> float -> double
+
+* Narrowing Casting or Downcasting
+     * needs to be specified by `()` when converting a larger type to a smaller size type
+     * double -> float -> long -> int -> char -> short -> byte
+     
+Upcasting will be more frequent than downcasting (especially if you are using
+interfaces and abstract classes)
+     
+## Upcasting
+
+Done automatically when a smaller type is assigned to a larger type size
+
+```{java}
+int myInt = 13;
+double myDouble = myInt;
+
+String name = "Adriana";
+Object oName = name;
+```
+
+## Downcasting
+
+```{java}
+double myDouble = 10.5;
+int myInt = (int) myDouble;
+
+Object oName = "Adriana";
+String name = (String) oName;
+```
+
+## Practice
+
+Let's go back to our `Animal` superclass and its subclasses.
+
+Here's the code in case you need it:
+
+* [Animal](files/Animal.java)
+* [Cat](files/Cat.java)
+* [Dog](files/Dog.java)
+
+Create an `ArrayList` of cats and dogs, iterate over the `Arraylist` printing
+each object's string.
+
+## Solution
+
+```{java}
+import java.util.ArrayList;
+
+public class CreateAnimals {
+
+	public static void main(String[] args) {
+		ArrayList<Animal> zoo = new ArrayList<>();
+		zoo.add(new Cat()); zoo.add(new Dog());
+		zoo.add(new Cat()); zoo.add(new Dog());
+		
+		for (Animal a : zoo) {
+			System.out.println(a.toString());
+		}
+	
+	}
+
+}
+```
+

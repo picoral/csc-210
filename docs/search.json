@@ -3022,5 +3022,61 @@
     "title": "Generics",
     "section": "Subtype polymorphism",
     "text": "Subtype polymorphism"
+  },
+  {
+    "objectID": "slides-06-01.html#class-object",
+    "href": "slides-06-01.html#class-object",
+    "title": "Object",
+    "section": "Class Object",
+    "text": "Class Object\n\nThe root of the class hierarchy\nAll types are subclasses of Object\nUsed when the specific class is not known"
+  },
+  {
+    "objectID": "slides-06-01.html#object-use-examples",
+    "href": "slides-06-01.html#object-use-examples",
+    "title": "Object",
+    "section": "Object use examples",
+    "text": "Object use examples\nWe can create an ArrayList of Object\nArrayList&lt;Object&gt; myArray = new ArrayList&lt;&gt;();\nThen we can add any class type to it\nmyArray.add(\"diamonds\");\nmyArray.add(\"spades\");\nmyArray.add(10);\nmyArray.add(10.5);"
+  },
+  {
+    "objectID": "slides-06-01.html#java-instanceof",
+    "href": "slides-06-01.html#java-instanceof",
+    "title": "Object",
+    "section": "Java instanceof",
+    "text": "Java instanceof\ninstanceof operator is used to test whether the object is an instance of the specified type\nfor (Object o : myArray) {\n     System.out.println(o instanceof String);\n}"
+  },
+  {
+    "objectID": "slides-06-01.html#java-type-casting",
+    "href": "slides-06-01.html#java-type-casting",
+    "title": "Object",
+    "section": "Java Type Casting",
+    "text": "Java Type Casting\n\nWidening Casting or Upcasting\n\ndone automatically when a smaller type is assigned to a larger type size\nbyte -&gt; short -&gt; char -&gt; int -&gt; long -&gt; float -&gt; double\n\nNarrowing Casting or Downcasting\n\nneeds to be specified by () when converting a larger type to a smaller size type\ndouble -&gt; float -&gt; long -&gt; int -&gt; char -&gt; short -&gt; byte\n\n\nUpcasting will be more frequent than downcasting (especially if you are using interfaces and abstract classes)"
+  },
+  {
+    "objectID": "slides-06-01.html#upcasting",
+    "href": "slides-06-01.html#upcasting",
+    "title": "Object",
+    "section": "Upcasting",
+    "text": "Upcasting\nDone automatically when a smaller type is assigned to a larger type size\nint myInt = 13;\ndouble myDouble = myInt;\n\nString name = \"Adriana\";\nObject oName = name;"
+  },
+  {
+    "objectID": "slides-06-01.html#downcasting",
+    "href": "slides-06-01.html#downcasting",
+    "title": "Object",
+    "section": "Downcasting",
+    "text": "Downcasting\ndouble myDouble = 10.5;\nint myInt = (int) myDouble;\n\nObject oName = \"Adriana\";\nString name = (String) oName;"
+  },
+  {
+    "objectID": "slides-06-01.html#practice",
+    "href": "slides-06-01.html#practice",
+    "title": "Object",
+    "section": "Practice",
+    "text": "Practice\nLet’s go back to our Animal superclass and its subclasses.\nHere’s the code in case you need it:\n\nAnimal\nCat\nDog\n\nCreate an ArrayList of cats and dogs, iterate over the Arraylist printing each object’s string."
+  },
+  {
+    "objectID": "slides-06-01.html#solution",
+    "href": "slides-06-01.html#solution",
+    "title": "Object",
+    "section": "Solution",
+    "text": "Solution\nimport java.util.ArrayList;\n\npublic class CreateAnimals {\n\n    public static void main(String[] args) {\n        ArrayList&lt;Animal&gt; zoo = new ArrayList&lt;&gt;();\n        zoo.add(new Cat()); zoo.add(new Dog());\n        zoo.add(new Cat()); zoo.add(new Dog());\n        \n        for (Animal a : zoo) {\n            System.out.println(a.toString());\n        }\n    \n    }\n\n}"
   }
 ]
