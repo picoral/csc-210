@@ -106,3 +106,57 @@ Call:
 System.out.println(getMyString(12));
 ```
 
+## Practice with generics: linked lists
+
+Recall what linked lists are? Discuss with your table mates:
+
+* What are the properties of linked lists?
+* When do we use linked lists?
+
+## Linked lists
+
+* dynamic structure, can grow and shrink as needed  
+* elements are arranged in a linear sequence 
+* implemented through nodes -- each node has a reference to the next node
+
+![](images/singly.png)
+
+## Nodes
+
+To create a linked list:
+
+* a class of **self-referential** objects
+* each object of the class contains a reference to an object of the same class
+* convention is to name the class `Node`
+
+Write a class in Java called `Node` that has two instance variables: data (any type), and a reference to another node.
+
+Write the constructor method, and getters
+
+## `Node` solution
+
+```{java}
+public class Node<T> {
+	private T data;
+    private Node<T> next;
+
+    public Node(T d, Node<T> n) {
+        data = d;
+        next = n;
+    }
+    
+    public Node<T> getNext() {
+    	return next;
+    }
+    
+    public T getData() {
+    	return data;
+    }
+
+}
+```
+
+## `LinkedList` class
+
+* What methods do you need to implement?
+* What instance variables do you need?

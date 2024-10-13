@@ -3134,5 +3134,40 @@
     "title": "Generics",
     "section": "Generic functions",
     "text": "Generic functions\nAdd &lt;Something&gt; before return type, use the generic name for the argument type\npublic &lt;T&gt; String getMyString(T element) {\n        return element.getClass().getName() + \" = \" + element;\n    }\nCall:\nSystem.out.println(getMyString(12));"
+  },
+  {
+    "objectID": "slides-06-02.html#practice-with-generics-linked-lists",
+    "href": "slides-06-02.html#practice-with-generics-linked-lists",
+    "title": "Generics",
+    "section": "Practice with generics: linked lists",
+    "text": "Practice with generics: linked lists\nRecall what linked lists are? Discuss with your table mates:\n\nWhat are the properties of linked lists?\nWhen do we use linked lists?"
+  },
+  {
+    "objectID": "slides-06-02.html#linked-lists",
+    "href": "slides-06-02.html#linked-lists",
+    "title": "Generics",
+    "section": "Linked lists",
+    "text": "Linked lists\n\ndynamic structure, can grow and shrink as needed\n\nelements are arranged in a linear sequence\nimplemented through nodes – each node has a reference to the next node"
+  },
+  {
+    "objectID": "slides-06-02.html#nodes",
+    "href": "slides-06-02.html#nodes",
+    "title": "Generics",
+    "section": "Nodes",
+    "text": "Nodes\nTo create a linked list:\n\na class of self-referential objects\neach object of the class contains a reference to an object of the same class\nconvention is to name the class Node\n\nWrite a class in Java called Node that has two instance variables: data (any type), and a reference to another node.\nWrite the constructor method, and getters"
+  },
+  {
+    "objectID": "slides-06-02.html#node-solution",
+    "href": "slides-06-02.html#node-solution",
+    "title": "Generics",
+    "section": "Node solution",
+    "text": "Node solution\npublic class Node&lt;T&gt; {\n    private T data;\n    private Node&lt;T&gt; next;\n\n    public Node(T d, Node&lt;T&gt; n) {\n        data = d;\n        next = n;\n    }\n    \n    public Node&lt;T&gt; getNext() {\n        return next;\n    }\n    \n    public T getData() {\n        return data;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-06-02.html#linkedlist-class",
+    "href": "slides-06-02.html#linkedlist-class",
+    "title": "Generics",
+    "section": "LinkedList class",
+    "text": "LinkedList class\n\nWhat methods do you need to implement?\nWhat instance variables do you need?"
   }
 ]

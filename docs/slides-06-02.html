@@ -482,6 +482,63 @@
 <span id="cb5-3"><a></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Call:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a>System.out.println(getMyString(12));</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="practice-with-generics-linked-lists" class="slide level2">
+<h2>Practice with generics: linked lists</h2>
+<p>Recall what linked lists are? Discuss with your table mates:</p>
+<ul>
+<li>What are the properties of linked lists?</li>
+<li>When do we use linked lists?</li>
+</ul>
+</section>
+<section id="linked-lists" class="slide level2">
+<h2>Linked lists</h2>
+<ul>
+<li>dynamic structure, can grow and shrink as needed<br>
+</li>
+<li>elements are arranged in a linear sequence</li>
+<li>implemented through nodes – each node has a reference to the next node</li>
+</ul>
+
+<img data-src="images/singly.png" class="r-stretch"></section>
+<section id="nodes" class="slide level2">
+<h2>Nodes</h2>
+<p>To create a linked list:</p>
+<ul>
+<li>a class of <strong>self-referential</strong> objects</li>
+<li>each object of the class contains a reference to an object of the same class</li>
+<li>convention is to name the class <code>Node</code></li>
+</ul>
+<p>Write a class in Java called <code>Node</code> that has two instance variables: data (any type), and a reference to another node.</p>
+<p>Write the constructor method, and getters</p>
+</section>
+<section id="node-solution" class="slide level2">
+<h2><code>Node</code> solution</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>public class Node&lt;T&gt; {</span>
+<span id="cb7-2"><a></a>    private T data;</span>
+<span id="cb7-3"><a></a>    private Node&lt;T&gt; next;</span>
+<span id="cb7-4"><a></a></span>
+<span id="cb7-5"><a></a>    public Node(T d, Node&lt;T&gt; n) {</span>
+<span id="cb7-6"><a></a>        data = d;</span>
+<span id="cb7-7"><a></a>        next = n;</span>
+<span id="cb7-8"><a></a>    }</span>
+<span id="cb7-9"><a></a>    </span>
+<span id="cb7-10"><a></a>    public Node&lt;T&gt; getNext() {</span>
+<span id="cb7-11"><a></a>        return next;</span>
+<span id="cb7-12"><a></a>    }</span>
+<span id="cb7-13"><a></a>    </span>
+<span id="cb7-14"><a></a>    public T getData() {</span>
+<span id="cb7-15"><a></a>        return data;</span>
+<span id="cb7-16"><a></a>    }</span>
+<span id="cb7-17"><a></a></span>
+<span id="cb7-18"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="linkedlist-class" class="slide level2">
+<h2><code>LinkedList</code> class</h2>
+<ul>
+<li>What methods do you need to implement?</li>
+<li>What instance variables do you need?</li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
