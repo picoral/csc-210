@@ -3078,5 +3078,61 @@
     "title": "Object",
     "section": "Solution",
     "text": "Solution\nimport java.util.ArrayList;\n\npublic class CreateAnimals {\n\n    public static void main(String[] args) {\n        ArrayList&lt;Animal&gt; zoo = new ArrayList&lt;&gt;();\n        zoo.add(new Cat()); zoo.add(new Dog());\n        zoo.add(new Cat()); zoo.add(new Dog());\n        \n        for (Animal a : zoo) {\n            System.out.println(a.toString());\n        }\n    \n    }\n\n}"
+  },
+  {
+    "objectID": "slides-06-02.html#polymorphisms-in-java",
+    "href": "slides-06-02.html#polymorphisms-in-java",
+    "title": "Generics",
+    "section": "Polymorphisms in Java",
+    "text": "Polymorphisms in Java\n\nOverloading\nOverwriting\nSubtype polymorphism (Object)\nParametric polymorphism"
+  },
+  {
+    "objectID": "slides-06-02.html#parametric-polymorphism",
+    "href": "slides-06-02.html#parametric-polymorphism",
+    "title": "Generics",
+    "section": "Parametric polymorphism",
+    "text": "Parametric polymorphism\n\nGenerics\n\nParametrically polymorphic functions are called generic functions\nParametrically polymorphic data types are called generic data types\n\nEnables code reuse and flexibility\nCode works independently of the types of values it operates on"
+  },
+  {
+    "objectID": "slides-06-02.html#parametric-polymorphism-1",
+    "href": "slides-06-02.html#parametric-polymorphism-1",
+    "title": "Generics",
+    "section": "Parametric polymorphism",
+    "text": "Parametric polymorphism\nIn other words, a function or type can written so they handle values identically without depending on knowing the specific types.\nLike we saw with Object, commonly used with collections like ArrayList"
+  },
+  {
+    "objectID": "slides-06-02.html#writing-class-with-generic-type",
+    "href": "slides-06-02.html#writing-class-with-generic-type",
+    "title": "Generics",
+    "section": "Writing class with generic type",
+    "text": "Writing class with generic type\n\nadd a &lt;&gt; after your class name with whatever name you want, convention is to use Type or T\nuse that name when creating instance variables and as return types\n\npublic class MyType&lt;Type&gt; {\n    private Type data;\n    \n    public MyType(Type d) {\n        data = d;\n    }\n    \n    public Type getData() {\n        return data;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-06-02.html#using-our-generic-data-type",
+    "href": "slides-06-02.html#using-our-generic-data-type",
+    "title": "Generics",
+    "section": "Using our generic data type",
+    "text": "Using our generic data type\nNow, when calling our class we need to specify the actual type inside the &lt;&gt;\nMyType&lt;String&gt; name = new MyType&lt;String&gt;(\"Adriana\");\nSystem.out.println(name.getData());"
+  },
+  {
+    "objectID": "slides-06-02.html#multiple-types",
+    "href": "slides-06-02.html#multiple-types",
+    "title": "Generics",
+    "section": "Multiple types",
+    "text": "Multiple types\npublic class MyType&lt;O, T&gt; {\n    private O one;\n    private T two;\n    \n    public MyType(O one, T two) {\n        this.one = one;\n        this.two = two;\n    }\n    \n    public O getOne() {\n        return one;\n    }\n    \n    public T getTwo() {\n        return two;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-06-02.html#multiple-types-use",
+    "href": "slides-06-02.html#multiple-types-use",
+    "title": "Generics",
+    "section": "Multiple types use",
+    "text": "Multiple types use\nMyType&lt;Object, Object&gt; name = new MyType&lt;&gt;(\"Adriana\", 43);\nSystem.out.println(name.getOne());\nSystem.out.println(name.getTwo());"
+  },
+  {
+    "objectID": "slides-06-02.html#generic-functions",
+    "href": "slides-06-02.html#generic-functions",
+    "title": "Generics",
+    "section": "Generic functions",
+    "text": "Generic functions\nAdd &lt;Something&gt; before return type, can also use the generic name for the argument type\npublic &lt;T&gt; String getMyString(T element) {\n        return element.getClass().getName() + \" = \" + element;\n    }\nCall:\nSystem.out.println(getMyString(12));"
   }
 ]

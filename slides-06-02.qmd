@@ -1,0 +1,108 @@
+---
+title: "Generics"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## Polymorphisms in Java
+
+* Overloading
+* Overwriting
+* Subtype polymorphism (`Object`)
+* Parametric polymorphism
+
+
+## Parametric polymorphism
+
+* Generics
+    * Parametrically polymorphic functions are called generic functions
+    * Parametrically polymorphic data types are called generic data types
+* Enables code reuse and flexibility
+* Code works independently of the types of values it operates on
+
+## Parametric polymorphism
+
+In other words, a function or type can written so they handle values identically without depending on knowing the specific types.
+
+Like we saw with `Object`, commonly used with collections like `ArrayList`
+
+## Writing class with generic type
+
+* add a `<>` after your class name with whatever name you want, convention is to use `Type` or `T`
+* use that name when creating instance variables and as return types
+
+
+```{java}
+public class MyType<Type> {
+	private Type data;
+	
+	public MyType(Type d) {
+		data = d;
+	}
+	
+	public Type getData() {
+		return data;
+	}
+
+}
+```
+
+## Using our generic data type
+
+Now, when calling our class we need to specify the actual type inside the `<>`
+
+```{java}
+MyType<String> name = new MyType<String>("Adriana");
+System.out.println(name.getData());
+```
+
+## Multiple types
+
+```{java}
+public class MyType<O, T> {
+	private O one;
+	private T two;
+	
+	public MyType(O one, T two) {
+		this.one = one;
+		this.two = two;
+	}
+	
+	public O getOne() {
+		return one;
+	}
+	
+	public T getTwo() {
+		return two;
+	}
+
+}
+```
+
+## Multiple types use
+
+```{java}
+MyType<Object, Object> name = new MyType<>("Adriana", 43);
+System.out.println(name.getOne());
+System.out.println(name.getTwo());
+```
+
+## Generic functions
+
+Add `<Something>` before return type, can also use the generic name for the 
+argument type
+
+```{java}
+public <T> String getMyString(T element) {
+		return element.getClass().getName() + " = " + element;
+	}
+```
+
+Call:
+
+```{java}
+System.out.println(getMyString(12));
+```
+
