@@ -91,7 +91,7 @@ System.out.println(name.getTwo());
 
 ## Generic functions
 
-Add `<Something>` before return type, can also use the generic name for the 
+Add `<Something>` before return type, use the generic name for the 
 argument type
 
 ```{java}

@@ -3133,6 +3133,6 @@
     "href": "slides-06-02.html#generic-functions",
     "title": "Generics",
     "section": "Generic functions",
-    "text": "Generic functions\nAdd &lt;Something&gt; before return type, can also use the generic name for the argument type\npublic &lt;T&gt; String getMyString(T element) {\n        return element.getClass().getName() + \" = \" + element;\n    }\nCall:\nSystem.out.println(getMyString(12));"
+    "text": "Generic functions\nAdd &lt;Something&gt; before return type, use the generic name for the argument type\npublic &lt;T&gt; String getMyString(T element) {\n        return element.getClass().getName() + \" = \" + element;\n    }\nCall:\nSystem.out.println(getMyString(12));"
   }
 ]
