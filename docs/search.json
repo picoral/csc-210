@@ -2993,7 +2993,7 @@
     "href": "modules.html#slides-5",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nObject"
+    "text": "Slides\n\nObject\nGenerics"
   },
   {
     "objectID": "modules.html#assignments-5",
@@ -3049,7 +3049,7 @@
     "href": "slides-06-01.html#java-type-casting",
     "title": "Object",
     "section": "Java Type Casting",
-    "text": "Java Type Casting\n\nWidening Casting or Upcasting\n\ndone automatically when a smaller type is assigned to a larger type size\nbyte -&gt; short -&gt; char -&gt; int -&gt; long -&gt; float -&gt; double\n\nNarrowing Casting or Downcasting\n\nneeds to be specified by () when converting a larger type to a smaller size type\ndouble -&gt; float -&gt; long -&gt; int -&gt; char -&gt; short -&gt; byte\n\n\nUpcasting will be more frequent than downcasting (especially if you are using interfaces and abstract classes)"
+    "text": "Java Type Casting\n\nWidening Casting or Upcasting\n\ndone automatically when a smaller type is assigned to a larger type size\nbyte -&gt; short -&gt; int -&gt; long -&gt; float -&gt; double\n\nNarrowing Casting or Downcasting\n\nneeds to be specified by () when converting a larger type to a smaller size type\ndouble -&gt; float -&gt; long -&gt; int -&gt; short -&gt; byte\n\n\nUpcasting will be more frequent than downcasting (especially if you are using interfaces and abstract classes)"
   },
   {
     "objectID": "slides-06-01.html#upcasting",

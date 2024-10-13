@@ -44,11 +44,11 @@ for (Object o : myArray) {
 
 * Widening Casting or Upcasting
      * done automatically when a smaller type is assigned to a larger type size
-     * byte -> short -> char -> int -> long -> float -> double
+     * byte -> short -> int -> long -> float -> double
 
 * Narrowing Casting or Downcasting
      * needs to be specified by `()` when converting a larger type to a smaller size type
-     * double -> float -> long -> int -> char -> short -> byte
+     * double -> float -> long -> int -> short -> byte
      
 Upcasting will be more frequent than downcasting (especially if you are using
 interfaces and abstract classes)
