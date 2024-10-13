@@ -342,6 +342,8 @@ For this assignment, you are **REQUIRED** to submit all of your java source file
 to Gradescope before `r data %>% filter(Assignment == "PA5b") %>%  select(Deadline)` -- Wednesday, 11:30pm.  
 You also need to submit your README.md with example input and output for your unique class.
 
+DO NOT SUBMIT ANY JUNIT FILES
+
 Package information:
 
 `package com.gradescope.garden;`
