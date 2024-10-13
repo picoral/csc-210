@@ -185,5 +185,6 @@ Topic: `r schedule %>% filter(week == 8) %>% pull(topic)`
 ## Slides
 
 * [Object](slides-06-01.html)
+* [Generics](slides-06-02.html)
 
 ## Assignments
