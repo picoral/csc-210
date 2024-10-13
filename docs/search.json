@@ -3091,7 +3091,7 @@
     "href": "slides-06-02.html#parametric-polymorphism",
     "title": "Generics",
     "section": "Parametric polymorphism",
-    "text": "Parametric polymorphism\n\nGenerics\n\nParametrically polymorphic functions are called generic functions\nParametrically polymorphic data types are called generic data types\n\nEnables code reuse and flexibility\nCode works independently of the types of values it operates on"
+    "text": "Parametric polymorphism\n\nGenerics\n\nParametrically polymorphic functions are called generic functions\nParametrically polymorphic data types are called generic data types\n\nEnables code reuse and flexibility\nCode works independently of the types of values it operates on\n\nIn other words, a function or type can be written without depending on knowing the specific types."
   },
   {
     "objectID": "slides-06-02.html#parametric-polymorphism-1",

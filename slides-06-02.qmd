@@ -22,11 +22,8 @@ format:
 * Enables code reuse and flexibility
 * Code works independently of the types of values it operates on
 
-## Parametric polymorphism
-
 In other words, a function or type can be written without depending on knowing the specific types.
 
-Like we saw with `Object`, commonly used with collections like `ArrayList`
 
 ## Writing class with generic type
 
