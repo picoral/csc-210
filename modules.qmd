@@ -173,14 +173,12 @@ Topic: `r schedule %>% filter(week == 7) %>% pull(topic)`
 * [UML class diagram for PA5](programming-assignment-05.html) : `r data %>% filter(Assignment == "PA5a") %>%  select(Deadline)` -- Friday, 11:30pm
 * [Full implementation for PA5](programming-assignment-05.html): `r data %>% filter(Assignment == "PA5b") %>%  select(Deadline)` -- Wednesday, 11:30pm
 
-# Week 07
+# Week 08
 
 `r schedule %>% filter(week == 8) %>% pull(dates)`
 
 Topic: `r schedule %>% filter(week == 8) %>% pull(topic)`
 
-
-## Readings
 
 ## Slides
 
