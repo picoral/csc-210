@@ -3169,5 +3169,19 @@
     "title": "Generics",
     "section": "LinkedList class",
     "text": "LinkedList class\n\nWhat methods do you need to implement?\nWhat instance variables do you need?"
+  },
+  {
+    "objectID": "lns-crs.html#the-history-of-crlf",
+    "href": "lns-crs.html#the-history-of-crlf",
+    "title": "CR+LF",
+    "section": "The history of CR+LF",
+    "text": "The history of CR+LF\n\n\n\n\n\nA teleprinter, photo by Ries Bosch\n\n\n\n\nCR stands for carriage return – character that returns the print head to column 0\nLF stands for linefeed – character that advances the paper one line\n\n\\r (carriage return) and \\n (new line) characters for modern computers"
+  },
+  {
+    "objectID": "lns-crs.html#differences-in-characters",
+    "href": "lns-crs.html#differences-in-characters",
+    "title": "CR+LF",
+    "section": "Differences in characters",
+    "text": "Differences in characters\nThere’s an entire wikipedia page on this\nUnix uses \\n and Windows uses \\r\\n (for most applications, not all)\nNot a problem for autograder because your code will be compiled and run on a Unix VM\nA problem that you will encounter many times for other reasons\nJUnit tests fail because the text file that your output is compared against uses only \\n"
   }
 ]

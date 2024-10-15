@@ -1,0 +1,33 @@
+---
+title: "CR+LF"
+format: revealjs
+---
+
+## The history of CR+LF
+
+:::: {.columns}
+
+::: {.column width="400px"}
+![A teleprinter, photo by Ries Bosch](images/teleprinter.jpg)
+:::
+
+::: {.column}
+* CR stands for `carriage return` -- character that returns the print head to column 0 
+* LF stands for `linefeed` – character that advances the paper one line
+
+`\r` (carriage `r`eturn) and `\n` (`n`ew line) characters for modern computers
+:::
+
+::::
+
+## Differences in characters
+
+[There's an entire wikipedia page on this](https://en.wikipedia.org/wiki/Newline)
+
+Unix uses `\n` and Windows uses `\r\n` (for most applications, not all)
+
+Not a problem for autograder because your code will be compiled and run on a Unix VM
+
+A problem that you will encounter many times for other reasons
+
+JUnit tests fail because the text file that your output is compared against uses only `\n`
