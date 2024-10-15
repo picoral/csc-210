@@ -1,0 +1,80 @@
+---
+title: "Short Assignment 07"
+---
+
+# Short Assignment 07
+
+## Introduction 
+
+In this lab you will be working with generics, more specifically you will be writing generic methods.
+
+To write a generic method, add `<Something>` before the return type in the method signature, and then use the generic name for the argument type
+
+```{java}
+public <T> String getMyString(T element) {
+		return element.getClass().getName() + " = " + element;
+	}
+```
+
+Call:
+
+```{java}
+System.out.println(getMyString(12));
+System.out.println(getMyString("banana"));
+```
+
+## Merging any two arrays
+
+In this short assignment you are to write a Java application to create a generic method that takes two arrays of the same type but possibly different lengths and merges them into an ArrayList. Alternate the elements in the new ArrayList, starting with the first element of the smaller array.
+
+## Test your method
+
+You should name your class `MergeArrays` and your generic funciton to be named `merge`.
+
+Here's the JUnit file to test your solution:
+
+```{java}
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import java.util.ArrayList;
+
+
+
+class MergeArraysTest {
+
+	@Test
+	void testString() {
+		System.out.println("asdasd");
+		String[] one = {"b", "d", "e"};
+		String[] two = {"a", "c"};
+		ArrayList<String> output = MergeArrays.merge(one, two);
+		ArrayList<String> expected = new ArrayList<>();
+		expected.add("a"); expected.add("b"); 
+		expected.add("c"); expected.add("d");
+		expected.add("e");
+		assertEquals(expected, output);
+		
+	}
+	
+	@Test
+	void testSInteger() {
+		System.out.println("asdasd");
+		Integer[] one = {1};
+		Integer[] two = {2, 3};
+		ArrayList<Integer> output = MergeArrays.merge(one, two);
+		ArrayList<Integer> expected = new ArrayList<>();
+		expected.add(1); expected.add(2); 
+		expected.add(3);
+		assertEquals(expected, output);
+		
+	}
+
+}
+
+```
+
+## Submission
+
+Package information:
+
+`package com.gradescope.mymerge;`

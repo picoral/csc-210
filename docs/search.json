@@ -3000,7 +3000,7 @@
     "href": "modules.html#assignments-5",
     "title": "Modules",
     "section": "Assignments",
-    "text": "Assignments"
+    "text": "Assignments\n\nShort Assignment 07 – Deadline: October 21, 2024 – Monday, 11:30pm"
   },
   {
     "objectID": "slides-06-01.html",
@@ -3309,5 +3309,40 @@
     "title": "enum",
     "section": "Application behavior",
     "text": "Application behavior\npublic class MyMediaLibrary {\n\n    public static void main(String[] args) {\n        MediaLibrary myMediaLibrary = new MediaLibrary();\n        myMediaLibrary.addMedia(new Movie(\"The Alien\", Media.Genre.SCIFI));\n        myMediaLibrary.addMedia(new TVShow(\"The X-Files\", Media.Genre.SCIFI));\n        myMediaLibrary.addMedia(new TVShow(\"Seinfield\", Media.Genre.COMEDY));\n        System.out.println(myMediaLibrary.toString());  \n    }\n\n}\nMovie title: The Alien\nShow title: The X-Files\nShow title: Seinfield"
+  },
+  {
+    "objectID": "short-assignment-07.html",
+    "href": "short-assignment-07.html",
+    "title": "Short Assignment 07",
+    "section": "",
+    "text": "In this lab you will be working with generics, more specifically you will be writing generic methods.\nTo write a generic method, add &lt;Something&gt; before the return type in the method signature, and then use the generic name for the argument type\npublic &lt;T&gt; String getMyString(T element) {\n        return element.getClass().getName() + \" = \" + element;\n    }\nCall:\nSystem.out.println(getMyString(12));\nSystem.out.println(getMyString(\"banana\"));\n\n\n\nIn this short assignment you are to write a Java application to create a generic method that takes two arrays of the same type but possibly different lengths and merges them into an ArrayList. Alternate the elements in the new ArrayList, starting with the first element of the smaller array.\n\n\n\nYou should name your class MergeArrays and your generic funciton to be named merge.\nHere’s the JUnit file to test your solution:\nimport static org.junit.jupiter.api.Assertions.*;\nimport org.junit.jupiter.api.Test;\nimport java.util.ArrayList;\n\n\n\nclass MergeArraysTest {\n\n    @Test\n    void testString() {\n        System.out.println(\"asdasd\");\n        String[] one = {\"b\", \"d\", \"e\"};\n        String[] two = {\"a\", \"c\"};\n        ArrayList&lt;String&gt; output = MergeArrays.merge(one, two);\n        ArrayList&lt;String&gt; expected = new ArrayList&lt;&gt;();\n        expected.add(\"a\"); expected.add(\"b\"); \n        expected.add(\"c\"); expected.add(\"d\");\n        expected.add(\"e\");\n        assertEquals(expected, output);\n        \n    }\n    \n    @Test\n    void testSInteger() {\n        System.out.println(\"asdasd\");\n        Integer[] one = {1};\n        Integer[] two = {2, 3};\n        ArrayList&lt;Integer&gt; output = MergeArrays.merge(one, two);\n        ArrayList&lt;Integer&gt; expected = new ArrayList&lt;&gt;();\n        expected.add(1); expected.add(2); \n        expected.add(3);\n        assertEquals(expected, output);\n        \n    }\n\n}\n\n\n\n\nPackage information:\npackage com.gradescope.mymerge;"
+  },
+  {
+    "objectID": "short-assignment-07.html#introduction",
+    "href": "short-assignment-07.html#introduction",
+    "title": "Short Assignment 07",
+    "section": "",
+    "text": "In this lab you will be working with generics, more specifically you will be writing generic methods.\nTo write a generic method, add &lt;Something&gt; before the return type in the method signature, and then use the generic name for the argument type\npublic &lt;T&gt; String getMyString(T element) {\n        return element.getClass().getName() + \" = \" + element;\n    }\nCall:\nSystem.out.println(getMyString(12));\nSystem.out.println(getMyString(\"banana\"));"
+  },
+  {
+    "objectID": "short-assignment-07.html#merging-any-two-arrays",
+    "href": "short-assignment-07.html#merging-any-two-arrays",
+    "title": "Short Assignment 07",
+    "section": "",
+    "text": "In this short assignment you are to write a Java application to create a generic method that takes two arrays of the same type but possibly different lengths and merges them into an ArrayList. Alternate the elements in the new ArrayList, starting with the first element of the smaller array."
+  },
+  {
+    "objectID": "short-assignment-07.html#test-your-method",
+    "href": "short-assignment-07.html#test-your-method",
+    "title": "Short Assignment 07",
+    "section": "",
+    "text": "You should name your class MergeArrays and your generic funciton to be named merge.\nHere’s the JUnit file to test your solution:\nimport static org.junit.jupiter.api.Assertions.*;\nimport org.junit.jupiter.api.Test;\nimport java.util.ArrayList;\n\n\n\nclass MergeArraysTest {\n\n    @Test\n    void testString() {\n        System.out.println(\"asdasd\");\n        String[] one = {\"b\", \"d\", \"e\"};\n        String[] two = {\"a\", \"c\"};\n        ArrayList&lt;String&gt; output = MergeArrays.merge(one, two);\n        ArrayList&lt;String&gt; expected = new ArrayList&lt;&gt;();\n        expected.add(\"a\"); expected.add(\"b\"); \n        expected.add(\"c\"); expected.add(\"d\");\n        expected.add(\"e\");\n        assertEquals(expected, output);\n        \n    }\n    \n    @Test\n    void testSInteger() {\n        System.out.println(\"asdasd\");\n        Integer[] one = {1};\n        Integer[] two = {2, 3};\n        ArrayList&lt;Integer&gt; output = MergeArrays.merge(one, two);\n        ArrayList&lt;Integer&gt; expected = new ArrayList&lt;&gt;();\n        expected.add(1); expected.add(2); \n        expected.add(3);\n        assertEquals(expected, output);\n        \n    }\n\n}"
+  },
+  {
+    "objectID": "short-assignment-07.html#submission",
+    "href": "short-assignment-07.html#submission",
+    "title": "Short Assignment 07",
+    "section": "",
+    "text": "Package information:\npackage com.gradescope.mymerge;"
   }
 ]

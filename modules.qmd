@@ -191,3 +191,5 @@ Topic: `r schedule %>% filter(week == 8) %>% pull(topic)`
 * [Enum](slides-06-03.html)
 
 ## Assignments
+
+* [Short Assignment 07](short-assignment-07.html) -- Deadline: `r data %>% filter(Assignment == "SA7") %>%  select(Deadline)` -- Monday, 11:30pm
