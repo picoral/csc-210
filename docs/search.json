@@ -2993,7 +2993,7 @@
     "href": "modules.html#slides-5",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nObject\nGenerics"
+    "text": "Slides\n\nObject\nGenerics\nEnum"
   },
   {
     "objectID": "modules.html#assignments-5",
@@ -3183,5 +3183,12 @@
     "title": "CR+LF",
     "section": "Differences in characters",
     "text": "Differences in characters\nThere’s an entire wikipedia page on this\nUnix uses \\n and Windows uses \\r\\n (for most applications, not all)\nNot a problem for autograder because your code will be compiled and run on a Unix VM\nA problem that you will encounter many times for other reasons\nJUnit tests fail because the text file that your output is compared against uses only \\n"
+  },
+  {
+    "objectID": "modules.html#fyi",
+    "href": "modules.html#fyi",
+    "title": "Modules",
+    "section": "FYI",
+    "text": "FYI\n\nCR+LF"
   }
 ]
