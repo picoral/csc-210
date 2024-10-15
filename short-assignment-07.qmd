@@ -44,7 +44,6 @@ class MergeArraysTest {
 
 	@Test
 	void testString() {
-		System.out.println("asdasd");
 		String[] one = {"b", "d", "e"};
 		String[] two = {"a", "c"};
 		ArrayList<String> output = MergeArrays.merge(one, two);
@@ -58,7 +57,6 @@ class MergeArraysTest {
 	
 	@Test
 	void testSInteger() {
-		System.out.println("asdasd");
 		Integer[] one = {1};
 		Integer[] two = {2, 3};
 		ArrayList<Integer> output = MergeArrays.merge(one, two);
@@ -78,3 +76,5 @@ class MergeArraysTest {
 Package information:
 
 `package com.gradescope.mymerge;`
+
+Submit your `MergeArrays.java` file to [Gradescope](https://www.gradescope.com/courses/839822/assignments/5165774)
