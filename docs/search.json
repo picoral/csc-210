@@ -3253,5 +3253,61 @@
     "title": "Generics",
     "section": "JUnit test",
     "text": "JUnit test\n    @Test\n    void testDeletion() {\n        MyLinkedList&lt;Object&gt; myList = new MyLinkedList&lt;&gt;();\n        myList.insert(new Node&lt;&gt;(10));\n        myList.insert(new Node&lt;&gt;(5.5));\n        myList.insert(new Node&lt;&gt;(\"abc\"));\n        myList.insert(new Node&lt;&gt;(\"hello\"));\n        myList.delete(5.5);\n        String expected = \"hello abc 10\";\n        Assertions.assertEquals(expected, myList.toString());   \n    }"
+  },
+  {
+    "objectID": "slides-06-03.html#enum-type",
+    "href": "slides-06-03.html#enum-type",
+    "title": "enum",
+    "section": "enum type",
+    "text": "enum type\n\nFixed set of constants\nConstants should be all in capital letters (also make sure you are using final static for other constant types)\nJava enum constants are static and final implicitly\nName it as a class name (proper case)\n\nUse:\nenum Season { WINTER, SPRING, SUMMER, FALL } \nUse .values() method to iterate over values"
+  },
+  {
+    "objectID": "slides-06-03.html#enum-use",
+    "href": "slides-06-03.html#enum-use",
+    "title": "enum",
+    "section": "enum use",
+    "text": "enum use\nfor (Season s : Season.values()) {\n            System.out.println(s);\n        }"
+  },
+  {
+    "objectID": "slides-06-03.html#enum-use-1",
+    "href": "slides-06-03.html#enum-use-1",
+    "title": "enum",
+    "section": "enum use",
+    "text": "enum use\nuse Enum.VALUE to set a specific value\npublic class SimpleExample {\n\n    private enum Season { WINTER, SPRING, SUMMER, FALL };\n    \n    public static void main(String[] args) {\n        Season mySeason = Season.FALL;\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-06-03.html#switch-use",
+    "href": "slides-06-03.html#switch-use",
+    "title": "enum",
+    "section": "switch use",
+    "text": "switch use\nYou can replace multiple if else statements with switch case statements\nswitch(expression) {\n  case x:\n    // code block\n  case y:\n    // code block\n  default:\n    // code block\n}"
+  },
+  {
+    "objectID": "slides-06-03.html#switch-use-1",
+    "href": "slides-06-03.html#switch-use-1",
+    "title": "enum",
+    "section": "switch use",
+    "text": "switch use\n\nThe switch expression is evaluated once\nThe value of the expression is compared with the values of each case\nIf there is a match, the associated block of code is executed.\ndefault is optional"
+  },
+  {
+    "objectID": "slides-06-03.html#switch-use-2",
+    "href": "slides-06-03.html#switch-use-2",
+    "title": "enum",
+    "section": "switch use",
+    "text": "switch use\nRemove break – what’s the behavior change?\n    Season mySeason = Season.FALL;\n        \n        switch (mySeason) {\n        case WINTER:\n            System.out.println(\"Winter is cold\");\n            break;\n        case FALL:\n            System.out.println(\"Fall is supposed to be perfect weather\");\n            break;\n        case SUMMER:\n            System.out.println(\"School is out\");\n            break;\n        case SPRING:\n            System.out.println(\"Allergy season\");\n        }"
+  },
+  {
+    "objectID": "slides-06-03.html#putting-it-all-together",
+    "href": "slides-06-03.html#putting-it-all-together",
+    "title": "enum",
+    "section": "Putting it all together",
+    "text": "Putting it all together\nBased on the UML class diagram below and the program behavior, implement all classes"
+  },
+  {
+    "objectID": "slides-06-03.html#application-behavior",
+    "href": "slides-06-03.html#application-behavior",
+    "title": "enum",
+    "section": "Application behavior",
+    "text": "Application behavior\npublic class MyMediaLibrary {\n\n    public static void main(String[] args) {\n        MediaLibrary myMediaLibrary = new MediaLibrary();\n        myMediaLibrary.addMedia(new Movie(\"The Alien\", Media.Genre.SCIFI));\n        myMediaLibrary.addMedia(new TVShow(\"The X-Files\", Media.Genre.SCIFI));\n        myMediaLibrary.addMedia(new TVShow(\"Seinfield\", Media.Genre.COMEDY));\n        System.out.println(myMediaLibrary.toString());  \n    }\n\n}\nMovie title: The Alien\nShow title: The X-Files\nShow title: Seinfield"
   }
 ]

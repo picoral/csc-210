@@ -1,5 +1,115 @@
 ---
-title: "Enum"
+title: "enum"
 format: revealjs
 ---
 
+## `enum` type
+
+* Fixed set of constants
+* Constants should be all in capital letters (also make sure you are using final static for other constant types)
+* Java enum constants are static and final implicitly
+* Name it as a class name (proper case)
+
+Use:
+```{java}
+enum Season { WINTER, SPRING, SUMMER, FALL } 
+```
+
+Use `.values()` method to iterate over values 
+
+## `enum` use
+
+```{java}
+for (Season s : Season.values()) {
+			System.out.println(s);
+		}
+```
+
+## `enum` use
+
+use `Enum.VALUE` to set a specific value
+
+```{java}
+public class SimpleExample {
+
+	private enum Season { WINTER, SPRING, SUMMER, FALL };
+	
+	public static void main(String[] args) {
+		Season mySeason = Season.FALL;
+	}
+
+}
+```
+
+
+## `switch` use
+
+You can replace multiple `if else` statements with `switch case` statements
+
+```{java}
+switch(expression) {
+  case x:
+    // code block
+  case y:
+    // code block
+  default:
+    // code block
+}
+```
+
+## `switch` use
+
+* The switch expression is evaluated once
+* The value of the expression is compared with the values of each case
+* If there is a match, the associated block of code is executed.
+* `default` is optional
+
+## `switch` use
+
+Remove `break` -- what's the behavior change?
+
+```{java}
+    Season mySeason = Season.FALL;
+		
+		switch (mySeason) {
+		case WINTER:
+			System.out.println("Winter is cold");
+			break;
+		case FALL:
+			System.out.println("Fall is supposed to be perfect weather");
+			break;
+		case SUMMER:
+			System.out.println("School is out");
+			break;
+		case SPRING:
+			System.out.println("Allergy season");
+		}
+```
+
+## Putting it all together
+
+Based on the UML class diagram below and the program behavior, implement all classes
+
+![](images/media-library-uml.png)
+
+## Application behavior
+
+```{java}
+public class MyMediaLibrary {
+
+	public static void main(String[] args) {
+		MediaLibrary myMediaLibrary = new MediaLibrary();
+		myMediaLibrary.addMedia(new Movie("The Alien", Media.Genre.SCIFI));
+		myMediaLibrary.addMedia(new TVShow("The X-Files", Media.Genre.SCIFI));
+		myMediaLibrary.addMedia(new TVShow("Seinfield", Media.Genre.COMEDY));
+		System.out.println(myMediaLibrary.toString());	
+	}
+
+}
+```
+
+```
+Movie title: The Alien
+Show title: The X-Files
+Show title: Seinfield
+```
