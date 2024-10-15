@@ -180,9 +180,14 @@ Topic: `r schedule %>% filter(week == 7) %>% pull(topic)`
 Topic: `r schedule %>% filter(week == 8) %>% pull(topic)`
 
 
+## FYI
+
+* [CR+LF](lns-crs.html)
+
 ## Slides
 
 * [Object](slides-06-01.html)
 * [Generics](slides-06-02.html)
+* [Enum](slides-06-03.html)
 
 ## Assignments
