@@ -514,20 +514,24 @@
 <span id="cb7-2"><a></a>    private T data;</span>
 <span id="cb7-3"><a></a>    private Node&lt;T&gt; next;</span>
 <span id="cb7-4"><a></a></span>
-<span id="cb7-5"><a></a>    public Node(T d, Node&lt;T&gt; n) {</span>
+<span id="cb7-5"><a></a>    public Node(T d) {</span>
 <span id="cb7-6"><a></a>        data = d;</span>
-<span id="cb7-7"><a></a>        next = n;</span>
+<span id="cb7-7"><a></a>        next = null;</span>
 <span id="cb7-8"><a></a>    }</span>
 <span id="cb7-9"><a></a>    </span>
 <span id="cb7-10"><a></a>    public Node&lt;T&gt; getNext() {</span>
 <span id="cb7-11"><a></a>        return next;</span>
 <span id="cb7-12"><a></a>    }</span>
 <span id="cb7-13"><a></a>    </span>
-<span id="cb7-14"><a></a>    public T getData() {</span>
-<span id="cb7-15"><a></a>        return data;</span>
+<span id="cb7-14"><a></a>    public void setNext(Node&lt;T&gt; next) {</span>
+<span id="cb7-15"><a></a>        this.next = next;</span>
 <span id="cb7-16"><a></a>    }</span>
-<span id="cb7-17"><a></a></span>
-<span id="cb7-18"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-17"><a></a>    </span>
+<span id="cb7-18"><a></a>    public T getData() {</span>
+<span id="cb7-19"><a></a>        return data;</span>
+<span id="cb7-20"><a></a>    }</span>
+<span id="cb7-21"><a></a></span>
+<span id="cb7-22"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="linkedlist-class" class="slide level2">
 <h2><code>LinkedList</code> class</h2>
@@ -535,6 +539,173 @@
 <li>What methods do you need to implement?</li>
 <li>What instance variables do you need?</li>
 </ul>
+</section>
+<section id="implement-mylist-class" class="slide level2">
+<h2>Implement <code>MyList</code> class</h2>
+<ul>
+<li>A linked list has a node as its head/root, which should be initialized as null</li>
+<li>The <code>insert</code> method should check if the head/root is null (what’s the easiest implementation?)</li>
+<li>Create a <code>toString()</code> method to test your code (get each element in list)</li>
+<li>Write JUnit tests to test your code</li>
+</ul>
+</section>
+<section id="mylist-class" class="slide level2">
+<h2><code>MyList</code> class</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>public class MyLinkedList&lt;T&gt; {</span>
+<span id="cb8-2"><a></a>    private Node&lt;T&gt; root;</span>
+<span id="cb8-3"><a></a>    </span>
+<span id="cb8-4"><a></a>    public MyLinkedList() {</span>
+<span id="cb8-5"><a></a>        root = null;</span>
+<span id="cb8-6"><a></a>    }</span>
+<span id="cb8-7"><a></a>    </span>
+<span id="cb8-8"><a></a>    public Node&lt;T&gt; getRoot() {</span>
+<span id="cb8-9"><a></a>        return root;</span>
+<span id="cb8-10"><a></a>        </span>
+<span id="cb8-11"><a></a>    }</span>
+<span id="cb8-12"><a></a>    </span>
+<span id="cb8-13"><a></a>    public void insert(Node&lt;T&gt; newNode) {</span>
+<span id="cb8-14"><a></a>        if (root == null) {</span>
+<span id="cb8-15"><a></a>            root = newNode;</span>
+<span id="cb8-16"><a></a>        } else {</span>
+<span id="cb8-17"><a></a>            newNode.setNext(root);</span>
+<span id="cb8-18"><a></a>            root = newNode;</span>
+<span id="cb8-19"><a></a>        }</span>
+<span id="cb8-20"><a></a>    }</span>
+<span id="cb8-21"><a></a>    </span>
+<span id="cb8-22"><a></a>    public String toString() {</span>
+<span id="cb8-23"><a></a>        String message = "";</span>
+<span id="cb8-24"><a></a>        Node&lt;T&gt; currentNode = root;</span>
+<span id="cb8-25"><a></a>        while (currentNode != null) {</span>
+<span id="cb8-26"><a></a>            message += currentNode.getData() + " ";</span>
+<span id="cb8-27"><a></a>            currentNode = currentNode.getNext();</span>
+<span id="cb8-28"><a></a>        }</span>
+<span id="cb8-29"><a></a>        return message.trim();</span>
+<span id="cb8-30"><a></a>    }</span>
+<span id="cb8-31"><a></a></span>
+<span id="cb8-32"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="junit-tests" class="slide level2">
+<h2>JUnit tests</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a></a>import org.junit.jupiter.api.Assertions;</span>
+<span id="cb9-2"><a></a>import org.junit.jupiter.api.Test;</span>
+<span id="cb9-3"><a></a></span>
+<span id="cb9-4"><a></a>class MyLinkedListTest {</span>
+<span id="cb9-5"><a></a></span>
+<span id="cb9-6"><a></a>    @Test</span>
+<span id="cb9-7"><a></a>    void testNodeNull() {</span>
+<span id="cb9-8"><a></a>        Node&lt;Integer&gt; myNode = new Node&lt;&gt;(10);</span>
+<span id="cb9-9"><a></a>        Assertions.assertNull(myNode.getNext());</span>
+<span id="cb9-10"><a></a>    }</span>
+<span id="cb9-11"><a></a>    </span>
+<span id="cb9-12"><a></a>    @Test</span>
+<span id="cb9-13"><a></a>    void testNodeValue() {</span>
+<span id="cb9-14"><a></a>        Node&lt;Integer&gt; myNode = new Node&lt;&gt;(10);</span>
+<span id="cb9-15"><a></a>        Assertions.assertEquals(10, myNode.getData());</span>
+<span id="cb9-16"><a></a>    }</span>
+<span id="cb9-17"><a></a>    </span>
+<span id="cb9-18"><a></a>    @Test</span>
+<span id="cb9-19"><a></a>    void testListNull() {</span>
+<span id="cb9-20"><a></a>        MyLinkedList&lt;String&gt; myList = new MyLinkedList&lt;&gt;();</span>
+<span id="cb9-21"><a></a>        Assertions.assertNull(myList.getRoot());</span>
+<span id="cb9-22"><a></a>    }</span>
+<span id="cb9-23"><a></a>    </span>
+<span id="cb9-24"><a></a>    @Test</span>
+<span id="cb9-25"><a></a>    void testListInsert() {</span>
+<span id="cb9-26"><a></a>        MyLinkedList&lt;Object&gt; myList = new MyLinkedList&lt;&gt;();</span>
+<span id="cb9-27"><a></a>        myList.insert(new Node&lt;&gt;(10));</span>
+<span id="cb9-28"><a></a>        Assertions.assertEquals(10, myList.getRoot().getData());</span>
+<span id="cb9-29"><a></a>    }</span>
+<span id="cb9-30"><a></a>    </span>
+<span id="cb9-31"><a></a>    @Test</span>
+<span id="cb9-32"><a></a>    void testListToString() {</span>
+<span id="cb9-33"><a></a>        MyLinkedList&lt;Object&gt; myList = new MyLinkedList&lt;&gt;();</span>
+<span id="cb9-34"><a></a>        myList.insert(new Node&lt;&gt;(10));</span>
+<span id="cb9-35"><a></a>        myList.insert(new Node&lt;&gt;(5));</span>
+<span id="cb9-36"><a></a>        myList.insert(new Node&lt;&gt;(8));</span>
+<span id="cb9-37"><a></a>        String expected = "8 5 10";</span>
+<span id="cb9-38"><a></a>        Assertions.assertEquals(expected, myList.toString());</span>
+<span id="cb9-39"><a></a>    }</span>
+<span id="cb9-40"><a></a></span>
+<span id="cb9-41"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="search-method" class="slide level2">
+<h2><code>search</code> method</h2>
+<ul>
+<li>Similar to <code>toString()</code></li>
+<li>Return <code>false</code> if value not in list, <code>true</code> otherwise</li>
+</ul>
+</section>
+<section id="search-solution" class="slide level2">
+<h2><code>search</code> solution</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a></a>public boolean search(T value) {</span>
+<span id="cb10-2"><a></a>        if (root == null) return false;</span>
+<span id="cb10-3"><a></a>        else {</span>
+<span id="cb10-4"><a></a>            Node&lt;T&gt; currentNode = root;</span>
+<span id="cb10-5"><a></a>            while (currentNode != null) {</span>
+<span id="cb10-6"><a></a>                if (currentNode.getData().equals(value)) return true;</span>
+<span id="cb10-7"><a></a>                currentNode = currentNode.getNext();</span>
+<span id="cb10-8"><a></a>            }</span>
+<span id="cb10-9"><a></a>        }</span>
+<span id="cb10-10"><a></a>        return false;</span>
+<span id="cb10-11"><a></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="junit-test" class="slide level2">
+<h2>JUnit test</h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a></a>  @Test</span>
+<span id="cb11-2"><a></a>    void testSearch() {</span>
+<span id="cb11-3"><a></a>        MyLinkedList&lt;Object&gt; myList = new MyLinkedList&lt;&gt;();</span>
+<span id="cb11-4"><a></a>        myList.insert(new Node&lt;&gt;(10));</span>
+<span id="cb11-5"><a></a>        myList.insert(new Node&lt;&gt;(5));</span>
+<span id="cb11-6"><a></a>        myList.insert(new Node&lt;&gt;("something"));</span>
+<span id="cb11-7"><a></a>        Assertions.assertTrue(myList.search("something"));</span>
+<span id="cb11-8"><a></a>        Assertions.assertFalse(myList.search(8));</span>
+<span id="cb11-9"><a></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="delete-node" class="slide level2">
+<h2>Delete node</h2>
+<p>Removing a node takes a few more steps:</p>
+<ul>
+<li>Find the node to remove (if present), look ahead for the next node, adjust reference for the previous node</li>
+<li>How to remove first element?</li>
+</ul>
+
+<img data-src="images/delete.png" class="r-stretch"></section>
+<section id="delete-method" class="slide level2">
+<h2><code>delete</code> method</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>public void delete(T value) {</span>
+<span id="cb12-2"><a></a>        if (root.getData().equals(value)) {</span>
+<span id="cb12-3"><a></a>            root = root.getNext();</span>
+<span id="cb12-4"><a></a>        } else {</span>
+<span id="cb12-5"><a></a>            Node&lt;T&gt; currentNode = root;</span>
+<span id="cb12-6"><a></a>            Node&lt;T&gt; previousNode = null;</span>
+<span id="cb12-7"><a></a>            Boolean found = false;</span>
+<span id="cb12-8"><a></a>            while (currentNode != null &amp;&amp; !found) {</span>
+<span id="cb12-9"><a></a>                if (currentNode.getData().equals(value) ) {</span>
+<span id="cb12-10"><a></a>                    found = true;</span>
+<span id="cb12-11"><a></a>                    if (previousNode != null) {</span>
+<span id="cb12-12"><a></a>                        previousNode.setNext(currentNode.getNext());</span>
+<span id="cb12-13"><a></a>                    }</span>
+<span id="cb12-14"><a></a>                } // if found node to delete</span>
+<span id="cb12-15"><a></a>                previousNode = currentNode; // for next iteration make current previous</span>
+<span id="cb12-16"><a></a>                currentNode = currentNode.getNext(); // get next node for current</span>
+<span id="cb12-17"><a></a>            } // while </span>
+<span id="cb12-18"><a></a>        }</span>
+<span id="cb12-19"><a></a>        </span>
+<span id="cb12-20"><a></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="junit-test-1" class="slide level2">
+<h2>JUnit test</h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a></a>    @Test</span>
+<span id="cb13-2"><a></a>    void testDeletion() {</span>
+<span id="cb13-3"><a></a>        MyLinkedList&lt;Object&gt; myList = new MyLinkedList&lt;&gt;();</span>
+<span id="cb13-4"><a></a>        myList.insert(new Node&lt;&gt;(10));</span>
+<span id="cb13-5"><a></a>        myList.insert(new Node&lt;&gt;(5.5));</span>
+<span id="cb13-6"><a></a>        myList.insert(new Node&lt;&gt;("abc"));</span>
+<span id="cb13-7"><a></a>        myList.insert(new Node&lt;&gt;("hello"));</span>
+<span id="cb13-8"><a></a>        myList.delete(5.5);</span>
+<span id="cb13-9"><a></a>        String expected = "hello abc 10";</span>
+<span id="cb13-10"><a></a>        Assertions.assertEquals(expected, myList.toString());   </span>
+<span id="cb13-11"><a></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

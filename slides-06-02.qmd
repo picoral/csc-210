@@ -137,13 +137,17 @@ public class Node<T> {
 	private T data;
     private Node<T> next;
 
-    public Node(T d, Node<T> n) {
+    public Node(T d) {
         data = d;
-        next = n;
+        next = null;
     }
     
     public Node<T> getNext() {
     	return next;
+    }
+    
+    public void setNext(Node<T> next) {
+    	this.next = next;
     }
     
     public T getData() {
@@ -157,3 +161,180 @@ public class Node<T> {
 
 * What methods do you need to implement?
 * What instance variables do you need?
+
+## Implement `MyList` class
+
+* A linked list has a node as its head/root, which should be initialized as null
+* The `insert` method should check if the head/root is null (what's the easiest implementation?)
+* Create a `toString()` method to test your code (get each element in list)
+* Write JUnit tests to test your code
+
+## `MyList` class
+
+```{java}
+public class MyLinkedList<T> {
+	private Node<T> root;
+	
+	public MyLinkedList() {
+		root = null;
+	}
+	
+	public Node<T> getRoot() {
+		return root;
+		
+	}
+	
+	public void insert(Node<T> newNode) {
+		if (root == null) {
+			root = newNode;
+		} else {
+			newNode.setNext(root);
+			root = newNode;
+		}
+	}
+	
+	public String toString() {
+		String message = "";
+		Node<T> currentNode = root;
+		while (currentNode != null) {
+			message += currentNode.getData() + " ";
+			currentNode = currentNode.getNext();
+		}
+		return message.trim();
+	}
+
+}
+```
+
+## JUnit tests
+
+```{java}
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+class MyLinkedListTest {
+
+	@Test
+	void testNodeNull() {
+		Node<Integer> myNode = new Node<>(10);
+		Assertions.assertNull(myNode.getNext());
+	}
+	
+	@Test
+	void testNodeValue() {
+		Node<Integer> myNode = new Node<>(10);
+		Assertions.assertEquals(10, myNode.getData());
+	}
+	
+	@Test
+	void testListNull() {
+		MyLinkedList<String> myList = new MyLinkedList<>();
+		Assertions.assertNull(myList.getRoot());
+	}
+	
+	@Test
+	void testListInsert() {
+		MyLinkedList<Object> myList = new MyLinkedList<>();
+		myList.insert(new Node<>(10));
+		Assertions.assertEquals(10, myList.getRoot().getData());
+	}
+	
+	@Test
+	void testListToString() {
+		MyLinkedList<Object> myList = new MyLinkedList<>();
+		myList.insert(new Node<>(10));
+		myList.insert(new Node<>(5));
+		myList.insert(new Node<>(8));
+		String expected = "8 5 10";
+		Assertions.assertEquals(expected, myList.toString());
+	}
+
+}
+```
+
+## `search` method
+
+* Similar to `toString()`
+* Return `false` if value not in list, `true` otherwise
+
+## `search` solution
+
+```{java}
+public boolean search(T value) {
+		if (root == null) return false;
+		else {
+			Node<T> currentNode = root;
+			while (currentNode != null) {
+				if (currentNode.getData().equals(value)) return true;
+				currentNode = currentNode.getNext();
+			}
+		}
+		return false;
+	}
+```
+
+## JUnit test
+
+```{java}
+  @Test
+	void testSearch() {
+		MyLinkedList<Object> myList = new MyLinkedList<>();
+		myList.insert(new Node<>(10));
+		myList.insert(new Node<>(5));
+		myList.insert(new Node<>("something"));
+		Assertions.assertTrue(myList.search("something"));
+		Assertions.assertFalse(myList.search(8));
+	}
+```
+
+## Delete node
+
+Removing a node takes a few more steps:
+
+* Find the node to remove (if present), look ahead for the next node, adjust reference for the previous node
+* How to remove first element?
+
+![](images/delete.png)
+
+## `delete` method
+
+```{java}
+public void delete(T value) {
+		if (root.getData().equals(value)) {
+			root = root.getNext();
+		} else {
+			Node<T> currentNode = root;
+			Node<T> previousNode = null;
+			Boolean found = false;
+			while (currentNode != null && !found) {
+				if (currentNode.getData().equals(value) ) {
+					found = true;
+					if (previousNode != null) {
+						previousNode.setNext(currentNode.getNext());
+					}
+				} // if found node to delete
+				previousNode = currentNode; // for next iteration make current previous
+				currentNode = currentNode.getNext(); // get next node for current
+			} // while 
+		}
+		
+	}
+```
+
+## JUnit test
+
+```{java}
+	@Test
+	void testDeletion() {
+		MyLinkedList<Object> myList = new MyLinkedList<>();
+		myList.insert(new Node<>(10));
+		myList.insert(new Node<>(5.5));
+		myList.insert(new Node<>("abc"));
+		myList.insert(new Node<>("hello"));
+		myList.delete(5.5);
+		String expected = "hello abc 10";
+		Assertions.assertEquals(expected, myList.toString());	
+	}
+```
+
+

@@ -3161,7 +3161,7 @@
     "href": "slides-06-02.html#node-solution",
     "title": "Generics",
     "section": "Node solution",
-    "text": "Node solution\npublic class Node&lt;T&gt; {\n    private T data;\n    private Node&lt;T&gt; next;\n\n    public Node(T d, Node&lt;T&gt; n) {\n        data = d;\n        next = n;\n    }\n    \n    public Node&lt;T&gt; getNext() {\n        return next;\n    }\n    \n    public T getData() {\n        return data;\n    }\n\n}"
+    "text": "Node solution\npublic class Node&lt;T&gt; {\n    private T data;\n    private Node&lt;T&gt; next;\n\n    public Node(T d) {\n        data = d;\n        next = null;\n    }\n    \n    public Node&lt;T&gt; getNext() {\n        return next;\n    }\n    \n    public void setNext(Node&lt;T&gt; next) {\n        this.next = next;\n    }\n    \n    public T getData() {\n        return data;\n    }\n\n}"
   },
   {
     "objectID": "slides-06-02.html#linkedlist-class",
@@ -3190,5 +3190,68 @@
     "title": "Modules",
     "section": "FYI",
     "text": "FYI\n\nCR+LF"
+  },
+  {
+    "objectID": "slides-06-02.html#implement-mylist-class",
+    "href": "slides-06-02.html#implement-mylist-class",
+    "title": "Generics",
+    "section": "Implement MyList class",
+    "text": "Implement MyList class\n\nA linked list has a node as its head/root, which should be initialized as null\nThe insert method should check if the head/root is null (what’s the easiest implementation?)\nCreate a toString() method to test your code (get each element in list)\nWrite JUnit tests to test your code"
+  },
+  {
+    "objectID": "slides-06-02.html#mylist-class",
+    "href": "slides-06-02.html#mylist-class",
+    "title": "Generics",
+    "section": "MyList class",
+    "text": "MyList class\npublic class MyLinkedList&lt;T&gt; {\n    private Node&lt;T&gt; root;\n    \n    public MyLinkedList() {\n        root = null;\n    }\n    \n    public Node&lt;T&gt; getRoot() {\n        return root;\n        \n    }\n    \n    public void insert(Node&lt;T&gt; newNode) {\n        if (root == null) {\n            root = newNode;\n        } else {\n            newNode.setNext(root);\n            root = newNode;\n        }\n    }\n    \n    public String toString() {\n        String message = \"\";\n        Node&lt;T&gt; currentNode = root;\n        while (currentNode != null) {\n            message += currentNode.getData() + \" \";\n            currentNode = currentNode.getNext();\n        }\n        return message.trim();\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-06-02.html#junit-tests",
+    "href": "slides-06-02.html#junit-tests",
+    "title": "Generics",
+    "section": "JUnit tests",
+    "text": "JUnit tests\nimport org.junit.jupiter.api.Assertions;\nimport org.junit.jupiter.api.Test;\n\nclass MyLinkedListTest {\n\n    @Test\n    void testNodeNull() {\n        Node&lt;Integer&gt; myNode = new Node&lt;&gt;(10);\n        Assertions.assertNull(myNode.getNext());\n    }\n    \n    @Test\n    void testNodeValue() {\n        Node&lt;Integer&gt; myNode = new Node&lt;&gt;(10);\n        Assertions.assertEquals(10, myNode.getData());\n    }\n    \n    @Test\n    void testListNull() {\n        MyLinkedList&lt;String&gt; myList = new MyLinkedList&lt;&gt;();\n        Assertions.assertNull(myList.getRoot());\n    }\n    \n    @Test\n    void testListInsert() {\n        MyLinkedList&lt;Object&gt; myList = new MyLinkedList&lt;&gt;();\n        myList.insert(new Node&lt;&gt;(10));\n        Assertions.assertEquals(10, myList.getRoot().getData());\n    }\n    \n    @Test\n    void testListToString() {\n        MyLinkedList&lt;Object&gt; myList = new MyLinkedList&lt;&gt;();\n        myList.insert(new Node&lt;&gt;(10));\n        myList.insert(new Node&lt;&gt;(5));\n        myList.insert(new Node&lt;&gt;(8));\n        String expected = \"8 5 10\";\n        Assertions.assertEquals(expected, myList.toString());\n    }\n\n}"
+  },
+  {
+    "objectID": "slides-06-02.html#search-method",
+    "href": "slides-06-02.html#search-method",
+    "title": "Generics",
+    "section": "search method",
+    "text": "search method\n\nSimilar to toString()\nReturn false if value not in list, true otherwise"
+  },
+  {
+    "objectID": "slides-06-02.html#search-solution",
+    "href": "slides-06-02.html#search-solution",
+    "title": "Generics",
+    "section": "search solution",
+    "text": "search solution\npublic boolean search(T value) {\n        if (root == null) return false;\n        else {\n            Node&lt;T&gt; currentNode = root;\n            while (currentNode != null) {\n                if (currentNode.getData().equals(value)) return true;\n                currentNode = currentNode.getNext();\n            }\n        }\n        return false;\n    }"
+  },
+  {
+    "objectID": "slides-06-02.html#junit-test",
+    "href": "slides-06-02.html#junit-test",
+    "title": "Generics",
+    "section": "JUnit test",
+    "text": "JUnit test\n  @Test\n    void testSearch() {\n        MyLinkedList&lt;Object&gt; myList = new MyLinkedList&lt;&gt;();\n        myList.insert(new Node&lt;&gt;(10));\n        myList.insert(new Node&lt;&gt;(5));\n        myList.insert(new Node&lt;&gt;(\"something\"));\n        Assertions.assertTrue(myList.search(\"something\"));\n        Assertions.assertFalse(myList.search(8));\n    }"
+  },
+  {
+    "objectID": "slides-06-02.html#delete-node",
+    "href": "slides-06-02.html#delete-node",
+    "title": "Generics",
+    "section": "Delete node",
+    "text": "Delete node\nRemoving a node takes a few more steps:\n\nFind the node to remove (if present), look ahead for the next node, adjust reference for the previous node\nHow to remove first element?"
+  },
+  {
+    "objectID": "slides-06-02.html#delete-method",
+    "href": "slides-06-02.html#delete-method",
+    "title": "Generics",
+    "section": "delete method",
+    "text": "delete method\npublic void delete(T value) {\n        if (root.getData().equals(value)) {\n            root = root.getNext();\n        } else {\n            Node&lt;T&gt; currentNode = root;\n            Node&lt;T&gt; previousNode = null;\n            Boolean found = false;\n            while (currentNode != null && !found) {\n                if (currentNode.getData().equals(value) ) {\n                    found = true;\n                    if (previousNode != null) {\n                        previousNode.setNext(currentNode.getNext());\n                    }\n                } // if found node to delete\n                previousNode = currentNode; // for next iteration make current previous\n                currentNode = currentNode.getNext(); // get next node for current\n            } // while \n        }\n        \n    }"
+  },
+  {
+    "objectID": "slides-06-02.html#junit-test-1",
+    "href": "slides-06-02.html#junit-test-1",
+    "title": "Generics",
+    "section": "JUnit test",
+    "text": "JUnit test\n    @Test\n    void testDeletion() {\n        MyLinkedList&lt;Object&gt; myList = new MyLinkedList&lt;&gt;();\n        myList.insert(new Node&lt;&gt;(10));\n        myList.insert(new Node&lt;&gt;(5.5));\n        myList.insert(new Node&lt;&gt;(\"abc\"));\n        myList.insert(new Node&lt;&gt;(\"hello\"));\n        myList.delete(5.5);\n        String expected = \"hello abc 10\";\n        Assertions.assertEquals(expected, myList.toString());   \n    }"
   }
 ]
