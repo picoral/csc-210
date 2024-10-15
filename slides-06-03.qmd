@@ -1,6 +1,9 @@
 ---
 title: "enum"
-format: revealjs
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
 ---
 
 ## `enum` type
