@@ -2,8 +2,6 @@
 title: "Short Assignment 07"
 ---
 
-# Short Assignment 07
-
 ## Introduction 
 
 In this lab you will be working with generics, more specifically you will be writing generic methods.

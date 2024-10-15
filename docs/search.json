@@ -3315,7 +3315,7 @@
     "href": "short-assignment-07.html",
     "title": "Short Assignment 07",
     "section": "",
-    "text": "In this lab you will be working with generics, more specifically you will be writing generic methods.\nTo write a generic method, add &lt;Something&gt; before the return type in the method signature, and then use the generic name for the argument type\npublic &lt;T&gt; String getMyString(T element) {\n        return element.getClass().getName() + \" = \" + element;\n    }\nCall:\nSystem.out.println(getMyString(12));\nSystem.out.println(getMyString(\"banana\"));\n\n\n\nIn this short assignment you are to write a Java application to create a generic method that takes two arrays of the same type but possibly different lengths and merges them into an ArrayList. Alternate the elements in the new ArrayList, starting with the first element of the smaller array.\n\n\n\nYou should name your class MergeArrays and your generic funciton to be named merge.\nHere’s the JUnit file to test your solution:\nimport static org.junit.jupiter.api.Assertions.*;\nimport org.junit.jupiter.api.Test;\nimport java.util.ArrayList;\n\n\n\nclass MergeArraysTest {\n\n    @Test\n    void testString() {\n        String[] one = {\"b\", \"d\", \"e\"};\n        String[] two = {\"a\", \"c\"};\n        ArrayList&lt;String&gt; output = MergeArrays.merge(one, two);\n        ArrayList&lt;String&gt; expected = new ArrayList&lt;&gt;();\n        expected.add(\"a\"); expected.add(\"b\"); \n        expected.add(\"c\"); expected.add(\"d\");\n        expected.add(\"e\");\n        assertEquals(expected, output);\n        \n    }\n    \n    @Test\n    void testSInteger() {\n        Integer[] one = {1};\n        Integer[] two = {2, 3};\n        ArrayList&lt;Integer&gt; output = MergeArrays.merge(one, two);\n        ArrayList&lt;Integer&gt; expected = new ArrayList&lt;&gt;();\n        expected.add(1); expected.add(2); \n        expected.add(3);\n        assertEquals(expected, output);\n        \n    }\n\n}\n\n\n\n\nPackage information:\npackage com.gradescope.mymerge;\nSubmit your MergeArrays.java file to Gradescope"
+    "text": "In this lab you will be working with generics, more specifically you will be writing generic methods.\nTo write a generic method, add &lt;Something&gt; before the return type in the method signature, and then use the generic name for the argument type\npublic &lt;T&gt; String getMyString(T element) {\n        return element.getClass().getName() + \" = \" + element;\n    }\nCall:\nSystem.out.println(getMyString(12));\nSystem.out.println(getMyString(\"banana\"));"
   },
   {
     "objectID": "short-assignment-07.html#introduction",
@@ -3328,21 +3328,21 @@
     "objectID": "short-assignment-07.html#merging-any-two-arrays",
     "href": "short-assignment-07.html#merging-any-two-arrays",
     "title": "Short Assignment 07",
-    "section": "",
-    "text": "In this short assignment you are to write a Java application to create a generic method that takes two arrays of the same type but possibly different lengths and merges them into an ArrayList. Alternate the elements in the new ArrayList, starting with the first element of the smaller array."
+    "section": "Merging any two arrays",
+    "text": "Merging any two arrays\nIn this short assignment you are to write a Java application to create a generic method that takes two arrays of the same type but possibly different lengths and merges them into an ArrayList. Alternate the elements in the new ArrayList, starting with the first element of the smaller array."
   },
   {
     "objectID": "short-assignment-07.html#test-your-method",
     "href": "short-assignment-07.html#test-your-method",
     "title": "Short Assignment 07",
-    "section": "",
-    "text": "You should name your class MergeArrays and your generic funciton to be named merge.\nHere’s the JUnit file to test your solution:\nimport static org.junit.jupiter.api.Assertions.*;\nimport org.junit.jupiter.api.Test;\nimport java.util.ArrayList;\n\n\n\nclass MergeArraysTest {\n\n    @Test\n    void testString() {\n        String[] one = {\"b\", \"d\", \"e\"};\n        String[] two = {\"a\", \"c\"};\n        ArrayList&lt;String&gt; output = MergeArrays.merge(one, two);\n        ArrayList&lt;String&gt; expected = new ArrayList&lt;&gt;();\n        expected.add(\"a\"); expected.add(\"b\"); \n        expected.add(\"c\"); expected.add(\"d\");\n        expected.add(\"e\");\n        assertEquals(expected, output);\n        \n    }\n    \n    @Test\n    void testSInteger() {\n        Integer[] one = {1};\n        Integer[] two = {2, 3};\n        ArrayList&lt;Integer&gt; output = MergeArrays.merge(one, two);\n        ArrayList&lt;Integer&gt; expected = new ArrayList&lt;&gt;();\n        expected.add(1); expected.add(2); \n        expected.add(3);\n        assertEquals(expected, output);\n        \n    }\n\n}"
+    "section": "Test your method",
+    "text": "Test your method\nYou should name your class MergeArrays and your generic funciton to be named merge.\nHere’s the JUnit file to test your solution:\nimport static org.junit.jupiter.api.Assertions.*;\nimport org.junit.jupiter.api.Test;\nimport java.util.ArrayList;\n\n\n\nclass MergeArraysTest {\n\n    @Test\n    void testString() {\n        String[] one = {\"b\", \"d\", \"e\"};\n        String[] two = {\"a\", \"c\"};\n        ArrayList&lt;String&gt; output = MergeArrays.merge(one, two);\n        ArrayList&lt;String&gt; expected = new ArrayList&lt;&gt;();\n        expected.add(\"a\"); expected.add(\"b\"); \n        expected.add(\"c\"); expected.add(\"d\");\n        expected.add(\"e\");\n        assertEquals(expected, output);\n        \n    }\n    \n    @Test\n    void testSInteger() {\n        Integer[] one = {1};\n        Integer[] two = {2, 3};\n        ArrayList&lt;Integer&gt; output = MergeArrays.merge(one, two);\n        ArrayList&lt;Integer&gt; expected = new ArrayList&lt;&gt;();\n        expected.add(1); expected.add(2); \n        expected.add(3);\n        assertEquals(expected, output);\n        \n    }\n\n}"
   },
   {
     "objectID": "short-assignment-07.html#submission",
     "href": "short-assignment-07.html#submission",
     "title": "Short Assignment 07",
-    "section": "",
-    "text": "Package information:\npackage com.gradescope.mymerge;\nSubmit your MergeArrays.java file to Gradescope"
+    "section": "Submission",
+    "text": "Submission\nPackage information:\npackage com.gradescope.mymerge;\nSubmit your MergeArrays.java file to Gradescope"
   }
 ]
