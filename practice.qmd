@@ -8,6 +8,7 @@ title: "Practice Problems"
 * [Midterm 01 Study Guide](pdfs/study-guide-01.pdf)
 * [Week 06](pdfs/practice-04.pdf)
 * [Week 07](pdfs/practice-05.pdf)
+* [Week 08](pdfs/practice-06.pdf)
 
 # Other Resources
 
