@@ -16,7 +16,7 @@ data <- read_excel("assessment-deadlines.xlsx")
 
 Deadline: `r data %>% filter(Assignment == "PA6") %>%  select(Deadline)` -- Wednesday, 11:30pm
 
-# Garden GUI out 
+# Garden GUI out -- simple mode
 
 ## Learning Objectives
 
@@ -25,31 +25,21 @@ a GUI output representation of the Garden program.
 
 ## The Assignment
 
-In this assignment, you will build on your Garden implementation to visually represent your garden
-simulation. You will be graphically representing each plant in 
+In this assignment, you will build on your Garden implementation to visually represent your garden simulation. You will be representing each plant in 
 the output as well as handling a 'delay' command from the input file that 
 represents how long to wait between the execution of commands. 
-I
-n the video example (PublicTestCases/customPlant.in and 
-PublicTestCases/CustomPlantExample.mp4), 
-each part of a plant (i.e., each character from the garden run output) is represented 
-by uniquely colored tile on a canvas.
+In the video example (TestCases/customPlant.in and 
+TestCases/Example.mp4) each character from the garden run output is rendered 
+on the GUI.
 
-**The 'PRINT' command is also completely excluded from this program.** 
-This means that you should not expect any 'PRINT' commands from any input file.
-You can leave in the print handling code if you would like however.
-
-Please open and watch 'PublicTestCases/Example.mp4' to see an example GUI 
-output for the input file 'PublicTestCases/Garden.in'.  Also see
-'PublicTestCases/customPlant.in' and 'PublicTestCases/CustomPlantExample.mp4'.
+Please open and watch 'TestCases/Example.mp4' to see an example GUI 
+output for the input file 'TestCases/Garden.in'.  Also see
+'TestCases/customPlant.in' and 'PublicTestCases/PlantExample.mp4'.
 You will be creating a variant of Garden.in for your own unique plant or garden object.
-
-You should also be looking at the PA6-Garden writeup to refresh your memory on 
-how it works: https://github.com/UACS210Spring2018/PA-and-Section-Writeups/tree/master/PA6-Garden.
 
 ## Delay parameter
 
-The input file format for this assignment is exactly the same as that of PA6-Garden, 
+The input file format for this assignment is exactly the same as that of PA5 Garden, 
 except that you will now have to handle a delay parameter.
 The delay will be specified on the third line of the input file 
 right under the 'cols' parameter. An example input is shown below:
@@ -71,72 +61,18 @@ this delay was set to **.5**, therefore, each command was executed after waiting
 
 ## Steps for completing this assignment
 
- 1. See a tutorial on how to install the JavaFX plugin in Eclipse at
-    (https://docs.google.com/document/d/1FUROjRbvIi_WKNYJ-00uprIo2YPHDNd72SrqgwaqKis/edit?usp=sharing).
-    The tutorial is also posted on the CS 210 resources webpage 
-    (https://piazza.com/arizona/spring2018/csc210/resources).
-
- 2. Accept the github assignment for PA8, (https://classroom.github.com/a/JKfUfTBS).
-    Import your PA8 github repository into Eclipse as usual.
- 
- 3. Run the given starter code and see what it does.
- 
- 4. Copy your PA6 code into the Eclipse project.
- 
- 5. Implement the TODO items in the provided PA8Main.java.
- 
- 6. Create your own copy of Garden.in called myGarden.in that includes
+ 1. We will be using JavaFX for our GUI in this course. I recommend you use JavaFX on VS Code, create a non-modular project with Maven: [Getting Started with JavaFX](https://openjfx.io/openjfx-docs/
+ 1. Create your own copy of Garden.in called myGarden.in that includes
     planting your unique garden item.
-    
- 7. Make a video of running myGarden.in through your program.
-
-
-## Resources
-
-The provided code uses some new concepts.  We will be covering them in class.
-Additionally, here are some references.
-
-  * drawing to a canvas, https://docs.oracle.com/javafx/2/canvas/jfxpub-canvas.htm
-  * lambda functions,http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html
-  * colors to pick from, https://docs.oracle.com/javase/8/javafx/api/javafx/scene/paint/Color.html
-
-
-## General requirements
-
-This assignment is different from other assignments you've had so far 
-in that you are given a lot more freedom to design your output the way 
-you want. You can try to mimic what was done in the video and get the 
-credit for it, but however you choose to output your garden, the following 
-general requirements must be met:
-
-* Each plant must be **one-of-a-kind**, meaning they must be distinguishable 
-  from any other plant and the background. In the example video, this is 
-  done by using a different color for each plant against a brown background. 
-  You do not have to do it this way, for example, you can choose to use an 
-  image for each plant instead of a colored tile.
-
-* Each command must be **visually noticeable**. This means that when 
-  'GROW 1' is called for example, it should be visually obvious that every 
-  plant just grew by 1. In the example video, grow commands cause more identical 
-  tiles to be drawn in some fashion (depending on the plant type) around every plant.
-
-* There must be a command log which displays commands as they are being executed. 
-  In the example video, this is done in a TextArea at the bottom of the garden.
-
-* You must still handle errors. Errors that don't cause the program to stop 
-  (such as 'Can't grow here') should be **distinguishable** in the command log. 
-  In the video example, the error is fully capitalized and spaced out from surrounding text.
-  For errors that do cause the program to stop, such as 'Invalid dimension input' or 
-  'File not found' should still print to stdout and exit the program as usual.
-
+ 1.  Make a video of running myGarden.in through your program.
 
 ## Grading Criteria
 
-Half of this assignment grade will correctness.  For this assignment, this is the GUI output.
-You should also expect that we might run your program with additional input files 
+80% of this assignment grade will correctness.  For this assignment, this is the GUI output.
+You should also expect that we will run your program with additional input files 
 besides the ones provided.
 
-The other half of your grade will be your decomposition and code clarity.
+The other 20% of your grade will be your decomposition and code clarity.
 
 Decomposition
 
@@ -186,7 +122,7 @@ to Gradescope:
 To create the video, you can use a program to record your screen as you run 
 your program, or you can simply record your screen with your smartphone or tablet. 
 Do note however that the video you submit must be of good enough quality for 
-the SL's to clearly see your garden and command logs.
+the TAs to clearly see your garden and command logs.
 
 Write your own code. We will be using a tool that finds similar code.
 

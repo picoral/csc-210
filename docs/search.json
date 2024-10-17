@@ -949,7 +949,7 @@
     "href": "programming-assignments.html",
     "title": "Programming Assignments",
     "section": "",
-    "text": "Fill out this survey with your GitHub username so that you can get credit for your project submissions.\n\nPA 1\n\nDeadline: September 11, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 2\n\nDeadline: September 18, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 3\n\nDeadline: September 27, 2024 – Friday, 11:30pm\nInstructions\n\n\n\nPA 4\n\nDeadline: October 04, 2024 – Friday, 11:30pm\nInstructions\n\n\n\nPA 5\n\nUML class diagram: October 11, 2024 – Friday, 11:30pm\nFull implementation: October 16, 2024 – Wednesday, 11:30pm\nInstructions"
+    "text": "Fill out this survey with your GitHub username so that you can get credit for your project submissions.\n\nPA 1\n\nDeadline: September 11, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 2\n\nDeadline: September 18, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 3\n\nDeadline: September 27, 2024 – Friday, 11:30pm\nInstructions\n\n\n\nPA 4\n\nDeadline: October 04, 2024 – Friday, 11:30pm\nInstructions\n\n\n\nPA 5\n\nUML class diagram: October 11, 2024 – Friday, 11:30pm\nFull implementation: October 16, 2024 – Wednesday, 11:30pm\nInstructions\n\n\n\nPA 6\n\nDeadline: October 30, 2024 – Wednesday, 11:30pm\nInstructions"
   },
   {
     "objectID": "academic-integrity.html",
@@ -1922,7 +1922,7 @@
     "href": "programming-assignment-06.html",
     "title": "Programming Assignment 06",
     "section": "",
-    "text": "Deadline: October 23, 2024 – Wednesday, 11:30pm"
+    "text": "Deadline: October 30, 2024 – Wednesday, 11:30pm"
   },
   {
     "objectID": "programming-assignment-06.html#learning-objectives",
@@ -1943,7 +1943,7 @@
     "href": "programming-assignment-06.html#the-assignment",
     "title": "Programming Assignment 06",
     "section": "The Assignment",
-    "text": "The Assignment\nIn this assignment, you will build on your Garden implementation to visually represent your garden simulation. You will be graphically representing each plant in the output as well as handling a ‘delay’ command from the input file that represents how long to wait between the execution of commands. I n the video example (PublicTestCases/customPlant.in and PublicTestCases/CustomPlantExample.mp4), each part of a plant (i.e., each character from the garden run output) is represented by uniquely colored tile on a canvas.\nThe ‘PRINT’ command is also completely excluded from this program. This means that you should not expect any ‘PRINT’ commands from any input file. You can leave in the print handling code if you would like however.\nPlease open and watch ‘PublicTestCases/Example.mp4’ to see an example GUI output for the input file ‘PublicTestCases/Garden.in’. Also see ‘PublicTestCases/customPlant.in’ and ‘PublicTestCases/CustomPlantExample.mp4’. You will be creating a variant of Garden.in for your own unique plant or garden object.\nYou should also be looking at the PA6-Garden writeup to refresh your memory on how it works: https://github.com/UACS210Spring2018/PA-and-Section-Writeups/tree/master/PA6-Garden."
+    "text": "The Assignment\nIn this assignment, you will build on your Garden implementation to visually represent your garden simulation. You will be representing each plant in the output as well as handling a ‘delay’ command from the input file that represents how long to wait between the execution of commands. In the video example (TestCases/customPlant.in and TestCases/Example.mp4) each character from the garden run output is rendered on the GUI.\nPlease open and watch ‘TestCases/Example.mp4’ to see an example GUI output for the input file ‘TestCases/Garden.in’. Also see ‘TestCases/customPlant.in’ and ‘PublicTestCases/PlantExample.mp4’. You will be creating a variant of Garden.in for your own unique plant or garden object."
   },
   {
     "objectID": "programming-assignment-06.html#design-suggestions",
@@ -1957,14 +1957,14 @@
     "href": "programming-assignment-06.html#grading-criteria",
     "title": "Programming Assignment 06",
     "section": "Grading Criteria",
-    "text": "Grading Criteria\nHalf of this assignment grade will correctness. For this assignment, this is the GUI output. You should also expect that we might run your program with additional input files besides the ones provided.\nThe other half of your grade will be your decomposition and code clarity.\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.\nThis program should use fewer than 10 .java files. Each of these files should be (&lt;300 lines).\nEach method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\n\nCode Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format. One would also need to know the command line arguments that should be passed to the program.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement."
+    "text": "Grading Criteria\n80% of this assignment grade will correctness. For this assignment, this is the GUI output. You should also expect that we will run your program with additional input files besides the ones provided.\nThe other 20% of your grade will be your decomposition and code clarity.\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.\nThis program should use fewer than 10 .java files. Each of these files should be (&lt;300 lines).\nEach method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\n\nCode Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format. One would also need to know the command line arguments that should be passed to the program.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement."
   },
   {
     "objectID": "programming-assignment-06.html#submission",
     "href": "programming-assignment-06.html#submission",
     "title": "Programming Assignment 06",
     "section": "Submission",
-    "text": "Submission\nFor this assignment, you are REQUIRED to submit all of the following files to Gradescope:\n\nAll the Java source files needed to run your program.\nmyGarden.in\nmyGarden.mp4, or other video format that can be run on multiple platforms. The video should be between 10 and 15 seconds long.\n\nTo create the video, you can use a program to record your screen as you run your program, or you can simply record your screen with your smartphone or tablet. Do note however that the video you submit must be of good enough quality for the SL’s to clearly see your garden and command logs.\nWrite your own code. We will be using a tool that finds similar code.\nIt is recommended that when talking with others about the assignment, do not write anything down."
+    "text": "Submission\nFor this assignment, you are REQUIRED to submit all of the following files to Gradescope:\n\nAll the Java source files needed to run your program.\nmyGarden.in\nmyGarden.mp4, or other video format that can be run on multiple platforms. The video should be between 10 and 15 seconds long.\n\nTo create the video, you can use a program to record your screen as you run your program, or you can simply record your screen with your smartphone or tablet. Do note however that the video you submit must be of good enough quality for the TAs to clearly see your garden and command logs.\nWrite your own code. We will be using a tool that finds similar code.\nIt is recommended that when talking with others about the assignment, do not write anything down."
   },
   {
     "objectID": "short-assignment-03.html#setup",
@@ -2524,14 +2524,14 @@
     "href": "programming-assignment-06.html#delay-parameter",
     "title": "Programming Assignment 06",
     "section": "Delay parameter",
-    "text": "Delay parameter\nThe input file format for this assignment is exactly the same as that of PA6-Garden, except that you will now have to handle a delay parameter. The delay will be specified on the third line of the input file right under the ‘cols’ parameter. An example input is shown below:\nrows: 1\ncols: 1\ndelay: 3.0\n\nPLANT (0,0) sunflower\nPLANT (2,2) tulip\nPLANT (5,5) iris\nGROW 1\nThe number after ‘delay:’ is a double that represents the time to wait before each command is executed. In the video example (CustomPlantExample.mp4), this delay was set to .5, therefore, each command was executed after waiting a half second."
+    "text": "Delay parameter\nThe input file format for this assignment is exactly the same as that of PA5 Garden, except that you will now have to handle a delay parameter. The delay will be specified on the third line of the input file right under the ‘cols’ parameter. An example input is shown below:\nrows: 1\ncols: 1\ndelay: 3.0\n\nPLANT (0,0) sunflower\nPLANT (2,2) tulip\nPLANT (5,5) iris\nGROW 1\nThe number after ‘delay:’ is a double that represents the time to wait before each command is executed. In the video example (CustomPlantExample.mp4), this delay was set to .5, therefore, each command was executed after waiting a half second."
   },
   {
     "objectID": "programming-assignment-06.html#steps-for-completing-this-assignment",
     "href": "programming-assignment-06.html#steps-for-completing-this-assignment",
     "title": "Programming Assignment 06",
     "section": "Steps for completing this assignment",
-    "text": "Steps for completing this assignment\n\nSee a tutorial on how to install the JavaFX plugin in Eclipse at (https://docs.google.com/document/d/1FUROjRbvIi_WKNYJ-00uprIo2YPHDNd72SrqgwaqKis/edit?usp=sharing). The tutorial is also posted on the CS 210 resources webpage (https://piazza.com/arizona/spring2018/csc210/resources).\nAccept the github assignment for PA8, (https://classroom.github.com/a/JKfUfTBS). Import your PA8 github repository into Eclipse as usual.\nRun the given starter code and see what it does.\nCopy your PA6 code into the Eclipse project.\nImplement the TODO items in the provided PA8Main.java.\nCreate your own copy of Garden.in called myGarden.in that includes planting your unique garden item.\nMake a video of running myGarden.in through your program."
+    "text": "Steps for completing this assignment\n\nWe will be using JavaFX for our GUI in this course. I recommend you use JavaFX on VS Code, create a non-modular project with Maven: [Getting Started with JavaFX](https://openjfx.io/openjfx-docs/\nCreate your own copy of Garden.in called myGarden.in that includes planting your unique garden item.\nMake a video of running myGarden.in through your program."
   },
   {
     "objectID": "programming-assignment-06.html#resources",
@@ -3344,5 +3344,12 @@
     "title": "Short Assignment 07",
     "section": "Submission",
     "text": "Submission\nPackage information:\npackage com.gradescope.mymerge;\nSubmit your MergeArrays.java file to Gradescope"
+  },
+  {
+    "objectID": "modules.html#assignments-6",
+    "href": "modules.html#assignments-6",
+    "title": "Modules",
+    "section": "Assignments",
+    "text": "Assignments\n\nProgramming Assignment 06: October 30, 2024 – Wednesday, 11:30pm"
   }
 ]

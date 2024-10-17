@@ -128,14 +128,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#garden-gui-out" id="toc-garden-gui-out" class="nav-link active" data-scroll-target="#garden-gui-out">Garden GUI out</a>
+  <li><a href="#garden-gui-out-simple-mode" id="toc-garden-gui-out-simple-mode" class="nav-link active" data-scroll-target="#garden-gui-out-simple-mode">Garden GUI out – simple mode</a>
   <ul class="collapse">
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#the-assignment" id="toc-the-assignment" class="nav-link" data-scroll-target="#the-assignment">The Assignment</a></li>
   <li><a href="#delay-parameter" id="toc-delay-parameter" class="nav-link" data-scroll-target="#delay-parameter">Delay parameter</a></li>
   <li><a href="#steps-for-completing-this-assignment" id="toc-steps-for-completing-this-assignment" class="nav-link" data-scroll-target="#steps-for-completing-this-assignment">Steps for completing this assignment</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
-  <li><a href="#general-requirements" id="toc-general-requirements" class="nav-link" data-scroll-target="#general-requirements">General requirements</a></li>
   <li><a href="#grading-criteria" id="toc-grading-criteria" class="nav-link" data-scroll-target="#grading-criteria">Grading Criteria</a></li>
   <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   </ul></li>
@@ -164,23 +162,21 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Deadline: October 23, 2024 – Wednesday, 11:30pm</p>
-<section id="garden-gui-out" class="level1">
-<h1>Garden GUI out</h1>
+<p>Deadline: October 30, 2024 – Wednesday, 11:30pm</p>
+<section id="garden-gui-out-simple-mode" class="level1">
+<h1>Garden GUI out – simple mode</h1>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
 <p>The goal of this assignment is to use basic JavaFX to create a GUI output representation of the Garden program.</p>
 </section>
 <section id="the-assignment" class="level2">
 <h2 class="anchored" data-anchor-id="the-assignment">The Assignment</h2>
-<p>In this assignment, you will build on your Garden implementation to visually represent your garden simulation. You will be graphically representing each plant in the output as well as handling a ‘delay’ command from the input file that represents how long to wait between the execution of commands. I n the video example (PublicTestCases/customPlant.in and PublicTestCases/CustomPlantExample.mp4), each part of a plant (i.e., each character from the garden run output) is represented by uniquely colored tile on a canvas.</p>
-<p><strong>The ‘PRINT’ command is also completely excluded from this program.</strong> This means that you should not expect any ‘PRINT’ commands from any input file. You can leave in the print handling code if you would like however.</p>
-<p>Please open and watch ‘PublicTestCases/Example.mp4’ to see an example GUI output for the input file ‘PublicTestCases/Garden.in’. Also see ‘PublicTestCases/customPlant.in’ and ‘PublicTestCases/CustomPlantExample.mp4’. You will be creating a variant of Garden.in for your own unique plant or garden object.</p>
-<p>You should also be looking at the PA6-Garden writeup to refresh your memory on how it works: https://github.com/UACS210Spring2018/PA-and-Section-Writeups/tree/master/PA6-Garden.</p>
+<p>In this assignment, you will build on your Garden implementation to visually represent your garden simulation. You will be representing each plant in the output as well as handling a ‘delay’ command from the input file that represents how long to wait between the execution of commands. In the video example (TestCases/customPlant.in and TestCases/Example.mp4) each character from the garden run output is rendered on the GUI.</p>
+<p>Please open and watch ‘TestCases/Example.mp4’ to see an example GUI output for the input file ‘TestCases/Garden.in’. Also see ‘TestCases/customPlant.in’ and ‘PublicTestCases/PlantExample.mp4’. You will be creating a variant of Garden.in for your own unique plant or garden object.</p>
 </section>
 <section id="delay-parameter" class="level2">
 <h2 class="anchored" data-anchor-id="delay-parameter">Delay parameter</h2>
-<p>The input file format for this assignment is exactly the same as that of PA6-Garden, except that you will now have to handle a delay parameter. The delay will be specified on the third line of the input file right under the ‘cols’ parameter. An example input is shown below:</p>
+<p>The input file format for this assignment is exactly the same as that of PA5 Garden, except that you will now have to handle a delay parameter. The delay will be specified on the third line of the input file right under the ‘cols’ parameter. An example input is shown below:</p>
 <pre><code>rows: 1
 cols: 1
 delay: 3.0
@@ -194,38 +190,15 @@ GROW 1</code></pre>
 <section id="steps-for-completing-this-assignment" class="level2">
 <h2 class="anchored" data-anchor-id="steps-for-completing-this-assignment">Steps for completing this assignment</h2>
 <ol type="1">
-<li><p>See a tutorial on how to install the JavaFX plugin in Eclipse at (https://docs.google.com/document/d/1FUROjRbvIi_WKNYJ-00uprIo2YPHDNd72SrqgwaqKis/edit?usp=sharing). The tutorial is also posted on the CS 210 resources webpage (https://piazza.com/arizona/spring2018/csc210/resources).</p></li>
-<li><p>Accept the github assignment for PA8, (https://classroom.github.com/a/JKfUfTBS). Import your PA8 github repository into Eclipse as usual.</p></li>
-<li><p>Run the given starter code and see what it does.</p></li>
-<li><p>Copy your PA6 code into the Eclipse project.</p></li>
-<li><p>Implement the TODO items in the provided PA8Main.java.</p></li>
-<li><p>Create your own copy of Garden.in called myGarden.in that includes planting your unique garden item.</p></li>
-<li><p>Make a video of running myGarden.in through your program.</p></li>
+<li>We will be using JavaFX for our GUI in this course. I recommend you use JavaFX on VS Code, create a non-modular project with Maven: [Getting Started with JavaFX](https://openjfx.io/openjfx-docs/</li>
+<li>Create your own copy of Garden.in called myGarden.in that includes planting your unique garden item.</li>
+<li>Make a video of running myGarden.in through your program.</li>
 </ol>
-</section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<p>The provided code uses some new concepts. We will be covering them in class. Additionally, here are some references.</p>
-<ul>
-<li>drawing to a canvas, https://docs.oracle.com/javafx/2/canvas/jfxpub-canvas.htm</li>
-<li>lambda functions,http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html</li>
-<li>colors to pick from, https://docs.oracle.com/javase/8/javafx/api/javafx/scene/paint/Color.html</li>
-</ul>
-</section>
-<section id="general-requirements" class="level2">
-<h2 class="anchored" data-anchor-id="general-requirements">General requirements</h2>
-<p>This assignment is different from other assignments you’ve had so far in that you are given a lot more freedom to design your output the way you want. You can try to mimic what was done in the video and get the credit for it, but however you choose to output your garden, the following general requirements must be met:</p>
-<ul>
-<li><p>Each plant must be <strong>one-of-a-kind</strong>, meaning they must be distinguishable from any other plant and the background. In the example video, this is done by using a different color for each plant against a brown background. You do not have to do it this way, for example, you can choose to use an image for each plant instead of a colored tile.</p></li>
-<li><p>Each command must be <strong>visually noticeable</strong>. This means that when ‘GROW 1’ is called for example, it should be visually obvious that every plant just grew by 1. In the example video, grow commands cause more identical tiles to be drawn in some fashion (depending on the plant type) around every plant.</p></li>
-<li><p>There must be a command log which displays commands as they are being executed. In the example video, this is done in a TextArea at the bottom of the garden.</p></li>
-<li><p>You must still handle errors. Errors that don’t cause the program to stop (such as ‘Can’t grow here’) should be <strong>distinguishable</strong> in the command log. In the video example, the error is fully capitalized and spaced out from surrounding text. For errors that do cause the program to stop, such as ‘Invalid dimension input’ or ‘File not found’ should still print to stdout and exit the program as usual.</p></li>
-</ul>
 </section>
 <section id="grading-criteria" class="level2">
 <h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
-<p>Half of this assignment grade will correctness. For this assignment, this is the GUI output. You should also expect that we might run your program with additional input files besides the ones provided.</p>
-<p>The other half of your grade will be your decomposition and code clarity.</p>
+<p>80% of this assignment grade will correctness. For this assignment, this is the GUI output. You should also expect that we will run your program with additional input files besides the ones provided.</p>
+<p>The other 20% of your grade will be your decomposition and code clarity.</p>
 <p>Decomposition</p>
 <ul>
 <li><p>Points will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.</p></li>
@@ -249,7 +222,7 @@ GROW 1</code></pre>
 <li>myGarden.in</li>
 <li>myGarden.mp4, or other video format that can be run on multiple platforms. The video should be between 10 and 15 seconds long.</li>
 </ul>
-<p>To create the video, you can use a program to record your screen as you run your program, or you can simply record your screen with your smartphone or tablet. Do note however that the video you submit must be of good enough quality for the SL’s to clearly see your garden and command logs.</p>
+<p>To create the video, you can use a program to record your screen as you run your program, or you can simply record your screen with your smartphone or tablet. Do note however that the video you submit must be of good enough quality for the TAs to clearly see your garden and command logs.</p>
 <p>Write your own code. We will be using a tool that finds similar code.</p>
 <p>It is recommended that when talking with others about the assignment, do not write anything down.</p>
 
