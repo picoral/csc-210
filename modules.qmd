@@ -193,3 +193,22 @@ Topic: `r schedule %>% filter(week == 8) %>% pull(topic)`
 ## Assignments
 
 * [Short Assignment 07](short-assignment-07.html) -- Deadline: `r data %>% filter(Assignment == "SA7") %>%  select(Deadline)` -- Monday, 11:30pm
+
+# Week 09
+
+`r schedule %>% filter(week == 9) %>% pull(dates)`
+
+Topic: `r schedule %>% filter(week == 9) %>% pull(topic)`
+
+# Week 10
+
+`r schedule %>% filter(week == 10) %>% pull(dates)`
+
+Topic: `r schedule %>% filter(week == 10) %>% pull(topic)`
+
+## Readings
+
+We will be using JavaFX for our GUI in this course.
+I recommend you use JavaFX on VS Code, create a non-modular project with Maven.
+
+* [Getting Started with JavaFX](https://openjfx.io/openjfx-docs/)
