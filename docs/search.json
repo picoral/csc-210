@@ -2531,7 +2531,7 @@
     "href": "programming-assignment-06.html#steps-for-completing-this-assignment",
     "title": "Programming Assignment 06",
     "section": "Steps for completing this assignment",
-    "text": "Steps for completing this assignment\n\nWe will be using JavaFX for our GUI in this course. I recommend you use JavaFX on VS Code, create a non-modular project with Maven: [Getting Started with JavaFX](https://openjfx.io/openjfx-docs/\nCreate your own copy of Garden.in called myGarden.in that includes planting your unique garden item.\nMake a video of running myGarden.in through your program."
+    "text": "Steps for completing this assignment\n\nWe will be using JavaFX for our GUI in this course. I recommend you use JavaFX on VS Code, create a non-modular project with Maven: Getting Started with JavaFX\nCreate your own copy of Garden.in called myGarden.in that includes planting your unique garden item.\nMake a video of running myGarden.in through your program."
   },
   {
     "objectID": "programming-assignment-06.html#resources",

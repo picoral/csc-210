@@ -61,7 +61,7 @@ this delay was set to **.5**, therefore, each command was executed after waiting
 
 ## Steps for completing this assignment
 
- 1. We will be using JavaFX for our GUI in this course. I recommend you use JavaFX on VS Code, create a non-modular project with Maven: [Getting Started with JavaFX](https://openjfx.io/openjfx-docs/
+ 1. We will be using JavaFX for our GUI in this course. I recommend you use JavaFX on VS Code, create a non-modular project with Maven: [Getting Started with JavaFX](https://openjfx.io/openjfx-docs/)
  1. Create your own copy of Garden.in called myGarden.in that includes
     planting your unique garden item.
  1.  Make a video of running myGarden.in through your program.
