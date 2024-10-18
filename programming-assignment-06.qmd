@@ -123,7 +123,7 @@ When recording the video, you are required to have your name on the title of the
 GUI window, and you are required to show your source code (`App.java`) with the
 header showing the current semester and your name. Here's an example:
 
-{{< video images/garden-example.mov >}}
+{{< video images/garden-example.mov width="400" >}}
   
 To create the video, you can use a program to record your screen as you run 
 your program, or you can simply record your screen with your smartphone or tablet. 
