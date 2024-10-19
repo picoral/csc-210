@@ -188,7 +188,6 @@ Topic: `r schedule %>% filter(week == 8) %>% pull(topic)`
 
 * [Object](slides-06-01.html)
 * [Generics](slides-06-02.html)
-* [Enum](slides-06-03.html)
 
 ## Assignments
 
@@ -199,6 +198,10 @@ Topic: `r schedule %>% filter(week == 8) %>% pull(topic)`
 `r schedule %>% filter(week == 9) %>% pull(dates)`
 
 Topic: `r schedule %>% filter(week == 9) %>% pull(topic)`
+
+## Slides
+
+* [Enum](slides-07-01.html)
 
 
 # Week 10
