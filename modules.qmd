@@ -201,7 +201,9 @@ Topic: `r schedule %>% filter(week == 9) %>% pull(topic)`
 
 ## Slides
 
-* [Enum](slides-07-01.html)  [video one](https://youtu.be/KefFfaHZVxY) [video two](https://youtu.be/aat1oqlFDjY)
+* [Enum](slides-07-01.html):
+   * [video one](https://youtu.be/KefFfaHZVxY) 
+   * [video two](https://youtu.be/aat1oqlFDjY)
 
 ## Assignments
 

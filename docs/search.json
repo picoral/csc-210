@@ -3357,7 +3357,7 @@
     "href": "modules.html#slides-6",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nEnum video one video two"
+    "text": "Slides\n\nEnum:\n\nvideo one\nvideo two"
   },
   {
     "objectID": "slides-07-01.html",
