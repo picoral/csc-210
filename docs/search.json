@@ -3350,14 +3350,14 @@
     "href": "modules.html#assignments-6",
     "title": "Modules",
     "section": "Assignments",
-    "text": "Assignments\n\nProgramming Assignment 06: October 30, 2024 – Wednesday, 11:30pm"
+    "text": "Assignments\n\nShort Assignment 08 – Deadline: October 28, 2024 – Monday, 11:30pm\n\nvideo one\nvideo two\nJUnit test\nPackage information for Short Assignment 08: package com.gradescope.medialibrary;\nSubmit all .java files (DO NOT INCLUDE JUNIT TEST FILE)"
   },
   {
     "objectID": "modules.html#slides-6",
     "href": "modules.html#slides-6",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nEnum"
+    "text": "Slides\n\nEnum video one video two"
   },
   {
     "objectID": "slides-07-01.html",
@@ -3421,5 +3421,12 @@
     "title": "enum",
     "section": "Application behavior",
     "text": "Application behavior\npublic class MyMediaLibrary {\n\n    public static void main(String[] args) {\n        MediaLibrary myMediaLibrary = new MediaLibrary();\n        myMediaLibrary.addMedia(new Movie(\"The Alien\", Media.Genre.SCIFI));\n        myMediaLibrary.addMedia(new TVShow(\"The X-Files\", Media.Genre.SCIFI));\n        myMediaLibrary.addMedia(new TVShow(\"Seinfield\", Media.Genre.COMEDY));\n        System.out.println(myMediaLibrary.toString());  \n    }\n\n}\nMovie title: The Alien\nShow title: The X-Files\nShow title: Seinfield"
+  },
+  {
+    "objectID": "modules.html#assignments-7",
+    "href": "modules.html#assignments-7",
+    "title": "Modules",
+    "section": "Assignments",
+    "text": "Assignments\n\nProgramming Assignment 06: October 30, 2024 – Wednesday, 11:30pm"
   }
 ]

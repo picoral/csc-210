@@ -201,7 +201,17 @@ Topic: `r schedule %>% filter(week == 9) %>% pull(topic)`
 
 ## Slides
 
-* [Enum](slides-07-01.html)
+* [Enum](slides-07-01.html)  [video one](https://youtu.be/KefFfaHZVxY) [video two](https://youtu.be/aat1oqlFDjY)
+
+## Assignments
+
+* Short Assignment 08 -- Deadline: `r data %>% filter(Assignment == "SA8") %>%  select(Deadline)` -- Monday, 11:30pm 
+  * [video one](https://youtu.be/KefFfaHZVxY)
+  * [video two](https://youtu.be/aat1oqlFDjY)
+  * [JUnit test](files/MediaLibraryTest.java) 
+  * Package information for Short Assignment 08: `package com.gradescope.medialibrary;`
+  * Submit all `.java` files (DO NOT INCLUDE JUNIT TEST FILE)
+
 
 
 # Week 10
