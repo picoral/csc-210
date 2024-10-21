@@ -1943,7 +1943,7 @@
     "href": "programming-assignment-06.html#the-assignment",
     "title": "Programming Assignment 06",
     "section": "The Assignment",
-    "text": "The Assignment\nIn this assignment, you will build on your Garden implementation to visually represent your garden simulation. You will be representing each plant in the output as well as handling a ‘delay’ command from the input file that represents how long to wait between the execution of commands. In the video example (TestCases/customPlant.in and TestCases/Example.mp4) each character from the garden run output is rendered on the GUI.\nPlease open and watch ‘TestCases/Example.mp4’ to see an example GUI output for the input file ‘TestCases/Garden.in’. Also see ‘TestCases/customPlant.in’ and ‘PublicTestCases/PlantExample.mp4’. You will be creating a variant of Garden.in for your own unique plant or garden object."
+    "text": "The Assignment\nIn this assignment, you will build on your Garden implementation to visually represent your garden simulation. You will be representing each plant in the output as well as handling a ‘delay’ command from the input file that represents how long to wait between the execution of commands. Each character from the garden run output is rendered on the GUI as a shape.\nYou will be creating a variant of Garden.in for your own unique plant or garden object."
   },
   {
     "objectID": "programming-assignment-06.html#design-suggestions",
@@ -2524,7 +2524,7 @@
     "href": "programming-assignment-06.html#delay-parameter",
     "title": "Programming Assignment 06",
     "section": "Delay parameter",
-    "text": "Delay parameter\nThe input file format for this assignment is exactly the same as that of PA5 Garden, except that you will now have to handle a delay parameter. The delay will be specified on the third line of the input file right under the ‘cols’ parameter. An example input is shown below:\nrows: 1\ncols: 1\ndelay: 3.0\n\nPLANT (0,0) sunflower\nPLANT (2,2) tulip\nPLANT (5,5) iris\nGROW 1\nThe number after ‘delay:’ is a double that represents the time to wait before each command is executed. In the video example (CustomPlantExample.mp4), this delay was set to .5, therefore, each command was executed after waiting a half second."
+    "text": "Delay parameter\nThe input file format for this assignment is exactly the same as that of PA5 Garden, except that you will now have to handle a delay parameter. The delay will be specified on the third line of the input file right under the ‘cols’ parameter. An example input is shown below:\nrows: 1\ncols: 1\ndelay: 3.0\n\nPLANT (0,0) sunflower\nPLANT (2,2) tulip\nPLANT (5,5) iris\nGROW 1\nThe number after ‘delay:’ is a double that represents the time to wait before each command is executed. In the example provided, this delay was set to .5, therefore, each command was executed after waiting a half second."
   },
   {
     "objectID": "programming-assignment-06.html#steps-for-completing-this-assignment",

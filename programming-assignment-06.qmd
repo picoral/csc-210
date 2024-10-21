@@ -28,14 +28,9 @@ a GUI output representation of the Garden program.
 In this assignment, you will build on your Garden implementation to visually represent your garden simulation. You will be representing each plant in 
 the output as well as handling a 'delay' command from the input file that 
 represents how long to wait between the execution of commands. 
-In the video example (TestCases/customPlant.in and 
-TestCases/Example.mp4) each character from the garden run output is rendered 
-on the GUI.
+Each character from the garden run output is rendered on the GUI as a shape.
 
-Please open and watch 'TestCases/Example.mp4' to see an example GUI 
-output for the input file 'TestCases/Garden.in'.  Also see
-'TestCases/customPlant.in' and 'PublicTestCases/PlantExample.mp4'.
-You will be creating a variant of Garden.in for your own unique plant or garden object.
+You will be creating a variant of [Garden.in](https://github.com/picoral/CSC210PA6) for your own unique plant or garden object.
 
 ## Delay parameter
 
@@ -56,14 +51,13 @@ GROW 1
 ```
 
 The number after 'delay:' is a **double** that represents the time to wait 
-before each command is executed. In the video example (CustomPlantExample.mp4),
+before each command is executed. In the [example provided](https://github.com/picoral/CSC210PA6),
 this delay was set to **.5**, therefore, each command was executed after waiting a half second.
 
 ## Steps for completing this assignment
 
  1. We will be using JavaFX for our GUI in this course. I recommend you use JavaFX on VS Code, create a non-modular project with Maven: [Getting Started with JavaFX](https://openjfx.io/openjfx-docs/)
- 1. Create your own copy of Garden.in called myGarden.in that includes
-    planting your unique garden item.
+ 1. Create your own copy of [Garden.in](https://github.com/picoral/CSC210PA6) called myGarden.in that includes planting your unique garden item.
  1.  Make a video of running myGarden.in through your program.
 
 ## Grading Criteria
