@@ -62,8 +62,9 @@ this delay was set to **.5**, therefore, each command was executed after waiting
 
 ## Grading Criteria
 
-80% of this assignment grade will correctness.  For this assignment, this is the GUI output.
-You should also expect that we will run your program with additional input files 
+80% of this assignment grade will correctness.  For this assignment, this is the GUI output. The autograder will not be running automated tests for this assignment.
+
+Your code should run in any computer (TAs will run your code). You should also expect that we will run your program with additional input files 
 besides the ones provided.
 
 The other 20% of your grade will be your decomposition and code clarity.
