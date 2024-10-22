@@ -3428,5 +3428,47 @@
     "title": "Modules",
     "section": "Assignments",
     "text": "Assignments\n\nProgramming Assignment 06: October 30, 2024 – Wednesday, 11:30pm"
+  },
+  {
+    "objectID": "slides-07-02.html#food-ordering-app",
+    "href": "slides-07-02.html#food-ordering-app",
+    "title": "Enum constructors and methods",
+    "section": "Food ordering app",
+    "text": "Food ordering app\nLet’s review what we’ve covered so far, by building a food ordering app.\nBefore we start, decompose this specification:\nYou are developing a food ordering app. You need to track which food has been ordered, and the status of the order. The status of each order can be: PLACED, READY, ENROUTE, DELIVERED\nDraw a UML class diagram with the classes you need. You can have an abstract food class, with different types of food extending the food super class."
+  },
+  {
+    "objectID": "slides-07-02.html#food-ordering-app-1",
+    "href": "slides-07-02.html#food-ordering-app-1",
+    "title": "Enum constructors and methods",
+    "section": "Food ordering app",
+    "text": "Food ordering app\nUse of enum:\npublic enum OrderStatus { \n        PLACED,\n        READY,\n        ENROUTE,\n        DELIVERED \n    }"
+  },
+  {
+    "objectID": "slides-07-02.html#constructors-and-methods-in-enum",
+    "href": "slides-07-02.html#constructors-and-methods-in-enum",
+    "title": "Enum constructors and methods",
+    "section": "Constructors and methods in enum",
+    "text": "Constructors and methods in enum\nThe type enum is actually a class.\nFor each option we can have arguments. Create a constructor (private by default) and a getter.\npublic enum OrderStatus { \n        PLACED (1),\n        READY (2),\n        ENROUTE (3),\n        DELIVERED (4);\n        \n        private int sequence;\n        \n        OrderStatus(int sequence) {\n            this.sequence = sequence;\n        }\n        \n        public int getSequence() {\n            return sequence;\n        }\n    }"
+  },
+  {
+    "objectID": "slides-07-02.html#using-enum-methods",
+    "href": "slides-07-02.html#using-enum-methods",
+    "title": "Enum constructors and methods",
+    "section": "Using enum methods",
+    "text": "Using enum methods\nI wrote a setStatus(OrderStatus) method in my FoodOrder class to make sure the status setting makes sense\npublic void setStatus(OrderStatus status) {\n        if (this.status.getSequence() &lt; status.getSequence()) \n            this.status = status;\n    }\nThis method could return a boolean to flag if the change in status was successful"
+  },
+  {
+    "objectID": "slides-07-02.html#more-methods-in-enum",
+    "href": "slides-07-02.html#more-methods-in-enum",
+    "title": "Enum constructors and methods",
+    "section": "More methods in enum",
+    "text": "More methods in enum\nWe can set default methods like isReady() that returns false unless we overwrite the method in one of the options\npublic enum OrderStatus { \n        PLACED (1),\n        READY (2) {\n            public boolean isReady() {\n                return true;\n            }\n        },\n        ENROUTE (3),\n        DELIVERED (4);\n        \n        int sequence;\n        \n        OrderStatus(int sequence) {\n            this.sequence = sequence;\n        }\n        \n        public int getSequence() {\n            return sequence;\n        }\n        \n        public boolean isReady() {\n            return false;\n        }\n\n        }\n    } // enum OrderStatus"
+  },
+  {
+    "objectID": "slides-07-02.html#complete-your-app",
+    "href": "slides-07-02.html#complete-your-app",
+    "title": "Enum constructors and methods",
+    "section": "Complete your app",
+    "text": "Complete your app\nWhat other classes and methods should you write to make this a complete application\nWe will build a GUI on top of this implementation in class"
   }
 ]

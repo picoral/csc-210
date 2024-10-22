@@ -204,6 +204,7 @@ Topic: `r schedule %>% filter(week == 9) %>% pull(topic)`
 * [Enum](slides-07-01.html):
    * [video one](https://youtu.be/KefFfaHZVxY) 
    * [video two](https://youtu.be/aat1oqlFDjY)
+* [Enum constructors and methods](slides-07-02.html)
 
 ## Assignments
 
