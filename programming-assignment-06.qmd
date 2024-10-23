@@ -35,7 +35,7 @@ You will be creating a variant of [Garden.in](https://github.com/picoral/CSC210P
 Here's a video demonstration of what you need to implement. You don't have to implement
 your garden GUI exactly like mine -- you can be as creative as you want here. As long
 as your commands make sense on your GUI (you need to record both your App.java with a
-header with your name, and the window should have your name on it.
+header with your name, and the window should have your name on it).
 
 {{< video https://youtu.be/2NCOoFe301w >}}
 
