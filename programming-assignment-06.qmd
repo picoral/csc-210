@@ -32,6 +32,13 @@ Each character from the garden run output is rendered on the GUI as a shape.
 
 You will be creating a variant of [Garden.in](https://github.com/picoral/CSC210PA6) for your own unique plant or garden object.
 
+Here's a video demonstration of what you need to implement. You don't have to implement
+your garden GUI exactly like mine -- you can be as creative as you want here. As long
+as your commands make sense on your GUI (you need to record both your App.java with a
+header with your name, and the window should have your name on it.
+
+{{< video https://youtu.be/2NCOoFe301w >}}
+
 ## Delay parameter
 
 The input file format for this assignment is exactly the same as that of PA5 Garden, 
@@ -125,7 +132,8 @@ header showing the current semester and your name. Here's an example:
 To create the video, you can use a program to record your screen as you run 
 your program, or you can simply record your screen with your smartphone or tablet. 
 Do note however that the video you submit must be of good enough quality for 
-the TAs to clearly see your garden and command logs.
+the TAs to clearly see your garden and command logs and your name on your App.java
+file and your window title.
 
 Write your own code. We will be using a tool that finds similar code.
 
