@@ -1,0 +1,72 @@
+---
+title: "JavaFX intro"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## Create a new JavaFX project
+
+After setting up a new JavaFX project, You should see something similar to this
+
+```{java}
+    private static Scene scene;
+
+    @Override
+    public void start(Stage stage) throws IOException {
+        scene = new Scene(loadFXML("primary"), 640, 480);
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    public static void main(String[] args) {
+        launch();
+    }
+```
+
+## Creating a panel with canvas and text area
+
+```{java}
+public void start(Stage stage) throws IOException {
+        stage.setTitle("My Window");
+
+        // we will be using a panel
+        BorderPane myPanel = new BorderPane();
+
+        // set up the canvas
+        Canvas myCanvas = new Canvas(600, 400);
+        GraphicsContext gc = myCanvas.getGraphicsContext2D();
+
+        // set up text area
+        TextArea myTextArea = new TextArea();
+        myTextArea.setPrefHeight(200);
+        myTextArea.setEditable(false);
+
+        // place canvas and text area in the panel
+        myPanel.setCenter(myCanvas);
+        myPanel.setBottom(myTextArea);
+        
+        scene = new Scene(myPanel, 640, 480);
+        stage.setScene(scene);
+        stage.show();
+    }
+```
+
+## Adding text to the text area
+
+```{java}
+myTextArea.appendText("hi there");
+```
+
+## Adding shapes to canvas
+
+```{java}
+Color c = Color.web("94300f");
+gc.setFill(c);
+gc.fillRect(10, 10, 10, 10);
+```
+
+## Canvas tutorial
+
+[Working with Canvas](https://docs.oracle.com/javafx/2/canvas/jfxpub-canvas.htm)

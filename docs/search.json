@@ -3470,5 +3470,47 @@
     "title": "Enum constructors and methods",
     "section": "Complete your app",
     "text": "Complete your app\nWhat other classes and methods should you write to make this a complete application\nWe will build a GUI on top of this implementation in class"
+  },
+  {
+    "objectID": "slides-08-01.html#create-a-new-javafx-project",
+    "href": "slides-08-01.html#create-a-new-javafx-project",
+    "title": "JavaFX intro",
+    "section": "Create a new JavaFX project",
+    "text": "Create a new JavaFX project\nAfter setting up a new JavaFX project, You should see something similar to this\n    private static Scene scene;\n\n    @Override\n    public void start(Stage stage) throws IOException {\n        scene = new Scene(loadFXML(\"primary\"), 640, 480);\n        stage.setScene(scene);\n        stage.show();\n    }\n    \n    public static void main(String[] args) {\n        launch();\n    }"
+  },
+  {
+    "objectID": "slides-08-01.html#creating-a-panel-with-canvas-and-text-area",
+    "href": "slides-08-01.html#creating-a-panel-with-canvas-and-text-area",
+    "title": "JavaFX intro",
+    "section": "Creating a panel with canvas and text area",
+    "text": "Creating a panel with canvas and text area\npublic void start(Stage stage) throws IOException {\n        stage.setTitle(\"My Window\");\n\n        // we will be using a panel\n        BorderPane myPanel = new BorderPane();\n\n        // set up the canvas\n        Canvas myCanvas = new Canvas(600, 400);\n        GraphicsContext gc = myCanvas.getGraphicsContext2D();\n\n        // set up text area\n        TextArea myTextArea = new TextArea();\n        myTextArea.setPrefHeight(200);\n        myTextArea.setEditable(false);\n\n        // place canvas and text area in the panel\n        myPanel.setCenter(myCanvas);\n        myPanel.setBottom(myTextArea);\n        \n        scene = new Scene(myPanel, 640, 480);\n        stage.setScene(scene);\n        stage.show();\n    }"
+  },
+  {
+    "objectID": "slides-08-01.html#adding-text-to-the-text-area",
+    "href": "slides-08-01.html#adding-text-to-the-text-area",
+    "title": "JavaFX intro",
+    "section": "Adding text to the text area",
+    "text": "Adding text to the text area\nmyTextArea.appendText(\"hi there\");"
+  },
+  {
+    "objectID": "slides-08-01.html#adding-shapes-to-canvas",
+    "href": "slides-08-01.html#adding-shapes-to-canvas",
+    "title": "JavaFX intro",
+    "section": "Adding shapes to canvas",
+    "text": "Adding shapes to canvas\nColor c = Color.web(\"94300f\");\ngc.setFill(c);\ngc.fillRect(10, 10, 10, 10);"
+  },
+  {
+    "objectID": "slides-08-01.html#canvas-tutorial",
+    "href": "slides-08-01.html#canvas-tutorial",
+    "title": "JavaFX intro",
+    "section": "Canvas tutorial",
+    "text": "Canvas tutorial\nWorking with Canvas"
+  },
+  {
+    "objectID": "modules.html#slides-7",
+    "href": "modules.html#slides-7",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nJavaFX intro"
   }
 ]

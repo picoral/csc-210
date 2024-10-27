@@ -230,6 +230,10 @@ I recommend you use JavaFX on VS Code, create a non-modular project with Maven.
 
 * [Getting Started with JavaFX](https://openjfx.io/openjfx-docs/)
 
+## Slides
+
+* [JavaFX intro](slides-08-01.html)
+
 ## Assignments
 
 * [Programming Assignment 06](programming-assignment-06.html): `r data %>% filter(Assignment == "PA6") %>%  select(Deadline)` -- Wednesday, 11:30pm
