@@ -10,6 +10,7 @@ title: "Practice Problems"
 * [Week 07](pdfs/practice-05.pdf)
 * [Week 08](pdfs/practice-06.pdf)
 * [Week 09](pdfs/practice-07.pdf)
+* [Midterm 02 Study Guide](pdfs/study-guide-02.pdf)
 
 # Other Resources
 
