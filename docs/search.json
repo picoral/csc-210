@@ -2,16 +2,16 @@
   {
     "objectID": "programming-assignment-07.html",
     "href": "programming-assignment-07.html",
-    "title": "Programming Assignment 06",
+    "title": "Programming Assignment 07",
     "section": "",
-    "text": "Deadline: October 30, 2024 – Wednesday, 11:30pm"
+    "text": "Deadline: November 13, 2024 – Wednesday, 11:30pm"
   },
   {
     "objectID": "programming-assignment-07.html#learning-objectives",
     "href": "programming-assignment-07.html#learning-objectives",
-    "title": "Programming Assignment 06",
+    "title": "Programming Assignment 07",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nThe goal of this assignment is to practice the following algorithm patterns, data structures, and decomposition approaches.\n\nAlgorithmic patterns: recursive backtracking and heuristic\nData structure: graphs\nDecomposition: using provided classes other than the Java libraries"
+    "text": "Learning Objectives\nThe goal of this assignment is to improve on basic JavaFX knowledge by adding event-driven GUI programming to the PA6 - Garden GUI program."
   },
   {
     "objectID": "programming-assignment-07.html#graph-coloring",
@@ -23,9 +23,9 @@
   {
     "objectID": "programming-assignment-07.html#the-assignment",
     "href": "programming-assignment-07.html#the-assignment",
-    "title": "Programming Assignment 06",
+    "title": "Programming Assignment 07",
     "section": "The Assignment",
-    "text": "The Assignment\nIn this assignment you will be implementing graph coloring three different ways: recursive backtracking, heuristic, and your own approach.\nThe program should have the following usage: java PA7Main infile.mtx [HEURISTIC,BACKTRACK,MINE,TIME]\nThe input files will be from the SuiteSparse Matrix Collection (https://sparse.tamu.edu/about). See https://math.nist.gov/MatrixMarket/formats.html for a description of the .mtx format. You CAN write similar code to the following code to read in the .mtx format. http://docs.roguewave.com/imsl/java/5.0.1/api/com/imsl/math/SparseMatrixEx2.html. Reading .mtx files will be covered in Section 8.\nExample output to standard out is provided in the PublicTestCases/ for HEURISTIC and BACKTRACK. You will be running your own algorithm with the MINE command. The output for TIME is shown below.\nYour program should also generate before and after .dot files with the nodes colored. See the before and after .dot files in the PublicTestCases/ subdirectory for examples and carefully read the code at the top of the provided Coloring.java file. You can use whatever node filling colors you would like\n(see https://www.graphviz.org/doc/info/colors.html). Writing dot files will be covered in Section 8.\nYou CAN use the code provided and/or written in Section 8 to read in files, store a graph, and output a graph to a dot file in your PA7.\n\nRecursive Backtracking\nWill make the decisions starting with node 1 and continuing through the nodes in order. Everytime a node coloring choice is tried, that choice will be checked before recursing to do some pruning. We cannot stop at the first coloring we find, because it is possible that other colorings will use fewer colors.\n  Set the color for node 1 to the first color (Coloring.Color.A)\n  Call enumerate on node 2\n    \n  enumerate( graph data structure, current coloring so far, ready to color kth node, \n             min coloring previously found)\n        \n      if all nodes have been colored then\n          process the current coloring:\n              does it use fewer colors than min coloring?\n              if so then modify min coloring previously found (hint: copyOtherIntoSelf())\n          return\n      \n      if coloring so far has fewer colors than the min coloring previously found\n          for all possible colors in order except for NOCOLOR\n              if that color does NOT conflict with node k's neighboring colors\n                  color kth node with color\n                  enumerate( graph data structure, updated coloring, k+1,\n                             min coloring previously found )\n                  uncolor the kth node\n\n\nHeuristic\n    for k=1 to num_nodes inclusive\n    \n        for all possible colors in order except for NOCOLOR\n                        \n            if that coloring does NOT conflict with node k's neighboring colors                \n                color kth node with color\n                break out of loop over possible colors for node k       \n\n\nYour own approach\nYou will also implement the command MINE that executes your own faster algorithm for performing graph coloring. The code you submit should be able to execute the MINE command.\nFor your own approach you can choose to do one of the following: * improve upon the recursive backtracking approach by putting in more pruning and then show this is faster than the suggested recursive backtracking approach * improve upon the heuristic approach while not resorting to a trivial solution like giving each node its own color"
+    "text": "The Assignment\nFor PA7, you will be adding events to the GUI representation of PA6. This means there will be no input file to read from. Instead of reading the input file from the command line arguments, you will read in the number of rows and columns of plots in the garden from the command line. Then along with the garden visualization you will create a TextField where a user can input a garden simulation command (e.g., grow 1, plant (2,3) sunflower, …) and then click on a simulate button to show the results of that command.\nAnother interesting aspect of PA7 is that you will be continuing to refine the Garden simulation code. Some of your code will change and some of the code from previous assignments should be removed."
   },
   {
     "objectID": "programming-assignment-07.html#timing-all-of-the-approaches",
@@ -51,16 +51,16 @@
   {
     "objectID": "programming-assignment-07.html#grading-criteria",
     "href": "programming-assignment-07.html#grading-criteria",
-    "title": "Programming Assignment 06",
+    "title": "Programming Assignment 07",
     "section": "Grading Criteria",
-    "text": "Grading Criteria\nHalf of the PA7 grade will be correctness. For this assignment, there will be some private test cases on Gradescope used for grading. However, note the names of the test cases and realize you can download the .mtx files from the SuiteSparse Matrix Collection (https://sparse.tamu.edu/about).\nThe other half of the PA7 grade will be broken up as follows: * 25 your decomposition and code clarity * 10 MINE algorithm that does something different than given algorithms * 10 timing results in the README.md file along with a TIME implementation * 5 points for a cool dot file with a coloring in it\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method EXCEPT for in the timing code.\nAll of the Java files should be &lt;250 lines of code.\nEach method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\nMake things as simple as possible.\n\nOnly use one Scanner instance.\nDon’t use lambda functions or other features in non-standard ways.\nIn general avoid nested loops. However, can use nested loops to implement the recursive backtracking and heuristic in PA7.\nIn general, avoid nesting conditionals. However, you can use nested conditionals to implement the recursive backtracking and heuristic in PA7.\nAvoid chaining: see the Piazza post for more info\n\n\nCode Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement.\n\nThe coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine."
+    "text": "Grading Criteria\nHalf of the this assignment grade will be a working GUI. Record a video that shows your name in the header for the App.java file and your name in the window title. Submit your assignment code to gradescope.\nThe other half of the assignment grade will be your decomposition and code clarity.\nDecomposition\n\nPoints will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.\nThis program should use fewer than 10 .java files. Each of these files should be (&lt;300 lines).\nEach method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.\n\nCode Clarity\n\nYOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it.\n\nNo magic numbers\nNo methods written to just get the test cases to work\n\nThere needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.\nThe file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format. One would also need to know the command line arguments that should be passed to the program.\nUse meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).\nThe clearest code examples will be anonymously shown in class.\nThe most obfuscated code examples will be anonymously shown in class with suggestions for improvement."
   },
   {
     "objectID": "programming-assignment-07.html#submission",
     "href": "programming-assignment-07.html#submission",
-    "title": "Programming Assignment 06",
+    "title": "Programming Assignment 07",
     "section": "Submission",
-    "text": "Submission\nFiles that need to be submitted to Gradescope: * all .java files * README.md with the results of timing experiments that compare your improved algorithm to the required algorithms for the input file mesh1em6.mtx * a dot file that shows off your graph coloring skills"
+    "text": "Submission\nFor this assignment, you are REQUIRED to submit all of the following files to Gradescope. * All the Java source files needed to run your program. * A video showing your GUI working.\nWrite your own code. We will be using a tool that finds similar code.\nIt is recommended that when talking with others about the assignment, do not write anything down."
   },
   {
     "objectID": "modules.html",
@@ -3512,5 +3512,40 @@
     "title": "Modules",
     "section": "Slides",
     "text": "Slides\n\nJavaFX intro"
+  },
+  {
+    "objectID": "programming-assignment-07.html#what-needs-to-be-removed",
+    "href": "programming-assignment-07.html#what-needs-to-be-removed",
+    "title": "Programming Assignment 07",
+    "section": "What needs to be removed",
+    "text": "What needs to be removed\nFile reading: Since we are no longer reading commands in from a file, all code that is used to read in from a file is no longer needed. You will still need to parse commands however.\nDelay Code: In the previous assignment a delay was needed to show the output for every command, for this assignment this is no longer needed since we are running one command at a time via a graphical user interface."
+  },
+  {
+    "objectID": "programming-assignment-07.html#what-needs-to-be-added",
+    "href": "programming-assignment-07.html#what-needs-to-be-added",
+    "title": "Programming Assignment 07",
+    "section": "What needs to be added",
+    "text": "What needs to be added\nUser input: Since we will not be reading from a file, we are going to need some way to read in commands from the user. We recommend a TextArea and a button to cause the execution of the command in that TextArea. Feel free to try different approaches.\nEvent Handlers: To use the information that the user provides your code must have at least one Event Handler. This should grab the information from the user and do something with it whenever a specified event occurs. (clicking of a button and/or pressing enter on keyboard)"
+  },
+  {
+    "objectID": "programming-assignment-07.html#what-needs-to-be-changed",
+    "href": "programming-assignment-07.html#what-needs-to-be-changed",
+    "title": "Programming Assignment 07",
+    "section": "What needs to be changed",
+    "text": "What needs to be changed\nCommand line arguments: Instead of reading in a filename from the command line, you will be reading in both the width and height of the garden."
+  },
+  {
+    "objectID": "programming-assignment-07.html#resources",
+    "href": "programming-assignment-07.html#resources",
+    "title": "Programming Assignment 07",
+    "section": "Resources",
+    "text": "Resources\nThe provided code uses some new concepts. We will be covering them in class. Additionally, here are some references.\n\nText Field, https://docs.oracle.com/javafx/2/ui_controls/text-field.htm"
+  },
+  {
+    "objectID": "programming-assignment-07.html#general-requirements",
+    "href": "programming-assignment-07.html#general-requirements",
+    "title": "Programming Assignment 07",
+    "section": "General requirements",
+    "text": "General requirements\nThis assignment is different from other assignments you’ve had so far in that you are given a lot more freedom to design your output the way you want. However you choose to receive graphical input for your garden, the following general requirements must be met:\n\nA user should be able to type in a command and submit it via the GUI. This means that there should be somewhere to insert text and some way to submit that text. Both of these must be intuitive, that means that the user must understand where he/she should insert commands and how to submit said command by only looking at the GUI.\nEach plant must be one-of-a-kind, meaning they must be distinguishable from any other plant and the background (in shape, color, etc)\nEach command must be visually noticeable. This means that when ‘GROW 1’ is called for example, it should be visually obvious that every plant just grew by 1.\nThere must be a command log which displays commands as they are being executed.\nYou must handle errors. Errors that don’t cause the program to stop (such as ‘Can’t grow here’) should be distinguishable in the command log. For errors that do cause the program to stop, such as ‘Invalid dimension input’ should still print to to the standard output."
   }
 ]

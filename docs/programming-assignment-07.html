@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CSC 210 Fall 2024 - Programming Assignment 06</title>
+<title>CSC 210 Fall 2024 - Programming Assignment 07</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -128,19 +128,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#pa7-graphcoloring" id="toc-pa7-graphcoloring" class="nav-link active" data-scroll-target="#pa7-graphcoloring">PA7-GraphColoring</a>
+  <li><a href="#pa7---garden-gui" id="toc-pa7---garden-gui" class="nav-link active" data-scroll-target="#pa7---garden-gui">PA7 - Garden GUI</a>
   <ul class="collapse">
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#graph-coloring" id="toc-graph-coloring" class="nav-link" data-scroll-target="#graph-coloring">Graph Coloring</a></li>
-  <li><a href="#the-assignment" id="toc-the-assignment" class="nav-link" data-scroll-target="#the-assignment">The Assignment</a>
-  <ul class="collapse">
-  <li><a href="#recursive-backtracking" id="toc-recursive-backtracking" class="nav-link" data-scroll-target="#recursive-backtracking">Recursive Backtracking</a></li>
-  <li><a href="#heuristic" id="toc-heuristic" class="nav-link" data-scroll-target="#heuristic">Heuristic</a></li>
-  <li><a href="#your-own-approach" id="toc-your-own-approach" class="nav-link" data-scroll-target="#your-own-approach">Your own approach</a></li>
-  </ul></li>
-  <li><a href="#timing-all-of-the-approaches" id="toc-timing-all-of-the-approaches" class="nav-link" data-scroll-target="#timing-all-of-the-approaches">Timing all of the approaches</a></li>
-  <li><a href="#error-handling" id="toc-error-handling" class="nav-link" data-scroll-target="#error-handling">Error handling</a></li>
-  <li><a href="#notes-and-suggestions" id="toc-notes-and-suggestions" class="nav-link" data-scroll-target="#notes-and-suggestions">Notes and Suggestions</a></li>
+  <li><a href="#the-assignment" id="toc-the-assignment" class="nav-link" data-scroll-target="#the-assignment">The Assignment</a></li>
+  <li><a href="#what-needs-to-be-removed" id="toc-what-needs-to-be-removed" class="nav-link" data-scroll-target="#what-needs-to-be-removed">What needs to be removed</a></li>
+  <li><a href="#what-needs-to-be-added" id="toc-what-needs-to-be-added" class="nav-link" data-scroll-target="#what-needs-to-be-added">What needs to be added</a></li>
+  <li><a href="#what-needs-to-be-changed" id="toc-what-needs-to-be-changed" class="nav-link" data-scroll-target="#what-needs-to-be-changed">What needs to be changed</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#general-requirements" id="toc-general-requirements" class="nav-link" data-scroll-target="#general-requirements">General requirements</a></li>
   <li><a href="#grading-criteria" id="toc-grading-criteria" class="nav-link" data-scroll-target="#grading-criteria">Grading Criteria</a></li>
   <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   </ul></li>
@@ -152,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Programming Assignment 06</h1>
+<h1 class="title">Programming Assignment 07</h1>
 </div>
 
 
@@ -169,132 +165,79 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Deadline: October 30, 2024 – Wednesday, 11:30pm</p>
-<section id="pa7-graphcoloring" class="level1">
-<h1>PA7-GraphColoring</h1>
-<p>PA7 is about implementing graph coloring in three different ways.</p>
+<p>Deadline: November 13, 2024 – Wednesday, 11:30pm</p>
+<section id="pa7---garden-gui" class="level1">
+<h1>PA7 - Garden GUI</h1>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>The goal of this assignment is to practice the following algorithm patterns, data structures, and decomposition approaches.</p>
-<ul>
-<li><p>Algorithmic patterns: recursive backtracking and heuristic</p></li>
-<li><p>Data structure: graphs</p></li>
-<li><p>Decomposition: using provided classes other than the Java libraries</p></li>
-</ul>
-</section>
-<section id="graph-coloring" class="level2">
-<h2 class="anchored" data-anchor-id="graph-coloring">Graph Coloring</h2>
-<p>Many important problems such as coloring a map and register allocation can be expressed as graph coloring problems. See [https://en.wikipedia.org/wiki/Graph_coloring] for examples and mention of Sudoku as a kind of graph coloring problem.</p>
+<p>The goal of this assignment is to improve on basic JavaFX knowledge by adding event-driven GUI programming to the PA6 - Garden GUI program.</p>
 </section>
 <section id="the-assignment" class="level2">
 <h2 class="anchored" data-anchor-id="the-assignment">The Assignment</h2>
-<p>In this assignment you will be implementing graph coloring three different ways: recursive backtracking, heuristic, and your own approach.</p>
-<p>The program should have the following usage: java PA7Main infile.mtx [HEURISTIC,BACKTRACK,MINE,TIME]</p>
-<p>The input files will be from the SuiteSparse Matrix Collection (https://sparse.tamu.edu/about). See https://math.nist.gov/MatrixMarket/formats.html for a description of the .mtx format. You CAN write similar code to the following code to read in the .mtx format. http://docs.roguewave.com/imsl/java/5.0.1/api/com/imsl/math/SparseMatrixEx2.html. Reading .mtx files will be covered in Section 8.</p>
-<p>Example output to standard out is provided in the PublicTestCases/ for HEURISTIC and BACKTRACK. You will be running your own algorithm with the MINE command. The output for TIME is shown below.</p>
-<p>Your program should also generate before and after .dot files with the nodes colored. See the before and after .dot files in the PublicTestCases/ subdirectory for examples and carefully read the code at the top of the provided Coloring.java file. You can use whatever node filling colors you would like<br>
-(see https://www.graphviz.org/doc/info/colors.html). Writing dot files will be covered in Section 8.</p>
-<p>You CAN use the code provided and/or written in Section 8 to read in files, store a graph, and output a graph to a dot file in your PA7.</p>
-<section id="recursive-backtracking" class="level3">
-<h3 class="anchored" data-anchor-id="recursive-backtracking">Recursive Backtracking</h3>
-<p>Will make the decisions starting with node 1 and continuing through the nodes in order. Everytime a node coloring choice is tried, that choice will be checked before recursing to do some pruning. We cannot stop at the first coloring we find, because it is possible that other colorings will use fewer colors.</p>
-<pre><code>  Set the color for node 1 to the first color (Coloring.Color.A)
-  Call enumerate on node 2
-    
-  enumerate( graph data structure, current coloring so far, ready to color kth node, 
-             min coloring previously found)
-        
-      if all nodes have been colored then
-          process the current coloring:
-              does it use fewer colors than min coloring?
-              if so then modify min coloring previously found (hint: copyOtherIntoSelf())
-          return
-      
-      if coloring so far has fewer colors than the min coloring previously found
-          for all possible colors in order except for NOCOLOR
-              if that color does NOT conflict with node k's neighboring colors
-                  color kth node with color
-                  enumerate( graph data structure, updated coloring, k+1,
-                             min coloring previously found )
-                  uncolor the kth node</code></pre>
+<p>For PA7, you will be adding events to the GUI representation of PA6. This means there will be no input file to read from. Instead of reading the input file from the command line arguments, you will read in the number of rows and columns of plots in the garden from the command line. Then along with the garden visualization you will create a TextField where a user can input a garden simulation command (e.g., grow 1, plant (2,3) sunflower, …) and then click on a simulate button to show the results of that command.</p>
+<p>Another interesting aspect of PA7 is that you will be continuing to refine the Garden simulation code. Some of your code will change and some of the code from previous assignments should be removed.</p>
 </section>
-<section id="heuristic" class="level3">
-<h3 class="anchored" data-anchor-id="heuristic">Heuristic</h3>
-<pre><code>    for k=1 to num_nodes inclusive
-    
-        for all possible colors in order except for NOCOLOR
-                        
-            if that coloring does NOT conflict with node k's neighboring colors                
-                color kth node with color
-                break out of loop over possible colors for node k       </code></pre>
+<section id="what-needs-to-be-removed" class="level2">
+<h2 class="anchored" data-anchor-id="what-needs-to-be-removed">What needs to be removed</h2>
+<p><strong>File reading:</strong> Since we are no longer reading commands in from a file, all code that is used to read in from a file is no longer needed. You will still need to parse commands however.</p>
+<p><strong>Delay Code:</strong> In the previous assignment a delay was needed to show the output for every command, for this assignment this is no longer needed since we are running one command at a time via a graphical user interface.</p>
 </section>
-<section id="your-own-approach" class="level3">
-<h3 class="anchored" data-anchor-id="your-own-approach">Your own approach</h3>
-<p>You will also implement the command MINE that executes your own faster algorithm for performing graph coloring. The code you submit should be able to execute the MINE command.</p>
-<p>For your own approach you can choose to do one of the following: * improve upon the recursive backtracking approach by putting in more pruning and then show this is faster than the suggested recursive backtracking approach * improve upon the heuristic approach while not resorting to a trivial solution like giving each node its own color</p>
+<section id="what-needs-to-be-added" class="level2">
+<h2 class="anchored" data-anchor-id="what-needs-to-be-added">What needs to be added</h2>
+<p><strong>User input:</strong> Since we will not be reading from a file, we are going to need some way to read in commands from the user. We recommend a TextArea and a button to cause the execution of the command in that TextArea. Feel free to try different approaches.</p>
+<p><strong>Event Handlers:</strong> To use the information that the user provides your code must have at least one Event Handler. This should grab the information from the user and do something with it whenever a specified event occurs. (clicking of a button and/or pressing enter on keyboard)</p>
 </section>
+<section id="what-needs-to-be-changed" class="level2">
+<h2 class="anchored" data-anchor-id="what-needs-to-be-changed">What needs to be changed</h2>
+<p><strong>Command line arguments:</strong> Instead of reading in a filename from the command line, you will be reading in both the width and height of the garden.</p>
 </section>
-<section id="timing-all-of-the-approaches" class="level2">
-<h2 class="anchored" data-anchor-id="timing-all-of-the-approaches">Timing all of the approaches</h2>
-<p>Using code similar to the following, you will have a TIME command that times all of the algorithms.</p>
-<pre><code>        long startTime = System.nanoTime();
-        coloring = heuristic(graph);
-        long endTime = System.nanoTime();
-        long duration = (endTime - startTime) / 1000000;
-        System.out.println("heuristic: " + coloring.getNumColors() + " colors, "
-                + duration + " milliseconds");</code></pre>
-<p>The output for the TIME command will look as follows:</p>
-<pre><code>heuristic: 6 colors, 4 milliseconds
-mine:      6 colors, 3 milliseconds
-backtrack: 4 colors, 50102 milliseconds</code></pre>
-<p>None of the grading test cases call TIME, because each time you run the program even on the same input and on the same machine there will be some time variance. Because of that you will probably want to run the timings about 5 times before drawing any conclusions.</p>
-<p>INSTEAD, you will be running the TIME command on your machine for the mesh1em6.mtx input. It takes around a minute for the recursive backtracking algorithm on a 2 year old Mac.</p>
-</section>
-<section id="error-handling" class="level2">
-<h2 class="anchored" data-anchor-id="error-handling">Error handling</h2>
-<p>All of the inputs will be correctly formed for this assignment.</p>
-</section>
-<section id="notes-and-suggestions" class="level2">
-<h2 class="anchored" data-anchor-id="notes-and-suggestions">Notes and Suggestions</h2>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<p>The provided code uses some new concepts. We will be covering them in class. Additionally, here are some references.</p>
 <ul>
-<li><p>To get started, go to the resources page on piazza and click on the PA7-GraphColoring link under programming assignments and then accept the github assignment and repository. Import the github repository into Eclipse as normal. We aren’t using Travis CI anymore. Test things locally in Eclipse and submit all the files to Gradescope to see how you do on the grading test cases.</p></li>
-<li><p>The node ids should go from 1 to the number of nodes inclusive, because the sparse matrix market file format (.mtx) stores node ids starting at 1 instead of 0.</p></li>
-<li><p>We are providing a Coloring class that keeps track of a mapping of node ids to colors.</p></li>
-<li><p>In Section 8 this week, we provided a graph data structure, to which you might need to add a method that returns the neighbors for a node.</p></li>
-<li><p>In Section 8 this week, we helped you write the code to read in .mtx files and output a dot file. You will need to modify the dot output code to generate colored nodes. The setting of the colors is up to you and happens in Coloring.java.</p></li>
+<li>Text Field, https://docs.oracle.com/javafx/2/ui_controls/text-field.htm</li>
+</ul>
+</section>
+<section id="general-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="general-requirements">General requirements</h2>
+<p>This assignment is different from other assignments you’ve had so far in that you are given a lot more freedom to design your output the way you want. However you choose to receive graphical input for your garden, the following general requirements must be met:</p>
+<ul>
+<li><p>A user should be able to type in a command and submit it via the GUI. This means that there should be somewhere to insert text and some way to submit that text. Both of these must be <strong>intuitive</strong>, that means that the user must understand where he/she should insert commands and how to submit said command by only looking at the GUI.</p></li>
+<li><p>Each plant must be <strong>one-of-a-kind</strong>, meaning they must be distinguishable from any other plant and the background (in shape, color, etc)</p></li>
+<li><p>Each command must be <strong>visually noticeable</strong>. This means that when ‘GROW 1’ is called for example, it should be visually obvious that every plant just grew by 1.</p></li>
+<li><p>There must be a command log which displays commands as they are being executed.</p></li>
+<li><p>You must handle errors. Errors that don’t cause the program to stop (such as ‘Can’t grow here’) should be <strong>distinguishable</strong> in the command log. For errors that do cause the program to stop, such as ‘Invalid dimension input’ should still print to to the standard output.</p></li>
 </ul>
 </section>
 <section id="grading-criteria" class="level2">
 <h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
-<p>Half of the PA7 grade will be correctness. For this assignment, there will be some private test cases on Gradescope used for grading. However, note the names of the test cases and realize you can download the .mtx files from the SuiteSparse Matrix Collection (https://sparse.tamu.edu/about).</p>
-<p>The other half of the PA7 grade will be broken up as follows: * 25 your decomposition and code clarity * 10 MINE algorithm that does something different than given algorithms * 10 timing results in the README.md file along with a TIME implementation * 5 points for a cool dot file with a coloring in it</p>
+<p>Half of the this assignment grade will be a working GUI. Record a video that shows your name in the header for the App.java file and your name in the window title. Submit your assignment code to gradescope.</p>
+<p>The other half of the assignment grade will be your decomposition and code clarity.</p>
 <p>Decomposition</p>
 <ul>
-<li><p>Points will be taken off for copy, pasted, and edited code that should have been encapsulated in a method EXCEPT for in the timing code.</p></li>
-<li><p>All of the Java files should be &lt;250 lines of code.</p></li>
+<li><p>Points will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.</p></li>
+<li><p><strong>This program should use fewer than 10 .java files.</strong> Each of these files should be (&lt;300 lines).</p></li>
 <li><p>Each method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.</p></li>
-<li><p>Make things as simple as possible.</p>
-<ul>
-<li>Only use one Scanner instance.</li>
-<li>Don’t use lambda functions or other features in non-standard ways.</li>
-<li>In general avoid nested loops. However, can use nested loops to implement the recursive backtracking and heuristic in PA7.</li>
-<li>In general, avoid nesting conditionals. However, you can use nested conditionals to implement the recursive backtracking and heuristic in PA7.</li>
-<li>Avoid chaining: see the Piazza post for more info</li>
-</ul></li>
 </ul>
-<p>Code Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work</p>
+<p>Code Clarity</p>
 <ul>
+<li><p>YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it.</p>
+<ul>
+<li>No magic numbers</li>
+<li>No methods written to just get the test cases to work</li>
+</ul></li>
 <li><p>There needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.</p></li>
-<li><p>The file header should include instructions on how someone would use this program. To use the program, one would need to know the input file format.</p></li>
+<li><p><strong>The file header should include instructions on how someone would use this program.</strong> To use the program, one would need to know the input file format. One would also need to know the command line arguments that should be passed to the program.</p></li>
 <li><p>Use meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).</p></li>
 <li><p>The clearest code examples will be anonymously shown in class.</p></li>
 <li><p>The most obfuscated code examples will be anonymously shown in class with suggestions for improvement.</p></li>
 </ul>
-<p>The coding style in terms of spacing, etc. should be done automatically every time you save in Eclipse. As long as you stick with those defaults, the syntax style should be fine.</p>
 </section>
 <section id="submission" class="level2">
 <h2 class="anchored" data-anchor-id="submission">Submission</h2>
-<p>Files that need to be submitted to Gradescope: * all .java files * README.md with the results of timing experiments that compare your improved algorithm to the required algorithms for the input file mesh1em6.mtx * a dot file that shows off your graph coloring skills</p>
+<p>For this assignment, you are <strong>REQUIRED</strong> to submit all of the following files to Gradescope. * All the Java source files needed to run your program. * A video showing your GUI working.</p>
+<p>Write your own code. We will be using a tool that finds similar code.</p>
+<p>It is recommended that when talking with others about the assignment, do not write anything down.</p>
 
 
 </section>
