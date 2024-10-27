@@ -70,3 +70,48 @@ gc.fillRect(10, 10, 10, 10);
 ## Canvas tutorial
 
 [Working with Canvas](https://docs.oracle.com/javafx/2/canvas/jfxpub-canvas.htm)
+
+## Adding text entry
+
+```{java}
+TextField userEntry = new TextField();
+userEntry.setPromptText("Enter your command:");
+userEntry.getText();
+```
+
+Add text entry to top of the border panel
+
+```{java}
+myPanel.setTop(userEntry.setPromptText);
+```
+
+## Adding a panel in the panel
+
+```{java}
+GridPane myGrid = new GridPane();
+myGrid.setPadding(new Insets(10, 10, 10, 10));
+myPanel.setTop(myGrid);
+```
+
+And then
+
+```{java}
+myGrid.getChildren().add(userEntry);
+```
+
+## Adding a button
+
+```{java}
+Button submit = new Button("Submit");
+GridPane.setConstraints(submit, 1, 0);
+myGrid.getChildren().add(submit);
+```
+
+## Adding an event to a button
+
+```{java}
+submit.setOnAction((actionEvent) -> {
+    myTextArea.appendText(userEntry.getText());
+});
+```
+

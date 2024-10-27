@@ -3547,5 +3547,33 @@
     "title": "Programming Assignment 07",
     "section": "General requirements",
     "text": "General requirements\nThis assignment is different from other assignments you’ve had so far in that you are given a lot more freedom to design your output the way you want. However you choose to receive graphical input for your garden, the following general requirements must be met:\n\nA user should be able to type in a command and submit it via the GUI. This means that there should be somewhere to insert text and some way to submit that text. Both of these must be intuitive, that means that the user must understand where he/she should insert commands and how to submit said command by only looking at the GUI.\nEach plant must be one-of-a-kind, meaning they must be distinguishable from any other plant and the background (in shape, color, etc)\nEach command must be visually noticeable. This means that when ‘GROW 1’ is called for example, it should be visually obvious that every plant just grew by 1.\nThere must be a command log which displays commands as they are being executed.\nYou must handle errors. Errors that don’t cause the program to stop (such as ‘Can’t grow here’) should be distinguishable in the command log. For errors that do cause the program to stop, such as ‘Invalid dimension input’ should still print to to the standard output."
+  },
+  {
+    "objectID": "slides-08-01.html#adding-text-entry",
+    "href": "slides-08-01.html#adding-text-entry",
+    "title": "JavaFX intro",
+    "section": "Adding text entry",
+    "text": "Adding text entry\nTextField userEntry = new TextField();\nuserEntry.setPromptText(\"Enter your command:\");\nuserEntry.getText();\nAdd text entry to top of the border panel\nmyPanel.setTop(userEntry.setPromptText);"
+  },
+  {
+    "objectID": "slides-08-01.html#adding-a-panel-in-the-panel",
+    "href": "slides-08-01.html#adding-a-panel-in-the-panel",
+    "title": "JavaFX intro",
+    "section": "Adding a panel in the panel",
+    "text": "Adding a panel in the panel\nGridPane myGrid = new GridPane();\nmyGrid.setPadding(new Insets(10, 10, 10, 10));\nmyPanel.setTop(myGrid);\nAnd then\nmyGrid.getChildren().add(userEntry);"
+  },
+  {
+    "objectID": "slides-08-01.html#adding-a-button",
+    "href": "slides-08-01.html#adding-a-button",
+    "title": "JavaFX intro",
+    "section": "Adding a button",
+    "text": "Adding a button\nButton submit = new Button(\"Submit\");\nGridPane.setConstraints(submit, 1, 0);\nmyGrid.getChildren().add(submit);"
+  },
+  {
+    "objectID": "slides-08-01.html#adding-an-event-to-a-button",
+    "href": "slides-08-01.html#adding-an-event-to-a-button",
+    "title": "JavaFX intro",
+    "section": "Adding an event to a button",
+    "text": "Adding an event to a button\nsubmit.setOnAction((actionEvent) -&gt; {\n    myTextArea.appendText(userEntry.getText());\n});"
   }
 ]

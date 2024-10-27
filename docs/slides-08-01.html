@@ -451,6 +451,34 @@
 <section id="canvas-tutorial" class="slide level2">
 <h2>Canvas tutorial</h2>
 <p><a href="https://docs.oracle.com/javafx/2/canvas/jfxpub-canvas.htm">Working with Canvas</a></p>
+</section>
+<section id="adding-text-entry" class="slide level2">
+<h2>Adding text entry</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>TextField userEntry = new TextField();</span>
+<span id="cb5-2"><a></a>userEntry.setPromptText("Enter your command:");</span>
+<span id="cb5-3"><a></a>userEntry.getText();</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Add text entry to top of the border panel</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a>myPanel.setTop(userEntry.setPromptText);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="adding-a-panel-in-the-panel" class="slide level2">
+<h2>Adding a panel in the panel</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>GridPane myGrid = new GridPane();</span>
+<span id="cb7-2"><a></a>myGrid.setPadding(new Insets(10, 10, 10, 10));</span>
+<span id="cb7-3"><a></a>myPanel.setTop(myGrid);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>And then</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>myGrid.getChildren().add(userEntry);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="adding-a-button" class="slide level2">
+<h2>Adding a button</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a></a>Button submit = new Button("Submit");</span>
+<span id="cb9-2"><a></a>GridPane.setConstraints(submit, 1, 0);</span>
+<span id="cb9-3"><a></a>myGrid.getChildren().add(submit);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="adding-an-event-to-a-button" class="slide level2">
+<h2>Adding an event to a button</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a></a>submit.setOnAction((actionEvent) -&gt; {</span>
+<span id="cb10-2"><a></a>    myTextArea.appendText(userEntry.getText());</span>
+<span id="cb10-3"><a></a>});</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
