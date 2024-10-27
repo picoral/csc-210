@@ -53,4 +53,10 @@ data <- read_excel("assessment-deadlines.xlsx")
 
 * [Instructions](programming-assignment-06.html)
 
+# PA 7
+
+* Deadline: `r data %>% filter(Assignment == "PA7") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+* [Instructions](programming-assignment-07.html)
+
 
