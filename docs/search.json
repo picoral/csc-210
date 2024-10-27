@@ -60,7 +60,7 @@
     "href": "programming-assignment-07.html#submission",
     "title": "Programming Assignment 07",
     "section": "Submission",
-    "text": "Submission\nFor this assignment, you are REQUIRED to submit all of the following files to Gradescope. * All the Java source files needed to run your program. * A video showing your GUI working.\nWrite your own code. We will be using a tool that finds similar code.\nIt is recommended that when talking with others about the assignment, do not write anything down."
+    "text": "Submission\nFor this assignment, you are REQUIRED to submit all of the following files to Gradescope.\n\nAll the Java source files needed to run your program.\nA video showing your GUI working.\n\nWrite your own code. We will be using a tool that finds similar code.\nIt is recommended that when talking with others about the assignment, do not write anything down."
   },
   {
     "objectID": "modules.html",
@@ -3539,7 +3539,7 @@
     "href": "programming-assignment-07.html#resources",
     "title": "Programming Assignment 07",
     "section": "Resources",
-    "text": "Resources\nThe provided code uses some new concepts. We will be covering them in class. Additionally, here are some references.\n\nText Field, https://docs.oracle.com/javafx/2/ui_controls/text-field.htm"
+    "text": "Resources\nThe provided code uses some new concepts. We will be covering them in class. Additionally, here are some references.\n\nText Field, https://docs.oracle.com/javafx/2/ui_controls/text-field.htm\nWorking with Canvas, https://docs.oracle.com/javafx/2/canvas/jfxpub-canvas.htm"
   },
   {
     "objectID": "programming-assignment-07.html#general-requirements",

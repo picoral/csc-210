@@ -68,7 +68,8 @@ at least one Event Handler. This should grab the information from the user and d
 
 The provided code uses some new concepts.  We will be covering them in class.  Additionally, here are some references.
 
-  * Text Field, https://docs.oracle.com/javafx/2/ui_controls/text-field.htm
+  * Text Field, <https://docs.oracle.com/javafx/2/ui_controls/text-field.htm>
+  * Working with Canvas, <https://docs.oracle.com/javafx/2/canvas/jfxpub-canvas.htm>
 
 ## General requirements
 
@@ -143,6 +144,7 @@ Code Clarity
 
 For this assignment, you are **REQUIRED** to submit all of the following files
 to Gradescope. 
+
   * All the Java source files needed to run your program.
   * A video showing your GUI working.
 
