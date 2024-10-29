@@ -251,6 +251,10 @@ Topic: `r schedule %>% filter(week == 11) %>% pull(topic)`
 
 Topic: `r schedule %>% filter(week == 12) %>% pull(topic)`
 
+## Readings
+
+* [Using JavaFX UI Controls](https://docs.oracle.com/javase/8/javafx/user-interface-tutorial/ui_controls.htm#JFXUI336)
+
 ## Assignments
 
 * [Short Assignment 09](slides-08-02.html) -- Deadline: `r data %>% filter(Assignment == "SA9") %>%  select(Deadline)` -- Tuesday, 11:30pm 
