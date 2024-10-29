@@ -19,7 +19,7 @@ format:
 
 ## Submit Short Assignment video
 
-* Record a video demonstration of your application working
+* Record a demonstration video of your application working
 * The window title should have your name on it
 * Show App.java header with term (Fall 2024) and your name in the header
 * [Submit video link to Gradescope](https://www.gradescope.com/courses/839822/assignments/5238793) -- make sure people other than yourself can play the video
