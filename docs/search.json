@@ -3511,7 +3511,7 @@
     "href": "modules.html#slides-7",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nJavaFX intro"
+    "text": "Slides\n\nJavaFX intro\nJavaFX practice"
   },
   {
     "objectID": "programming-assignment-07.html#what-needs-to-be-removed",
@@ -3575,5 +3575,33 @@
     "title": "JavaFX intro",
     "section": "Adding an event to a button",
     "text": "Adding an event to a button\nsubmit.setOnAction((actionEvent) -&gt; {\n    myTextArea.appendText(userEntry.getText());\n});"
+  },
+  {
+    "objectID": "slides-08-02.html#getting-started",
+    "href": "slides-08-02.html#getting-started",
+    "title": "JavaFX practice",
+    "section": "Getting Started",
+    "text": "Getting Started\n\nSet up a JavaFX project\nDownload starter code"
+  },
+  {
+    "objectID": "slides-08-02.html#short-assignment-09",
+    "href": "slides-08-02.html#short-assignment-09",
+    "title": "JavaFX practice",
+    "section": "Short Assignment 09",
+    "text": "Short Assignment 09\n\nRead the starter code, and work on TODOs\nMake it look nicer\nAdd another type of food (create new class, add buttons to interface)"
+  },
+  {
+    "objectID": "slides-08-02.html#submit-short-assignment-video",
+    "href": "slides-08-02.html#submit-short-assignment-video",
+    "title": "JavaFX practice",
+    "section": "Submit Short Assignment video",
+    "text": "Submit Short Assignment video\n\nRecord a video demonstration of your application working\nThe window title should have your name on it\nShow App.java header with term (Fall 2024) and your name in the header\nSubmit video link to Gradescope – make sure people other than yourself can play the video"
+  },
+  {
+    "objectID": "modules.html#assignments-8",
+    "href": "modules.html#assignments-8",
+    "title": "Modules",
+    "section": "Assignments",
+    "text": "Assignments\n\nShort Assignment 09 – Deadline: November 12, 2024 – Tuesday, 11:30pm\nProgramming Assignment 07: November 13, 2024 – Wednesday, 11:30pm"
   }
 ]

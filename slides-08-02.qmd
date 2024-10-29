@@ -1,0 +1,26 @@
+---
+title: "JavaFX practice"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## Getting Started 
+
+* Set up a JavaFX project
+* [Download starter code](https://github.com/picoral/CSC210SA09)
+
+## Short Assignment 09
+
+* Read the starter code, and work on TODOs
+* Make it look nicer
+* Add another type of food (create new class, add buttons to interface)
+
+## Submit Short Assignment video
+
+* Record a video demonstration of your application working
+* The window title should have your name on it
+* Show App.java header with term (Fall 2024) and your name in the header
+* [Submit video link to Gradescope](https://www.gradescope.com/courses/839822/assignments/5238793) -- make sure people other than yourself can play the video
+

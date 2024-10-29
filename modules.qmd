@@ -233,7 +233,25 @@ I recommend you use JavaFX on VS Code, create a non-modular project with Maven.
 ## Slides
 
 * [JavaFX intro](slides-08-01.html)
+* [JavaFX practice](slides-08-02.html)
 
 ## Assignments
 
 * [Programming Assignment 06](programming-assignment-06.html): `r data %>% filter(Assignment == "PA6") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+# Week 11
+
+`r schedule %>% filter(week == 11) %>% pull(dates)`
+
+Topic: `r schedule %>% filter(week == 11) %>% pull(topic)`
+
+# Week 12
+
+`r schedule %>% filter(week == 12) %>% pull(dates)`
+
+Topic: `r schedule %>% filter(week == 12) %>% pull(topic)`
+
+## Assignments
+
+* [Short Assignment 09](slides-08-02.html) -- Deadline: `r data %>% filter(Assignment == "SA9") %>%  select(Deadline)` -- Tuesday, 11:30pm 
+* [Programming Assignment 07](programming-assignment-07.html): `r data %>% filter(Assignment == "PA7") %>%  select(Deadline)` -- Wednesday, 11:30pm
