@@ -3610,5 +3610,54 @@
     "title": "Modules",
     "section": "Readings",
     "text": "Readings\n\nUsing JavaFX UI Controls"
+  },
+  {
+    "objectID": "slides-09-01.html#events",
+    "href": "slides-09-01.html#events",
+    "title": "Event-driven programming",
+    "section": "Events",
+    "text": "Events\n\nUser actions (button clicks, keyboard and mouse input)\nEvents from other applications or the system (download has finished, smartwatch warning)\n\nWe have done some of this when coding button actions on JavaFX"
+  },
+  {
+    "objectID": "slides-09-01.html#event-driven-programming",
+    "href": "slides-09-01.html#event-driven-programming",
+    "title": "Event-driven programming",
+    "section": "Event-driven Programming",
+    "text": "Event-driven Programming\n\nWait (listen) for events\nReact to events as they occur\nUse appropriate event-handling methods"
+  },
+  {
+    "objectID": "slides-09-01.html#event-handling-in-javafx",
+    "href": "slides-09-01.html#event-handling-in-javafx",
+    "title": "Event-driven programming",
+    "section": "Event handling in JavaFX",
+    "text": "Event handling in JavaFX\n\nFor each GUI component, define an event handler listener"
+  },
+  {
+    "objectID": "slides-09-01.html#mouse-events-in-scene",
+    "href": "slides-09-01.html#mouse-events-in-scene",
+    "title": "Event-driven programming",
+    "section": "Mouse events in Scene",
+    "text": "Mouse events in Scene\nThe class Scence has a .addEventFilter() method. The MouseEvent class has a few events. Let’s use MOUSE_CLICKED.\nscene.addEventFilter(MouseEvent.MOUSE_CLICKED,\n                     new EventHandler&lt;MouseEvent&gt;() {});\nThe second argument in the addEventFilter is new EventHandler&lt;MouseEvent&gt;() {}, an anonymous inner class."
+  },
+  {
+    "objectID": "slides-09-01.html#inner-anonymous-class",
+    "href": "slides-09-01.html#inner-anonymous-class",
+    "title": "Event-driven programming",
+    "section": "Inner anonymous class",
+    "text": "Inner anonymous class\nscene.addEventFilter(MouseEvent.MOUSE_CLICKED, new EventHandler&lt;MouseEvent&gt;() {\n            public void handle(MouseEvent mouseEvent) {\n                int x = (int) mouseEvent.getX();\n                int y = (int) mouseEvent.getY();\n                System.out.println(x + \" \" + y);\n                drawDot(x, y, root);\n            }\n        });\nAdd a MOUSE_DRAGGED event handler"
+  },
+  {
+    "objectID": "slides-09-01.html#create-a-clear-button",
+    "href": "slides-09-01.html#create-a-clear-button",
+    "title": "Event-driven programming",
+    "section": "Create a clear button",
+    "text": "Create a clear button\n        Button clearButton = new Button(\"Clear\");\n        root.getChildren().add(clearButton);\n\n        clearButton.setOnAction((actionEvent) -&gt; {\n              clearGroup(root);\n        });"
+  },
+  {
+    "objectID": "modules.html#slides-8",
+    "href": "modules.html#slides-8",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nEvent-Driven Programmin"
   }
 ]
