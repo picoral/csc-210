@@ -88,5 +88,6 @@ clearButton.setOnAction((actionEvent) -> {
 
 ## Implement brush color and size
 
+Do not set global variables. Create a `Brush` class instead with instance variables for color and size.
 
 ![](images/brush-color-size.png)

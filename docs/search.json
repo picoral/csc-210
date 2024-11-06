@@ -3679,6 +3679,6 @@
     "href": "slides-09-01.html#implement-brush-color-and-size",
     "title": "Event-driven programming",
     "section": "Implement brush color and size",
-    "text": "Implement brush color and size"
+    "text": "Implement brush color and size\nDo not set global variables. Create a Brush class instead with instance variables for color and size."
   }
 ]
