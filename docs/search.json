@@ -3644,14 +3644,14 @@
     "href": "slides-09-01.html#inner-anonymous-class",
     "title": "Event-driven programming",
     "section": "Inner anonymous class",
-    "text": "Inner anonymous class\nscene.addEventFilter(MouseEvent.MOUSE_CLICKED, new EventHandler&lt;MouseEvent&gt;() {\n            public void handle(MouseEvent mouseEvent) {\n                int x = (int) mouseEvent.getX();\n                int y = (int) mouseEvent.getY();\n                System.out.println(x + \" \" + y);\n                drawDot(x, y, root);\n            }\n        });\nAdd a MOUSE_DRAGGED event handler"
+    "text": "Inner anonymous class\nscene.addEventFilter(MouseEvent.MOUSE_CLICKED, new EventHandler&lt;MouseEvent&gt;() {\n  public void handle(MouseEvent mouseEvent) {\n    int x = (int) mouseEvent.getX();\n    int y = (int) mouseEvent.getY();\n    System.out.println(x + \" \" + y);\n    drawDot(x, y, root);\n  }\n});"
   },
   {
     "objectID": "slides-09-01.html#create-a-clear-button",
     "href": "slides-09-01.html#create-a-clear-button",
     "title": "Event-driven programming",
     "section": "Create a clear button",
-    "text": "Create a clear button\n        Button clearButton = new Button(\"Clear\");\n        root.getChildren().add(clearButton);\n\n        clearButton.setOnAction((actionEvent) -&gt; {\n              clearGroup(root);\n        });"
+    "text": "Create a clear button\nImplement clearGroup(Group)\nButton clearButton = new Button(\"Clear\");\nroot.getChildren().add(clearButton);\n\nclearButton.setOnAction((actionEvent) -&gt; {\n  clearGroup(root);\n});"
   },
   {
     "objectID": "modules.html#slides-8",
@@ -3659,5 +3659,19 @@
     "title": "Modules",
     "section": "Slides",
     "text": "Slides\n\nEvent-Driven Programming"
+  },
+  {
+    "objectID": "slides-09-01.html#lambda-function",
+    "href": "slides-09-01.html#lambda-function",
+    "title": "Event-driven programming",
+    "section": "Lambda Function",
+    "text": "Lambda Function\nscene.addEventFilter(MouseEvent.MOUSE_CLICKED, (mouseEvent) -&gt; {\n  int x = (int) mouseEvent.getX();\n  int y = (int) mouseEvent.getY();\n  System.out.println(x + \" \" + y);\n  drawDot(x, y, root); \n});\nAdd a MOUSE_DRAGGED event handler"
+  },
+  {
+    "objectID": "slides-09-01.html#solution",
+    "href": "slides-09-01.html#solution",
+    "title": "Event-driven programming",
+    "section": "Solution",
+    "text": "Solution\npublic void clearGroup(Group group) {\n  Rectangle rectangle = new Rectangle();\n  rectangle.setX(0);\n  rectangle.setY(0);\n  rectangle.setWidth(scene.getWidth());\n  rectangle.setHeight(scene.getHeight());\n  rectangle.setFill(Color.WHITE);\n  group.getChildren().add(rectangle);\n}"
   }
 ]

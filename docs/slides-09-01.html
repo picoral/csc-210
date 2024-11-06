@@ -428,23 +428,45 @@
 <section id="inner-anonymous-class" class="slide level2">
 <h2>Inner anonymous class</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>scene.addEventFilter(MouseEvent.MOUSE_CLICKED, new EventHandler&lt;MouseEvent&gt;() {</span>
-<span id="cb2-2"><a></a>            public void handle(MouseEvent mouseEvent) {</span>
-<span id="cb2-3"><a></a>                int x = (int) mouseEvent.getX();</span>
-<span id="cb2-4"><a></a>                int y = (int) mouseEvent.getY();</span>
-<span id="cb2-5"><a></a>                System.out.println(x + " " + y);</span>
-<span id="cb2-6"><a></a>                drawDot(x, y, root);</span>
-<span id="cb2-7"><a></a>            }</span>
-<span id="cb2-8"><a></a>        });</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a></a>  public void handle(MouseEvent mouseEvent) {</span>
+<span id="cb2-3"><a></a>    int x = (int) mouseEvent.getX();</span>
+<span id="cb2-4"><a></a>    int y = (int) mouseEvent.getY();</span>
+<span id="cb2-5"><a></a>    System.out.println(x + " " + y);</span>
+<span id="cb2-6"><a></a>    drawDot(x, y, root);</span>
+<span id="cb2-7"><a></a>  }</span>
+<span id="cb2-8"><a></a>});</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="lambda-function" class="slide level2">
+<h2>Lambda Function</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>scene.addEventFilter(MouseEvent.MOUSE_CLICKED, (mouseEvent) -&gt; {</span>
+<span id="cb3-2"><a></a>  int x = (int) mouseEvent.getX();</span>
+<span id="cb3-3"><a></a>  int y = (int) mouseEvent.getY();</span>
+<span id="cb3-4"><a></a>  System.out.println(x + " " + y);</span>
+<span id="cb3-5"><a></a>  drawDot(x, y, root); </span>
+<span id="cb3-6"><a></a>});</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Add a <code>MOUSE_DRAGGED</code> event handler</p>
 </section>
 <section id="create-a-clear-button" class="slide level2">
 <h2>Create a <code>clear</code> button</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>        Button clearButton = new Button("Clear");</span>
-<span id="cb3-2"><a></a>        root.getChildren().add(clearButton);</span>
-<span id="cb3-3"><a></a></span>
-<span id="cb3-4"><a></a>        clearButton.setOnAction((actionEvent) -&gt; {</span>
-<span id="cb3-5"><a></a>              clearGroup(root);</span>
-<span id="cb3-6"><a></a>        });</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Implement <code>clearGroup(Group)</code></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>Button clearButton = new Button("Clear");</span>
+<span id="cb4-2"><a></a>root.getChildren().add(clearButton);</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a>clearButton.setOnAction((actionEvent) -&gt; {</span>
+<span id="cb4-5"><a></a>  clearGroup(root);</span>
+<span id="cb4-6"><a></a>});</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="solution" class="slide level2">
+<h2>Solution</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>public void clearGroup(Group group) {</span>
+<span id="cb5-2"><a></a>  Rectangle rectangle = new Rectangle();</span>
+<span id="cb5-3"><a></a>  rectangle.setX(0);</span>
+<span id="cb5-4"><a></a>  rectangle.setY(0);</span>
+<span id="cb5-5"><a></a>  rectangle.setWidth(scene.getWidth());</span>
+<span id="cb5-6"><a></a>  rectangle.setHeight(scene.getHeight());</span>
+<span id="cb5-7"><a></a>  rectangle.setFill(Color.WHITE);</span>
+<span id="cb5-8"><a></a>  group.getChildren().add(rectangle);</span>
+<span id="cb5-9"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
