@@ -21,7 +21,7 @@ We have done some of this when coding button actions on JavaFX
 
 ## Event handling in JavaFX
 
-* For each GUI component, define an event handler listener
+* For each GUI component, define an event handler
 
 ## Mouse events in `Scene`
 

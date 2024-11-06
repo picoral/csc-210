@@ -3630,7 +3630,7 @@
     "href": "slides-09-01.html#event-handling-in-javafx",
     "title": "Event-driven programming",
     "section": "Event handling in JavaFX",
-    "text": "Event handling in JavaFX\n\nFor each GUI component, define an event handler listener"
+    "text": "Event handling in JavaFX\n\nFor each GUI component, define an event handler"
   },
   {
     "objectID": "slides-09-01.html#mouse-events-in-scene",
