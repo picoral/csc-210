@@ -3673,5 +3673,12 @@
     "title": "Event-driven programming",
     "section": "Solution",
     "text": "Solution\nclearButton.setOnAction((actionEvent) -&gt; {\n  root.getChildren().clear();\n  root.getChildren().add(clearButton);\n});"
+  },
+  {
+    "objectID": "slides-09-01.html#implement-brush-color-and-size",
+    "href": "slides-09-01.html#implement-brush-color-and-size",
+    "title": "Event-driven programming",
+    "section": "Implement brush color and size",
+    "text": "Implement brush color and size"
   }
 ]
