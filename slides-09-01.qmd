@@ -1,0 +1,60 @@
+---
+title: "Event-driven programming"
+format: revealjs
+---
+
+## Events
+
+* User actions (button clicks, keyboard and mouse input)
+* Events from other applications or the system (download has finished, smartwatch warning)
+
+We have done some of this when coding button actions on JavaFX
+
+## Event-driven Programming
+
+* Wait (listen) for events
+* React to events as they occur
+* Use appropriate event-handling methods
+
+## Event handling in JavaFX
+
+* For each GUI component, define an event handler listener
+
+## Mouse events in `Scene`
+
+The class `Scence` has a `.addEventFilter()` method.
+The [`MouseEvent` class](https://docs.oracle.com/javase/6/docs/api/java/awt/event/MouseEvent.html#:~:text=Class%20MouseEvent&text=An%20event%20which%20indicates%20that,bounds%20when%20the%20action%20happens.) has a few events. Let's use `MOUSE_CLICKED`.
+
+```{java}
+scene.addEventFilter(MouseEvent.MOUSE_CLICKED,
+                     new EventHandler<MouseEvent>() {});
+```
+
+The second argument in the `addEventFilter` is `new EventHandler<MouseEvent>() {}`, an anonymous inner class.
+
+## Inner anonymous class
+
+```{java}
+scene.addEventFilter(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            public void handle(MouseEvent mouseEvent) {
+                int x = (int) mouseEvent.getX();
+                int y = (int) mouseEvent.getY();
+                System.out.println(x + " " + y);
+                drawDot(x, y, root);
+            }
+        });
+```
+
+Add a `MOUSE_DRAGGED` event handler
+
+## Create a `clear` button
+
+```{java}
+        Button clearButton = new Button("Clear");
+        root.getChildren().add(clearButton);
+
+        clearButton.setOnAction((actionEvent) -> {
+              clearGroup(root);
+        });
+```
+
