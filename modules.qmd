@@ -257,7 +257,7 @@ Topic: `r schedule %>% filter(week == 12) %>% pull(topic)`
 
 ## Slides
 
-* [Event-Driven Programmin](slides-09-01.html)
+* [Event-Driven Programming](slides-09-01.html)
 
 ## Assignments
 
