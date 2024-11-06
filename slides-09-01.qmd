@@ -50,6 +50,8 @@ scene.addEventFilter(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
 
 ## Lambda Function
 
+Anonymous method with a concise syntax: `(e) -> {}`
+
 ```{java}
 scene.addEventFilter(MouseEvent.MOUSE_CLICKED, (mouseEvent) -> {
   int x = (int) mouseEvent.getX();
@@ -71,21 +73,18 @@ Button clearButton = new Button("Clear");
 root.getChildren().add(clearButton);
 
 clearButton.setOnAction((actionEvent) -> {
-  clearGroup(root);
+  // TODO 
 });
 ```
 
 ## Solution
 
 ```{java}
-public void clearGroup(Group group) {
-  Rectangle rectangle = new Rectangle();
-  rectangle.setX(0);
-  rectangle.setY(0);
-  rectangle.setWidth(scene.getWidth());
-  rectangle.setHeight(scene.getHeight());
-  rectangle.setFill(Color.WHITE);
-  group.getChildren().add(rectangle);
-}
+clearButton.setOnAction((actionEvent) -> {
+  root.getChildren().clear();
+  root.getChildren().add(clearButton);
+});
 ```
+
+
 

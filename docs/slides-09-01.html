@@ -438,6 +438,7 @@
 </section>
 <section id="lambda-function" class="slide level2">
 <h2>Lambda Function</h2>
+<p>Anonymous method with a concise syntax: <code>(e) -&gt; {}</code></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>scene.addEventFilter(MouseEvent.MOUSE_CLICKED, (mouseEvent) -&gt; {</span>
 <span id="cb3-2"><a></a>  int x = (int) mouseEvent.getX();</span>
 <span id="cb3-3"><a></a>  int y = (int) mouseEvent.getY();</span>
@@ -453,20 +454,15 @@
 <span id="cb4-2"><a></a>root.getChildren().add(clearButton);</span>
 <span id="cb4-3"><a></a></span>
 <span id="cb4-4"><a></a>clearButton.setOnAction((actionEvent) -&gt; {</span>
-<span id="cb4-5"><a></a>  clearGroup(root);</span>
+<span id="cb4-5"><a></a>  // TODO </span>
 <span id="cb4-6"><a></a>});</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="solution" class="slide level2">
 <h2>Solution</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>public void clearGroup(Group group) {</span>
-<span id="cb5-2"><a></a>  Rectangle rectangle = new Rectangle();</span>
-<span id="cb5-3"><a></a>  rectangle.setX(0);</span>
-<span id="cb5-4"><a></a>  rectangle.setY(0);</span>
-<span id="cb5-5"><a></a>  rectangle.setWidth(scene.getWidth());</span>
-<span id="cb5-6"><a></a>  rectangle.setHeight(scene.getHeight());</span>
-<span id="cb5-7"><a></a>  rectangle.setFill(Color.WHITE);</span>
-<span id="cb5-8"><a></a>  group.getChildren().add(rectangle);</span>
-<span id="cb5-9"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>clearButton.setOnAction((actionEvent) -&gt; {</span>
+<span id="cb5-2"><a></a>  root.getChildren().clear();</span>
+<span id="cb5-3"><a></a>  root.getChildren().add(clearButton);</span>
+<span id="cb5-4"><a></a>});</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -525,7 +521,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
