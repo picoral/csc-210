@@ -3680,5 +3680,12 @@
     "title": "Event-driven programming",
     "section": "Implement brush color and size",
     "text": "Implement brush color and size\nDo not set global variables. Create a Brush class instead with instance variables for color and size."
+  },
+  {
+    "objectID": "slides-09-01.html#starter-code",
+    "href": "slides-09-01.html#starter-code",
+    "title": "Event-driven programming",
+    "section": "Starter code",
+    "text": "Starter code\npackage com.paint;\n\nimport javafx.application.Application;\nimport javafx.scene.Group;\nimport javafx.scene.Scene;\nimport javafx.scene.shape.Circle;\nimport javafx.stage.Stage;\n\nimport java.io.IOException;\n\n/**\n * JavaFX App\n */\npublic class App extends Application {\n\n    private static Scene scene;\n\n    public static void main(String[] args) {\n        launch();\n    }\n\n    public void drawDot(int x, int y, Group group) {\n        Circle circle = new Circle();\n        circle.setCenterX(x);\n        circle.setCenterY(y);\n        circle.setRadius(5);\n        group.getChildren().add(circle);\n    }\n\n    @Override\n    public void start(Stage stage) throws IOException {\n        stage.setTitle(\"My Window\");\n\n        // set up the canvas\n        Group root = new Group();\n        drawDot(10, 10, root);\n\n        scene = new Scene(root, 640, 480);\n        stage.setScene(scene);\n        stage.show();\n    }\n   \n}"
   }
 ]

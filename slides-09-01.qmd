@@ -23,6 +23,55 @@ We have done some of this when coding button actions on JavaFX
 
 * For each GUI component, define an event handler
 
+## Starter code
+
+```{java}
+package com.paint;
+
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.shape.Circle;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+/**
+ * JavaFX App
+ */
+public class App extends Application {
+
+    private static Scene scene;
+
+    public static void main(String[] args) {
+        launch();
+    }
+
+    public void drawDot(int x, int y, Group group) {
+        Circle circle = new Circle();
+        circle.setCenterX(x);
+        circle.setCenterY(y);
+        circle.setRadius(5);
+        group.getChildren().add(circle);
+    }
+
+    @Override
+    public void start(Stage stage) throws IOException {
+        stage.setTitle("My Window");
+
+        // set up the canvas
+        Group root = new Group();
+        drawDot(10, 10, root);
+
+        scene = new Scene(root, 640, 480);
+        stage.setScene(scene);
+        stage.show();
+    }
+   
+}
+```
+
+
 ## Mouse events in `Scene`
 
 The class `Scence` has a `.addEventFilter()` method.
