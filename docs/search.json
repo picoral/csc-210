@@ -3644,7 +3644,7 @@
     "href": "slides-09-01.html#inner-anonymous-class",
     "title": "Event-driven programming",
     "section": "Inner anonymous class",
-    "text": "Inner anonymous class\nscene.addEventFilter(MouseEvent.MOUSE_CLICKED, new EventHandler&lt;MouseEvent&gt;() {\n  public void handle(MouseEvent mouseEvent) {\n    int x = (int) mouseEvent.getX();\n    int y = (int) mouseEvent.getY();\n    System.out.println(x + \" \" + y);\n    drawDot(x, y, root);\n  }\n});"
+    "text": "Inner anonymous class\nEventHandler class documentation\nscene.addEventFilter(MouseEvent.MOUSE_CLICKED, new EventHandler&lt;MouseEvent&gt;() {\n  public void handle(MouseEvent mouseEvent) {\n    int x = (int) mouseEvent.getX();\n    int y = (int) mouseEvent.getY();\n    System.out.println(x + \" \" + y);\n    drawDot(x, y, root);\n  }\n});"
   },
   {
     "objectID": "slides-09-01.html#create-a-clear-button",
