@@ -1,0 +1,80 @@
+---
+title: "Short Assignment 10"
+---
+
+## Introduction 
+
+I this short assignment you will be expanding on [the paint application interface
+that we started working on in class](slides-09-01).
+
+## Starter code
+
+Here's the starter code in JavaFX (remeber to change the package name to match your
+project directory names).
+
+```{java}
+package com.paint;
+
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.shape.Circle;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+/**
+ * JavaFX App
+ */
+public class App extends Application {
+
+    private static Scene scene;
+
+    public static void main(String[] args) {
+        launch();
+    }
+
+    public void drawDot(int x, int y, Group group) {
+        Circle circle = new Circle();
+        circle.setCenterX(x);
+        circle.setCenterY(y);
+        circle.setRadius(5);
+        group.getChildren().add(circle);
+    }
+
+    @Override
+    public void start(Stage stage) throws IOException {
+        stage.setTitle("My Window");
+
+        // set up the canvas
+        Group root = new Group();
+        drawDot(10, 10, root);
+
+        scene = new Scene(root, 640, 480);
+        stage.setScene(scene);
+        stage.show();
+    }
+   
+}
+```
+
+## Brush color, size and shape
+
+Add buttons to select at least 3 colors, and 3 shapes. Add a button to increase the 
+size of the brush and another to decrease the size of the brush.
+
+Do not use global variables to store size, color and shape information. Create a `Brush` class following encapsulation principles (private instance variables, public getters and setters).
+
+Here's a demonstration of what you could do (although it's up to you to be creative and
+do something different from what I did):
+
+{{< video https://youtu.be/rWFiFGPb-Ok >}}
+
+## Bonus points
+
+Bonus points will be awarded to the best applications (as decided by TAs)
+
+## Submission
+
+Submit a link to your video demonstration. When recording the demostration video, you are required to have your name on the title of the GUI window, and you are required to show your source code (`App.java`) with the
+header showing the current semester and your name. 

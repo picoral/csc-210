@@ -3687,5 +3687,47 @@
     "title": "Event-driven programming",
     "section": "Starter code",
     "text": "Starter code\npackage com.paint;\n\nimport javafx.application.Application;\nimport javafx.scene.Group;\nimport javafx.scene.Scene;\nimport javafx.scene.shape.Circle;\nimport javafx.stage.Stage;\n\nimport java.io.IOException;\n\n/**\n * JavaFX App\n */\npublic class App extends Application {\n\n    private static Scene scene;\n\n    public static void main(String[] args) {\n        launch();\n    }\n\n    public void drawDot(int x, int y, Group group) {\n        Circle circle = new Circle();\n        circle.setCenterX(x);\n        circle.setCenterY(y);\n        circle.setRadius(5);\n        group.getChildren().add(circle);\n    }\n\n    @Override\n    public void start(Stage stage) throws IOException {\n        stage.setTitle(\"My Window\");\n\n        // set up the canvas\n        Group root = new Group();\n        drawDot(10, 10, root);\n\n        scene = new Scene(root, 640, 480);\n        stage.setScene(scene);\n        stage.show();\n    }\n   \n}"
+  },
+  {
+    "objectID": "short-assignment-10.html",
+    "href": "short-assignment-10.html",
+    "title": "Short Assignment 10",
+    "section": "",
+    "text": "I this short assignment you will be expanding on the paint application interface that we started working on in class."
+  },
+  {
+    "objectID": "short-assignment-10.html#introduction",
+    "href": "short-assignment-10.html#introduction",
+    "title": "Short Assignment 10",
+    "section": "",
+    "text": "I this short assignment you will be expanding on the paint application interface that we started working on in class."
+  },
+  {
+    "objectID": "short-assignment-10.html#starter-code",
+    "href": "short-assignment-10.html#starter-code",
+    "title": "Short Assignment 10",
+    "section": "Starter code",
+    "text": "Starter code\nHere’s the starter code in JavaFX (remeber to change the package name to match your project directory names).\npackage com.paint;\n\nimport javafx.application.Application;\nimport javafx.scene.Group;\nimport javafx.scene.Scene;\nimport javafx.scene.shape.Circle;\nimport javafx.stage.Stage;\n\nimport java.io.IOException;\n\n/**\n * JavaFX App\n */\npublic class App extends Application {\n\n    private static Scene scene;\n\n    public static void main(String[] args) {\n        launch();\n    }\n\n    public void drawDot(int x, int y, Group group) {\n        Circle circle = new Circle();\n        circle.setCenterX(x);\n        circle.setCenterY(y);\n        circle.setRadius(5);\n        group.getChildren().add(circle);\n    }\n\n    @Override\n    public void start(Stage stage) throws IOException {\n        stage.setTitle(\"My Window\");\n\n        // set up the canvas\n        Group root = new Group();\n        drawDot(10, 10, root);\n\n        scene = new Scene(root, 640, 480);\n        stage.setScene(scene);\n        stage.show();\n    }\n   \n}"
+  },
+  {
+    "objectID": "short-assignment-10.html#brush-color-size-and-shape",
+    "href": "short-assignment-10.html#brush-color-size-and-shape",
+    "title": "Short Assignment 10",
+    "section": "Brush color, size and shape",
+    "text": "Brush color, size and shape\nAdd buttons to select at least 3 colors, and 3 shapes. Add a button to increase the size of the brush and another to decrease the size of the brush.\nDo not use global variables to store size, color and shape information. Create a Brush class following encapsulation principles (private instance variables, public getters and setters).\nHere’s a demonstration of what you could do (although it’s up to you to be creative and do something different from what I did):"
+  },
+  {
+    "objectID": "short-assignment-10.html#bonus-points",
+    "href": "short-assignment-10.html#bonus-points",
+    "title": "Short Assignment 10",
+    "section": "Bonus points",
+    "text": "Bonus points\nBonus points will be awarded to the best applications (as decided by TAs)"
+  },
+  {
+    "objectID": "short-assignment-10.html#submission",
+    "href": "short-assignment-10.html#submission",
+    "title": "Short Assignment 10",
+    "section": "Submission",
+    "text": "Submission\nSubmit a link to your video demonstration. When recording the demostration video, you are required to have your name on the title of the GUI window, and you are required to show your source code (App.java) with the header showing the current semester and your name."
   }
 ]
