@@ -263,3 +263,14 @@ Topic: `r schedule %>% filter(week == 12) %>% pull(topic)`
 
 * [Short Assignment 09](slides-08-02.html) -- Deadline: `r data %>% filter(Assignment == "SA9") %>%  select(Deadline)` -- Tuesday, 11:30pm 
 * [Programming Assignment 07](programming-assignment-07.html): `r data %>% filter(Assignment == "PA7") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+# Week 13
+
+`r schedule %>% filter(week == 13) %>% pull(dates)`
+
+Topic: `r schedule %>% filter(week == 13) %>% pull(topic)`
+
+
+## Assignments
+
+* [Short Assignment 10](short-assignment-10.html) -- Deadline: `r data %>% filter(Assignment == "SA10") %>%  select(Deadline)` -- Tuesday, 11:30pm 
