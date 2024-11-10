@@ -273,4 +273,4 @@ Topic: `r schedule %>% filter(week == 13) %>% pull(topic)`
 
 ## Assignments
 
-* [Short Assignment 10](short-assignment-10.html) -- Deadline: `r data %>% filter(Assignment == "SA10") %>%  select(Deadline)` -- Tuesday, 11:30pm 
+* [Short Assignment 10](short-assignment-10.html) -- Deadline: `r data %>% filter(Assignment == "SA10") %>%  select(Deadline)` -- Monday, 11:30pm 
