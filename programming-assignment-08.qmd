@@ -91,6 +91,46 @@ should be named `output_input.txt`.
 You are require to write a `WordSearch.java` class that has a main
 method, and the first argument provided is the input file name.
 
+# Diagonal words
+
+Some of your words should be diagonal (in addition to horizontal and vertical words). Here's an example with diagonal words.
+
+```
+K M J M P S P L O Y Y H J T U R O Y J H 
+H K L C O K Q M C P Y A H U F C V F W H 
+T D U Y F U A C I G D T Q H L C W R Y N 
+X L V Q A C S M E F S T B X R N G S X T 
+V G L E T L R E X C Y U A M A Z I N G X 
+G L Q G C N T O E H M N K P R O T Q D C 
+U L Y E R J J E I J O F G Y O O Y B K X 
+K M W L A K L X A S E U Y E F C H R I M 
+J C C B P Q R S S D S X S E A S C O N E 
+E N J P U M B V R L K A Q E M A W W X I 
+E F F H P W O U M S B E N V X K X N R Q 
+U H X X Q V I W O C S J Q T M U U I W O 
+G J N B C M L U Q B W U X M G H N E E A 
+L J B L G R S Q Y J K O P M Q Y J S W M 
+T P X E T D C I D S G O Y C N E D V V X 
+N A P K I N F I O L Q G M D T L T D V K 
+W B C B K M U C O F F E E S O S L G F L 
+F U D G E U E M L N O P F Y U S I K U E 
+I B C O M T G M I L K G R Q B R E R V A 
+G W D Y O D L J Q A O B R D R F Q D P C 
+```
+
+* amazing is at 4 12 (horizontal)
+* zoo is at 4 15 (vertical)
+* house is at 5 9 (diagonal)
+* mouse is at 0 3 (diagonal)
+* croissant is at 3 5 (diagonal)
+* coffee is at 16 7 (horizontal)
+* milk is at 18 7 (horizontal)
+* tea is at 5 6 (diagonal)
+* scone is at 8 15 (horizontal)
+* brownie is at 6 17 (vertical)
+* napkin is at 15 0 (horizontal)
+* fudge is at 17 0 (horizontal)
+
 # Decomposition
 
 * Points will be taken off for copy, pasted, and edited code that
