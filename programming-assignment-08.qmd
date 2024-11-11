@@ -89,7 +89,9 @@ name. For example, if the input file is named `input.txt` the output file
 should be named `output_input.txt`.
 
 You are require to write a `WordSearch.java` class that has a main
-method, and the first argument provided is the input file name.
+method, and the first argument provided is the input file name. All
+the other classes and methods are up to you. The autograder will be
+checking the output text file you create.
 
 # Diagonal words
 
