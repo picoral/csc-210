@@ -17,8 +17,8 @@ data <- read_excel("assessment-deadlines.xlsx")
 Deadline: `r data %>% filter(Assignment == "PA8") %>%  select(Deadline)` -- Friday, 11:30pm
 
 This assignment is part 1 of a 2-part assignment. In this assignment
-you will create code to create a word search game. In the next assignment
-you will create code for a user to play that game.
+you will write code to create a word search game. In the next assignment
+you will write code for a user to play that game.
 
 # Make word search game
 
@@ -46,7 +46,7 @@ fugde
 The first line of the file will always give you the dimensions of
 the word search grid. The other lines will contain one word per line.
 
-Here's an example output based on the input file given above:
+Here's an example output based on the input file given above (your output does not have to match this exactly, but all words need to be there):
 
 ```
 X H N R C B V D P S R P X L O T L C X O 
