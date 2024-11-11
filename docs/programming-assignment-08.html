@@ -128,17 +128,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#pa8-gardenguiout" id="toc-pa8-gardenguiout" class="nav-link active" data-scroll-target="#pa8-gardenguiout">PA8-GardenGUIout</a>
-  <ul class="collapse">
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#the-assignment" id="toc-the-assignment" class="nav-link" data-scroll-target="#the-assignment">The Assignment</a></li>
-  <li><a href="#delay-parameter" id="toc-delay-parameter" class="nav-link" data-scroll-target="#delay-parameter">Delay parameter</a></li>
-  <li><a href="#steps-for-completing-this-assignment" id="toc-steps-for-completing-this-assignment" class="nav-link" data-scroll-target="#steps-for-completing-this-assignment">Steps for completing this assignment</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
-  <li><a href="#general-requirements" id="toc-general-requirements" class="nav-link" data-scroll-target="#general-requirements">General requirements</a></li>
-  <li><a href="#grading-criteria" id="toc-grading-criteria" class="nav-link" data-scroll-target="#grading-criteria">Grading Criteria</a></li>
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
-  </ul></li>
+  <li><a href="#make-word-search-game" id="toc-make-word-search-game" class="nav-link active" data-scroll-target="#make-word-search-game">Make word search game</a></li>
+  <li><a href="#decomposition" id="toc-decomposition" class="nav-link" data-scroll-target="#decomposition">Decomposition</a></li>
+  <li><a href="#code-clarity" id="toc-code-clarity" class="nav-link" data-scroll-target="#code-clarity">Code Clarity</a></li>
   </ul>
 </nav>
     </div>
@@ -164,93 +156,88 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Deadline: November 13, 2024 – Wednesday, 11:30pm</p>
-<section id="pa8-gardenguiout" class="level1">
-<h1>PA8-GardenGUIout</h1>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>The goal of this assignment is to use basic JavaFX to create a GUI output representation of the PA6-Garden program.</p>
-</section>
-<section id="the-assignment" class="level2">
-<h2 class="anchored" data-anchor-id="the-assignment">The Assignment</h2>
-<p>In class on Friday March 30th we talked about ways to consider improving your PA6-Garden implementation. In this assignment, you will build on the improved PA6-Garden implemention to visually represent your garden simulation.</p>
-<p>For PA8, you will be graphically representing each plant in the output as well as handling a ‘delay’ command from the input file that represents how long to wait between the execution of commands. In the video example (PublicTestCases/customPlant.in and PublicTestCases/CustomPlantExample.mp4), each part of a plant (i.e., each character from the PA6 output) is represented by uniquely colored tile on a canvas.</p>
-<p><strong>The ‘PRINT’ command is also completely excluded from this program.</strong> This means that you should not expect any ‘PRINT’ commands from any input file. You can leave in the print handling code if you would like however.</p>
-<p>Please open and watch ‘PublicTestCases/Example.mp4’ to see an example GUI output for the input file ‘PublicTestCases/Garden.in’. Also see ‘PublicTestCases/customPlant.in’ and ‘PublicTestCases/CustomPlantExample.mp4’. You will be creating a variant of Garden.in for your own unique plant or garden object.</p>
-<p>You should also be looking at the PA6-Garden writeup to refresh your memory on how it works: https://github.com/UACS210Spring2018/PA-and-Section-Writeups/tree/master/PA6-Garden.</p>
-</section>
-<section id="delay-parameter" class="level2">
-<h2 class="anchored" data-anchor-id="delay-parameter">Delay parameter</h2>
-<p>The input file format for this assignment is exactly the same as that of PA6-Garden, except that you will now have to handle a delay parameter. The delay will be specified on the third line of the input file right under the ‘cols’ parameter. An example input is shown below:</p>
-<pre><code>rows: 1
-cols: 1
-delay: 3.0
-
-PLANT (0,0) sunflower
-PLANT (2,2) tulip
-PLANT (5,5) iris
-GROW 1</code></pre>
-<p>The number after ‘delay:’ is a <strong>double</strong> that represents the time to wait before each command is executed. In the video example (CustomPlantExample.mp4), this delay was set to <strong>.5</strong>, therefore, each command was executed after waiting a half second.</p>
-</section>
-<section id="steps-for-completing-this-assignment" class="level2">
-<h2 class="anchored" data-anchor-id="steps-for-completing-this-assignment">Steps for completing this assignment</h2>
-<ol type="1">
-<li><p>See a tutorial on how to install the JavaFX plugin in Eclipse at (https://docs.google.com/document/d/1FUROjRbvIi_WKNYJ-00uprIo2YPHDNd72SrqgwaqKis/edit?usp=sharing). The tutorial is also posted on the CS 210 resources webpage (https://piazza.com/arizona/spring2018/csc210/resources).</p></li>
-<li><p>Accept the github assignment for PA8, (https://classroom.github.com/a/JKfUfTBS). Import your PA8 github repository into Eclipse as usual.</p></li>
-<li><p>Run the given starter code and see what it does.</p></li>
-<li><p>Copy your PA6 code into the Eclipse project.</p></li>
-<li><p>Implement the TODO items in the provided PA8Main.java.</p></li>
-<li><p>Create your own copy of Garden.in called myGarden.in that includes planting your unique garden item.</p></li>
-<li><p>Make a video of running myGarden.in through your program.</p></li>
-</ol>
-</section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<p>The provided code uses some new concepts. We will be covering them in class. Additionally, here are some references.</p>
+<p>Deadline: November 22 2024 – Friday, 11:30pm</p>
+<p>This assignment is part 1 of a 2-part assignment. In this assignment you will create code to create a word search game. In the next assignment you will create code for a user to play that game.</p>
+<section id="make-word-search-game" class="level1">
+<h1>Make word search game</h1>
+<p>In this assignment, your goal is to create a word search grid based on an input text file.</p>
+<p>Example of input file:</p>
+<pre><code>20 20
+amazing
+zoo
+house
+mouse
+croissant
+coffee
+milk
+tea
+scone
+brownie
+napkin
+fugde</code></pre>
+<p>The first line of the file will always give you the dimensions of the word search grid. The other lines will contain one word per line.</p>
+<p>Here’s an example output based on the input file given above:</p>
+<pre><code>X H N R C B V D P S R P X L O T L C X O 
+K M I L K K Y B J T G L T P Y K F R N C 
+Y G Q K T A M A Z I N G W U T B C J I A 
+Q A M W P L P T O U R I V R P J U K G W 
+H I J D X K B P O Y N A P K I N J D W I 
+Y O B P B W G M V I Y M X Y U D G V A R 
+N E W W R N R B L D F U D G E W J V E T 
+J J S C O N E D J D O S U V A W X I H R 
+A L A T W M I C R O I S S A N T D N C R 
+W L B Q N Q X O X X T F K E B G R D C H 
+M I L K I I D F G R E T W Y B K M W P U 
+O P I C E F D F I P N F O Y T N T G D D 
+T E A H U N C E H X H K K D U U P U S F 
+E W D L Q S J E I R B C Y R V W Y W S Q 
+R T I L G G R X A P G O M K W O B M M I 
+E F J X L Y L J W Y G H O U S E K J Q B 
+N O H E I C U X V B Y Q U J I L L Q A C 
+Y G E C J Y L B J C Y K S Y N F G K T J 
+M S Y I A N D Q G I A H E V G C W W A B 
+B U O R T Y K E D X Y K A X K T I X T Q</code></pre>
 <ul>
-<li>drawing to a canvas, https://docs.oracle.com/javafx/2/canvas/jfxpub-canvas.htm</li>
-<li>lambda functions,http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html</li>
-<li>colors to pick from, https://docs.oracle.com/javase/8/javafx/api/javafx/scene/paint/Color.html</li>
+<li>amazing is at 2 5</li>
+<li>zoo is at 2 8</li>
+<li>house is at 15 11</li>
+<li>mouse is at 14 12</li>
+<li>croissant is at 8 7</li>
+<li>coffee is at 8 7</li>
+<li>milk is at 10 0</li>
+<li>tea is at 12 0</li>
+<li>scone is at 7 2</li>
+<li>brownie is at 5 4</li>
+<li>napkin is at 4 10</li>
+<li>fudge is at 6 10</li>
 </ul>
+<p>You are to write out an output file that has <code>ouput_</code> in front of the file name. For example, if the input file is named <code>input.txt</code> the output file should be named <code>output_input.txt</code>.</p>
+<p>You are require to write a <code>WordSearch.java</code> class that has a main method, and the first argument provided is the input file name.</p>
 </section>
-<section id="general-requirements" class="level2">
-<h2 class="anchored" data-anchor-id="general-requirements">General requirements</h2>
-<p>This assignment is different from other assignments you’ve had so far in that you are given a lot more freedom to design your output the way you want. You can try to mimic what was done in the video and get the credit for it, but however you choose to output your garden, the following general requirements must be met:</p>
-<ul>
-<li><p>Each plant must be <strong>one-of-a-kind</strong>, meaning they must be distinguishable from any other plant and the background. In the example video, this is done by using a different color for each plant against a brown background. You do not have to do it this way, for example, you can choose to use an image for each plant instead of a colored tile.</p></li>
-<li><p>Each command must be <strong>visually noticeable</strong>. This means that when ‘GROW 1’ is called for example, it should be visually obvious that every plant just grew by 1. In the example video, grow commands cause more identical tiles to be drawn in some fashion (depending on the plant type) around every plant.</p></li>
-<li><p>There must be a command log which displays commands as they are being executed. In the example video, this is done in a TextArea at the bottom of the garden.</p></li>
-<li><p>You must still handle errors. Errors that don’t cause the program to stop (such as ‘Can’t grow here’) should be <strong>distinguishable</strong> in the command log. In the video example, the error is fully capitalized and spaced out from surrounding text. For errors that do cause the program to stop, such as ‘Invalid dimension input’ or ‘File not found’ should still print to stdout and exit the program as usual.</p></li>
-</ul>
-</section>
-<section id="grading-criteria" class="level2">
-<h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
-<p>Half of the PA8 grade will correctness. For this assignment, this is the GUI output. You should also expect that we might run your program with additional input files besides the ones provided.</p>
-<p>The other half of the PA8 grade will be your decomposition and code clarity.</p>
-<p>Decomposition</p>
+<section id="decomposition" class="level1">
+<h1>Decomposition</h1>
 <ul>
 <li><p>Points will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.</p></li>
-<li><p><strong>This program should use fewer than 10 .java files.</strong> Each of these files should be (&lt;300 lines).</p></li>
+<li><p><strong>This program should use fewer than 10 .java files.</strong> Each of these files should be (&lt;200 lines). Do NOT include PA10hardCodedDemo.java.</p></li>
 <li><p>Each method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.</p></li>
 </ul>
-<p>Code Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work</p>
+</section>
+<section id="code-clarity" class="level1">
+<h1>Code Clarity</h1>
 <ul>
+<li><p>YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it.</p>
+<ul>
+<li>No magic numbers</li>
+<li>No methods written to just get the test cases to work</li>
+</ul></li>
 <li><p>There needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.</p></li>
 <li><p><strong>The file header should include instructions on how someone would use this program.</strong> To use the program, one would need to know the input file format. One would also need to know the command line arguments that should be passed to the program.</p></li>
 <li><p>Use meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).</p></li>
 <li><p>The clearest code examples will be anonymously shown in class.</p></li>
 <li><p>The most obfuscated code examples will be anonymously shown in class with suggestions for improvement.</p></li>
 </ul>
-</section>
-<section id="submission" class="level2">
-<h2 class="anchored" data-anchor-id="submission">Submission</h2>
-<p>For this assignment, you are <strong>REQUIRED</strong> to submit all of the following files to Gradescope before Monday April 9th at 11:30am. * All the Java source files needed to run your program. * myGarden.in * myGarden.mp4, or other video format that can be run on multiple platforms. The video should be between 10 and 15 seconds long.</p>
-<p>To create the video, you can use a program to record your screen as you run your program, or you can simply record your screen with your smartphone or tablet. Do note however that the video you submit must be of good enough quality for the SL’s to clearly see your garden and command logs.</p>
-<p>Write your own code. We will be using a tool that finds similar code.</p>
-<p>It is recommended that when talking with others about the assignment, do not write anything down.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
