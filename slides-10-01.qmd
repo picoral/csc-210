@@ -1,0 +1,39 @@
+---
+title: "Decomposition"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## Algorithmic decomposition 
+
+* The process of breaking down a problem into well-defined steps
+* Object-oriented decomposition breaks a large system down into progressively smaller classes 
+* Cognitive skills used in decomposition: abstraction, decision making, inference, analysis, synthesis, etc.
+* Design paradigms: top-down and bottom-up programming
+
+## Top-down vs. Bottom-up
+
+**Top-down development**: start at implementing the most general modules 
+
+**The bottom-up development**: start at implementing the modules that provide specific functionality and then integrate them into more general modules
+
+In practice, there is no pure bottom-up or pure top-down design. A problem solver attempts several approaches on the path to the final solution (Charitsis et al., 2022)
+
+## Decomposition steps
+
+1) abstract the problem from its description
+2) generate subproblems
+3) transform subproblems into subsolutions
+4) recompose the subsolutions into a working program
+5) evaluate and iterate
+
+## Refactoring
+
+Goal: identify subsolutions, recompose the subsolutions into a working program
+
+Problem: game of Tic-Tac-Toe
+
+[Download the `TicTacToe.java`](files/TicTacToe.java) file and refactor it into multiple classes with appropriate methods. This assignment focused on breaking a large problem
+down into smaller subproblems and properly incorporating encapsulation, inheritance, and polymorphism. 

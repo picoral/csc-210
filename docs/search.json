@@ -3736,5 +3736,33 @@
     "title": "Modules",
     "section": "Assignments",
     "text": "Assignments\n\nShort Assignment 10 – Deadline: November 18, 2024 – Monday, 11:30pm"
+  },
+  {
+    "objectID": "slides-10-01.html#algorithmic-decomposition",
+    "href": "slides-10-01.html#algorithmic-decomposition",
+    "title": "Decomposition",
+    "section": "Algorithmic decomposition",
+    "text": "Algorithmic decomposition\n\nThe process of breaking down a problem into well-defined steps\nObject-oriented decomposition breaks a large system down into progressively smaller classes\nCognitive skills used in decomposition: abstraction, decision making, inference, analysis, synthesis, etc.\nDesign paradigms: top-down and bottom-up programming"
+  },
+  {
+    "objectID": "slides-10-01.html#top-down-vs.-bottom-up",
+    "href": "slides-10-01.html#top-down-vs.-bottom-up",
+    "title": "Decomposition",
+    "section": "Top-down vs. Bottom-up",
+    "text": "Top-down vs. Bottom-up\nTop-down development: start at implementing the most general modules\nThe bottom-up development: start at implementing the modules that provide specific functionality and then integrate them into more general modules\nIn practice, there is no pure bottom-up or pure top-down design. A problem solver attempts several approaches on the path to the final solution (Charitsis et al., 2022)"
+  },
+  {
+    "objectID": "slides-10-01.html#decomposition-steps",
+    "href": "slides-10-01.html#decomposition-steps",
+    "title": "Decomposition",
+    "section": "Decomposition steps",
+    "text": "Decomposition steps\n\nabstract the problem from its description\ngenerate subproblems\ntransform subproblems into subsolutions\nrecompose the subsolutions into a working program\nevaluate and iterate"
+  },
+  {
+    "objectID": "slides-10-01.html#refactoring",
+    "href": "slides-10-01.html#refactoring",
+    "title": "Decomposition",
+    "section": "Refactoring",
+    "text": "Refactoring\nGoal: identify subsolutions, recompose the subsolutions into a working program\nProblem: game of Tic-Tac-Toe\nDownload the TicTacToe.java file and refactor it into multiple classes with appropriate methods. This assignment focused on breaking a large problem down into smaller subproblems and properly incorporating encapsulation, inheritance, and polymorphism."
   }
 ]
