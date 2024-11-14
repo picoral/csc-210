@@ -35,5 +35,9 @@ Goal: identify subsolutions, recompose the subsolutions into a working program
 
 Problem: game of Tic-Tac-Toe
 
-[Download the `TicTacToe.java`](files/TicTacToe.java) file and refactor it into multiple classes with appropriate methods. This assignment focused on breaking a large problem
-down into smaller subproblems and properly incorporating encapsulation, inheritance, and polymorphism. 
+[Download the `TicTacToe.java`](files/TicTacToe.java) file and refactor it into multiple classes with appropriate methods. This assignment focuses on breaking a large problem down into smaller subproblems and properly incorporate encapsulation, inheritance, and polymorphism. 
+
+## Write JUnit tests
+
+Now that you have classes and methods, write JUnit tests to test
+your game functionality.

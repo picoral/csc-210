@@ -3763,6 +3763,13 @@
     "href": "slides-10-01.html#refactoring",
     "title": "Decomposition",
     "section": "Refactoring",
-    "text": "Refactoring\nGoal: identify subsolutions, recompose the subsolutions into a working program\nProblem: game of Tic-Tac-Toe\nDownload the TicTacToe.java file and refactor it into multiple classes with appropriate methods. This assignment focused on breaking a large problem down into smaller subproblems and properly incorporating encapsulation, inheritance, and polymorphism."
+    "text": "Refactoring\nGoal: identify subsolutions, recompose the subsolutions into a working program\nProblem: game of Tic-Tac-Toe\nDownload the TicTacToe.java file and refactor it into multiple classes with appropriate methods. This assignment focuses on breaking a large problem down into smaller subproblems and properly incorporate encapsulation, inheritance, and polymorphism."
+  },
+  {
+    "objectID": "slides-10-01.html#write-junit-tests",
+    "href": "slides-10-01.html#write-junit-tests",
+    "title": "Decomposition",
+    "section": "Write JUnit tests",
+    "text": "Write JUnit tests\nNow that you have classes and methods, write JUnit tests to test your game functionality."
   }
 ]
