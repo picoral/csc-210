@@ -3771,5 +3771,12 @@
     "title": "Decomposition",
     "section": "Write JUnit tests",
     "text": "Write JUnit tests\nNow that you have classes and methods, write JUnit tests to test your game functionality."
+  },
+  {
+    "objectID": "modules.html#slides-9",
+    "href": "modules.html#slides-9",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nDecomposition"
   }
 ]

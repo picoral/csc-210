@@ -270,6 +270,9 @@ Topic: `r schedule %>% filter(week == 12) %>% pull(topic)`
 
 Topic: `r schedule %>% filter(week == 13) %>% pull(topic)`
 
+## Slides
+
+* [Decomposition](slides-10-01.html)
 
 ## Assignments
 
