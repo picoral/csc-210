@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -130,6 +164,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#make-word-search-game" id="toc-make-word-search-game" class="nav-link active" data-scroll-target="#make-word-search-game">Make word search game</a></li>
   <li><a href="#diagonal-words" id="toc-diagonal-words" class="nav-link" data-scroll-target="#diagonal-words">Diagonal words</a></li>
+  <li><a href="#writing-a-file" id="toc-writing-a-file" class="nav-link" data-scroll-target="#writing-a-file">Writing a file</a></li>
   <li><a href="#decomposition" id="toc-decomposition" class="nav-link" data-scroll-target="#decomposition">Decomposition</a></li>
   <li><a href="#code-clarity" id="toc-code-clarity" class="nav-link" data-scroll-target="#code-clarity">Code Clarity</a></li>
   </ul>
@@ -252,6 +287,17 @@ G W D Y O D L J Q A O B R D R F Q D P C </code></pre>
 <li>napkin is at 15 0 (horizontal)</li>
 <li>fudge is at 17 0 (horizontal)</li>
 </ul>
+</section>
+<section id="writing-a-file" class="level1">
+<h1>Writing a file</h1>
+<p>Here’s sample code on how to write a file (you don’t have to do this exactly like the example below, the autograder will be opening and reading the file you create):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> filename <span class="op">=</span> <span class="st">"words.txt"</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>Grid myGrid <span class="op">=</span> <span class="fu">setUpGame</span><span class="op">(</span>filename<span class="op">);</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">FileWriter</span> fileWriter <span class="op">=</span> <span class="kw">new</span> <span class="bu">FileWriter</span><span class="op">(</span><span class="st">"output_"</span> <span class="op">+</span> filename<span class="op">);</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>fileWriter<span class="op">.</span><span class="fu">write</span><span class="op">(</span>myGrid<span class="op">.</span><span class="fu">toString</span><span class="op">());</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>fileWriter<span class="op">.</span><span class="fu">close</span><span class="op">();</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="decomposition" class="level1">
 <h1>Decomposition</h1>

@@ -133,6 +133,21 @@ G W D Y O D L J Q A O B R D R F Q D P C
 * napkin is at 15 0 (horizontal)
 * fudge is at 17 0 (horizontal)
 
+# Writing a file
+
+Here's sample code on how to write a file (you don't have to do this
+exactly like the example below, the autograder will be opening and reading
+the file you create):
+
+```{java}
+String filename = "words.txt";
+Grid myGrid = setUpGame(filename);
+FileWriter fileWriter = new FileWriter("output_" + filename);
+fileWriter.write(myGrid.toString());
+fileWriter.close();
+```
+
+
 # Decomposition
 
 * Points will be taken off for copy, pasted, and edited code that
