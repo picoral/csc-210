@@ -161,6 +161,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="game-play" class="level1">
 <h1>Game play</h1>
 <p>Reuse your code for the previous assignment, and once you have a word grid go into a REPL (read–eval–print loop) to read in commands from the player. With each successful word information (word, location, and orientation) entered by the player, the word will be removed from the grid and replaced with <code>*</code> (careful to not remove characters that belong to overlapping words that have not been found yet).</p>
+<p>Example of game play (removing a word with overlapping characters):</p>
 <pre><code>   a b c d e f g h i j k l m n o p q r s t 
 00 M Q R K A J M D X L H O I U J S W U R K 
 01 N V X C R O I S S A N T M U V J Q U K V 
@@ -211,6 +212,43 @@ croissant removed
 17 I K P X Q C F D D W Y F D H G W T D O Q 
 18 J C W R T W L B N V M Q Y M N O K E P L 
 19 W S Y K X O I R J T B I K O N K Q S P N </code></pre>
+<p>A few more examples, with another word found, and a word missed:</p>
+<pre><code>Enter word found: fudge
+Enter x: 10
+Enter y: b
+[H]orizontal [V]ertical [D]iagonal? d
+
+fudge removed
+
+   a b c d e f g h i j k l m n o p q r s t 
+00 T B R G B O A W H P A N K P D W J U A Y 
+01 U F Q C * * * * * * * * W O K N Y Y J I 
+02 Q H C O F B V J Y L B A X N I V N J V B 
+03 F M B F N I Q R E Q B T N X A P E P K L 
+04 S Q O F D L Y G M Y R S E M B P C U J E 
+05 X K M E I E L H S C O N E A K X K G N A 
+06 K X B E A M Y U M W W B N G U H E I A M 
+07 U G M V T T T I U B N K T I O T Y V N U 
+08 A Q T X E B A N I E I W B G N S G O X F 
+09 A A M A Z I N G E X E S E N L D U T O L 
+10 P * Q H O E A M B M Q U G Q G R M D X F 
+11 H C * P O L T Y H G H K X G F H O U S E 
+12 G X J * M B R X L G W U I C F K U U B I 
+13 Y N K S * I B R L A Q L A L C D S E U X 
+14 Y U E K L * L K J N C F I V D G E R J X 
+15 M I K E D K G K E V T D H L Y U L G Y N 
+16 E P B A G N L D U I E E L T P U K F P U 
+17 B P P Q V U S X W Y P V Q S E T H M A W 
+18 V B N U S J J W U O H U L F X V B Y P G 
+19 P R T L W G X G R D U S D Q Q E Y G A N 
+
+Enter word found: scone
+Enter x: 5
+Enter y: j
+[H]orizontal [V]ertical [D]iagonal? h
+
+scone not found</code></pre>
+<p>When one of the information values does not match (for scone, above, the correct <code>y</code> is <code>i</code> not <code>j</code>) a message should be printed telling the player the word was not found.</p>
 </section>
 <section id="decomposition" class="level1">
 <h1>Decomposition</h1>

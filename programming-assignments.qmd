@@ -65,4 +65,16 @@ data <- read_excel("assessment-deadlines.xlsx")
 
 * [Instructions](programming-assignment-08.html)
 
+# PA 9
+
+* Deadline: `r data %>% filter(Assignment == "PA9") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+* [Instructions](programming-assignment-09.html)
+
+# PA 10 (BONUS)
+
+* Deadline: `r data %>% filter(Assignment == "PA10") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+JavaFX GUI implementation of word search game
+
 
