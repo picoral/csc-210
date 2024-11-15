@@ -128,19 +128,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#pa9-gardengui" id="toc-pa9-gardengui" class="nav-link active" data-scroll-target="#pa9-gardengui">PA9-GardenGUI</a>
-  <ul class="collapse">
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#the-assignment" id="toc-the-assignment" class="nav-link" data-scroll-target="#the-assignment">The Assignment</a></li>
-  <li><a href="#what-needs-to-be-removed" id="toc-what-needs-to-be-removed" class="nav-link" data-scroll-target="#what-needs-to-be-removed">What needs to be removed</a></li>
-  <li><a href="#what-needs-to-be-added" id="toc-what-needs-to-be-added" class="nav-link" data-scroll-target="#what-needs-to-be-added">What needs to be added</a></li>
-  <li><a href="#what-needs-to-be-changed" id="toc-what-needs-to-be-changed" class="nav-link" data-scroll-target="#what-needs-to-be-changed">What needs to be changed</a></li>
-  <li><a href="#steps-for-completing-this-assignment" id="toc-steps-for-completing-this-assignment" class="nav-link" data-scroll-target="#steps-for-completing-this-assignment">Steps for completing this assignment</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
-  <li><a href="#general-requirements" id="toc-general-requirements" class="nav-link" data-scroll-target="#general-requirements">General requirements</a></li>
-  <li><a href="#grading-criteria" id="toc-grading-criteria" class="nav-link" data-scroll-target="#grading-criteria">Grading Criteria</a></li>
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
-  </ul></li>
+  <li><a href="#game-play" id="toc-game-play" class="nav-link active" data-scroll-target="#game-play">Game play</a></li>
+  <li><a href="#decomposition" id="toc-decomposition" class="nav-link" data-scroll-target="#decomposition">Decomposition</a></li>
+  <li><a href="#code-clarity" id="toc-code-clarity" class="nav-link" data-scroll-target="#code-clarity">Code Clarity</a></li>
   </ul>
 </nav>
     </div>
@@ -166,91 +156,86 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Deadline: November 20, 2024 – Wednesday, 11:30pm</p>
-<section id="pa9-gardengui" class="level1">
-<h1>PA9-GardenGUI</h1>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>The goal of this assignment is to improve on basic JavaFX knowledge by adding event-driven GUI programming to the PA8-GardenGUIout program.</p>
+<p>Deadline: December 04, 2024 – Wednesday, 11:30pm</p>
+<p>This assignment is part 2 of a 2-part assignment. In the firs part you wrote code to create a word search grid. In this assignment you will write code for a user to play that game.</p>
+<section id="game-play" class="level1">
+<h1>Game play</h1>
+<p>Reuse your code for the previous assignment, and once you have a word grid go into a REPL (read–eval–print loop) to read in commands from the player. With each successful word information (word, location, and orientation) entered by the player, the word will be removed from the grid and replaced with <code>*</code> (careful to not remove characters that belong to overlapping words that have not been found yet).</p>
+<pre><code>   a b c d e f g h i j k l m n o p q r s t 
+00 M Q R K A J M D X L H O I U J S W U R K 
+01 N V X C R O I S S A N T M U V J Q U K V 
+02 J E V O W R M I K T W O M N J F E Q O Y 
+03 I X Y F A G D Y B G B T A L A C B R Y E 
+04 P W P F I Q G X D A R V E B Y P D P E G 
+05 C K G E A H G H S C O N E A X E K B L X 
+06 I P D E O O P Y Y R W Q X N P F F I P R 
+07 R X E R F X X V X V N T C H F F V W N O 
+08 S H B O B D O W T E I W R M F A U Y A Q 
+09 F A M A Z I N G P X E U B D P V W H S U 
+10 A F C F O T I J V O R C P E Y W M N M I 
+11 H K U Y O G B E K N V W Y S H H O U S E 
+12 Q N V D M K K C C D C R N A U V U G H F 
+13 Y W K V G I H N L O T C W G A D S L Y E 
+14 T M Y I F E L A H J E M S D D A E H Y M 
+15 H M B I J N H K T C O F Y P P I L M F K 
+16 V N M H A T Y Y U G O H N B X G B Y P A 
+17 U N G A R X W D F U X F N J W L M D Y R 
+18 Y B U Y B C K T N T H N E K M T Q H S N 
+19 K F L F H N S Y X R Q W V A G V G G Y K 
+
+Enter word found: croissant
+Enter x: 1
+Enter y: d
+[H]orizontal [V]ertical [D]iagonal? h
+
+croissant removed
+
+   a b c d e f g h i j k l m n o p q r s t 
+00 J E T E X Q O E W B H V U I D C L D G U 
+01 H C U C * * * * * * * * H W S K P E K H 
+02 L B P O B O D S V G S X O N O S X G E I 
+03 W N T F W C W Y I D B T X R A B P A H U 
+04 B H K F F T D T D W R L E G L P X I I B 
+05 E G R E Y N K C S C O N E A J G K G K A 
+06 K L H E V D F H T L W T E U S W J I U G 
+07 A G A H K B X G O F N D H J H S C S N N 
+08 D I D H T B L D A Y I E C U C W M M X F 
+09 C A M A Z I N G X S E D F O W R V B K A 
+10 J F D P O L V M X G C J Y L G J M T B D 
+11 X D U Q O D I L E B G X P B P H O U S E 
+12 W Y D D M G D C Q E U R A B M Y U X Q Y 
+13 N S Q F G I B E Y M E C A L A N S X Q K 
+14 U F Q O R E L H H T S L N E P B E C H Y 
+15 Y S C P P C E K M V Y N K K F I P J J N 
+16 L G X S J X L U B B B G H W D T D J B M 
+17 I K P X Q C F D D W Y F D H G W T D O Q 
+18 J C W R T W L B N V M Q Y M N O K E P L 
+19 W S Y K X O I R J T B I K O N K Q S P N </code></pre>
 </section>
-<section id="the-assignment" class="level2">
-<h2 class="anchored" data-anchor-id="the-assignment">The Assignment</h2>
-<p>For PA9, you will be adding events to the GUI representation of PA8. This means there will be no input file to read from. Instead of reading the input file from the command line arguments, you will read in the number of rows and columns of plots in the garden from the command line. Then along with the garden visualization you will create a TextField where a user can input a garden simulation command (e.g., grow 1, plant (2,3) sunflower, …) and then click on a simulate button to show the results of that command.</p>
-<p>Another interesting aspect of PA9 is that you will be continuing to refine the Garden simulation code. Some of your code will change and some of the code from PA8 and PA6 should be removed in PA9.</p>
-</section>
-<section id="what-needs-to-be-removed" class="level2">
-<h2 class="anchored" data-anchor-id="what-needs-to-be-removed">What needs to be removed</h2>
-<p><strong>File reading:</strong> Since we are no longer reading commands in from a file, all code that is used to read in from a file is no longer needed. You will still need to parse commands however.</p>
-<p><strong>Delay Code:</strong> In the previous assignment a delay was needed to show the output for every command, for this assignment this is no longer needed since we are running one command at a time via a graphical user interface.</p>
-</section>
-<section id="what-needs-to-be-added" class="level2">
-<h2 class="anchored" data-anchor-id="what-needs-to-be-added">What needs to be added</h2>
-<p><strong>User input:</strong> Since we will not be reading from a file, we are going to need some way to read in commands from the user. We recommend a TextArea and a button to cause the execution of the command in that TextArea. Feel free to try different approaches.</p>
-<p><strong>Event Handlers:</strong> To use the information that the user provides your code must have at least one Event Handler. This should grab the information from the user and do something with it whenever a specified event occurs. (clicking of a button and/or pressing enter on keyboard)</p>
-</section>
-<section id="what-needs-to-be-changed" class="level2">
-<h2 class="anchored" data-anchor-id="what-needs-to-be-changed">What needs to be changed</h2>
-<p><strong>Command line arguments:</strong> Instead of reading in a filename from the command line, you will be reading in both the width and height of the garden.</p>
-</section>
-<section id="steps-for-completing-this-assignment" class="level2">
-<h2 class="anchored" data-anchor-id="steps-for-completing-this-assignment">Steps for completing this assignment</h2>
-<ol type="1">
-<li><p>Accept the github assignment for PA9, https://classroom.github.com/a/t1WEMs86.<br>
-Import your PA9 github repository into Eclipse as usual.</p></li>
-<li><p>Play around with the given PA9 starter code that does something with the text a user puts into a text field.</p></li>
-<li><p>Make sure your PA8 code works.</p></li>
-<li><p>If it does, then incorporate your PA8 code into your PA9. We strongly recommend you do it in small pieces.</p></li>
-<li><p>Implement the functionality provided in this write up for PA9.</p></li>
-<li><p>Test your code with various inputs to make sure that it works correctly.</p></li>
-</ol>
-</section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<p>The provided code uses some new concepts. We will be covering them in class and/or Section. Additionally, here are some references.</p>
-<ul>
-<li>The example-video.mov file in the starter project demonstrates the baseline functionality for PA9. You will be demonstrating your project to your SL during Section.</li>
-<li>Text Field, https://docs.oracle.com/javafx/2/ui_controls/text-field.htm</li>
-</ul>
-</section>
-<section id="general-requirements" class="level2">
-<h2 class="anchored" data-anchor-id="general-requirements">General requirements</h2>
-<p>This assignment is different from other assignments you’ve had so far in that you are given a lot more freedom to design your output the way you want. You can try to mimic what was done in the video and get the credit for it, but however you choose to receive graphical input for your garden, the following general requirements must be met:</p>
-<ul>
-<li><p>A user should be able to type in a command and submit it via the GUI. This means that there should be somewhere to insert text and some way to submit that text. Both of these must be <strong>intuitive</strong>, that means that the user must understand where he/she should insert commands and how to submit said command by only looking at the GUI.</p></li>
-<li><p>As in PA8, each plant must be <strong>one-of-a-kind</strong>, meaning they must be distinguishable from any other plant and the background. In the example video, this is done by using a different color for each plant against a brown background. You do not have to do it this way, for example, you can choose to use an image for each plant instead of a colored tile.</p></li>
-<li><p>As in PA8, each command must be <strong>visually noticeable</strong>. This means that when ‘GROW 1’ is called for example, it should be visually obvious that every plant just grew by 1. In the example video, grow commands cause more identical tiles to be drawn in some fashion (depending on the plant type) around every plant.</p></li>
-<li><p>As in PA8, there must be a command log which displays commands as they are being executed. In the example video, this is done in a TextArea at the bottom of the garden.</p></li>
-<li><p>As in PA8, you must still handle errors. Errors that don’t cause the program to stop (such as ‘Can’t grow here’) should be <strong>distinguishable</strong> in the command log. In the video example, the error is fully capitalized and spaced out from surrounding text. For errors that do cause the program to stop, such as ‘Invalid dimension input’ should still print to stdout and exit the program as usual.</p></li>
-</ul>
-</section>
-<section id="grading-criteria" class="level2">
-<h2 class="anchored" data-anchor-id="grading-criteria">Grading Criteria</h2>
-<p>Half of the PA9 grade will be a working GUI. You will be demonstrating your GUI to your SL during Sections April 16th or 17th. Your demonstration must be less than 5 minutes and show all of the above listed criteria.</p>
-<p>The working GUI must also be demonstrated with code. Submit your PA9 code to gradescope.</p>
-<p>The other half of the PA9 grade will be your decomposition and code clarity.</p>
-<p>Decomposition</p>
+<section id="decomposition" class="level1">
+<h1>Decomposition</h1>
 <ul>
 <li><p>Points will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.</p></li>
-<li><p><strong>This program should use fewer than 10 .java files.</strong> Each of these files should be (&lt;300 lines).</p></li>
+<li><p><strong>This program should use fewer than 5 .java files.</strong> Each of these files should be (&lt;300 lines). Do NOT include hard code any specific words at specific coordinates.</p></li>
 <li><p>Each method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.</p></li>
 </ul>
-<p>Code Clarity * YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it. * No magic numbers * No methods written to just get the test cases to work</p>
+</section>
+<section id="code-clarity" class="level1">
+<h1>Code Clarity</h1>
 <ul>
+<li><p>YOU should be able to read, understand, and explain your own code to someone else a couple days after you wrote it.</p>
+<ul>
+<li>No magic numbers</li>
+<li>No methods written to just get the test cases to work</li>
+</ul></li>
 <li><p>There needs to be a balance between no comments in the body of the methods and a comment for every line in the program. Either extreme will result in points off.</p></li>
 <li><p><strong>The file header should include instructions on how someone would use this program.</strong> To use the program, one would need to know the input file format. One would also need to know the command line arguments that should be passed to the program.</p></li>
 <li><p>Use meaningful variable names. Loop iterators can be simple (i for integers, s for strings, n for numbers, etc.).</p></li>
 <li><p>The clearest code examples will be anonymously shown in class.</p></li>
 <li><p>The most obfuscated code examples will be anonymously shown in class with suggestions for improvement.</p></li>
 </ul>
-</section>
-<section id="submission" class="level2">
-<h2 class="anchored" data-anchor-id="submission">Submission</h2>
-<p>For this assignment, you are <strong>REQUIRED</strong> to submit all of the following files to Gradescope before Monday April 16th at 11:30am. * All the Java source files needed to run your program. * If you are trying for the up to 10 extra credit points for going above and beyond, then let your SL know during your demo and summarize what you did extra in a README.md file that you submit to Gradescope.</p>
-<p>Write your own code. We will be using a tool that finds similar code.</p>
-<p>It is recommended that when talking with others about the assignment, do not write anything down.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
