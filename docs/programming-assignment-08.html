@@ -292,12 +292,13 @@ G W D Y O D L J Q A O B R D R F Q D P C </code></pre>
 <h1>Writing a file</h1>
 <p>Here’s sample code on how to write a file (you don’t have to do this exactly like the example below, the autograder will be opening and reading the file you create):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> filename <span class="op">=</span> <span class="st">"words.txt"</span><span class="op">;</span></span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> filename <span class="op">=</span> args<span class="op">[</span><span class="dv">0</span><span class="op">];</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>Grid myGrid <span class="op">=</span> <span class="fu">setUpGame</span><span class="op">(</span>filename<span class="op">);</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">FileWriter</span> fileWriter <span class="op">=</span> <span class="kw">new</span> <span class="bu">FileWriter</span><span class="op">(</span><span class="st">"output_"</span> <span class="op">+</span> filename<span class="op">);</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>fileWriter<span class="op">.</span><span class="fu">write</span><span class="op">(</span>myGrid<span class="op">.</span><span class="fu">toString</span><span class="op">());</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>fileWriter<span class="op">.</span><span class="fu">close</span><span class="op">();</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Your file name should come from the args array. The autograder will run the main method in <code>WordSearch.java</code>.</p>
 </section>
 <section id="decomposition" class="level1">
 <h1>Decomposition</h1>

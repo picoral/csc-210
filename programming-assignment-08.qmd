@@ -140,13 +140,15 @@ exactly like the example below, the autograder will be opening and reading
 the file you create):
 
 ```{java}
-String filename = "words.txt";
+String filename = args[0];
 Grid myGrid = setUpGame(filename);
 FileWriter fileWriter = new FileWriter("output_" + filename);
 fileWriter.write(myGrid.toString());
 fileWriter.close();
 ```
 
+Your file name should come from the args array. The autograder will run
+the main method in `WordSearch.java`.
 
 # Decomposition
 
