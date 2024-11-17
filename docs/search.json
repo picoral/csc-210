@@ -3791,7 +3791,7 @@
     "href": "slides-10-02.html#mvc-model-view-controller",
     "title": "Model-View-Controller",
     "section": "MVC (Model-View-Controller)",
-    "text": "MVC (Model-View-Controller)\nSoftware design pattern\nThree parts:\n\nModel keeps the data (internal representations of information)\nView is what users see (GUI) and receives input from the user\nController connects the two\n\nThe model is independent of the user-interface\nConverts user input to commands for the model or view"
+    "text": "MVC (Model-View-Controller)\nSoftware design pattern\nThree parts:\n\nModel keeps the data (internal representations of information)\nView is what users see (GUI) and receives input from the user\nController connects the two\n\nThe model is independent of the user-interface\nThe controller converts user input to commands for the model or view"
   },
   {
     "objectID": "slides-10-02.html#mvc-for-tic-tac-toe-game",
