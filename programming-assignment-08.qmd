@@ -150,6 +150,12 @@ fileWriter.close();
 Your file name should come from the args array. The autograder will run
 the main method in `WordSearch.java`.
 
+## Test your output file
+
+Run [the provided JUnit test](https://github.com/picoral/CSC210PA8JUnit) to check if your output file is in the correct format and that all words are 
+found in the grid (the autograder will run a similar test, but it will
+also check that you have at least one word in each orientation).
+
 # Decomposition
 
 * Points will be taken off for copy, pasted, and edited code that
