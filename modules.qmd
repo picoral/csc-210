@@ -273,6 +273,7 @@ Topic: `r schedule %>% filter(week == 13) %>% pull(topic)`
 ## Slides
 
 * [Decomposition](slides-10-01.html)
+* [Model-View-Controller](slides-10-02.html)
 
 ## Assignments
 
