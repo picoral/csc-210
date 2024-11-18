@@ -24,7 +24,7 @@ The controller converts user input to commands for the model or view
 
 Think back to the implementation of Tic-Tac-Toe.
 
-Which methods belong in each part (Movel, View, Controller)?
+Which methods belong in each part (Model, View, Controller)?
 
 ## Exercise
 

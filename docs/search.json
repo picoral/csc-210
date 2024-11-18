@@ -3798,7 +3798,7 @@
     "href": "slides-10-02.html#mvc-for-tic-tac-toe-game",
     "title": "Model-View-Controller",
     "section": "MVC for Tic-Tac-Toe game",
-    "text": "MVC for Tic-Tac-Toe game\nThink back to the implementation of Tic-Tac-Toe.\nWhich methods belong in each part (Movel, View, Controller)?"
+    "text": "MVC for Tic-Tac-Toe game\nThink back to the implementation of Tic-Tac-Toe.\nWhich methods belong in each part (Model, View, Controller)?"
   },
   {
     "objectID": "slides-10-02.html#exercise",
