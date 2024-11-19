@@ -156,6 +156,12 @@ Run [the provided JUnit test](https://github.com/picoral/CSC210PA8JUnit) to chec
 found in the grid (the autograder will run a similar test, but it will
 also check that you have at least one word in each orientation).
 
+## Gradescope submission
+
+Package information:
+
+`package com.gradescope.wordsearch;`
+
 # Decomposition
 
 * Points will be taken off for copy, pasted, and edited code that

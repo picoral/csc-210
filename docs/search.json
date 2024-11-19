@@ -3806,5 +3806,12 @@
     "title": "Model-View-Controller",
     "section": "Exercise",
     "text": "Exercise\nDownload starter code for the Tic-Tac-Toe application – this will have mainly the viewer implemented. Your job is to finish implementing the model and the controller."
+  },
+  {
+    "objectID": "programming-assignment-08.html#gradescope-submission",
+    "href": "programming-assignment-08.html#gradescope-submission",
+    "title": "Programming Assignment 08",
+    "section": "Gradescope submission",
+    "text": "Gradescope submission\nPackage information:\npackage com.gradescope.wordsearch;"
   }
 ]
