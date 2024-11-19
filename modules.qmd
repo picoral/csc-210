@@ -274,7 +274,29 @@ Topic: `r schedule %>% filter(week == 13) %>% pull(topic)`
 
 * [Decomposition](slides-10-01.html)
 * [Model-View-Controller](slides-10-02.html)
+* [Decomposition + MVC](slides-10-01.html)
 
 ## Assignments
 
 * [Short Assignment 10](short-assignment-10.html) -- Deadline: `r data %>% filter(Assignment == "SA10") %>%  select(Deadline)` -- Monday, 11:30pm 
+* [Programming Assignment 08](programming-assignment-08.html): `r data %>% filter(Assignment == "PA8") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+# Week 14
+
+`r schedule %>% filter(week == 14) %>% pull(dates)`
+
+Topic: `r schedule %>% filter(week == 14) %>% pull(topic)`
+
+## Assignments
+
+* [Programming Assignment 09](programming-assignment-09.html): `r data %>% filter(Assignment == "PA9") %>%  select(Deadline)` -- Wednesday, 11:30pm
+
+# Week 15
+
+`r schedule %>% filter(week == 15) %>% pull(dates)`
+
+Topic: `r schedule %>% filter(week == 15) %>% pull(topic)`
+
+## Assignments
+
+* [Programming Assignment 10](programming-assignment-10.html): `r data %>% filter(Assignment == "PA10") %>%  select(Deadline)` -- Wednesday, 11:30pm
