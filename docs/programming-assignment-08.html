@@ -166,6 +166,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#diagonal-words" id="toc-diagonal-words" class="nav-link" data-scroll-target="#diagonal-words">Diagonal words</a></li>
   <li><a href="#writing-a-file" id="toc-writing-a-file" class="nav-link" data-scroll-target="#writing-a-file">Writing a file</a>
   <ul class="collapse">
+  <li><a href="#ouput-file-format" id="toc-ouput-file-format" class="nav-link" data-scroll-target="#ouput-file-format">Ouput file format</a></li>
   <li><a href="#test-your-output-file" id="toc-test-your-output-file" class="nav-link" data-scroll-target="#test-your-output-file">Test your output file</a></li>
   <li><a href="#gradescope-submission" id="toc-gradescope-submission" class="nav-link" data-scroll-target="#gradescope-submission">Gradescope submission</a></li>
   </ul></li>
@@ -303,6 +304,31 @@ G W D Y O D L J Q A O B R D R F Q D P C </code></pre>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>fileWriter<span class="op">.</span><span class="fu">close</span><span class="op">();</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Your file name should come from the args array. The autograder will run the main method in <code>WordSearch.java</code>.</p>
+<section id="ouput-file-format" class="level2">
+<h2 class="anchored" data-anchor-id="ouput-file-format">Ouput file format</h2>
+<p>Your output file should contain only your grid, and nothing else.</p>
+<p>Example:</p>
+<pre><code>K M J M P S P L O Y Y H J T U R O Y J H
+H K L C O K Q M C P Y A H U F C V F W H
+T D U Y F U A C I G D T Q H L C W R Y N
+X L V Q A C S M E F S T B X R N G S X T
+V G L E T L R E X C Y U A M A Z I N G X
+G L Q G C N T O E H M N K P R O T Q D C
+U L Y E R J J E I J O F G Y O O Y B K X
+K M W L A K L X A S E U Y E F C H R I M
+J C C B P Q R S S D S X S E A S C O N E
+E N J P U M B V R L K A Q E M A W W X I
+E F F H P W O U M S B E N V X K X N R Q
+U H X X Q V I W O C S J Q T M U U I W O
+G J N B C M L U Q B W U X M G H N E E A
+L J B L G R S Q Y J K O P M Q Y J S W M
+T P X E T D C I D S G O Y C N E D V V X
+N A P K I N F I O L Q G M D T L T D V K
+W B C B K M U C O F F E E S O S L G F L
+F U D G E U E M L N O P F Y U S I K U E
+I B C O M T G M I L K G R Q B R E R V A
+G W D Y O D L J Q A O B R D R F Q D P C</code></pre>
+</section>
 <section id="test-your-output-file" class="level2">
 <h2 class="anchored" data-anchor-id="test-your-output-file">Test your output file</h2>
 <p>Run <a href="https://github.com/picoral/CSC210PA8JUnit">the provided JUnit test</a> to check if your output file is in the correct format and that all words are found in the grid (the autograder will run a similar test, but it will also check that you have at least one word in each orientation).</p>
@@ -317,7 +343,7 @@ G W D Y O D L J Q A O B R D R F Q D P C </code></pre>
 <h1>Decomposition</h1>
 <ul>
 <li><p>Points will be taken off for copy, pasted, and edited code that should have been encapsulated in a method.</p></li>
-<li><p><strong>This program should use fewer than 5 .java files.</strong> Each of these files should be (&lt;300 lines). Do NOT include hard code any specific words at specific coordinates.</p></li>
+<li><p><strong>This program should use fewer than 5 .java files but at least two .java files</strong> Each of these files should be (&lt;300 lines). Do NOT include hard code any specific words at specific coordinates.</p></li>
 <li><p>Each method should be less than 30 lines. This INCLUDES comments, but not the method header. It is easier to read a function if it can all fit on one screen.</p></li>
 </ul>
 </section>

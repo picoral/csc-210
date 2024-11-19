@@ -3813,5 +3813,12 @@
     "title": "Programming Assignment 08",
     "section": "Gradescope submission",
     "text": "Gradescope submission\nPackage information:\npackage com.gradescope.wordsearch;"
+  },
+  {
+    "objectID": "programming-assignment-08.html#ouput-file-format",
+    "href": "programming-assignment-08.html#ouput-file-format",
+    "title": "Programming Assignment 08",
+    "section": "Ouput file format",
+    "text": "Ouput file format\nYour output file should contain only your grid, and nothing else.\nExample:\nK M J M P S P L O Y Y H J T U R O Y J H\nH K L C O K Q M C P Y A H U F C V F W H\nT D U Y F U A C I G D T Q H L C W R Y N\nX L V Q A C S M E F S T B X R N G S X T\nV G L E T L R E X C Y U A M A Z I N G X\nG L Q G C N T O E H M N K P R O T Q D C\nU L Y E R J J E I J O F G Y O O Y B K X\nK M W L A K L X A S E U Y E F C H R I M\nJ C C B P Q R S S D S X S E A S C O N E\nE N J P U M B V R L K A Q E M A W W X I\nE F F H P W O U M S B E N V X K X N R Q\nU H X X Q V I W O C S J Q T M U U I W O\nG J N B C M L U Q B W U X M G H N E E A\nL J B L G R S Q Y J K O P M Q Y J S W M\nT P X E T D C I D S G O Y C N E D V V X\nN A P K I N F I O L Q G M D T L T D V K\nW B C B K M U C O F F E E S O S L G F L\nF U D G E U E M L N O P F Y U S I K U E\nI B C O M T G M I L K G R Q B R E R V A\nG W D Y O D L J Q A O B R D R F Q D P C"
   }
 ]
