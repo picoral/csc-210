@@ -287,6 +287,14 @@ Topic: `r schedule %>% filter(week == 13) %>% pull(topic)`
 
 Topic: `r schedule %>% filter(week == 14) %>% pull(topic)`
 
+## Readings
+
+[Refactoring for Software Design Smells Chapter 1 - Technical Debt](https://www-sciencedirect-com.ezproxy4.library.arizona.edu/science/article/pii/B9780128013977000011)
+
+## Slides
+
+* [Code Smells](slides-11-01.html)
+
 ## Assignments
 
 * [Programming Assignment 09](programming-assignment-09.html): `r data %>% filter(Assignment == "PA9") %>%  select(Deadline)` -- Wednesday, 11:30pm
