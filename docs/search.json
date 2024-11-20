@@ -3883,5 +3883,33 @@
     "title": "Modules",
     "section": "Assignments",
     "text": "Assignments\n\nProgramming Assignment 10: December 11, 2024 – Wednesday, 11:30pm"
+  },
+  {
+    "objectID": "modules.html#readings-7",
+    "href": "modules.html#readings-7",
+    "title": "Modules",
+    "section": "Readings",
+    "text": "Readings\nRefactoring for Software Design Smells Chapter 1 - Technical Debt"
+  },
+  {
+    "objectID": "modules.html#slides-10",
+    "href": "modules.html#slides-10",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nCode Smells"
+  },
+  {
+    "objectID": "slides-11-02.html",
+    "href": "slides-11-02.html",
+    "title": "Code Smells",
+    "section": "",
+    "text": "Violations of fundamental design principles that negatively impact code quality"
+  },
+  {
+    "objectID": "slides-11-02.html#what-are-code-smells",
+    "href": "slides-11-02.html#what-are-code-smells",
+    "title": "Code Smells",
+    "section": "",
+    "text": "Violations of fundamental design principles that negatively impact code quality"
   }
 ]
