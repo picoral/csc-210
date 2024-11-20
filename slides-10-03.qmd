@@ -1,0 +1,96 @@
+---
+title: "Decomposition + MVC"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## Decomposition
+
+Problem: Write a Java program that parses a text file with commands for different
+types of shapes containing information about their size, coordinates, and position.
+The program should calculate the area of each shape.
+
+Decompose the problem following Model-View-Controller practices.
+
+File format: `shape,dimension info, x, y, color`
+
+```
+triangle,side:10,100,150,BLUE
+square,side:15,20,15,YELLOW
+circle,radius:12,50,60,GREEN
+```
+
+## Decomposition -- UML diagram
+
+Draw a UML diagram based on your group discussion on how to decompose this problem
+
+Your diagram should have a superclass, and subclasses for `model`. It should also
+have a `controller` class and a `view` class
+
+# Quiz 7
+
+
+<center>
+<div class="cleanslate w24tz-current-time w24tz-large" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><a href="//24timezones.com/Tucson/time" style="text-decoration: none" class="clock24" id="tz24-1695057604-c1393-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIwIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2NTA4ODZjNDg0OWVlIiwidHlwZSI6ImRiIiwibGFuZyI6ImVuIn0=" title="World Time :: Tucson" target="_blank" rel="nofollow"></a>current time<div id="clock_block_cb650886c4849ee"></div></div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</center>
+
+You have 15 minutes.
+
+## Implementation -- `model`
+
+The formula for a regular triangle area is equal to the squared side times the square root of 3 divided by 4
+
+JUnit tests:
+```{java}
+@Test
+void testTriangleArea() {
+  Shape triangle = new Triangle(4);
+  Assertions.assertEquals(triangle.getArea(), 6.93);
+}
+
+@Test
+void testSquareArea() {
+  Shape square = new Square(4);
+  Assertions.assertEquals(square.getArea(), 16);
+}
+
+@Test
+void testCircleArea() {
+  Shape circle = new Circle(4);
+  Assertions.assertEquals(circle.getArea(), 50.27);
+}
+```
+
+
+## Implementation -- `view` (ascii version)
+
+```{java}
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class View {
+	
+	public static void main(String[] args) throws FileNotFoundException {
+		Controller controller = new Controller();
+		
+		File file = new File(args[0]);
+		Scanner reader = new Scanner(file);
+		
+		while (reader.hasNext()) {
+			controller.parseLine(reader.nextLine());
+		}
+		
+		System.out.println(controller);
+		reader.close();
+		
+	}
+
+}
+```
+
+
+## Implementation -- `view` (JavaFX version)

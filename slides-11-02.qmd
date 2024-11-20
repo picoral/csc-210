@@ -1,0 +1,8 @@
+---
+title: "Code Smells"
+format: revealjs
+---
+
+## What are code smells?
+
+Violations of fundamental design principles that negatively impact code quality
