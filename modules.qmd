@@ -289,9 +289,9 @@ Topic: `r schedule %>% filter(week == 14) %>% pull(topic)`
 
 ## Readings
 
-[Refactoring for Software Design Smells Chapter 1 - Technical Debt](https://www-sciencedirect-com.ezproxy4.library.arizona.edu/science/article/pii/B9780128013977000011)
-
-[Why Code with Code Smells is Harder to Understand](https://learning.oreilly.com/videos/why-code-with/10000MNLV2021114/10000MNLV2021114-aaaaa/)
+* [Chapter 3. Bad Smells in Code by Kent Beck and Martin Fowler](https://learning.oreilly.com/library/view/refactoring-improving-the/0201485672/ch03.html#ch03)
+* [Why Code with Code Smells is Harder to Understand](https://learning.oreilly.com/videos/why-code-with/10000MNLV2021114/10000MNLV2021114-aaaaa/)
+* [Code Smells by Refactoring Guru](https://refactoring.guru/refactoring/smells)
 
 ## Slides
 
