@@ -3840,7 +3840,7 @@
     "href": "slides-10-03.html#implementation-model",
     "title": "Decomposition + MVC",
     "section": "Implementation – model",
-    "text": "Implementation – model\nThe formula for a regular triangle area is equal to the squared side times the square root of 3 divided by 4\nJUnit tests:\n@Test\nvoid testTriangleArea() {\n  Shape triangle = new Triangle(4);\n  Assertions.assertEquals(triangle.getArea(), 6.93);\n}\n\n@Test\nvoid testSquareArea() {\n  Shape square = new Square(4);\n  Assertions.assertEquals(square.getArea(), 16);\n}\n\n@Test\nvoid testCircleArea() {\n  Shape circle = new Circle(4);\n  Assertions.assertEquals(circle.getArea(), 50.27);\n}"
+    "text": "Implementation – model\nEquilateral triangle area = (side² × √3)/ 4\nJUnit tests:\n@Test\nvoid testTriangleArea() {\n  Shape triangle = new Triangle(4);\n  Assertions.assertEquals(triangle.getArea(), 6.93);\n}\n\n@Test\nvoid testSquareArea() {\n  Shape square = new Square(4);\n  Assertions.assertEquals(square.getArea(), 16);\n}\n\n@Test\nvoid testCircleArea() {\n  Shape circle = new Circle(4);\n  Assertions.assertEquals(circle.getArea(), 50.27);\n}"
   },
   {
     "objectID": "slides-10-03.html#implementation-controller",
@@ -3861,7 +3861,7 @@
     "href": "slides-10-03.html#implementation-view-javafx-version",
     "title": "Decomposition + MVC",
     "section": "Implementation – view (JavaFX version)",
-    "text": "Implementation – view (JavaFX version)"
+    "text": "Implementation – view (JavaFX version)\nWhat GUI components do we need?\nWhat GUI-specific methods should be created?"
   },
   {
     "objectID": "slides-10-03.html#implementation-model-1",
@@ -3911,5 +3911,12 @@
     "title": "Code Smells",
     "section": "",
     "text": "Violations of fundamental design principles that negatively impact code quality"
+  },
+  {
+    "objectID": "slides-10-03.html#uml-diagram",
+    "href": "slides-10-03.html#uml-diagram",
+    "title": "Decomposition + MVC",
+    "section": "UML diagram",
+    "text": "UML diagram"
   }
 ]

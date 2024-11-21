@@ -6,3 +6,7 @@ format: revealjs
 ## What are code smells?
 
 Violations of fundamental design principles that negatively impact code quality
+
+## Long Methods
+
+[Any method longer than ten lines should make you start asking questions](https://refactoring.guru/smells/long-method)

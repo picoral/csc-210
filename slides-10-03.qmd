@@ -39,9 +39,13 @@ have a `controller` class and a `view` class
 
 You have 15 minutes.
 
+## UML diagram
+
+![](images/shapes-uml.png)
+
 ## Implementation -- `model`
 
-The formula for a regular triangle area is equal to the squared side times the square root of 3 divided by 4
+Equilateral triangle area = (side² × √3)/ 4
 
 JUnit tests:
 ```{java}
@@ -94,3 +98,7 @@ public class View {
 
 
 ## Implementation -- `view` (JavaFX version)
+
+What GUI components do we need?
+
+What GUI-specific methods should be created?
