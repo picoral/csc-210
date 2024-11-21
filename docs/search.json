@@ -3909,8 +3909,8 @@
     "objectID": "slides-11-02.html#what-are-code-smells",
     "href": "slides-11-02.html#what-are-code-smells",
     "title": "Code Smells",
-    "section": "",
-    "text": "Violations of fundamental design principles that negatively impact code quality"
+    "section": "What are code smells?",
+    "text": "What are code smells?\nViolations of fundamental design principles that negatively impact code quality\nBad Smells in Code by Kent Beck and Martin Fowler\nIf it stinks, change it."
   },
   {
     "objectID": "slides-10-03.html#uml-diagram",
@@ -3918,5 +3918,124 @@
     "title": "Decomposition + MVC",
     "section": "UML diagram",
     "text": "UML diagram"
+  },
+  {
+    "objectID": "slides-11-02.html#long-methods",
+    "href": "slides-11-02.html#long-methods",
+    "title": "Code Smells",
+    "section": "Long Methods",
+    "text": "Long Methods\nThe object programs that live best and longest are those with short methods.\n\nwhenever we feel the need to comment something, write a method instead\n\nA block of code with a comment that tells you what it is doing can be replaced by a method whose name is based on the comment. Even a single line is worth extracting if it needs explanation."
+  },
+  {
+    "objectID": "slides-11-02.html#exercise-1",
+    "href": "slides-11-02.html#exercise-1",
+    "title": "Code Smells",
+    "section": "Exercise 1",
+    "text": "Exercise 1\npublic double getArea(String shape) {\n        switch (shape) {\n        case \"triangle\":\n            // area = (side² × √3)/ 4\n            double areaTriangle = Math.pow(measure, 2) * Math.sqrt(3) / 4;\n            double roundedAreaTriangle = Math.round(areaTriangle * 100.0) / 100.0;\n            return roundedAreaTriangle;\n        case \"circle\":\n            // area = pi * radius² \n            double areaCircle = Math.PI * Math.pow(measure, 2);\n            double roundedCircleArea = Math.round(areaCircle * 100.0) / 100.0;\n            return roundedCircleArea;\n        case \"square\":\n            // area = side * side\n            double areaSquare = measure * measure;\n            double roundedSquareArea = Math.round(areaSquare * 100.0) / 100.0;\n            return roundedSquareArea;\n        default:\n            System.out.println(\"Shape string not recognized\");\n            return 0;\n        }\n    }"
+  },
+  {
+    "objectID": "slides-11-02.html#code-smells",
+    "href": "slides-11-02.html#code-smells",
+    "title": "Code Smells",
+    "section": "Code Smells",
+    "text": "Code Smells\nOne thing we won’t try to do here is give you precise criteria for when a refactoring is overdue. In our experience no set of metrics rivals informed human intuition. What we will do is give you indications that there is trouble that can be solved by a refactoring. You will have to develop your own sense of how many instance variables are too many instance variables and how many lines of code in a method are too many lines.\n– Kent Beck and Martin Fowler"
+  },
+  {
+    "objectID": "slides-11-02.html#duplicated-code",
+    "href": "slides-11-02.html#duplicated-code",
+    "title": "Code Smells",
+    "section": "Duplicated Code",
+    "text": "Duplicated Code\nThe same expression in two:\n\nmethods of the same class\ntwo sibling subclasses\nunrelated classes"
+  },
+  {
+    "objectID": "slides-11-02.html#large-class",
+    "href": "slides-11-02.html#large-class",
+    "title": "Code Smells",
+    "section": "Large Class",
+    "text": "Large Class\n\nOften shows up as too many instance variables\nIf your large class is a GUI class, you may need to move data and behavior to a separate domain object"
+  },
+  {
+    "objectID": "slides-11-02.html#switch-statements",
+    "href": "slides-11-02.html#switch-statements",
+    "title": "Code Smells",
+    "section": "Switch Statements",
+    "text": "Switch Statements\n\nLots of duplication in switch statements\nWhen a new clause is added to the switch, you have to find all the switch statements that deal with the same type of value and change them.\n\nThe object-oriented notion of polymorphism gives you an elegant way to deal with this problem"
+  },
+  {
+    "objectID": "slides-11-02.html#answer",
+    "href": "slides-11-02.html#answer",
+    "title": "Code Smells",
+    "section": "Answer",
+    "text": "Answer\nReplace Conditional with Polymorphism\n\nSuper class shape has getArea() abstract method\nEach subclass implements its own getArea()\nWhen method is called, it knows which one to call"
+  },
+  {
+    "objectID": "slides-11-02.html#exercise-2",
+    "href": "slides-11-02.html#exercise-2",
+    "title": "Code Smells",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nGo back to your own code that you have written this semester, and try to find examples of bad smells.\n\nDuplicated Code\nLong Methods\nLarge Class\nSwitch Statements"
+  },
+  {
+    "objectID": "slides-11-01.html#what-are-code-smells",
+    "href": "slides-11-01.html#what-are-code-smells",
+    "title": "Code Smells",
+    "section": "What are code smells?",
+    "text": "What are code smells?\nViolations of fundamental design principles that negatively impact code quality\nBad Smells in Code by Kent Beck and Martin Fowler\nIf it stinks, change it."
+  },
+  {
+    "objectID": "slides-11-01.html#code-smells",
+    "href": "slides-11-01.html#code-smells",
+    "title": "Code Smells",
+    "section": "Code Smells",
+    "text": "Code Smells\nOne thing we won’t try to do here is give you precise criteria for when a refactoring is overdue. In our experience no set of metrics rivals informed human intuition. What we will do is give you indications that there is trouble that can be solved by a refactoring. You will have to develop your own sense of how many instance variables are too many instance variables and how many lines of code in a method are too many lines.\n– Kent Beck and Martin Fowler"
+  },
+  {
+    "objectID": "slides-11-01.html#duplicated-code",
+    "href": "slides-11-01.html#duplicated-code",
+    "title": "Code Smells",
+    "section": "Duplicated Code",
+    "text": "Duplicated Code\nThe same expression in two:\n\nmethods of the same class\ntwo sibling subclasses\nunrelated classes"
+  },
+  {
+    "objectID": "slides-11-01.html#long-methods",
+    "href": "slides-11-01.html#long-methods",
+    "title": "Code Smells",
+    "section": "Long Methods",
+    "text": "Long Methods\nThe object programs that live best and longest are those with short methods.\n\nwhenever we feel the need to comment something, write a method instead\n\nA block of code with a comment that tells you what it is doing can be replaced by a method whose name is based on the comment. Even a single line is worth extracting if it needs explanation."
+  },
+  {
+    "objectID": "slides-11-01.html#large-class",
+    "href": "slides-11-01.html#large-class",
+    "title": "Code Smells",
+    "section": "Large Class",
+    "text": "Large Class\n\nOften shows up as too many instance variables\nIf your large class is a GUI class, you may need to move data and behavior to a separate domain object"
+  },
+  {
+    "objectID": "slides-11-01.html#switch-statements",
+    "href": "slides-11-01.html#switch-statements",
+    "title": "Code Smells",
+    "section": "Switch Statements",
+    "text": "Switch Statements\n\nLots of duplication in switch statements\nWhen a new clause is added to the switch, you have to find all the switch statements that deal with the same type of value and change them.\n\nThe object-oriented notion of polymorphism gives you an elegant way to deal with this problem"
+  },
+  {
+    "objectID": "slides-11-01.html#exercise-1",
+    "href": "slides-11-01.html#exercise-1",
+    "title": "Code Smells",
+    "section": "Exercise 1",
+    "text": "Exercise 1\npublic double getArea(String shape) {\n        switch (shape) {\n        case \"triangle\":\n            // area = (side² × √3)/ 4\n            double areaTriangle = Math.pow(measure, 2) * Math.sqrt(3) / 4;\n            double roundedAreaTriangle = Math.round(areaTriangle * 100.0) / 100.0;\n            return roundedAreaTriangle;\n        case \"circle\":\n            // area = pi * radius² \n            double areaCircle = Math.PI * Math.pow(measure, 2);\n            double roundedCircleArea = Math.round(areaCircle * 100.0) / 100.0;\n            return roundedCircleArea;\n        case \"square\":\n            // area = side * side\n            double areaSquare = measure * measure;\n            double roundedSquareArea = Math.round(areaSquare * 100.0) / 100.0;\n            return roundedSquareArea;\n        default:\n            System.out.println(\"Shape string not recognized\");\n            return 0;\n        }\n    }"
+  },
+  {
+    "objectID": "slides-11-01.html#answer",
+    "href": "slides-11-01.html#answer",
+    "title": "Code Smells",
+    "section": "Answer",
+    "text": "Answer\nReplace Conditional with Polymorphism\n\nSuper class shape has getArea() abstract method\nEach subclass implements its own getArea()\nWhen method is called, it knows which one to call"
+  },
+  {
+    "objectID": "slides-11-01.html#exercise-2",
+    "href": "slides-11-01.html#exercise-2",
+    "title": "Code Smells",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nGo back to your own code that you have written this semester, and try to find examples of bad smells.\n\nDuplicated Code\nLong Methods\nLarge Class\nSwitch Statements"
   }
 ]

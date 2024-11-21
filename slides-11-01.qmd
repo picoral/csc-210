@@ -1,0 +1,94 @@
+---
+title: "Code Smells"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## What are code smells?
+
+Violations of fundamental design principles that negatively impact code quality
+
+[Bad Smells in Code by Kent Beck and Martin Fowler](https://learning.oreilly.com/library/view/refactoring-improving-the/0201485672/ch03.html#ch03)
+
+**If it stinks, change it.**
+
+## Code Smells
+
+*One thing we won’t try to do here is give you precise criteria for when a refactoring is overdue. In our experience no set of metrics rivals informed human intuition. What we will do is give you indications that there is trouble that can be solved by a refactoring. You will have to develop your own sense of how many instance variables are too many instance variables and how many lines of code in a method are too many lines.*
+
+*-- Kent Beck and Martin Fowler*
+
+## Duplicated Code
+
+The same expression in two:
+
+* methods of the same class
+* two sibling subclasses
+* unrelated classes
+
+## Long Methods
+
+**The object programs that live best and longest are those with short methods.**
+
+* whenever we feel the need to comment something, write a method instead
+
+*A block of code with a comment that tells you what it is doing can be replaced by a method whose name is based on the comment. Even a single line is worth extracting if it needs explanation.*
+
+## Large Class
+
+* Often shows up as too many instance variables
+* If your large class is a GUI class, you may need to move data and behavior to a separate domain object
+
+## Switch Statements
+
+* Lots of duplication in switch statements
+* When a new clause is added to the switch, you have to find all the switch statements that deal with the same type of value and change them. 
+
+*The object-oriented notion of polymorphism gives you an elegant way to deal with this problem*
+
+
+## Exercise 1
+
+```{java}
+public double getArea(String shape) {
+		switch (shape) {
+		case "triangle":
+			// area = (side² × √3)/ 4
+			double areaTriangle = Math.pow(measure, 2) * Math.sqrt(3) / 4;
+			double roundedAreaTriangle = Math.round(areaTriangle * 100.0) / 100.0;
+			return roundedAreaTriangle;
+		case "circle":
+			// area = pi * radius² 
+			double areaCircle = Math.PI * Math.pow(measure, 2);
+			double roundedCircleArea = Math.round(areaCircle * 100.0) / 100.0;
+			return roundedCircleArea;
+		case "square":
+			// area = side * side
+			double areaSquare = measure * measure;
+			double roundedSquareArea = Math.round(areaSquare * 100.0) / 100.0;
+		    return roundedSquareArea;
+		default:
+			System.out.println("Shape string not recognized");
+			return 0;
+		}
+	}
+```
+
+## Answer
+
+Replace Conditional with Polymorphism
+
+* Super class shape has `getArea()` abstract method 
+* Each subclass implements its own `getArea()`
+* When method is called, it knows which one to call
+
+## Exercise 2
+
+Go back to your own code that you have written this semester, and try to find examples of bad smells.
+
+* Duplicated Code
+* Long Methods
+* Large Class
+* Switch Statements

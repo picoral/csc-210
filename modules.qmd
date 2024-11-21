@@ -291,6 +291,8 @@ Topic: `r schedule %>% filter(week == 14) %>% pull(topic)`
 
 [Refactoring for Software Design Smells Chapter 1 - Technical Debt](https://www-sciencedirect-com.ezproxy4.library.arizona.edu/science/article/pii/B9780128013977000011)
 
+[Why Code with Code Smells is Harder to Understand](https://learning.oreilly.com/videos/why-code-with/10000MNLV2021114/10000MNLV2021114-aaaaa/)
+
 ## Slides
 
 * [Code Smells](slides-11-01.html)
