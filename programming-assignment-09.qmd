@@ -23,7 +23,7 @@ you will write code for a user to play that game.
 # Game play
 
 Reuse your code for the previous assignment, and once you have a
-word grid go into a REPL (read–eval–print loop) to read in commands from the player. With each successful word information (word, location, and orientation)
+word grid (previous assignment) go into a REPL (read–eval–print loop) to read in commands from the player. With each successful word information (word, location, and orientation)
 entered by the player, the word will be removed from the grid and replaced with
 `*` (careful to not remove characters that belong to overlapping words that 
 have not been found yet).
@@ -163,7 +163,7 @@ All words found!
 * Points will be taken off for copy, pasted, and edited code that
   should have been encapsulated in a method.
 
-* **This program should use fewer than 5 .java files.**
+* **This program should use fewer than 5 .java files. But at least 3 .java files**
   Each of these files should be (<300 lines).  Do NOT include
   hard code any specific words at specific coordinates.
 
