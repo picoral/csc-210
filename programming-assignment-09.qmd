@@ -158,6 +158,21 @@ the game.
 All words found!
 ```
 
+Keep the name of your java class with the main method as `WordSearch.java`.
+
+# Submission
+
+Submit your code to gradescope (the autograder will not run) and a link to your
+video (if you don't submit a video, you will get a zero on this assignment).
+Your video should be less than **5 minutes** long and it should show all words
+being found (the game should end).
+
+Your video should show your name and the current semester information.
+
+Here's an example:
+
+![](images/word-search-ascii.mov)
+
 # Decomposition
 
 * Points will be taken off for copy, pasted, and edited code that
