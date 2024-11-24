@@ -4071,6 +4071,6 @@
     "href": "slides-11-01.html#exercise-4",
     "title": "Code Smells",
     "section": "Exercise 4",
-    "text": "Exercise 4\nGo back to your own code that you have written this semester, and try to find examples of bad smells.\n\nDuplicated Code\nLong Methods\nLarge Class\nSwitch Statements"
+    "text": "Exercise 4\nGo back to your own code that you have written this semester, and try to find examples of bad smells.\n\nDuplicated Code\nLong Methods\nLarge Class\nSwitch Statements\nPrimitive Obsession"
   }
 ]

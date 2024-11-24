@@ -157,3 +157,4 @@ Go back to your own code that you have written this semester, and try to find ex
 * Long Methods
 * Large Class
 * Switch Statements
+* Primitive Obsession
