@@ -171,7 +171,9 @@ Your video should show your name and the current semester information.
 
 Here's an example:
 
-![](images/word-search-ascii.mov)
+{{< video https://youtu.be/AHLSB7P2POY >}}
+
+
 
 # Decomposition
 

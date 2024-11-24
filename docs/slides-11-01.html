@@ -416,6 +416,32 @@
 <li>unrelated classes</li>
 </ul>
 </section>
+<section id="exercise-1" class="slide level2">
+<h2>Exercise 1</h2>
+<p>See two implementations (one in each subclass) of the <code>getArea()</code> abstract method. How can we eliminate the duplicate code?</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>public double getArea() {</span>
+<span id="cb1-2"><a></a>        double area = Math.PI * Math.pow(radius, 2);</span>
+<span id="cb1-3"><a></a>        double roundedArea = Math.round(area * 100) / 100.0;</span>
+<span id="cb1-4"><a></a>        return roundedArea;</span>
+<span id="cb1-5"><a></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>public double getArea() {</span>
+<span id="cb2-2"><a></a>        double area = Math.pow(side, 2) * Math.sqrt(3) / 4;</span>
+<span id="cb2-3"><a></a>        double roundedArea = Math.round(area * 100) / 100.0;</span>
+<span id="cb2-4"><a></a>        return roundedArea;</span>
+<span id="cb2-5"><a></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="answer" class="slide level2">
+<h2>Answer</h2>
+<ul>
+<li>Move the rounding to a different method</li>
+<li>Since both subclasses inherit from the same super class, the rounding method should be in the super class:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>public double roundArea(double area) {</span>
+<span id="cb3-2"><a></a>        // round area at two decimals</span>
+<span id="cb3-3"><a></a>        double roundedArea = Math.round(area * 100) / 100.0;</span>
+<span id="cb3-4"><a></a>        return roundedArea;</span>
+<span id="cb3-5"><a></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="long-methods" class="slide level2">
 <h2>Long Methods</h2>
 <p><strong>The object programs that live best and longest are those with short methods.</strong></p>
@@ -439,32 +465,32 @@
 </ul>
 <p><em>The object-oriented notion of polymorphism gives you an elegant way to deal with this problem</em></p>
 </section>
-<section id="exercise-1" class="slide level2">
-<h2>Exercise 1</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>public double getArea(String shape) {</span>
-<span id="cb1-2"><a></a>        switch (shape) {</span>
-<span id="cb1-3"><a></a>        case "triangle":</span>
-<span id="cb1-4"><a></a>            // area = (side² × √3)/ 4</span>
-<span id="cb1-5"><a></a>            double areaTriangle = Math.pow(measure, 2) * Math.sqrt(3) / 4;</span>
-<span id="cb1-6"><a></a>            double roundedAreaTriangle = Math.round(areaTriangle * 100.0) / 100.0;</span>
-<span id="cb1-7"><a></a>            return roundedAreaTriangle;</span>
-<span id="cb1-8"><a></a>        case "circle":</span>
-<span id="cb1-9"><a></a>            // area = pi * radius² </span>
-<span id="cb1-10"><a></a>            double areaCircle = Math.PI * Math.pow(measure, 2);</span>
-<span id="cb1-11"><a></a>            double roundedCircleArea = Math.round(areaCircle * 100.0) / 100.0;</span>
-<span id="cb1-12"><a></a>            return roundedCircleArea;</span>
-<span id="cb1-13"><a></a>        case "square":</span>
-<span id="cb1-14"><a></a>            // area = side * side</span>
-<span id="cb1-15"><a></a>            double areaSquare = measure * measure;</span>
-<span id="cb1-16"><a></a>            double roundedSquareArea = Math.round(areaSquare * 100.0) / 100.0;</span>
-<span id="cb1-17"><a></a>            return roundedSquareArea;</span>
-<span id="cb1-18"><a></a>        default:</span>
-<span id="cb1-19"><a></a>            System.out.println("Shape string not recognized");</span>
-<span id="cb1-20"><a></a>            return 0;</span>
-<span id="cb1-21"><a></a>        }</span>
-<span id="cb1-22"><a></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="exercise-2" class="slide level2">
+<h2>Exercise 2</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>public double getArea(String shape) {</span>
+<span id="cb4-2"><a></a>        switch (shape) {</span>
+<span id="cb4-3"><a></a>        case "triangle":</span>
+<span id="cb4-4"><a></a>            // area = (side² × √3)/ 4</span>
+<span id="cb4-5"><a></a>            double areaTriangle = Math.pow(measure, 2) * Math.sqrt(3) / 4;</span>
+<span id="cb4-6"><a></a>            double roundedAreaTriangle = Math.round(areaTriangle * 100.0) / 100.0;</span>
+<span id="cb4-7"><a></a>            return roundedAreaTriangle;</span>
+<span id="cb4-8"><a></a>        case "circle":</span>
+<span id="cb4-9"><a></a>            // area = pi * radius² </span>
+<span id="cb4-10"><a></a>            double areaCircle = Math.PI * Math.pow(measure, 2);</span>
+<span id="cb4-11"><a></a>            double roundedCircleArea = Math.round(areaCircle * 100.0) / 100.0;</span>
+<span id="cb4-12"><a></a>            return roundedCircleArea;</span>
+<span id="cb4-13"><a></a>        case "square":</span>
+<span id="cb4-14"><a></a>            // area = side * side</span>
+<span id="cb4-15"><a></a>            double areaSquare = measure * measure;</span>
+<span id="cb4-16"><a></a>            double roundedSquareArea = Math.round(areaSquare * 100.0) / 100.0;</span>
+<span id="cb4-17"><a></a>            return roundedSquareArea;</span>
+<span id="cb4-18"><a></a>        default:</span>
+<span id="cb4-19"><a></a>            System.out.println("Shape string not recognized");</span>
+<span id="cb4-20"><a></a>            return 0;</span>
+<span id="cb4-21"><a></a>        }</span>
+<span id="cb4-22"><a></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="answer" class="slide level2">
+<section id="answer-1" class="slide level2">
 <h2>Answer</h2>
 <p>Replace Conditional with Polymorphism</p>
 <ul>
@@ -473,8 +499,40 @@
 <li>When method is called, it knows which one to call</li>
 </ul>
 </section>
-<section id="exercise-2" class="slide level2">
-<h2>Exercise 2</h2>
+<section id="primitive-obsession" class="slide level2">
+<h2>Primitive Obsession</h2>
+<ul>
+<li>Write little classes that are indistinguishable from the built-in types of the language</li>
+</ul>
+<p><em>A telephone number may be represented as a string for a while, but later you realize that the telephone needs special behavior for formatting, extracting the area code, and the like</em></p>
+</section>
+<section id="exercise-3" class="slide level2">
+<h2>Exercise 3</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>private int size;</span>
+<span id="cb5-2"><a></a>private Color color = Color.BLACK;</span>
+<span id="cb5-3"><a></a></span>
+<span id="cb5-4"><a></a>public void drawSquare(int x, int y, Group group) {</span>
+<span id="cb5-5"><a></a>        if (y &gt; 25) {</span>
+<span id="cb5-6"><a></a>            Rectangle square = new Rectangle();</span>
+<span id="cb5-7"><a></a>            square.setX(x);</span>
+<span id="cb5-8"><a></a>            square.setY(y);</span>
+<span id="cb5-9"><a></a>            square.setWidth(size);</span>
+<span id="cb5-10"><a></a>            square.setHeight(size);</span>
+<span id="cb5-11"><a></a>            square.setFill(color);</span>
+<span id="cb5-12"><a></a>            group.getChildren().add(square);</span>
+<span id="cb5-13"><a></a>        }</span>
+<span id="cb5-14"><a></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="answer-2" class="slide level2">
+<h2>Answer</h2>
+<ul>
+<li>Create a <code>Brush.java</code> class with private instance variables for size, color, and shape.</li>
+<li>Create setter and getters for these private instance variables</li>
+<li>Call the getters to when setting color, size, etc: <code>square.setFill(brush.getColor())</code></li>
+</ul>
+</section>
+<section id="exercise-4" class="slide level2">
+<h2>Exercise 4</h2>
 <p>Go back to your own code that you have written this semester, and try to find examples of bad smells.</p>
 <ul>
 <li>Duplicated Code</li>

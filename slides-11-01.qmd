@@ -28,6 +28,40 @@ The same expression in two:
 * two sibling subclasses
 * unrelated classes
 
+## Exercise 1
+
+See two implementations (one in each subclass) of the `getArea()` abstract method. How can we eliminate the duplicate code?
+
+```{java}
+public double getArea() {
+		double area = Math.PI * Math.pow(radius, 2);
+		double roundedArea = Math.round(area * 100) / 100.0;
+		return roundedArea;
+	}
+```
+
+```{java}
+public double getArea() {
+		double area = Math.pow(side, 2) * Math.sqrt(3) / 4;
+		double roundedArea = Math.round(area * 100) / 100.0;
+		return roundedArea;
+	}
+```
+
+## Answer
+
+* Move the rounding to a different method
+* Since both subclasses inherit from the same super class, the rounding method should be in the super class:
+
+```{java}
+public double roundArea(double area) {
+		// round area at two decimals
+		double roundedArea = Math.round(area * 100) / 100.0;
+		return roundedArea;
+	}
+```
+
+
 ## Long Methods
 
 **The object programs that live best and longest are those with short methods.**
@@ -49,7 +83,7 @@ The same expression in two:
 *The object-oriented notion of polymorphism gives you an elegant way to deal with this problem*
 
 
-## Exercise 1
+## Exercise 2
 
 ```{java}
 public double getArea(String shape) {
@@ -84,7 +118,38 @@ Replace Conditional with Polymorphism
 * Each subclass implements its own `getArea()`
 * When method is called, it knows which one to call
 
-## Exercise 2
+## Primitive Obsession
+
+* Write little classes that are indistinguishable from the built-in types of the language
+
+*A telephone number may be represented as a string for a while, but later you realize that the telephone needs special behavior for formatting, extracting the area code, and the like*
+
+## Exercise 3
+
+```{java}
+private int size;
+private Color color = Color.BLACK;
+
+public void drawSquare(int x, int y, Group group) {
+        if (y > 25) {
+            Rectangle square = new Rectangle();
+            square.setX(x);
+            square.setY(y);
+            square.setWidth(size);
+            square.setHeight(size);
+            square.setFill(color);
+            group.getChildren().add(square);
+        }
+    }
+```
+
+## Answer
+
+* Create a `Brush.java` class with private instance variables for size, color, and shape.
+* Create setter and getters for these private instance variables
+* Call the getters to when setting color, size, etc: `square.setFill(brush.getColor())`
+
+## Exercise 4
 
 Go back to your own code that you have written this semester, and try to find examples of bad smells.
 
