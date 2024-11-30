@@ -4072,5 +4072,33 @@
     "title": "Code Smells",
     "section": "Exercise 4",
     "text": "Exercise 4\nGo back to your own code that you have written this semester, and try to find examples of bad smells.\n\nDuplicated Code\nLong Methods\nLarge Class\nSwitch Statements\nPrimitive Obsession"
+  },
+  {
+    "objectID": "slides-12-01.html#python-vs.-java",
+    "href": "slides-12-01.html#python-vs.-java",
+    "title": "Python vs. Java",
+    "section": "Python vs. Java",
+    "text": "Python vs. Java\nDiscuss in your groups: what are the main differences between Java and Python?"
+  },
+  {
+    "objectID": "slides-12-01.html#exercise",
+    "href": "slides-12-01.html#exercise",
+    "title": "Python vs. Java",
+    "section": "Exercise",
+    "text": "Exercise\nTranslate the Python code below to Java\n\nclass Person:\n  def __init__(self, name, age):\n    self.name = name\n    self.age = age\n\n  def __str__(self):\n    return \"{} is {} years old\".format(self.name, self.age)\n  \n  def print_person(self):\n    print(self)\n    \nif __name__ == \"__main__\":\n    p1 = Person(\"Adriana\", 43)\n    print(p1.name)\n    print(p1.age)\n    print(p1)\n    p1.print_person()\n    p1.age += 1\n    print(p1)\n\nAdriana\n43\nAdriana is 43 years old\nAdriana is 43 years old\nAdriana is 44 years old"
+  },
+  {
+    "objectID": "slides-12-01.html#java-vs.-python",
+    "href": "slides-12-01.html#java-vs.-python",
+    "title": "Python vs. Java",
+    "section": "Java vs. Python",
+    "text": "Java vs. Python\nAny other differences you’ve noticed between Java and Python?"
+  },
+  {
+    "objectID": "modules.html#slides-11",
+    "href": "modules.html#slides-11",
+    "title": "Modules",
+    "section": "Slides",
+    "text": "Slides\n\nPython vs. Java"
   }
 ]

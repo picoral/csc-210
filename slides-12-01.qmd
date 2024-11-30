@@ -1,0 +1,44 @@
+---
+title: "Python vs. Java"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## Python vs. Java
+
+Discuss in your groups: what are the main differences between Java and Python?
+
+## Exercise
+
+Translate the Python code below to Java 
+
+```{python}
+#| echo: true
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def __str__(self):
+    return "{} is {} years old".format(self.name, self.age)
+  
+  def print_person(self):
+    print(self)
+    
+if __name__ == "__main__":
+    p1 = Person("Adriana", 43)
+    print(p1.name)
+    print(p1.age)
+    print(p1)
+    p1.print_person()
+    p1.age += 1
+    print(p1)
+```
+
+## Java vs. Python
+
+Any other differences you've noticed between Java and Python?
+
+

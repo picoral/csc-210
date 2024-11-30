@@ -307,6 +307,10 @@ Topic: `r schedule %>% filter(week == 14) %>% pull(topic)`
 
 Topic: `r schedule %>% filter(week == 15) %>% pull(topic)`
 
+## Slides
+
+* [Python vs. Java](slides-12-01.html)
+
 ## Assignments
 
 * [Programming Assignment 10](programming-assignment-10.html): `r data %>% filter(Assignment == "PA10") %>%  select(Deadline)` -- Wednesday, 11:30pm
