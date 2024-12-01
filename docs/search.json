@@ -3351,5 +3351,12 @@
     "title": "Python vs. Java",
     "section": "Java vs. Python",
     "text": "Java vs. Python\nWhat other differences have you noticed between Java and Python?"
+  },
+  {
+    "objectID": "slides-12-01.html#summary-of-differences",
+    "href": "slides-12-01.html#summary-of-differences",
+    "title": "Python vs. Java",
+    "section": "Summary of differences",
+    "text": "Summary of differences\n\nPython is an interpreted language (executes code line by line)\nJava is a compiled language that compiles code into bytecode\nPython is dynamically typed\nJava is a static-typed programming language\nJava supports multithreading and concurrent programming\nJava makes use of encapsulation and inheritance more easily\nboth use automatic garbage collection to manage memory"
   }
 ]

@@ -82,3 +82,16 @@ class People:
 ## Java vs. Python
 
 What other differences have you noticed between Java and Python?
+
+## Summary of differences
+
+* Python is an interpreted language (executes code line by line)
+* Java is a compiled language that compiles code into bytecode
+
+* Python is dynamically typed
+* Java is a static-typed programming language
+
+* Java supports multithreading and concurrent programming
+* Java makes use of encapsulation and inheritance more easily
+
+* both use automatic garbage collection to manage memory
