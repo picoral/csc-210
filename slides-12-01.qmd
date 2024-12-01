@@ -16,6 +16,7 @@ Translate the Python code below to Java
 
 ```{python}
 #| echo: true
+#| eval: false
 class Person:
   def __init__(self, name, age):
     self.name = name
@@ -41,4 +42,43 @@ if __name__ == "__main__":
 
 Any other differences you've noticed between Java and Python?
 
+## Inheritance
 
+Translate the following Python code into Java
+
+```{python}
+#| echo: true
+#| eval: false
+import person
+
+class Student(person.Person):
+
+    def set_id(self, id):
+        self.id = id
+
+    def get_id(self):
+        return self.id
+    
+    def __str__(self):
+        return "{} is {} years old, id {}".format(self.name, self.age, self.id)
+```
+
+## Arrays
+
+Translate the following Python code into Java
+
+```{python}
+#| echo: true
+#| eval: false
+class People:
+
+    def __init__(self):
+        self.people = []
+
+    def add_person(self, person):
+        self.people.append(person)
+```
+
+## Java vs. Python
+
+What other differences have you noticed between Java and Python?

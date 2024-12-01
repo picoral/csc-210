@@ -3322,7 +3322,7 @@
     "href": "slides-12-01.html#exercise",
     "title": "Python vs. Java",
     "section": "Exercise",
-    "text": "Exercise\nTranslate the Python code below to Java\n\nclass Person:\n  def __init__(self, name, age):\n    self.name = name\n    self.age = age\n\n  def __str__(self):\n    return \"{} is {} years old\".format(self.name, self.age)\n  \n  def print_person(self):\n    print(self)\n    \nif __name__ == \"__main__\":\n    p1 = Person(\"Adriana\", 43)\n    print(p1.name)\n    print(p1.age)\n    print(p1)\n    p1.print_person()\n    p1.age += 1\n    print(p1)\n\nAdriana\n43\nAdriana is 43 years old\nAdriana is 43 years old\nAdriana is 44 years old"
+    "text": "Exercise\nTranslate the Python code below to Java\n\nclass Person:\n  def __init__(self, name, age):\n    self.name = name\n    self.age = age\n\n  def __str__(self):\n    return \"{} is {} years old\".format(self.name, self.age)\n  \n  def print_person(self):\n    print(self)\n    \nif __name__ == \"__main__\":\n    p1 = Person(\"Adriana\", 43)\n    print(p1.name)\n    print(p1.age)\n    print(p1)\n    p1.print_person()\n    p1.age += 1\n    print(p1)"
   },
   {
     "objectID": "slides-12-01.html#java-vs.-python",
@@ -3330,5 +3330,26 @@
     "title": "Python vs. Java",
     "section": "Java vs. Python",
     "text": "Java vs. Python\nAny other differences you’ve noticed between Java and Python?"
+  },
+  {
+    "objectID": "slides-12-01.html#inheritance",
+    "href": "slides-12-01.html#inheritance",
+    "title": "Python vs. Java",
+    "section": "Inheritance",
+    "text": "Inheritance\nTranslate the following Python code into Java\n\nimport person\n\nclass Student(person.Person):\n\n    def set_id(self, id):\n        self.id = id\n\n    def get_id(self):\n        return self.id\n    \n    def __str__(self):\n        return \"{} is {} years old, id {}\".format(self.name, self.age, self.id)"
+  },
+  {
+    "objectID": "slides-12-01.html#arrays",
+    "href": "slides-12-01.html#arrays",
+    "title": "Python vs. Java",
+    "section": "Arrays",
+    "text": "Arrays\nTranslate the following Python code into Java\n\nclass People:\n\n    def __init__(self):\n        self.people = []\n\n    def add_person(self, person):\n        self.people.append(person)"
+  },
+  {
+    "objectID": "slides-12-01.html#java-vs.-python-1",
+    "href": "slides-12-01.html#java-vs.-python-1",
+    "title": "Python vs. Java",
+    "section": "Java vs. Python",
+    "text": "Java vs. Python\nWhat other differences have you noticed between Java and Python?"
   }
 ]

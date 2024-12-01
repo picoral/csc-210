@@ -204,7 +204,7 @@
 <section id="exercise" class="slide level2">
 <h2>Exercise</h2>
 <p>Translate the Python code below to Java</p>
-<div id="ca521772" class="cell" data-execution_count="1">
+<div id="80b5f29b" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="kw">class</span> Person:</span>
 <span id="cb1-2"><a></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</span>
 <span id="cb1-3"><a></a>    <span class="va">self</span>.name <span class="op">=</span> name</span>
@@ -224,18 +224,46 @@
 <span id="cb1-17"><a></a>    p1.print_person()</span>
 <span id="cb1-18"><a></a>    p1.age <span class="op">+=</span> <span class="dv">1</span></span>
 <span id="cb1-19"><a></a>    <span class="bu">print</span>(p1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Adriana
-43
-Adriana is 43 years old
-Adriana is 43 years old
-Adriana is 44 years old</code></pre>
-</div>
 </div>
 </section>
 <section id="java-vs.-python" class="slide level2">
 <h2>Java vs.&nbsp;Python</h2>
 <p>Any other differences you’ve noticed between Java and Python?</p>
+</section>
+<section id="inheritance" class="slide level2">
+<h2>Inheritance</h2>
+<p>Translate the following Python code into Java</p>
+<div id="8765639a" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> person</span>
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a><span class="kw">class</span> Student(person.Person):</span>
+<span id="cb2-4"><a></a></span>
+<span id="cb2-5"><a></a>    <span class="kw">def</span> set_id(<span class="va">self</span>, <span class="bu">id</span>):</span>
+<span id="cb2-6"><a></a>        <span class="va">self</span>.<span class="bu">id</span> <span class="op">=</span> <span class="bu">id</span></span>
+<span id="cb2-7"><a></a></span>
+<span id="cb2-8"><a></a>    <span class="kw">def</span> get_id(<span class="va">self</span>):</span>
+<span id="cb2-9"><a></a>        <span class="cf">return</span> <span class="va">self</span>.<span class="bu">id</span></span>
+<span id="cb2-10"><a></a>    </span>
+<span id="cb2-11"><a></a>    <span class="kw">def</span> <span class="fu">__str__</span>(<span class="va">self</span>):</span>
+<span id="cb2-12"><a></a>        <span class="cf">return</span> <span class="st">"</span><span class="sc">{}</span><span class="st"> is </span><span class="sc">{}</span><span class="st"> years old, id </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(<span class="va">self</span>.name, <span class="va">self</span>.age, <span class="va">self</span>.<span class="bu">id</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="arrays" class="slide level2">
+<h2>Arrays</h2>
+<p>Translate the following Python code into Java</p>
+<div id="13eee96f" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="kw">class</span> People:</span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb3-4"><a></a>        <span class="va">self</span>.people <span class="op">=</span> []</span>
+<span id="cb3-5"><a></a></span>
+<span id="cb3-6"><a></a>    <span class="kw">def</span> add_person(<span class="va">self</span>, person):</span>
+<span id="cb3-7"><a></a>        <span class="va">self</span>.people.append(person)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="java-vs.-python-1" class="slide level2">
+<h2>Java vs.&nbsp;Python</h2>
+<p>What other differences have you noticed between Java and Python?</p>
 
 
 </section>
