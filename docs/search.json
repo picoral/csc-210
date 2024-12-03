@@ -3301,7 +3301,7 @@
     "href": "modules.html#slides-11",
     "title": "Modules",
     "section": "Slides",
-    "text": "Slides\n\nPython vs. Java"
+    "text": "Slides\n\nPython vs. Java\nJava vs. Python challenges"
   },
   {
     "objectID": "modules.html#assignments-11",
@@ -3365,5 +3365,54 @@
     "title": "Python vs. Java",
     "section": "Survey",
     "text": "Survey\nbit.ly/ua-ta-students"
+  },
+  {
+    "objectID": "slides-12-02.html#challenge-1",
+    "href": "slides-12-02.html#challenge-1",
+    "title": "Java vs. Python challenges",
+    "section": "Challenge 1",
+    "text": "Challenge 1\nWrite an application that creates a word object with the following methods:\n\na method to count vowels\na method to count consonants"
+  },
+  {
+    "objectID": "slides-12-02.html#challenge-1-python-solution",
+    "href": "slides-12-02.html#challenge-1-python-solution",
+    "title": "Java vs. Python challenges",
+    "section": "Challenge 1 – Python solution",
+    "text": "Challenge 1 – Python solution\n\nclass Word:\n    def __init__(self, word: str):\n        self.word = word\n\n    def vowel_count(self):\n        count = 0\n        for x in self.word:\n            if x in \"aeiou\": \n                count += 1\n        return count\n    \n    def consonant_count(self):\n        count = 0\n        for x in self.word:\n            if x not in \"aeiou\": \n                count += 1\n        return count\n\nif __name__ == \"__main__\":\n    w1 = Word(\"fantastic\")\n    vowels = w1.vowel_count()\n    print(vowels)\n\n    consonants = w1.consonant_count()\n    print(consonants)\n\n3\n6"
+  },
+  {
+    "objectID": "slides-12-02.html#challenge-1-java-solution",
+    "href": "slides-12-02.html#challenge-1-java-solution",
+    "title": "Java vs. Python challenges",
+    "section": "Challenge 1 – Java solution",
+    "text": "Challenge 1 – Java solution\npublic class Word {\n    private String word;\n\n    public Word(String word) {\n        this.word = word;\n    }\n\n    public boolean isVowel(char c) {\n        return \"AEIOUaeiou\".indexOf(c) != -1;\n    }\n\n    public int countVowels() {\n        int count = 0;\n        for (char c : word.toCharArray()) {\n            if (isVowel(c)) count += 1;\n        }\n        return count;\n    }\n\n    public int countConsonants() {\n        int count = 0;\n        for (char c : word.toCharArray()) {\n            if (!isVowel(c)) count += 1;\n        }\n        return count;\n    }\n}"
+  },
+  {
+    "objectID": "slides-12-02.html#challenge-1-java-solution-main-method",
+    "href": "slides-12-02.html#challenge-1-java-solution-main-method",
+    "title": "Java vs. Python challenges",
+    "section": "Challenge 1 – Java solution main method",
+    "text": "Challenge 1 – Java solution main method\npublic static void main(String[] args) {\n  Word w1 = new Word(\"fantastic\");\n  \n  int vowels = w1.countVowels();\n  System.out.println(vowels);\n  \n  int consonants = w1.countConsonants();\n  System.out.println(consonants);\n}"
+  },
+  {
+    "objectID": "slides-12-02.html#challenge-2",
+    "href": "slides-12-02.html#challenge-2",
+    "title": "Java vs. Python challenges",
+    "section": "Challenge 2",
+    "text": "Challenge 2\nWrite an application that creates an object that has an array of numbers as an instance variable. Write the following methods:\n\na method to return the lowest number in the array\na method to return the highest number in the array"
+  },
+  {
+    "objectID": "slides-12-02.html",
+    "href": "slides-12-02.html",
+    "title": "Java vs. Python challenges",
+    "section": "",
+    "text": "Write an application that creates a word object with the following methods:\n\na method to count vowels\na method to count consonants"
+  },
+  {
+    "objectID": "slides-12-02.html#challenge-2-expanded",
+    "href": "slides-12-02.html#challenge-2-expanded",
+    "title": "Java vs. Python challenges",
+    "section": "Challenge 2 – expanded",
+    "text": "Challenge 2 – expanded\nAdd a method to remove duplicates from the array"
   }
 ]

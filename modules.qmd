@@ -310,6 +310,7 @@ Topic: `r schedule %>% filter(week == 15) %>% pull(topic)`
 ## Slides
 
 * [Python vs. Java](slides-12-01.html)
+* [Java vs. Python challenges](slides-12-02.html)
 
 ## Assignments
 

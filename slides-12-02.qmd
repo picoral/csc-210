@@ -1,0 +1,103 @@
+---
+title: "Java vs. Python challenges"
+format:
+  revealjs:
+    slide-number: c/t
+    show-slide-number: all
+---
+
+## Challenge 1
+
+Write an application that creates a word object with the following methods:
+
+* a method to count vowels
+* a method to count consonants
+
+## Challenge 1 -- Python solution
+
+```{python}
+#| echo: true
+#| eval: true
+class Word:
+    def __init__(self, word: str):
+        self.word = word
+
+    def vowel_count(self):
+        count = 0
+        for x in self.word:
+            if x in "aeiou": 
+                count += 1
+        return count
+    
+    def consonant_count(self):
+        count = 0
+        for x in self.word:
+            if x not in "aeiou": 
+                count += 1
+        return count
+
+if __name__ == "__main__":
+    w1 = Word("fantastic")
+    vowels = w1.vowel_count()
+    print(vowels)
+
+    consonants = w1.consonant_count()
+    print(consonants)
+```
+
+## Challenge 1 -- Java solution
+
+```{java}
+public class Word {
+    private String word;
+
+    public Word(String word) {
+        this.word = word;
+    }
+
+    public boolean isVowel(char c) {
+        return "AEIOUaeiou".indexOf(c) != -1;
+    }
+
+    public int countVowels() {
+        int count = 0;
+        for (char c : word.toCharArray()) {
+            if (isVowel(c)) count += 1;
+        }
+        return count;
+    }
+
+    public int countConsonants() {
+        int count = 0;
+        for (char c : word.toCharArray()) {
+            if (!isVowel(c)) count += 1;
+        }
+        return count;
+    }
+}
+```
+
+## Challenge 1 -- Java solution main method
+
+```{java}
+public static void main(String[] args) {
+  Word w1 = new Word("fantastic");
+  
+  int vowels = w1.countVowels();
+  System.out.println(vowels);
+  
+  int consonants = w1.countConsonants();
+  System.out.println(consonants);
+}
+```
+
+## Challenge 2
+
+Write an application that creates an object that has an array of numbers as an instance variable. Write the following methods:
+
+* a method to return the lowest number in the array
+* a method to return the highest number in the array
+
+## Challenge 2 -- expanded
+
+Add a method to remove duplicates from the array
