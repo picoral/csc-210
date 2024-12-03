@@ -93,7 +93,7 @@ public static void main(String[] args) {
 
 ## Challenge 2
 
-Write an application that creates an object that has an array of numbers as an instance variable. Write the following methods:
+Write an application that creates an object that has a sorted array of integers. Write the following methods:
 
 * a method to return the lowest number in the array
 * a method to return the highest number in the array
