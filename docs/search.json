@@ -3399,7 +3399,7 @@
     "href": "slides-12-02.html#challenge-2",
     "title": "Java vs. Python challenges",
     "section": "Challenge 2",
-    "text": "Challenge 2\nWrite an application that creates an object that has a sorted array of integers. Write the following methods:\n\na method to return the lowest number in the array\na method to return the highest number in the array\n\nName your java file Numbers.java"
+    "text": "Challenge 2\nWrite an application that creates an object that has a sorted array of integers. Write the following methods:\n\na method to return the lowest number in the array\na method to return the highest number in the array\na method to remove duplicates from the array\n\nName your java file Numbers.java and your python file numbers.py"
   },
   {
     "objectID": "slides-12-02.html",
@@ -3420,6 +3420,13 @@
     "href": "slides-12-02.html#challenge-2-1",
     "title": "Java vs. Python challenges",
     "section": "Challenge 2",
-    "text": "Challenge 2\nExample of use:\npublic static void main(String[] args) {\n        Numbers myNumbers = new Numbers();\n        myNumbers.addNumber(10);\n        myNumbers.addNumber(1);\n        myNumbers.addNumber(5);\n        myNumbers.addNumber(25);\n        myNumbers.addNumber(-25);\n        System.out.println(myNumbers); // -25 1 5 10 25\n        System.out.println(myNumbers.getMax()); // 25\n        System.out.println(myNumbers.getMin()); // -25\n}"
+    "text": "Challenge 2\nExample of use for Java:\npublic static void main(String[] args) {\n        Numbers myNumbers = new Numbers();\n        myNumbers.addNumber(10);\n        myNumbers.addNumber(1);\n        myNumbers.addNumber(5);\n        myNumbers.addNumber(10);\n        myNumbers.addNumber(25);\n        myNumbers.addNumber(10);\n        myNumbers.addNumber(-25);\n        System.out.println(myNumbers); // -25 1 5 10 10 10 25\n        myNumbers.removeDuplicates();\n        System.out.println(myNumbers); // -25 1 5 10 25\n    }"
+  },
+  {
+    "objectID": "slides-12-02.html#challenge-2-2",
+    "href": "slides-12-02.html#challenge-2-2",
+    "title": "Java vs. Python challenges",
+    "section": "Challenge 2",
+    "text": "Challenge 2\nExample of use for Python:\n\nif __name__ == \"__main__\":\n    my_numbers = Numbers()\n    my_numbers.add_number(10)\n    my_numbers.add_number(1)\n    my_numbers.add_number(5)\n    my_numbers.add_number(10)\n    my_numbers.add_number(25)\n    my_numbers.add_number(10)\n    my_numbers.add_number(-25)\n    print(my_numbers) # -25 1 5 10 10 10 25\n    print(my_numbers.get_max()) # 25\n    print(my_numbers.get_min()) # -25\n    my_numbers.remove_duplicates()\n    print(my_numbers) # -25 1 5 10 25"
   }
 ]

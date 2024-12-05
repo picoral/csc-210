@@ -97,33 +97,13 @@ Write an application that creates an object that has a sorted array of integers.
 
 * a method to return the lowest number in the array
 * a method to return the highest number in the array
+* a method to remove duplicates from the array
 
-Name your java file `Numbers.java`
+Name your java file `Numbers.java` and your python file `numbers.py`
 
 ## Challenge 2
 
-Example of use:
-
-```{java}
-public static void main(String[] args) {
-        Numbers myNumbers = new Numbers();
-        myNumbers.addNumber(10);
-        myNumbers.addNumber(1);
-        myNumbers.addNumber(5);
-        myNumbers.addNumber(25);
-        myNumbers.addNumber(-25);
-        System.out.println(myNumbers); // -25 1 5 10 25
-        System.out.println(myNumbers.getMax()); // 25
-        System.out.println(myNumbers.getMin()); // -25
-}
-```
-
-
-## Challenge 2 -- expanded
-
-Add a method to remove duplicates from the array
-
-Use:
+Example of use for Java:
 
 ```{java}
 public static void main(String[] args) {
@@ -139,5 +119,29 @@ public static void main(String[] args) {
         myNumbers.removeDuplicates();
         System.out.println(myNumbers); // -25 1 5 10 25
     }
+```
+
+
+## Challenge 2
+
+Example of use for Python:
+
+```{python}
+#| eval: false
+#| echo: true
+if __name__ == "__main__":
+    my_numbers = Numbers()
+    my_numbers.add_number(10)
+    my_numbers.add_number(1)
+    my_numbers.add_number(5)
+    my_numbers.add_number(10)
+    my_numbers.add_number(25)
+    my_numbers.add_number(10)
+    my_numbers.add_number(-25)
+    print(my_numbers) # -25 1 5 10 10 10 25
+    print(my_numbers.get_max()) # 25
+    print(my_numbers.get_min()) # -25
+    my_numbers.remove_duplicates()
+    print(my_numbers) # -25 1 5 10 25
 ```
 
