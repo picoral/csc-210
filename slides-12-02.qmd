@@ -98,6 +98,46 @@ Write an application that creates an object that has a sorted array of integers.
 * a method to return the lowest number in the array
 * a method to return the highest number in the array
 
+Name your java file `Numbers.java`
+
+## Challenge 2
+
+Example of use:
+
+```{java}
+public static void main(String[] args) {
+        Numbers myNumbers = new Numbers();
+        myNumbers.addNumber(10);
+        myNumbers.addNumber(1);
+        myNumbers.addNumber(5);
+        myNumbers.addNumber(25);
+        myNumbers.addNumber(-25);
+        System.out.println(myNumbers); // -25 1 5 10 25
+        System.out.println(myNumbers.getMax()); // 25
+        System.out.println(myNumbers.getMin()); // -25
+}
+```
+
+
 ## Challenge 2 -- expanded
 
 Add a method to remove duplicates from the array
+
+Use:
+
+```{java}
+public static void main(String[] args) {
+        Numbers myNumbers = new Numbers();
+        myNumbers.addNumber(10);
+        myNumbers.addNumber(1);
+        myNumbers.addNumber(5);
+        myNumbers.addNumber(10);
+        myNumbers.addNumber(25);
+        myNumbers.addNumber(10);
+        myNumbers.addNumber(-25);
+        System.out.println(myNumbers); // -25 1 5 10 10 10 25
+        myNumbers.removeDuplicates();
+        System.out.println(myNumbers); // -25 1 5 10 25
+    }
+```
+

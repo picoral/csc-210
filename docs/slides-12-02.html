@@ -207,7 +207,7 @@
 </section>
 <section id="challenge-1-python-solution" class="slide level2">
 <h2>Challenge 1 – Python solution</h2>
-<div id="1eedff15" class="cell" data-execution_count="1">
+<div id="e2096dce" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="kw">class</span> Word:</span>
 <span id="cb1-2"><a></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, word: <span class="bu">str</span>):</span>
 <span id="cb1-3"><a></a>        <span class="va">self</span>.word <span class="op">=</span> word</span>
@@ -288,10 +288,40 @@
 <li>a method to return the lowest number in the array</li>
 <li>a method to return the highest number in the array</li>
 </ul>
+<p>Name your java file <code>Numbers.java</code></p>
+</section>
+<section id="challenge-2-1" class="slide level2">
+<h2>Challenge 2</h2>
+<p>Example of use:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>public static void main(String[] args) {</span>
+<span id="cb5-2"><a></a>        Numbers myNumbers = new Numbers();</span>
+<span id="cb5-3"><a></a>        myNumbers.addNumber(10);</span>
+<span id="cb5-4"><a></a>        myNumbers.addNumber(1);</span>
+<span id="cb5-5"><a></a>        myNumbers.addNumber(5);</span>
+<span id="cb5-6"><a></a>        myNumbers.addNumber(25);</span>
+<span id="cb5-7"><a></a>        myNumbers.addNumber(-25);</span>
+<span id="cb5-8"><a></a>        System.out.println(myNumbers); // -25 1 5 10 25</span>
+<span id="cb5-9"><a></a>        System.out.println(myNumbers.getMax()); // 25</span>
+<span id="cb5-10"><a></a>        System.out.println(myNumbers.getMin()); // -25</span>
+<span id="cb5-11"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="challenge-2-expanded" class="slide level2">
 <h2>Challenge 2 – expanded</h2>
 <p>Add a method to remove duplicates from the array</p>
+<p>Use:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource {java} number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a>public static void main(String[] args) {</span>
+<span id="cb6-2"><a></a>        Numbers myNumbers = new Numbers();</span>
+<span id="cb6-3"><a></a>        myNumbers.addNumber(10);</span>
+<span id="cb6-4"><a></a>        myNumbers.addNumber(1);</span>
+<span id="cb6-5"><a></a>        myNumbers.addNumber(5);</span>
+<span id="cb6-6"><a></a>        myNumbers.addNumber(10);</span>
+<span id="cb6-7"><a></a>        myNumbers.addNumber(25);</span>
+<span id="cb6-8"><a></a>        myNumbers.addNumber(10);</span>
+<span id="cb6-9"><a></a>        myNumbers.addNumber(-25);</span>
+<span id="cb6-10"><a></a>        System.out.println(myNumbers); // -25 1 5 10 10 10 25</span>
+<span id="cb6-11"><a></a>        myNumbers.removeDuplicates();</span>
+<span id="cb6-12"><a></a>        System.out.println(myNumbers); // -25 1 5 10 25</span>
+<span id="cb6-13"><a></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

@@ -3399,7 +3399,7 @@
     "href": "slides-12-02.html#challenge-2",
     "title": "Java vs. Python challenges",
     "section": "Challenge 2",
-    "text": "Challenge 2\nWrite an application that creates an object that has a sorted array of integers. Write the following methods:\n\na method to return the lowest number in the array\na method to return the highest number in the array"
+    "text": "Challenge 2\nWrite an application that creates an object that has a sorted array of integers. Write the following methods:\n\na method to return the lowest number in the array\na method to return the highest number in the array\n\nName your java file Numbers.java"
   },
   {
     "objectID": "slides-12-02.html",
@@ -3413,6 +3413,13 @@
     "href": "slides-12-02.html#challenge-2-expanded",
     "title": "Java vs. Python challenges",
     "section": "Challenge 2 – expanded",
-    "text": "Challenge 2 – expanded\nAdd a method to remove duplicates from the array"
+    "text": "Challenge 2 – expanded\nAdd a method to remove duplicates from the array\nUse:\npublic static void main(String[] args) {\n        Numbers myNumbers = new Numbers();\n        myNumbers.addNumber(10);\n        myNumbers.addNumber(1);\n        myNumbers.addNumber(5);\n        myNumbers.addNumber(10);\n        myNumbers.addNumber(25);\n        myNumbers.addNumber(10);\n        myNumbers.addNumber(-25);\n        System.out.println(myNumbers); // -25 1 5 10 10 10 25\n        myNumbers.removeDuplicates();\n        System.out.println(myNumbers); // -25 1 5 10 25\n    }"
+  },
+  {
+    "objectID": "slides-12-02.html#challenge-2-1",
+    "href": "slides-12-02.html#challenge-2-1",
+    "title": "Java vs. Python challenges",
+    "section": "Challenge 2",
+    "text": "Challenge 2\nExample of use:\npublic static void main(String[] args) {\n        Numbers myNumbers = new Numbers();\n        myNumbers.addNumber(10);\n        myNumbers.addNumber(1);\n        myNumbers.addNumber(5);\n        myNumbers.addNumber(25);\n        myNumbers.addNumber(-25);\n        System.out.println(myNumbers); // -25 1 5 10 25\n        System.out.println(myNumbers.getMax()); // 25\n        System.out.println(myNumbers.getMin()); // -25\n}"
   }
 ]
