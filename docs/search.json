@@ -3420,7 +3420,7 @@
     "href": "slides-12-02.html#challenge-2-1",
     "title": "Java vs. Python challenges",
     "section": "Challenge 2",
-    "text": "Challenge 2\nExample of use for Java:\npublic static void main(String[] args) {\n        Numbers myNumbers = new Numbers();\n        myNumbers.addNumber(10);\n        myNumbers.addNumber(1);\n        myNumbers.addNumber(5);\n        myNumbers.addNumber(10);\n        myNumbers.addNumber(25);\n        myNumbers.addNumber(10);\n        myNumbers.addNumber(-25);\n        System.out.println(myNumbers); // -25 1 5 10 10 10 25\n        myNumbers.removeDuplicates();\n        System.out.println(myNumbers); // -25 1 5 10 25\n    }"
+    "text": "Challenge 2\nExample of use for Java:\npublic static void main(String[] args) {\n        Numbers myNumbers = new Numbers();\n        myNumbers.addNumber(10);\n        myNumbers.addNumber(1);\n        myNumbers.addNumber(5);\n        myNumbers.addNumber(10);\n        myNumbers.addNumber(25);\n        myNumbers.addNumber(10);\n        myNumbers.addNumber(-25);\n        System.out.println(myNumbers.getMax()) // 25\n        System.out.println(myNumbers.getMin()) // -25\n        System.out.println(myNumbers); // -25 1 5 10 10 10 25\n        myNumbers.removeDuplicates();\n        System.out.println(myNumbers); // -25 1 5 10 25\n    }"
   },
   {
     "objectID": "slides-12-02.html#challenge-2-2",
