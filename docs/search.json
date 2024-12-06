@@ -3399,7 +3399,7 @@
     "href": "slides-12-02.html#challenge-2",
     "title": "Java vs. Python challenges",
     "section": "Challenge 2",
-    "text": "Challenge 2\nWrite an application that creates an object that has a sorted array of integers. Write the following methods:\n\na method to return the lowest number in the array\na method to return the highest number in the array\na method to remove duplicates from the array\n\nName your java file Numbers.java and your python file numbers.py"
+    "text": "Challenge 2\nWrite an application that creates an object that has a sorted array of integers. Write the following methods:\n\na method to return the lowest number in the array\na method to return the highest number in the array\na method to remove duplicates from the array\n\nName your java file Numbers.java and your python file numbers.py\npackage com.gradescope.numbers;"
   },
   {
     "objectID": "slides-12-02.html",

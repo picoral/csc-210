@@ -101,6 +101,8 @@ Write an application that creates an object that has a sorted array of integers.
 
 Name your java file `Numbers.java` and your python file `numbers.py`
 
+`package com.gradescope.numbers;`
+
 ## Challenge 2
 
 Example of use for Java:
