@@ -14,6 +14,8 @@ title: "Practice Problems"
 * [Week 12](pdfs/practice-08.pdf)
 * [Week 14](pdfs/practice-09.pdf)
 * [Week 15](pdfs/practice-10.pdf)
+* [Final Exam Study Guide](pdfs/mock-final-exam.pdf)
+* [Final Exam Study Guide -- Answers](pdfs/mock-final-exam-answers.pdf)
 
 # Other Resources
 
