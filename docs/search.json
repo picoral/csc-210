@@ -3428,5 +3428,19 @@
     "title": "Java vs. Python challenges",
     "section": "Challenge 2",
     "text": "Challenge 2\nExample of use for Python:\n\nif __name__ == \"__main__\":\n    my_numbers = Numbers()\n    my_numbers.add_number(10)\n    my_numbers.add_number(1)\n    my_numbers.add_number(5)\n    my_numbers.add_number(10)\n    my_numbers.add_number(25)\n    my_numbers.add_number(10)\n    my_numbers.add_number(-25)\n    print(my_numbers) # -25 1 5 10 10 10 25\n    print(my_numbers.get_max()) # 25\n    print(my_numbers.get_min()) # -25\n    my_numbers.remove_duplicates()\n    print(my_numbers) # -25 1 5 10 25"
+  },
+  {
+    "objectID": "quiz.html",
+    "href": "quiz.html",
+    "title": "Quiz 11",
+    "section": "",
+    "text": "Quiz 09\n\n\ncurrent time\n\n\n\n\n\n\nYou have 10 minutes."
+  },
+  {
+    "objectID": "exam.html#section",
+    "href": "exam.html#section",
+    "title": "exam",
+    "section": ".",
+    "text": ".\n \n\n\ncurrent time"
   }
 ]
